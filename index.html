@@ -1264,6 +1264,25 @@
 
       const OUTPUT = "output";
 
+      const PREDICTIONS_URLS = [
+        "https://raw.githubusercontent.com/zolodev/ppm-public/refs/heads/main/predictions.json",
+        "predictions.json",
+      ];
+
+      function fetchFirst(urls) {
+        return urls.reduce(
+          (chain, url) =>
+            chain.catch(() =>
+              fetch(url).then((r) => {
+                if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                return r.json();
+              })
+            ),
+          Promise.reject()
+        );
+      }
+
+      // Bootstrap: load manifest.json → render latest, populate history
       fetch(`${OUTPUT}/manifest.json`)
         .then((r) => {
           if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -1275,12 +1294,9 @@
           );
           renderHistoryList(history);
           if (!manifest.latest) throw new Error("manifest saknar 'latest'");
-          return fetch(`${OUTPUT}/predictions.json`)
-            .then((r) => {
-              if (!r.ok) throw new Error(`HTTP ${r.status}`);
-              return r.json();
-            })
-            .then((data) => render(data, manifest.latest));
+          return fetchFirst(PREDICTIONS_URLS).then((data) =>
+            render(data, manifest.latest)
+          );
         })
         .catch((err) => {
           document.getElementById(
