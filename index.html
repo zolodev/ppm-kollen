@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPM Paradise — Fondprognos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f4f3ef;
+        --bg-card: #ffffff;
+        --bg-panel: #eceae5;
+        --border: rgba(0, 0, 0, 0.1);
+        --border-em: rgba(0, 0, 0, 0.2);
+        --text: #18180f;
+        --text-muted: #5e5d56;
+        --text-faint: #9a9890;
+        --accent: #1b3d5f;
+        --accent-2: #2a6ea6;
+        --tag-bg: #e3e1db;
+        --tag-text: #4a4842;
+        --buy: #155a2e;
+        --buy-bg: #d2edd9;
+        --hold: #6b4c00;
+        --hold-bg: #fff0c0;
+        --sell: #7a1414;
+        --sell-bg: #fde3e3;
+        --bar-bg: #dddbd5;
+        --bar-fill: #2a6ea6;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+        --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08),
+          0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme]) {
+          --bg: #111210;
+          --bg-card: #1b1b19;
+          --bg-panel: #232320;
+          --border: rgba(255, 255, 255, 0.08);
+          --border-em: rgba(255, 255, 255, 0.16);
+          --text: #e6e4df;
+          --text-muted: #9b9890;
+          --text-faint: #585653;
+          --accent: #7cb8e8;
+          --accent-2: #5a9fd4;
+          --tag-bg: #282825;
+          --tag-text: #a8a5a0;
+          --buy: #4ade80;
+          --buy-bg: #052e16;
+          --hold: #fbbf24;
+          --hold-bg: #1a1200;
+          --sell: #f87171;
+          --sell-bg: #2d0909;
+          --bar-bg: #2a2a26;
+          --bar-fill: #5a9fd4;
+          --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+          --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.35);
+        }
+      }
+      [data-theme="dark"] {
+        --bg: #111210;
+        --bg-card: #1b1b19;
+        --bg-panel: #232320;
+        --border: rgba(255, 255, 255, 0.08);
+        --border-em: rgba(255, 255, 255, 0.16);
+        --text: #e6e4df;
+        --text-muted: #9b9890;
+        --text-faint: #585653;
+        --accent: #7cb8e8;
+        --accent-2: #5a9fd4;
+        --tag-bg: #282825;
+        --tag-text: #a8a5a0;
+        --buy: #4ade80;
+        --buy-bg: #052e16;
+        --hold: #fbbf24;
+        --hold-bg: #1a1200;
+        --sell: #f87171;
+        --sell-bg: #2d0909;
+        --bar-bg: #2a2a26;
+        --bar-fill: #5a9fd4;
+        --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.35);
+      }
+      [data-theme="light"] {
+        --bg: #f4f3ef;
+        --bg-card: #ffffff;
+        --bg-panel: #eceae5;
+        --border: rgba(0, 0, 0, 0.1);
+        --border-em: rgba(0, 0, 0, 0.2);
+        --text: #18180f;
+        --text-muted: #5e5d56;
+        --text-faint: #9a9890;
+        --accent: #1b3d5f;
+        --accent-2: #2a6ea6;
+        --tag-bg: #e3e1db;
+        --tag-text: #4a4842;
+        --buy: #155a2e;
+        --buy-bg: #d2edd9;
+        --hold: #6b4c00;
+        --hold-bg: #fff0c0;
+        --sell: #7a1414;
+        --sell-bg: #fde3e3;
+        --bar-bg: #dddbd5;
+        --bar-fill: #2a6ea6;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "DM Sans", sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: var(--bg-card);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-sm);
+      }
+      .header-inner {
+        max-width: 1060px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 58px;
+      }
+      .logo {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+      }
+      .logo-title {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.2rem;
+        color: var(--accent);
+        line-height: 1;
+      }
+      .logo-sub {
+        font-family: "DM Mono", monospace;
+        font-size: 0.68rem;
+        color: var(--text-faint);
+      }
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .history-btn {
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.78rem;
+        border: 1px solid var(--border-em);
+        background: none;
+        color: var(--text-muted);
+        padding: 5px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.15s;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .history-btn:hover {
+        background: var(--bg-panel);
+        color: var(--text);
+      }
+      .history-btn.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+      .theme-switcher {
+        display: flex;
+        gap: 2px;
+        background: var(--bg-panel);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 3px;
+      }
+      .theme-btn {
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.75rem;
+        border: none;
+        background: none;
+        color: var(--text-muted);
+        padding: 3px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .theme-btn.active {
+        background: var(--bg-card);
+        color: var(--text);
+        box-shadow: var(--shadow-sm);
+      }
+
+      main {
+        max-width: 1060px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 5rem;
+      }
+
+      .history-panel {
+        display: none;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.25rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow-md);
+      }
+      .history-panel.open {
+        display: block;
+      }
+      .history-panel-title {
+        font-family: "DM Serif Display", serif;
+        font-size: 1rem;
+        color: var(--text);
+        margin-bottom: 1rem;
+        padding-bottom: 0.625rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .history-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .history-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.625rem 0.875rem;
+        background: var(--bg-panel);
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .history-item:hover {
+        border-color: var(--accent-2);
+        background: var(--bg-card);
+      }
+      .history-item-date {
+        font-family: "DM Mono", monospace;
+        font-size: 0.82rem;
+        color: var(--text);
+        font-weight: 500;
+      }
+      .history-item-meta {
+        font-size: 0.72rem;
+        color: var(--text-faint);
+      }
+      .history-empty {
+        font-size: 0.82rem;
+        color: var(--text-faint);
+        font-style: italic;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .meta-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 0.875rem 1.25rem;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        margin-bottom: 2.5rem;
+      }
+      .meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+      }
+      .meta-label {
+        font-size: 0.67rem;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--text-faint);
+      }
+      .meta-value {
+        font-family: "DM Mono", monospace;
+        font-size: 0.82rem;
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      .horizon-nav {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+      .horizon-tab {
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.82rem;
+        font-weight: 500;
+        padding: 6px 16px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--bg-card);
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .horizon-tab.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+      .horizon-panel {
+        display: none;
+      }
+      .horizon-panel.active {
+        display: block;
+      }
+      .horizon-header {
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid var(--accent);
+        margin-bottom: 1.5rem;
+      }
+      .horizon-title {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.5rem;
+        color: var(--text);
+      }
+      .horizon-desc {
+        font-size: 0.8rem;
+        color: var(--text-faint);
+        font-style: italic;
+      }
+
+      .fund-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .fund-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: var(--shadow-md);
+        overflow: hidden;
+        transition: box-shadow 0.2s;
+      }
+      .fund-card:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.13);
+      }
+      .card-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.25rem 1.25rem 0;
+      }
+      .rank-col {
+        font-size: 1.75rem;
+        line-height: 1;
+        flex-shrink: 0;
+        padding-top: 2px;
+      }
+      .fund-meta {
+        flex: 1;
+        min-width: 0;
+      }
+      .fund-name {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.1rem;
+        color: var(--text);
+        line-height: 1.3;
+        margin-bottom: 0.35rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .fund-ids {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+      .id-pill {
+        font-family: "DM Mono", monospace;
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        background: var(--bg-panel);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        color: var(--text-muted);
+      }
+      .id-pill.ppm {
+        color: var(--accent-2);
+        border-color: var(--accent-2);
+        opacity: 0.8;
+      }
+      .avanza-link {
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        border: 1px solid var(--accent-2);
+        color: var(--accent-2);
+        text-decoration: none;
+        transition: background 0.15s, color 0.15s;
+      }
+      .avanza-link:hover {
+        background: var(--accent-2);
+        color: #fff;
+      }
+      .signal-col {
+        flex-shrink: 0;
+      }
+      .signal-badge {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6px 14px;
+        border-radius: 8px;
+        min-width: 62px;
+      }
+      .signal-icon {
+        font-size: 0.9rem;
+      }
+      .signal-label {
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        margin-top: 2px;
+      }
+      .sig-buy {
+        background: var(--buy-bg);
+        color: var(--buy);
+      }
+      .sig-hold {
+        background: var(--hold-bg);
+        color: var(--hold);
+      }
+      .sig-sell {
+        background: var(--sell-bg);
+        color: var(--sell);
+      }
+      .tags-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        padding: 0.75rem 1.25rem 0;
+      }
+      .tag {
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        background: var(--tag-bg);
+        color: var(--tag-text);
+      }
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 0.875rem;
+        padding: 1rem 1.25rem;
+        background: var(--bg-panel);
+        margin: 0.875rem 0 0;
+      }
+      .metric {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .metric-label {
+        font-size: 0.67rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--text-faint);
+      }
+      .metric-value {
+        font-family: "DM Mono", monospace;
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: var(--text);
+      }
+      .bar-track {
+        height: 3px;
+        background: var(--bar-bg);
+        border-radius: 2px;
+        overflow: hidden;
+        margin-top: 4px;
+      }
+      .bar-fill {
+        height: 100%;
+        background: var(--bar-fill);
+        border-radius: 2px;
+      }
+      .forecast-block {
+        padding: 0.875rem 1.25rem;
+        border-top: 1px solid var(--border);
+      }
+      .forecast-title {
+        font-size: 0.67rem;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: var(--text-faint);
+        margin-bottom: 0.5rem;
+      }
+      .forecast-row {
+        display: flex;
+        align-items: baseline;
+        gap: 0.875rem;
+        margin-bottom: 4px;
+      }
+      .fc-q50 {
+        font-family: "DM Mono", monospace;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--text);
+      }
+      .fc-q10,
+      .fc-q90 {
+        font-family: "DM Mono", monospace;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+      .fc-sep {
+        color: var(--text-faint);
+        font-size: 0.8rem;
+      }
+      .forecast-legend {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.63rem;
+        color: var(--text-faint);
+      }
+      .charts-block {
+        padding: 0.875rem 1.25rem 1.25rem;
+        border-top: 1px solid var(--border);
+      }
+      .chart-tabs {
+        display: flex;
+        gap: 0.35rem;
+        margin-bottom: 0.75rem;
+      }
+      .chart-tab {
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.75rem;
+        padding: 4px 12px;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+        background: var(--bg-panel);
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .chart-tab.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+      .chart-pane {
+        display: none;
+      }
+      .chart-pane.active {
+        display: block;
+      }
+      .chart-pane img {
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        cursor: zoom-in;
+      }
+      .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.92);
+        align-items: center;
+        justify-content: center;
+        cursor: zoom-out;
+      }
+      .lightbox.open {
+        display: flex;
+      }
+      .lightbox-inner {
+        position: relative;
+        overflow: hidden;
+        cursor: grab;
+      }
+      .lightbox-inner.grabbing {
+        cursor: grabbing;
+      }
+      .lightbox img {
+        display: block;
+        max-width: 95vw;
+        max-height: 90vh;
+        object-fit: contain;
+        transform-origin: 0 0;
+        user-select: none;
+        pointer-events: none;
+      }
+      .lightbox-close {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        color: #fff;
+        font-size: 1.4rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.15s;
+        z-index: 1001;
+      }
+      .lightbox-close:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+      .lightbox-hint {
+        position: fixed;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 0.72rem;
+        font-family: "DM Mono", monospace;
+        pointer-events: none;
+        white-space: nowrap;
+      }
+      .chart-missing {
+        padding: 2rem;
+        text-align: center;
+        color: var(--text-faint);
+        font-size: 0.82rem;
+        font-style: italic;
+        border: 1px dashed var(--border);
+        border-radius: 8px;
+      }
+      .ranking-nav {
+        display: flex;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+      }
+      .ranking-tab {
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.78rem;
+        font-weight: 500;
+        padding: 5px 14px;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+        background: var(--bg-card);
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .ranking-tab:hover {
+        background: var(--bg-panel);
+        color: var(--text);
+      }
+      .ranking-tab.active {
+        background: var(--accent-2);
+        color: #fff;
+        border-color: var(--accent-2);
+      }
+      .ranking-desc {
+        font-size: 0.75rem;
+        color: var(--text-faint);
+        margin-bottom: 1rem;
+        font-style: italic;
+      }
+      .ranking-fund-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: box-shadow 0.15s;
+      }
+      .ranking-fund-card:hover {
+        box-shadow: var(--shadow-md);
+      }
+      .ranking-rank {
+        font-size: 1.3rem;
+        flex-shrink: 0;
+        width: 2rem;
+        text-align: center;
+      }
+      .ranking-info {
+        flex: 1;
+        min-width: 0;
+      }
+      .ranking-name {
+        font-family: "DM Serif Display", serif;
+        font-size: 0.95rem;
+        color: var(--text);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .ranking-ids {
+        display: flex;
+        gap: 0.4rem;
+        margin-top: 2px;
+        flex-wrap: wrap;
+      }
+      .ranking-metrics {
+        display: flex;
+        gap: 1.5rem;
+        flex-shrink: 0;
+        align-items: center;
+      }
+      .ranking-metric {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1px;
+      }
+      .ranking-metric-label {
+        font-size: 0.62rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--text-faint);
+      }
+      .ranking-metric-value {
+        font-family: "DM Mono", monospace;
+        font-size: 0.88rem;
+        font-weight: 500;
+        color: var(--text);
+      }
+      .ranking-empty {
+        padding: 2rem;
+        text-align: center;
+        color: var(--text-faint);
+        font-style: italic;
+        border: 1px dashed var(--border);
+        border-radius: 8px;
+      }
+      @media (max-width: 600px) {
+        .ranking-metrics {
+          display: none;
+        }
+      }
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 1.5rem;
+        text-align: center;
+        font-size: 0.72rem;
+        color: var(--text-faint);
+        font-family: "DM Mono", monospace;
+      }
+      @media (max-width: 600px) {
+        main {
+          padding: 1.25rem 1rem 4rem;
+        }
+        .header-inner {
+          padding: 0 1rem;
+        }
+        .metrics-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .fc-q50 {
+          font-size: 1.15rem;
+        }
+        .history-btn span.btn-label {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-title">PPM Paradise</span>
+          <span class="logo-sub" id="header-date">Fondprognos</span>
+        </div>
+        <div class="header-right">
+          <button
+            class="history-btn"
+            id="history-toggle"
+            onclick="toggleHistory()"
+          >
+            ⏱ <span class="btn-label">Historik</span>
+          </button>
+          <div class="theme-switcher">
+            <button
+              class="theme-btn"
+              id="btn-light"
+              onclick="setTheme('light')"
+            >
+              Ljust
+            </button>
+            <button
+              class="theme-btn active"
+              id="btn-auto"
+              onclick="setTheme(null)"
+            >
+              Auto
+            </button>
+            <button class="theme-btn" id="btn-dark" onclick="setTheme('dark')">
+              Mörkt
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="history-panel" id="history-panel">
+        <div class="history-panel-title">Tidigare körningar</div>
+        <div class="history-list" id="history-list">
+          <div class="history-empty">Laddar historik...</div>
+        </div>
+      </div>
+      <div id="app"><p class="state-msg">Laddar prognos...</p></div>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="lbClose(event)">
+      <button class="lightbox-close" onclick="lbHide()">✕</button>
+      <div class="lightbox-inner" id="lb-inner">
+        <img id="lb-img" src="" alt="" draggable="false" />
+      </div>
+      <div class="lightbox-hint">
+        Scroll för zoom · Dra för att panorera · Klicka utanför för att stänga
+      </div>
+    </div>
+
+    <script>
+      // ── Theme ────────────────────────────────────────────────────────────────
+      function setTheme(mode) {
+        const root = document.documentElement;
+        ["light", "auto", "dark"].forEach((m) =>
+          document.getElementById("btn-" + m).classList.remove("active")
+        );
+        if (mode) {
+          root.setAttribute("data-theme", mode);
+          document.getElementById("btn-" + mode).classList.add("active");
+        } else {
+          root.removeAttribute("data-theme");
+          document.getElementById("btn-auto").classList.add("active");
+        }
+        try {
+          localStorage.setItem("ppm-theme", mode || "auto");
+        } catch (e) {}
+      }
+      try {
+        const s = localStorage.getItem("ppm-theme");
+        if (s && s !== "auto") setTheme(s);
+      } catch (e) {}
+
+      function toggleHistory() {
+        const panel = document.getElementById("history-panel");
+        const btn = document.getElementById("history-toggle");
+        panel.classList.toggle("open");
+        btn.classList.toggle("active", panel.classList.contains("open"));
+      }
+      function switchChart(btn, paneId) {
+        const block = btn.closest(".charts-block");
+        block
+          .querySelectorAll(".chart-tab")
+          .forEach((b) => b.classList.remove("active"));
+        block
+          .querySelectorAll(".chart-pane")
+          .forEach((p) => p.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(paneId).classList.add("active");
+      }
+      function switchHorizon(tabEl, panelId) {
+        document
+          .querySelectorAll(".horizon-tab")
+          .forEach((t) => t.classList.remove("active"));
+        document
+          .querySelectorAll(".horizon-panel")
+          .forEach((p) => p.classList.remove("active"));
+        tabEl.classList.add("active");
+        document.getElementById(panelId).classList.add("active");
+      }
+
+      const SIGNAL = {
+        BUY: { cls: "sig-buy", icon: "▲", label: "KÖP" },
+        HOLD: { cls: "sig-hold", icon: "●", label: "HÅLL" },
+        SELL: { cls: "sig-sell", icon: "▼", label: "SÄLJ" },
+      };
+      const HORIZON_META = {
+        "1w": { label: "1 vecka", desc: "Kort sikt" },
+        "4w": { label: "4 veckor", desc: "Mellanlång sikt" },
+        "13w": { label: "13 veckor", desc: "Kvartal" },
+        "26w": { label: "26 veckor", desc: "Halvår" },
+      };
+      const MEDALS = ["🥇", "🥈", "🥉", "4", "5"];
+
+      function barHtml(val, max = 100) {
+        const pct = Math.min(Math.max((val / max) * 100, 0), 100).toFixed(1);
+        return `<div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>`;
+      }
+      function signFmt(n) {
+        return (n >= 0 ? "+" : "") + Number(n).toFixed(2) + "%";
+      }
+      function chartImg(path, alt) {
+        if (!path)
+          return '<div class="chart-missing">Ingen graf tillgänglig</div>';
+        return `<img src="${path}" alt="${alt}" loading="lazy">`;
+      }
+
+      function fundCardHtml(fund, rank, hKey) {
+        const sig = SIGNAL[fund.signal] || SIGNAL.HOLD;
+        const tags = String(fund.tags || "")
+          .split(",")
+          .map((t) => `<span class="tag">${t.trim()}</span>`)
+          .join("");
+        const fc = fund.forecast || {};
+        const charts = fund.charts || {};
+        const cardId = `c-${hKey}-${rank}`;
+        const ensId = `${cardId}-ens`;
+        const indId = `${cardId}-ind`;
+        const medal = MEDALS[rank - 1] ?? `#${rank}`;
+        const hitrate = (fund.hitrate_q50 || 0).toFixed(1);
+        const cov = (fund.coverage_pct || 0).toFixed(1);
+        const mae = (fund.mae_q50 || 0).toFixed(4);
+        const score = (fund.score || 0).toFixed(3);
+        const hLabel = (HORIZON_META[hKey] || { label: hKey }).label;
+
+        // Chart paths in predictions.json are relative to output/
+        const ensPath = charts.ensemble ? `${OUTPUT}/${charts.ensemble}` : null;
+        const indPath = charts.individual
+          ? `${OUTPUT}/${charts.individual}`
+          : null;
+
+        const avanza = fund.avanza_url
+          ? `<a class="avanza-link" href="${fund.avanza_url}" target="_blank" rel="noopener">Avanza ↗</a>`
+          : "";
+
+        return `
+<article class="fund-card">
+  <div class="card-header">
+    <div class="rank-col">${medal}</div>
+    <div class="fund-meta">
+      <div class="fund-name" title="${fund.name || ""}">${
+          fund.name || "Okänd fond"
+        }</div>
+      <div class="fund-ids">
+        <span class="id-pill">ID&nbsp;${fund.fund_id || "—"}</span>
+        <span class="id-pill ppm">PPM&nbsp;${fund.ppm_code || "—"}</span>
+        ${avanza}
+      </div>
+    </div>
+    <div class="signal-col">
+      <div class="signal-badge ${sig.cls}">
+        <span class="signal-icon">${sig.icon}</span>
+        <span class="signal-label">${sig.label}</span>
+      </div>
+    </div>
+  </div>
+  <div class="tags-row">${tags}</div>
+  <div class="metrics-grid">
+    <div class="metric">
+      <span class="metric-label">Score</span>
+      <span class="metric-value">${score}</span>
+    </div>
+    <div class="metric">
+      <span class="metric-label">Träffsäkerhet</span>
+      <span class="metric-value">${hitrate}%</span>
+      ${barHtml(parseFloat(hitrate))}
+    </div>
+    <div class="metric">
+      <span class="metric-label">Täckning</span>
+      <span class="metric-value">${cov}%</span>
+      ${barHtml(parseFloat(cov))}
+    </div>
+    <div class="metric">
+      <span class="metric-label">MAE Q50</span>
+      <span class="metric-value">${mae}</span>
+    </div>
+  </div>
+  <div class="forecast-block">
+    <div class="forecast-title">Prognos — ${hLabel}</div>
+    <div class="forecast-row">
+      <span class="fc-q10">${signFmt(fc.q10 || 0)}</span>
+      <span class="fc-sep">·</span>
+      <span class="fc-q50">${signFmt(fc.q50 || 0)}</span>
+      <span class="fc-sep">·</span>
+      <span class="fc-q90">${signFmt(fc.q90 || 0)}</span>
+    </div>
+    <div class="forecast-legend">
+      <span>Q10 pessimist</span><span>Q50 median</span><span>Q90 optimist</span>
+    </div>
+  </div>
+  <div class="charts-block">
+    <div class="chart-tabs">
+      <button class="chart-tab active" onclick="switchChart(this,'${ensId}')">Ensemble</button>
+      <button class="chart-tab"        onclick="switchChart(this,'${indId}')">Per modell</button>
+    </div>
+    <div class="chart-pane active" id="${ensId}">${chartImg(
+          ensPath,
+          `Ensemble ${fund.name}`
+        )}</div>
+    <div class="chart-pane"        id="${indId}">${chartImg(
+          indPath,
+          `Per modell ${fund.name}`
+        )}</div>
+  </div>
+</article>`;
+      }
+
+      const RANKING_META = {
+        winners: {
+          label: "★ Vinnare",
+          desc: "Topp 5 fonder från Top Balanced — de som ingår i prognosen",
+        },
+        top_balanced: {
+          label: "Top Balanced",
+          desc: "Högst forecast kombinerat med träffsäkerhet",
+        },
+        top_yield: {
+          label: "Top Avkastning",
+          desc: "Högst förväntad avkastning nästa vecka",
+        },
+        top_reliable: {
+          label: "Top Pålitlig",
+          desc: "Mest tillförlitlig modell — hög täckning × träffsäkerhet",
+        },
+        top_trending: {
+          label: "Top Trending",
+          desc: "Upptrend + positiv forecast + Tritch alla positiva",
+        },
+        top_overall: {
+          label: "Top Totalt",
+          desc: "Fonder som toppar flest matriser",
+        },
+      };
+
+      let _currentData = null;
+      let _currentFolder = null; // e.g. "top-2026-05-19"
+
+      function rankingFundHtml(fund, rank) {
+        const sig = SIGNAL[fund.signal] || SIGNAL.HOLD;
+        const medal = MEDALS[rank - 1] ?? `#${rank}`;
+        const fc50 = fund.forecast
+          ? signFmt(fund.forecast.q50 || 0)
+          : signFmt(fund.forecast_q50 || 0);
+        const hitrate = (fund.hitrate_q50 || 0).toFixed(1);
+        const cov = (fund.coverage_pct || 0).toFixed(1);
+        const ppm = fund.ppm_code
+          ? `<span class="id-pill ppm">PPM&nbsp;${fund.ppm_code}</span>`
+          : "";
+        const avanza = fund.avanza_url
+          ? `<a class="avanza-link" href="${fund.avanza_url}" target="_blank" rel="noopener">Avanza ↗</a>`
+          : "";
+
+        // Construct chart paths from folder + fund_id
+        const hKey =
+          Object.keys((_currentData && _currentData.horizons) || {})[0] || "1w";
+        const h = hKey.replace("w", "");
+        const ensPath = _currentFolder
+          ? `${OUTPUT}/${_currentFolder}/${fund.fund_id}/h${h}w_ensemble.png`
+          : null;
+        const indPath = _currentFolder
+          ? `${OUTPUT}/${_currentFolder}/${fund.fund_id}/h${h}w_individual.png`
+          : null;
+        const cardId = `r-${rank}-${fund.fund_id}`;
+        const ensId = `${cardId}-ens`;
+        const indId = `${cardId}-ind`;
+
+        return `
+<div class="ranking-fund-card" style="flex-direction:column;align-items:stretch;padding:0;overflow:hidden;">
+  <div style="display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;">
+    <div class="ranking-rank">${medal}</div>
+    <div class="ranking-info">
+      <div class="ranking-name" title="${fund.name || ""}">${
+          fund.name || "—"
+        }</div>
+      <div class="ranking-ids">
+        <span class="id-pill">ID&nbsp;${fund.fund_id || "—"}</span>
+        ${ppm}${avanza}
+        <div class="signal-badge ${
+          sig.cls
+        }" style="padding:2px 8px;border-radius:4px;display:inline-flex;gap:4px;">
+          <span class="signal-icon">${sig.icon}</span>
+          <span class="signal-label">${sig.label}</span>
+        </div>
+      </div>
+    </div>
+    <div class="ranking-metrics">
+      <div class="ranking-metric">
+        <span class="ranking-metric-label">FC Q50</span>
+        <span class="ranking-metric-value">${fc50}</span>
+      </div>
+      <div class="ranking-metric">
+        <span class="ranking-metric-label">Träffsäk.</span>
+        <span class="ranking-metric-value">${hitrate}%</span>
+      </div>
+      <div class="ranking-metric">
+        <span class="ranking-metric-label">Täckning</span>
+        <span class="ranking-metric-value">${cov}%</span>
+      </div>
+    </div>
+  </div>
+  <div class="charts-block" style="border-top:1px solid var(--border);padding:0.75rem 1.25rem 1rem;">
+    <div class="chart-tabs">
+      <button class="chart-tab active" onclick="switchChart(this,'${ensId}')">Ensemble</button>
+      <button class="chart-tab"        onclick="switchChart(this,'${indId}')">Per modell</button>
+    </div>
+    <div class="chart-pane active" id="${ensId}">${chartImg(
+          ensPath,
+          `Ensemble ${fund.name}`
+        )}</div>
+    <div class="chart-pane"        id="${indId}">${chartImg(
+          indPath,
+          `Per modell ${fund.name}`
+        )}</div>
+  </div>
+</div>`;
+      }
+
+      function switchRanking(key) {
+        if (!_currentData) return;
+        document
+          .querySelectorAll(".ranking-tab")
+          .forEach((t) => t.classList.toggle("active", t.dataset.key === key));
+
+        const meta = RANKING_META[key] || { desc: "" };
+        const fundsPanel = document.getElementById("funds-panel");
+
+        let funds = [];
+        if (key === "winners") {
+          const hKeys = Object.keys(_currentData.horizons || {});
+          const hKey = hKeys[0];
+          funds = hKey ? _currentData.horizons[hKey] || [] : [];
+          // Winners have forecast object; render full cards
+          const hLabel = (HORIZON_META[hKey] || { label: hKey || "" }).label;
+          fundsPanel.innerHTML = `
+<div class="ranking-desc">${meta.desc}</div>
+<div class="fund-list">
+  ${
+    funds.length
+      ? funds.map((f, i) => fundCardHtml(f, i + 1, hKey)).join("")
+      : '<div class="ranking-empty">Inga fonder</div>'
+  }
+</div>`;
+        } else {
+          funds = (_currentData.rankings || {})[key] || [];
+          fundsPanel.innerHTML = `
+<div class="ranking-desc">${meta.desc}</div>
+<div style="display:flex;flex-direction:column;gap:0.75rem;">
+  ${
+    funds.length
+      ? funds.map((f, i) => rankingFundHtml(f, i + 1)).join("")
+      : '<div class="ranking-empty">Inga fonder kvalificerar för denna matris.</div>'
+  }
+</div>`;
+        }
+      }
+
+      function render(data, folder) {
+        _currentData = data;
+        _currentFolder = folder || null;
+        const app = document.getElementById("app");
+        const footer = document.getElementById("footer");
+
+        document.getElementById("header-date").textContent =
+          "Fondprognos · " + (data.generated || "");
+        const models =
+          (data.active_models || []).map((m) => m.toUpperCase()).join(", ") ||
+          "—";
+
+        const metaHtml = `
+<div class="meta-bar">
+  <div class="meta-item"><span class="meta-label">Genererad</span><span class="meta-value">${
+    data.generated || "—"
+  }</span></div>
+  <div class="meta-item"><span class="meta-label">Målvariabel</span><span class="meta-value">${
+    data.target_mode || "—"
+  }</span></div>
+  <div class="meta-item"><span class="meta-label">Skalning</span><span class="meta-value">${
+    data.scaler_mode || "—"
+  }</span></div>
+  <div class="meta-item"><span class="meta-label">Modeller</span><span class="meta-value">${models}</span></div>
+  <div class="meta-item"><span class="meta-label">Vinnare</span><span class="meta-value">${
+    data.winner_funds || "—"
+  } fonder</span></div>
+</div>`;
+
+        // Ranking filter tabs — show all available keys
+        const rankings = data.rankings || {};
+        const rankingKeys = ["winners", ...Object.keys(rankings)];
+        const tabsHtml = `<nav class="ranking-nav">${rankingKeys
+          .map((k) => {
+            const m = RANKING_META[k] || { label: k };
+            return `<button class="ranking-tab${
+              k === "winners" ? " active" : ""
+            }" data-key="${k}" onclick="switchRanking('${k}')">${
+              m.label
+            }</button>`;
+          })
+          .join("")}</nav>`;
+
+        app.innerHTML = metaHtml + tabsHtml + `<div id="funds-panel"></div>`;
+        footer.textContent = `PPM Paradise · ${
+          data.generated || ""
+        } · Endast för informationsändamål, ej finansiell rådgivning`;
+
+        // Render default view
+        switchRanking("winners");
+      }
+
+      function renderHistoryList(folders) {
+        const list = document.getElementById("history-list");
+        if (!folders || folders.length === 0) {
+          list.innerHTML =
+            '<div class="history-empty">Ingen historik tillgänglig.</div>';
+          return;
+        }
+        list.innerHTML = folders
+          .map((folder) => {
+            const date = folder.replace("top-", "");
+            return `
+<div class="history-item" onclick="loadFolder('${folder}')">
+  <span class="history-item-date">${date}</span>
+  <span class="history-item-meta">${folder}/predictions.json</span>
+  <span>→</span>
+</div>`;
+          })
+          .join("");
+      }
+
+      function loadFolder(folderName) {
+        document.getElementById("app").innerHTML =
+          '<p class="state-msg">Laddar...</p>';
+        fetch(`${OUTPUT}/${folderName}/predictions.json`)
+          .then((r) => {
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            return r.json();
+          })
+          .then((data) => render(data, folderName))
+          .catch((err) => {
+            document.getElementById(
+              "app"
+            ).innerHTML = `<p class="state-msg">Kunde inte ladda ${folderName}/predictions.json — ${err.message}</p>`;
+          });
+      }
+
+      const OUTPUT = "output";
+
+      fetch(`${OUTPUT}/manifest.json`)
+        .then((r) => {
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return r.json();
+        })
+        .then((manifest) => {
+          const history = (manifest.history || []).filter(
+            (f) => f !== manifest.latest
+          );
+          renderHistoryList(history);
+          if (!manifest.latest) throw new Error("manifest saknar 'latest'");
+          return fetch(`${OUTPUT}/predictions.json`)
+            .then((r) => {
+              if (!r.ok) throw new Error(`HTTP ${r.status}`);
+              return r.json();
+            })
+            .then((data) => render(data, manifest.latest));
+        })
+        .catch((err) => {
+          document.getElementById(
+            "app"
+          ).innerHTML = `<p class="state-msg">Kunde inte ladda prognos — ${err.message}</p>`;
+        });
+      // ── Lightbox ─────────────────────────────────────────────────────────────
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lb-img");
+      const lbInner = document.getElementById("lb-inner");
+      let lbScale = 1,
+        lbMinScale = 1;
+      let lbPanX = 0,
+        lbPanY = 0;
+      let lbDragging = false,
+        lbDragStartX = 0,
+        lbDragStartY = 0,
+        lbPanStartX = 0,
+        lbPanStartY = 0;
+
+      function lbApplyTransform() {
+        lbImg.style.transform = `translate(${lbPanX}px,${lbPanY}px) scale(${lbScale})`;
+      }
+      function lbClampPan() {
+        const r = lbImg.getBoundingClientRect();
+        const iw = lbInner.clientWidth;
+        const ih = lbInner.clientHeight;
+        const ow = r.width;
+        const oh = r.height;
+        const maxX = Math.max(0, (ow - iw) / 2);
+        const maxY = Math.max(0, (oh - ih) / 2);
+        lbPanX = Math.min(maxX, Math.max(-maxX, lbPanX));
+        lbPanY = Math.min(maxY, Math.max(-maxY, lbPanY));
+      }
+      function lbShow(src, alt) {
+        lbImg.src = src;
+        lbImg.alt = alt || "";
+        lbScale = 1;
+        lbPanX = 0;
+        lbPanY = 0;
+        lbApplyTransform();
+        lb.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function lbHide() {
+        lb.classList.remove("open");
+        document.body.style.overflow = "";
+        lbImg.src = "";
+      }
+      function lbClose(e) {
+        if (e.target === lb) lbHide();
+      }
+
+      // Scroll to zoom
+      lb.addEventListener(
+        "wheel",
+        (e) => {
+          e.preventDefault();
+          const delta = e.deltaY < 0 ? 1.12 : 0.88;
+          const newScale = Math.min(8, Math.max(lbMinScale, lbScale * delta));
+          // Zoom toward cursor
+          const rect = lbInner.getBoundingClientRect();
+          const cx = e.clientX - rect.left - rect.width / 2;
+          const cy = e.clientY - rect.top - rect.height / 2;
+          lbPanX = cx + (lbPanX - cx) * (newScale / lbScale);
+          lbPanY = cy + (lbPanY - cy) * (newScale / lbScale);
+          lbScale = newScale;
+          lbClampPan();
+          lbApplyTransform();
+        },
+        { passive: false }
+      );
+
+      // Drag to pan
+      lbInner.addEventListener("mousedown", (e) => {
+        if (lbScale <= 1) return;
+        lbDragging = true;
+        lbDragStartX = e.clientX;
+        lbDragStartY = e.clientY;
+        lbPanStartX = lbPanX;
+        lbPanStartY = lbPanY;
+        lbInner.classList.add("grabbing");
+        e.preventDefault();
+      });
+      window.addEventListener("mousemove", (e) => {
+        if (!lbDragging) return;
+        lbPanX = lbPanStartX + (e.clientX - lbDragStartX);
+        lbPanY = lbPanStartY + (e.clientY - lbDragStartY);
+        lbClampPan();
+        lbApplyTransform();
+      });
+      window.addEventListener("mouseup", () => {
+        lbDragging = false;
+        lbInner.classList.remove("grabbing");
+      });
+
+      // Touch pinch-zoom + pan
+      let lbTouches = [],
+        lbLastDist = 0,
+        lbTouchPanX = 0,
+        lbTouchPanY = 0;
+      lbInner.addEventListener(
+        "touchstart",
+        (e) => {
+          lbTouches = Array.from(e.touches);
+          if (lbTouches.length === 2) {
+            lbLastDist = Math.hypot(
+              lbTouches[0].clientX - lbTouches[1].clientX,
+              lbTouches[0].clientY - lbTouches[1].clientY
+            );
+          } else if (lbTouches.length === 1) {
+            lbTouchPanX = lbTouches[0].clientX;
+            lbTouchPanY = lbTouches[0].clientY;
+          }
+          e.preventDefault();
+        },
+        { passive: false }
+      );
+      lbInner.addEventListener(
+        "touchmove",
+        (e) => {
+          const touches = Array.from(e.touches);
+          if (touches.length === 2) {
+            const dist = Math.hypot(
+              touches[0].clientX - touches[1].clientX,
+              touches[0].clientY - touches[1].clientY
+            );
+            const ratio = dist / lbLastDist;
+            lbScale = Math.min(8, Math.max(lbMinScale, lbScale * ratio));
+            lbLastDist = dist;
+          } else if (touches.length === 1 && lbScale > 1) {
+            lbPanX += touches[0].clientX - lbTouchPanX;
+            lbPanY += touches[0].clientY - lbTouchPanY;
+            lbTouchPanX = touches[0].clientX;
+            lbTouchPanY = touches[0].clientY;
+            lbClampPan();
+          }
+          lbApplyTransform();
+          e.preventDefault();
+        },
+        { passive: false }
+      );
+
+      // ESC to close
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") lbHide();
+      });
+
+      // Make chart images open lightbox — use event delegation
+      document.addEventListener("click", (e) => {
+        if (e.target.matches(".chart-pane img") && e.target.src) {
+          lbShow(e.target.src, e.target.alt);
+        }
+      });
+    </script>
+  </body>
+</html>

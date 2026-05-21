@@ -1,0 +1,305 @@
+{
+  "generated": "2026-05-21",
+  "target_mode": "quantile",
+  "scaler_mode": "robust",
+  "active_models": [
+    "lstm",
+    "tcn"
+  ],
+  "top_n_funds": 3,
+  "winner_funds": 5,
+  "horizons": {
+    "1w": [
+      {
+        "fund_id": "1011686",
+        "ppm_code": "933359",
+        "name": "Allianz China A Shares AT USD",
+        "tags": "Aktiefond, Kina, A-aktier",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1011686",
+        "score": 14705.667,
+        "hitrate_q50": 69.82,
+        "coverage_pct": 79.88,
+        "mae_q50": 0.6381,
+        "signal": "HOLD",
+        "forecast": {
+          "q10": 0.1323,
+          "q50": 2.0717,
+          "q90": 2.9912
+        },
+        "charts": {
+          "ensemble": "top-2026-05-21/1011686/h1w_ensemble.png",
+          "individual": "top-2026-05-21/1011686/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "431",
+        "ppm_code": "446088",
+        "name": "BGF World Technology A2",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/431",
+        "score": 12810.062,
+        "hitrate_q50": 78.83,
+        "coverage_pct": 77.04,
+        "mae_q50": 0.828,
+        "signal": "BUY",
+        "forecast": {
+          "q10": 0.2952,
+          "q50": 1.4696,
+          "q90": 2.0461
+        },
+        "charts": {
+          "ensemble": "top-2026-05-21/431/h1w_ensemble.png",
+          "individual": "top-2026-05-21/431/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "540",
+        "ppm_code": "517748",
+        "name": "BGF World Energy A2",
+        "tags": "Aktiefond, Branschfond, Energi",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
+        "score": 11254.558,
+        "hitrate_q50": 80.36,
+        "coverage_pct": 83.42,
+        "mae_q50": 0.8946,
+        "signal": "BUY",
+        "forecast": {
+          "q10": -0.1439,
+          "q50": 1.0305,
+          "q90": 1.774
+        },
+        "charts": {
+          "ensemble": "top-2026-05-21/540/h1w_ensemble.png",
+          "individual": "top-2026-05-21/540/h1w_individual.png"
+        }
+      }
+    ]
+  },
+  "rankings": {
+    "top_yield": [
+      {
+        "fund_id": "1011686",
+        "ppm_code": "933359",
+        "name": "Allianz China A Shares AT USD",
+        "tags": "Aktiefond, Kina, A-aktier",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1011686",
+        "hitrate_q50": 69.82,
+        "coverage_pct": 79.88,
+        "mae_q50": 0.6381,
+        "forecast_q50": 1.4636,
+        "forecast_q10": -0.622,
+        "forecast_q90": 1.9284,
+        "last_actual": 13.4798,
+        "momentum_4w": 9.0148,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "431",
+        "ppm_code": "446088",
+        "name": "BGF World Technology A2",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/431",
+        "hitrate_q50": 78.83,
+        "coverage_pct": 77.04,
+        "mae_q50": 0.828,
+        "forecast_q50": 1.2731,
+        "forecast_q10": -0.0338,
+        "forecast_q90": 1.6746,
+        "last_actual": 32.2648,
+        "momentum_4w": 27.1301,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "540",
+        "ppm_code": "517748",
+        "name": "BGF World Energy A2",
+        "tags": "Aktiefond, Branschfond, Energi",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
+        "hitrate_q50": 80.36,
+        "coverage_pct": 83.42,
+        "mae_q50": 0.8946,
+        "forecast_q50": 1.1174,
+        "forecast_q10": -0.3857,
+        "forecast_q90": 1.6011,
+        "last_actual": 4.611,
+        "momentum_4w": 8.1449,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "BUY"
+      }
+    ],
+    "top_reliable": [
+      {
+        "fund_id": "2802",
+        "ppm_code": "305185",
+        "name": "AMF Räntefond Kort",
+        "tags": "Räntefond, SEK, Obligationer, Korta",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2802",
+        "hitrate_q50": 95.41,
+        "coverage_pct": 88.27,
+        "mae_q50": 0.0185,
+        "forecast_q50": 0.0806,
+        "forecast_q10": 0.0253,
+        "forecast_q90": 0.1487,
+        "last_actual": 0.5172,
+        "momentum_4w": 0.3695,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "HOLD"
+      },
+      {
+        "fund_id": "417084",
+        "ppm_code": "129924",
+        "name": "Pareto Nordic Corporate Bond C",
+        "tags": "Räntefond, Övriga, Obligationer",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/417084",
+        "hitrate_q50": 92.56,
+        "coverage_pct": 88.84,
+        "mae_q50": 0.0495,
+        "forecast_q50": 0.04,
+        "forecast_q10": -0.0663,
+        "forecast_q90": 0.1247,
+        "last_actual": 1.1271,
+        "momentum_4w": 0.6694,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "HOLD"
+      },
+      {
+        "fund_id": "92827",
+        "ppm_code": "442897",
+        "name": "Storebrand Kortränta A SEK H",
+        "tags": "Räntefond, SEK, Obligationer, Korta",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/92827",
+        "hitrate_q50": 94.9,
+        "coverage_pct": 82.14,
+        "mae_q50": 0.0261,
+        "forecast_q50": 0.0283,
+        "forecast_q10": -0.0293,
+        "forecast_q90": 0.0596,
+        "last_actual": 0.4328,
+        "momentum_4w": 0.3307,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "HOLD"
+      }
+    ],
+    "top_balanced": [
+      {
+        "fund_id": "1011686",
+        "ppm_code": "933359",
+        "name": "Allianz China A Shares AT USD",
+        "tags": "Aktiefond, Kina, A-aktier",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1011686",
+        "hitrate_q50": 69.82,
+        "coverage_pct": 79.88,
+        "mae_q50": 0.6381,
+        "forecast_q50": 1.4636,
+        "forecast_q10": -0.622,
+        "forecast_q90": 1.9284,
+        "last_actual": 13.4798,
+        "momentum_4w": 9.0148,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "431",
+        "ppm_code": "446088",
+        "name": "BGF World Technology A2",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/431",
+        "hitrate_q50": 78.83,
+        "coverage_pct": 77.04,
+        "mae_q50": 0.828,
+        "forecast_q50": 1.2731,
+        "forecast_q10": -0.0338,
+        "forecast_q90": 1.6746,
+        "last_actual": 32.2648,
+        "momentum_4w": 27.1301,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "540",
+        "ppm_code": "517748",
+        "name": "BGF World Energy A2",
+        "tags": "Aktiefond, Branschfond, Energi",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
+        "hitrate_q50": 80.36,
+        "coverage_pct": 83.42,
+        "mae_q50": 0.8946,
+        "forecast_q50": 1.1174,
+        "forecast_q10": -0.3857,
+        "forecast_q90": 1.6011,
+        "last_actual": 4.611,
+        "momentum_4w": 8.1449,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "BUY"
+      }
+    ],
+    "top_trending": [],
+    "top_overall": [
+      {
+        "fund_id": "1011686",
+        "ppm_code": "933359",
+        "name": "Allianz China A Shares AT USD",
+        "tags": "Aktiefond, Kina, A-aktier",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1011686",
+        "hitrate_q50": 69.82,
+        "coverage_pct": 79.88,
+        "mae_q50": 0.6381,
+        "forecast_q50": 1.4636,
+        "forecast_q10": -0.622,
+        "forecast_q90": 1.9284,
+        "last_actual": 13.4798,
+        "momentum_4w": 9.0148,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "431",
+        "ppm_code": "446088",
+        "name": "BGF World Technology A2",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/431",
+        "hitrate_q50": 78.83,
+        "coverage_pct": 77.04,
+        "mae_q50": 0.828,
+        "forecast_q50": 1.2731,
+        "forecast_q10": -0.0338,
+        "forecast_q90": 1.6746,
+        "last_actual": 32.2648,
+        "momentum_4w": 27.1301,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "540",
+        "ppm_code": "517748",
+        "name": "BGF World Energy A2",
+        "tags": "Aktiefond, Branschfond, Energi",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
+        "hitrate_q50": 80.36,
+        "coverage_pct": 83.42,
+        "mae_q50": 0.8946,
+        "forecast_q50": 1.1174,
+        "forecast_q10": -0.3857,
+        "forecast_q90": 1.6011,
+        "last_actual": 4.611,
+        "momentum_4w": 8.1449,
+        "tritch_score": -1.0,
+        "tritch_phase": -1,
+        "signal": "BUY"
+      }
+    ]
+  }
+}
