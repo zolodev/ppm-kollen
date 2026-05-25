@@ -3,38 +3,6 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<!-- ═══════════════════════════════════════════════════════════
-     Open Graph / Social Media Preview Tags
-     ═══════════════════════════════════════════════════════════ -->
-
-<!-- Primary meta -->
-<meta name="description" content="AI-driven fondrankings baserade på ML-modellensemble (LSTM + TCN). Se vilka PPM-fonder som troligtvis ger högst avkastning nästa vecka. Uppdateras varje vecka.">
-
-<!-- Open Graph (Facebook, WhatsApp, iMessage, LinkedIn, Slack …) -->
-<meta property="og:type"        content="website">
-<meta property="og:url"         content="https://ppmkollen.se/">
-<meta property="og:title"       content="PPM Kollen — Vilka fonder ger högst avkastning?">
-<meta property="og:description" content="AI-driven fondrankings med LSTM + TCN-ensemble. Prognosintervall Q10·Q50·Q90 för 1–26 veckors horisont. Inte finansiell rådgivning.">
-<meta property="og:image"       content="https://ppmkollen.se/og-preview.png">
-<meta property="og:image:width"  content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt"   content="PPM Kollen — Fund Forecast preview">
-<meta property="og:locale"      content="sv_SE">
-<meta property="og:site_name"   content="PPM Kollen">
-
-<!-- Twitter / X Card -->
-<meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:url"         content="https://ppmkollen.se/">
-<meta name="twitter:title"       content="PPM Kollen — Vilka fonder ger högst avkastning?">
-<meta name="twitter:description" content="AI-driven fondrankings med LSTM + TCN-ensemble. Prognosintervall Q10·Q50·Q90 för 1–26 veckors horisont.">
-<meta name="twitter:image"       content="https://ppmkollen.se/og-preview.png">
-<meta name="twitter:image:alt"   content="PPM Kollen — Fund Forecast preview">
-
-<!-- Theme color (browser chrome on mobile) -->
-<meta name="theme-color" content="#1a1f2e">
-
-
 <title>PPM Kollen — Fund Forecast</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1112,6 +1080,12 @@ footer {
   max-width: 1100px;
   margin: 0 auto;
 }
+footer a {
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity .15s;
+}
+footer a:hover { opacity: 1; }
 
 /* ─── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 720px) {
@@ -1181,14 +1155,6 @@ footer {
         <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7 V12 L15.5 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         <span class="btn-label">Historik</span>
       </button>
-      <a class="ghost-btn" href="about.html">
-        <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
-          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
-          <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          <circle cx="12" cy="15.5" r="0.8" fill="currentColor"/>
-        </svg>
-        <span class="btn-label" id="about-label">Om</span>
-      </a>
       <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language" aria-label="Byt språk">
         <span id="lang-label">EN</span>
       </button>
@@ -1286,6 +1252,7 @@ footer {
       meta_target_tip: "Vilket statistiskt mått modellen förutsäger.\nQuantile = en viss percentil av avkastningen, inte medelvärdet.",
       meta_scaling_tip: "Hur indata normaliseras innan träning.\nRobust = använder median/IQR istället för medelvärde/std, vilket minskar känsligheten för extremvärden.",
       footer_suffix: "Endast för informationsändamål — inte finansiell rådgivning.",
+      footer_about: "Om projektet",
       ranking_no_funds: "Inga fonder att visa.",
       ranking_no_qualify: "Inga fonder kvalificerar till denna matris.",
       fund_unknown: "Okänd fond",
@@ -1366,6 +1333,7 @@ footer {
       meta_target_tip: "Which statistical measure the model predicts.\nQuantile = a specific percentile of returns, not the mean.",
       meta_scaling_tip: "How input data is normalised before training.\nRobust = uses median/IQR instead of mean/std, reducing sensitivity to outliers.",
       footer_suffix: "For informational purposes only — not financial advice.",
+      footer_about: "About",
       ranking_no_funds: "No funds to display.",
       ranking_no_qualify: "No funds qualify for this matrix.",
       fund_unknown: "Unknown fund",
@@ -1931,11 +1899,24 @@ footer {
     }
   }
 
+  // ── Footer helper ──────────────────────────────────────────────
+  function renderFooter(generated) {
+    const footer = $("#footer");
+    if (!footer) return;
+    footer.innerHTML = `PPM Kollen · ${generated || ""} · ${t("footer_suffix")}
+      &nbsp;·&nbsp;
+      <a href="about.html" id="footer-about">${t("footer_about")}</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/zolodev" target="_blank" rel="noopener" title="GitHub" style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" style="vertical-align:middle;"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        zolodev
+      </a>`;
+  }
+
   function render(data, folder) {
     _currentData = data;
     _currentFolder = folder || null;
-    const app    = $("#app");
-    const footer = $("#footer");
+    const app = $("#app");
 
     $("#header-date").textContent = t("fund_forecast") + " · " + (data.generated || "");
     const models = (data.active_models || []).map(m => m.toUpperCase()).join(", ") || "—";
@@ -1957,7 +1938,7 @@ footer {
     }).join("")}</nav>`;
 
     app.innerHTML = metaHtml + tabsHtml + `<div id="funds-panel"></div>`;
-    footer.textContent = `PPM Kollen · ${data.generated || ""} · ${t("footer_suffix")}`;
+    renderFooter(data.generated);
 
     switchRanking("winners");
   }
@@ -2096,13 +2077,13 @@ footer {
     if (histEmpty) histEmpty.textContent = t("history_empty");
     const stateMsg = document.querySelector("#app .state-msg");
     if (stateMsg) stateMsg.textContent = t("loading_forecast");
+    const footerAbout = document.querySelector("#footer-about");
+    if (footerAbout) footerAbout.textContent = t("footer_about");
   }
   function setLang(lang) {
     _currentLang = lang;
     const lbl = document.getElementById("lang-label");
     if (lbl) lbl.textContent = lang === "sv" ? "EN" : "SV";
-    const aboutLabel = document.getElementById("about-label");
-    if (aboutLabel) aboutLabel.textContent = lang === "sv" ? "Om" : "About";
     try { localStorage.setItem(STORAGE_LANG, lang); } catch {}
     applyLangToStaticElements();
     if (_currentData) render(_currentData, _currentFolder);
