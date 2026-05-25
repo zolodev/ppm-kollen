@@ -310,18 +310,46 @@ main {
 .tag.accent { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
 
 /* Timeline */
-.timeline { display: flex; flex-direction: column; gap: 0.75rem; }
-.tl-item { display: grid; grid-template-columns: 70px 1fr; gap: 0 0.75rem; }
-.tl-date {
-  font-family: "IBM Plex Mono", monospace; font-size: 0.7rem;
-  color: var(--text-faint); padding-top: 0.15rem; text-align: right;
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.tl-item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 0 1rem;
+  position: relative;
 }
-.tl-dot-col { position: relative; display: flex; flex-direction: column; align-items: center; }
-.tl-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 0.22rem; flex-shrink: 0; }
-.tl-line { flex: 1; width: 1px; background: var(--border); margin-top: 4px; }
-.tl-item:last-child .tl-line { display: none; }
-.tl-text { font-size: 0.82rem; color: var(--text-muted); padding-bottom: 0.75rem; line-height: 1.5; }
-.tl-text strong { color: var(--text); font-weight: 600; }
+.tl-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 21px; top: 44px; bottom: 0;
+  width: 1px; background: var(--border);
+}
+.tl-node {
+  display: grid; place-items: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62rem; font-weight: 500;
+  color: var(--accent);
+  flex-shrink: 0;
+  position: relative; z-index: 1;
+  line-height: 1.2;
+  text-align: center;
+  padding: 2px;
+  margin-bottom: 1.5rem;
+}
+.tl-item:last-child .tl-node {
+  border-color: var(--buy);
+  color: var(--buy);
+  background: color-mix(in oklch, var(--buy-bg) 60%, var(--bg-card));
+}
+.tl-body { padding-top: 0.6rem; padding-bottom: 1.5rem; }
+.tl-title {
+  font-family: "IBM Plex Sans", sans-serif; font-size: 0.92rem;
+  font-weight: 600; color: var(--text); margin-bottom: 0.3rem;
+}
+.tl-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
 
 /* ─── CTA link ───────────────────────────────────────────────── */
 .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
@@ -723,30 +751,39 @@ body.lang-en [data-lang="en"] { display: revert; }
       <div class="aside-card-title" data-lang="en">Project history</div>
       <div class="timeline">
         <div class="tl-item">
-          <div class="tl-date">2024</div>
-          <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-text"><strong data-lang="sv">Första prototyp</strong><strong data-lang="en">First prototype</strong><br><span data-lang="sv">LSTM-modell tränad på ett fåtal fonder. Manuell körning.</span><span data-lang="en">LSTM model trained on a handful of funds. Manual execution.</span></div>
+          <div class="tl-node">2024</div>
+          <div class="tl-body">
+            <div class="tl-title"><span data-lang="sv">Första prototyp</span><span data-lang="en">First prototype</span></div>
+            <div class="tl-desc"><span data-lang="sv">LSTM-modell tränad på ett fåtal fonder. Manuell körning.</span><span data-lang="en">LSTM model trained on a handful of funds. Manual execution.</span></div>
+          </div>
         </div>
         <div class="tl-item">
-          <div class="tl-date">2025 Q1</div>
-          <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-text"><strong data-lang="sv">Skalning till ~1 100 fonder</strong><strong data-lang="en">Scaling to ~1,100 funds</strong><br><span data-lang="sv">OOM-problem lösta med streaming JSONL. TCN introducerades.</span><span data-lang="en">OOM issues solved with streaming JSONL. TCN introduced.</span></div>
+          <div class="tl-node">Q1 2025</div>
+          <div class="tl-body">
+            <div class="tl-title"><span data-lang="sv">Skalning till ~1 100 fonder</span><span data-lang="en">Scaling to ~1,100 funds</span></div>
+            <div class="tl-desc"><span data-lang="sv">OOM-problem lösta med streaming JSONL. TCN introducerades.</span><span data-lang="en">OOM issues solved with streaming JSONL. TCN introduced.</span></div>
+          </div>
         </div>
         <div class="tl-item">
-          <div class="tl-date">2025 Q2</div>
-          <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-text"><strong data-lang="sv">Autonom drift</strong><strong data-lang="en">Autonomous operation</strong><br><span data-lang="sv">Systemd-tjänster, kraschåterställning och veckovis publicering.</span><span data-lang="en">Systemd services, crash recovery and weekly publishing.</span></div>
+          <div class="tl-node">Q2 2025</div>
+          <div class="tl-body">
+            <div class="tl-title"><span data-lang="sv">Autonom drift</span><span data-lang="en">Autonomous operation</span></div>
+            <div class="tl-desc"><span data-lang="sv">Systemd-tjänster, kraschåterställning och veckovis publicering.</span><span data-lang="en">Systemd services, crash recovery and weekly publishing.</span></div>
+          </div>
         </div>
         <div class="tl-item">
-          <div class="tl-date">2025 Q3</div>
-          <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
-          <div class="tl-text"><strong data-lang="sv">Backtest &amp; ranking</strong><strong data-lang="en">Backtest &amp; ranking</strong><br><span data-lang="sv">Utökat rankningsystem med flera matriser och backtestblock.</span><span data-lang="en">Extended ranking system with multiple matrices and backtest blocks.</span></div>
+          <div class="tl-node">Q3 2025</div>
+          <div class="tl-body">
+            <div class="tl-title"><span data-lang="sv">Backtest &amp; ranking</span><span data-lang="en">Backtest &amp; ranking</span></div>
+            <div class="tl-desc"><span data-lang="sv">Utökat rankningsystem med flera matriser och backtestblock.</span><span data-lang="en">Extended ranking system with multiple matrices and backtest blocks.</span></div>
+          </div>
         </div>
         <div class="tl-item">
-          <div class="tl-date" data-lang="sv">Nu</div>
-          <div class="tl-date" data-lang="en">Now</div>
-          <div class="tl-dot-col"><div class="tl-dot" style="background:var(--buy)"></div></div>
-          <div class="tl-text"><strong data-lang="sv">Pågående</strong><strong data-lang="en">Ongoing</strong><br><span data-lang="sv">Kontinuerlig förfining av modeller och gränssnitt.</span><span data-lang="en">Continuous refinement of models and interface.</span></div>
+          <div class="tl-node"><span data-lang="sv">Nu</span><span data-lang="en">Now</span></div>
+          <div class="tl-body">
+            <div class="tl-title"><span data-lang="sv">Pågående</span><span data-lang="en">Ongoing</span></div>
+            <div class="tl-desc"><span data-lang="sv">Kontinuerlig förfining av modeller och gränssnitt.</span><span data-lang="en">Continuous refinement of models and interface.</span></div>
+          </div>
         </div>
       </div>
     </div>
