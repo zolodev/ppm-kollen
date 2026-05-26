@@ -1,1909 +1,2002 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>PPM Kollen — Fund Forecast</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<style>
-/* ================================================================
-   PPM Kollen — Fund Forecast
-   Dark-first theme. Light theme available via [data-theme="light"].
-   ================================================================ */
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPM Kollen — Fund Forecast</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23334' /%3E%3Cpath d='M3 19 L9 12 L13 16 L21 6' fill='none' stroke='%2399ccee' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='21' cy='6' r='1.6' fill='%2399ccee'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root,
+    [data-theme="dark"] {
+      --bg: oklch(0.18 0.008 240);
+      --bg-elev: oklch(0.22 0.009 240);
+      --bg-card: oklch(0.24 0.009 240);
+      --bg-panel: oklch(0.27 0.010 240);
+      --bg-sunken: oklch(0.15 0.008 240);
+      --border: oklch(0.34 0.010 240);
+      --border-em: oklch(0.45 0.014 240);
+      --text: oklch(0.94 0.005 240);
+      --text-muted: oklch(0.72 0.008 240);
+      --text-faint: oklch(0.55 0.010 240);
+      --accent: oklch(0.78 0.10 220);
+      --accent-2: oklch(0.66 0.12 215);
+      --accent-soft: oklch(0.30 0.04 220);
+      --buy: oklch(0.80 0.16 155);
+      --buy-bg: oklch(0.28 0.07 155);
+      --hold: oklch(0.82 0.13 85);
+      --hold-bg: oklch(0.30 0.06 85);
+      --sell: oklch(0.74 0.16 25);
+      --sell-bg: oklch(0.30 0.08 25);
+      --tag-bg: oklch(0.30 0.010 240);
+      --tag-text: oklch(0.78 0.008 240);
+      --bar-bg: oklch(0.30 0.010 240);
+      --bar-fill: oklch(0.66 0.12 215);
+      --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
+      --shadow-md: 0 4px 16px rgb(0 0 0 / 0.45), 0 1px 2px rgb(0 0 0 / 0.3);
+      --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.55);
+      color-scheme: dark;
+    }
 
-:root,
-[data-theme="dark"] {
-  --bg:          oklch(0.18 0.008 240);
-  --bg-elev:     oklch(0.22 0.009 240);
-  --bg-card:     oklch(0.24 0.009 240);
-  --bg-panel:    oklch(0.27 0.010 240);
-  --bg-sunken:   oklch(0.15 0.008 240);
+    [data-theme="light"] {
+      --bg: oklch(0.98 0.004 90);
+      --bg-elev: oklch(1 0 0);
+      --bg-card: oklch(1 0 0);
+      --bg-panel: oklch(0.95 0.006 90);
+      --bg-sunken: oklch(0.94 0.006 90);
+      --border: oklch(0.88 0.008 90);
+      --border-em: oklch(0.78 0.012 90);
+      --text: oklch(0.20 0.010 240);
+      --text-muted: oklch(0.45 0.010 240);
+      --text-faint: oklch(0.62 0.010 240);
+      --accent: oklch(0.42 0.10 220);
+      --accent-2: oklch(0.55 0.12 215);
+      --accent-soft: oklch(0.92 0.03 220);
+      --buy: oklch(0.42 0.16 155);
+      --buy-bg: oklch(0.94 0.06 155);
+      --hold: oklch(0.50 0.13 85);
+      --hold-bg: oklch(0.95 0.08 85);
+      --sell: oklch(0.50 0.17 25);
+      --sell-bg: oklch(0.95 0.05 25);
+      --tag-bg: oklch(0.93 0.008 90);
+      --tag-text: oklch(0.35 0.012 240);
+      --bar-bg: oklch(0.90 0.008 90);
+      --bar-fill: oklch(0.55 0.12 215);
+      --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+      --shadow-md: 0 2px 10px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
+      --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.12);
+      color-scheme: light;
+    }
 
-  --border:      oklch(0.34 0.010 240);
-  --border-em:   oklch(0.45 0.014 240);
+    [data-theme="auto"] {}
 
-  --text:        oklch(0.94 0.005 240);
-  --text-muted:  oklch(0.72 0.008 240);
-  --text-faint:  oklch(0.55 0.010 240);
+    @media (prefers-color-scheme: light) {
+      [data-theme="auto"] {
+        --bg: oklch(0.98 0.004 90);
+        --bg-elev: oklch(1 0 0);
+        --bg-card: oklch(1 0 0);
+        --bg-panel: oklch(0.95 0.006 90);
+        --bg-sunken: oklch(0.94 0.006 90);
+        --border: oklch(0.88 0.008 90);
+        --border-em: oklch(0.78 0.012 90);
+        --text: oklch(0.20 0.010 240);
+        --text-muted: oklch(0.45 0.010 240);
+        --text-faint: oklch(0.62 0.010 240);
+        --accent: oklch(0.42 0.10 220);
+        --accent-2: oklch(0.55 0.12 215);
+        --accent-soft: oklch(0.92 0.03 220);
+        --buy: oklch(0.42 0.16 155);
+        --buy-bg: oklch(0.94 0.06 155);
+        --hold: oklch(0.50 0.13 85);
+        --hold-bg: oklch(0.95 0.08 85);
+        --sell: oklch(0.50 0.17 25);
+        --sell-bg: oklch(0.95 0.05 25);
+        --tag-bg: oklch(0.93 0.008 90);
+        --tag-text: oklch(0.35 0.012 240);
+        --bar-bg: oklch(0.90 0.008 90);
+        --bar-fill: oklch(0.55 0.12 215);
+        --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+        --shadow-md: 0 2px 10px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
+        --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.12);
+        color-scheme: light;
+      }
+    }
 
-  --accent:      oklch(0.78 0.10 220);
-  --accent-2:    oklch(0.66 0.12 215);
-  --accent-soft: oklch(0.30 0.04 220);
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  --buy:         oklch(0.80 0.16 155);
-  --buy-bg:      oklch(0.28 0.07 155);
-  --hold:        oklch(0.82 0.13 85);
-  --hold-bg:     oklch(0.30 0.06 85);
-  --sell:        oklch(0.74 0.16 25);
-  --sell-bg:     oklch(0.30 0.08 25);
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
 
-  --tag-bg:      oklch(0.30 0.010 240);
-  --tag-text:    oklch(0.78 0.008 240);
+    body {
+      font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
 
-  --bar-bg:      oklch(0.30 0.010 240);
-  --bar-fill:    oklch(0.66 0.12 215);
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
-  --shadow-md: 0 4px 16px rgb(0 0 0 / 0.45), 0 1px 2px rgb(0 0 0 / 0.3);
-  --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.55);
+    button {
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+    }
 
-  color-scheme: dark;
-}
+    /* ─── Disclaimer Banner ──────────────────────────────────────── */
+    .disclaimer-banner {
+      background: color-mix(in oklch, var(--hold-bg) 70%, var(--bg));
+      border-bottom: 1px solid var(--hold);
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--hold);
+      position: relative;
+      z-index: 60;
+      transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
+      overflow: hidden;
+      max-height: 60px;
+    }
 
-[data-theme="light"] {
-  --bg:          oklch(0.98 0.004 90);
-  --bg-elev:     oklch(1 0 0);
-  --bg-card:     oklch(1 0 0);
-  --bg-panel:    oklch(0.95 0.006 90);
-  --bg-sunken:   oklch(0.94 0.006 90);
+    .disclaimer-banner.dismissed {
+      max-height: 0;
+      opacity: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom-width: 0;
+    }
 
-  --border:      oklch(0.88 0.008 90);
-  --border-em:   oklch(0.78 0.012 90);
+    .disclaimer-banner-icon {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
 
-  --text:        oklch(0.20 0.010 240);
-  --text-muted:  oklch(0.45 0.010 240);
-  --text-faint:  oklch(0.62 0.010 240);
+    .disclaimer-banner-text {
+      flex: 1;
+      line-height: 1.5;
+    }
 
-  --accent:      oklch(0.42 0.10 220);
-  --accent-2:    oklch(0.55 0.12 215);
-  --accent-soft: oklch(0.92 0.03 220);
+    .disclaimer-banner-text strong {
+      font-weight: 600;
+    }
 
-  --buy:         oklch(0.42 0.16 155);
-  --buy-bg:      oklch(0.94 0.06 155);
-  --hold:        oklch(0.50 0.13 85);
-  --hold-bg:     oklch(0.95 0.08 85);
-  --sell:        oklch(0.50 0.17 25);
-  --sell-bg:     oklch(0.95 0.05 25);
+    .disclaimer-banner-close {
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid color-mix(in oklch, var(--hold) 40%, transparent);
+      background: transparent;
+      color: var(--hold);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      opacity: 0.75;
+      transition: opacity .15s, background .15s;
+    }
 
-  --tag-bg:      oklch(0.93 0.008 90);
-  --tag-text:    oklch(0.35 0.012 240);
+    .disclaimer-banner-close:hover {
+      opacity: 1;
+      background: color-mix(in oklch, var(--hold) 15%, transparent);
+    }
 
-  --bar-bg:      oklch(0.90 0.008 90);
-  --bar-fill:    oklch(0.55 0.12 215);
+    /* ─── Header ─────────────────────────────────────────────────── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in oklch, var(--bg) 80%, transparent);
+      backdrop-filter: saturate(140%) blur(10px);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
 
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
-  --shadow-md: 0 2px 10px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
-  --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.12);
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
 
-  color-scheme: light;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      color: var(--text);
+    }
 
-/* Auto = follow system, but only when explicitly set */
-[data-theme="auto"] { /* keeps the dark vars above */ }
-@media (prefers-color-scheme: light) {
-  [data-theme="auto"] {
-    --bg:          oklch(0.98 0.004 90);
-    --bg-elev:     oklch(1 0 0);
-    --bg-card:     oklch(1 0 0);
-    --bg-panel:    oklch(0.95 0.006 90);
-    --bg-sunken:   oklch(0.94 0.006 90);
-    --border:      oklch(0.88 0.008 90);
-    --border-em:   oklch(0.78 0.012 90);
-    --text:        oklch(0.20 0.010 240);
-    --text-muted:  oklch(0.45 0.010 240);
-    --text-faint:  oklch(0.62 0.010 240);
-    --accent:      oklch(0.42 0.10 220);
-    --accent-2:    oklch(0.55 0.12 215);
-    --accent-soft: oklch(0.92 0.03 220);
-    --buy:         oklch(0.42 0.16 155);
-    --buy-bg:      oklch(0.94 0.06 155);
-    --hold:        oklch(0.50 0.13 85);
-    --hold-bg:     oklch(0.95 0.08 85);
-    --sell:        oklch(0.50 0.17 25);
-    --sell-bg:     oklch(0.95 0.05 25);
-    --tag-bg:      oklch(0.93 0.008 90);
-    --tag-text:    oklch(0.35 0.012 240);
-    --bar-bg:      oklch(0.90 0.008 90);
-    --bar-fill:    oklch(0.55 0.12 215);
-    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
-    --shadow-md: 0 2px 10px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
-    --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.12);
-    color-scheme: light;
-  }
-}
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 9px;
+      border: 1px solid var(--border);
+    }
 
-/* ─── Reset ──────────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      gap: 3px;
+    }
 
-html { -webkit-text-size-adjust: 100%; }
-body {
-  font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
-  font-size: 15px;
-  line-height: 1.55;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
+    .logo-title {
+      font-family: "IBM Plex Serif", serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
 
-a { color: inherit; text-decoration: none; }
-button { font: inherit; color: inherit; cursor: pointer; }
+    .logo-sub {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.68rem;
+      color: var(--text-faint);
+      letter-spacing: 0.02em;
+    }
 
-/* ─── Header ─────────────────────────────────────────────────── */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: color-mix(in oklch, var(--bg) 80%, transparent);
-  backdrop-filter: saturate(140%) blur(10px);
-  -webkit-backdrop-filter: saturate(140%) blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-.header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  height: 62px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  color: var(--text);
-}
-.logo-mark {
-  width: 34px; height: 34px;
-  display: grid; place-items: center;
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-radius: 9px;
-  border: 1px solid var(--border);
-}
-.logo-text { display: flex; flex-direction: column; line-height: 1; gap: 3px; }
-.logo-title {
-  font-family: "IBM Plex Serif", serif;
-  font-size: 1.15rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-.logo-sub {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
-  color: var(--text-faint);
-  letter-spacing: 0.02em;
-}
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.ghost-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.78rem;
-  border: 1px solid var(--border-em);
-  background: transparent;
-  color: var(--text-muted);
-  padding: 6px 12px;
-  border-radius: 8px;
-  transition: background .15s, color .15s, border-color .15s;
-}
-.ghost-btn:hover { background: var(--bg-panel); color: var(--text); }
-.ghost-btn[aria-expanded="true"] {
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-color: var(--accent);
-}
-.theme-switcher {
-  display: flex;
-  background: var(--bg-panel);
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  padding: 3px;
-  gap: 2px;
-}
-.theme-btn {
-  display: grid; place-items: center;
-  width: 30px; height: 26px;
-  border: none;
-  background: transparent;
-  color: var(--text-faint);
-  border-radius: 6px;
-  transition: background .15s, color .15s;
-}
-.theme-btn:hover { color: var(--text); }
-.theme-btn.active {
-  background: var(--bg-card);
-  color: var(--text);
-  box-shadow: var(--shadow-sm);
-}
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
 
-/* ─── Main + Hero ────────────────────────────────────────────── */
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem 5rem;
-}
-.hero { margin-bottom: 2rem; }
-.hero-eyebrow {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-}
-.hero-title {
-  font-family: "IBM Plex Serif", serif;
-  font-weight: 500;
-  font-size: clamp(1.6rem, 2.6vw + 0.5rem, 2.2rem);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-  margin-bottom: 0.75rem;
-  text-wrap: balance;
-}
-.hero-title em {
-  font-style: italic;
-  color: var(--accent);
-  font-weight: 400;
-}
-.hero-lede {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  max-width: 60ch;
-  text-wrap: pretty;
-}
-.hero-lede strong { color: var(--text); font-weight: 600; }
+    .ghost-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      border: 1px solid var(--border-em);
+      background: transparent;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background .15s, color .15s, border-color .15s;
+    }
 
-.state-msg {
-  padding: 3rem 1rem;
-  text-align: center;
-  color: var(--text-faint);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.85rem;
-}
+    .ghost-btn:hover {
+      background: var(--bg-panel);
+      color: var(--text);
+    }
 
+    .ghost-btn[aria-expanded="true"] {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
 
-/* ─── History panel ──────────────────────────────────────────── */
-.history-panel {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.25rem;
-  margin-bottom: 2rem;
-  box-shadow: var(--shadow-md);
-}
-.history-panel[hidden] { display: none; }
-.history-panel-title {
-  font-family: "IBM Plex Serif", serif;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  padding-bottom: 0.6rem;
-  border-bottom: 1px solid var(--border);
-}
-.history-list { display: flex; flex-direction: column; gap: 0.45rem; }
-.history-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.6rem 0.85rem;
-  background: var(--bg-panel);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: border-color .15s, background .15s;
-}
-.history-item:hover {
-  border-color: var(--accent);
-  background: var(--bg-elev);
-}
-.history-item-date {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.82rem;
-  font-weight: 500;
-  flex: 1;
-}
-.history-item-meta {
-  font-size: 0.72rem;
-  color: var(--text-faint);
-}
-.history-item-arrow {
-  color: var(--text-faint);
-  transition: color .15s, transform .15s;
-}
-.history-item:hover .history-item-arrow { color: var(--accent); transform: translateX(2px); }
-.history-empty {
-  font-size: 0.85rem;
-  color: var(--text-faint);
-  text-align: center;
-  padding: 1rem;
-  font-style: italic;
-}
+    .theme-switcher {
+      display: flex;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 3px;
+      gap: 2px;
+    }
 
-/* ─── Meta bar ───────────────────────────────────────────────── */
-.meta-bar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem;
-  padding: 1rem 1.25rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  margin-bottom: 2rem;
-}
-.meta-item { display: flex; flex-direction: column; gap: 4px; }
-.meta-label {
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-faint);
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.info-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: var(--text-faint);
-  color: var(--bg-card);
-  font-size: 0.55rem;
-  font-weight: 700;
-  font-family: sans-serif;
-  letter-spacing: 0;
-  text-transform: none;
-  cursor: help;
-  position: relative;
-  flex-shrink: 0;
-}
-.info-badge::after {
-  content: attr(data-tip);
-  position: absolute;
-  bottom: calc(100% + 6px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  color: var(--text);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  padding: 6px 10px;
-  border-radius: 7px;
-  white-space: pre-line;
-  width: 220px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.15s;
-  z-index: 100;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-.info-badge:hover::after {
-  opacity: 1;
-}
-.meta-value {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.86rem;
-  color: var(--text);
-  font-weight: 500;
-}
+    .theme-btn {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 26px;
+      border: none;
+      background: transparent;
+      color: var(--text-faint);
+      border-radius: 6px;
+      transition: background .15s, color .15s;
+    }
 
-/* ─── Ranking tabs ───────────────────────────────────────────── */
-.ranking-nav {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.75rem;
-}
-.ranking-tab {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  padding: 7px 13px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--bg-card);
-  color: var(--text-muted);
-  transition: background .15s, color .15s, border-color .15s;
-}
-.ranking-tab:hover {
-  background: var(--bg-panel);
-  color: var(--text);
-}
-.ranking-tab.active {
-  background: var(--accent);
-  color: var(--bg);
-  border-color: var(--accent);
-}
-[data-theme="light"] .ranking-tab.active,
-[data-theme="auto"] .ranking-tab.active { color: #fff; }
-@media (prefers-color-scheme: light) {
-  [data-theme="auto"] .ranking-tab.active { color: #fff; }
-}
+    .theme-btn:hover {
+      color: var(--text);
+    }
 
-.ranking-desc {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin: 0.5rem 0 1.25rem;
-  padding-left: 0.25rem;
-  border-left: 2px solid var(--accent);
-  padding: 0.35rem 0 0.35rem 0.75rem;
-}
+    .theme-btn.active {
+      background: var(--bg-card);
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
 
-/* ─── Fund cards (Winners — full) ────────────────────────────── */
-.fund-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    /* ─── Main + Hero ────────────────────────────────────────────── */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
 
-.fund-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: var(--shadow-md);
-  overflow: hidden;
-}
-.fund-card.is-top { border-color: var(--accent); }
+    .hero {
+      margin-bottom: 2rem;
+    }
 
-.card-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.25rem 1.25rem 0;
-}
-.rank-col {
-  display: grid;
-  place-items: center;
-  width: 44px; height: 44px;
-  font-family: "IBM Plex Serif", serif;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  flex-shrink: 0;
-  line-height: 1;
-}
-.rank-col.is-medal {
-  font-size: 1.85rem;
-  /* native emoji rendering — let the glyph supply its own color */
-}
+    .hero-eyebrow {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
 
-.fund-meta { flex: 1; min-width: 0; }
-.fund-name {
-  font-family: "IBM Plex Serif", serif;
-  font-size: 1.15rem;
-  font-weight: 500;
-  line-height: 1.25;
-  margin-bottom: 0.45rem;
-  letter-spacing: -0.01em;
-  text-wrap: balance;
-}
-.fund-ids {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-.id-pill {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
-  padding: 3px 8px;
-  background: var(--bg-panel);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  color: var(--text-muted);
-}
-.id-pill.ppm { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
-.action-btn {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
-  padding: 3px 8px;
-  border-radius: 5px;
-  border: 1px solid var(--accent);
-  background: transparent;
-  color: var(--accent);
-  transition: background .15s, color .15s;
-}
-.action-btn:hover { background: var(--accent); color: var(--bg); }
-[data-theme="light"] .action-btn:hover { color: #fff; }
-.action-btn.copied { background: var(--buy-bg); color: var(--buy); border-color: var(--buy); }
+    .hero-title {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 500;
+      font-size: clamp(1.6rem, 2.6vw + 0.5rem, 2.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      margin-bottom: 0.75rem;
+      text-wrap: balance;
+    }
 
-.hitrate-warn {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.66rem;
-  padding: 3px 7px;
-  border-radius: 5px;
-  background: var(--hold-bg);
-  color: var(--hold);
-  border: 1px solid var(--hold);
-}
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
 
-/* Signal badge */
-.signal-col { flex-shrink: 0; }
-.signal-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 14px;
-  border-radius: 10px;
-  min-width: 70px;
-  gap: 2px;
-}
-.signal-icon { font-size: 0.95rem; font-weight: 700; line-height: 1; }
-.signal-label {
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-}
-.sig-buy  { background: var(--buy-bg);  color: var(--buy);  }
-.sig-hold { background: var(--hold-bg); color: var(--hold); }
-.sig-sell { background: var(--sell-bg); color: var(--sell); }
+    .hero-lede {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 60ch;
+      text-wrap: pretty;
+    }
 
-/* Tags */
-.tags-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  padding: 0.85rem 1.25rem 0;
-}
-.tag {
-  font-size: 0.7rem;
-  padding: 3px 9px;
-  border-radius: 999px;
-  background: var(--tag-bg);
-  color: var(--tag-text);
-  border: 1px solid var(--border);
-}
+    .hero-lede strong {
+      color: var(--text);
+      font-weight: 600;
+    }
 
-/* Metrics grid */
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  padding: 1rem 1.25rem;
-  background: var(--bg-sunken);
-  margin: 1rem 0 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.metric { display: flex; flex-direction: column; gap: 4px; }
-.metric-label {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-faint);
-  font-weight: 500;
-}
-.metric-info {
-  display: inline-grid;
-  place-items: center;
-  width: 13px; height: 13px;
-  border-radius: 50%;
-  font-size: 0.6rem;
-  line-height: 1;
-  color: var(--text-faint);
-  border: 1px solid var(--border-em);
-  cursor: help;
-  font-family: sans-serif;
-}
-.metric-info:hover { color: var(--accent); border-color: var(--accent); }
-.metric-value {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text);
-}
-.metric-value.warn { color: var(--hold); }
-.metric-value.good { color: var(--buy); }
-.metric-hint { font-size: 0.68rem; color: var(--text-faint); }
+    .state-msg {
+      padding: 3rem 1rem;
+      text-align: center;
+      color: var(--text-faint);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.85rem;
+    }
 
-.bar-track {
-  height: 3px;
-  background: var(--bar-bg);
-  border-radius: 2px;
-  overflow: hidden;
-  margin-top: 4px;
-}
-.bar-fill {
-  height: 100%;
-  background: var(--bar-fill);
-  border-radius: 2px;
-  transition: width .4s ease;
-}
-.bar-fill.warn { background: var(--hold); }
-.bar-fill.good { background: var(--buy); }
+    /* ─── History panel ──────────────────────────────────────────── */
+    .history-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+    }
 
-/* Forecast */
-.forecast-block { padding: 1rem 1.25rem; }
-.forecast-title {
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-faint);
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-.forecast-row {
-  display: flex;
-  align-items: baseline;
-  gap: 0.875rem;
-  margin-bottom: 0.45rem;
-}
-.fc-q50 {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1.7rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-.fc-q50.pos { color: var(--buy); }
-.fc-q50.neg { color: var(--sell); }
-.fc-q10, .fc-q90 {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-.fc-sep {
-  color: var(--text-faint);
-  font-size: 0.8rem;
-}
+    .history-panel[hidden] {
+      display: none;
+    }
 
-/* Forecast distribution bar */
-.forecast-band {
-  position: relative;
-  height: 8px;
-  background: var(--bar-bg);
-  border-radius: 4px;
-  margin: 0.7rem 0 0.5rem;
-}
-.forecast-band-fill {
-  position: absolute;
-  top: 0; bottom: 0;
-  background: linear-gradient(90deg, var(--sell), var(--hold), var(--buy));
-  opacity: 0.6;
-  border-radius: 4px;
-}
-.forecast-band-q50 {
-  position: absolute;
-  top: -3px; bottom: -3px;
-  width: 2px;
-  background: var(--text);
-  border-radius: 1px;
-}
-.forecast-legend {
-  display: flex;
-  justify-content: space-between;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.66rem;
-  color: var(--text-faint);
-}
+    .history-panel-title {
+      font-family: "IBM Plex Serif", serif;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
 
-/* Charts */
-.charts-block {
-  padding: 1rem 1.25rem 1.25rem;
-  border-top: 1px solid var(--border);
-}
-.chart-tabs {
-  display: flex;
-  gap: 0.35rem;
-  margin-bottom: 0.75rem;
-}
-.chart-tab {
-  font-size: 0.75rem;
-  padding: 5px 12px;
-  border-radius: 7px;
-  border: 1px solid var(--border);
-  background: transparent;
-  color: var(--text-muted);
-  transition: background .15s, color .15s, border-color .15s;
-}
-.chart-tab:hover { color: var(--text); }
-.chart-tab.active {
-  background: var(--bg-panel);
-  color: var(--text);
-  border-color: var(--border-em);
-}
-.chart-pane { display: none; }
-.chart-pane.active { display: block; }
-.chart-pane img {
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  cursor: zoom-in;
-  display: block;
-}
-.chart-missing {
-  padding: 2.5rem;
-  text-align: center;
-  color: var(--text-faint);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.78rem;
-  border: 1px dashed var(--border-em);
-  border-radius: 8px;
-  background: var(--bg-sunken);
-}
+    .history-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
 
-/* ─── Backtest block ─────────────────────────────────────────── */
-.backtest-block {
-  padding: 1rem 1.25rem 1.25rem;
-  border-top: 1px solid var(--border);
-}
-.backtest-title {
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-faint);
-  margin-bottom: 0.65rem;
-  font-weight: 500;
-}
+    .history-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.6rem 0.85rem;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color .15s, background .15s;
+    }
 
-/* Period header */
-.bt-period {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem 0.85rem;
-  padding: 0.7rem 0.9rem;
-  background: var(--bg-sunken);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  margin-bottom: 0.9rem;
-}
-.bt-period-row {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  min-width: 0;
-}
-.bt-period-label {
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-faint);
-  font-weight: 500;
-}
-.bt-period-value {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.8rem;
-  color: var(--text);
-  font-weight: 500;
-}
-.bt-period-sep {
-  color: var(--text-faint);
-  font-size: 1rem;
-  line-height: 1;
-  user-select: none;
-}
+    .history-item:hover {
+      border-color: var(--accent);
+      background: var(--bg-elev);
+    }
 
-.bt-verdict {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.92rem;
-  padding: 0.7rem 0.9rem;
-  border-radius: 8px;
-  margin-bottom: 0.9rem;
-  line-height: 1.35;
-}
-.bt-verdict-up   { background: var(--buy-bg);  color: var(--buy);  }
-.bt-verdict-down { background: var(--sell-bg); color: var(--sell); }
-.bt-verdict-flat { background: var(--hold-bg); color: var(--hold); }
+    .history-item-date {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.82rem;
+      font-weight: 500;
+      flex: 1;
+    }
 
-/* Compare cards */
-.bt-compare {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-}
-.bt-compare-card {
-  padding: 0.85rem 0.95rem;
-  background: var(--bg-sunken);
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-.bt-compare-card.is-winner {
-  border-color: var(--accent);
-  background: color-mix(in oklch, var(--accent-soft) 60%, var(--bg-sunken));
-}
-.bt-compare-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
-.bt-compare-label {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-.bt-winner-tag {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 2px 7px;
-  border-radius: 4px;
-  background: var(--accent);
-  color: var(--bg);
-}
-[data-theme="light"] .bt-winner-tag { color: #fff; }
-@media (prefers-color-scheme: light) {
-  [data-theme="auto"] .bt-winner-tag { color: #fff; }
-}
-.bt-compare-value {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
-}
-.bt-compare-value.good { color: var(--buy);  }
-.bt-compare-value.warn { color: var(--sell); }
-.bt-compare-value.ok   { color: var(--text); }
-.bt-compare-sub {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-.bt-compare-sub strong { color: var(--text); font-weight: 600; }
+    .history-item-meta {
+      font-size: 0.72rem;
+      color: var(--text-faint);
+    }
 
-.bt-bar-track {
-  height: 6px;
-  background: var(--bar-bg);
-  border-radius: 3px;
-  overflow: hidden;
-  margin-top: 0.25rem;
-}
-.bt-bar-fill { height: 100%; border-radius: 3px; transition: width .4s ease; }
-.bt-bar-fill.pos { background: var(--bar-fill); }
-.bt-bar-fill.neg { background: var(--sell); }
+    .history-item-arrow {
+      color: var(--text-faint);
+      transition: color .15s, transform .15s;
+    }
 
-/* Stats grid */
-.bt-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 0.6rem;
-  margin-bottom: 0.75rem;
-}
-.bt-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 0.7rem 0.8rem;
-  background: var(--bg-sunken);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-}
-.bt-stat-label {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-faint);
-  font-weight: 500;
-}
-.bt-stat-val {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text);
-}
-.bt-stat-val.good { color: var(--buy);  }
-.bt-stat-val.warn { color: var(--sell); }
-.bt-stat-val.ok   { color: var(--text); }
-.bt-stat-quality {
-  display: inline-block;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 2px 7px;
-  border-radius: 4px;
-  width: fit-content;
-}
-.bt-stat-quality.q-good { background: var(--buy-bg);  color: var(--buy);  }
-.bt-stat-quality.q-warn { background: var(--sell-bg); color: var(--sell); }
-.bt-stat-quality.q-ok   { background: var(--hold-bg); color: var(--hold); }
+    .history-item:hover .history-item-arrow {
+      color: var(--accent);
+      transform: translateX(2px);
+    }
 
-.bt-disclaimer {
-  font-size: 0.7rem;
-  color: var(--text-faint);
-  font-style: italic;
-  line-height: 1.5;
-}
+    .history-empty {
+      font-size: 0.85rem;
+      color: var(--text-faint);
+      text-align: center;
+      padding: 1rem;
+      font-style: italic;
+    }
 
-/* ─── Compact ranking card (non-Winners views) ───────────────── */
-.ranking-list { display: flex; flex-direction: column; gap: 0.85rem; }
-.ranking-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: border-color .15s;
-}
-.ranking-card:hover { border-color: var(--border-em); }
-.ranking-card-head {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.95rem 1.25rem;
-}
-.ranking-rank {
-  font-family: "IBM Plex Serif", serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  width: 2.4rem;
-  flex-shrink: 0;
-  color: var(--text-muted);
-  text-align: center;
-  line-height: 1;
-}
-.ranking-info { flex: 1; min-width: 0; }
-.ranking-name {
-  font-family: "IBM Plex Serif", serif;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.ranking-ids {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.ranking-metrics {
-  display: flex;
-  gap: 1.5rem;
-  flex-shrink: 0;
-  align-items: center;
-}
-.ranking-metric { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
-.ranking-metric-label {
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-faint);
-  font-weight: 500;
-}
-.ranking-metric-value {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-.ranking-metric-value.warn { color: var(--hold); }
-.ranking-metric-value.good { color: var(--buy); }
-.ranking-empty {
-  padding: 2.5rem;
-  text-align: center;
-  color: var(--text-faint);
-  font-style: italic;
-  border: 1px dashed var(--border-em);
-  border-radius: 12px;
-}
+    /* ─── Meta bar ───────────────────────────────────────────────── */
+    .meta-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
 
-/* ─── Lightbox ───────────────────────────────────────────────── */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: rgb(0 0 0 / 0.92);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: zoom-out;
-}
-.lightbox[hidden] { display: none; }
-.lightbox-inner {
-  position: relative;
-  overflow: hidden;
-  cursor: grab;
-  max-width: 95vw;
-  max-height: 90vh;
-}
-.lightbox-inner.grabbing { cursor: grabbing; }
-.lightbox img {
-  display: block;
-  max-width: 95vw;
-  max-height: 90vh;
-  object-fit: contain;
-  transform-origin: 0 0;
-  user-select: none;
-  pointer-events: none;
-}
-.lightbox-close {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: rgb(255 255 255 / 0.15);
-  border: none;
-  color: #fff;
-  font-size: 1.4rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  transition: background .15s;
-}
-.lightbox-close:hover { background: rgb(255 255 255 / 0.3); }
-.lightbox-hint {
-  position: fixed;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgb(255 255 255 / 0.5);
-  font-size: 0.72rem;
-  font-family: "IBM Plex Mono", monospace;
-  pointer-events: none;
-  white-space: nowrap;
-}
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
 
-/* ─── Footer ─────────────────────────────────────────────────── */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 1.75rem 1.5rem;
-  text-align: center;
-  font-size: 0.72rem;
-  color: var(--text-faint);
-  font-family: "IBM Plex Mono", monospace;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-footer a {
-  color: inherit;
-  opacity: 0.7;
-  transition: opacity .15s;
-}
-footer a:hover { opacity: 1; }
+    .meta-label {
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-faint);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
 
-/* ─── Responsive ─────────────────────────────────────────────── */
-@media (max-width: 720px) {
-  .header-inner { padding: 0 1rem; height: 56px; }
-  main { padding: 1.5rem 1rem 4rem; }
-  .ghost-btn .btn-label { display: none; }
-  .ranking-metrics { display: none; }
-  .ranking-card-head { padding: 0.85rem 1rem; }
-  .metrics-grid { grid-template-columns: 1fr 1fr; }
-  .bt-stats { grid-template-columns: 1fr 1fr; }
-  .bt-compare { grid-template-columns: 1fr; }
-  .bt-period { gap: 0.4rem 0.7rem; }
-  .bt-period-sep { display: none; }
-  .fc-q50 { font-size: 1.35rem; }
-  .card-header { padding: 1rem 1rem 0; flex-wrap: wrap; }
-  .tags-row, .metrics-grid, .forecast-block, .charts-block, .backtest-block {
-    padding-left: 1rem; padding-right: 1rem;
-  }
-}
+    .info-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--text-faint);
+      color: var(--bg-card);
+      font-size: 0.55rem;
+      font-weight: 700;
+      font-family: sans-serif;
+      letter-spacing: 0;
+      text-transform: none;
+      cursor: help;
+      position: relative;
+      flex-shrink: 0;
+    }
 
-/* Tooltip via title attribute is browser-default; we additionally
-   provide a richer one for the metric-info markers */
-.metric-info[data-tip] { position: relative; }
-.metric-info[data-tip]::after {
-  content: attr(data-tip);
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--text);
-  color: var(--bg);
-  padding: 0.45rem 0.65rem;
-  border-radius: 6px;
-  font-size: 0.7rem;
-  font-family: "IBM Plex Sans", sans-serif;
-  white-space: nowrap;
-  max-width: 240px;
-  white-space: normal;
-  width: 200px;
-  text-align: center;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity .15s;
-  z-index: 100;
-  box-shadow: var(--shadow-md);
-  line-height: 1.35;
-}
-.metric-info[data-tip]:hover::after { opacity: 1; }
+    .info-badge::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      padding: 6px 10px;
+      border-radius: 7px;
+      white-space: pre-line;
+      width: 220px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
 
-</style>
+    .info-badge:hover::after {
+      opacity: 1;
+    }
+
+    .meta-value {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.86rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ─── Ranking tabs ───────────────────────────────────────────── */
+    .ranking-nav {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+
+    .ranking-tab {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 7px 13px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      transition: background .15s, color .15s, border-color .15s;
+    }
+
+    .ranking-tab:hover {
+      background: var(--bg-panel);
+      color: var(--text);
+    }
+
+    .ranking-tab.active {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+    }
+
+    [data-theme="light"] .ranking-tab.active,
+    [data-theme="auto"] .ranking-tab.active {
+      color: #fff;
+    }
+
+    @media (prefers-color-scheme: light) {
+      [data-theme="auto"] .ranking-tab.active {
+        color: #fff;
+      }
+    }
+
+    .ranking-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0.5rem 0 1.25rem;
+      padding-left: 0.25rem;
+      border-left: 2px solid var(--accent);
+      padding: 0.35rem 0 0.35rem 0.75rem;
+    }
+
+    /* ─── Fund cards ─────────────────────────────────────────────── */
+    .fund-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .fund-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .fund-card.is-top {
+      border-color: var(--accent);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 1.25rem 0;
+    }
+
+    .rank-col {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      font-family: "IBM Plex Serif", serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .rank-col.is-medal {
+      font-size: 1.85rem;
+    }
+
+    .fund-meta {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .fund-name {
+      font-family: "IBM Plex Serif", serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1.25;
+      margin-bottom: 0.45rem;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+
+    .fund-ids {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .id-pill {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      color: var(--text-muted);
+    }
+
+    .id-pill.ppm {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .action-btn {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 5px;
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      transition: background .15s, color .15s;
+    }
+
+    .action-btn:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    [data-theme="light"] .action-btn:hover {
+      color: #fff;
+    }
+
+    .action-btn.copied {
+      background: var(--buy-bg);
+      color: var(--buy);
+      border-color: var(--buy);
+    }
+
+    .hitrate-warn {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.66rem;
+      padding: 3px 7px;
+      border-radius: 5px;
+      background: var(--hold-bg);
+      color: var(--hold);
+      border: 1px solid var(--hold);
+    }
+
+    .signal-col {
+      flex-shrink: 0;
+    }
+
+    .signal-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 10px;
+      min-width: 70px;
+      gap: 2px;
+    }
+
+    .signal-icon {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .signal-label {
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+    }
+
+    .sig-buy {
+      background: var(--buy-bg);
+      color: var(--buy);
+    }
+
+    .sig-hold {
+      background: var(--hold-bg);
+      color: var(--hold);
+    }
+
+    .sig-sell {
+      background: var(--sell-bg);
+      color: var(--sell);
+    }
+
+    .tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      padding: 0.85rem 1.25rem 0;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border: 1px solid var(--border);
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg-sunken);
+      margin: 1rem 0 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .metric-label {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-faint);
+      font-weight: 500;
+    }
+
+    .metric-info {
+      display: inline-grid;
+      place-items: center;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      font-size: 0.6rem;
+      line-height: 1;
+      color: var(--text-faint);
+      border: 1px solid var(--border-em);
+      cursor: help;
+      font-family: sans-serif;
+    }
+
+    .metric-info:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .metric-value {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .metric-value.warn {
+      color: var(--hold);
+    }
+
+    .metric-value.good {
+      color: var(--buy);
+    }
+
+    .metric-hint {
+      font-size: 0.68rem;
+      color: var(--text-faint);
+    }
+
+    .bar-track {
+      height: 3px;
+      background: var(--bar-bg);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--bar-fill);
+      border-radius: 2px;
+      transition: width .4s ease;
+    }
+
+    .bar-fill.warn {
+      background: var(--hold);
+    }
+
+    .bar-fill.good {
+      background: var(--buy);
+    }
+
+    .forecast-block {
+      padding: 1rem 1.25rem;
+    }
+
+    .forecast-title {
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-faint);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .forecast-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.875rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .fc-q50 {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 1.7rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .fc-q50.pos {
+      color: var(--buy);
+    }
+
+    .fc-q50.neg {
+      color: var(--sell);
+    }
+
+    .fc-q10,
+    .fc-q90 {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .fc-sep {
+      color: var(--text-faint);
+      font-size: 0.8rem;
+    }
+
+    .forecast-band {
+      position: relative;
+      height: 8px;
+      background: var(--bar-bg);
+      border-radius: 4px;
+      margin: 0.7rem 0 0.5rem;
+    }
+
+    .forecast-band-fill {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, var(--sell), var(--hold), var(--buy));
+      opacity: 0.6;
+      border-radius: 4px;
+    }
+
+    .forecast-band-q50 {
+      position: absolute;
+      top: -3px;
+      bottom: -3px;
+      width: 2px;
+      background: var(--text);
+      border-radius: 1px;
+    }
+
+    .forecast-legend {
+      display: flex;
+      justify-content: space-between;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.66rem;
+      color: var(--text-faint);
+    }
+
+    .charts-block {
+      padding: 1rem 1.25rem 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .chart-tabs {
+      display: flex;
+      gap: 0.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .chart-tab {
+      font-size: 0.75rem;
+      padding: 5px 12px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      transition: background .15s, color .15s, border-color .15s;
+    }
+
+    .chart-tab:hover {
+      color: var(--text);
+    }
+
+    .chart-tab.active {
+      background: var(--bg-panel);
+      color: var(--text);
+      border-color: var(--border-em);
+    }
+
+    .chart-pane {
+      display: none;
+    }
+
+    .chart-pane.active {
+      display: block;
+    }
+
+    .chart-pane img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      cursor: zoom-in;
+      display: block;
+    }
+
+    .chart-missing {
+      padding: 2.5rem;
+      text-align: center;
+      color: var(--text-faint);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      border: 1px dashed var(--border-em);
+      border-radius: 8px;
+      background: var(--bg-sunken);
+    }
+
+    /* ─── Backtest block ─────────────────────────────────────────── */
+    .backtest-block {
+      padding: 1rem 1.25rem 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .backtest-title {
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-faint);
+      margin-bottom: 0.65rem;
+      font-weight: 500;
+    }
+
+    .bt-period {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem 0.85rem;
+      padding: 0.7rem 0.9rem;
+      background: var(--bg-sunken);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 0.9rem;
+    }
+
+    .bt-period-row {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      min-width: 0;
+    }
+
+    .bt-period-label {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-faint);
+      font-weight: 500;
+    }
+
+    .bt-period-value {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.8rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .bt-period-sep {
+      color: var(--text-faint);
+      font-size: 1rem;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .bt-verdict {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.92rem;
+      padding: 0.7rem 0.9rem;
+      border-radius: 8px;
+      margin-bottom: 0.9rem;
+      line-height: 1.35;
+    }
+
+    .bt-verdict-up {
+      background: var(--buy-bg);
+      color: var(--buy);
+    }
+
+    .bt-verdict-down {
+      background: var(--sell-bg);
+      color: var(--sell);
+    }
+
+    .bt-verdict-flat {
+      background: var(--hold-bg);
+      color: var(--hold);
+    }
+
+    .bt-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .bt-compare-card {
+      padding: 0.85rem 0.95rem;
+      background: var(--bg-sunken);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .bt-compare-card.is-winner {
+      border-color: var(--accent);
+      background: color-mix(in oklch, var(--accent-soft) 60%, var(--bg-sunken));
+    }
+
+    .bt-compare-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .bt-compare-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .bt-winner-tag {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    [data-theme="light"] .bt-winner-tag {
+      color: #fff;
+    }
+
+    @media (prefers-color-scheme: light) {
+      [data-theme="auto"] .bt-winner-tag {
+        color: #fff;
+      }
+    }
+
+    .bt-compare-value {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .bt-compare-value.good {
+      color: var(--buy);
+    }
+
+    .bt-compare-value.warn {
+      color: var(--sell);
+    }
+
+    .bt-compare-value.ok {
+      color: var(--text);
+    }
+
+    .bt-compare-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .bt-compare-sub strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .bt-bar-track {
+      height: 6px;
+      background: var(--bar-bg);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-top: 0.25rem;
+    }
+
+    .bt-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width .4s ease;
+    }
+
+    .bt-bar-fill.pos {
+      background: var(--bar-fill);
+    }
+
+    .bt-bar-fill.neg {
+      background: var(--sell);
+    }
+
+    .bt-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .bt-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0.7rem 0.8rem;
+      background: var(--bg-sunken);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .bt-stat-label {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-faint);
+      font-weight: 500;
+    }
+
+    .bt-stat-val {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .bt-stat-val.good {
+      color: var(--buy);
+    }
+
+    .bt-stat-val.warn {
+      color: var(--sell);
+    }
+
+    .bt-stat-val.ok {
+      color: var(--text);
+    }
+
+    .bt-stat-quality {
+      display: inline-block;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 7px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    .bt-stat-quality.q-good {
+      background: var(--buy-bg);
+      color: var(--buy);
+    }
+
+    .bt-stat-quality.q-warn {
+      background: var(--sell-bg);
+      color: var(--sell);
+    }
+
+    .bt-stat-quality.q-ok {
+      background: var(--hold-bg);
+      color: var(--hold);
+    }
+
+    .bt-disclaimer {
+      font-size: 0.7rem;
+      color: var(--text-faint);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    /* ─── Compact ranking card ───────────────────────────────────── */
+    .ranking-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .ranking-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color .15s;
+    }
+
+    .ranking-card:hover {
+      border-color: var(--border-em);
+    }
+
+    .ranking-card-head {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.95rem 1.25rem;
+    }
+
+    .ranking-rank {
+      font-family: "IBM Plex Serif", serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      width: 2.4rem;
+      flex-shrink: 0;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1;
+    }
+
+    .ranking-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .ranking-name {
+      font-family: "IBM Plex Serif", serif;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .ranking-ids {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .ranking-metrics {
+      display: flex;
+      gap: 1.5rem;
+      flex-shrink: 0;
+      align-items: center;
+    }
+
+    .ranking-metric {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+    }
+
+    .ranking-metric-label {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-faint);
+      font-weight: 500;
+    }
+
+    .ranking-metric-value {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .ranking-metric-value.warn {
+      color: var(--hold);
+    }
+
+    .ranking-metric-value.good {
+      color: var(--buy);
+    }
+
+    .ranking-empty {
+      padding: 2.5rem;
+      text-align: center;
+      color: var(--text-faint);
+      font-style: italic;
+      border: 1px dashed var(--border-em);
+      border-radius: 12px;
+    }
+
+    /* ─── Lightbox ───────────────────────────────────────────────── */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgb(0 0 0 / 0.92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+
+    .lightbox[hidden] {
+      display: none;
+    }
+
+    .lightbox-inner {
+      position: relative;
+      overflow: hidden;
+      cursor: grab;
+      max-width: 95vw;
+      max-height: 90vh;
+    }
+
+    .lightbox-inner.grabbing {
+      cursor: grabbing;
+    }
+
+    .lightbox img {
+      display: block;
+      max-width: 95vw;
+      max-height: 90vh;
+      object-fit: contain;
+      transform-origin: 0 0;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: rgb(255 255 255 / 0.15);
+      border: none;
+      color: #fff;
+      font-size: 1.4rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      transition: background .15s;
+    }
+
+    .lightbox-close:hover {
+      background: rgb(255 255 255 / 0.3);
+    }
+
+    .lightbox-hint {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgb(255 255 255 / 0.5);
+      font-size: 0.72rem;
+      font-family: "IBM Plex Mono", monospace;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      font-family: "IBM Plex Mono", monospace;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    footer a {
+      color: inherit;
+      opacity: 0.7;
+      transition: opacity .15s;
+    }
+
+    footer a:hover {
+      opacity: 1;
+    }
+
+    /* ─── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      .header-inner {
+        padding: 0 1rem;
+        height: 56px;
+      }
+
+      main {
+        padding: 1.5rem 1rem 4rem;
+      }
+
+      .ghost-btn .btn-label {
+        display: none;
+      }
+
+      .ranking-metrics {
+        display: none;
+      }
+
+      .ranking-card-head {
+        padding: 0.85rem 1rem;
+      }
+
+      .metrics-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .bt-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .bt-compare {
+        grid-template-columns: 1fr;
+      }
+
+      .bt-period {
+        gap: 0.4rem 0.7rem;
+      }
+
+      .bt-period-sep {
+        display: none;
+      }
+
+      .fc-q50 {
+        font-size: 1.35rem;
+      }
+
+      .card-header {
+        padding: 1rem 1rem 0;
+        flex-wrap: wrap;
+      }
+
+      .tags-row,
+      .metrics-grid,
+      .forecast-block,
+      .charts-block,
+      .backtest-block {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .disclaimer-banner {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    .metric-info[data-tip] {
+      position: relative;
+    }
+
+    .metric-info[data-tip]::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--text);
+      color: var(--bg);
+      padding: 0.45rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-family: "IBM Plex Sans", sans-serif;
+      white-space: nowrap;
+      max-width: 240px;
+      white-space: normal;
+      width: 200px;
+      text-align: center;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .15s;
+      z-index: 100;
+      box-shadow: var(--shadow-md);
+      line-height: 1.35;
+    }
+
+    .metric-info[data-tip]:hover::after {
+      opacity: 1;
+    }
+  </style>
 </head>
+
 <body data-theme="auto">
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="logo" href="#top">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 19 L9 12 L13 16 L21 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="21" cy="6" r="1.6" fill="currentColor"/></svg>
-      </span>
-      <span class="logo-text">
-        <span class="logo-title">PPM Kollen</span>
-        <span class="logo-sub" id="header-date">Fund Forecast</span>
-      </span>
-    </a>
-    <div class="header-right">
-      <button class="ghost-btn" id="history-toggle" aria-expanded="false">
-        <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7 V12 L15.5 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        <span class="btn-label">Historik</span>
-      </button>
-      <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language" aria-label="Byt språk">
-        <span id="lang-label">EN</span>
-      </button>
-      <div class="theme-switcher" role="group" aria-label="Theme">
-        <button class="theme-btn" data-theme="light" title="Ljust">
-          <svg viewBox="0 0 24 24" width="14" height="14"><circle cx="12" cy="12" r="4" fill="currentColor"/><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></g></svg>
+  <!-- ═══ Disclaimer Banner ════════════════════════════════════════ -->
+  <div class="disclaimer-banner" id="disclaimer-banner" role="alert">
+    <span class="disclaimer-banner-icon">⚠</span>
+    <span class="disclaimer-banner-text" id="disclaimer-banner-text">
+      <strong>Inte finansiell rådgivning.</strong> Prognoserna är experimentella och baserade på historiska mönster —
+      ingen garanti för framtida avkastning. Konsultera alltid en behörig rådgivare.
+    </span>
+    <button class="disclaimer-banner-close" id="disclaimer-banner-close" aria-label="Stäng">✕</button>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#top">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path d="M3 19 L9 12 L13 16 L21 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <circle cx="21" cy="6" r="1.6" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-title">PPM Kollen</span>
+          <span class="logo-sub" id="header-date">Fund Forecast</span>
+        </span>
+      </a>
+      <div class="header-right">
+        <button class="ghost-btn" id="history-toggle" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+            <path d="M12 7 V12 L15.5 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+          <span class="btn-label">Historik</span>
         </button>
-        <button class="theme-btn active" data-theme="auto" title="Auto">
-          <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 4v16a8 8 0 0 0 0-16z" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+        <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language" aria-label="Byt språk">
+          <span id="lang-label">EN</span>
         </button>
-        <button class="theme-btn" data-theme="dark" title="Dark">
-          <svg viewBox="0 0 24 24" width="14" height="14"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor"/></svg>
-        </button>
+        <div class="theme-switcher" role="group" aria-label="Theme">
+          <button class="theme-btn" data-theme="light" title="Ljust">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <circle cx="12" cy="12" r="4" fill="currentColor" />
+              <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4" />
+              </g>
+            </svg>
+          </button>
+          <button class="theme-btn active" data-theme="auto" title="Auto">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <path d="M12 4v16a8 8 0 0 0 0-16z" fill="currentColor" />
+              <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4" />
+            </svg>
+          </button>
+          <button class="theme-btn" data-theme="dark" title="Dark">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main id="top">
+  <main id="top">
+    <section class="hero">
+      <div class="hero-eyebrow">PPM Prognos · driven av modellensemble</div>
+      <h1 class="hero-title">Vilka fonder ger <em>troligtvis</em> högst avkastning nästa vecka?</h1>
+      <p class="hero-lede">Modellen rangordnar fonder baserat på förväntad avkastning, hur ofta den förutspår rätt
+        riktning, och hur väl prognoseintervallen täckte verkligheten tidigare veckor. <strong>Inte finansiell
+          rådgivning</strong> — ett utbildningsverktyg.</p>
+    </section>
 
-  <section class="hero">
-    <div class="hero-eyebrow">PPM Prognos · driven av modellensemble</div>
-    <h1 class="hero-title">Vilka fonder ger <em>troligtvis</em> högst avkastning nästa vecka?</h1>
-    <p class="hero-lede">Modellen rangordnar fonder baserat på förväntad avkastning, hur ofta den förutspår rätt riktning, och hur väl prognoseintervallen täckte verkligheten tidigare veckor. <strong>Inte finansiell rådgivning</strong> — ett utbildningsverktyg.</p>
-  </section>
-
-  <div class="history-panel" id="history-panel" hidden>
-    <div class="history-panel-title">Tidigare körningar</div>
-    <div class="history-list" id="history-list">
-      <div class="history-empty">Laddar historik…</div>
-    </div>
-  </div>
-
-  <div id="app">
-    <p class="state-msg">Laddar prognos…</p>
-  </div>
-</main>
-
-<footer id="footer"></footer>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" hidden>
-  <button class="lightbox-close" id="lb-close" aria-label="Close">✕</button>
-  <div class="lightbox-inner" id="lb-inner">
-    <img id="lb-img" alt="" draggable="false" />
-  </div>
-  <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
-</div>
-
-<script>
-/* ================================================================
-   PPM Kollen — Fund Forecast · app logic
-   No frameworks. Vanilla DOM + fetch.
-   ================================================================ */
-(() => {
-  "use strict";
-
-  // ── Constants ──────────────────────────────────────────────────
-  const OUTPUT = ".";
-  const PREDICTIONS_URLS = [
-    "predictions.json",
-    "output/predictions.json",
-    "data/predictions.json",
-    "https://raw.githubusercontent.com/zolodev/ppm-public/refs/heads/main/predictions.json"
-  ];
-  const MANIFEST_URLS = [
-    "manifest.json",
-    "output/manifest.json"
-  ];
-  const HITRATE_THRESHOLD = 70;
-  const STORAGE_THEME = "ppm-kollen-theme";
-  const STORAGE_LANG  = "ppm-kollen-lang";
-
-  const SIGNAL = {
-    BUY:  { cls: "sig-buy",  icon: "▲" },
-    HOLD: { cls: "sig-hold", icon: "●" },
-    SELL: { cls: "sig-sell", icon: "▼" }
-  };
-  const MEDALS = ["🥇", "🥈", "🥉", "4", "5", "6", "7", "8", "9", "10"];
-
-  const TRANSLATIONS = {
-    sv: {
-      btn_historik: "Historik",
-      hero_eyebrow: "PPM Prognos · driven av modellensemble",
-      hero_title_html: "Vilka fonder ger <em>troligtvis</em> högst avkastning nästa vecka?",
-      hero_lede_html: "Modellen rangordnar fonder baserat på förväntad avkastning, hur ofta den förutspår rätt riktning, och hur väl prognoseintervallen täckte verkligheten tidigare veckor. <strong>Inte finansiell rådgivning</strong> — ett utbildningsverktyg.",
-      history_panel_title: "Tidigare körningar",
-      history_loading: "Laddar historik…",
-      history_empty: "Ingen historik tillgänglig.",
-      loading_forecast: "Laddar prognos…",
-      loading_folder: "Laddar…",
-      fund_forecast: "Fondprognos",
-      meta_generated: "Genererad", meta_target: "Mål", meta_scaling: "Skalning",
-      meta_models: "Modeller", meta_winners: "Vinnare", meta_funds: "fonder",
-      meta_target_tip: "Vilket statistiskt mått modellen förutsäger.\nQuantile = en viss percentil av avkastningen, inte medelvärdet.",
-      meta_scaling_tip: "Hur indata normaliseras innan träning.\nRobust = använder median/IQR istället för medelvärde/std, vilket minskar känsligheten för extremvärden.",
-      footer_suffix: "Endast för informationsändamål — inte finansiell rådgivning.",
-      footer_about: "Om projektet",
-      ranking_no_funds: "Inga fonder att visa.",
-      ranking_no_qualify: "Inga fonder kvalificerar till denna matris.",
-      fund_unknown: "Okänd fond",
-      metric_score_hint: "sammansatt modellpoäng",
-      metric_mae_hint: "lägre = mindre fel",
-      chart_ensemble: "Ensemble", chart_per_model: "Per modell",
-      chart_missing: "Inget diagram tillgängligt — genereras av modellpipelinen.",
-      signal_BUY: "KÖP", signal_HOLD: "HÅLL", signal_SELL: "SÄLJ",
-      hz_1w_label: "1 vecka",   hz_1w_desc: "Kort sikt",
-      hz_4w_label: "4 veckor",  hz_4w_desc: "Medellång",
-      hz_13w_label: "13 veckor", hz_13w_desc: "Kvartal",
-      hz_26w_label: "26 veckor", hz_26w_desc: "Halvår",
-      rm_winners_label: "★ Vinnare",
-      rm_winners_desc: "Topplista — träffsäkerhet ≥70% prioriteras, högst prognos bryter oavgjort. Fonder under tröskeln visas sist med en varning.",
-      rm_top_winners_label: "Toppvinnare",
-      rm_top_winners_desc: "Träffsäkerhet ≥70% först, sorterat efter prognos + träffsäkerhet.",
-      rm_top_balanced_label: "Balanserade",
-      rm_top_balanced_desc: "Hög prognos kombinerat med hög träffsäkerhet.",
-      rm_top_yield_label: "Högst avkastning",
-      rm_top_yield_desc: "Högst förväntad avkastning nästa vecka.",
-      rm_top_reliable_label: "Mest pålitliga",
-      rm_top_reliable_desc: "Mest pålitlig modell — täckning × träffsäkerhet.",
-      rm_top_trending_label: "Trendar uppåt",
-      rm_top_trending_desc: "Uppåtgående trend + positiv prognos. Tritch-signal höjer poängen men är inte ett hårt krav.",
-      rm_top_overall_label: "Totalt bäst",
-      rm_top_overall_desc: "Fonder som förekommer i flest matriser.",
-      rm_top_streak_label: "2 veckor i rad",
-      rm_top_streak_desc: "Fonder som befunnit sig i toppskiktet två veckor i rad — visar uthållig styrka.",
-      tip_score: "Sammansatt modellpoäng (0–1). Högre = bättre kombination av prognos, träffsäkerhet och täckning.",
-      tip_hitrate: "Andel veckor där modellens medianprognos landade på rätt sida om noll (rätt riktning).",
-      tip_coverage: "Andel veckor där det faktiska utfallet föll inom Q10–Q90-intervallet. Lågt = intervallen är för smala.",
-      tip_mae: "Medelabsolutfel på medianprognosen. Lägre = mindre genomsnittsfel.",
-      tip_forecast: "Modellprognos för avkastning. Q50 = median, Q10/Q90 = pessimistiskt/optimistiskt scenario.",
-      bt_title: "Backtest · hur strategin faktiskt presterade",
-      bt_trained_up_to: "Tränad till och med",
-      bt_evaluated: "Utvärderad på osedd data",
-      bt_length: "Längd", bt_wks: "v", bt_yrs: "år",
-      bt_strategy_beat: "Strategin slog buy &amp; hold med <strong>{val}</strong>",
-      bt_strategy_under: "Strategin underpresterade buy &amp; hold med <strong>{val}</strong>",
-      bt_strategy_matched: "Matchade buy &amp; hold <strong>({val})</strong>",
-      bt_signal_strategy: "Signalstrategi",
-      bt_just_held: "Bara höll fonden",
-      bt_better: "Bättre",
-      bt_grew_to: "100 kr blev <strong>{val} kr</strong>",
-      bt_ann_return: "Årsavkastning",
-      bt_ann_return_tip: "Genomsnittlig årsavkastning. Bra ≥10%, OK ≥5%.",
-      bt_sharpe: "Sharpe",
-      bt_sharpe_tip: "Avkastning per riskenhet. Bra ≥1,0, OK ≥0,5.",
-      bt_maxdd: "Max nedgång",
-      bt_maxdd_tip: "Värsta topp-till-dal-nedgången. Liten ≥−10%, Märkbar −10 till −20%.",
-      bt_hitrate: "Träffsäkerhet",
-      bt_hitrate_tip: "Andel veckor där modellen förutspådde rätt riktning. Bra ≥70%, OK ≥60%.",
-      bt_winrate: "Vinstfrekvens",
-      bt_winrate_tip: "Andel veckor med positiv avkastning. Bra ≥55%, OK ≥50%.",
-      bt_excess: "Överskott vs B&H",
-      bt_excess_tip: "Skillnad mot att bara hålla fonden. Bra ≥+5%, OK ≥0%.",
-      bt_disclaimer: "Backtest på ej sedd data — modellen har inte sett denna period under träning. Historisk avkastning är ingen garanti för framtida resultat.",
-      q_good: "Bra", q_ok: "OK", q_weak: "Svag",
-      q_small: "Liten", q_notable: "Märkbar", q_large: "Stor", q_negative: "Negativ",
-      q_clearly_better: "Klart bättre", q_marginally_better: "Marginellt bättre",
-      q_marginally_worse: "Marginellt sämre", q_clearly_worse: "Klart sämre",
-      err_no_predictions: "Kunde inte ladda predictions.json — kör pipelinen först.",
-      err_folder: "Kunde inte ladda {folder}/predictions.json — {err}",
-    },
-    en: {
-      btn_historik: "History",
-      hero_eyebrow: "PPM Forecast · powered by ensemble of models",
-      hero_title_html: "Which funds will <em>likely</em> deliver the highest return next week?",
-      hero_lede_html: "The model ranks funds based on expected return, how often it predicts the right direction, and how well the forecast intervals covered reality in previous weeks. <strong>Not financial advice</strong> — an educational tool.",
-      history_panel_title: "Previous runs",
-      history_loading: "Loading history…",
-      history_empty: "No history available.",
-      loading_forecast: "Loading forecast…",
-      loading_folder: "Loading…",
-      fund_forecast: "Fund Forecast",
-      meta_generated: "Generated", meta_target: "Target", meta_scaling: "Scaling",
-      meta_models: "Models", meta_winners: "Winners", meta_funds: "funds",
-      meta_target_tip: "Which statistical measure the model predicts.\nQuantile = a specific percentile of returns, not the mean.",
-      meta_scaling_tip: "How input data is normalised before training.\nRobust = uses median/IQR instead of mean/std, reducing sensitivity to outliers.",
-      footer_suffix: "For informational purposes only — not financial advice.",
-      footer_about: "About",
-      ranking_no_funds: "No funds to display.",
-      ranking_no_qualify: "No funds qualify for this matrix.",
-      fund_unknown: "Unknown fund",
-      metric_score_hint: "composite model score",
-      metric_mae_hint: "lower = less error",
-      chart_ensemble: "Ensemble", chart_per_model: "Per model",
-      chart_missing: "No chart available — generated by the model pipeline.",
-      signal_BUY: "BUY", signal_HOLD: "HOLD", signal_SELL: "SELL",
-      hz_1w_label: "1 week",    hz_1w_desc: "Short term",
-      hz_4w_label: "4 weeks",   hz_4w_desc: "Medium",
-      hz_13w_label: "13 weeks", hz_13w_desc: "Quarter",
-      hz_26w_label: "26 weeks", hz_26w_desc: "Half year",
-      rm_winners_label: "★ Winners",
-      rm_winners_desc: "Top list — hit rate ≥70% prioritised, highest forecast breaks ties. Funds below the threshold shown last with a warning.",
-      rm_top_winners_label: "Top Winners",
-      rm_top_winners_desc: "Hit rate ≥70% first, sorted by forecast + hit rate.",
-      rm_top_balanced_label: "Top Balanced",
-      rm_top_balanced_desc: "High forecast combined with high hit rate.",
-      rm_top_yield_label: "Top Yield",
-      rm_top_yield_desc: "Highest expected return next week.",
-      rm_top_reliable_label: "Top Reliable",
-      rm_top_reliable_desc: "Most reliable model — coverage × hit rate.",
-      rm_top_trending_label: "Top Trending",
-      rm_top_trending_desc: "Upward trend + positive forecast. Tritch signal boosts the score but is not a hard requirement.",
-      rm_top_overall_label: "Top Overall",
-      rm_top_overall_desc: "Funds appearing in the most matrices.",
-      rm_top_streak_label: "2 Weeks Running",
-      rm_top_streak_desc: "Funds in the top tier two consecutive weeks — showing sustained strength.",
-      tip_score: "Composite model score (0–1). Higher = better combination of forecast, hit rate and coverage.",
-      tip_hitrate: "Share of weeks where the model's median forecast landed on the right side of zero (correct direction).",
-      tip_coverage: "Share of weeks where the actual return fell within the Q10–Q90 interval. Low = intervals are too narrow.",
-      tip_mae: "Mean absolute error on the median forecast. Lower = less average error.",
-      tip_forecast: "Model forecast for return. Q50 = median, Q10/Q90 = pessimistic/optimistic scenario.",
-      bt_title: "Backtest · how the strategy actually performed",
-      bt_trained_up_to: "Trained up to",
-      bt_evaluated: "Evaluated on unseen data",
-      bt_length: "Length", bt_wks: "wks", bt_yrs: "yrs",
-      bt_strategy_beat: "Strategy beat buy &amp; hold by <strong>{val}</strong>",
-      bt_strategy_under: "Strategy underperformed buy &amp; hold by <strong>{val}</strong>",
-      bt_strategy_matched: "Matched buy &amp; hold <strong>({val})</strong>",
-      bt_signal_strategy: "Signal strategy",
-      bt_just_held: "Just held the fund",
-      bt_better: "Better",
-      bt_grew_to: "$100 grew to <strong>${val}</strong>",
-      bt_ann_return: "Ann. return",
-      bt_ann_return_tip: "Average annualised return. Good ≥10%, OK ≥5%.",
-      bt_sharpe: "Sharpe",
-      bt_sharpe_tip: "Return per unit of risk. Good ≥1.0, OK ≥0.5.",
-      bt_maxdd: "Max drawdown",
-      bt_maxdd_tip: "Worst peak-to-trough decline. Small ≥−10%, Notable −10 to −20%.",
-      bt_hitrate: "Hit rate",
-      bt_hitrate_tip: "Share of weeks where the model predicted the correct direction. Good ≥70%, OK ≥60%.",
-      bt_winrate: "Win rate",
-      bt_winrate_tip: "Share of weeks with positive return. Good ≥55%, OK ≥50%.",
-      bt_excess: "Excess vs B&H",
-      bt_excess_tip: "Difference vs. just holding the fund. Good ≥+5%, OK ≥0%.",
-      bt_disclaimer: "Backtest on held-out data — the model has not seen this period during training. Past performance is no guarantee of future results.",
-      q_good: "Good", q_ok: "OK", q_weak: "Weak",
-      q_small: "Small", q_notable: "Notable", q_large: "Large", q_negative: "Negative",
-      q_clearly_better: "Clearly better", q_marginally_better: "Marginally better",
-      q_marginally_worse: "Marginally worse", q_clearly_worse: "Clearly worse",
-      err_no_predictions: "Could not load predictions.json — run the pipeline first.",
-      err_folder: "Could not load {folder}/predictions.json — {err}",
-    }
-  };
-
-  // ── State ──────────────────────────────────────────────────────
-  let _currentData   = null;
-  let _currentFolder = null;
-  let _currentLang   = "sv";
-
-  // ── Utilities ──────────────────────────────────────────────────
-  const $  = (sel) => document.querySelector(sel);
-  const qa = (sel) => document.querySelectorAll(sel);
-  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-  }[c]));
-  const t = (key) => (TRANSLATIONS[_currentLang] || TRANSLATIONS.sv)[key] || key;
-
-  function signFmt(n) {
-    const v = Number(n);
-    return (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
-  }
-  function btFmt(val, decimals = 1, sign = true) {
-    if (val == null || isNaN(val)) return "—";
-    const n = Number(val);
-    return (sign && n >= 0 ? "+" : "") + n.toFixed(decimals) + "%";
-  }
-  function btClass(val, threshold = 0) {
-    if (val == null) return "";
-    return val > threshold ? "good" : val < threshold ? "warn" : "";
-  }
-  function hitrateClass(val) {
-    if (val >= 80) return "good";
-    if (val < HITRATE_THRESHOLD) return "warn";
-    return "";
-  }
-  function fetchFirst(urls) {
-    return urls.reduce(
-      (chain, url) => chain.catch(() =>
-        fetch(url).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-      ),
-      Promise.reject()
-    );
-  }
-
-  // ── Theme ──────────────────────────────────────────────────────
-  function applyTheme(mode) {
-    // mode: "dark" | "light" | "auto"
-    const body = document.body;
-    body.setAttribute("data-theme", mode);
-    qa(".theme-btn").forEach(b => b.classList.toggle("active", b.dataset.theme === mode));
-    try { localStorage.setItem(STORAGE_THEME, mode); } catch {}
-  }
-  function initTheme() {
-    let saved = "auto";
-    try { saved = localStorage.getItem(STORAGE_THEME) || "auto"; } catch {}
-    if (!["dark", "light", "auto"].includes(saved)) saved = "auto";
-    applyTheme(saved);
-    qa(".theme-btn").forEach(b => {
-      b.addEventListener("click", () => applyTheme(b.dataset.theme));
-    });
-  }
-
-  // ── History panel ──────────────────────────────────────────────
-  function initHistoryToggle() {
-    const btn = $("#history-toggle");
-    const panel = $("#history-panel");
-    btn.addEventListener("click", () => {
-      const expanded = btn.getAttribute("aria-expanded") === "true";
-      btn.setAttribute("aria-expanded", String(!expanded));
-      panel.hidden = expanded;
-    });
-  }
-  function renderHistoryList(folders) {
-    const list = $("#history-list");
-    if (!folders || folders.length === 0) {
-      list.innerHTML = `<div class="history-empty">${t("history_empty")}</div>`;
-      return;
-    }
-    list.innerHTML = folders.map(folder => {
-      const date = folder.replace(/^top-/, "");
-      return `
-<div class="history-item" data-folder="${esc(folder)}">
-  <span class="history-item-date">${esc(date)}</span>
-  <span class="history-item-meta">${esc(folder)}/predictions.json</span>
-  <span class="history-item-arrow">→</span>
-</div>`;
-    }).join("");
-    list.querySelectorAll(".history-item").forEach(item => {
-      item.addEventListener("click", () => loadFolder(item.dataset.folder));
-    });
-  }
-
-  // ── Copy PPM ───────────────────────────────────────────────────
-  function copyPpm(btn, code) {
-    const original = btn.textContent;
-    const reset = () => { btn.textContent = original; btn.classList.remove("copied"); };
-    const success = () => { btn.textContent = "✓ Copied"; btn.classList.add("copied"); setTimeout(reset, 1800); };
-    const fallback = () => {
-      try {
-        const inp = document.createElement("input");
-        inp.value = code; inp.style.cssText = "position:fixed;opacity:0";
-        document.body.appendChild(inp); inp.select(); document.execCommand("copy");
-        document.body.removeChild(inp); success();
-      } catch (e) { btn.textContent = code; }
-    };
-    if (navigator.clipboard?.writeText) {
-      navigator.clipboard.writeText(code).then(success).catch(fallback);
-    } else fallback();
-  }
-
-  // ── Chart switcher ─────────────────────────────────────────────
-  function switchChart(btn, paneId) {
-    const block = btn.closest(".charts-block");
-    block.querySelectorAll(".chart-tab").forEach(b => b.classList.remove("active"));
-    block.querySelectorAll(".chart-pane").forEach(p => p.classList.remove("active"));
-    btn.classList.add("active");
-    document.getElementById(paneId)?.classList.add("active");
-  }
-
-  // ── Bar helper ─────────────────────────────────────────────────
-  function barHtml(val, max = 100, cls = "") {
-    const pct = Math.min(Math.max((val / max) * 100, 0), 100).toFixed(1);
-    return `<div class="bar-track"><div class="bar-fill${cls ? " " + cls : ""}" style="width:${pct}%"></div></div>`;
-  }
-
-  // ── Chart img ──────────────────────────────────────────────────
-  function chartImg(path, alt) {
-    if (!path) return `<div class="chart-missing">${t("chart_missing")}</div>`;
-    const norm = path.replace(/^\.\//, "");
-    const fallback = norm.startsWith("output/") ? null : `output/${norm}`;
-    const onerr = fallback ? ` onerror="this.onerror=null;this.src='${fallback}'"` : "";
-    return `<img src="${esc(path)}" alt="${esc(alt)}" loading="lazy"${onerr}>`;
-  }
-
-  // ── Backtest block ─────────────────────────────────────────────
-  function btQualitySharpe(s) {
-    if (s >= 1.0) return { cls: "good", label: t("q_good") };
-    if (s >= 0.5) return { cls: "ok",   label: t("q_ok")   };
-    return                { cls: "warn", label: t("q_weak") };
-  }
-  function btQualityHit(h) {
-    if (h >= 70) return { cls: "good", label: t("q_good") };
-    if (h >= 60) return { cls: "ok",   label: t("q_ok")   };
-    return               { cls: "warn", label: t("q_weak") };
-  }
-  function btQualityWin(w) {
-    if (w >= 55) return { cls: "good", label: t("q_good") };
-    if (w >= 50) return { cls: "ok",   label: t("q_ok")   };
-    return               { cls: "warn", label: t("q_weak") };
-  }
-  function btQualityDD(d) {
-    if (d >= -10) return { cls: "good", label: t("q_small")   };
-    if (d >= -20) return { cls: "ok",   label: t("q_notable") };
-    return                { cls: "warn", label: t("q_large")   };
-  }
-  function btQualityAnn(a) {
-    if (a >= 10) return { cls: "good", label: t("q_good")     };
-    if (a >= 5)  return { cls: "ok",   label: t("q_ok")       };
-    if (a >= 0)  return { cls: "warn", label: t("q_weak")     };
-    return                { cls: "warn", label: t("q_negative") };
-  }
-  function btQualityExcess(e) {
-    if (e >= 5)  return { cls: "good", label: t("q_clearly_better")    };
-    if (e >= 0)  return { cls: "ok",   label: t("q_marginally_better") };
-    if (e >= -5) return { cls: "warn", label: t("q_marginally_worse")  };
-    return                { cls: "warn", label: t("q_clearly_worse")    };
-  }
-
-  function btHtml(bt) {
-    if (!bt) return "";
-    const strat  = bt.cum_return_pct  ?? 0;
-    const bah    = bt.bah_return_pct  ?? 0;
-    const excess = bt.excess_pct      ?? 0;
-    const ann    = bt.ann_return_pct  ?? 0;
-    const sharpe = bt.sharpe          ?? 0;
-    const maxdd  = bt.max_drawdown_pct ?? 0;
-    const win    = bt.win_rate_pct    ?? 0;
-    const hit    = bt.hit_rate_pct    ?? 0;
-    const weeks  = bt.weeks           ?? 0;
-    const cutoff = bt.cutoff_date     || null;
-    const period = (bt.date_from && bt.date_to)
-      ? `${esc(bt.date_from)} → ${esc(bt.date_to)}` : "";
-    const years  = weeks > 0 ? (weeks / 52).toFixed(1) : null;
-
-    // Verdict
-    let verdictCls, verdictIcon, verdictText;
-    if (excess > 0.5) {
-      verdictCls = "bt-verdict-up"; verdictIcon = "▲";
-      verdictText = t("bt_strategy_beat").replace("{val}", btFmt(excess));
-    } else if (excess < -0.5) {
-      verdictCls = "bt-verdict-down"; verdictIcon = "▼";
-      verdictText = t("bt_strategy_under").replace("{val}", btFmt(Math.abs(excess), 1, false));
-    } else {
-      verdictCls = "bt-verdict-flat"; verdictIcon = "●";
-      verdictText = t("bt_strategy_matched").replace("{val}", btFmt(excess));
-    }
-
-    const stratEnd = (100 * (1 + strat / 100));
-    const bahEnd   = (100 * (1 + bah / 100));
-    const fmtKr = (n) => n.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-    const grewTo = (val) => t("bt_grew_to").replace("{val}", fmtKr(val));
-
-    // Bars normalised to the larger absolute return
-    const barMax = Math.max(Math.abs(strat), Math.abs(bah), 0.01);
-    const stratW = (Math.abs(strat) / barMax * 100).toFixed(1);
-    const bahW   = (Math.abs(bah)   / barMax * 100).toFixed(1);
-    const stratWinner = strat >= bah;
-
-    // Quality badges
-    const qSharpe = btQualitySharpe(sharpe);
-    const qHit    = btQualityHit(hit);
-    const qWin    = btQualityWin(win);
-    const qDD     = btQualityDD(maxdd);
-    const qAnn    = btQualityAnn(ann);
-    const qExcess = btQualityExcess(excess);
-
-    return `
-<div class="backtest-block">
-  <div class="backtest-title">${t("bt_title")}</div>
-
-  <div class="bt-period">
-    <div class="bt-period-row">
-      <span class="bt-period-label">${t("bt_trained_up_to")}</span>
-      <span class="bt-period-value">${esc(cutoff || "—")}</span>
-    </div>
-    <div class="bt-period-sep" aria-hidden="true">›</div>
-    <div class="bt-period-row">
-      <span class="bt-period-label">${t("bt_evaluated")}</span>
-      <span class="bt-period-value">${period || `${weeks} ${t("bt_wks")}`}</span>
-    </div>
-    <div class="bt-period-sep" aria-hidden="true">·</div>
-    <div class="bt-period-row">
-      <span class="bt-period-label">${t("bt_length")}</span>
-      <span class="bt-period-value">${weeks} ${t("bt_wks")}${years ? ` (≈ ${years} ${t("bt_yrs")})` : ""}</span>
-    </div>
-  </div>
-
-  <div class="bt-verdict ${verdictCls}">${verdictIcon} ${verdictText}</div>
-
-  <div class="bt-compare">
-    <div class="bt-compare-card ${stratWinner ? "is-winner" : ""}">
-      <div class="bt-compare-head">
-        <span class="bt-compare-label">${t("bt_signal_strategy")}</span>
-        ${stratWinner ? `<span class="bt-winner-tag">${t("bt_better")}</span>` : ""}
-      </div>
-      <div class="bt-compare-value ${btClass(strat)}">${btFmt(strat)}</div>
-      <div class="bt-compare-sub">${grewTo(stratEnd)}</div>
-      <div class="bt-bar-track"><div class="bt-bar-fill ${strat >= 0 ? "pos" : "neg"}" style="width:${stratW}%"></div></div>
-    </div>
-    <div class="bt-compare-card ${!stratWinner ? "is-winner" : ""}">
-      <div class="bt-compare-head">
-        <span class="bt-compare-label">${t("bt_just_held")}</span>
-        ${!stratWinner ? `<span class="bt-winner-tag">${t("bt_better")}</span>` : ""}
-      </div>
-      <div class="bt-compare-value ${btClass(bah)}">${btFmt(bah)}</div>
-      <div class="bt-compare-sub">${grewTo(bahEnd)}</div>
-      <div class="bt-bar-track"><div class="bt-bar-fill ${bah >= 0 ? "pos" : "neg"}" style="width:${bahW}%"></div></div>
-    </div>
-  </div>
-
-  <div class="bt-stats">
-    <div class="bt-stat">
-      <span class="bt-stat-label">${t("bt_ann_return")} <span class="metric-info" data-tip="${esc(t("bt_ann_return_tip"))}">?</span></span>
-      <span class="bt-stat-val ${qAnn.cls}">${btFmt(ann)}</span>
-      <span class="bt-stat-quality q-${qAnn.cls}">${qAnn.label}</span>
-    </div>
-    <div class="bt-stat">
-      <span class="bt-stat-label">${t("bt_sharpe")} <span class="metric-info" data-tip="${esc(t("bt_sharpe_tip"))}">?</span></span>
-      <span class="bt-stat-val ${qSharpe.cls}">${Number(sharpe).toFixed(2)}</span>
-      <span class="bt-stat-quality q-${qSharpe.cls}">${qSharpe.label}</span>
-    </div>
-    <div class="bt-stat">
-      <span class="bt-stat-label">${t("bt_maxdd")} <span class="metric-info" data-tip="${esc(t("bt_maxdd_tip"))}">?</span></span>
-      <span class="bt-stat-val ${qDD.cls}">${btFmt(maxdd)}</span>
-      <span class="bt-stat-quality q-${qDD.cls}">${qDD.label}</span>
-    </div>
-    <div class="bt-stat">
-      <span class="bt-stat-label">${t("bt_hitrate")} <span class="metric-info" data-tip="${esc(t("bt_hitrate_tip"))}">?</span></span>
-      <span class="bt-stat-val ${qHit.cls}">${btFmt(hit, 1, false)}</span>
-      <span class="bt-stat-quality q-${qHit.cls}">${qHit.label}</span>
-    </div>
-    <div class="bt-stat">
-      <span class="bt-stat-label">${t("bt_winrate")} <span class="metric-info" data-tip="${esc(t("bt_winrate_tip"))}">?</span></span>
-      <span class="bt-stat-val ${qWin.cls}">${btFmt(win, 1, false)}</span>
-      <span class="bt-stat-quality q-${qWin.cls}">${qWin.label}</span>
-    </div>
-    <div class="bt-stat">
-      <span class="bt-stat-label">${t("bt_excess")} <span class="metric-info" data-tip="${esc(t("bt_excess_tip"))}">?</span></span>
-      <span class="bt-stat-val ${qExcess.cls}">${btFmt(excess)}</span>
-      <span class="bt-stat-quality q-${qExcess.cls}">${qExcess.label}</span>
-    </div>
-  </div>
-
-  <div class="bt-disclaimer">${t("bt_disclaimer")}</div>
-</div>`;
-  }
-
-  // ── Forecast band (visualises Q10–Q50–Q90 on a continuous scale) ─
-  function forecastBandHtml(fc) {
-    const q10 = fc.q10 ?? 0, q50 = fc.q50 ?? 0, q90 = fc.q90 ?? 0;
-    const span = Math.max(Math.abs(q10), Math.abs(q90), 1) * 1.1;
-    const toPct = v => ((v + span) / (2 * span)) * 100;
-    const startPct = toPct(q10);
-    const endPct   = toPct(q90);
-    const q50Pct   = toPct(q50);
-    return `
-<div class="forecast-band" title="Q10 → Q90 interval, marker = Q50">
-  <div class="forecast-band-fill" style="left:${startPct.toFixed(1)}%;width:${(endPct - startPct).toFixed(1)}%"></div>
-  <div class="forecast-band-q50" style="left:${q50Pct.toFixed(1)}%"></div>
-</div>
-<div class="forecast-legend">
-  <span>${signFmt(-span)}</span><span>0%</span><span>${signFmt(span)}</span>
-</div>`;
-  }
-
-  // ── Tag helper ─────────────────────────────────────────────────
-  function tagsHtml(tagString) {
-    return String(tagString || "").split(",")
-      .map(tag => tag.trim()).filter(Boolean)
-      .map(tag => `<span class="tag">${esc(tag)}</span>`).join("");
-  }
-
-  // ── Action buttons ─────────────────────────────────────────────
-  function ppmBtnHtml(code) {
-    if (!code) return '<span class="id-pill ppm">PPM —</span>';
-    return `<button class="action-btn ppm-copy" data-ppm="${esc(code)}">PPM ${esc(code)} ⎘</button>`;
-  }
-  function avanzaLinkHtml(url) {
-    if (!url) return "";
-    return `<a class="action-btn" href="${esc(url)}" target="_blank" rel="noopener">Avanza ↗</a>`;
-  }
-
-  // ── Full fund card (Winners view) ──────────────────────────────
-  function fundCardHtml(fund, rank, hKey) {
-    const sig = SIGNAL[fund.signal] || SIGNAL.HOLD;
-    const fc  = fund.forecast || {};
-    const charts = fund.charts || {};
-    const cardId = `c-${hKey}-${rank}`;
-    const medal  = MEDALS[rank - 1] ?? `#${rank}`;
-    const hitrate = (fund.hitrate_q50 || 0);
-    const cov     = (fund.coverage_pct || 0).toFixed(1);
-    const mae     = (fund.mae_q50 || 0).toFixed(4);
-    const score   = (fund.score || 0).toFixed(3);
-    const hLabel  = t("hz_" + hKey + "_label") || hKey;
-    const below   = hitrate < HITRATE_THRESHOLD;
-    const q50     = fc.q50 || 0;
-
-    const ensPath = charts.ensemble   ? `${OUTPUT}/${charts.ensemble}`   : null;
-    const indPath = charts.individual ? `${OUTPUT}/${charts.individual}` : null;
-
-    const warnBadge = below
-      ? `<span class="hitrate-warn">⚠ ${t("bt_hitrate")} &lt;${HITRATE_THRESHOLD}%</span>` : "";
-
-    const medalCls = rank <= 3 ? "is-medal" : "";
-    const topCls = rank === 1 ? " is-top" : "";
-
-    return `
-<article class="fund-card${topCls}">
-  <div class="card-header">
-    <div class="rank-col ${medalCls}">${medal}</div>
-    <div class="fund-meta">
-      <div class="fund-name" title="${esc(fund.name || "")}">${esc(fund.name || t("fund_unknown"))}</div>
-      <div class="fund-ids">
-        <span class="id-pill">ID&nbsp;${esc(fund.fund_id || "—")}</span>
-        ${ppmBtnHtml(fund.ppm_code)}
-        ${avanzaLinkHtml(fund.avanza_url)}
-        ${warnBadge}
+    <div class="history-panel" id="history-panel" hidden>
+      <div class="history-panel-title">Tidigare körningar</div>
+      <div class="history-list" id="history-list">
+        <div class="history-empty">Laddar historik…</div>
       </div>
     </div>
-    <div class="signal-col">
-      <div class="signal-badge ${sig.cls}">
-        <span class="signal-icon">${sig.icon}</span>
-        <span class="signal-label">${t("signal_" + (fund.signal || "HOLD"))}</span>
-      </div>
+
+    <div id="app">
+      <p class="state-msg">Laddar prognos…</p>
     </div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lb-close" aria-label="Close">✕</button>
+    <div class="lightbox-inner" id="lb-inner">
+      <img id="lb-img" alt="" draggable="false" />
+    </div>
+    <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
-  <div class="tags-row">${tagsHtml(fund.tags)}</div>
-  <div class="metrics-grid">
-    <div class="metric">
-      <span class="metric-label">Score <span class="metric-info" data-tip="${esc(t("tip_score"))}">?</span></span>
-      <span class="metric-value">${score}</span>
-      <span class="metric-hint">${t("metric_score_hint")}</span>
-    </div>
-    <div class="metric">
-      <span class="metric-label">${t("bt_hitrate")} <span class="metric-info" data-tip="${esc(t("tip_hitrate"))}">?</span></span>
-      <span class="metric-value ${hitrateClass(hitrate)}">${hitrate.toFixed(1)}%</span>
-      ${barHtml(hitrate, 100, hitrateClass(hitrate))}
-    </div>
-    <div class="metric">
-      <span class="metric-label">Coverage <span class="metric-info" data-tip="${esc(t("tip_coverage"))}">?</span></span>
-      <span class="metric-value">${cov}%</span>
-      ${barHtml(parseFloat(cov))}
-    </div>
-    <div class="metric">
-      <span class="metric-label">MAE Q50 <span class="metric-info" data-tip="${esc(t("tip_mae"))}">?</span></span>
-      <span class="metric-value">${mae}</span>
-      <span class="metric-hint">${t("metric_mae_hint")}</span>
-    </div>
-  </div>
-  <div class="forecast-block">
-    <div class="forecast-title">Forecast · ${hLabel} <span class="metric-info" data-tip="${esc(t("tip_forecast"))}">?</span></div>
-    <div class="forecast-row">
-      <span class="fc-q10">${signFmt(fc.q10 || 0)}</span>
-      <span class="fc-sep">·</span>
-      <span class="fc-q50 ${q50 > 0 ? "pos" : q50 < 0 ? "neg" : ""}">${signFmt(q50)}</span>
-      <span class="fc-sep">·</span>
-      <span class="fc-q90">${signFmt(fc.q90 || 0)}</span>
-    </div>
-    ${forecastBandHtml(fc)}
-  </div>
-  ${btHtml(fund.backtest)}
-  <div class="charts-block">
-    <div class="chart-tabs">
-      <button class="chart-tab active" data-chart-target="${cardId}-ens">${t("chart_ensemble")}</button>
-      <button class="chart-tab" data-chart-target="${cardId}-ind">${t("chart_per_model")}</button>
-    </div>
-    <div class="chart-pane active" id="${cardId}-ens">${chartImg(ensPath, `${t("chart_ensemble")} ${fund.name}`)}</div>
-    <div class="chart-pane" id="${cardId}-ind">${chartImg(indPath, `${t("chart_per_model")} ${fund.name}`)}</div>
-  </div>
-</article>`;
-  }
 
-  // ── Compact ranking card ───────────────────────────────────────
-  function rankingFundHtml(fund, rank) {
-    const sig = SIGNAL[fund.signal] || SIGNAL.HOLD;
-    const medal = MEDALS[rank - 1] ?? `#${rank}`;
-    const fc50  = fund.forecast
-      ? signFmt(fund.forecast.q50 || 0)
-      : signFmt(fund.forecast_q50 || 0);
-    const hitrate = fund.hitrate_q50 || 0;
-    const cov     = (fund.coverage_pct || 0).toFixed(1);
-    const below   = hitrate < HITRATE_THRESHOLD;
+  <script>
+    (() => {
+      "use strict";
 
-    const warnBadge = below
-      ? `<span class="hitrate-warn">⚠ &lt;${HITRATE_THRESHOLD}%</span>` : "";
+      const OUTPUT = ".";
+      const PREDICTIONS_URLS = [
+        "predictions.json",
+        "output/predictions.json",
+        "data/predictions.json",
+        "https://raw.githubusercontent.com/zolodev/ppm-kollen/refs/heads/main/predictions.json"
+      ];
+      const MANIFEST_URLS = ["manifest.json", "output/manifest.json"];
+      const HITRATE_THRESHOLD = 70;
+      const STORAGE_THEME = "ppm-kollen-theme";
+      const STORAGE_LANG = "ppm-kollen-lang";
+      const STORAGE_DISCLAIMER = "ppm-kollen-disclaimer-dismissed";
 
-    return `
-<div class="ranking-card">
-  <div class="ranking-card-head">
-    <div class="ranking-rank">${medal}</div>
-    <div class="ranking-info">
-      <div class="ranking-name" title="${esc(fund.name || "")}">${esc(fund.name || "—")}</div>
-      <div class="ranking-ids">
-        <span class="id-pill">ID&nbsp;${esc(fund.fund_id || "—")}</span>
-        ${ppmBtnHtml(fund.ppm_code)}
-        ${avanzaLinkHtml(fund.avanza_url)}
-        ${warnBadge}
-      </div>
-    </div>
-    <div class="ranking-metrics">
-      <div class="ranking-metric"><span class="ranking-metric-label">FC Q50</span><span class="ranking-metric-value">${fc50}</span></div>
-      <div class="ranking-metric"><span class="ranking-metric-label">Hit</span><span class="ranking-metric-value ${hitrateClass(hitrate)}">${hitrate.toFixed(1)}%</span></div>
-      <div class="ranking-metric"><span class="ranking-metric-label">Coverage</span><span class="ranking-metric-value">${cov}%</span></div>
-    </div>
-    <div class="signal-col">
-      <div class="signal-badge ${sig.cls}">
-        <span class="signal-icon">${sig.icon}</span>
-        <span class="signal-label">${t("signal_" + (fund.signal || "HOLD"))}</span>
-      </div>
-    </div>
-  </div>
-</div>`;
-  }
+      const SIGNAL = {
+        BUY: { cls: "sig-buy", icon: "▲" },
+        HOLD: { cls: "sig-hold", icon: "●" },
+        SELL: { cls: "sig-sell", icon: "▼" }
+      };
+      const MEDALS = ["🥇", "🥈", "🥉", "4", "5", "6", "7", "8", "9", "10"];
 
-  // ── Render router ──────────────────────────────────────────────
-  function getRankingMeta(key) {
-    const lk = key === "winners" ? "rm_winners_label" : `rm_${key}_label`;
-    const dk = key === "winners" ? "rm_winners_desc"  : `rm_${key}_desc`;
-    return { label: t(lk) || key, desc: t(dk) || "" };
-  }
+      const TRANSLATIONS = {
+        sv: {
+          btn_historik: "Historik",
+          hero_eyebrow: "PPM Prognos · driven av modellensemble",
+          hero_title_html: "Vilka fonder ger <em>troligtvis</em> högst avkastning nästa vecka?",
+          hero_lede_html: "Modellen rangordnar fonder baserat på förväntad avkastning, hur ofta den förutspår rätt riktning, och hur väl prognoseintervallen täckte verkligheten tidigare veckor. <strong>Inte finansiell rådgivning</strong> — ett utbildningsverktyg.",
+          history_panel_title: "Tidigare körningar",
+          history_loading: "Laddar historik…",
+          history_empty: "Ingen historik tillgänglig.",
+          loading_forecast: "Laddar prognos…",
+          loading_folder: "Laddar…",
+          fund_forecast: "Fondprognos",
+          meta_generated: "Genererad", meta_target: "Mål", meta_scaling: "Skalning",
+          meta_models: "Modeller", meta_winners: "Vinnare", meta_funds: "fonder",
+          meta_target_tip: "Vilket statistiskt mått modellen förutsäger.\nQuantile = en viss percentil av avkastningen, inte medelvärdet.",
+          meta_scaling_tip: "Hur indata normaliseras innan träning.\nRobust = använder median/IQR istället för medelvärde/std, vilket minskar känsligheten för extremvärden.",
+          footer_suffix: "Endast för informationsändamål — inte finansiell rådgivning.",
+          footer_about: "Om projektet",
+          ranking_no_funds: "Inga fonder att visa.",
+          ranking_no_qualify: "Inga fonder kvalificerar till denna matris.",
+          fund_unknown: "Okänd fond",
+          metric_score_hint: "sammansatt modellpoäng",
+          metric_mae_hint: "lägre = mindre fel",
+          chart_ensemble: "Ensemble", chart_per_model: "Per modell",
+          chart_missing: "Inget diagram tillgängligt — genereras av modellpipelinen.",
+          signal_BUY: "KÖP", signal_HOLD: "HÅLL", signal_SELL: "SÄLJ",
+          hz_1w_label: "1 vecka", hz_1w_desc: "Kort sikt",
+          hz_4w_label: "4 veckor", hz_4w_desc: "Medellång",
+          hz_13w_label: "13 veckor", hz_13w_desc: "Kvartal",
+          hz_26w_label: "26 veckor", hz_26w_desc: "Halvår",
+          rm_winners_label: "★ Vinnare",
+          rm_winners_desc: "Topplista — träffsäkerhet ≥70% prioriteras, högst prognos bryter oavgjort. Fonder under tröskeln visas sist med en varning.",
+          rm_top_winners_label: "Toppvinnare", rm_top_winners_desc: "Träffsäkerhet ≥70% först, sorterat efter prognos + träffsäkerhet.",
+          rm_top_balanced_label: "Balanserade", rm_top_balanced_desc: "Hög prognos kombinerat med hög träffsäkerhet.",
+          rm_top_yield_label: "Högst avkastning", rm_top_yield_desc: "Högst förväntad avkastning nästa vecka.",
+          rm_top_reliable_label: "Mest pålitliga", rm_top_reliable_desc: "Mest pålitlig modell — täckning × träffsäkerhet.",
+          rm_top_trending_label: "Trendar uppåt", rm_top_trending_desc: "Uppåtgående trend + positiv prognos.",
+          rm_top_overall_label: "Totalt bäst", rm_top_overall_desc: "Fonder som förekommer i flest matriser.",
+          rm_top_streak_label: "2 veckor i rad", rm_top_streak_desc: "Fonder som befunnit sig i toppskiktet två veckor i rad.",
+          tip_score: "Sammansatt modellpoäng (0–1). Högre = bättre kombination av prognos, träffsäkerhet och täckning.",
+          tip_hitrate: "Andel veckor där modellens medianprognos landade på rätt sida om noll (rätt riktning).",
+          tip_coverage: "Andel veckor där det faktiska utfallet föll inom Q10–Q90-intervallet. Lågt = intervallen är för smala.",
+          tip_mae: "Medelabsolutfel på medianprognosen. Lägre = mindre genomsnittsfel.",
+          tip_forecast: "Modellprognos för avkastning. Q50 = median, Q10/Q90 = pessimistiskt/optimistiskt scenario.",
+          bt_title: "Backtest · hur strategin faktiskt presterade",
+          bt_trained_up_to: "Tränad till och med", bt_evaluated: "Utvärderad på osedd data",
+          bt_length: "Längd", bt_wks: "v", bt_yrs: "år",
+          bt_strategy_beat: "Strategin slog buy &amp; hold med <strong>{val}</strong>",
+          bt_strategy_under: "Strategin underpresterade buy &amp; hold med <strong>{val}</strong>",
+          bt_strategy_matched: "Matchade buy &amp; hold <strong>({val})</strong>",
+          bt_signal_strategy: "Signalstrategi", bt_just_held: "Bara höll fonden", bt_better: "Bättre",
+          bt_grew_to: "100 kr blev <strong>{val} kr</strong>",
+          bt_ann_return: "Årsavkastning", bt_ann_return_tip: "Genomsnittlig årsavkastning. Bra ≥10%, OK ≥5%.",
+          bt_sharpe: "Sharpe", bt_sharpe_tip: "Avkastning per riskenhet. Bra ≥1,0, OK ≥0,5.",
+          bt_maxdd: "Max nedgång", bt_maxdd_tip: "Värsta topp-till-dal-nedgången. Liten ≥−10%, Märkbar −10 till −20%.",
+          bt_hitrate: "Träffsäkerhet", bt_hitrate_tip: "Andel veckor där modellen förutspådde rätt riktning. Bra ≥70%, OK ≥60%.",
+          bt_winrate: "Vinstfrekvens", bt_winrate_tip: "Andel veckor med positiv avkastning. Bra ≥55%, OK ≥50%.",
+          bt_excess: "Överskott vs B&H", bt_excess_tip: "Skillnad mot att bara hålla fonden. Bra ≥+5%, OK ≥0%.",
+          bt_disclaimer: "Backtest på ej sedd data — modellen har inte sett denna period under träning. Historisk avkastning är ingen garanti för framtida resultat.",
+          q_good: "Bra", q_ok: "OK", q_weak: "Svag",
+          q_small: "Liten", q_notable: "Märkbar", q_large: "Stor", q_negative: "Negativ",
+          q_clearly_better: "Klart bättre", q_marginally_better: "Marginellt bättre",
+          q_marginally_worse: "Marginellt sämre", q_clearly_worse: "Klart sämre",
+          err_no_predictions: "Kunde inte ladda predictions.json — kör pipelinen först.",
+          err_folder: "Kunde inte ladda {folder}/predictions.json — {err}",
+          disclaimer_text: "<strong>Inte finansiell rådgivning.</strong> Prognoserna är experimentella och baserade på historiska mönster — ingen garanti för framtida avkastning. Konsultera alltid en behörig rådgivare.",
+          disclaimer_close: "Stäng",
+        },
+        en: {
+          btn_historik: "History",
+          hero_eyebrow: "PPM Forecast · powered by ensemble of models",
+          hero_title_html: "Which funds will <em>likely</em> deliver the highest return next week?",
+          hero_lede_html: "The model ranks funds based on expected return, how often it predicts the right direction, and how well the forecast intervals covered reality in previous weeks. <strong>Not financial advice</strong> — an educational tool.",
+          history_panel_title: "Previous runs",
+          history_loading: "Loading history…",
+          history_empty: "No history available.",
+          loading_forecast: "Loading forecast…",
+          loading_folder: "Loading…",
+          fund_forecast: "Fund Forecast",
+          meta_generated: "Generated", meta_target: "Target", meta_scaling: "Scaling",
+          meta_models: "Models", meta_winners: "Winners", meta_funds: "funds",
+          meta_target_tip: "Which statistical measure the model predicts.\nQuantile = a specific percentile of returns, not the mean.",
+          meta_scaling_tip: "How input data is normalised before training.\nRobust = uses median/IQR instead of mean/std, reducing sensitivity to outliers.",
+          footer_suffix: "For informational purposes only — not financial advice.",
+          footer_about: "About",
+          ranking_no_funds: "No funds to display.",
+          ranking_no_qualify: "No funds qualify for this matrix.",
+          fund_unknown: "Unknown fund",
+          metric_score_hint: "composite model score",
+          metric_mae_hint: "lower = less error",
+          chart_ensemble: "Ensemble", chart_per_model: "Per model",
+          chart_missing: "No chart available — generated by the model pipeline.",
+          signal_BUY: "BUY", signal_HOLD: "HOLD", signal_SELL: "SELL",
+          hz_1w_label: "1 week", hz_1w_desc: "Short term",
+          hz_4w_label: "4 weeks", hz_4w_desc: "Medium",
+          hz_13w_label: "13 weeks", hz_13w_desc: "Quarter",
+          hz_26w_label: "26 weeks", hz_26w_desc: "Half year",
+          rm_winners_label: "★ Winners",
+          rm_winners_desc: "Top list — hit rate ≥70% prioritised, highest forecast breaks ties. Funds below the threshold shown last with a warning.",
+          rm_top_winners_label: "Top Winners", rm_top_winners_desc: "Hit rate ≥70% first, sorted by forecast + hit rate.",
+          rm_top_balanced_label: "Top Balanced", rm_top_balanced_desc: "High forecast combined with high hit rate.",
+          rm_top_yield_label: "Top Yield", rm_top_yield_desc: "Highest expected return next week.",
+          rm_top_reliable_label: "Top Reliable", rm_top_reliable_desc: "Most reliable model — coverage × hit rate.",
+          rm_top_trending_label: "Top Trending", rm_top_trending_desc: "Upward trend + positive forecast.",
+          rm_top_overall_label: "Top Overall", rm_top_overall_desc: "Funds appearing in the most matrices.",
+          rm_top_streak_label: "2 Weeks Running", rm_top_streak_desc: "Funds in the top tier two consecutive weeks.",
+          tip_score: "Composite model score (0–1). Higher = better combination of forecast, hit rate and coverage.",
+          tip_hitrate: "Share of weeks where the model's median forecast landed on the right side of zero (correct direction).",
+          tip_coverage: "Share of weeks where the actual return fell within the Q10–Q90 interval. Low = intervals are too narrow.",
+          tip_mae: "Mean absolute error on the median forecast. Lower = less average error.",
+          tip_forecast: "Model forecast for return. Q50 = median, Q10/Q90 = pessimistic/optimistic scenario.",
+          bt_title: "Backtest · how the strategy actually performed",
+          bt_trained_up_to: "Trained up to", bt_evaluated: "Evaluated on unseen data",
+          bt_length: "Length", bt_wks: "wks", bt_yrs: "yrs",
+          bt_strategy_beat: "Strategy beat buy &amp; hold by <strong>{val}</strong>",
+          bt_strategy_under: "Strategy underperformed buy &amp; hold by <strong>{val}</strong>",
+          bt_strategy_matched: "Matched buy &amp; hold <strong>({val})</strong>",
+          bt_signal_strategy: "Signal strategy", bt_just_held: "Just held the fund", bt_better: "Better",
+          bt_grew_to: "$100 grew to <strong>${val}</strong>",
+          bt_ann_return: "Ann. return", bt_ann_return_tip: "Average annualised return. Good ≥10%, OK ≥5%.",
+          bt_sharpe: "Sharpe", bt_sharpe_tip: "Return per unit of risk. Good ≥1.0, OK ≥0.5.",
+          bt_maxdd: "Max drawdown", bt_maxdd_tip: "Worst peak-to-trough decline. Small ≥−10%, Notable −10 to −20%.",
+          bt_hitrate: "Hit rate", bt_hitrate_tip: "Share of weeks where the model predicted the correct direction. Good ≥70%, OK ≥60%.",
+          bt_winrate: "Win rate", bt_winrate_tip: "Share of weeks with positive return. Good ≥55%, OK ≥50%.",
+          bt_excess: "Excess vs B&H", bt_excess_tip: "Difference vs. just holding the fund. Good ≥+5%, OK ≥0%.",
+          bt_disclaimer: "Backtest on held-out data — the model has not seen this period during training. Past performance is no guarantee of future results.",
+          q_good: "Good", q_ok: "OK", q_weak: "Weak",
+          q_small: "Small", q_notable: "Notable", q_large: "Large", q_negative: "Negative",
+          q_clearly_better: "Clearly better", q_marginally_better: "Marginally better",
+          q_marginally_worse: "Marginally worse", q_clearly_worse: "Clearly worse",
+          err_no_predictions: "Could not load predictions.json — run the pipeline first.",
+          err_folder: "Could not load {folder}/predictions.json — {err}",
+          disclaimer_text: "<strong>Not financial advice.</strong> Forecasts are experimental and based on historical patterns — no guarantee of future returns. Always consult a qualified advisor.",
+          disclaimer_close: "Close",
+        }
+      };
 
-  function switchRanking(key) {
-    if (!_currentData) return;
-    qa(".ranking-tab").forEach(tab => tab.classList.toggle("active", tab.dataset.key === key));
+      let _currentData = null;
+      let _currentFolder = null;
+      let _currentLang = "sv";
 
-    const meta = getRankingMeta(key);
-    const panel = $("#funds-panel");
+      const $ = (sel) => document.querySelector(sel);
+      const qa = (sel) => document.querySelectorAll(sel);
+      const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+      const t = (key) => (TRANSLATIONS[_currentLang] || TRANSLATIONS.sv)[key] || key;
 
-    if (key === "winners") {
-      const hKeys = Object.keys(_currentData.horizons || {});
-      const hKey  = hKeys[0];
-      const funds = hKey ? _currentData.horizons[hKey] || [] : [];
-      const metaCount = $("#meta-winner-count");
-      if (metaCount) metaCount.textContent = funds.length + " " + t("meta_funds");
-      panel.innerHTML = `
-<div class="ranking-desc">${meta.desc}</div>
-<div class="fund-list">
-  ${funds.length
-    ? funds.map((f, i) => fundCardHtml(f, i + 1, hKey)).join("")
-    : `<div class="ranking-empty">${t("ranking_no_funds")}</div>`}
-</div>`;
-    } else {
-      const funds = (_currentData.rankings || {})[key] || [];
-      panel.innerHTML = `
-<div class="ranking-desc">${meta.desc}</div>
-<div class="ranking-list">
-  ${funds.length
-    ? funds.map((f, i) => rankingFundHtml(f, i + 1)).join("")
-    : `<div class="ranking-empty">${t("ranking_no_qualify")}</div>`}
-</div>`;
-    }
-  }
+      function signFmt(n) { const v = Number(n); return (v >= 0 ? "+" : "") + v.toFixed(2) + "%"; }
+      function btFmt(val, decimals = 1, sign = true) { if (val == null || isNaN(val)) return "—"; const n = Number(val); return (sign && n >= 0 ? "+" : "") + n.toFixed(decimals) + "%"; }
+      function btClass(val, threshold = 0) { if (val == null) return ""; return val > threshold ? "good" : val < threshold ? "warn" : ""; }
+      function hitrateClass(val) { if (val >= 80) return "good"; if (val < HITRATE_THRESHOLD) return "warn"; return ""; }
+      function fetchFirst(urls) {
+        return urls.reduce(
+          (chain, url) => chain.catch(() => fetch(url).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })),
+          Promise.reject()
+        );
+      }
 
-  // ── Footer helper ──────────────────────────────────────────────
-  function renderFooter(generated) {
-    const footer = $("#footer");
-    if (!footer) return;
-    footer.innerHTML = `PPM Kollen · ${generated || ""} · ${t("footer_suffix")}
+      // ── Disclaimer banner ──────────────────────────────────────────
+      function initDisclaimer() {
+        const banner = $("#disclaimer-banner");
+        const closeBtn = $("#disclaimer-banner-close");
+        if (!banner) return;
+        let dismissed = false;
+        try { dismissed = localStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch { }
+        if (dismissed) { banner.classList.add("dismissed"); return; }
+        closeBtn.addEventListener("click", () => {
+          banner.classList.add("dismissed");
+          try { localStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch { }
+        });
+      }
+      function updateDisclaimerText() {
+        const textEl = $("#disclaimer-banner-text");
+        const closeBtn = $("#disclaimer-banner-close");
+        if (textEl) textEl.innerHTML = t("disclaimer_text");
+        if (closeBtn) closeBtn.setAttribute("aria-label", t("disclaimer_close"));
+      }
+
+      // ── Theme ──────────────────────────────────────────────────────
+      function applyTheme(mode) {
+        document.body.setAttribute("data-theme", mode);
+        qa(".theme-btn").forEach(b => b.classList.toggle("active", b.dataset.theme === mode));
+        try { localStorage.setItem(STORAGE_THEME, mode); } catch { }
+      }
+      function initTheme() {
+        let saved = "auto";
+        try { saved = localStorage.getItem(STORAGE_THEME) || "auto"; } catch { }
+        if (!["dark", "light", "auto"].includes(saved)) saved = "auto";
+        applyTheme(saved);
+        qa(".theme-btn").forEach(b => b.addEventListener("click", () => applyTheme(b.dataset.theme)));
+      }
+
+      // ── History panel ──────────────────────────────────────────────
+      function initHistoryToggle() {
+        const btn = $("#history-toggle"), panel = $("#history-panel");
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!expanded));
+          panel.hidden = expanded;
+        });
+      }
+      function renderHistoryList(folders) {
+        const list = $("#history-list");
+        if (!folders || folders.length === 0) { list.innerHTML = `<div class="history-empty">${t("history_empty")}</div>`; return; }
+        list.innerHTML = folders.map(folder => {
+          const date = folder.replace(/^top-/, "");
+          return `<div class="history-item" data-folder="${esc(folder)}"><span class="history-item-date">${esc(date)}</span><span class="history-item-meta">${esc(folder)}/predictions.json</span><span class="history-item-arrow">→</span></div>`;
+        }).join("");
+        list.querySelectorAll(".history-item").forEach(item => item.addEventListener("click", () => loadFolder(item.dataset.folder)));
+      }
+
+      function copyPpm(btn, code) {
+        const original = btn.textContent;
+        const reset = () => { btn.textContent = original; btn.classList.remove("copied"); };
+        const success = () => { btn.textContent = "✓ Copied"; btn.classList.add("copied"); setTimeout(reset, 1800); };
+        const fallback = () => { try { const inp = document.createElement("input"); inp.value = code; inp.style.cssText = "position:fixed;opacity:0"; document.body.appendChild(inp); inp.select(); document.execCommand("copy"); document.body.removeChild(inp); success(); } catch (e) { btn.textContent = code; } };
+        if (navigator.clipboard?.writeText) { navigator.clipboard.writeText(code).then(success).catch(fallback); } else fallback();
+      }
+
+      function switchChart(btn, paneId) {
+        const block = btn.closest(".charts-block");
+        block.querySelectorAll(".chart-tab").forEach(b => b.classList.remove("active"));
+        block.querySelectorAll(".chart-pane").forEach(p => p.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(paneId)?.classList.add("active");
+      }
+
+      function barHtml(val, max = 100, cls = "") { const pct = Math.min(Math.max((val / max) * 100, 0), 100).toFixed(1); return `<div class="bar-track"><div class="bar-fill${cls ? " " + cls : ""}" style="width:${pct}%"></div></div>`; }
+      function chartImg(path, alt) { if (!path) return `<div class="chart-missing">${t("chart_missing")}</div>`; const norm = path.replace(/^\.\//, ""); const fallback = norm.startsWith("output/") ? null : `output/${norm}`; const onerr = fallback ? ` onerror="this.onerror=null;this.src='${fallback}'"` : ""; return `<img src="${esc(path)}" alt="${esc(alt)}" loading="lazy"${onerr}>`; }
+
+      function btQualitySharpe(s) { if (s >= 1.0) return { cls: "good", label: t("q_good") }; if (s >= 0.5) return { cls: "ok", label: t("q_ok") }; return { cls: "warn", label: t("q_weak") }; }
+      function btQualityHit(h) { if (h >= 70) return { cls: "good", label: t("q_good") }; if (h >= 60) return { cls: "ok", label: t("q_ok") }; return { cls: "warn", label: t("q_weak") }; }
+      function btQualityWin(w) { if (w >= 55) return { cls: "good", label: t("q_good") }; if (w >= 50) return { cls: "ok", label: t("q_ok") }; return { cls: "warn", label: t("q_weak") }; }
+      function btQualityDD(d) { if (d >= -10) return { cls: "good", label: t("q_small") }; if (d >= -20) return { cls: "ok", label: t("q_notable") }; return { cls: "warn", label: t("q_large") }; }
+      function btQualityAnn(a) { if (a >= 10) return { cls: "good", label: t("q_good") }; if (a >= 5) return { cls: "ok", label: t("q_ok") }; if (a >= 0) return { cls: "warn", label: t("q_weak") }; return { cls: "warn", label: t("q_negative") }; }
+      function btQualityExcess(e) { if (e >= 5) return { cls: "good", label: t("q_clearly_better") }; if (e >= 0) return { cls: "ok", label: t("q_marginally_better") }; if (e >= -5) return { cls: "warn", label: t("q_marginally_worse") }; return { cls: "warn", label: t("q_clearly_worse") }; }
+
+      function btHtml(bt) {
+        if (!bt) return "";
+        const strat = bt.cum_return_pct ?? 0, bah = bt.bah_return_pct ?? 0, excess = bt.excess_pct ?? 0;
+        const ann = bt.ann_return_pct ?? 0, sharpe = bt.sharpe ?? 0, maxdd = bt.max_drawdown_pct ?? 0;
+        const win = bt.win_rate_pct ?? 0, hit = bt.hit_rate_pct ?? 0, weeks = bt.weeks ?? 0;
+        const cutoff = bt.cutoff_date || null;
+        const period = (bt.date_from && bt.date_to) ? `${esc(bt.date_from)} → ${esc(bt.date_to)}` : "";
+        const years = weeks > 0 ? (weeks / 52).toFixed(1) : null;
+        let verdictCls, verdictIcon, verdictText;
+        if (excess > 0.5) { verdictCls = "bt-verdict-up"; verdictIcon = "▲"; verdictText = t("bt_strategy_beat").replace("{val}", btFmt(excess)); }
+        else if (excess < -0.5) { verdictCls = "bt-verdict-down"; verdictIcon = "▼"; verdictText = t("bt_strategy_under").replace("{val}", btFmt(Math.abs(excess), 1, false)); }
+        else { verdictCls = "bt-verdict-flat"; verdictIcon = "●"; verdictText = t("bt_strategy_matched").replace("{val}", btFmt(excess)); }
+        const stratEnd = (100 * (1 + strat / 100)), bahEnd = (100 * (1 + bah / 100));
+        const fmtKr = (n) => n.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        const grewTo = (val) => t("bt_grew_to").replace("{val}", fmtKr(val));
+        const barMax = Math.max(Math.abs(strat), Math.abs(bah), 0.01);
+        const stratW = (Math.abs(strat) / barMax * 100).toFixed(1), bahW = (Math.abs(bah) / barMax * 100).toFixed(1);
+        const stratWinner = strat >= bah;
+        const qSharpe = btQualitySharpe(sharpe), qHit = btQualityHit(hit), qWin = btQualityWin(win);
+        const qDD = btQualityDD(maxdd), qAnn = btQualityAnn(ann), qExcess = btQualityExcess(excess);
+        return `<div class="backtest-block"><div class="backtest-title">${t("bt_title")}</div><div class="bt-period"><div class="bt-period-row"><span class="bt-period-label">${t("bt_trained_up_to")}</span><span class="bt-period-value">${esc(cutoff || "—")}</span></div><div class="bt-period-sep" aria-hidden="true">›</div><div class="bt-period-row"><span class="bt-period-label">${t("bt_evaluated")}</span><span class="bt-period-value">${period || `${weeks} ${t("bt_wks")}`}</span></div><div class="bt-period-sep" aria-hidden="true">·</div><div class="bt-period-row"><span class="bt-period-label">${t("bt_length")}</span><span class="bt-period-value">${weeks} ${t("bt_wks")}${years ? ` (≈ ${years} ${t("bt_yrs")})` : ""}</span></div></div><div class="bt-verdict ${verdictCls}">${verdictIcon} ${verdictText}</div><div class="bt-compare"><div class="bt-compare-card ${stratWinner ? "is-winner" : ""}"><div class="bt-compare-head"><span class="bt-compare-label">${t("bt_signal_strategy")}</span>${stratWinner ? `<span class="bt-winner-tag">${t("bt_better")}</span>` : ""}</div><div class="bt-compare-value ${btClass(strat)}">${btFmt(strat)}</div><div class="bt-compare-sub">${grewTo(stratEnd)}</div><div class="bt-bar-track"><div class="bt-bar-fill ${strat >= 0 ? "pos" : "neg"}" style="width:${stratW}%"></div></div></div><div class="bt-compare-card ${!stratWinner ? "is-winner" : ""}"><div class="bt-compare-head"><span class="bt-compare-label">${t("bt_just_held")}</span>${!stratWinner ? `<span class="bt-winner-tag">${t("bt_better")}</span>` : ""}</div><div class="bt-compare-value ${btClass(bah)}">${btFmt(bah)}</div><div class="bt-compare-sub">${grewTo(bahEnd)}</div><div class="bt-bar-track"><div class="bt-bar-fill ${bah >= 0 ? "pos" : "neg"}" style="width:${bahW}%"></div></div></div></div><div class="bt-stats"><div class="bt-stat"><span class="bt-stat-label">${t("bt_ann_return")} <span class="metric-info" data-tip="${esc(t("bt_ann_return_tip"))}">?</span></span><span class="bt-stat-val ${qAnn.cls}">${btFmt(ann)}</span><span class="bt-stat-quality q-${qAnn.cls}">${qAnn.label}</span></div><div class="bt-stat"><span class="bt-stat-label">${t("bt_sharpe")} <span class="metric-info" data-tip="${esc(t("bt_sharpe_tip"))}">?</span></span><span class="bt-stat-val ${qSharpe.cls}">${Number(sharpe).toFixed(2)}</span><span class="bt-stat-quality q-${qSharpe.cls}">${qSharpe.label}</span></div><div class="bt-stat"><span class="bt-stat-label">${t("bt_maxdd")} <span class="metric-info" data-tip="${esc(t("bt_maxdd_tip"))}">?</span></span><span class="bt-stat-val ${qDD.cls}">${btFmt(maxdd)}</span><span class="bt-stat-quality q-${qDD.cls}">${qDD.label}</span></div><div class="bt-stat"><span class="bt-stat-label">${t("bt_hitrate")} <span class="metric-info" data-tip="${esc(t("bt_hitrate_tip"))}">?</span></span><span class="bt-stat-val ${qHit.cls}">${btFmt(hit, 1, false)}</span><span class="bt-stat-quality q-${qHit.cls}">${qHit.label}</span></div><div class="bt-stat"><span class="bt-stat-label">${t("bt_winrate")} <span class="metric-info" data-tip="${esc(t("bt_winrate_tip"))}">?</span></span><span class="bt-stat-val ${qWin.cls}">${btFmt(win, 1, false)}</span><span class="bt-stat-quality q-${qWin.cls}">${qWin.label}</span></div><div class="bt-stat"><span class="bt-stat-label">${t("bt_excess")} <span class="metric-info" data-tip="${esc(t("bt_excess_tip"))}">?</span></span><span class="bt-stat-val ${qExcess.cls}">${btFmt(excess)}</span><span class="bt-stat-quality q-${qExcess.cls}">${qExcess.label}</span></div></div><div class="bt-disclaimer">${t("bt_disclaimer")}</div></div>`;
+      }
+
+      function forecastBandHtml(fc) {
+        const q10 = fc.q10 ?? 0, q50 = fc.q50 ?? 0, q90 = fc.q90 ?? 0;
+        const span = Math.max(Math.abs(q10), Math.abs(q90), 1) * 1.1;
+        const toPct = v => ((v + span) / (2 * span)) * 100;
+        return `<div class="forecast-band" title="Q10 → Q90 interval, marker = Q50"><div class="forecast-band-fill" style="left:${toPct(q10).toFixed(1)}%;width:${(toPct(q90) - toPct(q10)).toFixed(1)}%"></div><div class="forecast-band-q50" style="left:${toPct(q50).toFixed(1)}%"></div></div><div class="forecast-legend"><span>${signFmt(-span)}</span><span>0%</span><span>${signFmt(span)}</span></div>`;
+      }
+
+      function tagsHtml(tagString) { return String(tagString || "").split(",").map(tag => tag.trim()).filter(Boolean).map(tag => `<span class="tag">${esc(tag)}</span>`).join(""); }
+      function ppmBtnHtml(code) { if (!code) return '<span class="id-pill ppm">PPM —</span>'; return `<button class="action-btn ppm-copy" data-ppm="${esc(code)}">PPM ${esc(code)} ⎘</button>`; }
+      function avanzaLinkHtml(url) { if (!url) return ""; return `<a class="action-btn" href="${esc(url)}" target="_blank" rel="noopener">Avanza ↗</a>`; }
+
+      function fundCardHtml(fund, rank, hKey) {
+        const sig = SIGNAL[fund.signal] || SIGNAL.HOLD;
+        const fc = fund.forecast || {}, charts = fund.charts || {};
+        const cardId = `c-${hKey}-${rank}`, medal = MEDALS[rank - 1] ?? `#${rank}`;
+        const hitrate = (fund.hitrate_q50 || 0), cov = (fund.coverage_pct || 0).toFixed(1);
+        const mae = (fund.mae_q50 || 0).toFixed(4), score = (fund.score || 0).toFixed(3);
+        const hLabel = t("hz_" + hKey + "_label") || hKey, below = hitrate < HITRATE_THRESHOLD, q50 = fc.q50 || 0;
+        const ensPath = charts.ensemble ? `${OUTPUT}/${charts.ensemble}` : null;
+        const indPath = charts.individual ? `${OUTPUT}/${charts.individual}` : null;
+        const warnBadge = below ? `<span class="hitrate-warn">⚠ ${t("bt_hitrate")} &lt;${HITRATE_THRESHOLD}%</span>` : "";
+        const medalCls = rank <= 3 ? "is-medal" : "", topCls = rank === 1 ? " is-top" : "";
+        return `<article class="fund-card${topCls}"><div class="card-header"><div class="rank-col ${medalCls}">${medal}</div><div class="fund-meta"><div class="fund-name" title="${esc(fund.name || "")}">${esc(fund.name || t("fund_unknown"))}</div><div class="fund-ids"><span class="id-pill">ID&nbsp;${esc(fund.fund_id || "—")}</span>${ppmBtnHtml(fund.ppm_code)}${avanzaLinkHtml(fund.avanza_url)}${warnBadge}</div></div><div class="signal-col"><div class="signal-badge ${sig.cls}"><span class="signal-icon">${sig.icon}</span><span class="signal-label">${t("signal_" + (fund.signal || "HOLD"))}</span></div></div></div><div class="tags-row">${tagsHtml(fund.tags)}</div><div class="metrics-grid"><div class="metric"><span class="metric-label">Score <span class="metric-info" data-tip="${esc(t("tip_score"))}">?</span></span><span class="metric-value">${score}</span><span class="metric-hint">${t("metric_score_hint")}</span></div><div class="metric"><span class="metric-label">${t("bt_hitrate")} <span class="metric-info" data-tip="${esc(t("tip_hitrate"))}">?</span></span><span class="metric-value ${hitrateClass(hitrate)}">${hitrate.toFixed(1)}%</span>${barHtml(hitrate, 100, hitrateClass(hitrate))}</div><div class="metric"><span class="metric-label">Coverage <span class="metric-info" data-tip="${esc(t("tip_coverage"))}">?</span></span><span class="metric-value">${cov}%</span>${barHtml(parseFloat(cov))}</div><div class="metric"><span class="metric-label">MAE Q50 <span class="metric-info" data-tip="${esc(t("tip_mae"))}">?</span></span><span class="metric-value">${mae}</span><span class="metric-hint">${t("metric_mae_hint")}</span></div></div><div class="forecast-block"><div class="forecast-title">Forecast · ${hLabel} <span class="metric-info" data-tip="${esc(t("tip_forecast"))}">?</span></div><div class="forecast-row"><span class="fc-q10">${signFmt(fc.q10 || 0)}</span><span class="fc-sep">·</span><span class="fc-q50 ${q50 > 0 ? "pos" : q50 < 0 ? "neg" : ""}">${signFmt(q50)}</span><span class="fc-sep">·</span><span class="fc-q90">${signFmt(fc.q90 || 0)}</span></div>${forecastBandHtml(fc)}</div>${btHtml(fund.backtest)}<div class="charts-block"><div class="chart-tabs"><button class="chart-tab active" data-chart-target="${cardId}-ens">${t("chart_ensemble")}</button><button class="chart-tab" data-chart-target="${cardId}-ind">${t("chart_per_model")}</button></div><div class="chart-pane active" id="${cardId}-ens">${chartImg(ensPath, `${t("chart_ensemble")} ${fund.name}`)}</div><div class="chart-pane" id="${cardId}-ind">${chartImg(indPath, `${t("chart_per_model")} ${fund.name}`)}</div></div></article>`;
+      }
+
+      function rankingFundHtml(fund, rank) {
+        const sig = SIGNAL[fund.signal] || SIGNAL.HOLD, medal = MEDALS[rank - 1] ?? `#${rank}`;
+        const fc50 = fund.forecast ? signFmt(fund.forecast.q50 || 0) : signFmt(fund.forecast_q50 || 0);
+        const hitrate = fund.hitrate_q50 || 0, cov = (fund.coverage_pct || 0).toFixed(1), below = hitrate < HITRATE_THRESHOLD;
+        const warnBadge = below ? `<span class="hitrate-warn">⚠ &lt;${HITRATE_THRESHOLD}%</span>` : "";
+        return `<div class="ranking-card"><div class="ranking-card-head"><div class="ranking-rank">${medal}</div><div class="ranking-info"><div class="ranking-name" title="${esc(fund.name || "")}">${esc(fund.name || "—")}</div><div class="ranking-ids"><span class="id-pill">ID&nbsp;${esc(fund.fund_id || "—")}</span>${ppmBtnHtml(fund.ppm_code)}${avanzaLinkHtml(fund.avanza_url)}${warnBadge}</div></div><div class="ranking-metrics"><div class="ranking-metric"><span class="ranking-metric-label">FC Q50</span><span class="ranking-metric-value">${fc50}</span></div><div class="ranking-metric"><span class="ranking-metric-label">Hit</span><span class="ranking-metric-value ${hitrateClass(hitrate)}">${hitrate.toFixed(1)}%</span></div><div class="ranking-metric"><span class="ranking-metric-label">Coverage</span><span class="ranking-metric-value">${cov}%</span></div></div><div class="signal-col"><div class="signal-badge ${sig.cls}"><span class="signal-icon">${sig.icon}</span><span class="signal-label">${t("signal_" + (fund.signal || "HOLD"))}</span></div></div></div></div>`;
+      }
+
+      function getRankingMeta(key) {
+        const lk = key === "winners" ? "rm_winners_label" : `rm_${key}_label`;
+        const dk = key === "winners" ? "rm_winners_desc" : `rm_${key}_desc`;
+        return { label: t(lk) || key, desc: t(dk) || "" };
+      }
+
+      function switchRanking(key) {
+        if (!_currentData) return;
+        qa(".ranking-tab").forEach(tab => tab.classList.toggle("active", tab.dataset.key === key));
+        const meta = getRankingMeta(key), panel = $("#funds-panel");
+        if (key === "winners") {
+          const hKeys = Object.keys(_currentData.horizons || {}), hKey = hKeys[0];
+          const funds = hKey ? _currentData.horizons[hKey] || [] : [];
+          const metaCount = $("#meta-winner-count");
+          if (metaCount) metaCount.textContent = funds.length + " " + t("meta_funds");
+          panel.innerHTML = `<div class="ranking-desc">${meta.desc}</div><div class="fund-list">${funds.length ? funds.map((f, i) => fundCardHtml(f, i + 1, hKey)).join("") : `<div class="ranking-empty">${t("ranking_no_funds")}</div>`}</div>`;
+        } else {
+          const funds = (_currentData.rankings || {})[key] || [];
+          panel.innerHTML = `<div class="ranking-desc">${meta.desc}</div><div class="ranking-list">${funds.length ? funds.map((f, i) => rankingFundHtml(f, i + 1)).join("") : `<div class="ranking-empty">${t("ranking_no_qualify")}</div>`}</div>`;
+        }
+      }
+
+      function renderFooter(generated) {
+        const footer = $("#footer");
+        if (!footer) return;
+        footer.innerHTML = `PPM Kollen · ${generated || ""} · ${t("footer_suffix")}
       &nbsp;·&nbsp;
       <a href="about.html" id="footer-about">${t("footer_about")}</a>
       &nbsp;·&nbsp;
@@ -1911,210 +2004,131 @@ footer a:hover { opacity: 1; }
         <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" style="vertical-align:middle;"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
         zolodev
       </a>`;
-  }
+      }
 
-  function render(data, folder) {
-    _currentData = data;
-    _currentFolder = folder || null;
-    const app = $("#app");
+      function render(data, folder) {
+        _currentData = data; _currentFolder = folder || null;
+        // Only show "Fondprognos" / "Fund Forecast" — no date appended
+        $("#header-date").textContent = t("fund_forecast");
+        const models = (data.active_models || []).map(m => m.toUpperCase()).join(", ") || "—";
+        const metaHtml = `<div class="meta-bar"><div class="meta-item"><span class="meta-label">${t("meta_generated")}</span><span class="meta-value">${esc(data.generated || "—")}</span></div><div class="meta-item"><span class="meta-label">${t("meta_target")}<span class="info-badge" data-tip="${t("meta_target_tip")}">i</span></span><span class="meta-value">${esc(data.target_mode || "—")}</span></div><div class="meta-item"><span class="meta-label">${t("meta_scaling")}<span class="info-badge" data-tip="${t("meta_scaling_tip")}">i</span></span><span class="meta-value">${esc(data.scaler_mode || "—")}</span></div><div class="meta-item"><span class="meta-label">${t("meta_models")}</span><span class="meta-value">${esc(models)}</span></div><div class="meta-item"><span class="meta-label">${t("meta_winners")}</span><span class="meta-value" id="meta-winner-count">— ${t("meta_funds")}</span></div></div>`;
+        const rankings = data.rankings || {}, rankingKeys = ["winners", ...Object.keys(rankings)];
+        const tabsHtml = `<nav class="ranking-nav">${rankingKeys.map(k => { const m = getRankingMeta(k); return `<button class="ranking-tab${k === "winners" ? " active" : ""}" data-key="${esc(k)}">${esc(m.label)}</button>`; }).join("")}</nav>`;
+        $("#app").innerHTML = metaHtml + tabsHtml + `<div id="funds-panel"></div>`;
+        renderFooter(data.generated);
+        updateDisclaimerText();
+        switchRanking("winners");
+      }
 
-    $("#header-date").textContent = t("fund_forecast") + " · " + (data.generated || "");
-    const models = (data.active_models || []).map(m => m.toUpperCase()).join(", ") || "—";
-
-    const metaHtml = `
-<div class="meta-bar">
-  <div class="meta-item"><span class="meta-label">${t("meta_generated")}</span><span class="meta-value">${esc(data.generated || "—")}</span></div>
-  <div class="meta-item"><span class="meta-label">${t("meta_target")}<span class="info-badge" data-tip="${t("meta_target_tip")}">i</span></span><span class="meta-value">${esc(data.target_mode || "—")}</span></div>
-  <div class="meta-item"><span class="meta-label">${t("meta_scaling")}<span class="info-badge" data-tip="${t("meta_scaling_tip")}">i</span></span><span class="meta-value">${esc(data.scaler_mode || "—")}</span></div>
-  <div class="meta-item"><span class="meta-label">${t("meta_models")}</span><span class="meta-value">${esc(models)}</span></div>
-  <div class="meta-item"><span class="meta-label">${t("meta_winners")}</span><span class="meta-value" id="meta-winner-count">— ${t("meta_funds")}</span></div>
-</div>`;
-
-    const rankings = data.rankings || {};
-    const rankingKeys = ["winners", ...Object.keys(rankings)];
-    const tabsHtml = `<nav class="ranking-nav">${rankingKeys.map(k => {
-      const m = getRankingMeta(k);
-      return `<button class="ranking-tab${k === "winners" ? " active" : ""}" data-key="${esc(k)}">${esc(m.label)}</button>`;
-    }).join("")}</nav>`;
-
-    app.innerHTML = metaHtml + tabsHtml + `<div id="funds-panel"></div>`;
-    renderFooter(data.generated);
-
-    switchRanking("winners");
-  }
-
-  // ── Delegated events (chart switching, copy PPM, ranking tabs) ─
-  function initDelegates() {
-    document.addEventListener("click", (e) => {
-      const t = e.target.closest("[data-chart-target]");
-      if (t) { switchChart(t, t.dataset.chartTarget); return; }
-      const r = e.target.closest(".ranking-tab");
-      if (r) { switchRanking(r.dataset.key); return; }
-      const p = e.target.closest(".ppm-copy");
-      if (p) { copyPpm(p, p.dataset.ppm); return; }
-      const img = e.target;
-      if (img.matches?.(".chart-pane img") && img.src) lbShow(img.src, img.alt);
-    });
-  }
-
-  // ── Load ───────────────────────────────────────────────────────
-  function loadFolder(folderName) {
-    $("#app").innerHTML = `<p class="state-msg">${t("loading_folder")}</p>`;
-    fetch(`${OUTPUT}/${folderName}/predictions.json`)
-      .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-      .then(data => { render(data, folderName); })
-      .catch(err => {
-        $("#app").innerHTML =
-          `<p class="state-msg">${t("err_folder").replace("{folder}", esc(folderName)).replace("{err}", esc(err.message))}</p>`;
-      });
-  }
-
-  function bootstrap() {
-    fetchFirst(MANIFEST_URLS)
-      .then(manifest => {
-        const history = (manifest.history || []).filter(f => f !== manifest.latest);
-        renderHistoryList(history);
-        if (!manifest.latest) throw new Error("manifest missing 'latest'");
-        return fetchFirst(PREDICTIONS_URLS).then(data => {
-          render(data, manifest.latest);
+      function initDelegates() {
+        document.addEventListener("click", (e) => {
+          const t2 = e.target.closest("[data-chart-target]");
+          if (t2) { switchChart(t2, t2.dataset.chartTarget); return; }
+          const r = e.target.closest(".ranking-tab");
+          if (r) { switchRanking(r.dataset.key); return; }
+          const p = e.target.closest(".ppm-copy");
+          if (p) { copyPpm(p, p.dataset.ppm); return; }
+          const img = e.target;
+          if (img.matches?.(".chart-pane img") && img.src) lbShow(img.src, img.alt);
         });
-      })
-      .catch(() => {
-        fetchFirst(PREDICTIONS_URLS)
-          .then(data => {
-            renderHistoryList([]);
-            render(data, null);
+      }
+
+      function loadFolder(folderName) {
+        $("#app").innerHTML = `<p class="state-msg">${t("loading_folder")}</p>`;
+        fetch(`${OUTPUT}/${folderName}/predictions.json`)
+          .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+          .then(data => render(data, folderName))
+          .catch(err => { $("#app").innerHTML = `<p class="state-msg">${t("err_folder").replace("{folder}", esc(folderName)).replace("{err}", esc(err.message))}</p>`; });
+      }
+
+      function bootstrap() {
+        fetchFirst(MANIFEST_URLS)
+          .then(manifest => {
+            const history = (manifest.history || []).filter(f => f !== manifest.latest);
+            renderHistoryList(history);
+            if (!manifest.latest) throw new Error("manifest missing 'latest'");
+            return fetchFirst(PREDICTIONS_URLS).then(data => render(data, manifest.latest));
           })
           .catch(() => {
-            $("#app").innerHTML =
-              `<p class="state-msg">${t("err_no_predictions")}</p>`;
+            fetchFirst(PREDICTIONS_URLS)
+              .then(data => { renderHistoryList([]); render(data, null); })
+              .catch(() => { $("#app").innerHTML = `<p class="state-msg">${t("err_no_predictions")}</p>`; });
           });
-      });
-  }
+      }
 
-  // ── Lightbox ───────────────────────────────────────────────────
-  const lb     = $("#lightbox");
-  const lbImg  = $("#lb-img");
-  const lbInner = $("#lb-inner");
-  let lbScale = 1, lbPanX = 0, lbPanY = 0;
-  let lbDragging = false, lbDragStartX = 0, lbDragStartY = 0, lbPanStartX = 0, lbPanStartY = 0;
+      // ── Lightbox ───────────────────────────────────────────────────
+      const lb = $("#lightbox"), lbImg = $("#lb-img"), lbInner = $("#lb-inner");
+      let lbScale = 1, lbPanX = 0, lbPanY = 0, lbDragging = false;
+      let lbDragStartX = 0, lbDragStartY = 0, lbPanStartX = 0, lbPanStartY = 0;
+      function lbApply() { lbImg.style.transform = `translate(${lbPanX}px, ${lbPanY}px) scale(${lbScale})`; }
+      function lbClampPan() { const r = lbImg.getBoundingClientRect(); const iw = lbInner.clientWidth, ih = lbInner.clientHeight; const maxX = Math.max(0, (r.width - iw) / 2), maxY = Math.max(0, (r.height - ih) / 2); lbPanX = Math.min(maxX, Math.max(-maxX, lbPanX)); lbPanY = Math.min(maxY, Math.max(-maxY, lbPanY)); }
+      function lbShow(src, alt) { lbImg.src = src; lbImg.alt = alt || ""; lbScale = 1; lbPanX = 0; lbPanY = 0; lbApply(); lb.hidden = false; document.body.style.overflow = "hidden"; }
+      function lbHide() { lb.hidden = true; document.body.style.overflow = ""; lbImg.removeAttribute("src"); }
+      function initLightbox() {
+        $("#lb-close").addEventListener("click", lbHide);
+        lb.addEventListener("click", (e) => { if (e.target === lb) lbHide(); });
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !lb.hidden) lbHide(); });
+        lb.addEventListener("wheel", (e) => { if (lb.hidden) return; e.preventDefault(); const delta = e.deltaY < 0 ? 1.12 : 0.88; const newScale = Math.min(8, Math.max(1, lbScale * delta)); const rect = lbInner.getBoundingClientRect(); const cx = e.clientX - rect.left - rect.width / 2, cy = e.clientY - rect.top - rect.height / 2; lbPanX = cx + (lbPanX - cx) * (newScale / lbScale); lbPanY = cy + (lbPanY - cy) * (newScale / lbScale); lbScale = newScale; lbClampPan(); lbApply(); }, { passive: false });
+        lbInner.addEventListener("mousedown", (e) => { if (lbScale <= 1) return; lbDragging = true; lbDragStartX = e.clientX; lbDragStartY = e.clientY; lbPanStartX = lbPanX; lbPanStartY = lbPanY; lbInner.classList.add("grabbing"); e.preventDefault(); });
+        window.addEventListener("mousemove", (e) => { if (!lbDragging) return; lbPanX = lbPanStartX + (e.clientX - lbDragStartX); lbPanY = lbPanStartY + (e.clientY - lbDragStartY); lbClampPan(); lbApply(); });
+        window.addEventListener("mouseup", () => { lbDragging = false; lbInner.classList.remove("grabbing"); });
+      }
 
-  function lbApply() {
-    lbImg.style.transform = `translate(${lbPanX}px, ${lbPanY}px) scale(${lbScale})`;
-  }
-  function lbClampPan() {
-    const r = lbImg.getBoundingClientRect();
-    const iw = lbInner.clientWidth, ih = lbInner.clientHeight;
-    const maxX = Math.max(0, (r.width  - iw) / 2);
-    const maxY = Math.max(0, (r.height - ih) / 2);
-    lbPanX = Math.min(maxX, Math.max(-maxX, lbPanX));
-    lbPanY = Math.min(maxY, Math.max(-maxY, lbPanY));
-  }
-  function lbShow(src, alt) {
-    lbImg.src = src; lbImg.alt = alt || "";
-    lbScale = 1; lbPanX = 0; lbPanY = 0; lbApply();
-    lb.hidden = false;
-    document.body.style.overflow = "hidden";
-  }
-  function lbHide() {
-    lb.hidden = true;
-    document.body.style.overflow = "";
-    lbImg.removeAttribute("src");
-  }
-  function initLightbox() {
-    $("#lb-close").addEventListener("click", lbHide);
-    lb.addEventListener("click", (e) => { if (e.target === lb) lbHide(); });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !lb.hidden) lbHide(); });
+      // ── Language ───────────────────────────────────────────────────
+      function applyLangToStaticElements() {
+        document.documentElement.lang = _currentLang;
+        const btnLabel = document.querySelector("#history-toggle .btn-label");
+        if (btnLabel) btnLabel.textContent = t("btn_historik");
+        const eyebrow = document.querySelector(".hero-eyebrow");
+        if (eyebrow) eyebrow.textContent = t("hero_eyebrow");
+        const heroTitle = document.querySelector(".hero-title");
+        if (heroTitle) heroTitle.innerHTML = t("hero_title_html");
+        const heroLede = document.querySelector(".hero-lede");
+        if (heroLede) heroLede.innerHTML = t("hero_lede_html");
+        const histTitle = document.querySelector(".history-panel-title");
+        if (histTitle) histTitle.textContent = t("history_panel_title");
+        const histEmpty = document.querySelector("#history-list .history-empty");
+        if (histEmpty) histEmpty.textContent = t("history_empty");
+        const stateMsg = document.querySelector("#app .state-msg");
+        if (stateMsg) stateMsg.textContent = t("loading_forecast");
+        const footerAbout = document.querySelector("#footer-about");
+        if (footerAbout) footerAbout.textContent = t("footer_about");
+        updateDisclaimerText();
+        // Keep header subtitle as just the label, no date
+        const headerDate = document.querySelector("#header-date");
+        if (headerDate) headerDate.textContent = t("fund_forecast");
+      }
+      function setLang(lang) {
+        _currentLang = lang;
+        const lbl = document.getElementById("lang-label");
+        if (lbl) lbl.textContent = lang === "sv" ? "EN" : "SV";
+        try { localStorage.setItem(STORAGE_LANG, lang); } catch { }
+        applyLangToStaticElements();
+        if (_currentData) render(_currentData, _currentFolder);
+      }
+      function initLang() {
+        let saved = "sv";
+        try { saved = localStorage.getItem(STORAGE_LANG) || "sv"; } catch { }
+        if (!["sv", "en"].includes(saved)) saved = "sv";
+        _currentLang = saved;
+        document.documentElement.lang = saved;
+        const lbl = document.getElementById("lang-label");
+        if (lbl) lbl.textContent = saved === "sv" ? "EN" : "SV";
+        document.getElementById("lang-toggle")?.addEventListener("click", () => setLang(_currentLang === "sv" ? "en" : "sv"));
+      }
 
-    lb.addEventListener("wheel", (e) => {
-      if (lb.hidden) return;
-      e.preventDefault();
-      const delta = e.deltaY < 0 ? 1.12 : 0.88;
-      const newScale = Math.min(8, Math.max(1, lbScale * delta));
-      const rect = lbInner.getBoundingClientRect();
-      const cx = e.clientX - rect.left - rect.width / 2;
-      const cy = e.clientY - rect.top - rect.height / 2;
-      lbPanX = cx + (lbPanX - cx) * (newScale / lbScale);
-      lbPanY = cy + (lbPanY - cy) * (newScale / lbScale);
-      lbScale = newScale;
-      lbClampPan(); lbApply();
-    }, { passive: false });
-
-    lbInner.addEventListener("mousedown", (e) => {
-      if (lbScale <= 1) return;
-      lbDragging = true;
-      lbDragStartX = e.clientX; lbDragStartY = e.clientY;
-      lbPanStartX = lbPanX; lbPanStartY = lbPanY;
-      lbInner.classList.add("grabbing");
-      e.preventDefault();
-    });
-    window.addEventListener("mousemove", (e) => {
-      if (!lbDragging) return;
-      lbPanX = lbPanStartX + (e.clientX - lbDragStartX);
-      lbPanY = lbPanStartY + (e.clientY - lbDragStartY);
-      lbClampPan(); lbApply();
-    });
-    window.addEventListener("mouseup", () => {
-      lbDragging = false;
-      lbInner.classList.remove("grabbing");
-    });
-  }
-
-  // ── Language ───────────────────────────────────────────────────
-  function applyLangToStaticElements() {
-    document.documentElement.lang = _currentLang;
-    const btnLabel = document.querySelector("#history-toggle .btn-label");
-    if (btnLabel) btnLabel.textContent = t("btn_historik");
-    const eyebrow = document.querySelector(".hero-eyebrow");
-    if (eyebrow) eyebrow.textContent = t("hero_eyebrow");
-    const heroTitle = document.querySelector(".hero-title");
-    if (heroTitle) heroTitle.innerHTML = t("hero_title_html");
-    const heroLede = document.querySelector(".hero-lede");
-    if (heroLede) heroLede.innerHTML = t("hero_lede_html");
-    const histTitle = document.querySelector(".history-panel-title");
-    if (histTitle) histTitle.textContent = t("history_panel_title");
-    const histEmpty = document.querySelector("#history-list .history-empty");
-    if (histEmpty) histEmpty.textContent = t("history_empty");
-    const stateMsg = document.querySelector("#app .state-msg");
-    if (stateMsg) stateMsg.textContent = t("loading_forecast");
-    const footerAbout = document.querySelector("#footer-about");
-    if (footerAbout) footerAbout.textContent = t("footer_about");
-  }
-  function setLang(lang) {
-    _currentLang = lang;
-    const lbl = document.getElementById("lang-label");
-    if (lbl) lbl.textContent = lang === "sv" ? "EN" : "SV";
-    try { localStorage.setItem(STORAGE_LANG, lang); } catch {}
-    applyLangToStaticElements();
-    if (_currentData) render(_currentData, _currentFolder);
-  }
-  function initLang() {
-    let saved = "sv";
-    try { saved = localStorage.getItem(STORAGE_LANG) || "sv"; } catch {}
-    if (!["sv", "en"].includes(saved)) saved = "sv";
-    _currentLang = saved;
-    document.documentElement.lang = saved;
-    const lbl = document.getElementById("lang-label");
-    if (lbl) lbl.textContent = saved === "sv" ? "EN" : "SV";
-    document.getElementById("lang-toggle")?.addEventListener("click", () => {
-      setLang(_currentLang === "sv" ? "en" : "sv");
-    });
-  }
-
-  // ── Init ───────────────────────────────────────────────────────
-  function init() {
-    initTheme();
-    initLang();
-    initHistoryToggle();
-    initDelegates();
-    initLightbox();
-    bootstrap();
-  }
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else init();
-})();
-
-</script>
+      function init() {
+        initTheme();
+        initLang();
+        initDisclaimer();
+        initHistoryToggle();
+        initDelegates();
+        initLightbox();
+        bootstrap();
+      }
+      if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", init); } else init();
+    })();
+  </script>
 </body>
+
 </html>
