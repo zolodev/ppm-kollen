@@ -41,9 +41,9 @@
             --tag-text: oklch(0.78 0.008 240);
             --bar-bg: oklch(0.30 0.010 240);
             --bar-fill: oklch(0.66 0.12 215);
-            --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
-            --shadow-md: 0 4px 16px rgb(0 0 0 / 0.45), 0 1px 2px rgb(0 0 0 / 0.3);
-            color-scheme: dark;
+            --shadow-sm: 0 1px 2px rgb(0 0 0/0.35);
+            --shadow-md: 0 4px 16px rgb(0 0 0/0.45), 0 1px 2px rgb(0 0 0/0.3);
+            color-scheme: dark
         }
 
         [data-theme="light"] {
@@ -70,14 +70,14 @@
             --tag-text: oklch(0.35 0.012 240);
             --bar-bg: oklch(0.90 0.008 90);
             --bar-fill: oklch(0.55 0.12 215);
-            --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
-            --shadow-md: 0 2px 10px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
-            color-scheme: light;
+            --shadow-sm: 0 1px 2px rgb(0 0 0/0.06);
+            --shadow-md: 0 2px 10px rgb(0 0 0/0.08), 0 1px 2px rgb(0 0 0/0.04);
+            color-scheme: light
         }
 
         [data-theme="auto"] {}
 
-        @media (prefers-color-scheme: light) {
+        @media(prefers-color-scheme:light) {
             [data-theme="auto"] {
                 --bg: oklch(0.98 0.004 90);
                 --bg-elev: oklch(1 0 0);
@@ -102,9 +102,9 @@
                 --tag-text: oklch(0.35 0.012 240);
                 --bar-bg: oklch(0.90 0.008 90);
                 --bar-fill: oklch(0.55 0.12 215);
-                --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
-                --shadow-md: 0 2px 10px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
-                color-scheme: light;
+                --shadow-sm: 0 1px 2px rgb(0 0 0/0.06);
+                --shadow-md: 0 2px 10px rgb(0 0 0/0.08), 0 1px 2px rgb(0 0 0/0.04);
+                color-scheme: light
             }
         }
 
@@ -113,12 +113,12 @@
         *::after {
             box-sizing: border-box;
             margin: 0;
-            padding: 0;
+            padding: 0
         }
 
         html {
             -webkit-text-size-adjust: 100%;
-            scroll-behavior: smooth;
+            scroll-behavior: smooth
         }
 
         body {
@@ -129,21 +129,20 @@
             color: var(--text);
             min-height: 100vh;
             -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
+            text-rendering: optimizeLegibility
         }
 
         a {
             color: inherit;
-            text-decoration: none;
+            text-decoration: none
         }
 
         button {
             font: inherit;
             color: inherit;
-            cursor: pointer;
+            cursor: pointer
         }
 
-        /* ─── Header ─────────────────────────────────────────────────── */
         .site-header {
             position: sticky;
             top: 0;
@@ -151,7 +150,7 @@
             background: color-mix(in oklch, var(--bg) 80%, transparent);
             backdrop-filter: saturate(140%) blur(10px);
             -webkit-backdrop-filter: saturate(140%) blur(10px);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border)
         }
 
         .header-inner {
@@ -162,14 +161,14 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 1rem;
+            gap: 1rem
         }
 
         .logo {
             display: flex;
             align-items: center;
             gap: 0.65rem;
-            color: var(--text);
+            color: var(--text)
         }
 
         .logo-mark {
@@ -180,34 +179,34 @@
             background: var(--accent-soft);
             color: var(--accent);
             border-radius: 9px;
-            border: 1px solid var(--border);
+            border: 1px solid var(--border)
         }
 
         .logo-text {
             display: flex;
             flex-direction: column;
             line-height: 1;
-            gap: 3px;
+            gap: 3px
         }
 
         .logo-title {
             font-family: "IBM Plex Serif", serif;
             font-size: 1.15rem;
             font-weight: 500;
-            letter-spacing: -0.01em;
+            letter-spacing: -0.01em
         }
 
         .logo-sub {
             font-family: "IBM Plex Mono", monospace;
             font-size: 0.68rem;
             color: var(--text-faint);
-            letter-spacing: 0.02em;
+            letter-spacing: 0.02em
         }
 
         .header-right {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.75rem
         }
 
         .ghost-btn {
@@ -220,12 +219,12 @@
             color: var(--text-muted);
             padding: 6px 12px;
             border-radius: 8px;
-            transition: background .15s, color .15s, border-color .15s;
+            transition: background .15s, color .15s
         }
 
         .ghost-btn:hover {
             background: var(--bg-panel);
-            color: var(--text);
+            color: var(--text)
         }
 
         .theme-switcher {
@@ -234,7 +233,7 @@
             border: 1px solid var(--border);
             border-radius: 9px;
             padding: 3px;
-            gap: 2px;
+            gap: 2px
         }
 
         .theme-btn {
@@ -246,29 +245,27 @@
             background: transparent;
             color: var(--text-faint);
             border-radius: 6px;
-            transition: background .15s, color .15s;
+            transition: background .15s, color .15s
         }
 
         .theme-btn:hover {
-            color: var(--text);
+            color: var(--text)
         }
 
         .theme-btn.active {
             background: var(--bg-card);
             color: var(--text);
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-sm)
         }
 
-        /* ─── Layout ─────────────────────────────────────────────────── */
         main {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 2.5rem 1.5rem 5rem;
+            padding: 2.5rem 1.5rem 5rem
         }
 
-        /* ─── Hero ───────────────────────────────────────────────────── */
         .hero {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2.5rem
         }
 
         .hero-eyebrow {
@@ -277,7 +274,7 @@
             text-transform: uppercase;
             letter-spacing: 0.12em;
             color: var(--accent);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.75rem
         }
 
         .hero-title {
@@ -286,25 +283,24 @@
             font-size: clamp(1.6rem, 2.6vw + 0.5rem, 2.4rem);
             line-height: 1.15;
             letter-spacing: -0.02em;
-            margin-bottom: 0.85rem;
+            margin-bottom: 0.85rem
         }
 
         .hero-title em {
             font-style: italic;
             color: var(--accent);
-            font-weight: 400;
+            font-weight: 400
         }
 
         .hero-lede {
             font-size: 0.97rem;
             color: var(--text-muted);
             max-width: 62ch;
-            line-height: 1.7;
+            line-height: 1.7
         }
 
-        /* ─── Section ────────────────────────────────────────────────── */
         .section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2.5rem
         }
 
         .section-label {
@@ -316,14 +312,14 @@
             margin-bottom: 0.6rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.5rem
         }
 
         .section-label::after {
             content: "";
             flex: 1;
             height: 1px;
-            background: var(--border);
+            background: var(--border)
         }
 
         .section-title {
@@ -332,13 +328,7 @@
             font-weight: 500;
             letter-spacing: -0.01em;
             margin-bottom: 1.25rem;
-            line-height: 1.25;
-        }
-
-        /* ─── Fund card demo ─────────────────────────────────────────── */
-        .demo-wrapper {
-            position: relative;
-            margin-bottom: 2.5rem;
+            line-height: 1.25
         }
 
         .fund-card {
@@ -346,18 +336,18 @@
             border: 1px solid var(--border);
             border-radius: 14px;
             box-shadow: var(--shadow-md);
-            overflow: visible;
+            overflow: hidden
         }
 
         .fund-card.is-top {
-            border-color: var(--accent);
+            border-color: var(--accent)
         }
 
         .card-header {
             display: flex;
             align-items: flex-start;
             gap: 1rem;
-            padding: 1.25rem 1.25rem 0;
+            padding: 1.25rem 1.25rem 0
         }
 
         .rank-col {
@@ -370,12 +360,12 @@
             font-weight: 500;
             color: var(--text-muted);
             flex-shrink: 0;
-            line-height: 1;
+            line-height: 1
         }
 
         .fund-meta {
             flex: 1;
-            min-width: 0;
+            min-width: 0
         }
 
         .fund-name {
@@ -385,13 +375,14 @@
             line-height: 1.25;
             margin-bottom: 0.45rem;
             letter-spacing: -0.01em;
+            text-wrap: balance
         }
 
         .fund-ids {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            gap: 0.4rem;
+            gap: 0.4rem
         }
 
         .id-pill {
@@ -401,13 +392,13 @@
             background: var(--bg-panel);
             border: 1px solid var(--border);
             border-radius: 5px;
-            color: var(--text-muted);
+            color: var(--text-muted)
         }
 
         .id-pill.ppm {
             color: var(--accent);
             border-color: var(--accent);
-            background: var(--accent-soft);
+            background: var(--accent-soft)
         }
 
         .action-btn {
@@ -417,11 +408,11 @@
             border-radius: 5px;
             border: 1px solid var(--accent);
             background: transparent;
-            color: var(--accent);
+            color: var(--accent)
         }
 
         .signal-col {
-            flex-shrink: 0;
+            flex-shrink: 0
         }
 
         .signal-badge {
@@ -432,41 +423,41 @@
             padding: 8px 14px;
             border-radius: 10px;
             min-width: 70px;
-            gap: 2px;
+            gap: 2px
         }
 
         .signal-icon {
             font-size: 0.95rem;
             font-weight: 700;
-            line-height: 1;
+            line-height: 1
         }
 
         .signal-label {
             font-size: 0.66rem;
             font-weight: 600;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.12em
         }
 
         .sig-buy {
             background: var(--buy-bg);
-            color: var(--buy);
+            color: var(--buy)
         }
 
         .sig-hold {
             background: var(--hold-bg);
-            color: var(--hold);
+            color: var(--hold)
         }
 
         .sig-sell {
             background: var(--sell-bg);
-            color: var(--sell);
+            color: var(--sell)
         }
 
         .tags-row {
             display: flex;
             flex-wrap: wrap;
             gap: 0.35rem;
-            padding: 0.85rem 1.25rem 0;
+            padding: 0.85rem 1.25rem 0
         }
 
         .tag {
@@ -475,7 +466,7 @@
             border-radius: 999px;
             background: var(--tag-bg);
             color: var(--tag-text);
-            border: 1px solid var(--border);
+            border: 1px solid var(--border)
         }
 
         .metrics-grid {
@@ -486,13 +477,13 @@
             background: var(--bg-sunken);
             margin: 1rem 0 0;
             border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border)
         }
 
         .metric {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 4px
         }
 
         .metric-label {
@@ -503,27 +494,27 @@
             text-transform: uppercase;
             letter-spacing: 0.08em;
             color: var(--text-faint);
-            font-weight: 500;
+            font-weight: 500
         }
 
         .metric-value {
             font-family: "IBM Plex Mono", monospace;
             font-size: 1.1rem;
             font-weight: 500;
-            color: var(--text);
+            color: var(--text)
         }
 
         .metric-value.good {
-            color: var(--buy);
+            color: var(--buy)
         }
 
         .metric-value.warn {
-            color: var(--hold);
+            color: var(--hold)
         }
 
         .metric-hint {
             font-size: 0.68rem;
-            color: var(--text-faint);
+            color: var(--text-faint)
         }
 
         .bar-track {
@@ -531,21 +522,25 @@
             background: var(--bar-bg);
             border-radius: 2px;
             overflow: hidden;
-            margin-top: 4px;
+            margin-top: 4px
         }
 
         .bar-fill {
             height: 100%;
             background: var(--bar-fill);
-            border-radius: 2px;
+            border-radius: 2px
         }
 
         .bar-fill.good {
-            background: var(--buy);
+            background: var(--buy)
+        }
+
+        .bar-fill.warn {
+            background: var(--hold)
         }
 
         .forecast-block {
-            padding: 1rem 1.25rem;
+            padding: 1rem 1.25rem
         }
 
         .forecast-title {
@@ -554,41 +549,41 @@
             letter-spacing: 0.1em;
             color: var(--text-faint);
             margin-bottom: 0.5rem;
-            font-weight: 500;
+            font-weight: 500
         }
 
         .forecast-row {
             display: flex;
             align-items: baseline;
             gap: 0.875rem;
-            margin-bottom: 0.45rem;
+            margin-bottom: 0.45rem
         }
 
         .fc-q50 {
             font-family: "IBM Plex Mono", monospace;
             font-size: 1.7rem;
             font-weight: 500;
-            letter-spacing: -0.01em;
+            letter-spacing: -0.01em
         }
 
         .fc-q50.pos {
-            color: var(--buy);
+            color: var(--buy)
         }
 
         .fc-q50.neg {
-            color: var(--sell);
+            color: var(--sell)
         }
 
         .fc-q10,
         .fc-q90 {
             font-family: "IBM Plex Mono", monospace;
             font-size: 0.85rem;
-            color: var(--text-muted);
+            color: var(--text-muted)
         }
 
         .fc-sep {
             color: var(--text-faint);
-            font-size: 0.8rem;
+            font-size: 0.8rem
         }
 
         .forecast-band {
@@ -596,7 +591,7 @@
             height: 8px;
             background: var(--bar-bg);
             border-radius: 4px;
-            margin: 0.7rem 0 0.5rem;
+            margin: 0.7rem 0 0.5rem
         }
 
         .forecast-band-fill {
@@ -605,7 +600,7 @@
             bottom: 0;
             background: linear-gradient(90deg, var(--sell), var(--hold), var(--buy));
             opacity: 0.6;
-            border-radius: 4px;
+            border-radius: 4px
         }
 
         .forecast-band-q50 {
@@ -614,7 +609,7 @@
             bottom: -3px;
             width: 2px;
             background: var(--text);
-            border-radius: 1px;
+            border-radius: 1px
         }
 
         .forecast-legend {
@@ -622,18 +617,18 @@
             justify-content: space-between;
             font-family: "IBM Plex Mono", monospace;
             font-size: 0.66rem;
-            color: var(--text-faint);
+            color: var(--text-faint)
         }
 
         .charts-block {
             padding: 1rem 1.25rem 1.25rem;
-            border-top: 1px solid var(--border);
+            border-top: 1px solid var(--border)
         }
 
         .chart-tabs {
             display: flex;
             gap: 0.35rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.75rem
         }
 
         .chart-tab {
@@ -643,63 +638,349 @@
             border: 1px solid var(--border);
             background: transparent;
             color: var(--text-muted);
+            cursor: pointer;
+            transition: background .15s, color .15s, border-color .15s
+        }
+
+        .chart-tab:hover {
+            color: var(--text)
         }
 
         .chart-tab.active {
             background: var(--bg-panel);
             color: var(--text);
-            border-color: var(--border-em);
+            border-color: var(--border-em)
         }
 
-        .chart-placeholder {
-            height: 160px;
-            border: 1px dashed var(--border-em);
+        .chart-pane {
+            display: none
+        }
+
+        .chart-pane.active {
+            display: block
+        }
+
+        .chart-pane img {
+            width: 100%;
             border-radius: 8px;
-            background: var(--bg-sunken);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: 1px solid var(--border);
+            display: block
+        }
+
+        .chart-missing {
+            padding: 2.5rem;
+            text-align: center;
+            color: var(--text-faint);
             font-family: "IBM Plex Mono", monospace;
             font-size: 0.78rem;
-            color: var(--text-faint);
+            border: 1px dashed var(--border-em);
+            border-radius: 8px;
+            background: var(--bg-sunken)
         }
 
-        /* ─── Annotation pins ────────────────────────────────────────── */
+        .backtest-block {
+            padding: 1rem 1.25rem 1.25rem;
+            border-top: 1px solid var(--border)
+        }
+
+        .backtest-title {
+            font-size: 0.66rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-faint);
+            margin-bottom: 0.65rem;
+            font-weight: 500
+        }
+
+        .bt-period {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.6rem 0.85rem;
+            padding: 0.7rem 0.9rem;
+            background: var(--bg-sunken);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 0.9rem
+        }
+
+        .bt-period-row {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            min-width: 0
+        }
+
+        .bt-period-label {
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-faint);
+            font-weight: 500
+        }
+
+        .bt-period-value {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.8rem;
+            color: var(--text);
+            font-weight: 500
+        }
+
+        .bt-period-sep {
+            color: var(--text-faint);
+            font-size: 1rem;
+            line-height: 1;
+            user-select: none
+        }
+
+        .bt-verdict {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.92rem;
+            padding: 0.7rem 0.9rem;
+            border-radius: 8px;
+            margin-bottom: 0.9rem;
+            line-height: 1.35
+        }
+
+        .bt-verdict-up {
+            background: var(--buy-bg);
+            color: var(--buy)
+        }
+
+        .bt-verdict-down {
+            background: var(--sell-bg);
+            color: var(--sell)
+        }
+
+        .bt-verdict-flat {
+            background: var(--hold-bg);
+            color: var(--hold)
+        }
+
+        .bt-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1rem
+        }
+
+        .bt-compare-card {
+            padding: 0.85rem 0.95rem;
+            background: var(--bg-sunken);
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem
+        }
+
+        .bt-compare-card.is-winner {
+            border-color: var(--accent);
+            background: color-mix(in oklch, var(--accent-soft) 60%, var(--bg-sunken))
+        }
+
+        .bt-compare-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem
+        }
+
+        .bt-compare-label {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 500
+        }
+
+        .bt-winner-tag {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 2px 7px;
+            border-radius: 4px;
+            background: var(--accent);
+            color: var(--bg)
+        }
+
+        [data-theme="light"] .bt-winner-tag,
+        [data-theme="auto"] .bt-winner-tag {
+            color: #fff
+        }
+
+        @media(prefers-color-scheme:light) {
+            [data-theme="auto"] .bt-winner-tag {
+                color: #fff
+            }
+        }
+
+        .bt-compare-value {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.1;
+            letter-spacing: -0.01em
+        }
+
+        .bt-compare-value.good {
+            color: var(--buy)
+        }
+
+        .bt-compare-value.warn {
+            color: var(--sell)
+        }
+
+        .bt-compare-value.ok {
+            color: var(--text)
+        }
+
+        .bt-compare-sub {
+            font-size: 0.78rem;
+            color: var(--text-muted)
+        }
+
+        .bt-bar-track {
+            height: 6px;
+            background: var(--bar-bg);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 0.25rem
+        }
+
+        .bt-bar-fill {
+            height: 100%;
+            border-radius: 3px
+        }
+
+        .bt-bar-fill.pos {
+            background: var(--bar-fill)
+        }
+
+        .bt-bar-fill.neg {
+            background: var(--sell)
+        }
+
+        .bt-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.6rem;
+            margin-bottom: 0.75rem
+        }
+
+        .bt-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0.7rem 0.8rem;
+            background: var(--bg-sunken);
+            border: 1px solid var(--border);
+            border-radius: 8px
+        }
+
+        .bt-stat-label {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-faint);
+            font-weight: 500
+        }
+
+        .bt-stat-val {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text)
+        }
+
+        .bt-stat-val.good {
+            color: var(--buy)
+        }
+
+        .bt-stat-val.warn {
+            color: var(--sell)
+        }
+
+        .bt-stat-val.ok {
+            color: var(--text)
+        }
+
+        .bt-stat-quality {
+            display: inline-block;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 2px 7px;
+            border-radius: 4px;
+            width: fit-content
+        }
+
+        .bt-stat-quality.q-good {
+            background: var(--buy-bg);
+            color: var(--buy)
+        }
+
+        .bt-stat-quality.q-warn {
+            background: var(--sell-bg);
+            color: var(--sell)
+        }
+
+        .bt-stat-quality.q-ok {
+            background: var(--hold-bg);
+            color: var(--hold)
+        }
+
+        .bt-disclaimer {
+            font-size: 0.7rem;
+            color: var(--text-faint);
+            font-style: italic;
+            line-height: 1.5
+        }
+
+        .demo-wrapper {
+            position: relative;
+            margin-bottom: 2rem
+        }
+
         .pin {
             position: absolute;
             z-index: 10;
-            cursor: pointer;
+            cursor: pointer
         }
 
         .pin-dot {
-            width: 22px;
-            height: 22px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             background: var(--accent);
             color: var(--bg);
             font-family: "IBM Plex Mono", monospace;
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             font-weight: 500;
             display: grid;
             place-items: center;
             border: 2px solid var(--bg-card);
-            box-shadow: 0 2px 8px rgb(0 0 0 / 0.4);
+            box-shadow: 0 2px 8px rgb(0 0 0/0.4);
             transition: transform .15s, box-shadow .15s;
-            user-select: none;
+            user-select: none
         }
 
         .pin:hover .pin-dot,
         .pin.active .pin-dot {
-            transform: scale(1.15);
-            box-shadow: 0 3px 14px rgb(0 0 0 / 0.5);
+            transform: scale(1.18);
+            box-shadow: 0 3px 14px rgb(0 0 0/0.5)
         }
 
         .pin.active .pin-dot {
             background: var(--text);
-            color: var(--bg);
+            color: var(--bg)
         }
 
-        /* ─── Explanation panel ──────────────────────────────────────── */
         .explain-panel {
             background: var(--bg-card);
             border: 1px solid var(--accent);
@@ -707,11 +988,11 @@
             padding: 1.25rem 1.4rem;
             margin-top: 1rem;
             display: none;
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-md)
         }
 
         .explain-panel.visible {
-            display: block;
+            display: block
         }
 
         .explain-num {
@@ -721,7 +1002,7 @@
             color: var(--accent);
             margin-bottom: 0.3rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.1em
         }
 
         .explain-title {
@@ -729,23 +1010,28 @@
             font-size: 1.05rem;
             font-weight: 500;
             margin-bottom: 0.6rem;
-            line-height: 1.25;
+            line-height: 1.25
         }
 
         .explain-body {
             font-size: 0.88rem;
             color: var(--text-muted);
-            line-height: 1.75;
+            line-height: 1.75
         }
 
         .explain-body strong {
             color: var(--text);
-            font-weight: 600;
+            font-weight: 600
         }
 
         .explain-body em {
             color: var(--accent);
-            font-style: italic;
+            font-style: italic
+        }
+
+        .explain-body a {
+            color: var(--accent);
+            border-bottom: 1px solid color-mix(in oklch, var(--accent) 35%, transparent)
         }
 
         .explain-example {
@@ -756,12 +1042,12 @@
             border-left: 2px solid var(--accent);
             font-size: 0.82rem;
             color: var(--text-muted);
-            line-height: 1.6;
+            line-height: 1.6
         }
 
         .explain-example strong {
             color: var(--text);
-            font-weight: 600;
+            font-weight: 600
         }
 
         .pin-hint {
@@ -771,7 +1057,7 @@
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.5rem
         }
 
         .pin-hint::before {
@@ -782,25 +1068,24 @@
             border-radius: 50%;
             background: var(--accent);
             opacity: 0.7;
-            flex-shrink: 0;
+            flex-shrink: 0
         }
 
-        /* ─── Accordion ──────────────────────────────────────────────── */
         .accordion-item {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 12px;
             overflow: hidden;
             margin-bottom: 0.6rem;
-            transition: border-color .15s;
+            transition: border-color .15s
         }
 
         .accordion-item:hover {
-            border-color: var(--border-em);
+            border-color: var(--border-em)
         }
 
         .accordion-item.open {
-            border-color: var(--border-em);
+            border-color: var(--border-em)
         }
 
         .accordion-trigger {
@@ -813,11 +1098,11 @@
             border: none;
             text-align: left;
             cursor: pointer;
-            transition: background .15s;
+            transition: background .15s
         }
 
         .accordion-trigger:hover {
-            background: var(--bg-panel);
+            background: var(--bg-panel)
         }
 
         .accordion-icon {
@@ -828,63 +1113,68 @@
             display: grid;
             place-items: center;
             font-size: 1rem;
-            border: 1px solid var(--border);
+            border: 1px solid var(--border)
         }
 
         .accordion-label {
             flex: 1;
-            min-width: 0;
+            min-width: 0
         }
 
         .accordion-title {
             font-size: 0.92rem;
             font-weight: 500;
             color: var(--text);
-            margin-bottom: 2px;
+            margin-bottom: 2px
         }
 
         .accordion-subtitle {
             font-family: "IBM Plex Mono", monospace;
             font-size: 0.68rem;
-            color: var(--text-faint);
+            color: var(--text-faint)
         }
 
         .accordion-chevron {
             color: var(--text-faint);
             font-size: 0.75rem;
             flex-shrink: 0;
-            transition: transform .2s;
+            transition: transform .2s
         }
 
         .accordion-item.open .accordion-chevron {
-            transform: rotate(180deg);
+            transform: rotate(180deg)
         }
 
         .accordion-body {
             display: none;
             padding: 0 1.2rem 1.1rem 4.1rem;
             border-top: 1px solid var(--border);
-            padding-top: 0.9rem;
+            padding-top: 0.9rem
         }
 
         .accordion-item.open .accordion-body {
-            display: block;
+            display: block
         }
 
         .accordion-desc {
             font-size: 0.88rem;
             color: var(--text-muted);
-            line-height: 1.75;
+            line-height: 1.75
         }
 
         .accordion-desc strong {
             color: var(--text);
-            font-weight: 600;
+            font-weight: 600
         }
 
         .accordion-desc em {
             color: var(--accent);
-            font-style: italic;
+            font-style: italic
+        }
+
+        .accordion-desc a {
+            color: var(--accent);
+            border-bottom: 1px solid color-mix(in oklch, var(--accent) 35%, transparent)
         }
 
         .accordion-example {
@@ -892,40 +1182,17 @@
             padding: 0.6rem 0.85rem;
             background: var(--bg-sunken);
             border-radius: 8px;
+            border-left: 2px solid var(--border-em);
             font-size: 0.82rem;
             color: var(--text-muted);
-            line-height: 1.6;
+            line-height: 1.6
         }
 
         .accordion-example strong {
             color: var(--text);
-            font-weight: 600;
+            font-weight: 600
         }
 
-        .signal-pills {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 0.75rem;
-        }
-
-        .spill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 5px 12px;
-            border-radius: 7px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .spill-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-        }
-
-        /* ─── Disclaimer card ────────────────────────────────────────── */
         .disclaimer-card {
             background: color-mix(in oklch, var(--hold-bg) 60%, var(--bg-card));
             border: 1px solid var(--hold);
@@ -934,26 +1201,30 @@
             display: flex;
             gap: 0.75rem;
             align-items: flex-start;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2.5rem
         }
 
         .disclaimer-icon {
             font-size: 1.2rem;
             flex-shrink: 0;
-            margin-top: 0.1rem;
+            margin-top: 0.1rem
         }
 
         .disclaimer-text {
             font-size: 0.86rem;
             color: var(--text-muted);
-            line-height: 1.65;
+            line-height: 1.65
         }
 
         .disclaimer-text strong {
-            color: var(--hold);
+            color: var(--hold)
         }
 
-        /* ─── Footer ─────────────────────────────────────────────────── */
+        .disclaimer-text a {
+            color: var(--hold);
+            border-bottom: 1px solid color-mix(in oklch, var(--hold) 40%, transparent)
+        }
+
         footer {
             border-top: 1px solid var(--border);
             padding: 1.75rem 1.5rem;
@@ -962,68 +1233,79 @@
             color: var(--text-faint);
             font-family: "IBM Plex Mono", monospace;
             max-width: 1100px;
-            margin: 0 auto;
+            margin: 0 auto
         }
 
         footer a {
             color: inherit;
             opacity: 0.7;
-            transition: opacity .15s;
+            transition: opacity .15s
         }
 
         footer a:hover {
-            opacity: 1;
+            opacity: 1
         }
 
-        /* ─── Lang ───────────────────────────────────────────────────── */
         [data-lang="en"] {
-            display: none;
+            display: none
         }
 
         body.lang-en [data-lang="sv"] {
-            display: none;
+            display: none
         }
 
         body.lang-en [data-lang="en"] {
-            display: revert;
+            display: revert
         }
 
-        @media (max-width: 720px) {
+        .state-msg {
+            padding: 3rem 1rem;
+            text-align: center;
+            color: var(--text-faint);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.85rem
+        }
+
+        @media(max-width:720px) {
             .header-inner {
                 padding: 0 1rem;
-                height: 56px;
+                height: 56px
             }
 
             main {
-                padding: 1.5rem 1rem 4rem;
+                padding: 1.5rem 1rem 4rem
             }
 
             .ghost-btn .btn-label {
-                display: none;
+                display: none
             }
 
             .metrics-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr
             }
 
             .card-header {
                 padding: 1rem 1rem 0;
+                flex-wrap: wrap
             }
 
             .tags-row,
             .metrics-grid,
             .forecast-block,
-            .charts-block {
+            .charts-block,
+            .backtest-block {
                 padding-left: 1rem;
-                padding-right: 1rem;
+                padding-right: 1rem
+            }
+
+            .bt-compare {
+                grid-template-columns: 1fr
             }
         }
     </style>
 </head>
 
 <body data-theme="auto">
-
-    <!-- ═══ Header ══════════════════════════════════════════════════════ -->
     <header class="site-header">
         <div class="header-inner">
             <a class="logo" href="index.html">
@@ -1034,639 +1316,422 @@
                         <circle cx="21" cy="6" r="1.6" fill="currentColor" />
                     </svg>
                 </span>
-                <span class="logo-text">
-                    <span class="logo-title">PPM Kollen</span>
-                    <span class="logo-sub">Fund Forecast</span>
-                </span>
+                <span class="logo-text"><span class="logo-title">PPM Kollen</span><span class="logo-sub">Fund
+                        Forecast</span></span>
             </a>
             <div class="header-right">
-                <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language">
-                    <span id="lang-label">EN</span>
-                </button>
+                <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language"><span
+                        id="lang-label">EN</span></button>
                 <div class="theme-switcher" role="group" aria-label="Theme">
-                    <button class="theme-btn" data-theme="light" title="Ljust">
-                        <svg viewBox="0 0 24 24" width="14" height="14">
+                    <button class="theme-btn" data-theme="light" title="Ljust"><svg viewBox="0 0 24 24" width="14"
+                            height="14">
                             <circle cx="12" cy="12" r="4" fill="currentColor" />
                             <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
                                 <path
                                     d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4" />
                             </g>
-                        </svg>
-                    </button>
-                    <button class="theme-btn active" data-theme="auto" title="Auto">
-                        <svg viewBox="0 0 24 24" width="14" height="14">
+                        </svg></button>
+                    <button class="theme-btn active" data-theme="auto" title="Auto"><svg viewBox="0 0 24 24" width="14"
+                            height="14">
                             <path d="M12 4v16a8 8 0 0 0 0-16z" fill="currentColor" />
                             <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4" />
-                        </svg>
-                    </button>
-                    <button class="theme-btn" data-theme="dark" title="Dark">
-                        <svg viewBox="0 0 24 24" width="14" height="14">
+                        </svg></button>
+                    <button class="theme-btn" data-theme="dark" title="Dark"><svg viewBox="0 0 24 24" width="14"
+                            height="14">
                             <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" />
-                        </svg>
-                    </button>
+                        </svg></button>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- ═══ Main ═════════════════════════════════════════════════════════ -->
     <main>
-
-        <!-- Hero -->
         <section class="hero">
             <div class="hero-eyebrow" data-lang="sv">Hjälp &amp; förklaring · Fondkortets alla delar</div>
             <div class="hero-eyebrow" data-lang="en">Help &amp; explanation · All parts of the fund card</div>
-            <h1 class="hero-title">
-                <span data-lang="sv">Förstå vad <em>varje siffra</em> faktiskt betyder</span>
-                <span data-lang="en">Understand what <em>every number</em> actually means</span>
-            </h1>
-            <p class="hero-lede" data-lang="sv">Klicka på de numrerade punkterna på kortet nedan för att se en
-                förklaring av just det elementet. Längre ned finns också en ordlista med vanliga frågor.</p>
-            <p class="hero-lede" data-lang="en">Click the numbered dots on the card below to see an explanation of that
-                element. Further down there is also a glossary and common questions.</p>
+            <h1 class="hero-title"><span data-lang="sv">Förstå vad <em>varje siffra</em> faktiskt betyder</span><span
+                    data-lang="en">Understand what <em>every number</em> actually means</span></h1>
+            <p class="hero-lede" data-lang="sv">Klicka på de numrerade punkterna på veckans vinnarkort nedan för en
+                förklaring av just det elementet. Kortet visar verklig data från senaste prognosen. Längre ned finns en
+                ordlista med vanliga frågor.</p>
+            <p class="hero-lede" data-lang="en">Click the numbered dots on this week's winner card below for an
+                explanation of that element. The card shows real data from the latest forecast. Further down is a
+                glossary with common questions.</p>
         </section>
-
-        <!-- Disclaimer -->
         <div class="disclaimer-card">
-            <span class="disclaimer-icon">⚠</span>
+            <span class="disclaimer-icon">&#9888;</span>
             <div class="disclaimer-text">
-                <strong data-lang="sv">Inte finansiell rådgivning.</strong>
-                <strong data-lang="en">Not financial advice.</strong>
+                <strong data-lang="sv">Inte finansiell rådgivning.</strong><strong data-lang="en">Not financial
+                    advice.</strong>
                 <span data-lang="sv"> Prognoserna är experimentella och baserade på historiska mönster. De garanterar
-                    inte framtida avkastning. Gör alltid din egen analys.</span>
+                    inte framtida avkastning. Byt alltid fonder via <a href="https://www.pensionsmyndigheten.se/"
+                        target="_blank" rel="noopener">pensionsmyndigheten.se</a>.</span>
                 <span data-lang="en"> Forecasts are experimental and based on historical patterns. They do not guarantee
-                    future returns. Always do your own analysis.</span>
+                    future returns. Always switch funds via <a href="https://www.pensionsmyndigheten.se/"
+                        target="_blank" rel="noopener">pensionsmyndigheten.se</a>.</span>
             </div>
         </div>
-
-        <!-- ── Annotated card ──────────────────────────────────────────── -->
         <div class="section">
-            <div class="section-label" data-lang="sv">Interaktiv förklaring</div>
-            <div class="section-label" data-lang="en">Interactive explanation</div>
+            <div class="section-label" data-lang="sv">Interaktiv förklaring — veckans vinnare</div>
+            <div class="section-label" data-lang="en">Interactive explanation — this week's winner</div>
             <h2 class="section-title" data-lang="sv">Klicka på en siffra för att läsa mer</h2>
             <h2 class="section-title" data-lang="en">Click a number to learn more</h2>
-
             <div class="pin-hint" data-lang="sv">Klicka på de blå punkterna på kortet</div>
             <div class="pin-hint" data-lang="en">Click the blue dots on the card</div>
-
-            <div class="demo-wrapper" id="demo-wrapper">
-
-                <!-- PIN 1: Placering -->
-                <div class="pin" id="pin-1" style="top:18px;left:10px;" onclick="activatePin(1)">
-                    <div class="pin-dot">1</div>
-                </div>
-                <!-- PIN 2: Fondnamn -->
-                <div class="pin" id="pin-2" style="top:18px;left:60px;" onclick="activatePin(2)">
-                    <div class="pin-dot">2</div>
-                </div>
-                <!-- PIN 3: PPM-kod -->
-                <div class="pin" id="pin-3" style="top:60px;left:60px;" onclick="activatePin(3)">
-                    <div class="pin-dot">3</div>
-                </div>
-                <!-- PIN 4: Signal -->
-                <div class="pin" id="pin-4" style="top:18px;right:10px;" onclick="activatePin(4)">
-                    <div class="pin-dot">4</div>
-                </div>
-                <!-- PIN 5: Taggar -->
-                <div class="pin" id="pin-5" style="top:114px;left:10px;" onclick="activatePin(5)">
-                    <div class="pin-dot">5</div>
-                </div>
-                <!-- PIN 6: Score -->
-                <div class="pin" id="pin-6" style="top:178px;left:10px;" onclick="activatePin(6)">
-                    <div class="pin-dot">6</div>
-                </div>
-                <!-- PIN 7: Träffsäkerhet -->
-                <div class="pin" id="pin-7" style="top:178px;left:25%;" onclick="activatePin(7)">
-                    <div class="pin-dot">7</div>
-                </div>
-                <!-- PIN 8: Coverage -->
-                <div class="pin" id="pin-8" style="top:178px;left:50%;" onclick="activatePin(8)">
-                    <div class="pin-dot">8</div>
-                </div>
-                <!-- PIN 9: MAE -->
-                <div class="pin" id="pin-9" style="top:178px;right:10px;" onclick="activatePin(9)">
-                    <div class="pin-dot">9</div>
-                </div>
-                <!-- PIN 10: Prognos Q50 -->
-                <div class="pin" id="pin-10" style="bottom:115px;left:10px;" onclick="activatePin(10)">
-                    <div class="pin-dot">10</div>
-                </div>
-                <!-- PIN 11: Prognos Q10/Q90 -->
-                <div class="pin" id="pin-11" style="bottom:115px;left:40%;" onclick="activatePin(11)">
-                    <div class="pin-dot">11</div>
-                </div>
-                <!-- PIN 12: Graf -->
-                <div class="pin" id="pin-12" style="bottom:50px;right:10px;" onclick="activatePin(12)">
-                    <div class="pin-dot">12</div>
-                </div>
-
-                <!-- The actual card (non-interactive demo) -->
-                <div class="fund-card is-top">
-                    <div class="card-header">
-                        <div class="rank-col">🥇</div>
-                        <div class="fund-meta">
-                            <div class="fund-name">Swedbank Robur Teknik A</div>
-                            <div class="fund-ids">
-                                <span class="id-pill">ID 57731</span>
-                                <span class="id-pill ppm">PPM 878416</span>
-                                <span class="action-btn">Avanza ↗</span>
-                            </div>
-                        </div>
-                        <div class="signal-col">
-                            <div class="signal-badge sig-buy">
-                                <span class="signal-icon">▲</span>
-                                <span class="signal-label" data-lang="sv">KÖP</span>
-                                <span class="signal-label" data-lang="en">BUY</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tags-row">
-                        <span class="tag" data-lang="sv">Teknik</span>
-                        <span class="tag" data-lang="en">Technology</span>
-                        <span class="tag" data-lang="sv">Global</span>
-                        <span class="tag" data-lang="en">Global</span>
-                        <span class="tag" data-lang="sv">Hög risk</span>
-                        <span class="tag" data-lang="en">High risk</span>
-                    </div>
-                    <div class="metrics-grid">
-                        <div class="metric">
-                            <span class="metric-label">Score</span>
-                            <span class="metric-value">0.847</span>
-                            <span class="metric-hint" data-lang="sv">sammansatt poäng</span>
-                            <span class="metric-hint" data-lang="en">composite score</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-label" data-lang="sv">Träffsäkerhet</span>
-                            <span class="metric-label" data-lang="en">Hit rate</span>
-                            <span class="metric-value good">91.8%</span>
-                            <div class="bar-track">
-                                <div class="bar-fill good" style="width:91.8%"></div>
-                            </div>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-label">Coverage</span>
-                            <span class="metric-value">84.2%</span>
-                            <div class="bar-track">
-                                <div class="bar-fill" style="width:84.2%"></div>
-                            </div>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-label">MAE Q50</span>
-                            <span class="metric-value">0.0540</span>
-                            <span class="metric-hint" data-lang="sv">lägre = bättre</span>
-                            <span class="metric-hint" data-lang="en">lower = better</span>
-                        </div>
-                    </div>
-                    <div class="forecast-block">
-                        <div class="forecast-title" data-lang="sv">Prognos · 1 vecka</div>
-                        <div class="forecast-title" data-lang="en">Forecast · 1 week</div>
-                        <div class="forecast-row">
-                            <span class="fc-q10">−2.1%</span>
-                            <span class="fc-sep">·</span>
-                            <span class="fc-q50 pos">+5.9%</span>
-                            <span class="fc-sep">·</span>
-                            <span class="fc-q90">+13.8%</span>
-                        </div>
-                        <div class="forecast-band">
-                            <div class="forecast-band-fill" style="left:25%;width:55%"></div>
-                            <div class="forecast-band-q50" style="left:52%"></div>
-                        </div>
-                        <div class="forecast-legend">
-                            <span>−15%</span><span>0%</span><span>+15%</span>
-                        </div>
-                    </div>
-                    <div class="charts-block">
-                        <div class="chart-tabs">
-                            <button class="chart-tab active" data-lang="sv">Ensemble</button>
-                            <button class="chart-tab active" data-lang="en">Ensemble</button>
-                            <button class="chart-tab" data-lang="sv">Per modell</button>
-                            <button class="chart-tab" data-lang="en">Per model</button>
-                        </div>
-                        <div class="chart-placeholder" data-lang="sv">Graf visas här när data är laddad</div>
-                        <div class="chart-placeholder" data-lang="en">Chart shown here when data is loaded</div>
-                    </div>
-                </div><!-- /fund-card -->
-
-            </div><!-- /demo-wrapper -->
-
-            <!-- Explanation panel (shown below card when pin is active) -->
+            <div id="card-container">
+                <p class="state-msg" data-lang="sv">Laddar vinnarkort…</p>
+                <p class="state-msg" data-lang="en">Loading winner card…</p>
+            </div>
             <div class="explain-panel" id="explain-panel">
                 <div class="explain-num" id="ep-num"></div>
                 <div class="explain-title" id="ep-title"></div>
                 <div class="explain-body" id="ep-body"></div>
                 <div class="explain-example" id="ep-example" style="display:none"></div>
             </div>
-
-        </div><!-- /section -->
-
-        <!-- ── Accordion glossary ──────────────────────────────────────── -->
+        </div>
         <div class="section">
-            <div class="section-label" data-lang="sv">Ordlista</div>
-            <div class="section-label" data-lang="en">Glossary</div>
+            <div class="section-label" data-lang="sv">Ordlista &amp; vanliga frågor</div>
+            <div class="section-label" data-lang="en">Glossary &amp; common questions</div>
             <h2 class="section-title" data-lang="sv">Alla begrepp förklarade</h2>
             <h2 class="section-title" data-lang="en">All concepts explained</h2>
             <div id="accordion-list"></div>
         </div>
-
     </main>
-
-    <!-- ═══ Footer ═══════════════════════════════════════════════════════ -->
     <footer>
-        PPM Kollen
-        &nbsp;·&nbsp;
-        <span data-lang="sv">Hjälpsida</span>
-        <span data-lang="en">Help page</span>
-        &nbsp;·&nbsp;
-        <a href="index.html">
-            <span data-lang="sv">Tillbaka till prognosen</span>
-            <span data-lang="en">Back to forecast</span>
-        </a>
-        &nbsp;·&nbsp;
-        <a href="about.html">
-            <span data-lang="sv">Om projektet</span>
-            <span data-lang="en">About</span>
-        </a>
+        PPM Kollen &nbsp;&middot;&nbsp;
+        <span data-lang="sv">Hjälpsida</span><span data-lang="en">Help page</span>
+        &nbsp;&middot;&nbsp;
+        <a href="index.html"><span data-lang="sv">Tillbaka till prognosen</span><span data-lang="en">Back to
+                forecast</span></a>
+        &nbsp;&middot;&nbsp;
+        <a href="about.html"><span data-lang="sv">Om projektet</span><span data-lang="en">About</span></a>
     </footer>
-
     <script>
-        (() => {
+        (function () {
             "use strict";
-            const STORAGE_THEME = "ppm-kollen-theme";
-            const STORAGE_LANG = "ppm-kollen-lang";
+            var STORAGE_THEME = "ppm-kollen-theme", STORAGE_LANG = "ppm-kollen-lang";
+            var PREDICTIONS_URLS = ["predictions.json", "output/predictions.json", "data/predictions.json", "https://raw.githubusercontent.com/zolodev/ppm-kollen/refs/heads/main/predictions.json"];
 
-            /* ── Theme ─────────────────────────────────────────────────────── */
-            function applyTheme(mode) {
-                document.body.setAttribute("data-theme", mode);
-                document.querySelectorAll(".theme-btn").forEach(b =>
-                    b.classList.toggle("active", b.dataset.theme === mode));
-                try { localStorage.setItem(STORAGE_THEME, mode); } catch { }
+            function applyTheme(m) { document.body.setAttribute("data-theme", m); document.querySelectorAll(".theme-btn").forEach(function (b) { b.classList.toggle("active", b.dataset.theme === m) }); try { localStorage.setItem(STORAGE_THEME, m) } catch (e) { } }
+            (function () { var s = "auto"; try { s = localStorage.getItem(STORAGE_THEME) || "auto" } catch (e) { } if (!["dark", "light", "auto"].includes(s)) s = "auto"; applyTheme(s); document.querySelectorAll(".theme-btn").forEach(function (b) { b.addEventListener("click", function () { applyTheme(b.dataset.theme) }) }) })();
+
+            var _lang = "sv";
+            function applyLang(l) { _lang = l; document.documentElement.lang = l; document.body.classList.toggle("lang-en", l === "en"); var lb = document.getElementById("lang-label"); if (lb) lb.textContent = l === "sv" ? "EN" : "SV"; try { localStorage.setItem(STORAGE_LANG, l) } catch (e) { } if (_winner) buildCard(_winner); renderAccordion() }
+            (function () { var s = "sv"; try { s = localStorage.getItem(STORAGE_LANG) || "sv" } catch (e) { } if (!["sv", "en"].includes(s)) s = "sv"; _lang = s; document.documentElement.lang = s; document.body.classList.toggle("lang-en", s === "en"); var lb = document.getElementById("lang-label"); if (lb) lb.textContent = s === "sv" ? "EN" : "SV"; var lt = document.getElementById("lang-toggle"); if (lt) lt.addEventListener("click", function () { applyLang(_lang === "sv" ? "en" : "sv") }) })();
+
+            function esc(s) { return String(s || "").replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] }) }
+            function sf(v, d) { d = d || 2; var n = Number(v); return (n >= 0 ? "+" : "") + n.toFixed(d) + "%" }
+            function pf(v, d, sign) { if (v == null || isNaN(v)) return "&mdash;"; d = d || 1; sign = sign !== false; var n = Number(v); return (sign && n >= 0 ? "+" : "") + n.toFixed(d) + "%" }
+            function hitrateClass(v) { return v >= 80 ? "good" : v < 70 ? "warn" : "" }
+            function btCls(v, t) { t = t || 0; if (v == null) return ""; return v > t ? "good" : v < t ? "warn" : "ok" }
+            function barHtml(val, max, cls) { max = max || 100; cls = cls || ""; var p = Math.min(Math.max((val / max) * 100, 0), 100).toFixed(1); return '<div class="bar-track"><div class="bar-fill' + (cls ? " " + cls : "") + '" style="width:' + p + '%"></div></div>' }
+            function bandHtml(fc) { var q10 = fc.q10 || 0, q50 = fc.q50 || 0, q90 = fc.q90 || 0, span = Math.max(Math.abs(q10), Math.abs(q90), 0.5) * 1.15; function tp(v) { return ((v + span) / (2 * span) * 100).toFixed(1) } return '<div class="forecast-band"><div class="forecast-band-fill" style="left:' + tp(q10) + '%;width:' + (tp(q90) - tp(q10)).toFixed(1) + '%"></div><div class="forecast-band-q50" style="left:' + tp(q50) + '%"></div></div><div class="forecast-legend"><span>' + sf(-span) + "</span><span>0%</span><span>" + sf(span) + "</span></div>" }
+
+            function btHtml(bt) {
+                if (!bt) return "";
+                var strat = bt.cum_return_pct || 0, bah = bt.bah_return_pct || 0, excess = bt.excess_pct || 0;
+                var ann = bt.ann_return_pct || 0, sharpe = bt.sharpe || 0, maxdd = bt.max_drawdown_pct || 0;
+                var win = bt.win_rate_pct || 0, hit = bt.hit_rate_pct || 0, weeks = bt.weeks || 0;
+                var cutoff = bt.cutoff_date || "&mdash;", dfrom = bt.date_from || "", dto = bt.date_to || "";
+                var period = dfrom && dto ? (esc(dfrom) + " &rarr; " + esc(dto)) : (weeks + " v");
+                var years = weeks > 0 ? (weeks / 52).toFixed(1) : null;
+                var vCls, vIcon, vTxt;
+                if (excess > 0.5) { vCls = "bt-verdict-up"; vIcon = "&#9650;"; vTxt = '<span data-lang="sv">Strategin slog buy &amp; hold med <strong>' + pf(excess) + "</strong></span>" + '<span data-lang="en">Strategy beat buy &amp; hold by <strong>' + pf(excess) + "</strong></span>" }
+                else if (excess < -0.5) { vCls = "bt-verdict-down"; vIcon = "&#9660;"; vTxt = '<span data-lang="sv">Strategin underpresterade buy &amp; hold med <strong>' + pf(Math.abs(excess), 1, false) + "</strong></span>" + '<span data-lang="en">Strategy underperformed buy &amp; hold by <strong>' + pf(Math.abs(excess), 1, false) + "</strong></span>" }
+                else { vCls = "bt-verdict-flat"; vIcon = "&#9679;"; vTxt = '<span data-lang="sv">Matchade buy &amp; hold <strong>(' + pf(excess) + ")</strong></span>" + '<span data-lang="en">Matched buy &amp; hold <strong>(' + pf(excess) + ")</strong></span>" }
+                var stratEnd = (100 * (1 + strat / 100)).toFixed(0), bahEnd = (100 * (1 + bah / 100)).toFixed(0);
+                var barMax = Math.max(Math.abs(strat), Math.abs(bah), 0.01);
+                var stratW = (Math.abs(strat) / barMax * 100).toFixed(1), bahW = (Math.abs(bah) / barMax * 100).toFixed(1);
+                var sw = strat >= bah;
+                function qS(s) { return s >= 1 ? "good" : s >= 0.5 ? "ok" : "warn" }
+                function qH(h) { return h >= 70 ? "good" : h >= 60 ? "ok" : "warn" }
+                function qW(w) { return w >= 55 ? "good" : w >= 50 ? "ok" : "warn" }
+                function qD(d) { return d >= -10 ? "good" : d >= -20 ? "ok" : "warn" }
+                function qA(a) { return a >= 10 ? "good" : a >= 5 ? "ok" : "warn" }
+                function qE(e) { return e >= 5 ? "good" : e >= -5 ? "ok" : "warn" }
+                function ql(c) { var m = { good: { sv: "Bra", en: "Good" }, ok: { sv: "OK", en: "OK" }, warn: { sv: "Svag", en: "Weak" } }; return '<span data-lang="sv">' + (m[c] && m[c].sv || c) + '</span><span data-lang="en">' + (m[c] && m[c].en || c) + '</span>' }
+                function qldd(c) { var m = { good: { sv: "Liten", en: "Small" }, ok: { sv: "Märkbar", en: "Notable" }, warn: { sv: "Stor", en: "Large" } }; return '<span data-lang="sv">' + (m[c] && m[c].sv || c) + '</span><span data-lang="en">' + (m[c] && m[c].en || c) + '</span>' }
+                return '<div class="backtest-block">' +
+                    '<div class="backtest-title"><span data-lang="sv">Backtest &middot; hur strategin faktiskt presterade</span><span data-lang="en">Backtest &middot; how the strategy actually performed</span></div>' +
+                    '<div class="bt-period">' +
+                    '<div class="bt-period-row"><span class="bt-period-label"><span data-lang="sv">Tränad t.o.m.</span><span data-lang="en">Trained up to</span></span><span class="bt-period-value">' + esc(cutoff) + '</span></div>' +
+                    '<div class="bt-period-sep">&rsaquo;</div>' +
+                    '<div class="bt-period-row"><span class="bt-period-label"><span data-lang="sv">Utvärderad på osedd data</span><span data-lang="en">Evaluated on unseen data</span></span><span class="bt-period-value">' + period + '</span></div>' +
+                    '<div class="bt-period-sep">&middot;</div>' +
+                    '<div class="bt-period-row"><span class="bt-period-label"><span data-lang="sv">Längd</span><span data-lang="en">Length</span></span><span class="bt-period-value">' + weeks + ' v' + (years ? ' (&asymp; ' + years + ' &aring;r)' : '') + '</span></div>' +
+                    '</div>' +
+                    '<div class="bt-verdict ' + vCls + '">' + vIcon + ' ' + vTxt + '</div>' +
+                    '<div class="bt-compare">' +
+                    '<div class="bt-compare-card ' + (sw ? "is-winner" : '') + '">' +
+                    '<div class="bt-compare-head"><span class="bt-compare-label"><span data-lang="sv">Signalstrategi</span><span data-lang="en">Signal strategy</span></span>' + (sw ? '<span class="bt-winner-tag"><span data-lang="sv">Bättre</span><span data-lang="en">Better</span></span>' : '') + '</div>' +
+                    '<div class="bt-compare-value ' + btCls(strat) + '">' + pf(strat) + '</div>' +
+                    '<div class="bt-compare-sub"><span data-lang="sv">100 kr &rarr; ' + stratEnd + ' kr</span><span data-lang="en">$100 &rarr; $' + stratEnd + '</span></div>' +
+                    '<div class="bt-bar-track"><div class="bt-bar-fill ' + (strat >= 0 ? "pos" : "neg") + '" style="width:' + stratW + '%"></div></div>' +
+                    '</div>' +
+                    '<div class="bt-compare-card ' + (!sw ? "is-winner" : '') + '">' +
+                    '<div class="bt-compare-head"><span class="bt-compare-label"><span data-lang="sv">Bara höll fonden</span><span data-lang="en">Just held the fund</span></span>' + (!sw ? '<span class="bt-winner-tag"><span data-lang="sv">Bättre</span><span data-lang="en">Better</span></span>' : '') + '</div>' +
+                    '<div class="bt-compare-value ' + btCls(bah) + '">' + pf(bah) + '</div>' +
+                    '<div class="bt-compare-sub"><span data-lang="sv">100 kr &rarr; ' + bahEnd + ' kr</span><span data-lang="en">$100 &rarr; $' + bahEnd + '</span></div>' +
+                    '<div class="bt-bar-track"><div class="bt-bar-fill ' + (bah >= 0 ? "pos" : "neg") + '" style="width:' + bahW + '%"></div></div>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="bt-stats">' +
+                    '<div class="bt-stat"><span class="bt-stat-label"><span data-lang="sv">Årsavkastning</span><span data-lang="en">Ann. return</span></span><span class="bt-stat-val ' + qA(ann) + '">' + pf(ann) + '</span><span class="bt-stat-quality q-' + qA(ann) + '">' + ql(qA(ann)) + '</span></div>' +
+                    '<div class="bt-stat"><span class="bt-stat-label">Sharpe</span><span class="bt-stat-val ' + qS(sharpe) + '">' + Number(sharpe).toFixed(2) + '</span><span class="bt-stat-quality q-' + qS(sharpe) + '">' + ql(qS(sharpe)) + '</span></div>' +
+                    '<div class="bt-stat"><span class="bt-stat-label"><span data-lang="sv">Max nedgång</span><span data-lang="en">Max drawdown</span></span><span class="bt-stat-val ' + qD(maxdd) + '">' + pf(maxdd) + '</span><span class="bt-stat-quality q-' + qD(maxdd) + '">' + qldd(qD(maxdd)) + '</span></div>' +
+                    '<div class="bt-stat"><span class="bt-stat-label"><span data-lang="sv">Träffsäkerhet</span><span data-lang="en">Hit rate</span></span><span class="bt-stat-val ' + qH(hit) + '">' + pf(hit, 1, false) + '</span><span class="bt-stat-quality q-' + qH(hit) + '">' + ql(qH(hit)) + '</span></div>' +
+                    '<div class="bt-stat"><span class="bt-stat-label"><span data-lang="sv">Vinstfrekvens</span><span data-lang="en">Win rate</span></span><span class="bt-stat-val ' + qW(win) + '">' + pf(win, 1, false) + '</span><span class="bt-stat-quality q-' + qW(win) + '">' + ql(qW(win)) + '</span></div>' +
+                    '<div class="bt-stat"><span class="bt-stat-label"><span data-lang="sv">Överskott vs B&amp;H</span><span data-lang="en">Excess vs B&amp;H</span></span><span class="bt-stat-val ' + qE(excess) + '">' + pf(excess) + '</span><span class="bt-stat-quality q-' + qE(excess) + '">' + ql(qE(excess)) + '</span></div>' +
+                    '</div>' +
+                    '<div class="bt-disclaimer"><span data-lang="sv">Backtest på ej sedd data — modellen har inte sett denna period under träning. Historisk avkastning är ingen garanti för framtida resultat.</span><span data-lang="en">Backtest on held-out data — the model has not seen this period during training. Past performance is no guarantee of future results.</span></div>' +
+                    '</div>'
             }
-            (() => {
-                let s = "auto";
-                try { s = localStorage.getItem(STORAGE_THEME) || "auto"; } catch { }
-                if (!["dark", "light", "auto"].includes(s)) s = "auto";
-                applyTheme(s);
-                document.querySelectorAll(".theme-btn").forEach(b =>
-                    b.addEventListener("click", () => applyTheme(b.dataset.theme)));
-            })();
 
-            /* ── Lang ──────────────────────────────────────────────────────── */
-            let _lang = "sv";
-            function applyLang(lang) {
-                _lang = lang;
-                document.documentElement.lang = lang;
-                document.body.classList.toggle("lang-en", lang === "en");
-                const lbl = document.getElementById("lang-label");
-                if (lbl) lbl.textContent = lang === "sv" ? "EN" : "SV";
-                try { localStorage.setItem(STORAGE_LANG, lang); } catch { }
-                renderAccordion();
-                if (_activePin) activatePin(_activePin);
+            var _winner = null, _activePin = null;
+
+            function buildCard(fund) {
+                var SIG = { BUY: { cls: "sig-buy", icon: "&#9650;", sv: "KÖP", en: "BUY" }, HOLD: { cls: "sig-hold", icon: "&#9679;", sv: "HÅLL", en: "HOLD" }, SELL: { cls: "sig-sell", icon: "&#9660;", sv: "SÄLJ", en: "SELL" } };
+                var sig = SIG[fund.signal] || SIG.HOLD;
+                var fc = fund.forecast || {}, bt = fund.backtest, charts = fund.charts || {};
+                var hitrate = fund.hitrate_q50 || 0, cov = (fund.coverage_pct || 0).toFixed(1), mae = (fund.mae_q50 || 0).toFixed(4), score = (fund.score || 0).toFixed(3);
+                var q50 = fc.q50 || 0;
+                var ensPath = charts.ensemble ? ("./" + charts.ensemble) : null;
+                var indPath = charts.individual ? ("./" + charts.individual) : null;
+                var ensImg = ensPath ? ('<img src="' + esc(ensPath) + '" alt="Ensemble chart" loading="lazy">') : ('<div class="chart-missing"><span data-lang="sv">Graf genereras av modellpipelinen</span><span data-lang="en">Chart generated by the model pipeline</span></div>');
+                var indImg = indPath ? ('<img src="' + esc(indPath) + '" alt="Per model chart" loading="lazy">') : ('<div class="chart-missing"><span data-lang="sv">Graf genereras av modellpipelinen</span><span data-lang="en">Chart generated by the model pipeline</span></div>');
+                var tagsHtml = (fund.tags || "").split(",").map(function (t) { return t.trim() }).filter(Boolean).map(function (t) { return '<span class="tag">' + esc(t) + '</span>' }).join("");
+                var pins = [{ id: 1, s: "top:16px;left:8px" }, { id: 2, s: "top:16px;left:56px" }, { id: 3, s: "top:58px;left:56px" }, { id: 4, s: "top:16px;right:8px" }, { id: 5, s: "top:112px;left:8px" }, { id: 6, s: "top:176px;left:8px" }, { id: 7, s: "top:176px;left:26%" }, { id: 8, s: "top:176px;left:51%" }, { id: 9, s: "top:176px;right:8px" }, { id: 10, s: "bottom:230px;left:8px" }, { id: 11, s: "bottom:230px;left:42%" }, { id: 12, s: "bottom:50px;right:8px" }, { id: 13, s: "bottom:185px;left:8px" }];
+                var pinsHtml = pins.map(function (p) { return '<div class="pin" id="pin-' + p.id + '" style="' + p.s + '" onclick="window.activatePin(' + p.id + ')"><div class="pin-dot">' + p.id + '</div></div>' }).join("");
+                var wrapper = document.createElement("div");
+                wrapper.className = "demo-wrapper"; wrapper.id = "demo-wrapper";
+                wrapper.innerHTML = pinsHtml +
+                    '<div class="fund-card is-top">' +
+                    '<div class="card-header">' +
+                    '<div class="rank-col">&#127945;</div>' +
+                    '<div class="fund-meta">' +
+                    '<div class="fund-name">' + esc(fund.name || "&mdash;") + '</div>' +
+                    '<div class="fund-ids">' +
+                    '<span class="id-pill">ID ' + esc(fund.fund_id || "&mdash;") + '</span>' +
+                    '<span class="id-pill ppm">PPM ' + esc(fund.ppm_code || "&mdash;") + '</span>' +
+                    (fund.avanza_url ? '<a class="action-btn" href="' + esc(fund.avanza_url) + '" target="_blank" rel="noopener">Avanza &#8599;</a>' : '') +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="signal-col"><div class="signal-badge ' + sig.cls + '"><span class="signal-icon">' + sig.icon + '</span><span class="signal-label"><span data-lang="sv">' + sig.sv + '</span><span data-lang="en">' + sig.en + '</span></span></div></div>' +
+                    '</div>' +
+                    '<div class="tags-row">' + tagsHtml + '</div>' +
+                    '<div class="metrics-grid">' +
+                    '<div class="metric"><span class="metric-label">Score</span><span class="metric-value">' + score + '</span><span class="metric-hint"><span data-lang="sv">sammansatt po&auml;ng</span><span data-lang="en">composite score</span></span></div>' +
+                    '<div class="metric"><span class="metric-label"><span data-lang="sv">Tr&auml;ffs&auml;kerhet</span><span data-lang="en">Hit rate</span></span><span class="metric-value ' + hitrateClass(hitrate) + '">' + hitrate.toFixed(1) + '%</span>' + barHtml(hitrate, 100, hitrateClass(hitrate)) + '</div>' +
+                    '<div class="metric"><span class="metric-label">Coverage</span><span class="metric-value">' + cov + '%</span>' + barHtml(parseFloat(cov)) + '</div>' +
+                    '<div class="metric"><span class="metric-label">MAE Q50</span><span class="metric-value">' + mae + '</span><span class="metric-hint"><span data-lang="sv">l&auml;gre = b&auml;ttre</span><span data-lang="en">lower = better</span></span></div>' +
+                    '</div>' +
+                    '<div class="forecast-block">' +
+                    '<div class="forecast-title"><span data-lang="sv">Prognos &middot; 1 vecka</span><span data-lang="en">Forecast &middot; 1 week</span></div>' +
+                    '<div class="forecast-row"><span class="fc-q10">' + sf(fc.q10 || 0) + '</span><span class="fc-sep">&middot;</span><span class="fc-q50 ' + (q50 > 0 ? "pos" : q50 < 0 ? "neg" : "") + '">' + sf(q50) + '</span><span class="fc-sep">&middot;</span><span class="fc-q90">' + sf(fc.q90 || 0) + '</span></div>' +
+                    bandHtml(fc) +
+                    '</div>' +
+                    btHtml(bt) +
+                    '<div class="charts-block">' +
+                    '<div class="chart-tabs">' +
+                    '<button class="chart-tab active" onclick="window.switchChart(this,\'ens-pane\')"><span data-lang="sv">Ensemble</span><span data-lang="en">Ensemble</span></button>' +
+                    '<button class="chart-tab" onclick="window.switchChart(this,\'ind-pane\')"><span data-lang="sv">Per modell</span><span data-lang="en">Per model</span></button>' +
+                    '</div>' +
+                    '<div class="chart-pane active" id="ens-pane">' + ensImg + '</div>' +
+                    '<div class="chart-pane" id="ind-pane">' + indImg + '</div>' +
+                    '</div>' +
+                    '</div>';
+                var container = document.getElementById("card-container");
+                container.innerHTML = ""; container.appendChild(wrapper);
+                document.body.classList.toggle("lang-en", _lang === "en");
             }
-            (() => {
-                let s = "sv";
-                try { s = localStorage.getItem(STORAGE_LANG) || "sv"; } catch { }
-                if (!["sv", "en"].includes(s)) s = "sv";
-                _lang = s;
-                document.documentElement.lang = s;
-                document.body.classList.toggle("lang-en", s === "en");
-                const lbl = document.getElementById("lang-label");
-                if (lbl) lbl.textContent = s === "sv" ? "EN" : "SV";
-                document.getElementById("lang-toggle")?.addEventListener("click", () =>
-                    applyLang(_lang === "sv" ? "en" : "sv"));
-            })();
 
-            /* ── Pin data ──────────────────────────────────────────────────── */
-            const PINS = {
-                1: {
-                    sv: {
-                        num: "Punkt 1 · Placering", title: "Guldmedaljen — vem vinner just nu?",
-                        body: `Emojin (🥇🥈🥉) eller siffran visar <strong>fondens rank</strong> bland de fem bäst bedömda fonderna för den valda tidsperioden. Plats 1 är den fond som modellerna för tillfället tror allra mest på.
-<br><br>Ranken beräknas varje vecka och kan förändras. En fond som är etta idag är inte garanterat etta nästa vecka.`,
-                        ex: "🥇 = starkast rekommendation just nu &nbsp;·&nbsp; 🥉 = tredje bäst"
-                    },
-                    en: {
-                        num: "Dot 1 · Rank", title: "The gold medal — who's winning right now?",
-                        body: `The emoji (🥇🥈🥉) or number shows the <strong>fund's rank</strong> among the five best-rated funds for the selected time period. Rank 1 is the fund the models currently believe in the most.
-<br><br>The rank is recalculated every week and can change. A fund ranked first today is not guaranteed to be first next week.`,
-                        ex: "🥇 = strongest recommendation right now &nbsp;·&nbsp; 🥉 = third best"
-                    }
-                },
-                2: {
-                    sv: {
-                        num: "Punkt 2 · Fondnamn", title: "Vilket fond är det?",
-                        body: `Det <strong>officiella namnet</strong> på fonden, exakt som det registrerats hos Pensionsmyndigheten. Klicka på Avanza-länken intill för att läsa mer om fonden på Avanzas webbplats.`,
-                        ex: "Swedbank Robur Teknik A — ett teknikfokuserat globalfond"
-                    },
-                    en: {
-                        num: "Dot 2 · Fund name", title: "Which fund is it?",
-                        body: `The <strong>official name</strong> of the fund, exactly as registered with the Swedish Pensions Agency. Click the Avanza link next to it to read more about the fund on Avanza's website.`,
-                        ex: "Swedbank Robur Teknik A — a technology-focused global fund"
-                    }
-                },
-                3: {
-                    sv: {
-                        num: "Punkt 3 · PPM-kod & ID", title: "Numret du behöver för att byta fond",
-                        body: `<strong>PPM-koden</strong> (den blå pillern) är det nummer du skriver in på <em>minpension.se</em> när du byter fonder i din premiepension. Klicka på den för att kopiera koden direkt.
-<br><br><strong>ID</strong> är fondens interna nummer i systemet.`,
-                        ex: "PPM 878416 — skriv in detta nummer på minpension.se"
-                    },
-                    en: {
-                        num: "Dot 3 · PPM code & ID", title: "The number you need to switch funds",
-                        body: `The <strong>PPM code</strong> (the blue pill) is the number you type in on <em>minpension.se</em> when switching funds in your premium pension. Click it to copy the code directly.
-<br><br><strong>ID</strong> is the fund's internal number in the system.`,
-                        ex: "PPM 878416 — enter this number on minpension.se"
-                    }
-                },
-                4: {
-                    sv: {
-                        num: "Punkt 4 · Signal", title: "Köp, håll eller sälj?",
-                        body: `Signalen är den <strong>enkla rekommendationen</strong> baserad på modellens mittprognos (Q50).
-<br><br><strong style="color:var(--buy)">▲ KÖP</strong> — modellen förväntar sig att fonden stiger mer än +0,1%.<br><strong style="color:var(--hold)">● HÅLL</strong> — svag signal (±0,1%) eller så var fonden topprankad förra veckan och systemet undviker att rekommendera samma fond i rad.<br><strong style="color:var(--sell)">▼ SÄLJ</strong> — modellen förväntar sig att fonden faller mer än −0,1%.
-<br><br>Signalen är en <em>indikation</em>, inte ett löfte.`,
-                        ex: "KÖP med 91.8% träffsäkerhet är ett starkare tecken än KÖP med 55%."
-                    },
-                    en: {
-                        num: "Dot 4 · Signal", title: "Buy, hold or sell?",
-                        body: `The signal is the <strong>simple recommendation</strong> based on the model's median forecast (Q50).
-<br><br><strong style="color:var(--buy)">▲ BUY</strong> — the model expects the fund to rise more than +0.1%.<br><strong style="color:var(--hold)">● HOLD</strong> — weak signal (±0.1%) or the fund was top-ranked last week and the system avoids recommending the same fund consecutively.<br><strong style="color:var(--sell)">▼ SELL</strong> — the model expects the fund to fall more than −0.1%.
-<br><br>The signal is an <em>indication</em>, not a promise.`,
-                        ex: "BUY with 91.8% hit rate is a stronger sign than BUY with 55%."
-                    }
-                },
-                5: {
-                    sv: {
-                        num: "Punkt 5 · Taggar", title: "Vad är det för typ av fond?",
-                        body: `Taggarna visar <strong>fondens karaktär</strong> med ett par ord — till exempel branschfokus (Teknik, Hälsa), geografisk inriktning (Sverige, Emerging Markets) eller risknivå (Hög risk, Blandfond).
-<br><br>De hämtas från fonddata och hjälper dig att snabbt se om fonden passar din portfölj.`,
-                        ex: "Teknik · Global · Hög risk"
-                    },
-                    en: {
-                        num: "Dot 5 · Tags", title: "What kind of fund is it?",
-                        body: `Tags show the <strong>fund's character</strong> in a few words — for example sector focus (Technology, Health), geographic focus (Sweden, Emerging Markets) or risk level (High risk, Mixed fund).
-<br><br>They are sourced from fund data and help you quickly see whether the fund fits your portfolio.`,
-                        ex: "Technology · Global · High risk"
-                    }
-                },
-                6: {
-                    sv: {
-                        num: "Punkt 6 · Score", title: "Det samlade betyget — ett tal att jämföra med",
-                        body: `Score är ett <strong>sammansatt tal (0–1)</strong> som sammanfattar hur bra modellen presterat för just den fonden. Ju högre, desto bättre.
-<br><br>Det beräknas som:<br><em>Score = Träffsäkerhet × Täckning ÷ Medelfel</em>
-<br><br>Ett högt score innebär att modellen historiskt sett förutspått rätt riktning ofta, att intervallen täcker verkligheten bra, och att felen är små. Fonder högst upp i listan har alltid högst score.`,
-                        ex: "Score 0.847 = väldigt bra &nbsp;·&nbsp; Score 0.3 = svagare signal"
-                    },
-                    en: {
-                        num: "Dot 6 · Score", title: "The combined grade — one number to compare",
-                        body: `Score is a <strong>composite number (0–1)</strong> that summarises how well the model has performed for that specific fund. Higher is better.
-<br><br>Calculated as:<br><em>Score = Hit rate × Coverage ÷ Mean error</em>
-<br><br>A high score means the model has historically predicted the correct direction often, that the intervals cover reality well, and that errors are small. Funds at the top of the list always have the highest score.`,
-                        ex: "Score 0.847 = very good &nbsp;·&nbsp; Score 0.3 = weaker signal"
-                    }
-                },
-                7: {
-                    sv: {
-                        num: "Punkt 7 · Träffsäkerhet (Hit rate)", title: "Hur ofta har modellen gissat rätt håll?",
-                        body: `Träffsäkerheten visar <strong>hur stor andel av historiska veckor</strong> där modellens mittprognos (Q50) förutsåg rätt riktning — alltså om fonden faktiskt gick upp när modellen sa upp, och vice versa.
-<br><br><strong>≥ 70%</strong> är bra och visas i grönt.<br><strong>50–69%</strong> är acceptabelt, ungefär som att singla slant.<br><strong>&lt; 50%</strong> innebär att modellen var fel mer än hälften av gångerna — sämre än slumpen.`,
-                        ex: "91.8% = modellen hade rätt riktning i 46 av 50 historiska veckor"
-                    },
-                    en: {
-                        num: "Dot 7 · Hit rate", title: "How often has the model guessed the right direction?",
-                        body: `Hit rate shows <strong>what share of historical weeks</strong> the model's median forecast (Q50) predicted the correct direction — i.e. whether the fund actually went up when the model said up, and vice versa.
-<br><br><strong>≥ 70%</strong> is good and shown in green.<br><strong>50–69%</strong> is acceptable, roughly like flipping a coin.<br><strong>&lt; 50%</strong> means the model was wrong more than half the time — worse than random.`,
-                        ex: "91.8% = model had the correct direction in 46 out of 50 historical weeks"
-                    }
-                },
-                8: {
-                    sv: {
-                        num: "Punkt 8 · Täckning (Coverage)", title: "Hur väl täcker intervallet verkligheten?",
-                        body: `Täckning visar <strong>hur stor andel av de historiska veckorna</strong> som det faktiska utfallet hamnade innanför det förutsagda spannet (Q10–Q90).
-<br><br>Om modellen är välkalibrerad bör ~80% av de verkliga värdena hamna inom det pessimistiska–optimistiska spannet. Låg täckning (&lt;60%) innebär att intervallen är för smala — modellen är för säker på sig själv.`,
-                        ex: "84.2% = i 42 av 50 veckor hamnade den verkliga kursutvecklingen inom spannet"
-                    },
-                    en: {
-                        num: "Dot 8 · Coverage", title: "How well does the interval cover reality?",
-                        body: `Coverage shows <strong>what share of historical weeks</strong> the actual outcome fell within the predicted range (Q10–Q90).
-<br><br>If the model is well-calibrated, ~80% of real values should fall within the pessimistic–optimistic range. Low coverage (&lt;60%) means the intervals are too narrow — the model is overconfident.`,
-                        ex: "84.2% = in 42 out of 50 weeks the actual return fell within the range"
-                    }
-                },
-                9: {
-                    sv: {
-                        num: "Punkt 9 · MAE Q50 (Medelfel)", title: "Hur stora fel gör modellen i genomsnitt?",
-                        body: `MAE (Mean Absolute Error) är <strong>genomsnittligt hur många procentenheter fel</strong> modellens mittprognos (Q50) haft historiskt. Lägre är bättre.
-<br><br>Ett MAE på 0.054 innebär att modellen i genomsnitt missat med 5,4 procentenheter. För veckodata är under 10% (0.10) ett bra riktmärke.
-<br><br>MAE ingår i Score-beräkningen: en modell med lågt fel belönas med högre poäng.`,
-                        ex: "MAE 0.054 = i genomsnitt 5.4 procentenheters avvikelse (under 10% = bra)"
-                    },
-                    en: {
-                        num: "Dot 9 · MAE Q50 (Mean error)", title: "How large are the model's average errors?",
-                        body: `MAE (Mean Absolute Error) is <strong>on average how many percentage points off</strong> the model's median forecast (Q50) has been historically. Lower is better.
-<br><br>An MAE of 0.054 means the model was off by 5.4 percentage points on average. For weekly data, under 10% (0.10) is a good benchmark.
-<br><br>MAE is part of the Score calculation: a model with low error is rewarded with a higher score.`,
-                        ex: "MAE 0.054 = average deviation of 5.4 percentage points (under 10% = good)"
-                    }
-                },
-                10: {
-                    sv: {
-                        num: "Punkt 10 · Prognos Q50 (Mittenpunkten)", title: "Den mest troliga avkastningen nästa vecka",
-                        body: `Q50 (medianen) är <strong>modellens bästa gissning</strong> på vad fonden kommer avkasta under den valda tidsperioden. Det är det stora tal i mitten av prognosen.
-<br><br>Hälften av alla modellscenarier förväntar sig mer än Q50, hälften förväntar sig mindre. Det är alltså <em>inte</em> ett garanterat utfall — utan det mest sannolika mittenvärdet.
-<br><br>Positiv Q50 = prognosen är att fonden går upp. Negativ = prognosen är ner.`,
-                        ex: "+5.9% = modellen förväntar sig att fonden stiger ungefär 5,9% nästa vecka"
-                    },
-                    en: {
-                        num: "Dot 10 · Forecast Q50 (Midpoint)", title: "The most likely return next week",
-                        body: `Q50 (the median) is <strong>the model's best guess</strong> at what the fund will return during the selected time period. It is the large number in the middle of the forecast.
-<br><br>Half of all model scenarios expect more than Q50, half expect less. It is therefore <em>not</em> a guaranteed outcome — but the most probable midpoint.
-<br><br>Positive Q50 = the forecast is that the fund goes up. Negative = the forecast is down.`,
-                        ex: "+5.9% = the model expects the fund to rise approximately 5.9% next week"
-                    }
-                },
-                11: {
-                    sv: {
-                        num: "Punkt 11 · Prognos Q10 & Q90 (Osäkerhetsintervallet)", title: "Hur stor är osäkerheten?",
-                        body: `Q10 och Q90 visar <strong>hur bred osäkerheten är</strong> i prognosen.
-<br><br><strong>Q10 (pessimistisk sida)</strong> — i 9 av 10 scenarier förväntas avkastningen bli bättre än detta värde. Tänk på det som "sämsta troliga utfall".<br><strong>Q90 (optimistisk sida)</strong> — bara 1 av 10 scenarier är bättre. Tänk på det som "bästa troliga utfall".
-<br><br>Ett brett spann (t.ex. −10% till +20%) innebär hög osäkerhet. Ett smalt spann (−1% till +3%) innebär att modellen är mer säker på sin prognos.`,
-                        ex: "Q10=−2.1%, Q50=+5.9%, Q90=+13.8% → förväntat spann: −2 till +14%"
-                    },
-                    en: {
-                        num: "Dot 11 · Forecast Q10 & Q90 (Uncertainty range)", title: "How large is the uncertainty?",
-                        body: `Q10 and Q90 show <strong>how wide the uncertainty is</strong> in the forecast.
-<br><br><strong>Q10 (pessimistic side)</strong> — in 9 out of 10 scenarios the return is expected to be better than this value. Think of it as "worst likely outcome".<br><strong>Q90 (optimistic side)</strong> — only 1 in 10 scenarios is better. Think of it as "best likely outcome".
-<br><br>A wide range (e.g. −10% to +20%) indicates high uncertainty. A narrow range (−1% to +3%) means the model is more confident in its forecast.`,
-                        ex: "Q10=−2.1%, Q50=+5.9%, Q90=+13.8% → expected range: −2 to +14%"
-                    }
-                },
-                12: {
-                    sv: {
-                        num: "Punkt 12 · Graf (Ensemble / Per modell)", title: "Se hur prognosen jämförs med verkligheten",
-                        body: `Grafen visar <strong>den historiska prestationen</strong> visuellt — prognosintervallet mot faktisk kursutveckling.
-<br><br><strong>Ensemble-grafen</strong> — visar det samlade bandet (Q10–Q90) som alla fyra AI-modeller (LSTM, TCN, GRU, XGBoost) tillsammans förutspått, plus mittlinjen (Q50), jämfört med den faktiska kursutvecklingen.
-<br><br><strong>Per modell-grafen</strong> — visar hur var och en av de fyra modellerna presterade individuellt. Användbart för att se om alla modeller är överens eller om de spretar.
-<br><br>Ett <em>bra tecken</em> är att det blå bandet täcker de flesta verkliga rörelserna och att mittlinjen följer trenden.`,
-                        ex: "Klicka på 'Ensemble'/'Per modell' för att byta grafvy"
-                    },
-                    en: {
-                        num: "Dot 12 · Chart (Ensemble / Per model)", title: "See how the forecast compares to reality",
-                        body: `The chart shows <strong>historical performance</strong> visually — the forecast interval against actual price movement.
-<br><br><strong>The ensemble chart</strong> — shows the combined band (Q10–Q90) that all four AI models (LSTM, TCN, GRU, XGBoost) predicted together, plus the median line (Q50), compared to actual price movement.
-<br><br><strong>The per-model chart</strong> — shows how each of the four models performed individually. Useful for seeing if all models agree or diverge.
-<br><br>A <em>good sign</em> is that the blue band covers most actual movements and the median line follows the trend.`,
-                        ex: "Click 'Ensemble'/'Per model' to switch chart view"
-                    }
-                }
+            window.switchChart = function (btn, paneId) {
+                var block = btn.closest(".charts-block");
+                block.querySelectorAll(".chart-tab").forEach(function (b) { b.classList.remove("active") });
+                block.querySelectorAll(".chart-pane").forEach(function (p) { p.classList.remove("active") });
+                btn.classList.add("active");
+                var p = document.getElementById(paneId); if (p) p.classList.add("active");
             };
 
-            /* ── Accordion data ────────────────────────────────────────────── */
-            const ACCORDION = [
-                {
-                    icon: "📅", key: "hz",
-                    sv_title: "Tidshorisont (1v / 4v / 13v / 26v)",
-                    en_title: "Time horizon (1w / 4w / 13w / 26w)",
-                    sv_sub: "Hur långt framåt gäller prognosen?",
-                    en_sub: "How far ahead does the forecast apply?",
-                    sv_body: `Sidans flikar väljer <strong>hur lång tid framåt</strong> prognosen gäller. Fyra alternativ: 1 vecka (kortsiktigt), 4 veckor (ca 1 månad), 13 veckor (ca 1 kvartal), 26 veckor (ca halvår).
-<br><br>En fond kan se bra ut på 1 vecka men sämre på 13 veckor, eller tvärtom. Modellerna tränas <em>separat</em> för varje horisont och hittar olika mönster på olika tidsskalor. Välj horisont utifrån hur länge du planerar att behålla fonden.`,
-                    en_body: `The tabs on the page select <strong>how far ahead</strong> the forecast applies. Four options: 1 week (short term), 4 weeks (approx 1 month), 13 weeks (approx 1 quarter), 26 weeks (approx half a year).
-<br><br>A fund can look good at 1 week but worse at 13 weeks, or vice versa. The models are trained <em>separately</em> for each horizon and find different patterns at different time scales. Choose horizon based on how long you plan to hold the fund.`,
-                    sv_ex: "<strong>Tips:</strong> Kort horisont om du planerar att byta snart. Lång horisont om du vill ha en stabil signal.",
-                    en_ex: "<strong>Tip:</strong> Short horizon if you plan to switch soon. Long horizon if you want a stable signal."
-                },
-                {
-                    icon: "🤖", key: "models",
-                    sv_title: "AI-modellerna (LSTM, TCN, GRU, XGBoost)",
-                    en_title: "The AI models (LSTM, TCN, GRU, XGBoost)",
-                    sv_sub: "Fyra olika metoder som röstar tillsammans",
-                    en_sub: "Four different methods voting together",
-                    sv_body: `Systemet använder <strong>fyra AI-modeller</strong> som tränas på historisk fonddata och sedan röstar tillsammans om framtiden. Att kombinera flera modeller ger ett mer robust resultat än att lita på bara en.
-<br><br><strong>LSTM</strong> (Long Short-Term Memory) — ett neuralt nätverk med "minne" som är skickligt på att lära sig långsiktiga mönster i tidsserier.<br><strong>TCN</strong> (Temporal Convolutional Network) — behandlar data parallellt och är bra på kortare, lokala mönster.<br><strong>GRU</strong> (Gated Recurrent Unit) — en effektivare variant av LSTM.<br><strong>XGBoost</strong> — ett beslutsträdsbaserat system som hittar icke-linjära mönster i historiska nyckeltal.`,
-                    en_body: `The system uses <strong>four AI models</strong> that are trained on historical fund data and then vote together about the future. Combining multiple models gives a more robust result than relying on just one.
-<br><br><strong>LSTM</strong> (Long Short-Term Memory) — a neural network with "memory" skilled at learning long-term patterns in time series.<br><strong>TCN</strong> (Temporal Convolutional Network) — processes data in parallel and is good at shorter, local patterns.<br><strong>GRU</strong> (Gated Recurrent Unit) — a more efficient variant of LSTM.<br><strong>XGBoost</strong> — a decision-tree system that finds non-linear patterns in historical metrics.`,
-                    sv_ex: "<strong>Ensemble-grafen</strong> visar hur alla fyra modeller tillsammans förutspått intervallet.",
-                    en_ex: "<strong>The ensemble chart</strong> shows how all four models together predicted the interval."
-                },
-                {
-                    icon: "📊", key: "backtest",
-                    sv_title: "Backtest — hur strategin faktiskt presterade",
-                    en_title: "Backtest — how the strategy actually performed",
-                    sv_sub: "Historisk utvärdering på data modellen inte sett",
-                    en_sub: "Historical evaluation on data the model has not seen",
-                    sv_body: `Backtestet jämför <strong>modellstrategin mot att bara hålla fonden</strong> (buy &amp; hold) på en period som modellen <em>inte sett under träningen</em>.
-<br><br><strong>Årsavkastning</strong> — genomsnittlig avkastning per år. ≥10% = bra.<br><strong>Sharpe</strong> — avkastning per riskenhet. Ju högre desto bättre, ≥1.0 = bra.<br><strong>Max nedgång</strong> — det värsta tapp från topp till botten. Litet tapp = bra.<br><strong>Överskott vs B&H</strong> — hur mycket bättre (eller sämre) strategin var mot att bara hålla fonden.
-<br><br>Backtestresultat är <em>ingen garanti</em> för framtiden — historisk data speglar inte alltid vad som händer härnäst.`,
-                    en_body: `The backtest compares the <strong>model strategy against just holding the fund</strong> (buy &amp; hold) over a period the model <em>has not seen during training</em>.
-<br><br><strong>Annual return</strong> — average return per year. ≥10% = good.<br><strong>Sharpe</strong> — return per unit of risk. Higher is better, ≥1.0 = good.<br><strong>Max drawdown</strong> — the worst drop from peak to trough. Small drop = good.<br><strong>Excess vs B&H</strong> — how much better (or worse) the strategy was vs just holding the fund.
-<br><br>Backtest results are <em>not a guarantee</em> for the future — historical data does not always reflect what happens next.`,
-                    sv_ex: "<strong>Strategin slog B&H med +8.2%</strong> = modellsignalerna ledde till bättre avkastning än att bara sitta still.",
-                    en_ex: "<strong>Strategy beat B&H by +8.2%</strong> = model signals led to better returns than just sitting still."
-                },
-                {
-                    icon: "⚠️", key: "hitrate_warn",
-                    sv_title: "Varningsmarkeringen — låg träffsäkerhet",
-                    en_title: "The warning mark — low hit rate",
-                    sv_sub: "När modellen inte är tillräckligt tillförlitlig",
-                    en_sub: "When the model is not reliable enough",
-                    sv_body: `Om en fond visas med en <strong>gul varning (⚠ Träffsäkerhet &lt;70%)</strong> innebär det att modellen historiskt haft svårt att förutsäga rätt riktning för den fonden.
-<br><br>Fonden kan fortfarande dyka upp i listan om dess Score ändå är hög relativt andra fonder, men varningen påminner om att signalen är osäkrare. Ta KÖP/SÄLJ-signalen för en sådan fond med extra försiktighet.`,
-                    en_body: `If a fund is shown with a <strong>yellow warning (⚠ Hit rate &lt;70%)</strong> it means the model has historically struggled to predict the correct direction for that fund.
-<br><br>The fund may still appear in the list if its Score is still high relative to other funds, but the warning is a reminder that the signal is more uncertain. Take the BUY/SELL signal for such a fund with extra caution.`,
-                    sv_ex: "⚠ Träffsäkerhet &lt;70% = modellen hade fel riktning mer än 3 av 10 historiska veckor.",
-                    en_ex: "⚠ Hit rate &lt;70% = the model had the wrong direction more than 3 in 10 historical weeks."
-                },
-                {
-                    icon: "🔄", key: "update",
-                    sv_title: "När uppdateras prognosen?",
-                    en_title: "When is the forecast updated?",
-                    sv_sub: "Automatiskt varje söndag kl 01:00",
-                    en_sub: "Automatically every Sunday at 01:00",
-                    sv_body: `Hela systemet körs automatiskt varje söndag kl 01:00. Alla ~274 fonder tränas om med ny data från veckan, de 5 bästa väljs ut på nytt, och predictions.json publiceras.
-<br><br>Om du öppnar sidan under veckan ser du prognosen från senaste söndagen. Datum för senaste körning visas i informationsraden högst upp på startsidan.`,
-                    en_body: `The entire system runs automatically every Sunday at 01:00. All ~274 funds are retrained with new data from the week, the top 5 are re-selected, and predictions.json is published.
-<br><br>If you open the page during the week you see the forecast from the most recent Sunday. The date of the latest run is shown in the info bar at the top of the home page.`,
-                    sv_ex: "<strong>Genererad: 2026-05-25</strong> = prognosen är från söndagen den 25 maj.",
-                    en_ex: "<strong>Generated: 2026-05-25</strong> = the forecast is from Sunday the 25th of May."
-                },
-                {
-                    icon: "🏦", key: "ppm",
-                    sv_title: "Vad är PPM-systemet?",
-                    en_title: "What is the PPM system?",
-                    sv_sub: "Din premiepension — kort förklaring",
-                    en_sub: "Your premium pension — brief explanation",
-                    sv_body: `PPM (Premiepension) är en del av det svenska pensionssystemet där du som arbetstagare själv kan välja var en del av din pension placeras bland hundratals fonder.
-<br><br>Du byter fonder på <em>minpension.se</em> eller via Pensionsmyndighetens app. PPM Kollen hjälper dig att orientera dig bland alternativen — men beslutet är alltid ditt eget.
-<br><br><strong>Viktigt:</strong> PPM Kollen är ett hobbyverktyg och inte finansiell rådgivning. Rådgör med en behörig rådgivare om du är osäker.`,
-                    en_body: `PPM (Premium Pension) is part of the Swedish pension system where you as an employee can choose where part of your pension is invested among hundreds of funds.
-<br><br>You switch funds on <em>minpension.se</em> or via the Swedish Pensions Agency's app. PPM Kollen helps you navigate the options — but the decision is always yours.
-<br><br><strong>Important:</strong> PPM Kollen is a hobby tool and not financial advice. Consult a qualified advisor if you are unsure.`,
-                    sv_ex: "<strong>minpension.se</strong> → Logga in → Byt fonder → Ange PPM-koden.",
-                    en_ex: "<strong>minpension.se</strong> → Log in → Switch funds → Enter the PPM code."
-                }
-            ];
-
-            /* ── Active pin state ──────────────────────────────────────────── */
-            let _activePin = null;
+            function getPins() {
+                var w = _winner || {}, fc = w.forecast || {}, bt = w.backtest || {};
+                var name = w.name || "&mdash;", ppm = w.ppm_code || "&mdash;";
+                var hitrate = (w.hitrate_q50 || 0).toFixed(1), cov = (w.coverage_pct || 0).toFixed(1), mae = (w.mae_q50 || 0).toFixed(4), score = (w.score || 0).toFixed(3);
+                var q10 = sf(fc.q10 || 0), q50 = sf(fc.q50 || 0), q90 = sf(fc.q90 || 0);
+                var excess = pf(bt.excess_pct != null ? bt.excess_pct : 0), ann = pf(bt.ann_return_pct != null ? bt.ann_return_pct : 0);
+                var sharpe = Number(bt.sharpe || 0).toFixed(2), maxdd = pf(bt.max_drawdown_pct != null ? bt.max_drawdown_pct : 0);
+                var hitBt = (bt.hit_rate_pct || 0).toFixed(1), win = (bt.win_rate_pct || 0).toFixed(1);
+                var strat = pf(bt.cum_return_pct != null ? bt.cum_return_pct : 0), bah = pf(bt.bah_return_pct != null ? bt.bah_return_pct : 0);
+                var weeks = bt.weeks || 0;
+                var sig = w.signal === "BUY" ? "&#9650; KÖP / BUY" : w.signal === "SELL" ? "&#9660; SÄLJ / SELL" : "&#9679; HÅLL / HOLD";
+                var purl = '<a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener" style="color:var(--accent);border-bottom:1px solid color-mix(in oklch,var(--accent) 35%,transparent)">pensionsmyndigheten.se</a>';
+                return {
+                    1: {
+                        sv: { num: "Punkt 1 · Placering", title: "Guldmedaljen — vem vinner just nu?", body: "Emojin &#127945;&#127946;&#127947; visar <strong>fondens rank</strong> bland veckans bäst bedömda fonder. Plats 1 är den fond modellerna för tillfället tror allra mest på.<br><br>Ranken beräknas varje söndag med ny data och kan förändras vecka för vecka.", ex: "<strong>Veckans vinnare:</strong> &#127945; " + esc(name) },
+                        en: { num: "Dot 1 · Rank", title: "The gold medal — who's winning right now?", body: "The emoji &#127945;&#127946;&#127947; shows the <strong>fund's rank</strong> among this week's best-rated funds. Rank 1 is the fund the models currently believe in the most.<br><br>The rank is recalculated every Sunday with new data and can change week to week.", ex: "<strong>This week's winner:</strong> &#127945; " + esc(name) }
+                    },
+                    2: {
+                        sv: { num: "Punkt 2 · Fondnamn", title: "Vilket fond är det?", body: "Det <strong>officiella namnet</strong> på fonden, exakt som det registrerats hos Pensionsmyndigheten. Klicka på Avanza-länken intill för att läsa mer om fondens innehav och historik.", ex: "<strong>Denna vecka:</strong> " + esc(name) },
+                        en: { num: "Dot 2 · Fund name", title: "Which fund is it?", body: "The <strong>official name</strong> of the fund, exactly as registered with the Swedish Pensions Agency. Click the Avanza link next to it to read more about the fund's holdings and history.", ex: "<strong>This week:</strong> " + esc(name) }
+                    },
+                    3: {
+                        sv: { num: "Punkt 3 · PPM-kod & ID", title: "Numret du skriver in för att byta fond", body: "<strong>PPM-koden</strong> (blå pill) är det nummer du anger på " + purl + " när du byter fond i din premiepension. Klicka på koden på startsidan för att kopiera den direkt till urklipp.<br><br><strong>ID</strong> är fondens interna identifierare i systemet.", ex: "<strong>PPM-kod denna vecka:</strong> " + esc(ppm) + " — skriv in detta på pensionsmyndigheten.se" },
+                        en: { num: "Dot 3 · PPM code & ID", title: "The number you enter to switch funds", body: "The <strong>PPM code</strong> (blue pill) is the number you enter on " + purl + " when switching funds in your premium pension. Click the code on the main page to copy it directly to the clipboard.<br><br><strong>ID</strong> is the fund's internal identifier in the system.", ex: "<strong>PPM code this week:</strong> " + esc(ppm) + " — enter this on pensionsmyndigheten.se" }
+                    },
+                    4: {
+                        sv: { num: "Punkt 4 · Signal", title: "Köp, håll eller sälj?", body: "Signalen är den <strong>enkla rekommendationen</strong> baserad på modellens Q50-prognos.<br><br><strong style='color:var(--buy)'>&#9650; KÖP</strong> — Q50 &gt; +0,1%. Modellen förväntar sig uppgång.<br><strong style='color:var(--hold)'>&#9679; HÅLL</strong> — Svag signal (±0,1%) eller fonden var #1 förra veckan.<br><strong style='color:var(--sell)'>&#9660; SÄLJ</strong> — Q50 &lt; −0,1%. Modellen förväntar sig nedgång.<br><br>Signalen är en <em>indikation</em>, inte ett löfte.", ex: "<strong>Denna vecka:</strong> " + sig + " (Q50 = " + q50 + ")" },
+                        en: { num: "Dot 4 · Signal", title: "Buy, hold or sell?", body: "The signal is the <strong>simple recommendation</strong> based on the model's Q50 forecast.<br><br><strong style='color:var(--buy)'>&#9650; BUY</strong> — Q50 &gt; +0.1%. Model expects upside.<br><strong style='color:var(--hold)'>&#9679; HOLD</strong> — Weak signal (±0.1%) or fund was #1 last week.<br><strong style='color:var(--sell)'>&#9660; SELL</strong> — Q50 &lt; −0.1%. Model expects downside.<br><br>The signal is an <em>indication</em>, not a promise.", ex: "<strong>This week:</strong> " + sig + " (Q50 = " + q50 + ")" }
+                    },
+                    5: {
+                        sv: { num: "Punkt 5 · Taggar", title: "Vad är det för typ av fond?", body: "Taggarna visar <strong>fondens karaktär</strong> — branschfokus, geografisk inriktning och risknivå. Hjälper dig snabbt se om fonden passar din portfölj.", ex: "<strong>Denna fond:</strong> " + esc(w.tags || "&mdash;") },
+                        en: { num: "Dot 5 · Tags", title: "What kind of fund is it?", body: "Tags show the <strong>fund's character</strong> — sector focus, geographic orientation and risk level. Help you quickly see whether the fund suits your portfolio.", ex: "<strong>This fund:</strong> " + esc(w.tags || "&mdash;") }
+                    },
+                    6: {
+                        sv: { num: "Punkt 6 · Score", title: "Det samlade betyget", body: "Score är ett <strong>sammansatt tal</strong> som sammanfattar hur bra modellen presterat historiskt för den fonden. Beräknas som:<br><br><em>Score = Träffsäkerhet × Täckning ÷ Medelfel</em><br><br>Högt score = rätt riktning ofta + välkalibrerade intervall + lågt fel.", ex: "<strong>Denna vecka:</strong> Score = " + score },
+                        en: { num: "Dot 6 · Score", title: "The combined grade", body: "Score is a <strong>composite number</strong> summarising how well the model has historically performed for that fund. Calculated as:<br><br><em>Score = Hit rate × Coverage ÷ Mean error</em><br><br>High score = often correct direction + well-calibrated intervals + low error.", ex: "<strong>This week:</strong> Score = " + score }
+                    },
+                    7: {
+                        sv: { num: "Punkt 7 · Träffsäkerhet", title: "Hur ofta har modellen gissat rätt riktning?", body: "Andelen historiska veckor där Q50-prognosen förutsåg rätt riktning (upp/ned).<br><br><strong style='color:var(--buy)'>≥ 70%</strong> = bra (grön)<br><strong style='color:var(--hold)'>50–69%</strong> = acceptabelt<br><strong style='color:var(--sell)'>&lt; 50%</strong> = sämre än slumpen, &#9888;-varning visas", ex: "<strong>Denna fond:</strong> " + hitrate + "% &mdash; " + (parseFloat(hitrate) >= 70 ? "bra, grön markering" : "under 70%, varning visas") },
+                        en: { num: "Dot 7 · Hit rate", title: "How often has the model guessed the right direction?", body: "Share of historical weeks where the Q50 forecast predicted the correct direction (up/down).<br><br><strong style='color:var(--buy)'>≥ 70%</strong> = good (green)<br><strong style='color:var(--hold)'>50–69%</strong> = acceptable<br><strong style='color:var(--sell)'>&lt; 50%</strong> = worse than random, &#9888; warning shown", ex: "<strong>This fund:</strong> " + hitrate + "% &mdash; " + (parseFloat(hitrate) >= 70 ? "good, green indicator" : "below 70%, warning shown") }
+                    },
+                    8: {
+                        sv: { num: "Punkt 8 · Täckning (Coverage)", title: "Hur väl täcker intervallet verkligheten?", body: "Andelen historiska veckor det verkliga utfallet hamnade inom Q10–Q90-spannet. Välkalibrerad modell bör täcka ~80% av utfallen.<br><br>Lågt (&lt;60%) = intervallen är för smala, modellen är för säker på sig själv.", ex: "<strong>Denna fond:</strong> " + cov + "% &mdash; " + (parseFloat(cov) >= 70 ? "välkalibrerat" : "intervallen kan vara för smala") },
+                        en: { num: "Dot 8 · Coverage", title: "How well does the interval cover reality?", body: "Share of historical weeks the actual outcome fell within the Q10–Q90 range. A well-calibrated model should cover ~80% of outcomes.<br><br>Low (&lt;60%) = intervals are too narrow, model is overconfident.", ex: "<strong>This fund:</strong> " + cov + "% &mdash; " + (parseFloat(cov) >= 70 ? "well calibrated" : "intervals may be too narrow") }
+                    },
+                    9: {
+                        sv: { num: "Punkt 9 · MAE Q50", title: "Hur stora fel gör modellen i genomsnitt?", body: "MAE (Mean Absolute Error) = genomsnittligt antal procentenheter fel för Q50-prognosen. Lägre är alltid bättre.<br><br>Ingår i Score-beräkningen — lågt MAE höjer poängen.", ex: "<strong>Denna fond:</strong> MAE = " + mae + " = i genomsnitt " + (parseFloat(mae) * 100).toFixed(2) + " procentenheters avvikelse" },
+                        en: { num: "Dot 9 · MAE Q50", title: "How large are the model's average errors?", body: "MAE (Mean Absolute Error) = average percentage points off for the Q50 forecast. Lower is always better.<br><br>Part of the Score calculation — low MAE raises the score.", ex: "<strong>This fund:</strong> MAE = " + mae + " = on average " + (parseFloat(mae) * 100).toFixed(2) + " percentage points off" }
+                    },
+                    10: {
+                        sv: { num: "Punkt 10 · Prognos Q50", title: "Den mest troliga avkastningen", body: "Q50 (medianen) är <strong>modellens bästa gissning</strong> — det stora talet i mitten av prognosen.<br><br>Hälften av modellscenarierna är bättre, hälften sämre. <em>Inte</em> ett garanterat utfall.", ex: "<strong>Denna vecka:</strong> Q50 = " + q50 + " — prognosen är att fonden " + (Number((fc.q50 || 0)) > 0 ? "stiger" : "faller") },
+                        en: { num: "Dot 10 · Forecast Q50", title: "The most likely return", body: "Q50 (the median) is the <strong>model's best guess</strong> — the large number in the middle of the forecast.<br><br>Half of model scenarios are better, half worse. <em>Not</em> a guaranteed outcome.", ex: "<strong>This week:</strong> Q50 = " + q50 + " — forecast is that the fund " + (Number((fc.q50 || 0)) > 0 ? "rises" : "falls") }
+                    },
+                    11: {
+                        sv: { num: "Punkt 11 · Q10 & Q90", title: "Hur stor är osäkerheten?", body: "<strong>Q10</strong> — pessimistisk sida. I 9 av 10 scenarier förväntas utfallet bli bättre.<br><strong>Q90</strong> — optimistisk sida. Bara 1 av 10 är bättre.<br><br>Brett spann = hög osäkerhet. Smalt spann = modellen är mer säker.", ex: "<strong>Denna vecka:</strong> " + q10 + " &rarr; " + q50 + " &rarr; " + q90 },
+                        en: { num: "Dot 11 · Q10 & Q90", title: "How large is the uncertainty?", body: "<strong>Q10</strong> — pessimistic side. In 9 out of 10 scenarios the outcome is expected to be better.<br><strong>Q90</strong> — optimistic side. Only 1 in 10 is better.<br><br>Wide range = high uncertainty. Narrow range = model is more confident.", ex: "<strong>This week:</strong> " + q10 + " &rarr; " + q50 + " &rarr; " + q90 }
+                    },
+                    12: {
+                        sv: { num: "Punkt 12 · Graf", title: "Se hur prognosen jämförs med verkligheten", body: "<strong>Ensemble-grafen</strong> — det samlade Q10–Q90-bandet från alla modeller mot faktisk historisk kursutveckling. Q50-mittlinjen markeras.<br><br><strong>Per modell-grafen</strong> — LSTM, TCN, GRU och XGBoost individuellt. Bra när alla pekar åt samma håll.<br><br>Bra tecken: bandet täcker de flesta rörelserna, mittlinjen följer trenden.", ex: "Klicka på Ensemble / Per modell ovanför grafen för att byta vy" },
+                        en: { num: "Dot 12 · Chart", title: "See how the forecast compares to reality", body: "<strong>Ensemble chart</strong> — combined Q10–Q90 band from all models against actual historical price movement. Q50 median line is marked.<br><br><strong>Per-model chart</strong> — LSTM, TCN, GRU and XGBoost individually. Good when all point in the same direction.<br><br>Good sign: band covers most movements, median line follows the trend.", ex: "Click Ensemble / Per model above the chart to switch view" }
+                    },
+                    13: {
+                        sv: { num: "Punkt 13 · Backtest", title: "Hur har strategin faktiskt presterat historiskt?", body: "Backtestet jämför <strong>modellstrategin mot att bara hålla fonden</strong> (buy &amp; hold) på data modellen <em>aldrig sett under träning</em>.<br><br><strong>Årsavkastning</strong> — genomsn. % per år. ≥10% = bra, ≥5% = OK.<br><strong>Sharpe</strong> — avkastning per riskenhet. ≥1.0 = bra. Hög Sharpe = bra avkastning utan för stora svängningar.<br><strong>Max nedgång</strong> — värsta topp-till-dal-tapp. −10% = liten, −20% = märkbar.<br><strong>Träffsäkerhet (backtest)</strong> — rätt riktning under just testperioden.<br><strong>Vinstfrekvens</strong> — % veckor med positiv avkastning. ≥55% = bra.<br><strong>Överskott vs B&amp;H</strong> — hur mycket bättre/sämre än att bara sitta still.", ex: "<strong>Denna fond (" + weeks + " v):</strong> Strategi " + strat + " vs B&amp;H " + bah + " &middot; Överskott " + excess + " &middot; Sharpe " + sharpe + " &middot; Årsavk. " + ann },
+                        en: { num: "Dot 13 · Backtest", title: "How has the strategy actually performed historically?", body: "The backtest compares the <strong>model strategy against just holding the fund</strong> (buy &amp; hold) on data the model <em>has never seen during training</em>.<br><br><strong>Annual return</strong> — avg % per year. ≥10% = good, ≥5% = OK.<br><strong>Sharpe</strong> — return per unit of risk. ≥1.0 = good. High Sharpe = good returns without excessive swings.<br><strong>Max drawdown</strong> — worst peak-to-trough decline. −10% = small, −20% = notable.<br><strong>Hit rate (backtest)</strong> — correct direction during the test period.<br><strong>Win rate</strong> — % weeks with positive return. ≥55% = good.<br><strong>Excess vs B&amp;H</strong> — how much better/worse than just sitting still.", ex: "<strong>This fund (" + weeks + " weeks):</strong> Strategy " + strat + " vs B&amp;H " + bah + " &middot; Excess " + excess + " &middot; Sharpe " + sharpe + " &middot; Ann. " + ann }
+                    }
+                };
+            }
 
             window.activatePin = function (num) {
-                const wasActive = _activePin === num;
-                document.querySelectorAll(".pin").forEach(p => p.classList.remove("active"));
-                const panel = document.getElementById("explain-panel");
-                if (wasActive) {
-                    _activePin = null;
-                    panel.classList.remove("visible");
-                    return;
-                }
+                var wasActive = _activePin === num;
+                document.querySelectorAll(".pin").forEach(function (p) { p.classList.remove("active") });
+                var panel = document.getElementById("explain-panel");
+                if (wasActive) { _activePin = null; panel.classList.remove("visible"); return }
                 _activePin = num;
-                document.getElementById("pin-" + num)?.classList.add("active");
-                const d = PINS[num]?.[_lang];
+                var pin = document.getElementById("pin-" + num); if (pin) pin.classList.add("active");
+                var pins = getPins(), d = pins[num] && pins[num][_lang];
                 if (!d) return;
                 document.getElementById("ep-num").textContent = d.num;
                 document.getElementById("ep-title").textContent = d.title;
                 document.getElementById("ep-body").innerHTML = d.body;
-                const exEl = document.getElementById("ep-example");
-                if (d.ex) { exEl.innerHTML = d.ex; exEl.style.display = "block"; }
-                else { exEl.style.display = "none"; }
+                var exEl = document.getElementById("ep-example");
+                if (d.ex) { exEl.innerHTML = d.ex; exEl.style.display = "block" } else { exEl.style.display = "none" }
                 panel.classList.add("visible");
-                setTimeout(() => panel.scrollIntoView({ behavior: "smooth", block: "nearest" }), 50);
+                setTimeout(function () { panel.scrollIntoView({ behavior: "smooth", block: "nearest" }) }, 50);
             };
 
-            /* ── Accordion render ──────────────────────────────────────────── */
+            var ACCORDION = [
+                {
+                    icon: "&#128197;",
+                    sv_title: "Tidshorisont (1v / 4v / 13v / 26v)", en_title: "Time horizon (1w / 4w / 13w / 26w)",
+                    sv_sub: "Hur långt framåt gäller prognosen?", en_sub: "How far ahead does the forecast apply?",
+                    sv_body: "Sidans flikar väljer <strong>hur lång tid framåt</strong> prognosen gäller: 1 vecka, 4 veckor, 13 veckor (kvartal), 26 veckor (halvår).<br><br>Modellerna tränas <em>separat</em> för varje horisont. En fond kan rankas högt på 1v men lågt på 26v.",
+                    en_body: "The page tabs select <strong>how far ahead</strong> the forecast applies: 1 week, 4 weeks, 13 weeks (quarter), 26 weeks (half year).<br><br>Models are trained <em>separately</em> for each horizon. A fund can rank high on 1w but low on 26w.",
+                    sv_ex: "<strong>Tips:</strong> Kort horisont om du planerar att byta snart. Lång horisont för stabilare signal.",
+                    en_ex: "<strong>Tip:</strong> Short horizon if you plan to switch soon. Long horizon for a more stable signal."
+                },
+                {
+                    icon: "&#129302;",
+                    sv_title: "AI-modellerna (LSTM, TCN, GRU, XGBoost)", en_title: "The AI models (LSTM, TCN, GRU, XGBoost)",
+                    sv_sub: "Fyra metoder som röstar tillsammans", en_sub: "Four methods voting together",
+                    sv_body: "<strong>LSTM</strong> — neuralt nätverk med minne, bra på långsiktiga mönster.<br><strong>TCN</strong> — behandlar data parallellt, bra på korta lokala mönster.<br><strong>GRU</strong> — effektivare variant av LSTM.<br><strong>XGBoost</strong> — beslutsträdsbaserat, hittar icke-linjära mönster.<br><br>Alla tränas med <em>kvantilförlust</em> för att producera Q10/Q50/Q90-intervall istället för punktprediktioner.",
+                    en_body: "<strong>LSTM</strong> — neural network with memory, good at long-term patterns.<br><strong>TCN</strong> — processes data in parallel, good at short local patterns.<br><strong>GRU</strong> — more efficient variant of LSTM.<br><strong>XGBoost</strong> — decision-tree based, finds non-linear patterns.<br><br>All trained with <em>quantile loss</em> to produce Q10/Q50/Q90 intervals instead of point predictions.",
+                    sv_ex: "<strong>Ensemble:</strong> alla fyra r&ouml;star &rarr; ett gemensamt Q10/Q50/Q90-band.",
+                    en_ex: "<strong>Ensemble:</strong> all four vote &rarr; one combined Q10/Q50/Q90 band."
+                },
+                {
+                    icon: "&#128202;",
+                    sv_title: "Backtest — alla fält förklarade", en_title: "Backtest — all fields explained",
+                    sv_sub: "Sharpe, max nedgång, vinstfrekvens m.m.", en_sub: "Sharpe, max drawdown, win rate etc.",
+                    sv_body: "Backtestet körs på data modellen <em>aldrig sett under träning</em>.<br><br><strong>Årsavkastning</strong> — genomsnittlig % per år. ≥10% = bra, ≥5% = OK.<br><strong>Sharpe-kvot</strong> — avkastning dividerat med volatilitet. ≥1.0 = bra riskjusterad avkastning. Tar hänsyn till att stor avkastning med extrema svängningar är sämre än stabil avkastning.<br><strong>Max nedgång</strong> — värsta tapp från topp till dal. −10% = liten, −10 till −20% = märkbar, &gt;−20% = stor.<br><strong>Träffsäkerhet (backtest)</strong> — rätt riktning under testperioden (kan skilja från totala träffsäkerheten ovan).<br><strong>Vinstfrekvens</strong> — andel veckor med positiv avkastning. ≥55% = bra.<br><strong>Överskott vs B&amp;H</strong> — hur mycket bättre/sämre signalstrategin var jämfört med att bara hålla fonden.",
+                    en_body: "The backtest runs on data the model <em>has never seen during training</em>.<br><br><strong>Annual return</strong> — avg % per year. ≥10% = good, ≥5% = OK.<br><strong>Sharpe ratio</strong> — return divided by volatility. ≥1.0 = good risk-adjusted return. Accounts for the fact that large returns with extreme swings are worse than stable returns.<br><strong>Max drawdown</strong> — worst peak-to-trough decline. −10% = small, −10 to −20% = notable, &gt;−20% = large.<br><strong>Hit rate (backtest)</strong> — correct direction during the test period (may differ from overall hit rate above).<br><strong>Win rate</strong> — share of weeks with positive return. ≥55% = good.<br><strong>Excess vs B&amp;H</strong> — how much better/worse the signal strategy was vs just holding the fund.",
+                    sv_ex: "<strong>Tolkning:</strong> Sharpe 1.59 + Årsavk +35% + Överskott +35% = stark historisk prestanda.",
+                    en_ex: "<strong>Interpretation:</strong> Sharpe 1.59 + Ann. +35% + Excess +35% = strong historical performance."
+                },
+                {
+                    icon: "&#9888;&#65039;",
+                    sv_title: "Varningsmarkeringen — låg träffsäkerhet", en_title: "Warning mark — low hit rate",
+                    sv_sub: "När modellen är osäkrare", en_sub: "When the model is less reliable",
+                    sv_body: "Om en fond visas med <strong>&#9888; Träffsäkerhet &lt;70%</strong> har modellen historiskt haft svårt att förutsäga rätt riktning. Fonden kan ändå dyka upp i listan om Score är hög relativt andra fonder.<br><br>Ta KÖP/SÄLJ-signalen med extra försiktighet.",
+                    en_body: "If a fund shows <strong>&#9888; Hit rate &lt;70%</strong> the model has historically struggled to predict the correct direction. The fund may still appear if its Score is high relative to others.<br><br>Take the BUY/SELL signal with extra caution.",
+                    sv_ex: "&#9888; &lt;70% = modellen hade fel riktning mer &auml;n 3 av 10 historiska veckor.",
+                    en_ex: "&#9888; &lt;70% = model had wrong direction more than 3 in 10 historical weeks."
+                },
+                {
+                    icon: "&#128260;",
+                    sv_title: "När uppdateras prognosen?", en_title: "When is the forecast updated?",
+                    sv_sub: "Automatiskt varje söndag kl 01:00", en_sub: "Automatically every Sunday at 01:00",
+                    sv_body: "Hela systemet k&ouml;rs autonomt varje s&ouml;ndag. Alla ~274 fonder tr&auml;nas om med ny data, top 5 v&auml;ljs ut och predictions.json publiceras automatiskt.<br><br>Datum f&ouml;r senaste k&ouml;rning syns i informationsraden p&aring; startsidan.",
+                    en_body: "The entire system runs autonomously every Sunday. All ~274 funds are retrained with new data, top 5 are re-selected and predictions.json is published automatically.<br><br>The date of the latest run is shown in the info bar on the main page.",
+                    sv_ex: "<strong>Genererad: 2026-05-25</strong> = prognosen &auml;r fr&aring;n s&ouml;ndagen den 25 maj.",
+                    en_ex: "<strong>Generated: 2026-05-25</strong> = the forecast is from Sunday 25 May."
+                },
+                {
+                    icon: "&#127974;",
+                    sv_title: "Vad är PPM-systemet?", en_title: "What is the PPM system?",
+                    sv_sub: "Din premiepension — kort förklaring", en_sub: "Your premium pension — brief explanation",
+                    sv_body: 'PPM (Premiepension) &auml;r den del av svensk pension d&auml;r du kan v&auml;lja bland hundratals fonder. Du byter fonder via <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a>.<br><br>PPM Kollen hj&auml;lper dig orientera dig bland alternativen &mdash; men beslutet &auml;r alltid ditt eget. R&aring;dgj med en beh&ouml;rig r&aring;dgivare om du &auml;r os&auml;ker.',
+                    en_body: 'PPM (Premium Pension) is the part of Swedish pension where you can choose among hundreds of funds. You switch funds via <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a>.<br><br>PPM Kollen helps you navigate the options &mdash; but the decision is always yours. Consult a qualified advisor if unsure.',
+                    sv_ex: "<strong>pensionsmyndigheten.se</strong> &rarr; Logga in &rarr; Mina fonder &rarr; Byt fonder &rarr; Ange PPM-koden.",
+                    en_ex: "<strong>pensionsmyndigheten.se</strong> &rarr; Log in &rarr; My funds &rarr; Switch funds &rarr; Enter PPM code."
+                }
+            ];
+
             function renderAccordion() {
-                const list = document.getElementById("accordion-list");
-                if (!list) return;
-                list.innerHTML = ACCORDION.map((item, i) => {
-                    const title = _lang === "sv" ? item.sv_title : item.en_title;
-                    const sub = _lang === "sv" ? item.sv_sub : item.en_sub;
-                    const body = _lang === "sv" ? item.sv_body : item.en_body;
-                    const ex = _lang === "sv" ? item.sv_ex : item.en_ex;
-                    return `<div class="accordion-item" id="acc-${i}">
-        <button class="accordion-trigger" onclick="toggleAcc(${i})" aria-expanded="false">
-          <div class="accordion-icon">${item.icon}</div>
-          <div class="accordion-label">
-            <div class="accordion-title">${title}</div>
-            <div class="accordion-subtitle">${sub}</div>
-          </div>
-          <span class="accordion-chevron">▾</span>
-        </button>
-        <div class="accordion-body">
-          <div class="accordion-desc">${body}</div>
-          ${ex ? `<div class="accordion-example">${ex}</div>` : ""}
-        </div>
-      </div>`;
+                var list = document.getElementById("accordion-list"); if (!list) return;
+                list.innerHTML = ACCORDION.map(function (item, i) {
+                    var title = _lang === "sv" ? item.sv_title : item.en_title;
+                    var sub = _lang === "sv" ? item.sv_sub : item.en_sub;
+                    var body = _lang === "sv" ? item.sv_body : item.en_body;
+                    var ex = _lang === "sv" ? item.sv_ex : item.en_ex;
+                    return '<div class="accordion-item" id="acc-' + i + '">' +
+                        '<button class="accordion-trigger" onclick="window.toggleAcc(' + i + ')" aria-expanded="false">' +
+                        '<div class="accordion-icon">' + item.icon + '</div>' +
+                        '<div class="accordion-label"><div class="accordion-title">' + title + '</div><div class="accordion-subtitle">' + sub + '</div></div>' +
+                        '<span class="accordion-chevron">&#9662;</span>' +
+                        '</button>' +
+                        '<div class="accordion-body"><div class="accordion-desc">' + body + '</div>' + (ex ? '<div class="accordion-example">' + ex + '</div>' : '') +
+                        '</div></div>'
                 }).join("");
             }
 
             window.toggleAcc = function (i) {
-                const el = document.getElementById("acc-" + i);
-                const isOpen = el.classList.contains("open");
+                var el = document.getElementById("acc-" + i);
+                var isOpen = el.classList.contains("open");
                 el.classList.toggle("open", !isOpen);
                 el.querySelector(".accordion-trigger").setAttribute("aria-expanded", String(!isOpen));
             };
 
-            /* ── Init ──────────────────────────────────────────────────────── */
-            renderAccordion();
+            function fetchFirst(urls) { return urls.reduce(function (chain, url) { return chain.catch(function () { return fetch(url).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json() }) }) }, Promise.reject()) }
 
+            fetchFirst(PREDICTIONS_URLS).then(function (data) {
+                var funds = (data.horizons && data.horizons["1w"]) || [];
+                if (!funds.length) { document.getElementById("card-container").innerHTML = '<p class="state-msg">Ingen fonddata tillg&auml;nglig.</p>'; return }
+                _winner = funds[0]; buildCard(_winner); renderAccordion();
+            }).catch(function () {
+                document.getElementById("card-container").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json.</p>';
+                renderAccordion();
+            });
+
+            renderAccordion();
         })();
     </script>
 </body>
