@@ -1650,7 +1650,7 @@
                 document.body.classList.toggle("lang-en", l === "en");
                 var lb = document.getElementById("lang-btn");
                 if (lb) lb.textContent = l === "sv" ? "EN" : "SV";
-                try { localStorage.setItem("ppm-lang", l); } catch (e) { }
+                try { localStorage.setItem("ppm-kollen-lang", l); } catch (e) { }
                 if (_currentFund) { document.getElementById("card-wrap").innerHTML = renderCard(_currentFund); }
                 if (_active && _pins) {
                     var p = _pins[_active];
@@ -1667,7 +1667,7 @@
             }
             (function () {
                 var s = "sv";
-                try { s = localStorage.getItem("ppm-lang") || "sv"; } catch (e) { }
+                try { s = localStorage.getItem("ppm-kollen-lang") || "sv"; } catch (e) { }
                 applyLang(s);
             })();
 
