@@ -2009,8 +2009,8 @@
                 var indPath = ch.individual ? ("./" + ch.individual) : null;
                 function chartPane(id, path, active) {
                     var cls = "chart-pane" + (active ? " active" : "");
-                    return '<div class="' + cls + '" id="' + id + '">' + (path ? '<img src="' + esc(path) + '" alt=" + t('chart_img_alt') + " loading="lazy">'
-                        : '<div class="chart-missing">Grafen genereras av systemet varje söndag</div>') + '</div>'
+                    return '<div class="' + cls + '" id="' + id + '">' + (path ? '<img src="' + esc(path) + '" alt="' + t('chart_img_alt') + '" loading="lazy">'
+                        : '<div class="chart-missing">' + t('chart_missing_msg') + '</div>') + '</div>'
                 }
 
                 var tagsHtml = (f.tags || "").split(",").map(function (t) { return '<span class="tag">' + esc(t.trim()) + '</span>' }).join("");
