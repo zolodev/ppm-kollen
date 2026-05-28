@@ -19,6 +19,8 @@
     content="Hobbyproject som kombinerar LSTM, TCN, GRU och XGBoost för att prognostisera PPM-fondavkastning." />
   <meta name="twitter:image" content="https://ppmkollen.se/og-preview.png" />
   <meta name="theme-color" content="#1a1f2e" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23334' /%3E%3Cpath d='M3 19 L9 12 L13 16 L21 6' fill='none' stroke='%2399ccee' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='21' cy='6' r='1.6' fill='%2399ccee'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -1031,7 +1033,7 @@
             <div class="model-desc" data-lang="en">Recurrent neural networks with built-in memory, skilled at learning
               long-term dependencies in time series. Forms the backbone of the ensemble.</div>
           </div>
-          <div class="model-card featured">
+          <div class="model-card">
             <div class="model-name">GRU</div>
             <div class="model-full">Gated Recurrent Unit</div>
             <div class="model-desc" data-lang="sv">En effektivare variant av LSTM med färre parametrar. Tränas snabbare
@@ -1049,7 +1051,7 @@
               capture patterns at multiple time scales. Complements the recurrent models with shorter, local patterns.
             </div>
           </div>
-          <div class="model-card featured">
+          <div class="model-card">
             <div class="model-name">XGBoost</div>
             <div class="model-full">Extreme Gradient Boosting</div>
             <div class="model-desc" data-lang="sv">Gradientförstärkt beslutsträdsensemble. Fångar icke-linjära samband i
@@ -1202,7 +1204,8 @@
           <div class="stat-row">
             <span class="stat-label" data-lang="sv">Modelltyper</span>
             <span class="stat-label" data-lang="en">Model types</span>
-            <span class="stat-value">LSTM · TCN · GRU · XGBoost</span>
+            <span class="stat-value" style="font-size:0.72rem;text-align:right;white-space:normal;max-width:55%">LSTM ·
+              GRU<br>TCN · XGBoost</span>
           </div>
           <div class="stat-row">
             <span class="stat-label" data-lang="sv">Uppdateringsfrekvens</span>
