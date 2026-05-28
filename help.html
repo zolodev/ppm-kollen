@@ -995,20 +995,24 @@
         }
 
         /* explanation drawer below card */
-        .explain-drawer {
-            display: none;
-            margin-top: 1.25rem;
+        /* floating tooltip card */
+        .ftip {
+            position: fixed;
+            z-index: 9999;
+            width: 340px;
+            max-width: calc(100vw - 2rem);
             background: var(--bg-card);
             border: 1px solid var(--accent);
             border-radius: 14px;
-            overflow: hidden;
-            animation: slideIn .18s ease
+            box-shadow: var(--shadow-lg);
+            display: none;
+            animation: ftipIn .14s ease
         }
 
-        @keyframes slideIn {
+        @keyframes ftipIn {
             from {
                 opacity: 0;
-                transform: translateY(-6px)
+                transform: scale(.97) translateY(-4px)
             }
 
             to {
@@ -1017,89 +1021,94 @@
             }
         }
 
-        .explain-drawer.open {
+        .ftip.open {
             display: block
         }
 
-        .explain-inner {
-            padding: 1.5rem 1.75rem
+        .ftip-inner {
+            padding: 1.25rem 1.4rem
         }
 
-        .explain-header {
+        .ftip-header {
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            margin-bottom: 1rem
+            margin-bottom: 0.85rem
         }
 
-        .explain-num {
-            width: 32px;
-            height: 32px;
+        .ftip-num {
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             background: var(--accent);
             color: var(--bg);
             font-family: "IBM Plex Mono", monospace;
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             font-weight: 600;
             display: grid;
             place-items: center;
             flex-shrink: 0
         }
 
-        .explain-eyebrow {
+        .ftip-eyebrow {
             font-family: "IBM Plex Mono", monospace;
-            font-size: 0.68rem;
+            font-size: 0.65rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: var(--accent)
         }
 
-        .explain-title {
+        .ftip-title {
             font-family: "IBM Plex Serif", serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 500;
             margin-top: 2px;
             line-height: 1.2
         }
 
-        .explain-body {
-            font-size: 0.95rem;
+        .ftip-body {
+            font-size: 0.88rem;
             color: var(--text-muted);
-            line-height: 1.8
+            line-height: 1.75
         }
 
-        .explain-body strong {
+        .ftip-body strong {
             color: var(--text);
             font-weight: 600
         }
 
-        .explain-body em {
+        .ftip-body em {
             color: var(--accent);
             font-style: normal;
             font-weight: 500
         }
 
-        .explain-example {
-            margin-top: 1rem;
-            padding: 0.85rem 1rem;
-            background: var(--bg-sunken);
-            border-radius: 10px;
-            border-left: 3px solid var(--accent);
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            line-height: 1.65
+        .ftip-body a {
+            color: var(--accent);
+            border-bottom: 1px solid color-mix(in oklch, var(--accent) 40%, transparent)
         }
 
-        .explain-example strong {
+        .ftip-example {
+            margin-top: 0.85rem;
+            padding: 0.7rem 0.85rem;
+            background: var(--bg-sunken);
+            border-radius: 9px;
+            border-left: 3px solid var(--accent);
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6
+        }
+
+        .ftip-example strong {
             color: var(--text)
         }
 
-        .explain-close {
+        .ftip-close {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: 28px;
-            height: 28px;
+            top: 0.75rem;
+            right: 0.85rem;
+            width: 26px;
+            height: 26px;
             border-radius: 50%;
             border: 1px solid var(--border-em);
             background: transparent;
@@ -1107,16 +1116,23 @@
             display: grid;
             place-items: center;
             font-size: 1rem;
-            transition: background .15s, color .15s
+            line-height: 1;
+            transition: background .15s, color .15s;
+            cursor: pointer
         }
 
-        .explain-close:hover {
+        .ftip-close:hover {
             background: var(--bg-panel);
             color: var(--text)
         }
 
-        .explain-drawer {
-            position: relative
+        .ftip-arrow {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            transform: rotate(45deg)
         }
 
         /* hint bar above card */
@@ -1424,19 +1440,19 @@
             <p class="state-msg">Laddar veckans vinnare&#8230;</p>
         </div>
 
-        <!-- explanation drawer, rendered below card -->
-        <div class="explain-drawer" id="explain-drawer">
-            <button class="explain-close" id="explain-close" aria-label="St&#228;ng">&#215;</button>
-            <div class="explain-inner">
-                <div class="explain-header">
-                    <div class="explain-num" id="ep-num">1</div>
+        <!-- floating tooltip card — appended to body by JS, positioned via JS -->
+        <div class="ftip" id="ftip" role="dialog" aria-modal="false">
+            <button class="ftip-close" id="ftip-close" aria-label="St&#228;ng">&#215;</button>
+            <div class="ftip-inner">
+                <div class="ftip-header">
+                    <div class="ftip-num" id="ep-num">1</div>
                     <div>
-                        <div class="explain-eyebrow" id="ep-eyebrow">Element</div>
-                        <div class="explain-title" id="ep-title">Rubrik</div>
+                        <div class="ftip-eyebrow" id="ep-eyebrow">Element</div>
+                        <div class="ftip-title" id="ep-title">Rubrik</div>
                     </div>
                 </div>
-                <div class="explain-body" id="ep-body"></div>
-                <div class="explain-example" id="ep-example" style="display:none"></div>
+                <div class="ftip-body" id="ep-body"></div>
+                <div class="ftip-example" id="ep-example" style="display:none"></div>
             </div>
         </div>
 
@@ -1637,11 +1653,47 @@
                 }
             }
 
-            /* ── active pin state ── */
+            /* ── floating tooltip ── */
             var _active = null;
             var _pins = null;
+            var _ftip = null; // lazily fetched
 
-            function openExplain(num) {
+            function ftip() { return _ftip || (_ftip = document.getElementById("ftip")) }
+
+            function positionTip(btn) {
+                var t = ftip();
+                t.style.left = "0"; t.style.top = "0"; // reset so we get real offsetWidth
+                t.style.display = "block"; // temporarily visible to measure
+                var tr = btn.getBoundingClientRect();
+                var tw = t.offsetWidth, th = t.offsetHeight;
+                var vw = window.innerWidth, vh = window.innerHeight;
+                var margin = 10;
+                var left, top;
+                // prefer right of badge; fall back to left
+                if (tr.right + tw + margin <= vw) {
+                    left = tr.right + margin;
+                } else if (tr.left - tw - margin >= 0) {
+                    left = tr.left - tw - margin;
+                } else {
+                    left = Math.max(margin, Math.min(tr.left, vw - tw - margin));
+                }
+                // prefer below badge; fall back to above
+                if (tr.bottom + th + margin <= vh) {
+                    top = tr.bottom + margin;
+                } else if (tr.top - th - margin >= 0) {
+                    top = tr.top - th - margin;
+                } else {
+                    top = Math.max(margin, vh - th - margin);
+                }
+                // clamp
+                left = Math.max(margin, Math.min(left, vw - tw - margin));
+                top = Math.max(margin, Math.min(top, vh - th - margin));
+                t.style.left = left + "px";
+                t.style.top = top + "px";
+                t.style.display = ""; // let .open class handle it
+            }
+
+            function openExplain(num, btn) {
                 if (!_pins) return;
                 var p = _pins[num]; if (!p) return;
                 if (_active === num) { closeExplain(); return }
@@ -1653,16 +1705,21 @@
                 document.getElementById("ep-body").innerHTML = p.bo;
                 var eg = document.getElementById("ep-example");
                 if (p.eg) { eg.innerHTML = p.eg; eg.style.display = "block" } else { eg.style.display = "none" }
-                var drawer = document.getElementById("explain-drawer");
-                drawer.classList.add("open");
-                setTimeout(function () { drawer.scrollIntoView({ behavior: "smooth", block: "nearest" }) }, 80);
+                positionTip(btn || document.querySelector(".hb.active") || document.body);
+                ftip().classList.add("open");
             }
             function closeExplain() {
                 _active = null;
                 document.querySelectorAll(".hb").forEach(function (b) { b.classList.remove("active") });
-                document.getElementById("explain-drawer").classList.remove("open");
+                ftip().classList.remove("open");
             }
-            document.getElementById("explain-close").addEventListener("click", closeExplain);
+            document.getElementById("ftip-close").addEventListener("click", closeExplain);
+            document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeExplain() });
+            document.addEventListener("click", function (e) {
+                var t = ftip();
+                if (!t.classList.contains("open")) return;
+                if (!t.contains(e.target) && !e.target.classList.contains("hb")) closeExplain();
+            });
             window.openExplain = openExplain;
 
             /* ── badge helper ── */
