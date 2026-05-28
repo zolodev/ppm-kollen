@@ -2109,60 +2109,69 @@
                     ti_sv: "Vad är PPM-systemet?", ti_en: "What is the PPM system?",
                     sub_sv: "Premiepension — ett sparande du kanske inte visste om", sub_en: "Premium pension — savings you might not know about",
                     tx_sv: 'Din <strong>premiepension</strong> är en del av din lön som staten lägger undan varje månad sedan du börjar jobba. Pengarna placeras i fonder och du kan själv välja vilka — annars hamnar de i statens standardval.<br><br>Du byter fonder på <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a>. PPM Kollen hjälper dig välja men beslutet är alltid ditt eget.',
-                    tx_en: 'Your <strong>premium pension</strong> is part of your salary set aside by the state every month since you start working. The money is invested in funds and you can choose which ones — otherwise they end up in the state's default fund.< br > <br>You switch funds on <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a>. PPM Kollen helps you choose but the decision is always yours.',
-                        eg_sv:"<strong>Tips:</strong> Logga in → Mina sidor → Mina fonder → Välj fonder → Ange PPM-koden.",
-                        eg_en:"<strong>Tip:</strong> Log in → My pages → My funds → Choose funds → Enter the PPM code." },
-                        {ic:"🤖",
-                        ti_sv:"Hur fungerar AI-prognoserna?", ti_en:"How do the AI forecasts work?",
-                        sub_sv:"Fyra dataprogram som röstar ihop", sub_en:"Four programs voting together",
-                        tx_sv:'PPM Kollen tränar <strong>fyra AI-modeller</strong> på historisk kursdata:<br><br>🧠 <strong>LSTM</strong> — neuralt nätverk med minne, lär sig mönster över tid.<br>🧠 <strong>GRU</strong> — snabbare variant av LSTM.<br>🧠 <strong>TCN</strong> — ser korta mönster parallellt.<br>🧠 <strong>XGBoost</strong> — beslutsträd som hittar icke-linjära samband.<br><br>Alla fyra röstar ihop → ett intervall (Q10/Q50/Q90) istället för en enda siffra.',
-                            tx_en:'PPM Kollen trains <strong>four AI models</strong> on historical price data:<br><br>🧠 <strong>LSTM</strong> — neural network with memory, learns patterns over time.<br>🧠 <strong>GRU</strong> — faster variant of LSTM.<br>🧠 <strong>TCN</strong> — looks at short patterns in parallel.<br>🧠 <strong>XGBoost</strong> — decision tree that finds non-linear patterns.<br><br>All four vote together → a range (Q10/Q50/Q90) instead of a single number.',
-                                eg_sv:"Fyra metoder ger ett mer robust resultat än att lita på en enda.",
-                    eg_en:"Four methods give a more robust result than relying on just one." },
-                                {ic:"📅",
-                                ti_sv:"Hur ofta uppdateras listan?", ti_en:"How often is the list updated?",
-                                sub_sv:"Automatiskt varje söndag kl 01:00", sub_en:"Automatically every Sunday at 01:00",
-                                tx_sv:'Varje söndag tidigt på morgonen körs hela systemet automatiskt:<br><br>1. Ny kursdata hämtas för alla ~274 fonder.<br>2. Alla fyra AI-modeller tränas om.<br>3. Prognoser beräknas och de bästa fonderna väljs ut.<br>4. Webbsidan uppdateras.',
-                                    tx_en:'Every Sunday early in the morning the entire system runs automatically:<br><br>1. New price data is fetched for all ~274 funds.<br>2. All four AI models are retrained.<br>3. Forecasts are calculated and the best funds are selected.<br>4. The website is updated.',
-                                        eg_sv:"Datum för senaste uppdatering syns på startsidan.",
-                    eg_en:"The date of the latest update is shown on the main page." },
-                                        {ic:"⚠️",
-                                        ti_sv:"Varför ska jag INTE lita blint på det här?", ti_en:"Why should I NOT blindly trust this?",
-                                        sub_sv:"Viktiga begränsningar", sub_en:"Important limitations",
-                                        tx_sv:'PPM Kollen är ett <strong>utbildningsverktyg</strong>, inte finansiell rådgivning:<br><br>📉 Modellerna kan ha fel — marknader är oförutsägbara.<br>🌍 Oväntade händelser (krig, kriser, räntebesked) kan göra historiska mönster irrelevanta.<br>📊 Backtest visar historiken — det garanterar inte framtiden.<br>🔄 En vinnare i veckan behöver inte vara vinnare nästa.<br><br>Rådgör alltid med en finansrådgivare om du är osäker.',
-                                            tx_en:'PPM Kollen is an <strong>educational tool</strong>, not financial advice:<br><br>📉 The models can be wrong — markets are unpredictable.<br>🌍 Unexpected events (war, crises, interest rate decisions) can make historical patterns irrelevant.<br>📊 Backtest shows history — it does not guarantee the future.<br>🔄 A winner this week may not be a winner next week.<br><br>Always consult a financial advisor if you are unsure.',
-                    eg_sv:"", eg_en:"" },
-                                                {ic:"💰",
-                                                ti_sv:"Hur byter jag faktiskt fond?", ti_en:"How do I actually switch fund?",
-                                                sub_sv:"Steg för steg", sub_en:"Step by step",
-                                                tx_sv:'1. Gå till <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a><br>2. Logga in med BankID<br>3. Klicka Mina sidor → Mina fonder<br>4. Välj Byt fonder<br>5. Ange <strong>PPM-koden</strong> från PPM Kollen<br>6. Välj andel av dina pensionspengar<br>7. Bekräfta med BankID<br><br>Du kan ha upp till 5 fonder och byta hur ofta du vill — det är gratis.',
-                                                    tx_en:'1. Go to <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a><br>2. Log in with BankID<br>3. Click My pages → My funds<br>4. Select Switch funds<br>5. Enter the <strong>PPM code</strong> from PPM Kollen<br>6. Choose what share of your pension money<br>7. Confirm with BankID<br><br>You can have up to 5 funds and switch as often as you like — it's free.',
-                                                        eg_sv:"<strong>OBS:</strong> Klicka på det blåa PPM-numret på kortet för att kopiera koden direkt.",
-                                                        eg_en:"<strong>Note:</strong> Click the blue PPM number on the card to copy the code directly." }
-                                                        ];
-                                                        var accList = document.getElementById("acc-list");
-                                                        FAQ.forEach(function (f, i) {
+                    tx_en: 'Your <strong>premium pension</strong> is part of your salary set aside by the state every month since you start working. The money is invested in funds and you can choose which ones — otherwise they end up in the state\'s default fund.< br > <br>You switch funds on <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a>. PPM Kollen helps you choose but the decision is always yours.',
+                    eg_sv: "<strong>Tips:</strong> Logga in → Mina sidor → Mina fonder → Välj fonder → Ange PPM-koden.",
+                    eg_en: "<strong>Tip:</strong> Log in → My pages → My funds → Choose funds → Enter the PPM code."
+                },
+                {
+                    ic: "🤖",
+                    ti_sv: "Hur fungerar AI-prognoserna?", ti_en: "How do the AI forecasts work?",
+                    sub_sv: "Fyra dataprogram som röstar ihop", sub_en: "Four programs voting together",
+                    tx_sv: 'PPM Kollen tränar <strong>fyra AI-modeller</strong> på historisk kursdata:<br><br>🧠 <strong>LSTM</strong> — neuralt nätverk med minne, lär sig mönster över tid.<br>🧠 <strong>GRU</strong> — snabbare variant av LSTM.<br>🧠 <strong>TCN</strong> — ser korta mönster parallellt.<br>🧠 <strong>XGBoost</strong> — beslutsträd som hittar icke-linjära samband.<br><br>Alla fyra röstar ihop → ett intervall (Q10/Q50/Q90) istället för en enda siffra.',
+                    tx_en: 'PPM Kollen trains <strong>four AI models</strong> on historical price data:<br><br>🧠 <strong>LSTM</strong> — neural network with memory, learns patterns over time.<br>🧠 <strong>GRU</strong> — faster variant of LSTM.<br>🧠 <strong>TCN</strong> — looks at short patterns in parallel.<br>🧠 <strong>XGBoost</strong> — decision tree that finds non-linear patterns.<br><br>All four vote together → a range (Q10/Q50/Q90) instead of a single number.',
+                    eg_sv: "Fyra metoder ger ett mer robust resultat än att lita på en enda.",
+                    eg_en: "Four methods give a more robust result than relying on just one."
+                },
+                {
+                    ic: "📅",
+                    ti_sv: "Hur ofta uppdateras listan?", ti_en: "How often is the list updated?",
+                    sub_sv: "Automatiskt varje söndag kl 01:00", sub_en: "Automatically every Sunday at 01:00",
+                    tx_sv: 'Varje söndag tidigt på morgonen körs hela systemet automatiskt:<br><br>1. Ny kursdata hämtas för alla ~274 fonder.<br>2. Alla fyra AI-modeller tränas om.<br>3. Prognoser beräknas och de bästa fonderna väljs ut.<br>4. Webbsidan uppdateras.',
+                    tx_en: 'Every Sunday early in the morning the entire system runs automatically:<br><br>1. New price data is fetched for all ~274 funds.<br>2. All four AI models are retrained.<br>3. Forecasts are calculated and the best funds are selected.<br>4. The website is updated.',
+                    eg_sv: "Datum för senaste uppdatering syns på startsidan.",
+                    eg_en: "The date of the latest update is shown on the main page."
+                },
+                {
+                    ic: "⚠️",
+                    ti_sv: "Varför ska jag INTE lita blint på det här?", ti_en: "Why should I NOT blindly trust this?",
+                    sub_sv: "Viktiga begränsningar", sub_en: "Important limitations",
+                    tx_sv: 'PPM Kollen är ett <strong>utbildningsverktyg</strong>, inte finansiell rådgivning:<br><br>📉 Modellerna kan ha fel — marknader är oförutsägbara.<br>🌍 Oväntade händelser (krig, kriser, räntebesked) kan göra historiska mönster irrelevanta.<br>📊 Backtest visar historiken — det garanterar inte framtiden.<br>🔄 En vinnare i veckan behöver inte vara vinnare nästa.<br><br>Rådgör alltid med en finansrådgivare om du är osäker.',
+                    tx_en: 'PPM Kollen is an <strong>educational tool</strong>, not financial advice:<br><br>📉 The models can be wrong — markets are unpredictable.<br>🌍 Unexpected events (war, crises, interest rate decisions) can make historical patterns irrelevant.<br>📊 Backtest shows history — it does not guarantee the future.<br>🔄 A winner this week may not be a winner next week.<br><br>Always consult a financial advisor if you are unsure.',
+                    eg_sv: "", eg_en: ""
+                },
+                {
+                    ic: "💰",
+                    ti_sv: "Hur byter jag faktiskt fond?", ti_en: "How do I actually switch fund?",
+                    sub_sv: "Steg för steg", sub_en: "Step by step",
+                    tx_sv: '1. Gå till <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a><br>2. Logga in med BankID<br>3. Klicka Mina sidor → Mina fonder<br>4. Välj Byt fonder<br>5. Ange <strong>PPM-koden</strong> från PPM Kollen<br>6. Välj andel av dina pensionspengar<br>7. Bekräfta med BankID<br><br>Du kan ha upp till 5 fonder och byta hur ofta du vill — det är gratis.',
+                    tx_en: '1. Go to <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a><br>2. Log in with BankID<br>3. Click My pages → My funds<br>4. Select Switch funds<br>5. Enter the <strong>PPM code</strong> from PPM Kollen<br>6. Choose what share of your pension money<br>7. Confirm with BankID<br><br>You can have up to 5 funds and switch as often as you like — it's free.',
+                                                        eg_sv: "<strong>OBS:</strong> Klicka på det blåa PPM-numret på kortet för att kopiera koden direkt.",
+                    eg_en: "<strong>Note:</strong> Click the blue PPM number on the card to copy the code directly."
+                }
+            ];
+            var accList = document.getElementById("acc-list");
+            FAQ.forEach(function (f, i) {
                 var div = document.createElement("div");
-                                                        div.className = "acc-item";
-                                                        div.innerHTML =
-                                                        '<button class="acc-trigger" onclick="toggleAcc(' + i + ')" aria-expanded="false">' +
-                                                            '<div class="acc-icon">' + f.ic + '</div>' +
-                                                            '<div class="acc-label">' +
-                                                                '<div class="acc-title"><span data-lang="sv">' + f.ti_sv + '</span><span data-lang="en">' + f.ti_en + '</span></div>' +
-                                                                '<div class="acc-sub"><span data-lang="sv">' + f.sub_sv + '</span><span data-lang="en">' + f.sub_en + '</span></div>' +
-                                                                '</div>' +
-                                                            '<span class="acc-chevron">&#9662;</span>' +
-                                                            '</button>' +
-                                                        '<div class="acc-body">' +
-                                                            '<div class="acc-text"><span data-lang="sv">' + f.tx_sv + '</span><span data-lang="en">' + f.tx_en + '</span></div>' +
-                                                            (f.eg_sv ? '<div class="acc-eg"><span data-lang="sv">' + f.eg_sv + '</span><span data-lang="en">' + f.eg_en + '</span></div>' : '') +
-                                                            '</div>';
-                                                        accList.appendChild(div);
+                div.className = "acc-item";
+                div.innerHTML =
+                    '<button class="acc-trigger" onclick="toggleAcc(' + i + ')" aria-expanded="false">' +
+                    '<div class="acc-icon">' + f.ic + '</div>' +
+                    '<div class="acc-label">' +
+                    '<div class="acc-title"><span data-lang="sv">' + f.ti_sv + '</span><span data-lang="en">' + f.ti_en + '</span></div>' +
+                    '<div class="acc-sub"><span data-lang="sv">' + f.sub_sv + '</span><span data-lang="en">' + f.sub_en + '</span></div>' +
+                    '</div>' +
+                    '<span class="acc-chevron">&#9662;</span>' +
+                    '</button>' +
+                    '<div class="acc-body">' +
+                    '<div class="acc-text"><span data-lang="sv">' + f.tx_sv + '</span><span data-lang="en">' + f.tx_en + '</span></div>' +
+                    (f.eg_sv ? '<div class="acc-eg"><span data-lang="sv">' + f.eg_sv + '</span><span data-lang="en">' + f.eg_en + '</span></div>' : '') +
+                    '</div>';
+                accList.appendChild(div);
             });
-                                                        window.toggleAcc = function (i) {
+            window.toggleAcc = function (i) {
                 var el = accList.children[i]; if (!el) return;
-                                                        var open = el.classList.toggle("open");
-                                                        el.querySelector(".acc-trigger").setAttribute("aria-expanded", String(open));
+                var open = el.classList.toggle("open");
+                el.querySelector(".acc-trigger").setAttribute("aria-expanded", String(open));
             };
 
         })();
