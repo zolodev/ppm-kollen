@@ -7,12 +7,18 @@
   <title>Om projektet — PPM Kollen</title>
   <meta name="description"
     content="Bakgrunden och metodiken bakom PPM Kollen — ett hobbyprojekt som använder maskininlärning för att ranka PPM-fonder.">
-  <meta property="og:title" content="Om PPM Kollen — Bakgrund &amp; Metodik">
+  <meta property="og:title" content="Om PPM Kollen — Bakgrund &amp; Metodik" />
   <meta property="og:description"
-    content="Hobbyproject som kombinerar LSTM och TCN-modeller för att prognostisera PPM-fondavkastning.">
-  <meta property="og:image" content="https://ppmkollen.se/og-preview.png">
-  <meta property="og:url" content="https://ppmkollen.se/about.html">
-  <meta name="theme-color" content="#1a1f2e">
+    content="Hobbyproject som kombinerar LSTM, TCN, GRU och XGBoost för att prognostisera PPM-fondavkastning." />
+  <meta property="og:image" content="https://ppmkollen.se/og-preview.png" />
+  <meta property="og:url" content="https://ppmkollen.se/about.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Om PPM Kollen — Bakgrund &amp; Metodik" />
+  <meta name="twitter:description"
+    content="Hobbyproject som kombinerar LSTM, TCN, GRU och XGBoost för att prognostisera PPM-fondavkastning." />
+  <meta name="twitter:image" content="https://ppmkollen.se/og-preview.png" />
+  <meta name="theme-color" content="#1a1f2e" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -42,6 +48,8 @@
       --sell-bg: oklch(0.30 0.08 25);
       --tag-bg: oklch(0.30 0.010 240);
       --tag-text: oklch(0.78 0.008 240);
+      --bar-bg: oklch(0.30 0.010 240);
+      --bar-fill: oklch(0.66 0.12 215);
       --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
       --shadow-md: 0 4px 16px rgb(0 0 0 / 0.45), 0 1px 2px rgb(0 0 0 / 0.3);
       --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.55);
@@ -70,6 +78,8 @@
       --sell-bg: oklch(0.95 0.05 25);
       --tag-bg: oklch(0.93 0.008 90);
       --tag-text: oklch(0.35 0.012 240);
+      --bar-bg: oklch(0.90 0.008 90);
+      --bar-fill: oklch(0.55 0.12 215);
       --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
       --shadow-md: 0 2px 10px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
       --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.12);
@@ -957,12 +967,12 @@
             <div class="step-body">
               <div class="step-title" data-lang="sv">Modellträning</div>
               <div class="step-title" data-lang="en">Model training</div>
-              <div class="step-desc" data-lang="sv">LSTM- och TCN-modeller tränas per fond och investeringshorisont —
-                totalt ~4 400 kombinationer. Träningen körs autonomt varje vecka på lokal hårdvara med
-                checkpoint-baserad kraschåterställning.</div>
-              <div class="step-desc" data-lang="en">LSTM and TCN models are trained per fund and investment horizon —
-                ~4,400 combinations in total. Training runs autonomously every week on local hardware with
-                checkpoint-based crash recovery.</div>
+              <div class="step-desc" data-lang="sv">LSTM-, GRU-, TCN- och XGBoost-modeller tränas per fond och
+                investeringshorisont — totalt ~4 400 kombinationer per modelltyp. Träningen körs autonomt varje vecka på
+                lokal hårdvara med checkpoint-baserad kraschåterställning.</div>
+              <div class="step-desc" data-lang="en">LSTM, GRU, TCN and XGBoost models are trained per fund and
+                investment horizon — ~4,400 combinations per model type. Training runs autonomously every week on local
+                hardware with checkpoint-based crash recovery.</div>
             </div>
           </div>
           <div class="pipeline-step">
@@ -1016,31 +1026,45 @@
           <div class="model-card featured">
             <div class="model-name">LSTM</div>
             <div class="model-full">Long Short-Term Memory</div>
-            <div class="model-desc" data-lang="sv">Rekurrenta neuronnät som är skickliga på att lära sig långsiktiga
-              beroenden i tidsserier. LSTM har länge varit standard för finansiella tidsserieprognoser och bildar
-              ryggraden i ensemblen.</div>
-            <div class="model-desc" data-lang="en">Recurrent neural networks skilled at learning long-term dependencies
-              in time series. LSTM has long been the standard for financial time series forecasting and forms the
-              backbone of the ensemble.</div>
+            <div class="model-desc" data-lang="sv">Rekurrenta neuronnät med ett inbyggt minne som gör dem skickliga på
+              att lära sig långsiktiga beroenden i tidsserier. Bildar ryggraden i ensemblen.</div>
+            <div class="model-desc" data-lang="en">Recurrent neural networks with built-in memory, skilled at learning
+              long-term dependencies in time series. Forms the backbone of the ensemble.</div>
+          </div>
+          <div class="model-card featured">
+            <div class="model-name">GRU</div>
+            <div class="model-full">Gated Recurrent Unit</div>
+            <div class="model-desc" data-lang="sv">En effektivare variant av LSTM med färre parametrar. Tränas snabbare
+              och presterar ofta likvärdigt — särskilt bra när träningsdatan är begränsad.</div>
+            <div class="model-desc" data-lang="en">A more efficient variant of LSTM with fewer parameters. Trains faster
+              and often performs comparably — particularly strong when training data is limited.</div>
           </div>
           <div class="model-card featured">
             <div class="model-name">TCN</div>
             <div class="model-full">Temporal Convolutional Network</div>
             <div class="model-desc" data-lang="sv">Dilaterade kausala konvolutioner som bearbetar sekvenser parallellt
-              och fångar mönster på olika tidsskalor. Komplementerar LSTM med sin förmåga att hantera kortare, lokala
-              mönster effektivt.</div>
+              och fångar mönster på flera tidsskalor. Komplementerar de rekurrenta modellerna med kortare, lokala
+              mönster.</div>
             <div class="model-desc" data-lang="en">Dilated causal convolutions that process sequences in parallel and
-              capture patterns at different time scales. Complements LSTM with its ability to handle shorter, local
-              patterns efficiently.</div>
+              capture patterns at multiple time scales. Complements the recurrent models with shorter, local patterns.
+            </div>
+          </div>
+          <div class="model-card featured">
+            <div class="model-name">XGBoost</div>
+            <div class="model-full">Extreme Gradient Boosting</div>
+            <div class="model-desc" data-lang="sv">Gradientförstärkt beslutsträdsensemble. Fångar icke-linjära samband i
+              tekniska indikatorer och historiska nyckeltal som neurala nätverk ibland missar.</div>
+            <div class="model-desc" data-lang="en">Gradient-boosted decision tree ensemble. Captures non-linear
+              relationships in technical indicators and historical metrics that neural networks sometimes miss.</div>
           </div>
         </div>
         <div class="prose">
-          <p data-lang="sv">Båda modellerna tränas med <strong>kvantilförlust</strong> (pinball loss) för att producera
-            kalibrerade osäkerhetsintervall snarare än punktprediktioner. Ensemblen kombinerar deras utdata — när båda
-            modellerna pekar åt samma håll höjs konfidensen i signalen.</p>
-          <p data-lang="en">Both models are trained with <strong>quantile loss</strong> (pinball loss) to produce
-            calibrated uncertainty intervals rather than point predictions. The ensemble combines their outputs — when
-            both models point in the same direction, confidence in the signal increases.</p>
+          <p data-lang="sv">Alla fyra modellerna tränas med <strong>kvantilförlust</strong> (pinball loss) för att
+            producera kalibrerade osäkerhetsintervall (Q10/Q50/Q90) snarare än punktprediktioner. Ensemblen kombinerar
+            deras utdata — när fler modeller pekar åt samma håll höjs konfidensen i signalen.</p>
+          <p data-lang="en">All four models are trained with <strong>quantile loss</strong> (pinball loss) to produce
+            calibrated uncertainty intervals (Q10/Q50/Q90) rather than point predictions. The ensemble combines their
+            outputs — when more models point in the same direction, confidence in the signal increases.</p>
         </div>
       </section>
 
@@ -1119,7 +1143,9 @@
           <span class="tag accent">Python</span>
           <span class="tag accent">TensorFlow / Keras</span>
           <span class="tag accent">LSTM</span>
+          <span class="tag accent">GRU</span>
           <span class="tag accent">TCN</span>
+          <span class="tag accent">XGBoost</span>
           <span class="tag">NVIDIA Jetson</span>
           <span class="tag">systemd</span>
           <span class="tag">tmux</span>
@@ -1176,7 +1202,7 @@
           <div class="stat-row">
             <span class="stat-label" data-lang="sv">Modelltyper</span>
             <span class="stat-label" data-lang="en">Model types</span>
-            <span class="stat-value">LSTM + TCN</span>
+            <span class="stat-value">LSTM · TCN · GRU · XGBoost</span>
           </div>
           <div class="stat-row">
             <span class="stat-label" data-lang="sv">Uppdateringsfrekvens</span>
@@ -1305,6 +1331,16 @@
       <span data-lang="en">Forecast</span>
     </a>
     &nbsp;·&nbsp;
+    <a href="about.html">
+      <span data-lang="sv">Om projektet</span>
+      <span data-lang="en">About</span>
+    </a>
+    &nbsp;·&nbsp;
+    <a href="help.html">
+      <span data-lang="sv">Hjälp</span>
+      <span data-lang="en">Help</span>
+    </a>
+    &nbsp;·&nbsp;
     <a href="https://github.com/zolodev/ppm-kollen" target="_blank" rel="noopener"
       style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;">
       <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" style="vertical-align:middle;">
@@ -1314,6 +1350,7 @@
       zolodev
     </a>
   </footer>
+
 
   <script>
     (() => {
