@@ -1510,6 +1510,7 @@
             /* ── language ── */
             var _lang = "sv";
             function toggleLang() { applyLang(_lang === "sv" ? "en" : "sv"); }
+            window.toggleLang = toggleLang;
             function applyLang(l) {
                 _lang = l;
                 document.body.classList.toggle("lang-en", l === "en");
@@ -1844,20 +1845,6 @@
                             ey: "Chart", ti: "What does the chart show?",
                             bo: "The chart shows <strong>how well the forecast matched reality</strong> historically.<br><br>📊 <strong>Ensemble</strong> — All four AI models combined. The band = Q10–Q90 range, the middle line = Q50, the dark line = how the fund actually performed.<br><br>🔬 <strong>Per model</strong> — Each AI model separately: LSTM, TCN, GRU and XGBoost.<br><br>✅ Good sign: band covers most movements, median line follows the trend.",
                             eg: "Click 'Ensemble' or 'Per model' to switch view."
-                        },
-                        25: {
-                            sv: {
-                                ey: "Bara hålla fonden",
-                                ti: "Vad innebär 'bara hålla'?",
-                                bo: "Att <strong>bara hålla fonden (Buy &amp; Hold, B&amp;H)</strong> innebär att du köper fonden en enda gång och sedan inte gör något alls — varken köper mer eller säljer — oavsett vad prognosen säger.<br><br>Det är <em>jämförelsestrategin</em>: vi mäter om det lönade sig att följa KÖP/SÄLJ-signalerna jämfört med att bara sitta still.<br><br>✅ Om signalstrategin (vänster) ger högre avkastning = signalerna lönade sig<br>❌ Om B&H (höger) ger högre avkastning = det hade gått bättre att inte göra något",
-                                eg: "<strong>Tumregel:</strong> Om 'Överskott vs B&H' är positivt ✅ lönar det sig att följa signalerna."
-                            },
-                            en: {
-                                ey: "Just holding the fund",
-                                ti: "What does 'just holding' mean?",
-                                bo: "To <strong>just hold the fund (Buy &amp; Hold, B&amp;H)</strong> means buying the fund once and then doing nothing — no buying more, no selling — regardless of what the forecast says.<br><br>It is the <em>comparison strategy</em>: we measure whether following BUY/SELL signals paid off compared to just sitting still.<br><br>✅ If the signal strategy (left) gives higher return = signals paid off<br>❌ If B&H (right) gives higher return = it would have been better to do nothing",
-                                eg: "<strong>Rule of thumb:</strong> If 'Excess vs B&H' is positive ✅ it is worth following the signals."
-                            }
                         }
                     }
                 };
@@ -2052,15 +2039,15 @@
                         '</div>' +
                         '<div class="bt-verdict ' + (excess > 0.5 ? "bt-verdict-up" : excess < -0.5 ? "bt-verdict-down" : "bt-verdict-flat") +
                         '">' + (excess > 0.5 ? "▲" : "▼") + ' Strategin ' + (excess > 0.5 ? "slog" : "underpresterade") + ' buy &amp; hold med <strong>' + fmt(Math.abs(excess)) + '</strong></div>' +
-                        '<div class="bt-compare">' +
+                        '<div class="bt-compare">' + hb(16) +
                         '<div class="bt-compare-card ' + (stratWin ? "is-winner" : "") + '">' +
-                        '<div class="bt-compare-head"><span class="bt-compare-label">' + hb(16) + ' Signalstrategi</span>' + (stratWin ? '<span class="bt-winner-tag">B&#228;ttre</span>' : '') + '</div>' +
+                        '<div class="bt-compare-head"><span class="bt-compare-label">Signalstrategi</span>' + (stratWin ? '<span class="bt-winner-tag">B&#228;ttre</span>' : '') + '</div>' +
                         '<div class="bt-compare-value ' + (strat > 0 ? "good" : "warn") + '">' + fmt(strat) + '</div>' +
                         '<div class="bt-compare-sub">100 kr &rarr; ' + Number(100 * (1 + strat / 100)).toFixed(0) + ' kr</div>' +
                         '<div class="bt-bar-track"><div class="bt-bar-fill ' + (strat >= 0 ? "pos" : "neg") + '" style="width:' + bw(strat) + '%"></div></div>' +
                         '</div>' +
                         '<div class="bt-compare-card ' + (!stratWin ? "is-winner" : "") + '">' +
-                        '<div class="bt-compare-head"><span class="bt-compare-label">' + hb(25) + ' Bara h&#246;lla fonden</span>' + (!stratWin ? '<span class="bt-winner-tag">B&#228;ttre</span>' : '') + '</div>' +
+                        '<div class="bt-compare-head"><span class="bt-compare-label">Bara h&#246;lla fonden</span>' + (!stratWin ? '<span class="bt-winner-tag">B&#228;ttre</span>' : '') + '</div>' +
                         '<div class="bt-compare-value ' + (bah > 0 ? "good" : "warn") + '">' + fmt(bah) + '</div>' +
                         '<div class="bt-compare-sub">100 kr &rarr; ' + Number(100 * (1 + bah / 100)).toFixed(0) + ' kr</div>' +
                         '<div class="bt-bar-track"><div class="bt-bar-fill ' + (bah >= 0 ? "pos" : "neg") + '" style="width:' + bw(bah) + '%"></div></div>' +
