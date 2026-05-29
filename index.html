@@ -198,18 +198,16 @@
     }
 
     .disclaimer-banner-close {
-      display: grid;
-      place-items: center;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      border: 1px solid color-mix(in oklch, var(--hold) 40%, transparent);
-      background: transparent;
+      background: none;
+      border: none;
       color: var(--hold);
-      font-size: 0.85rem;
+      font-size: 1.1rem;
+      line-height: 1;
+      padding: 0 0.25rem;
       flex-shrink: 0;
-      opacity: 0.75;
-      transition: opacity .15s, background .15s;
+      opacity: 0.6;
+      cursor: pointer;
+      transition: opacity .15s;
     }
 
     .disclaimer-banner-close:hover {
