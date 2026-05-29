@@ -1388,16 +1388,12 @@
         .disclaimer-banner {
             background: color-mix(in oklch, var(--hold-bg) 70%, var(--bg));
             border-bottom: 1px solid var(--hold);
-            padding: 0.6rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
+            padding: 0.6rem 3rem;
+            text-align: center;
             font-size: 0.8rem;
             color: var(--hold);
             position: relative;
             z-index: 60;
-            text-align: center;
             transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
             overflow: hidden;
         }
@@ -1417,6 +1413,7 @@
 
         .disclaimer-banner-text {
             line-height: 1.5;
+            text-align: center;
         }
 
         .disclaimer-banner-close {
@@ -1441,7 +1438,6 @@
 <body data-theme="auto">
 
     <div class="disclaimer-banner" id="disclaimer-banner" role="alert">
-        <span class="disclaimer-banner-icon">&#9888;</span>
         <span class="disclaimer-banner-text" id="disclaimer-banner-text">
             <strong data-lang="sv">Inte finansiell r&#229;dgivning.</strong>
             <strong data-lang="en">Not financial advice.</strong>
