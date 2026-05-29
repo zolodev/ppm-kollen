@@ -829,12 +829,76 @@
     body.lang-en [data-lang="en"] {
       display: revert;
     }
+
+    .disclaimer-banner {
+      background: color-mix(in oklch, var(--hold-bg) 70%, var(--bg));
+      border-bottom: 1px solid var(--hold);
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--hold);
+      position: relative;
+      z-index: 60;
+      text-align: center;
+      transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
+      overflow: hidden;
+    }
+
+    .disclaimer-banner.dismissed {
+      max-height: 0;
+      opacity: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom-width: 0;
+    }
+
+    .disclaimer-banner-icon {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .disclaimer-banner-text {
+      line-height: 1.5;
+    }
+
+    .disclaimer-banner-close {
+      position: absolute;
+      right: 1rem;
+      background: transparent;
+      border: none;
+      color: var(--hold);
+      font-size: 0.9rem;
+      cursor: pointer;
+      opacity: 0.7;
+      line-height: 1;
+      padding: 2px 4px;
+    }
+
+    .disclaimer-banner-close:hover {
+      opacity: 1;
+    }
   </style>
 </head>
 
 <body data-theme="auto">
 
   <!-- ═══ Header ══════════════════════════════════════════════════ -->
+  <div class="disclaimer-banner" id="disclaimer-banner" role="alert">
+    <span class="disclaimer-banner-icon">&#9888;</span>
+    <span class="disclaimer-banner-text" id="disclaimer-banner-text">
+      <strong data-lang="sv">Inte finansiell r&#229;dgivning.</strong>
+      <strong data-lang="en">Not financial advice.</strong>
+      <span data-lang="sv"> Prognoserna &#228;r experimentella och baserade p&#229; historiska m&#246;nster &#8212;
+        ingen garanti f&#246;r framtida avkastning. Konsultera alltid en beh&#246;rig r&#229;dgivare.</span>
+      <span data-lang="en"> Forecasts are experimental and based on historical patterns &#8212; no guarantee of future
+        returns. Always consult a qualified adviser.</span>
+    </span>
+    <button class="disclaimer-banner-close" id="disclaimer-banner-close"
+      aria-label="St&#228;ng / Close">&#x2715;</button>
+  </div>
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html">
@@ -1396,6 +1460,21 @@
         applyLang(saved);
         document.getElementById("lang-toggle")?.addEventListener("click", () => {
           applyLang(_lang === "sv" ? "en" : "sv");
+        });
+      })();
+
+      /* ── disclaimer banner ── */
+      (function () {
+        var STORAGE_DISCLAIMER = "ppm-kollen-disclaimer-dismissed";
+        var banner = document.getElementById("disclaimer-banner");
+        var closeBtn = document.getElementById("disclaimer-banner-close");
+        if (!banner) return;
+        var dismissed = false;
+        try { dismissed = sessionStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch (e) { }
+        if (dismissed) { banner.classList.add("dismissed"); return; }
+        closeBtn.addEventListener("click", function () {
+          banner.classList.add("dismissed");
+          try { sessionStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch (e) { }
         });
       })();
     })();
