@@ -1470,11 +1470,11 @@
         var closeBtn = document.getElementById("disclaimer-banner-close");
         if (!banner) return;
         var dismissed = false;
-        try { dismissed = sessionStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch (e) { }
+        try { dismissed = localStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch (e) { }
         if (dismissed) { banner.classList.add("dismissed"); return; }
         closeBtn.addEventListener("click", function () {
           banner.classList.add("dismissed");
-          try { sessionStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch (e) { }
+          try { localStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch (e) { }
         });
       })();
     })();
