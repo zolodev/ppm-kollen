@@ -883,6 +883,16 @@
     .disclaimer-banner-close:hover {
       opacity: 1;
     }
+
+    .back-btn {
+      min-width: 40px;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      padding: 0 0.6rem;
+    }
   </style>
 </head>
 
@@ -918,8 +928,7 @@
         </span>
       </a>
       <div class="header-right">
-        <a href="index.html" class="ghost-btn">&#8592; <span data-lang="sv">Tillbaka</span><span
-            data-lang="en">Back</span></a>
+        <a href="index.html" class="ghost-btn back-btn" aria-label="Tillbaka / Back">&#8592;</a>
         <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language">
           <span id="lang-label">EN</span>
         </button>
