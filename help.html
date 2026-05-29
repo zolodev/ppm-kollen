@@ -1421,18 +1421,19 @@
         }
 
         .disclaimer-banner-close {
-            position: absolute;
-            top: 50%;
-            right: 1rem;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
+            display: grid;
+            place-items: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 1px solid color-mix(in oklch, var(--hold) 40%, transparent);
+            background: transparent;
             color: var(--hold);
-            font-size: 1.1rem;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            opacity: 0.75;
+            transition: opacity .15s, background .15s;
             cursor: pointer;
-            opacity: 0.6;
-            line-height: 1;
-            padding: 0;
         }
 
         .disclaimer-banner-close:hover {
