@@ -1,0 +1,61 @@
+{
+  "generated": "2026-05-31 14:28",
+  "mode": "holdout",
+  "cutoff_date": "2024-05-31",
+  "horizon_weeks": 1,
+  "funds": [
+    "901093",
+    "373",
+    "944976"
+  ],
+  "signal": [
+    {
+      "label": "Signal Storebrand Global Mu",
+      "weeks": 112,
+      "cum_return_pct": 49.02,
+      "cum_bah_pct": 121.8,
+      "excess_pct": -72.78,
+      "ann_return_pct": 20.35,
+      "ann_bah_pct": 44.75,
+      "sharpe": 1.38,
+      "max_drawdown_pct": -7.4,
+      "win_rate_pct": 26.8
+    },
+    {
+      "label": "Signal Skandia Time Global",
+      "weeks": 112,
+      "cum_return_pct": 254.2,
+      "cum_bah_pct": 236.18,
+      "excess_pct": 18.02,
+      "ann_return_pct": 79.89,
+      "ann_bah_pct": 75.58,
+      "sharpe": 3.01,
+      "max_drawdown_pct": -2.59,
+      "win_rate_pct": 42.0
+    },
+    {
+      "label": "Signal Avanza Emerging Mark",
+      "weeks": 101,
+      "cum_return_pct": 49.21,
+      "cum_bah_pct": 97.45,
+      "excess_pct": -48.24,
+      "ann_return_pct": 22.88,
+      "ann_bah_pct": 41.94,
+      "sharpe": 1.23,
+      "max_drawdown_pct": -8.65,
+      "win_rate_pct": 40.6
+    }
+  ],
+  "rotation": {
+    "label": "Rotation",
+    "weeks": 12,
+    "cum_return_pct": 106.31,
+    "cum_bah_pct": 84.91,
+    "excess_pct": 21.4,
+    "ann_return_pct": 2206.49,
+    "ann_bah_pct": 1334.89,
+    "sharpe": 36.84,
+    "max_drawdown_pct": -1.53,
+    "win_rate_pct": 83.3
+  }
+}
