@@ -1571,6 +1571,74 @@
     .metric-info[data-tip]:hover::after {
       opacity: 1;
     }
+
+    /* ─── Backtest section ───────────────────────────────────────── */
+    .bt-section {
+      margin-top: 2.5rem;
+    }
+
+    .bt-section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .bt-section-title {
+      font-family: "IBM Plex Serif", serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .bt-section-meta {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      color: var(--text-faint);
+    }
+
+    .bt-overview-chart {
+      margin-bottom: 1.5rem;
+    }
+
+    .bt-overview-chart img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      cursor: zoom-in;
+      display: block;
+    }
+
+    .bt-fund-tabs {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+
+    .bt-fund-pane {
+      display: none;
+    }
+
+    .bt-fund-pane.active {
+      display: block;
+    }
+
+    .bt-fund-chart {
+      margin-top: 1rem;
+    }
+
+    .bt-fund-chart img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      cursor: zoom-in;
+      display: block;
+    }
   </style>
 </head>
 
@@ -1656,6 +1724,8 @@
     <div id="app">
       <p class="state-msg">Laddar prognos…</p>
     </div>
+
+    <section id="backtest-section" class="bt-section" hidden></section>
   </main>
 
   <footer id="footer"></footer>
@@ -1761,6 +1831,11 @@
           err_folder: "Kunde inte ladda {folder}/predictions.json — {err}",
           disclaimer_text: "<strong>Inte finansiell rådgivning.</strong> Prognoserna är experimentella och baserade på historiska mönster — ingen garanti för framtida avkastning. Konsultera alltid en behörig rådgivare.",
           disclaimer_close: "Stäng",
+          bt_section_title: "Backtest · Historisk modellprestanda",
+          bt_mode_holdout: "Holdout", bt_mode_walkforward: "Walk-forward",
+          bt_horizon: "Horisont", bt_n_funds: "fonder",
+          bt_rotation_tab: "Rotation",
+          bt_no_data: "Ingen backtestdata tillgänglig — kör 05_backtest.py.",
         },
         en: {
           btn_historik: "History",
@@ -1829,6 +1904,11 @@
           err_folder: "Could not load {folder}/predictions.json — {err}",
           disclaimer_text: "<strong>Not financial advice.</strong> Forecasts are experimental and based on historical patterns — no guarantee of future returns. Always consult a qualified advisor.",
           disclaimer_close: "Close",
+          bt_section_title: "Backtest · Historical model performance",
+          bt_mode_holdout: "Holdout", bt_mode_walkforward: "Walk-forward",
+          bt_horizon: "Horizon", bt_n_funds: "funds",
+          bt_rotation_tab: "Rotation",
+          bt_no_data: "No backtest data available — run 05_backtest.py.",
         }
       };
 
@@ -2024,6 +2104,73 @@
       </a>`;
       }
 
+      // ── Backtest section ───────────────────────────────────────────
+      function switchBtPane(btn, paneId) {
+        const section = btn.closest(".bt-section");
+        section.querySelectorAll(".bt-fund-tabs .chart-tab").forEach(b => b.classList.remove("active"));
+        section.querySelectorAll(".bt-fund-pane").forEach(p => p.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(paneId)?.classList.add("active");
+      }
+
+      function btFundPaneHtml(item, idx) {
+        const chartSrc = item.chart ? `backtest/${esc(item.chart)}` : null;
+        const paneContent = btHtml(item) + (chartSrc
+          ? `<div class="bt-fund-chart"><img src="${chartSrc}" alt="${esc(item.label || item.fund_name || "")}" loading="lazy"></div>`
+          : "");
+        return `<div class="bt-fund-pane${idx === 0 ? " active" : ""}" id="bt-pane-${idx}">${paneContent}</div>`;
+      }
+
+      function renderBacktest(summary) {
+        const section = document.getElementById("backtest-section");
+        if (!section) return;
+
+        const signals  = summary.signal  || [];
+        const rotation = summary.rotation || null;
+        const modeKey  = summary.mode === "walkforward" ? "bt_mode_walkforward" : "bt_mode_holdout";
+        const meta     = [
+          summary.generated,
+          t(modeKey),
+          summary.horizon_weeks ? `${t("bt_horizon")} ${summary.horizon_weeks}v` : "",
+          signals.length ? `${signals.length} ${t("bt_n_funds")}` : "",
+        ].filter(Boolean).join(" · ");
+
+        let html = `<div class="bt-section-header"><h2 class="bt-section-title">${esc(t("bt_section_title"))}</h2><span class="bt-section-meta">${esc(meta)}</span></div>`;
+
+        if (!signals.length && !rotation) {
+          html += `<p class="state-msg">${esc(t("bt_no_data"))}</p>`;
+          section.innerHTML = html;
+          section.hidden = false;
+          return;
+        }
+
+        // Full-width summary chart
+        html += `<div class="bt-overview-chart"><img src="backtest/summary.png" alt="Backtest summary" loading="lazy" onerror="this.closest('.bt-overview-chart').hidden=true"></div>`;
+
+        // Build tab list: one per fund + optional rotation
+        const items = signals.map((m, i) => ({ ...m, _idx: i }));
+        if (rotation) items.push({ ...rotation, _idx: items.length, _isRotation: true });
+
+        html += `<div class="bt-fund-tabs">`;
+        items.forEach((item, i) => {
+          const label = item._isRotation ? t("bt_rotation_tab") : (item.fund_name || item.label || `#${i + 1}`);
+          html += `<button class="chart-tab${i === 0 ? " active" : ""}" data-bt-pane="bt-pane-${i}">${esc(label.substring(0, 30))}</button>`;
+        });
+        html += `</div>`;
+
+        items.forEach((item, i) => { html += btFundPaneHtml(item, i); });
+
+        section.innerHTML = html;
+        section.hidden = false;
+      }
+
+      function loadBacktest() {
+        fetch("backtest/summary.json")
+          .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+          .then(data => renderBacktest(data))
+          .catch(() => { /* no backtest data yet — section stays hidden */ });
+      }
+
       function render(data, folder) {
         _currentData = data; _currentFolder = folder || null;
         // Only show "Fondprognos" / "Fund Forecast" — no date appended
@@ -2042,12 +2189,14 @@
         document.addEventListener("click", (e) => {
           const t2 = e.target.closest("[data-chart-target]");
           if (t2) { switchChart(t2, t2.dataset.chartTarget); return; }
+          const bt = e.target.closest("[data-bt-pane]");
+          if (bt) { switchBtPane(bt, bt.dataset.btPane); return; }
           const r = e.target.closest(".ranking-tab");
           if (r) { switchRanking(r.dataset.key); return; }
           const p = e.target.closest(".ppm-copy");
           if (p) { copyPpm(p, p.dataset.ppm); return; }
           const img = e.target;
-          if (img.matches?.(".chart-pane img") && img.src) lbShow(img.src, img.alt);
+          if (img.matches?.(".chart-pane img, .bt-fund-chart img") && img.src) lbShow(img.src, img.alt);
         });
       }
 
@@ -2143,6 +2292,7 @@
         initDelegates();
         initLightbox();
         bootstrap();
+        loadBacktest();
       }
       if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", init); } else init();
     })();
