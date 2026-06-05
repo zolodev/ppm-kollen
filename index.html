@@ -393,82 +393,6 @@
       font-size: 0.85rem;
     }
 
-    /* ─── History panel ──────────────────────────────────────────── */
-    .history-panel {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
-      margin-bottom: 2rem;
-      box-shadow: var(--shadow-md);
-    }
-
-    .history-panel[hidden] {
-      display: none;
-    }
-
-    .history-panel-title {
-      font-family: "IBM Plex Serif", serif;
-      font-size: 1rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      padding-bottom: 0.6rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .history-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-    }
-
-    .history-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.6rem 0.85rem;
-      background: var(--bg-panel);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      cursor: pointer;
-      transition: border-color .15s, background .15s;
-    }
-
-    .history-item:hover {
-      border-color: var(--accent);
-      background: var(--bg-elev);
-    }
-
-    .history-item-date {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 0.82rem;
-      font-weight: 500;
-      flex: 1;
-    }
-
-    .history-item-meta {
-      font-size: 0.72rem;
-      color: var(--text-faint);
-    }
-
-    .history-item-arrow {
-      color: var(--text-faint);
-      transition: color .15s, transform .15s;
-    }
-
-    .history-item:hover .history-item-arrow {
-      color: var(--accent);
-      transform: translateX(2px);
-    }
-
-    .history-empty {
-      font-size: 0.85rem;
-      color: var(--text-faint);
-      text-align: center;
-      padding: 1rem;
-      font-style: italic;
-    }
-
     /* ─── Meta bar ───────────────────────────────────────────────── */
     .meta-bar {
       display: grid;
@@ -1670,13 +1594,6 @@
         </span>
       </a>
       <div class="header-right">
-        <button class="ghost-btn" id="history-toggle" aria-expanded="false">
-          <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
-            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
-            <path d="M12 7 V12 L15.5 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
-          </svg>
-          <span class="btn-label">Historik</span>
-        </button>
         <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language" aria-label="Byt språk">
           <span id="lang-label">EN</span>
         </button>
@@ -1713,13 +1630,6 @@
         riktning, och hur väl prognoseintervallen täckte verkligheten tidigare veckor. <strong>Inte finansiell
           rådgivning</strong> — ett utbildningsverktyg.</p>
     </section>
-
-    <div class="history-panel" id="history-panel" hidden>
-      <div class="history-panel-title">Tidigare körningar</div>
-      <div class="history-list" id="history-list">
-        <div class="history-empty">Laddar historik…</div>
-      </div>
-    </div>
 
     <div id="app">
       <p class="state-msg">Laddar prognos…</p>
@@ -1765,13 +1675,9 @@
 
       const TRANSLATIONS = {
         sv: {
-          btn_historik: "Historik",
           hero_eyebrow: "PPM Prognos · driven av modellensemble",
           hero_title_html: "Vilka fonder ger <em>troligtvis</em> högst avkastning nästa vecka?",
           hero_lede_html: "Modellen rangordnar fonder baserat på förväntad avkastning, hur ofta den förutspår rätt riktning, och hur väl prognoseintervallen täckte verkligheten tidigare veckor. <strong>Inte finansiell rådgivning</strong> — ett utbildningsverktyg.",
-          history_panel_title: "Tidigare körningar",
-          history_loading: "Laddar historik…",
-          history_empty: "Ingen historik tillgänglig.",
           loading_forecast: "Laddar prognos…",
           loading_folder: "Laddar…",
           fund_forecast: "Fondprognos",
@@ -1838,13 +1744,9 @@
           bt_no_data: "Ingen backtestdata tillgänglig — kör 05_backtest.py.",
         },
         en: {
-          btn_historik: "History",
           hero_eyebrow: "PPM Forecast · powered by ensemble of models",
           hero_title_html: "Which funds will <em>likely</em> deliver the highest return next week?",
           hero_lede_html: "The model ranks funds based on expected return, how often it predicts the right direction, and how well the forecast intervals covered reality in previous weeks. <strong>Not financial advice</strong> — an educational tool.",
-          history_panel_title: "Previous runs",
-          history_loading: "Loading history…",
-          history_empty: "No history available.",
           loading_forecast: "Loading forecast…",
           loading_folder: "Loading…",
           fund_forecast: "Fund Forecast",
@@ -1964,25 +1866,6 @@
         if (!["dark", "light", "auto"].includes(saved)) saved = "auto";
         applyTheme(saved);
         qa(".theme-btn").forEach(b => b.addEventListener("click", () => applyTheme(b.dataset.theme)));
-      }
-
-      // ── History panel ──────────────────────────────────────────────
-      function initHistoryToggle() {
-        const btn = $("#history-toggle"), panel = $("#history-panel");
-        btn.addEventListener("click", () => {
-          const expanded = btn.getAttribute("aria-expanded") === "true";
-          btn.setAttribute("aria-expanded", String(!expanded));
-          panel.hidden = expanded;
-        });
-      }
-      function renderHistoryList(folders) {
-        const list = $("#history-list");
-        if (!folders || folders.length === 0) { list.innerHTML = `<div class="history-empty">${t("history_empty")}</div>`; return; }
-        list.innerHTML = folders.map(folder => {
-          const date = folder.replace(/^top-/, "");
-          return `<div class="history-item" data-folder="${esc(folder)}"><span class="history-item-date">${esc(date)}</span><span class="history-item-meta">${esc(folder)}/predictions.json</span><span class="history-item-arrow">→</span></div>`;
-        }).join("");
-        list.querySelectorAll(".history-item").forEach(item => item.addEventListener("click", () => loadFolder(item.dataset.folder)));
       }
 
       function copyPpm(btn, code) {
@@ -2211,14 +2094,12 @@
       function bootstrap() {
         fetchFirst(MANIFEST_URLS)
           .then(manifest => {
-            const history = (manifest.history || []).filter(f => f !== manifest.latest);
-            renderHistoryList(history);
             if (!manifest.latest) throw new Error("manifest missing 'latest'");
             return fetchFirst(PREDICTIONS_URLS).then(data => render(data, manifest.latest));
           })
           .catch(() => {
             fetchFirst(PREDICTIONS_URLS)
-              .then(data => { renderHistoryList([]); render(data, null); })
+              .then(data => { render(data, null); })
               .catch(() => { $("#app").innerHTML = `<p class="state-msg">${t("err_no_predictions")}</p>`; });
           });
       }
@@ -2244,18 +2125,12 @@
       // ── Language ───────────────────────────────────────────────────
       function applyLangToStaticElements() {
         document.documentElement.lang = _currentLang;
-        const btnLabel = document.querySelector("#history-toggle .btn-label");
-        if (btnLabel) btnLabel.textContent = t("btn_historik");
         const eyebrow = document.querySelector(".hero-eyebrow");
         if (eyebrow) eyebrow.textContent = t("hero_eyebrow");
         const heroTitle = document.querySelector(".hero-title");
         if (heroTitle) heroTitle.innerHTML = t("hero_title_html");
         const heroLede = document.querySelector(".hero-lede");
         if (heroLede) heroLede.innerHTML = t("hero_lede_html");
-        const histTitle = document.querySelector(".history-panel-title");
-        if (histTitle) histTitle.textContent = t("history_panel_title");
-        const histEmpty = document.querySelector("#history-list .history-empty");
-        if (histEmpty) histEmpty.textContent = t("history_empty");
         const stateMsg = document.querySelector("#app .state-msg");
         if (stateMsg) stateMsg.textContent = t("loading_forecast");
         const footerAbout = document.querySelector("#footer-about");
@@ -2288,7 +2163,6 @@
         initTheme();
         initLang();
         initDisclaimer();
-        initHistoryToggle();
         initDelegates();
         initLightbox();
         bootstrap();
