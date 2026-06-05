@@ -1,0 +1,2430 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Hjälp — PPM Kollen</title>
+    <meta name="description"
+        content="Förstå vad varje siffra i PPM Kollen betyder. En enkel guide till fondkortet — för alla, oavsett om du kan ekonomi eller inte." />
+    <meta property="og:title" content="Hjälp — PPM Kollen" />
+    <meta property="og:description"
+        content="Förstå vad varje siffra i PPM Kollens fondkort faktiskt betyder. Interaktiv guide — ingen förkunskap krävs." />
+    <meta property="og:image" content="https://ppmkollen.se/og-preview.png" />
+    <meta property="og:url" content="https://ppmkollen.se/help.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hjälp — PPM Kollen" />
+    <meta name="twitter:description"
+        content="Förstå vad varje siffra i PPM Kollens fondkort faktiskt betyder. Interaktiv guide." />
+    <meta name="twitter:image" content="https://ppmkollen.se/og-preview.png" />
+    <meta name="theme-color" content="#1a1f2e" />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23334' /%3E%3Cpath d='M3 19 L9 12 L13 16 L21 6' fill='none' stroke='%2399ccee' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='21' cy='6' r='1.6' fill='%2399ccee'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root,
+        [data-theme="dark"] {
+            --bg: oklch(0.18 0.008 240);
+            --bg-elev: oklch(0.22 0.009 240);
+            --bg-card: oklch(0.24 0.009 240);
+            --bg-panel: oklch(0.27 0.010 240);
+            --bg-sunken: oklch(0.15 0.008 240);
+            --border: oklch(0.34 0.010 240);
+            --border-em: oklch(0.45 0.014 240);
+            --text: oklch(0.94 0.005 240);
+            --text-muted: oklch(0.72 0.008 240);
+            --text-faint: oklch(0.55 0.010 240);
+            --accent: oklch(0.78 0.10 220);
+            --accent-2: oklch(0.66 0.12 215);
+            --accent-soft: oklch(0.30 0.04 220);
+            --buy: oklch(0.80 0.16 155);
+            --buy-bg: oklch(0.28 0.07 155);
+            --hold: oklch(0.82 0.13 85);
+            --hold-bg: oklch(0.30 0.06 85);
+            --sell: oklch(0.74 0.16 25);
+            --sell-bg: oklch(0.30 0.08 25);
+            --tag-bg: oklch(0.30 0.010 240);
+            --tag-text: oklch(0.78 0.008 240);
+            --bar-bg: oklch(0.30 0.010 240);
+            --bar-fill: oklch(0.66 0.12 215);
+            --shadow-sm: 0 1px 2px rgb(0 0 0/0.35);
+            --shadow-md: 0 4px 16px rgb(0 0 0/0.45), 0 1px 2px rgb(0 0 0/0.3);
+            --shadow-lg: 0 16px 40px rgb(0 0 0/0.55);
+            color-scheme: dark
+        }
+
+        [data-theme="light"] {
+            --bg: oklch(0.98 0.004 90);
+            --bg-elev: oklch(1 0 0);
+            --bg-card: oklch(1 0 0);
+            --bg-panel: oklch(0.95 0.006 90);
+            --bg-sunken: oklch(0.94 0.006 90);
+            --border: oklch(0.88 0.008 90);
+            --border-em: oklch(0.78 0.012 90);
+            --text: oklch(0.20 0.010 240);
+            --text-muted: oklch(0.45 0.010 240);
+            --text-faint: oklch(0.62 0.010 240);
+            --accent: oklch(0.42 0.10 220);
+            --accent-2: oklch(0.55 0.12 215);
+            --accent-soft: oklch(0.92 0.03 220);
+            --buy: oklch(0.42 0.16 155);
+            --buy-bg: oklch(0.94 0.06 155);
+            --hold: oklch(0.50 0.13 85);
+            --hold-bg: oklch(0.95 0.08 85);
+            --sell: oklch(0.50 0.17 25);
+            --sell-bg: oklch(0.95 0.05 25);
+            --tag-bg: oklch(0.93 0.008 90);
+            --tag-text: oklch(0.35 0.012 240);
+            --bar-bg: oklch(0.90 0.008 90);
+            --bar-fill: oklch(0.55 0.12 215);
+            --shadow-sm: 0 1px 2px rgb(0 0 0/0.06);
+            --shadow-md: 0 2px 10px rgb(0 0 0/0.08), 0 1px 2px rgb(0 0 0/0.04);
+            --shadow-lg: 0 16px 40px rgb(0 0 0/0.12);
+            color-scheme: light
+        }
+
+        [data-theme="auto"] {}
+
+        @media(prefers-color-scheme:light) {
+            [data-theme="auto"] {
+                --bg: oklch(0.98 0.004 90);
+                --bg-elev: oklch(1 0 0);
+                --bg-card: oklch(1 0 0);
+                --bg-panel: oklch(0.95 0.006 90);
+                --bg-sunken: oklch(0.94 0.006 90);
+                --border: oklch(0.88 0.008 90);
+                --border-em: oklch(0.78 0.012 90);
+                --text: oklch(0.20 0.010 240);
+                --text-muted: oklch(0.45 0.010 240);
+                --text-faint: oklch(0.62 0.010 240);
+                --accent: oklch(0.42 0.10 220);
+                --accent-2: oklch(0.55 0.12 215);
+                --accent-soft: oklch(0.92 0.03 220);
+                --buy: oklch(0.42 0.16 155);
+                --buy-bg: oklch(0.94 0.06 155);
+                --hold: oklch(0.50 0.13 85);
+                --hold-bg: oklch(0.95 0.08 85);
+                --sell: oklch(0.50 0.17 25);
+                --sell-bg: oklch(0.95 0.05 25);
+                --tag-bg: oklch(0.93 0.008 90);
+                --tag-text: oklch(0.35 0.012 240);
+                --bar-bg: oklch(0.90 0.008 90);
+                --bar-fill: oklch(0.55 0.12 215);
+                --shadow-sm: 0 1px 2px rgb(0 0 0/0.06);
+                --shadow-md: 0 2px 10px rgb(0 0 0/0.08), 0 1px 2px rgb(0 0 0/0.04);
+                --shadow-lg: 0 16px 40px rgb(0 0 0/0.12);
+                color-scheme: light
+            }
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+            font-size: 15px;
+            line-height: 1.55;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        button {
+            font: inherit;
+            color: inherit;
+            cursor: pointer
+        }
+
+        /* === HEADER — identical to index.html === */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: color-mix(in oklch, var(--bg) 80%, transparent);
+            backdrop-filter: saturate(140%) blur(10px);
+            -webkit-backdrop-filter: saturate(140%) blur(10px);
+            border-bottom: 1px solid var(--border)
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            color: var(--text)
+        }
+
+        .logo-mark {
+            width: 34px;
+            height: 34px;
+            display: grid;
+            place-items: center;
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-radius: 9px;
+            border: 1px solid var(--border)
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            gap: 3px
+        }
+
+        .logo-title {
+            font-family: "IBM Plex Serif", serif;
+            font-size: 1.15rem;
+            font-weight: 500;
+            letter-spacing: -0.01em
+        }
+
+        .logo-sub {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.68rem;
+            color: var(--text-faint);
+            letter-spacing: 0.02em
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem
+        }
+
+        .ghost-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.78rem;
+            border: 1px solid var(--border-em);
+            background: transparent;
+            color: var(--text-muted);
+            padding: 6px 12px;
+            border-radius: 8px;
+            transition: background .15s, color .15s
+        }
+
+        .ghost-btn:hover {
+            background: var(--bg-panel);
+            color: var(--text)
+        }
+
+        .theme-switcher {
+            display: flex;
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            padding: 3px;
+            gap: 2px
+        }
+
+        .theme-btn {
+            display: grid;
+            place-items: center;
+            width: 30px;
+            height: 26px;
+            border: none;
+            background: transparent;
+            color: var(--text-faint);
+            border-radius: 6px;
+            transition: background .15s, color .15s
+        }
+
+        .theme-btn:hover {
+            color: var(--text)
+        }
+
+        .theme-btn.active {
+            background: var(--bg-card);
+            color: var(--text);
+            box-shadow: var(--shadow-sm)
+        }
+
+        /* === LAYOUT === */
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 5rem
+        }
+
+        .hero {
+            margin-bottom: 2rem
+        }
+
+        .hero-eyebrow {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            margin-bottom: 0.75rem
+        }
+
+        .hero-title {
+            font-family: "IBM Plex Serif", serif;
+            font-weight: 500;
+            font-size: clamp(1.6rem, 2.6vw + 0.5rem, 2.2rem);
+            line-height: 1.15;
+            letter-spacing: -0.015em;
+            margin-bottom: 0.75rem;
+            text-wrap: balance
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--accent);
+            font-weight: 400
+        }
+
+        .hero-lede {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            max-width: 60ch;
+            text-wrap: pretty;
+            line-height: 1.65
+        }
+
+        /* === FUND CARD — copied verbatim from index.html === */
+        .fund-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: var(--shadow-md);
+            overflow: hidden
+        }
+
+        .fund-card.is-top {
+            border-color: var(--accent)
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem 1.25rem 0
+        }
+
+        .rank-col {
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            font-family: "IBM Plex Serif", serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            flex-shrink: 0;
+            line-height: 1
+        }
+
+        .rank-col.is-medal {
+            font-size: 1.85rem
+        }
+
+        .fund-meta {
+            flex: 1;
+            min-width: 0
+        }
+
+        .fund-name {
+            font-family: "IBM Plex Serif", serif;
+            font-size: 1.15rem;
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 0.45rem;
+            letter-spacing: -0.01em;
+            text-wrap: balance
+        }
+
+        .fund-ids {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.4rem
+        }
+
+        .id-pill {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            color: var(--text-muted)
+        }
+
+        .id-pill.ppm {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: var(--accent-soft)
+        }
+
+        .action-btn {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 5px;
+            border: 1px solid var(--accent);
+            background: transparent;
+            color: var(--accent);
+            transition: background .15s, color .15s
+        }
+
+        .action-btn:hover {
+            background: var(--accent);
+            color: var(--bg)
+        }
+
+        [data-theme="light"] .action-btn:hover {
+            color: #fff
+        }
+
+        .hitrate-warn {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.66rem;
+            padding: 3px 7px;
+            border-radius: 5px;
+            background: var(--hold-bg);
+            color: var(--hold);
+            border: 1px solid var(--hold)
+        }
+
+        .signal-col {
+            flex-shrink: 0
+        }
+
+        .signal-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 14px;
+            border-radius: 10px;
+            min-width: 70px;
+            gap: 2px
+        }
+
+        .signal-icon {
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1
+        }
+
+        .signal-label {
+            font-size: 0.66rem;
+            font-weight: 600;
+            letter-spacing: 0.12em
+        }
+
+        .sig-buy {
+            background: var(--buy-bg);
+            color: var(--buy)
+        }
+
+        .sig-hold {
+            background: var(--hold-bg);
+            color: var(--hold)
+        }
+
+        .sig-sell {
+            background: var(--sell-bg);
+            color: var(--sell)
+        }
+
+        .tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            padding: 0.85rem 1.25rem 0
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            padding: 3px 9px;
+            border-radius: 999px;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            border: 1px solid var(--border)
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: var(--bg-sunken);
+            margin: 1rem 0 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border)
+        }
+
+        .metric {
+            display: flex;
+            flex-direction: column;
+            gap: 4px
+        }
+
+        .metric-label {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.66rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-faint);
+            font-weight: 500
+        }
+
+        .metric-value {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text)
+        }
+
+        .metric-value.warn {
+            color: var(--hold)
+        }
+
+        .metric-value.good {
+            color: var(--buy)
+        }
+
+        .metric-hint {
+            font-size: 0.68rem;
+            color: var(--text-faint)
+        }
+
+        .bar-track {
+            height: 3px;
+            background: var(--bar-bg);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 4px
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--bar-fill);
+            border-radius: 2px;
+            transition: width .4s ease
+        }
+
+        .bar-fill.warn {
+            background: var(--hold)
+        }
+
+        .bar-fill.good {
+            background: var(--buy)
+        }
+
+        .forecast-block {
+            padding: 1rem 1.25rem
+        }
+
+        .forecast-title {
+            font-size: 0.66rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-faint);
+            margin-bottom: 0.5rem;
+            font-weight: 500
+        }
+
+        .forecast-row {
+            display: flex;
+            align-items: baseline;
+            gap: 0.875rem;
+            margin-bottom: 0.45rem
+        }
+
+        .fc-q50 {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 1.7rem;
+            font-weight: 500;
+            letter-spacing: -0.01em
+        }
+
+        .fc-q50.pos {
+            color: var(--buy)
+        }
+
+        .fc-q50.neg {
+            color: var(--sell)
+        }
+
+        .fc-q10,
+        .fc-q90 {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.85rem;
+            color: var(--text-muted)
+        }
+
+        .fc-sep {
+            color: var(--text-faint);
+            font-size: 0.8rem
+        }
+
+        .forecast-band {
+            position: relative;
+            height: 8px;
+            background: var(--bar-bg);
+            border-radius: 4px;
+            margin: 0.7rem 0 0.5rem
+        }
+
+        .forecast-band-fill {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, var(--sell), var(--hold), var(--buy));
+            opacity: 0.6;
+            border-radius: 4px
+        }
+
+        .forecast-band-q50 {
+            position: absolute;
+            top: -3px;
+            bottom: -3px;
+            width: 2px;
+            background: var(--text);
+            border-radius: 1px
+        }
+
+        .forecast-legend {
+            display: flex;
+            justify-content: space-between;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.66rem;
+            color: var(--text-faint)
+        }
+
+        .charts-block {
+            padding: 1rem 1.25rem 1.25rem;
+            border-top: 1px solid var(--border)
+        }
+
+        .chart-tabs {
+            display: flex;
+            gap: 0.35rem;
+            margin-bottom: 0.75rem
+        }
+
+        .chart-tab {
+            font-size: 0.75rem;
+            padding: 5px 12px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: background .15s, color .15s, border-color .15s
+        }
+
+        .chart-tab:hover {
+            color: var(--text)
+        }
+
+        .chart-tab.active {
+            background: var(--bg-panel);
+            color: var(--text);
+            border-color: var(--border-em)
+        }
+
+        .chart-pane {
+            display: none
+        }
+
+        .chart-pane.active {
+            display: block
+        }
+
+        .chart-pane img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            display: block
+        }
+
+        .chart-missing {
+            padding: 2.5rem;
+            text-align: center;
+            color: var(--text-faint);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.78rem;
+            border: 1px dashed var(--border-em);
+            border-radius: 8px;
+            background: var(--bg-sunken)
+        }
+
+        .backtest-block {
+            padding: 1rem 1.25rem 1.25rem;
+            border-top: 1px solid var(--border)
+        }
+
+        .backtest-title {
+            font-size: 0.66rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-faint);
+            margin-bottom: 0.65rem;
+            font-weight: 500
+        }
+
+        .bt-period {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.6rem 0.85rem;
+            padding: 0.7rem 0.9rem;
+            background: var(--bg-sunken);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 0.9rem
+        }
+
+        .bt-period-row {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            min-width: 0
+        }
+
+        .bt-period-label {
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-faint);
+            font-weight: 500
+        }
+
+        .bt-period-value {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.8rem;
+            color: var(--text);
+            font-weight: 500
+        }
+
+        .bt-period-sep {
+            color: var(--text-faint);
+            font-size: 1rem;
+            line-height: 1;
+            user-select: none
+        }
+
+        .bt-verdict {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.92rem;
+            padding: 0.7rem 0.9rem;
+            border-radius: 8px;
+            margin-bottom: 0.9rem;
+            line-height: 1.35
+        }
+
+        .bt-verdict-up {
+            background: var(--buy-bg);
+            color: var(--buy)
+        }
+
+        .bt-verdict-down {
+            background: var(--sell-bg);
+            color: var(--sell)
+        }
+
+        .bt-verdict-flat {
+            background: var(--hold-bg);
+            color: var(--hold)
+        }
+
+        .bt-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            margin-bottom: 1rem
+        }
+
+        .bt-compare-card {
+            padding: 0.85rem 0.95rem;
+            background: var(--bg-sunken);
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem
+        }
+
+        .bt-compare-card.is-winner {
+            border-color: var(--accent);
+            background: color-mix(in oklch, var(--accent-soft) 60%, var(--bg-sunken))
+        }
+
+        .bt-compare-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem
+        }
+
+        .bt-compare-label {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 500
+        }
+
+        .bt-winner-tag {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 2px 7px;
+            border-radius: 4px;
+            background: var(--accent);
+            color: var(--bg)
+        }
+
+        [data-theme="light"] .bt-winner-tag {
+            color: #fff
+        }
+
+        @media(prefers-color-scheme:light) {
+            [data-theme="auto"] .bt-winner-tag {
+                color: #fff
+            }
+        }
+
+        .bt-compare-value {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.1;
+            letter-spacing: -0.01em
+        }
+
+        .bt-compare-value.good {
+            color: var(--buy)
+        }
+
+        .bt-compare-value.warn {
+            color: var(--sell)
+        }
+
+        .bt-compare-value.ok {
+            color: var(--text)
+        }
+
+        .bt-compare-sub {
+            font-size: 0.78rem;
+            color: var(--text-muted)
+        }
+
+        .bt-bar-track {
+            height: 6px;
+            background: var(--bar-bg);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 0.25rem
+        }
+
+        .bt-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width .4s ease
+        }
+
+        .bt-bar-fill.pos {
+            background: var(--bar-fill)
+        }
+
+        .bt-bar-fill.neg {
+            background: var(--sell)
+        }
+
+        .bt-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.6rem;
+            margin-bottom: 0.75rem
+        }
+
+        .bt-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0.7rem 0.8rem;
+            background: var(--bg-sunken);
+            border: 1px solid var(--border);
+            border-radius: 8px
+        }
+
+        .bt-stat-label {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-faint);
+            font-weight: 500
+        }
+
+        .bt-stat-val {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text)
+        }
+
+        .bt-stat-val.good {
+            color: var(--buy)
+        }
+
+        .bt-stat-val.warn {
+            color: var(--sell)
+        }
+
+        .bt-stat-val.ok {
+            color: var(--text)
+        }
+
+        .bt-stat-quality {
+            display: inline-block;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 2px 7px;
+            border-radius: 4px;
+            width: fit-content
+        }
+
+        .bt-stat-quality.q-good {
+            background: var(--buy-bg);
+            color: var(--buy)
+        }
+
+        .bt-stat-quality.q-warn {
+            background: var(--sell-bg);
+            color: var(--sell)
+        }
+
+        .bt-stat-quality.q-ok {
+            background: var(--hold-bg);
+            color: var(--hold)
+        }
+
+        .bt-disclaimer {
+            font-size: 0.7rem;
+            color: var(--text-faint);
+            font-style: italic;
+            line-height: 1.5
+        }
+
+        /* === HELP-PAGE SPECIFIC === */
+        /* Numbered marker on each element */
+        .hb {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--bg);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: transform .15s, box-shadow .15s;
+            position: relative;
+            box-shadow: 0 1px 4px rgb(0 0 0/.4);
+            user-select: none;
+            vertical-align: middle
+        }
+
+        .hb:hover {
+            transform: scale(1.15);
+            box-shadow: 0 2px 10px rgb(0 0 0/.5)
+        }
+
+        .hb.active {
+            background: var(--text);
+            color: var(--bg);
+            transform: scale(1.15)
+        }
+
+        /* inline wrapper so badge sits next to the element */
+        .hb-wrap {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap
+        }
+
+        /* explanation drawer below card */
+        /* floating tooltip card */
+        .ftip {
+            position: fixed;
+            z-index: 9999;
+            width: 340px;
+            max-width: calc(100vw - 2rem);
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            border-radius: 14px;
+            box-shadow: var(--shadow-lg);
+            display: none;
+            animation: ftipIn .14s ease
+        }
+
+        @keyframes ftipIn {
+            from {
+                opacity: 0;
+                transform: scale(.97) translateY(-4px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .ftip.open {
+            display: block
+        }
+
+        .ftip-inner {
+            padding: 1.25rem 1.4rem
+        }
+
+        .ftip-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem
+        }
+
+        .ftip-num {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: var(--bg);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0
+        }
+
+        .ftip-eyebrow {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent)
+        }
+
+        .ftip-title {
+            font-family: "IBM Plex Serif", serif;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 2px;
+            line-height: 1.2
+        }
+
+        .ftip-body {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.75
+        }
+
+        .ftip-body strong {
+            color: var(--text);
+            font-weight: 600
+        }
+
+        .ftip-body em {
+            color: var(--accent);
+            font-style: normal;
+            font-weight: 500
+        }
+
+        .ftip-body a {
+            color: var(--accent);
+            border-bottom: 1px solid color-mix(in oklch, var(--accent) 40%, transparent)
+        }
+
+        .ftip-example {
+            margin-top: 0.85rem;
+            padding: 0.7rem 0.85rem;
+            background: var(--bg-sunken);
+            border-radius: 9px;
+            border-left: 3px solid var(--accent);
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6
+        }
+
+        .ftip-example strong {
+            color: var(--text)
+        }
+
+        .ftip-close {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.85rem;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 1px solid var(--border-em);
+            background: transparent;
+            color: var(--text-faint);
+            display: grid;
+            place-items: center;
+            font-size: 1rem;
+            line-height: 1;
+            transition: background .15s, color .15s;
+            cursor: pointer
+        }
+
+        .ftip-close:hover {
+            background: var(--bg-panel);
+            color: var(--text)
+        }
+
+        .ftip-arrow {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            transform: rotate(45deg)
+        }
+
+        /* hint bar above card */
+        .hint-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.82rem;
+            color: var(--text-faint);
+            margin-bottom: 0.75rem;
+            padding: 0.55rem 0.85rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px
+        }
+
+        .hint-bar-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex-shrink: 0
+        }
+
+        /* accordion */
+        .acc-section {
+            margin-top: 3rem
+        }
+
+        .acc-section-label {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem
+        }
+
+        .acc-section-label::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border)
+        }
+
+        .acc-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 0.6rem;
+            overflow: hidden;
+            transition: border-color .15s
+        }
+
+        .acc-item:hover,
+        .acc-item.open {
+            border-color: var(--border-em)
+        }
+
+        .acc-trigger {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 1rem 1.25rem;
+            background: transparent;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            transition: background .15s
+        }
+
+        .acc-trigger:hover {
+            background: var(--bg-panel)
+        }
+
+        .acc-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: var(--bg-sunken);
+            border: 1px solid var(--border);
+            display: grid;
+            place-items: center;
+            font-size: 1.1rem;
+            flex-shrink: 0
+        }
+
+        .acc-label {
+            flex: 1;
+            min-width: 0
+        }
+
+        .acc-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 2px
+        }
+
+        .acc-sub {
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.68rem;
+            color: var(--text-faint)
+        }
+
+        .acc-chevron {
+            color: var(--text-faint);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+            transition: transform .2s
+        }
+
+        .acc-item.open .acc-chevron {
+            transform: rotate(180deg)
+        }
+
+        .acc-body {
+            display: none;
+            padding: 0 1.25rem 1.25rem 4.35rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem
+        }
+
+        .acc-item.open .acc-body {
+            display: block
+        }
+
+        .acc-text {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.8
+        }
+
+        .acc-text strong {
+            color: var(--text);
+            font-weight: 600
+        }
+
+        .acc-text em {
+            color: var(--accent);
+            font-style: normal;
+            font-weight: 500
+        }
+
+        .acc-text a {
+            color: var(--accent);
+            border-bottom: 1px solid color-mix(in oklch, var(--accent) 40%, transparent)
+        }
+
+        .acc-eg {
+            margin-top: 0.85rem;
+            padding: 0.75rem 0.9rem;
+            background: var(--bg-sunken);
+            border-radius: 8px;
+            border-left: 2px solid var(--border-em);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.6
+        }
+
+        .acc-eg strong {
+            color: var(--text)
+        }
+
+        /* footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 1.75rem 1.5rem;
+            text-align: center;
+            font-size: 0.72rem;
+            color: var(--text-faint);
+            font-family: "IBM Plex Mono", monospace;
+            max-width: 1100px;
+            margin: 0 auto
+        }
+
+        footer a {
+            color: inherit;
+            opacity: .7;
+            transition: opacity .15s
+        }
+
+        footer a:hover {
+            opacity: 1
+        }
+
+        .state-msg {
+            padding: 3rem 1rem;
+            text-align: center;
+            color: var(--text-faint);
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 0.85rem
+        }
+
+        @media(max-width:720px) {
+            .header-inner {
+                padding: 0 1rem;
+                height: 56px
+            }
+
+            main {
+                padding: 1.5rem 1rem 4rem
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .card-header {
+                padding: 1rem 1rem 0;
+                flex-wrap: wrap
+            }
+
+            .tags-row,
+            .metrics-grid,
+            .forecast-block,
+            .charts-block,
+            .backtest-block {
+                padding-left: 1rem;
+                padding-right: 1rem
+            }
+
+            .bt-compare {
+                grid-template-columns: 1fr
+            }
+
+            .explain-inner {
+                padding: 1.1rem 1.25rem
+            }
+
+            .acc-body {
+                padding-left: 1.25rem
+            }
+        }
+
+        [data-lang="en"] {
+            display: none
+        }
+
+        body.lang-en [data-lang="sv"] {
+            display: none
+        }
+
+        body.lang-en [data-lang="en"] {
+            display: revert
+        }
+
+        .disclaimer-banner {
+            background: color-mix(in oklch, var(--hold-bg) 70%, var(--bg));
+            border-bottom: 1px solid var(--hold);
+            padding: 0.6rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--hold);
+            position: relative;
+            z-index: 60;
+            transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
+            overflow: hidden;
+        }
+
+        .disclaimer-banner.dismissed {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            border-bottom-width: 0;
+        }
+
+        .disclaimer-banner-icon {
+            font-size: 0.95rem;
+            flex-shrink: 0;
+            margin-right: 0.5rem;
+        }
+
+        .disclaimer-banner-text {
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .disclaimer-banner-close {
+            background: none;
+            border: none;
+            color: var(--hold);
+            font-size: 1.1rem;
+            line-height: 1;
+            padding: 0 0.25rem;
+            flex-shrink: 0;
+            opacity: 0.6;
+            cursor: pointer;
+            transition: opacity .15s;
+        }
+
+        .disclaimer-banner-close:hover {
+            opacity: 1;
+        }
+
+        .back-btn {
+            min-width: 40px;
+            min-height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            padding: 0 0.6rem;
+        }
+    </style>
+</head>
+
+<body data-theme="auto">
+
+    <div class="disclaimer-banner" id="disclaimer-banner" role="alert">
+        <span class="disclaimer-banner-icon" aria-hidden="true">&#9888;</span>
+        <span class="disclaimer-banner-text" id="disclaimer-banner-text">
+            <strong data-lang="sv">Inte finansiell r&#229;dgivning.</strong>
+            <strong data-lang="en">Not financial advice.</strong>
+            <span data-lang="sv"> Prognoserna &#228;r experimentella och baserade p&#229; historiska m&#246;nster
+                &#8212; ingen garanti f&#246;r framtida avkastning. Konsultera alltid en beh&#246;rig
+                r&#229;dgivare.</span>
+            <span data-lang="en"> Forecasts are experimental and based on historical patterns &#8212; no guarantee of
+                future returns. Always consult a qualified adviser.</span>
+        </span>
+        <button class="disclaimer-banner-close" id="disclaimer-banner-close"
+            aria-label="St&#228;ng / Close">&#x2715;</button>
+    </div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html">
+                <span class="logo-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22">
+                        <path d="M3 19 L9 12 L13 16 L21 6" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="21" cy="6" r="1.6" fill="currentColor" />
+                    </svg>
+                </span>
+                <span class="logo-text">
+                    <span class="logo-title">PPM Kollen</span>
+                    <span class="logo-sub">Fund Forecast</span>
+                </span>
+            </a>
+            <div class="header-right">
+                <a href="index.html" class="ghost-btn">&#8592; <span data-lang="sv">Tillbaka</span><span
+                        data-lang="en">Back</span></a>
+                <button class="ghost-btn" id="lang-btn" onclick="toggleLang()"
+                    title="Switch language / Byt språk">EN</button>
+                <div class="theme-switcher" role="group" aria-label="Theme">
+                    <button class="theme-btn" data-theme="light" title="Ljust"><svg viewBox="0 0 24 24" width="14"
+                            height="14">
+                            <circle cx="12" cy="12" r="4" fill="currentColor" />
+                            <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                                <path
+                                    d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4" />
+                            </g>
+                        </svg></button>
+                    <button class="theme-btn active" data-theme="auto" title="Auto"><svg viewBox="0 0 24 24" width="14"
+                            height="14">
+                            <path d="M12 4v16a8 8 0 0 0 0-16z" fill="currentColor" />
+                            <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4" />
+                        </svg></button>
+                    <button class="theme-btn" data-theme="dark" title="Dark"><svg viewBox="0 0 24 24" width="14"
+                            height="14">
+                            <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" />
+                        </svg></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-eyebrow"><span data-lang="sv">Hj&#228;lp &amp; f&#246;rklaring</span><span
+                    data-lang="en">Help &amp; explanation</span></div>
+            <h1 class="hero-title"><span data-lang="sv">Vad betyder varje siffra i <em>fondkortet</em>?</span><span
+                    data-lang="en">What does every number in the <em>fund card</em> mean?</span></h1>
+            <p class="hero-lede">
+                <span data-lang="sv">H&#228;r ser du veckans vinnande fond — precis som den ser ut p&#229; startsidan.
+                    Klicka p&#229; en <span
+                        style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--bg);font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:600;vertical-align:middle">1</span>
+                    intill ett element f&#246;r att f&#229; en enkel f&#246;rklaring — utan kr&#229;ngliga ord.</span>
+                <span data-lang="en">Here you see this week's winning fund — exactly as it looks on the main page. Click
+                    a <span
+                        style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--bg);font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:600;vertical-align:middle">1</span>
+                    next to an element to get a simple explanation — no jargon needed.</span>
+            </p>
+        </section>
+
+        <div class="hint-bar">
+            <div class="hint-bar-dot"></div>
+            <span data-lang="sv">Klicka p&#229; de bl&#229; siffrorna p&#229; kortet f&#246;r att l&#228;sa vad varje
+                del betyder.</span>
+            <span data-lang="en">Click the blue numbered badges on the card to read what each part means.</span>
+        </div>
+        Klicka p&#229; de bl&#229; siffrorna <span
+            style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--accent);color:var(--bg);font-size:0.6rem;font-weight:600;font-family:'IBM Plex Mono',monospace">1</span>
+        p&#229; kortet f&#246;r att l&#228;sa vad varje del betyder.
+        </div>
+
+        <div id="card-wrap">
+            <p class="state-msg">Laddar veckans vinnare&#8230;</p>
+        </div>
+
+        <!-- floating tooltip card — appended to body by JS, positioned via JS -->
+        <div class="ftip" id="ftip" role="dialog" aria-modal="false">
+            <button class="ftip-close" id="ftip-close" aria-label="St&#228;ng">&#215;</button>
+            <div class="ftip-inner">
+                <div class="ftip-header">
+                    <div class="ftip-num" id="ep-num">1</div>
+                    <div>
+                        <div class="ftip-eyebrow" id="ep-eyebrow">Element</div>
+                        <div class="ftip-title" id="ep-title">Rubrik</div>
+                    </div>
+                </div>
+                <div class="ftip-body" id="ep-body"></div>
+                <div class="ftip-example" id="ep-example" style="display:none"></div>
+            </div>
+        </div>
+
+        <!-- FAQ ACCORDION -->
+        <div class="acc-section">
+            <div class="acc-section-label"><span data-lang="sv">Vanliga fr&#229;gor</span><span data-lang="en">Common
+                    questions</span></div>
+            <div id="acc-list"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        PPM Kollen
+        &nbsp;·&nbsp;
+        <span data-lang="sv">Endast för informationsändamål — inte finansiell rådgivning.</span>
+        <span data-lang="en">For informational purposes only — not financial advice.</span>
+        &nbsp;·&nbsp;
+        <a href="index.html">
+            <span data-lang="sv">Prognos</span>
+            <span data-lang="en">Forecast</span>
+        </a>
+        &nbsp;·&nbsp;
+        <a href="about.html">
+            <span data-lang="sv">Om projektet</span>
+            <span data-lang="en">About</span>
+        </a>
+        &nbsp;·&nbsp;
+        <a href="help.html">
+            <span data-lang="sv">Hjälp</span>
+            <span data-lang="en">Help</span>
+        </a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/zolodev/ppm-kollen" target="_blank" rel="noopener"
+            style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" style="vertical-align:middle;">
+                <path
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+            </svg>
+            zolodev
+        </a>
+    </footer>
+
+
+    <script>
+        (function () {
+            "use strict";
+
+            /* ── theme ── */
+            var ST = "ppm-kollen-theme";
+            (function () { var s = "auto"; try { s = localStorage.getItem(ST) || "auto" } catch (e) { } if (!["dark", "light", "auto"].includes(s)) s = "auto"; applyTheme(s) })();
+            function applyTheme(m) { document.body.setAttribute("data-theme", m); document.querySelectorAll(".theme-btn").forEach(function (b) { b.classList.toggle("active", b.dataset.theme === m) }); try { localStorage.setItem(ST, m) } catch (e) { } }
+            document.querySelectorAll(".theme-btn").forEach(function (b) { b.addEventListener("click", function () { applyTheme(b.dataset.theme) }) });
+            /* ── language ── */
+            var _lang = "sv";
+
+            var TRANSLATIONS = {
+                sv: {
+                    metric_mae_hint: "lägre = mindre fel",
+                    chart_ensemble: "Ensemble", chart_per_model: "Per modell",
+                    chart_missing_msg: "Grafen genereras av systemet varje söndag",
+                    signal_BUY: "KÖP", signal_HOLD: "HÅLL", signal_SELL: "SÄLJ",
+                    hitrate_warn: "Träffsäkerhet &lt;70%",
+                    forecast_title: "Prognos · 1 vecka",
+                    score_hint: "Sammanfattat betyg",
+                    chart_img_alt: "Graf",
+                    bt_title: "Backtest · hur strategin faktiskt presterade",
+                    bt_trained_up_to: "Tränad t.o.m.", bt_evaluated: "Utvärderad på osedd data",
+                    bt_length: "Längd", bt_wks: "veckor",
+                    bt_verdict_beat: "Strategin slog buy &amp; hold med",
+                    bt_verdict_under: "Strategin underpresterade buy &amp; hold med",
+                    bt_verdict_matched: "Matchade buy &amp; hold",
+                    bt_signal_strategy: "Signalstrategi", bt_just_held: "Bara höll fonden", bt_better: "Bättre",
+                    bt_grew: "100 kr → {val} kr",
+                    bt_ann_return: "Årsavkastning", bt_sharpe: "Sharpe",
+                    bt_maxdd: "Max nedgång", bt_hitrate_bt: "Träffsäkerhet (BT)",
+                    bt_winrate: "Vinstfrekvens", bt_excess: "Överskott vs B&H",
+                    bt_disclaimer: "Backtest på ej sedd data — modellen har inte sett denna period under träning. Historisk avkastning är ingen garanti för framtida resultat.",
+                    q_good: "Bra", q_ok: "OK", q_weak: "Svag",
+                    q_small: "Liten", q_notable: "Märkbar", q_large: "Stor"
+                },
+                en: {
+                    metric_mae_hint: "lower = less error",
+                    chart_ensemble: "Ensemble", chart_per_model: "Per model",
+                    chart_missing_msg: "Chart generated by the system every Sunday",
+                    signal_BUY: "BUY", signal_HOLD: "HOLD", signal_SELL: "SELL",
+                    hitrate_warn: "Hit rate &lt;70%",
+                    forecast_title: "Forecast · 1 week",
+                    score_hint: "Composite grade",
+                    chart_img_alt: "Chart",
+                    bt_title: "Backtest · how the strategy actually performed",
+                    bt_trained_up_to: "Trained up to", bt_evaluated: "Evaluated on unseen data",
+                    bt_length: "Length", bt_wks: "weeks",
+                    bt_verdict_beat: "Strategy beat buy &amp; hold by",
+                    bt_verdict_under: "Strategy underperformed buy &amp; hold by",
+                    bt_verdict_matched: "Matched buy &amp; hold",
+                    bt_signal_strategy: "Signal strategy", bt_just_held: "Just held the fund", bt_better: "Better",
+                    bt_grew: "$100 → ${val}",
+                    bt_ann_return: "Ann. return", bt_sharpe: "Sharpe",
+                    bt_maxdd: "Max drawdown", bt_hitrate_bt: "Hit rate (BT)",
+                    bt_winrate: "Win rate", bt_excess: "Excess vs B&H",
+                    bt_disclaimer: "Backtest on held-out data — the model has not seen this period during training. Past performance is no guarantee of future results.",
+                    q_good: "Good", q_ok: "OK", q_weak: "Weak",
+                    q_small: "Small", q_notable: "Notable", q_large: "Large"
+                }
+            };
+            function t(k) {
+                var d = (_lang === "en") ? "en" : "sv";
+                return (TRANSLATIONS[d] && TRANSLATIONS[d][k]) || TRANSLATIONS.sv[k] || k;
+            }
+
+            var TRANSLATIONS = {
+                sv: {
+                    metric_mae_hint: "lägre = mindre fel",
+                    chart_ensemble: "Ensemble", chart_per_model: "Per modell",
+                    chart_missing_msg: "' + t('chart_missing_msg') + '",
+                    signal_BUY: "KÖP", signal_HOLD: "HÅLL", signal_SELL: "SÄLJ",
+                    hitrate_warn: "Träffsäkerhet &lt;70%",
+                    forecast_title: "Prognos · 1 vecka",
+                    score_hint: "Sammanfattat betyg",
+                    chart_img_alt: "Graf",
+                    bt_title: "Backtest · hur strategin faktiskt presterade",
+                    bt_trained_up_to: "Tränad t.o.m.", bt_evaluated: "Utvärderad på osedd data",
+                    bt_length: "Längd", bt_wks: "veckor",
+                    bt_verdict_beat: "Strategin slog buy &amp; hold med",
+                    bt_verdict_under: "Strategin underpresterade buy &amp; hold med",
+                    bt_verdict_matched: "Matchade buy &amp; hold",
+                    bt_signal_strategy: "Signalstrategi", bt_just_held: "Bara höll fonden", bt_better: "Bättre",
+                    bt_grew: "100 kr → {val} kr",
+                    bt_ann_return: "Årsavkastning", bt_sharpe: "Sharpe",
+                    bt_maxdd: "Max nedgång", bt_hitrate_bt: "Träffsäkerhet (BT)",
+                    bt_winrate: "Vinstfrekvens", bt_excess: "Överskott vs B&H",
+                    bt_disclaimer: "Backtest på ej sedd data — modellen har inte sett denna period under träning. Historisk avkastning är ingen garanti för framtida resultat.",
+                    q_good: "Bra", q_ok: "OK", q_weak: "Svag",
+                    q_small: "Liten", q_notable: "Märkbar", q_large: "Stor"
+                },
+                en: {
+                    metric_mae_hint: "lower = less error",
+                    chart_ensemble: "Ensemble", chart_per_model: "Per model",
+                    chart_missing_msg: "Chart generated by the system every Sunday",
+                    signal_BUY: "BUY", signal_HOLD: "HOLD", signal_SELL: "SELL",
+                    hitrate_warn: "Hit rate &lt;70%",
+                    forecast_title: "Forecast · 1 week",
+                    score_hint: "Composite grade",
+                    chart_img_alt: "Chart",
+                    bt_title: "Backtest · how the strategy actually performed",
+                    bt_trained_up_to: "Trained up to", bt_evaluated: "Evaluated on unseen data",
+                    bt_length: "Length", bt_wks: "weeks",
+                    bt_verdict_beat: "Strategy beat buy &amp; hold by",
+                    bt_verdict_under: "Strategy underperformed buy &amp; hold by",
+                    bt_verdict_matched: "Matched buy &amp; hold",
+                    bt_signal_strategy: "Signal strategy", bt_just_held: "Just held the fund", bt_better: "Better",
+                    bt_grew: "$100 → ${val}",
+                    bt_ann_return: "Ann. return", bt_sharpe: "Sharpe",
+                    bt_maxdd: "Max drawdown", bt_hitrate_bt: "Hit rate (BT)",
+                    bt_winrate: "Win rate", bt_excess: "Excess vs B&H",
+                    bt_disclaimer: "Backtest on held-out data — the model has not seen this period during training. Past performance is no guarantee of future results.",
+                    q_good: "Good", q_ok: "OK", q_weak: "Weak",
+                    q_small: "Small", q_notable: "Notable", q_large: "Large"
+                }
+            };
+            function t(k) {
+                var d = (_lang === "en") ? "en" : "sv";
+                return (TRANSLATIONS[d] && TRANSLATIONS[d][k]) || TRANSLATIONS.sv[k] || k;
+            }
+            function toggleLang() { applyLang(_lang === "sv" ? "en" : "sv"); }
+            window.toggleLang = toggleLang;
+            function applyLang(l) {
+                _lang = l;
+                document.body.classList.toggle("lang-en", l === "en");
+                var lb = document.getElementById("lang-btn");
+                if (lb) lb.textContent = l === "sv" ? "EN" : "SV";
+                try { localStorage.setItem("ppm-kollen-lang", l); } catch (e) { }
+                if (_currentFund) { document.getElementById("card-wrap").innerHTML = renderCard(_currentFund); }
+                if (_active && _pins) {
+                    var p = _pins[_active];
+                    if (p) {
+                        var pd = l === "en" ? p.en : p.sv;
+                        document.getElementById("ep-eyebrow").textContent = pd.ey;
+                        document.getElementById("ep-title").textContent = pd.ti;
+                        document.getElementById("ep-body").innerHTML = pd.bo;
+                        var eg = document.getElementById("ep-example");
+                        if (pd.eg) { eg.innerHTML = pd.eg; eg.style.display = "block"; }
+                        else { eg.style.display = "none"; }
+                    }
+                }
+            }
+            (function () {
+                var s = "sv";
+                try { s = localStorage.getItem("ppm-kollen-lang") || "sv"; } catch (e) { }
+                applyLang(s);
+            })();
+
+
+            /* ── helpers ── */
+            function fmt(v, d) { d = d || 1; var n = Number(v); return (n >= 0 ? "+" : "") + n.toFixed(d) + "%" }
+            function pct(v, d) { d = d || 1; return Number(v).toFixed(d) + "%" }
+            function esc(s) { return String(s || "").replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] }) }
+            function medal(r) { return r === 1 ? "🥇" : r === 2 ? "🥈" : r === 3 ? "🥉" : String(r) }
+            function sigCls(s) { return s === "BUY" ? "sig-buy" : s === "SELL" ? "sig-sell" : "sig-hold" }
+            function sigIcon(s) { return s === "BUY" ? "▲" : s === "SELL" ? "▼" : "●" }
+            function sigLabel(s) { return s === "BUY" ? "KÖP" : s === "SELL" ? "SÄLJ" : "HÅLL" }
+            function valCls(v, lo, hi) { if (v >= hi) return "good"; if (v < lo) return "warn"; return "" }
+            function btValCls(v, t) { t = t || 0; return v > t ? "good" : v < t ? "warn" : "ok" }
+            function btQualCls(v, lo, hi) { if (v >= hi) return "q-good"; if (v < lo) return "q-warn"; return "q-ok" }
+
+            /* ── explanation data: all 16 markers ── */
+            var PINS = null; // populated from live fund data
+
+            function buildPins(f) {
+                var fc = f.forecast || {}, bt = f.backtest || {}, ch = f.charts || {};
+                var q10 = fc.q10 || 0, q50 = fc.q50 || 0, q90 = fc.q90 || 0;
+                var hr = f.hitrate_q50 || 0, cov = f.coverage_pct || 0, mae = f.mae_q50 || 0, score = f.score || 0;
+                var ann = bt.ann_return_pct || 0, sharpe = bt.sharpe || 0, maxdd = bt.max_drawdown_pct || 0;
+                var strat = bt.cum_return_pct || 0, bah = bt.bah_return_pct || 0, excess = bt.excess_pct || 0;
+                var win = bt.win_rate_pct || 0, hitbt = bt.hit_rate_pct || 0, weeks = bt.weeks || 0;
+                var ppm = esc(f.ppm_code || "?"), name = esc(f.name || "?"), tags = esc(f.tags || "?");
+                var sigSV = f.signal === "BUY" ? "KÖP" : f.signal === "SELL" ? "SÄLJ" : "HÅLL";
+                var sigEN = f.signal === "BUY" ? "BUY" : f.signal === "SELL" ? "SELL" : "HOLD";
+                function g(v, lo, hi) { return v >= hi ? "<em>Bra ✓</em>" : v < lo ? "<em>Svag ✗</em>" : "<em>OK</em>"; }
+                function ge(v, lo, hi) { return v >= hi ? "<em>Good ✓</em>" : v < lo ? "<em>Poor ✗</em>" : "<em>OK</em>"; }
+                function gdd(v, lo, hi) { return v >= -lo ? "<em>Liten ✓</em>" : v >= -hi ? "<em>Märkbar</em>" : "<em>Stor ✗</em>"; }
+                function gdde(v, lo, hi) { return v >= -lo ? "<em>Small ✓</em>" : v >= -hi ? "<em>Notable</em>" : "<em>Large ✗</em>"; }
+                return {
+                    1: {
+                        sv: {
+                            ey: "Placering", ti: "🥇 Vad betyder medaljen?",
+                            bo: "Den lilla medaljen visar <strong>vilken plats denna fond har</strong> i veckans topplista.<br><br>🥇 = plats 1 — fonden datorn tror mest på just nu.<br>🥈 = plats 2&nbsp;·&nbsp;🥉 = plats 3<br><br>Listan räknas om varje söndag.",
+                            eg: "<strong>Denna vecka:</strong> 🥇 Plats 1 av ~274 analyserade fonder."
+                        },
+                        en: {
+                            ey: "Rank", ti: "🥇 What does the medal mean?",
+                            bo: "The medal shows <strong>what position this fund holds</strong> in this week's top list.<br><br>🥇 = rank 1 — the fund the computer believes in most right now.<br>🥈 = rank 2&nbsp;·&nbsp;🥉 = rank 3<br><br>The list is recalculated every Sunday.",
+                            eg: "<strong>This week:</strong> 🥇 Rank 1 of ~274 analysed funds."
+                        }
+                    },
+                    2: {
+                        sv: {
+                            ey: "Fondnamn", ti: "Vad är det här för fond?",
+                            bo: "Det <strong>officiella namnet</strong> på fonden. En fond är som en korg av aktier — istället för att köpa ett enda företag köper du lite av många på en gång, vilket sprider risken.",
+                            eg: "<strong>Denna vecka:</strong> " + name
+                        },
+                        en: {
+                            ey: "Fund name", ti: "What fund is this?",
+                            bo: "The <strong>official name</strong> of the fund. A fund is like a basket of shares — instead of buying one single company you buy a little of many at once, spreading the risk.",
+                            eg: "<strong>This week:</strong> " + name
+                        }
+                    },
+                    3: {
+                        sv: {
+                            ey: "PPM-kod", ti: "Numret du behöver för att byta fond",
+                            bo: "<strong>PPM-koden</strong> (det blåa numret) är det du skriver in på <a href='https://www.pensionsmyndigheten.se/' target='_blank' rel='noopener'>pensionsmyndigheten.se</a> när du byter fond.<br><br>Din premiepension är en del av din lön som staten lägger undan varje månad — du väljer själv vilka fonder pengarna placeras i.",
+                            eg: "<strong>PPM-kod denna vecka:</strong> " + ppm + " — skriv in detta på pensionsmyndigheten.se"
+                        },
+                        en: {
+                            ey: "PPM code", ti: "The number you need to switch fund",
+                            bo: "The <strong>PPM code</strong> (the blue number) is what you enter on <a href='https://www.pensionsmyndigheten.se/' target='_blank' rel='noopener'>pensionsmyndigheten.se</a> when switching funds.<br><br>Your premium pension is part of your salary set aside by the state each month — you choose which funds the money goes into.",
+                            eg: "<strong>PPM code this week:</strong> " + ppm + " — enter this on pensionsmyndigheten.se"
+                        }
+                    },
+                    4: {
+                        sv: {
+                            ey: "Avanza-länk", ti: "Vad är Avanza-knappen?",
+                            bo: "Klickar du på <em>Avanza ↗</em> öppnas fondens informationssida på Avanza — en av Sveriges största nätmäklare.<br><br>Där ser du grafer, vad fonden investerar i och hur hög avgiften är. Du behöver inget konto.",
+                            eg: "Tryck på knappen för att öppna sidan i en ny flik."
+                        },
+                        en: {
+                            ey: "Avanza link", ti: "What is the Avanza button?",
+                            bo: "Clicking <em>Avanza ↗</em> opens the fund's page on Avanza — one of Sweden's largest online brokers.<br><br>There you can see charts, what the fund invests in and how high the annual fee is. No account needed.",
+                            eg: "Click the button to open the page in a new tab."
+                        }
+                    },
+                    5: {
+                        sv: {
+                            ey: "Signal", ti: "KÖP, HÅLL eller SÄLJ — vad betyder det?",
+                            bo: "Signalen är datorns <strong>enkla råd</strong> baserat på mittprognosen (Q50):<br><br>🟢 <strong>KÖP</strong> — Datorn förväntar sig uppgång.<br>🟡 <strong>HÅLL</strong> — Svag prognos eller fonden var vinnare förra veckan.<br>🔴 <strong>SÄLJ</strong> — Datorn förväntar sig nedgång.<br><br>Signalen är en <em>indikation</em> — den kan ha fel.",
+                            eg: "<strong>Denna vecka:</strong> " + sigSV + " (Q50 = " + fmt(q50) + ")"
+                        },
+                        en: {
+                            ey: "Signal", ti: "BUY, HOLD or SELL — what does it mean?",
+                            bo: "The signal is the computer's <strong>simple recommendation</strong> based on the median forecast (Q50):<br><br>🟢 <strong>BUY</strong> — The computer expects the fund to rise.<br>🟡 <strong>HOLD</strong> — Weak forecast or the fund was last week's winner.<br>🔴 <strong>SELL</strong> — The computer expects the fund to fall.<br><br>The signal is an <em>indication</em> — it can be wrong.",
+                            eg: "<strong>This week:</strong> " + sigEN + " (Q50 = " + fmt(q50) + ")"
+                        }
+                    },
+                    6: {
+                        sv: {
+                            ey: "Fondtyp / Taggar", ti: "Vad berättar taggarna?",
+                            bo: "Taggarna beskriver <strong>vad slags fond det är</strong>:<br><br><em>Aktiefond</em> — Placerar i företagsaktier. Hög potential, men också högre risk.<br><em>Räntefond</em> — Köper lån till stater/företag. Säkrare men lägre avkastning.<br><em>Branschfond</em> — Fokus på en bransch (t.ex. teknik, bioteknik).<br><em>Tillväxtmarknader</em> — Länder som Kina, Indien, Brasilien.",
+                            eg: "<strong>Denna fond:</strong> " + tags
+                        },
+                        en: {
+                            ey: "Fund type / Tags", ti: "What do the tags tell you?",
+                            bo: "The tags describe <strong>what kind of fund it is</strong>:<br><br><em>Equity fund</em> — Invests in company shares. High potential but also higher risk.<br><em>Bond fund</em> — Buys loans to states/companies. Safer but lower returns.<br><em>Sector fund</em> — Focus on one sector (e.g. tech, biotech).<br><em>Emerging markets</em> — Countries like China, India, Brazil.",
+                            eg: "<strong>This fund:</strong> " + tags
+                        }
+                    },
+                    7: {
+                        sv: {
+                            ey: "Score", ti: "Det sammanfattade betyget",
+                            bo: "Score visar <strong>hur bra datorns modell har fungerat</strong> för just den här fonden historiskt. Fonder högt upp i listan har alltid högst Score.<br><br>Formel: <em>Träffsäkerhet × Täckning ÷ Medelfel</em><br><br>✅ Högt = rätt riktning ofta + bra intervall + litet fel<br>❌ Lågt = modellen har haft svårt med den här fonden",
+                            eg: "<strong>Denna fond:</strong> Score = " + Number(score).toFixed(1)
+                        },
+                        en: {
+                            ey: "Score", ti: "The combined grade",
+                            bo: "Score shows <strong>how well the computer's model has performed</strong> for this specific fund historically. Funds at the top always have the highest Score.<br><br>Formula: <em>Hit rate × Coverage ÷ Mean error</em><br><br>✅ High = often correct direction + good intervals + small error<br>❌ Low = the model has struggled with this fund",
+                            eg: "<strong>This fund:</strong> Score = " + Number(score).toFixed(1)
+                        }
+                    },
+                    8: {
+                        sv: {
+                            ey: "Träffsäkerhet", ti: "Hur ofta har datorn gissat rätt riktning?",
+                            bo: "Träffsäkerheten visar <strong>hur ofta prognosen pekade åt rätt håll</strong> — upp när fonden gick upp, ned när den gick ned.<br><br>✅ <strong>80%+</strong> = Väldigt bra (visas grön)<br>🟡 <strong>60–79%</strong> = Acceptabelt<br>❌ <strong>Under 60%</strong> = Sämre än att gissa — ⚠ varning visas<br><br>50% = lika bra som att singla slant.",
+                            eg: "<strong>Denna fond:</strong> " + Number(hr).toFixed(1) + "% — " + g(hr, 60, 80)
+                        },
+                        en: {
+                            ey: "Hit rate", ti: "How often has the computer guessed the right direction?",
+                            bo: "Hit rate shows <strong>how often the forecast pointed in the right direction</strong> — up when the fund went up, down when it went down.<br><br>✅ <strong>80%+</strong> = Very good (shown green)<br>🟡 <strong>60–79%</strong> = Acceptable<br>❌ <strong>Below 60%</strong> = Worse than guessing — ⚠ warning shown<br><br>50% = as good as flipping a coin.",
+                            eg: "<strong>This fund:</strong> " + Number(hr).toFixed(1) + "% — " + ge(hr, 60, 80)
+                        }
+                    },
+                    9: {
+                        sv: {
+                            ey: "Täckning", ti: "Hur bra stämmer osäkerhetsintervallet?",
+                            bo: "Täckning visar <strong>hur ofta det verkliga utfallet hamnade innanför spannet</strong> (Q10–Q90) historiskt.<br><br>Tänk dig en väderleksprognos: om den säger 10–20° och värdet faktiskt hamnar därinnanför = träff.<br><br>✅ <strong>80%+</strong> = Välkalibrerat<br>🟡 <strong>60–79%</strong> = Acceptabelt<br>❌ <strong>Under 60%</strong> = Modellen är för säker på sig själv",
+                            eg: "<strong>Denna fond:</strong> " + Number(cov).toFixed(1) + "% — " + g(cov, 60, 80)
+                        },
+                        en: {
+                            ey: "Coverage", ti: "How well does the uncertainty range fit reality?",
+                            bo: "Coverage shows <strong>how often the actual outcome fell within the predicted range</strong> (Q10–Q90) historically.<br><br>Think of a weather forecast: if it says 10–20° and it actually lands there = a hit.<br><br>✅ <strong>80%+</strong> = Well calibrated<br>🟡 <strong>60–79%</strong> = Acceptable<br>❌ <strong>Below 60%</strong> = Model is overconfident",
+                            eg: "<strong>This fund:</strong> " + Number(cov).toFixed(1) + "% — " + ge(cov, 60, 80)
+                        }
+                    },
+                    10: {
+                        sv: {
+                            ey: "Medelfel (MAE)", ti: "Hur stora är felen i genomsnitt?",
+                            bo: "MAE = <strong>genomsnittligt antal procentenheter fel</strong> för mittprognosen (Q50) historiskt. Lägre är alltid bättre.<br><br>✅ <strong>Under 10% (0.10)</strong> = Bra<br>🟡 <strong>10–20%</strong> = Acceptabelt<br>❌ <strong>Över 20%</strong> = Stort fel<br><br>Lågt MAE höjer Score.",
+                            eg: "<strong>Denna fond:</strong> MAE = " + Number(mae).toFixed(4) + " (≈ " + Number(mae * 100).toFixed(1) + "%) — " + (mae < 0.10 ? "Bra ✓" : mae < 0.20 ? "Acceptabelt" : "Stort fel ✗")
+                        },
+                        en: {
+                            ey: "Mean error (MAE)", ti: "How large are the errors on average?",
+                            bo: "MAE = <strong>average percentage points off</strong> for the median forecast (Q50) historically. Lower is always better.<br><br>✅ <strong>Below 10% (0.10)</strong> = Good<br>🟡 <strong>10–20%</strong> = Acceptable<br>❌ <strong>Above 20%</strong> = Large error<br><br>Low MAE raises Score.",
+                            eg: "<strong>This fund:</strong> MAE = " + Number(mae).toFixed(4) + " (≈ " + Number(mae * 100).toFixed(1) + "%) — " + (mae < 0.10 ? "Good ✓" : mae < 0.20 ? "Acceptable" : "Large error ✗")
+                        }
+                    },
+                    11: {
+                        sv: {
+                            ey: "Prognos Q50", ti: "Vad förväntar sig datorn?",
+                            bo: "Q50 är <strong>datorns bästa gissning</strong> — det stora siffran i mitten. Medianen: hälften av scenarierna är bättre, hälften sämre.<br><br>✅ Positivt tal = prognosen är uppgång<br>❌ Negativt tal = prognosen är nedgång<br><br>Det är <em>inte</em> ett garanterat utfall.",
+                            eg: "<strong>Denna vecka:</strong> Q50 = " + fmt(q50) + " — prognosen är " + (q50 > 0 ? "uppgång ✅" : "nedgång ❌")
+                        },
+                        en: {
+                            ey: "Forecast Q50", ti: "What does the computer expect?",
+                            bo: "Q50 is the <strong>computer's best guess</strong> — the large number in the middle. The median: half of all scenarios are better, half worse.<br><br>✅ Positive = forecast is growth<br>❌ Negative = forecast is decline<br><br>It is <em>not</em> a guaranteed outcome.",
+                            eg: "<strong>This week:</strong> Q50 = " + fmt(q50) + " — forecast is " + (q50 > 0 ? "growth ✅" : "decline ❌")
+                        }
+                    },
+                    12: {
+                        sv: {
+                            ey: "Q10 & Q90", ti: "Sämsta och bästa troliga utfallet",
+                            bo: "Förutom Q50 finns ett <strong>osäkerhetsintervall</strong>:<br><br>📉 <strong>Q10</strong> = I 9 av 10 fall förväntas utfallet bli <em>bättre</em> — det pessimistiska scenariot.<br>📈 <strong>Q90</strong> = Bara 1 av 10 förväntas bli bättre — det optimistiska scenariot.<br><br>✅ Smalt spann = hög säkerhet<br>⚠️ Brett spann = stor osäkerhet",
+                            eg: "<strong>Denna vecka:</strong> " + fmt(q10) + " → " + fmt(q50) + " → " + fmt(q90) + "<br>Spann: " + Number(Math.abs(q90 - q10)).toFixed(2) + "%"
+                        },
+                        en: {
+                            ey: "Q10 & Q90", ti: "Worst and best likely outcome",
+                            bo: "In addition to Q50 there is an <strong>uncertainty interval</strong>:<br><br>📉 <strong>Q10</strong> = In 9 out of 10 cases the outcome is expected to be <em>better</em> — the pessimistic scenario.<br>📈 <strong>Q90</strong> = Only 1 in 10 is expected to be better — the optimistic scenario.<br><br>✅ Narrow range = high confidence<br>⚠️ Wide range = high uncertainty",
+                            eg: "<strong>This week:</strong> " + fmt(q10) + " → " + fmt(q50) + " → " + fmt(q90) + "<br>Range: " + Number(Math.abs(q90 - q10)).toFixed(2) + "%"
+                        }
+                    },
+                    13: {
+                        sv: {
+                            ey: "Prognos-bandet", ti: "Vad visar det färgade bandet?",
+                            bo: "Bandet <strong>visualiserar osäkerhetsintervallet</strong> (Q10→Q90) grafiskt.<br><br>🔴 Vänster kant = Q10 (pessimistisk)<br>🟢 Höger kant = Q90 (optimistisk)<br>▌ Strecket = Q50 (mittprognosen)<br><br>✅ Strecket långt till höger = positiv prognos<br>❌ Strecket långt till vänster = negativ prognos",
+                            eg: "Siffrorna under bandet visar axelns yttervärden."
+                        },
+                        en: {
+                            ey: "Forecast band", ti: "What does the coloured band show?",
+                            bo: "The band <strong>visualises the uncertainty interval</strong> (Q10→Q90) graphically.<br><br>🔴 Left edge = Q10 (pessimistic)<br>🟢 Right edge = Q90 (optimistic)<br>▌ The line = Q50 (median forecast)<br><br>✅ Line far right = positive forecast<br>❌ Line far left = negative forecast",
+                            eg: "The numbers below the band show the axis extremes."
+                        }
+                    },
+                    14: {
+                        sv: {
+                            ey: "Backtest — period", ti: "Vad är ett backtest?",
+                            bo: "Backtest = <strong>ett facit</strong>. Vi kör strategin på historiska data som datorn <em>aldrig sett under träningen</em> och kollar vad som faktiskt hänt.<br><br><strong>Tränad t.o.m.</strong> = datum då datorn slutade lära sig.<br><strong>Utvärderad på</strong> = testperioden — data datorn aldrig sett.<br><br>✅ Test på osedd data gör resultatet trovärdigt.",
+                            eg: "<strong>Denna fond:</strong> Tränad t.o.m. " + esc(bt.cutoff_date || "?") + ", testad på " + weeks + " veckor."
+                        },
+                        en: {
+                            ey: "Backtest — period", ti: "What is a backtest?",
+                            bo: "Backtest = <strong>a report card</strong>. We run the strategy on historical data the computer <em>never saw during training</em> and check what actually happened.<br><br><strong>Trained up to</strong> = the date the computer stopped learning.<br><strong>Evaluated on</strong> = the test period — data the computer never saw.<br><br>✅ Testing on unseen data makes results credible.",
+                            eg: "<strong>This fund:</strong> Trained up to " + esc(bt.cutoff_date || "?") + ", tested on " + weeks + " weeks."
+                        }
+                    },
+                    15: {
+                        sv: { ey: "Backtest — period", ti: "Se punkt 14 ovan", bo: "Se förklaringen för punkt 14 ovan.", eg: "" },
+                        en: { ey: "Backtest — period", ti: "See dot 14 above", bo: "See the explanation for dot 14 above.", eg: "" }
+                    },
+                    16: {
+                        sv: {
+                            ey: "Signalstrategi vs Bara hålla", ti: "Var det bättre att följa signalerna?",
+                            bo: "Jämförelse av <strong>två strategier</strong> under samma period:<br><br>🤖 <strong>Signalstrategi</strong> — Köpa/sälja baserat på KÖP/SÄLJ-signaler varje vecka.<br>🧘 <strong>Bara hålla (B&H)</strong> — Köpa en gång och inte göra någonting alls.<br><br>✅ Signalstrategi bättre = värdet högt + <em>Bättre</em>-märket syns<br>❌ B&H bättre = signalerna underpresterade",
+                            eg: "<strong>Denna fond:</strong> Strategi " + fmt(strat) + " vs B&H " + fmt(bah) + " → " + fmt(excess) + " " + (excess > 0 ? "✅" : "❌")
+                        },
+                        en: {
+                            ey: "Signal strategy vs Just holding", ti: "Was it better to follow the signals?",
+                            bo: "Comparison of <strong>two strategies</strong> over the same period:<br><br>🤖 <strong>Signal strategy</strong> — Buying/selling based on BUY/SELL signals each week.<br>🧘 <strong>Just holding (B&H)</strong> — Buying once and doing nothing at all.<br><br>✅ Signal strategy better = value is higher + <em>Better</em> tag shown<br>❌ B&H better = signals underperformed",
+                            eg: "<strong>This fund:</strong> Strategy " + fmt(strat) + " vs B&H " + fmt(bah) + " → " + fmt(excess) + " " + (excess > 0 ? "✅" : "❌")
+                        }
+                    },
+                    17: {
+                        sv: {
+                            ey: "Årsavkastning", ti: "Hur mycket gav strategin per år?",
+                            bo: "Årsavkastning = <strong>genomsnittlig % avkastning per år</strong> under backtestperioden.<br><br>✅ <strong>Över 10%</strong> = Bra (börsen ger historiskt ~7–10%/år)<br>🟡 <strong>5–10%</strong> = OK<br>❌ <strong>Under 5%</strong> = Svag",
+                            eg: "<strong>Denna fond:</strong> " + fmt(ann) + " — " + g(ann, 5, 10)
+                        },
+                        en: {
+                            ey: "Annual return", ti: "How much did the strategy yield per year?",
+                            bo: "Annual return = <strong>average % return per year</strong> during the backtest period.<br><br>✅ <strong>Above 10%</strong> = Good (stock markets historically ~7–10%/year)<br>🟡 <strong>5–10%</strong> = OK<br>❌ <strong>Below 5%</strong> = Poor",
+                            eg: "<strong>This fund:</strong> " + fmt(ann) + " — " + ge(ann, 5, 10)
+                        }
+                    },
+                    18: {
+                        sv: {
+                            ey: "Sharpe-kvot", ti: "Är avkastningen värd risken?",
+                            bo: "Sharpe-kvoten mäter <strong>avkastning i förhållande till risk</strong> (svängningar).<br><br>✅ <strong>Över 1.0</strong> = Bra — bra avkastning utan för stora svängningar<br>🟡 <strong>0.5–1.0</strong> = Acceptabelt<br>❌ <strong>Under 0.5</strong> = Svag — stor risk i förhållande till avkastning",
+                            eg: "<strong>Denna fond:</strong> Sharpe " + Number(sharpe).toFixed(2) + " — " + g(sharpe, 0.5, 1.0)
+                        },
+                        en: {
+                            ey: "Sharpe ratio", ti: "Is the return worth the risk?",
+                            bo: "The Sharpe ratio measures <strong>return relative to risk</strong> (volatility).<br><br>✅ <strong>Above 1.0</strong> = Good — solid return without excessive swings<br>🟡 <strong>0.5–1.0</strong> = Acceptable<br>❌ <strong>Below 0.5</strong> = Poor — high risk relative to return",
+                            eg: "<strong>This fund:</strong> Sharpe " + Number(sharpe).toFixed(2) + " — " + ge(sharpe, 0.5, 1.0)
+                        }
+                    },
+                    19: {
+                        sv: {
+                            ey: "Max nedgång", ti: "Vad var det värsta tappet?",
+                            bo: "Max nedgång = <strong>det värsta tappet från topp till botten</strong> under backtestperioden. Litet tal (nära 0%) är bättre.<br><br>✅ <strong>Bättre än −10%</strong> = Liten nedgång<br>🟡 <strong>−10% till −20%</strong> = Märkbar<br>❌ <strong>Sämre än −20%</strong> = Stor nedgång",
+                            eg: "<strong>Denna fond:</strong> " + fmt(maxdd) + " — " + gdd(maxdd, 10, 20)
+                        },
+                        en: {
+                            ey: "Max drawdown", ti: "What was the worst loss?",
+                            bo: "Max drawdown = <strong>the worst drop from peak to trough</strong> during the backtest period. Small number (close to 0%) is better.<br><br>✅ <strong>Better than −10%</strong> = Small drop<br>🟡 <strong>−10% to −20%</strong> = Notable<br>❌ <strong>Worse than −20%</strong> = Large drop",
+                            eg: "<strong>This fund:</strong> " + fmt(maxdd) + " — " + gdde(maxdd, 10, 20)
+                        }
+                    },
+                    20: {
+                        sv: {
+                            ey: "Träffsäkerhet (BT)", ti: "Rätt riktning under testperioden?",
+                            bo: "Träffsäkerhet i backtestet = <strong>hur ofta prognosen pekade rätt</strong> under just testperioden (data datorn aldrig sett).<br><br>✅ <strong>70%+</strong> = Bra<br>🟡 <strong>60–69%</strong> = Acceptabelt<br>❌ <strong>Under 60%</strong> = Svag",
+                            eg: "<strong>Denna fond:</strong> " + Number(hitbt).toFixed(1) + "% — " + g(hitbt, 60, 70)
+                        },
+                        en: {
+                            ey: "Hit rate (BT)", ti: "Correct direction during the test period?",
+                            bo: "Hit rate in backtest = <strong>how often the forecast pointed the right way</strong> during the test period specifically.<br><br>✅ <strong>70%+</strong> = Good<br>🟡 <strong>60–69%</strong> = Acceptable<br>❌ <strong>Below 60%</strong> = Poor",
+                            eg: "<strong>This fund:</strong> " + Number(hitbt).toFixed(1) + "% — " + ge(hitbt, 60, 70)
+                        }
+                    },
+                    21: {
+                        sv: {
+                            ey: "Vinstfrekvens", ti: "Hur ofta gick det plus per vecka?",
+                            bo: "Vinstfrekvens = <strong>andelen veckor med positiv avkastning</strong> under backtestperioden.<br><br>✅ <strong>55%+</strong> = Bra — fler vinnarveckor än förlorar-veckor<br>🟡 <strong>50–54%</strong> = Jämnt<br>❌ <strong>Under 50%</strong> = Fler förlorar-veckor",
+                            eg: "<strong>Denna fond:</strong> " + Number(win).toFixed(1) + "% — " + g(win, 50, 55)
+                        },
+                        en: {
+                            ey: "Win rate", ti: "How often was there a positive return each week?",
+                            bo: "Win rate = <strong>the share of weeks with positive return</strong> during the backtest period.<br><br>✅ <strong>55%+</strong> = Good — more winning than losing weeks<br>🟡 <strong>50–54%</strong> = Even<br>❌ <strong>Below 50%</strong> = More losing than winning weeks",
+                            eg: "<strong>This fund:</strong> " + Number(win).toFixed(1) + "% — " + ge(win, 50, 55)
+                        }
+                    },
+                    22: {
+                        sv: {
+                            ey: "Överskott vs B&H", ti: "Hur mycket bättre/sämre än att bara sitta still?",
+                            bo: "Överskott = <strong>skillnaden</strong> mellan signalstrategin och att bara hålla fonden under samma period.<br><br>✅ <strong>Positivt tal</strong> = Signalerna lönade sig — gav mer än att sitta still<br>❌ <strong>Negativt tal</strong> = Det hade gått bättre att inte göra något",
+                            eg: "<strong>Denna fond:</strong> " + fmt(excess) + " " + (excess > 0 ? "✅ Signalerna slog B&H" : "❌ B&H slog signalerna")
+                        },
+                        en: {
+                            ey: "Excess vs B&H", ti: "How much better/worse than just sitting still?",
+                            bo: "Excess = <strong>the difference</strong> between the signal strategy and just holding the fund over the same period.<br><br>✅ <strong>Positive</strong> = Signals paid off — gave more than doing nothing<br>❌ <strong>Negative</strong> = It would have been better to do nothing",
+                            eg: "<strong>This fund:</strong> " + fmt(excess) + " " + (excess > 0 ? "✅ Signals beat B&H" : "❌ B&H beat signals")
+                        }
+                    },
+                    23: {
+                        sv: {
+                            ey: "Backtest-anmärkning", ti: "Historik garanterar inte framtiden",
+                            bo: "Backtestet är gjort på <strong>data som modellen inte sett under träning</strong> — det gör det trovärdigt.<br><br>⚠️ Men: historisk avkastning garanterar <em>aldrig</em> framtida resultat. Marknader förändras, kriser uppstår.<br><br>Använd detta som <em>ett av flera underlag</em> — inte som ett facit.",
+                            eg: "PPM Kollen är ett utbildningsverktyg, inte finansiell rådgivning."
+                        },
+                        en: {
+                            ey: "Backtest note", ti: "History does not guarantee the future",
+                            bo: "The backtest is done on <strong>data the model has not seen during training</strong> — this makes it credible.<br><br>⚠️ But: historical returns <em>never</em> guarantee future results. Markets change, crises occur.<br><br>Use this as <em>one of several inputs</em> — not as a definitive answer.",
+                            eg: "PPM Kollen is an educational tool, not financial advice."
+                        }
+                    },
+                    24: {
+                        sv: {
+                            ey: "Graf", ti: "Vad visar grafen?",
+                            bo: "Grafen visar <strong>hur väl prognosen matchade verkligheten</strong> historiskt.<br><br>📊 <strong>Ensemble</strong> — Alla fyra AI-modeller kombinerade. Bandet = Q10–Q90-spannet, mittlinjen = Q50, den mörka linjen = hur fonden faktiskt gick.<br><br>🔬 <strong>Per modell</strong> — Varje AI-modell för sig: LSTM, TCN, GRU och XGBoost.<br><br>✅ Bra tecken: bandet täcker de flesta rörelserna och mittlinjen följer trenden.",
+                            eg: "Klicka på 'Ensemble' eller 'Per modell' för att byta vy."
+                        },
+                        en: {
+                            ey: "Chart", ti: "What does the chart show?",
+                            bo: "The chart shows <strong>how well the forecast matched reality</strong> historically.<br><br>📊 <strong>Ensemble</strong> — All four AI models combined. The band = Q10–Q90 range, the middle line = Q50, the dark line = how the fund actually performed.<br><br>🔬 <strong>Per model</strong> — Each AI model separately: LSTM, TCN, GRU and XGBoost.<br><br>✅ Good sign: band covers most movements, median line follows the trend.",
+                            eg: "Click 'Ensemble' or 'Per model' to switch view."
+                        }
+                    }
+                };
+            }
+
+
+            /* ── floating tooltip ── */
+            var _active = null;
+            var _pins = null;
+            var _currentFund = null;
+            var _currentFund = null;
+            var _ftip = null; // lazily fetched
+
+            function ftip() { return _ftip || (_ftip = document.getElementById("ftip")) }
+
+            function positionTip(btn) {
+                var t = ftip();
+                t.style.left = "0"; t.style.top = "0"; // reset so we get real offsetWidth
+                t.style.display = "block"; // temporarily visible to measure
+                var tr = btn.getBoundingClientRect();
+                var tw = t.offsetWidth, th = t.offsetHeight;
+                var vw = window.innerWidth, vh = window.innerHeight;
+                var margin = 10;
+                var left, top;
+                // prefer right of badge; fall back to left
+                if (tr.right + tw + margin <= vw) {
+                    left = tr.right + margin;
+                } else if (tr.left - tw - margin >= 0) {
+                    left = tr.left - tw - margin;
+                } else {
+                    left = Math.max(margin, Math.min(tr.left, vw - tw - margin));
+                }
+                // prefer below badge; fall back to above
+                if (tr.bottom + th + margin <= vh) {
+                    top = tr.bottom + margin;
+                } else if (tr.top - th - margin >= 0) {
+                    top = tr.top - th - margin;
+                } else {
+                    top = Math.max(margin, vh - th - margin);
+                }
+                // clamp
+                left = Math.max(margin, Math.min(left, vw - tw - margin));
+                top = Math.max(margin, Math.min(top, vh - th - margin));
+                t.style.left = left + "px";
+                t.style.top = top + "px";
+                t.style.display = ""; // let .open class handle it
+            }
+
+            function openExplain(num, btn) {
+                if (!_pins) return;
+                var p = _pins[num]; if (!p) return;
+                if (_active === num) { closeExplain(); return }
+                _active = num;
+                document.querySelectorAll(".hb").forEach(function (b) { b.classList.toggle("active", parseInt(b.dataset.pin) === num) });
+                document.getElementById("ep-num").textContent = String(num);
+                var pd = _lang === "en" ? p.en : p.sv;
+                document.getElementById("ep-eyebrow").textContent = pd.ey;
+                document.getElementById("ep-title").textContent = pd.ti;
+                document.getElementById("ep-body").innerHTML = pd.bo;
+                var eg = document.getElementById("ep-example");
+                if (pd.eg) { eg.innerHTML = pd.eg; eg.style.display = "block" } else { eg.style.display = "none" }
+                positionTip(btn || document.querySelector(".hb.active") || document.body);
+                ftip().classList.add("open");
+            }
+            function closeExplain() {
+                _active = null;
+                document.querySelectorAll(".hb").forEach(function (b) { b.classList.remove("active") });
+                ftip().classList.remove("open");
+            }
+            document.getElementById("ftip-close").addEventListener("click", closeExplain);
+            document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeExplain() });
+            document.addEventListener("click", function (e) {
+                var t = ftip();
+                if (!t.classList.contains("open")) return;
+                if (!t.contains(e.target) && !e.target.classList.contains("hb")) closeExplain();
+            });
+            window.openExplain = openExplain;
+
+            /* ── badge helper ── */
+            function hb(n) { return '<button class="hb" data-pin="' + n + '" onclick="openExplain(' + n + ')" title="Förklaring ' + n + '">' + n + '</button>' }
+
+            /* ── card renderer — mirrors index.html renderCard exactly, adds hb() badges ── */
+            function renderCard(f) {
+                var fc = f.forecast || {}, bt = f.backtest || {}, ch = f.charts || {};
+                var q10 = fc.q10 || 0, q50 = fc.q50 || 0, q90 = fc.q90 || 0;
+                var hr = f.hitrate_q50 || 0, cov = f.coverage_pct || 0, mae = f.mae_q50 || 0, sc = f.score || 0;
+                var rank = 1; // we only show rank 1 on this page
+
+                /* forecast band */
+                var span = Math.max(Math.abs(q10), Math.abs(q90), 0.5) * 1.15;
+                function tp(v) { return ((v + span) / (2 * span) * 100).toFixed(1) }
+                var bandLeft = tp(q10), bandWidth = (tp(q90) - tp(q10)).toFixed(1), q50pos = tp(q50);
+
+                /* backtest */
+                var ann = bt.ann_return_pct || 0, sharpe = bt.sharpe || 0, maxdd = bt.max_drawdown_pct || 0;
+                var strat = bt.cum_return_pct || 0, bah = bt.bah_return_pct || 0, excess = bt.excess_pct || 0;
+                var win = bt.win_rate_pct || 0, hitbt = bt.hit_rate_pct || 0, weeks = bt.weeks || 0;
+                var stratWin = strat >= bah;
+                var bmax = Math.max(Math.abs(strat), Math.abs(bah), 0.01);
+                function bw(v) { return (Math.abs(v) / bmax * 100).toFixed(1) }
+                function btStat(val, lo, hi) { var c = val >= hi ? "q-good" : val < lo ? "q-warn" : "q-ok"; return c }
+                function btStatLabel(val, lo, hi) { var c = btStat(val, lo, hi).replace("q-", ""); return c === "good" ? t("q_good") : c === "warn" ? t("q_weak") : t("q_ok"); }
+
+                /* chart paths */
+                var ensPath = ch.ensemble ? ("./" + ch.ensemble) : null;
+                var indPath = ch.individual ? ("./" + ch.individual) : null;
+                function chartPane(id, path, active) {
+                    var cls = "chart-pane" + (active ? " active" : "");
+                    return '<div class="' + cls + '" id="' + id + '">' + (path ? '<img src="' + esc(path) + '" alt="' + t('chart_img_alt') + '" loading="lazy">'
+                        : '<div class="chart-missing">' + t('chart_missing_msg') + '</div>') + '</div>'
+                }
+
+                var tagsHtml = (f.tags || "").split(",").map(function (t) { return '<span class="tag">' + esc(t.trim()) + '</span>' }).join("");
+                var hrCls = hr >= 80 ? "good" : hr < 60 ? "warn" : "";
+
+                return (
+                    '<div class="fund-card is-top">' +
+
+                    /* HEADER */
+                    '<div class="card-header">' +
+                    '<div class="rank-col is-medal">' + hb(1) + medal(rank) + '</div>' +
+                    '<div class="fund-meta">' +
+                    '<div class="fund-name">' + hb(2) + ' ' + esc(f.name || '?') + '</div>' +
+                    '<div class="fund-ids">' +
+                    '<span class="id-pill">' + hb(4) + ' ID ' + esc(f.fund_id || '?') + '</span>' +
+                    '<span class="id-pill ppm">' + hb(3) + ' PPM ' + esc(f.ppm_code || '?') + '</span>' +
+                    (f.avanza_url ? '<a class="action-btn" href="' + esc(f.avanza_url) + '" target="_blank" rel="noopener">Avanza &#8599;</a>' : '') +
+                    (hr < 70 ? '<span class="hitrate-warn">&#9888; ' + t('hitrate_warn') + '</span>' : '') +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="signal-col">' +
+                    '<div class="signal-badge ' + sigCls(f.signal) + '">' +
+                    hb(5) +
+                    '<span class="signal-icon">' + sigIcon(f.signal) + '</span>' +
+                    '<span class="signal-label">' + (f.signal === 'BUY' ? t('signal_BUY') : f.signal === 'SELL' ? t('signal_SELL') : t('signal_HOLD')) + '</span>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+
+                    /* TAGS */
+                    '<div class="tags-row">' + hb(6) + ' ' + tagsHtml + '</div>' +
+
+                    /* METRICS */
+                    '<div class="metrics-grid">' +
+                    '<div class="metric">' +
+                    '<div class="metric-label">' + hb(7) + ' Score</div>' +
+                    '<div class="metric-value">' + Number(sc).toFixed(1) + '</div>' +
+                    '<div class="metric-hint">' + t('score_hint') + '</div>' +
+                    '</div>' +
+                    '<div class="metric">' +
+                    '<div class="metric-label">' + hb(8) + ' <span data-lang="sv">Träffsäkerhet</span><span data-lang="en">Hit rate</span></div>' +
+                    '<div class="metric-value ' + hrCls + '">' + Number(hr).toFixed(1) + '%</div>' +
+                    '<div class="bar-track"><div class="bar-fill ' + hrCls + '" style="width:' + Math.min(hr, 100).toFixed(1) + '%"></div></div>' +
+                    '</div>' +
+                    '<div class="metric">' +
+                    '<div class="metric-label">' + hb(9) + ' <span data-lang="sv">Täckning</span><span data-lang="en">Coverage</span></div>' +
+                    '<div class="metric-value">' + Number(cov).toFixed(1) + '%</div>' +
+                    '<div class="bar-track"><div class="bar-fill" style="width:' + Math.min(cov, 100).toFixed(1) + '%"></div></div>' +
+                    '</div>' +
+                    '<div class="metric">' +
+                    '<div class="metric-label">' + hb(10) + ' <span data-lang="sv">Medelfel</span><span data-lang="en">Mean error</span> (MAE)</div>' +
+                    '<div class="metric-value">' + Number(mae).toFixed(4) + '</div>' +
+                    '<div class="metric-hint">' + t('metric_mae_hint') + '</div>' +
+                    '</div>' +
+                    '</div>' +
+
+                    /* FORECAST */
+                    '<div class="forecast-block">' +
+                    '<div class="forecast-title">' + hb(11) + ' ' + t('forecast_title') + '</div>' +
+                    '<div class="forecast-row">' +
+                    '<span class="fc-q10">' + hb(12) + ' ' + fmt(q10) + '</span>' +
+                    '<span class="fc-sep">&middot;</span>' +
+                    '<span class="fc-q50 ' + (q50 > 0 ? 'pos' : 'neg') + '">' + fmt(q50) + '</span>' +
+                    '<span class="fc-sep">&middot;</span>' +
+                    '<span class="fc-q90">' + fmt(q90) + ' ' + hb(12) + '</span>' +
+                    '</div>' +
+                    '<div class="forecast-band">' + hb(13) +
+                    '<div class="forecast-band-fill" style="left:' + bandLeft + '%;width:' + bandWidth + '%"></div>' +
+                    '<div class="forecast-band-q50" style="left:' + q50pos + '%"></div>' +
+                    '</div>' +
+                    '<div class="forecast-legend"><span>' + fmt(-span) + '</span><span>0%</span><span>' + fmt(span) + '</span></div>' +
+                    '</div>' +
+
+                    /* BACKTEST */
+                    (bt.weeks ?
+                        '<div class="backtest-block">' +
+                        '<div class="backtest-title">' + hb(14) + ' ' + t('bt_title') + '</div>' +
+                        '<div class="bt-period">' +
+                        '<div class="bt-period-row"><span class="bt-period-label">' + t('bt_trained_up_to') + '</span><span class="bt-period-value">' + esc(bt.cutoff_date || '?') + '</span></div>' +
+                        '<div class="bt-period-sep">&#8250;</div>' +
+                        '<div class="bt-period-row"><span class="bt-period-label">' + t('bt_evaluated') + '</span><span class="bt-period-value">' + esc(bt.date_from || '') + (bt.date_to ? ' → ' + esc(bt.date_to) : '') + '</span></div>' +
+                        '<div class="bt-period-sep">&middot;</div>' +
+                        '<div class="bt-period-row"><span class="bt-period-label">' + t('bt_length') + '</span><span class="bt-period-value">' + weeks + ' ' + t('bt_wks') + '</span></div>' +
+                        '</div>' +
+                        '<div class="bt-verdict ' + (excess > 0.5 ? 'bt-verdict-up' : excess < -0.5 ? 'bt-verdict-down' : 'bt-verdict-flat') + '">' +
+                        (excess > 0.5 ? '▲' : '▼') + ' ' +
+                        (excess > 0.5 ? t('bt_verdict_beat') : excess < -0.5 ? t('bt_verdict_under') : t('bt_verdict_matched')) +
+                        ' <strong>' + fmt(Math.abs(excess)) + '</strong></div>' +
+                        '<div class="bt-compare">' +
+                        '<div class="bt-compare-card ' + (stratWin ? 'is-winner' : '') + '">' +
+                        '<div class="bt-compare-head"><span class="bt-compare-label">' + hb(16) + ' ' + t('bt_signal_strategy') + '</span>' + (stratWin ? '<span class="bt-winner-tag">' + t('bt_better') + '</span>' : '') + '</div>' +
+                        '<div class="bt-compare-value ' + (strat > 0 ? 'good' : 'warn') + '">' + fmt(strat) + '</div>' +
+                        '<div class="bt-compare-sub">' + t('bt_grew').replace('{val}', Number(100 * (1 + strat / 100)).toFixed(0)) + '</div>' +
+                        '<div class="bt-bar-track"><div class="bt-bar-fill ' + (strat >= 0 ? 'pos' : 'neg') + '" style="width:' + bw(strat) + '%"></div></div>' +
+                        '</div>' +
+                        '<div class="bt-compare-card ' + (!stratWin ? 'is-winner' : '') + '">' +
+                        '<div class="bt-compare-head"><span class="bt-compare-label">' + hb(25) + ' ' + t('bt_just_held') + '</span>' + (!stratWin ? '<span class="bt-winner-tag">' + t('bt_better') + '</span>' : '') + '</div>' +
+                        '<div class="bt-compare-value ' + (bah > 0 ? 'good' : 'warn') + '">' + fmt(bah) + '</div>' +
+                        '<div class="bt-compare-sub">' + t('bt_grew').replace('{val}', Number(100 * (1 + bah / 100)).toFixed(0)) + '</div>' +
+                        '<div class="bt-bar-track"><div class="bt-bar-fill ' + (bah >= 0 ? 'pos' : 'neg') + '" style="width:' + bw(bah) + '%"></div></div>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="bt-stats">' +
+                        '<div class="bt-stat"><span class="bt-stat-label">' + hb(17) + ' ' + t('bt_ann_return') + '</span><span class="bt-stat-val ' + (ann >= 10 ? 'good' : ann < 5 ? 'warn' : 'ok') + '">' + fmt(ann) + '</span><span class="bt-stat-quality ' + (ann >= 10 ? 'q-good' : ann < 5 ? 'q-warn' : 'q-ok') + '">' + (ann >= 10 ? t('q_good') : ann < 5 ? t('q_weak') : t('q_ok')) + '</span></div>' +
+                        '<div class="bt-stat"><span class="bt-stat-label">' + hb(18) + ' ' + t('bt_sharpe') + '</span><span class="bt-stat-val ' + (sharpe >= 1 ? 'good' : sharpe < 0.5 ? 'warn' : 'ok') + '">' + Number(sharpe).toFixed(2) + '</span><span class="bt-stat-quality ' + (sharpe >= 1 ? 'q-good' : sharpe < 0.5 ? 'q-warn' : 'q-ok') + '">' + (sharpe >= 1 ? t('q_good') : sharpe < 0.5 ? t('q_weak') : t('q_ok')) + '</span></div>' +
+                        '<div class="bt-stat"><span class="bt-stat-label">' + hb(19) + ' ' + t('bt_maxdd') + '</span><span class="bt-stat-val ' + (maxdd >= -10 ? 'good' : maxdd < -20 ? 'warn' : 'ok') + '">' + fmt(maxdd) + '</span><span class="bt-stat-quality ' + (maxdd >= -10 ? 'q-good' : maxdd < -20 ? 'q-warn' : 'q-ok') + '">' + (maxdd >= -10 ? t('q_small') : maxdd < -20 ? t('q_large') : t('q_notable')) + '</span></div>' +
+                        '<div class="bt-stat"><span class="bt-stat-label">' + hb(20) + ' ' + t('bt_hitrate_bt') + '</span><span class="bt-stat-val ' + (hitbt >= 70 ? 'good' : hitbt < 60 ? 'warn' : 'ok') + '">' + Number(hitbt).toFixed(1) + '%</span><span class="bt-stat-quality ' + (hitbt >= 70 ? 'q-good' : hitbt < 60 ? 'q-warn' : 'q-ok') + '">' + (hitbt >= 70 ? t('q_good') : hitbt < 60 ? t('q_weak') : t('q_ok')) + '</span></div>' +
+                        '<div class="bt-stat"><span class="bt-stat-label">' + hb(21) + ' ' + t('bt_winrate') + '</span><span class="bt-stat-val ' + (win >= 55 ? 'good' : win < 50 ? 'warn' : 'ok') + '">' + Number(win).toFixed(1) + '%</span><span class="bt-stat-quality ' + (win >= 55 ? 'q-good' : win < 50 ? 'q-warn' : 'q-ok') + '">' + (win >= 55 ? t('q_good') : win < 50 ? t('q_weak') : t('q_ok')) + '</span></div>' +
+                        '<div class="bt-stat"><span class="bt-stat-label">' + hb(22) + ' ' + t('bt_excess') + '</span><span class="bt-stat-val ' + (excess > 5 ? 'good' : excess < -5 ? 'warn' : 'ok') + '">' + fmt(excess) + '</span><span class="bt-stat-quality ' + (excess > 5 ? 'q-good' : excess < -5 ? 'q-warn' : 'q-ok') + '">' + (excess > 5 ? t('q_good') : excess < -5 ? t('q_weak') : t('q_ok')) + '</span></div>' +
+                        '</div>' +
+                        '<div class="bt-disclaimer">' + t('bt_disclaimer') + ' ' + hb(23) + '</div>' +
+                        '</div>' : '') +
+
+                    /* CHARTS */
+                    '<div class="charts-block">' +
+                    '<div class="chart-tabs">' +
+                    '<button class="chart-tab active" onclick="switchChart(this,\'ens\')">'
+                    + t('chart_ensemble') + '</button>' +
+                    '<button class="chart-tab" onclick="switchChart(this,\'ind\')">'
+                    + t('chart_per_model') + '</button>' +
+                    hb(24) +
+                    '</div>' +
+                    chartPane('ens', ensPath, true) +
+                    chartPane('ind', indPath, false) +
+                    '</div>' +
+
+                    '</div>' /* end fund-card */
+                );
+            }
+
+            window.switchChart = function (btn, id) {
+                var block = btn.closest(".charts-block");
+                block.querySelectorAll(".chart-tab").forEach(function (b) { b.classList.remove("active") });
+                block.querySelectorAll(".chart-pane").forEach(function (p) { p.classList.remove("active") });
+                btn.classList.add("active");
+                var p = block.querySelector("#" + id); if (p) p.classList.add("active");
+            };
+
+            /* ── fetch predictions.json ── */
+            var URLS = ["predictions.json", "data/predictions.json", "output/predictions.json",
+                "https://raw.githubusercontent.com/zolodev/ppm-kollen/refs/heads/main/predictions.json"];
+            function tryFetch(urls) {
+                return urls.reduce(function (p, u) { return p.catch(function () { return fetch(u).then(function (r) { if (!r.ok) throw 0; return r.json() }) }) }, Promise.reject());
+            }
+            tryFetch(URLS).then(function (data) {
+                var funds = (data.horizons && data.horizons["1w"]) || [];
+                if (!funds.length) { document.getElementById("card-wrap").innerHTML = '<p class="state-msg">Inga fonddata hittades.</p>'; return }
+                var f = funds[0];
+                _currentFund = f;
+                _pins = buildPins(f);
+                document.getElementById("card-wrap").innerHTML = renderCard(f);
+            }).catch(function () {
+                document.getElementById("card-wrap").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json.</p>';
+            });
+
+            /* ── FAQ accordion ── */
+            var FAQ = [
+                {
+                    ic: "🏦",
+                    ti_sv: "Vad är PPM-systemet?", ti_en: "What is the PPM system?",
+                    sub_sv: "Premiepension — ett sparande du kanske inte visste om", sub_en: "Premium pension — savings you might not know about",
+                    tx_sv: 'Din <strong>premiepension</strong> är en del av din lön som staten lägger undan varje månad sedan du börjar jobba. Pengarna placeras i fonder och du kan själv välja vilka — annars hamnar de i statens standardval.<br><br>Du byter fonder på <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a>. PPM Kollen hjälper dig välja men beslutet är alltid ditt eget.',
+                    tx_en: `Your <strong>premium pension</strong> is part of your salary set aside by the state every month since you start working. The money is invested in funds and you can choose which ones — otherwise they end up in the state's default fund.<br><br>
+You switch funds on <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a>. PPM Kollen helps you choose but the decision is always yours.`,
+                    eg_sv: "<strong>Tips:</strong> Logga in → Mina sidor → Mina fonder → Välj fonder → Ange PPM-koden.",
+                    eg_en: "<strong>Tip:</strong> Log in → My pages → My funds → Choose funds → Enter the PPM code."
+                },
+                {
+                    ic: "🤖",
+                    ti_sv: "Hur fungerar AI-prognoserna?", ti_en: "How do the AI forecasts work?",
+                    sub_sv: "Fyra dataprogram som röstar ihop", sub_en: "Four programs voting together",
+                    tx_sv: 'PPM Kollen tränar <strong>fyra AI-modeller</strong> på historisk kursdata:<br><br>🧠 <strong>LSTM</strong> — neuralt nätverk med minne, lär sig mönster över tid.<br>🧠 <strong>GRU</strong> — snabbare variant av LSTM.<br>🧠 <strong>TCN</strong> — ser korta mönster parallellt.<br>🧠 <strong>XGBoost</strong> — beslutsträd som hittar icke-linjära samband.<br><br>Alla fyra röstar ihop → ett intervall (Q10/Q50/Q90) istället för en enda siffra.',
+                    tx_en: 'PPM Kollen trains <strong>four AI models</strong> on historical price data:<br><br>🧠 <strong>LSTM</strong> — neural network with memory, learns patterns over time.<br>🧠 <strong>GRU</strong> — faster variant of LSTM.<br>🧠 <strong>TCN</strong> — looks at short patterns in parallel.<br>🧠 <strong>XGBoost</strong> — decision tree that finds non-linear patterns.<br><br>All four vote together → a range (Q10/Q50/Q90) instead of a single number.',
+                    eg_sv: "Fyra metoder ger ett mer robust resultat än att lita på en enda.",
+                    eg_en: "Four methods give a more robust result than relying on just one."
+                },
+                {
+                    ic: "📅",
+                    ti_sv: "Hur ofta uppdateras listan?", ti_en: "How often is the list updated?",
+                    sub_sv: "Automatiskt varje söndag kl 01:00", sub_en: "Automatically every Sunday at 01:00",
+                    tx_sv: 'Varje söndag tidigt på morgonen körs hela systemet automatiskt:<br><br>1. Ny kursdata hämtas för alla ~274 fonder.<br>2. Alla fyra AI-modeller tränas om.<br>3. Prognoser beräknas och de bästa fonderna väljs ut.<br>4. Webbsidan uppdateras.',
+                    tx_en: 'Every Sunday early in the morning the entire system runs automatically:<br><br>1. New price data is fetched for all ~274 funds.<br>2. All four AI models are retrained.<br>3. Forecasts are calculated and the best funds are selected.<br>4. The website is updated.',
+                    eg_sv: "Datum för senaste uppdatering syns på startsidan.",
+                    eg_en: "The date of the latest update is shown on the main page."
+                },
+                {
+                    ic: "⚠️",
+                    ti_sv: "Varför ska jag INTE lita blint på det här?", ti_en: "Why should I NOT blindly trust this?",
+                    sub_sv: "Viktiga begränsningar", sub_en: "Important limitations",
+                    tx_sv: 'PPM Kollen är ett <strong>utbildningsverktyg</strong>, inte finansiell rådgivning:<br><br>📉 Modellerna kan ha fel — marknader är oförutsägbara.<br>🌍 Oväntade händelser (krig, kriser, räntebesked) kan göra historiska mönster irrelevanta.<br>📊 Backtest visar historiken — det garanterar inte framtiden.<br>🔄 En vinnare i veckan behöver inte vara vinnare nästa.<br><br>Rådgör alltid med en finansrådgivare om du är osäker.',
+                    tx_en: 'PPM Kollen is an <strong>educational tool</strong>, not financial advice:<br><br>📉 The models can be wrong — markets are unpredictable.<br>🌍 Unexpected events (war, crises, interest rate decisions) can make historical patterns irrelevant.<br>📊 Backtest shows history — it does not guarantee the future.<br>🔄 A winner this week may not be a winner next week.<br><br>Always consult a financial advisor if you are unsure.',
+                    eg_sv: "", eg_en: ""
+                },
+                {
+                    ic: "💰",
+                    ti_sv: "Hur byter jag faktiskt fond?", ti_en: "How do I actually switch fund?",
+                    sub_sv: "Steg för steg", sub_en: "Step by step",
+                    tx_sv: `1. Gå till <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a><br>
+2. Logga in med BankID<br>
+3. Klicka Mina sidor → Mina fonder<br>
+4. Välj Byt fonder<br>
+5. Ange <strong>PPM-koden</strong> från PPM Kollen<br>
+6. Välj andel av dina pensionspengar<br>
+7. Bekräfta med BankID<br><br>
+Du kan ha upp till 5 fonder och byta hur ofta du vill — det är gratis.`,
+                    tx_en: `1. Go to <a href="https://www.pensionsmyndigheten.se/" target="_blank" rel="noopener">pensionsmyndigheten.se</a><br>
+2. Log in with BankID<br>
+3. Click My pages → My funds<br>
+4. Select Switch funds<br>
+5. Enter the <strong>PPM code</strong> from PPM Kollen<br>
+6. Choose what share of your pension money<br>
+7. Confirm with BankID<br><br>
+You can have up to 5 funds and switch as often as you like — it's free.`,
+                    eg_sv: "<strong>OBS:</strong> Klicka på det blåa PPM-numret på kortet för att kopiera koden direkt.",
+                    eg_en: "<strong>Note:</strong> Click the blue PPM number on the card to copy the code directly."
+                }
+            ];
+            var accList = document.getElementById("acc-list");
+            FAQ.forEach(function (f, i) {
+                var div = document.createElement("div");
+                div.className = "acc-item";
+                div.innerHTML =
+                    '<button class="acc-trigger" onclick="toggleAcc(' + i + ')" aria-expanded="false">' +
+                    '<div class="acc-icon">' + f.ic + '</div>' +
+                    '<div class="acc-label">' +
+                    '<div class="acc-title"><span data-lang="sv">' + f.ti_sv + '</span><span data-lang="en">' + f.ti_en + '</span></div>' +
+                    '<div class="acc-sub"><span data-lang="sv">' + f.sub_sv + '</span><span data-lang="en">' + f.sub_en + '</span></div>' +
+                    '</div>' +
+                    '<span class="acc-chevron">&#9662;</span>' +
+                    '</button>' +
+                    '<div class="acc-body">' +
+                    '<div class="acc-text"><span data-lang="sv">' + f.tx_sv + '</span><span data-lang="en">' + f.tx_en + '</span></div>' +
+                    (f.eg_sv ? '<div class="acc-eg"><span data-lang="sv">' + f.eg_sv + '</span><span data-lang="en">' + f.eg_en + '</span></div>' : '') +
+                    '</div>';
+                accList.appendChild(div);
+            });
+            window.toggleAcc = function (i) {
+                var el = accList.children[i]; if (!el) return;
+                var open = el.classList.toggle("open");
+                el.querySelector(".acc-trigger").setAttribute("aria-expanded", String(open));
+            };
+
+
+            /* ── disclaimer banner ── */
+            (function () {
+                var STORAGE_DISCLAIMER = "ppm-kollen-disclaimer-dismissed";
+                var banner = document.getElementById("disclaimer-banner");
+                var closeBtn = document.getElementById("disclaimer-banner-close");
+                if (!banner) return;
+                var dismissed = false;
+                try { dismissed = localStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch (e) { }
+                if (dismissed) { banner.classList.add("dismissed"); return; }
+                closeBtn.addEventListener("click", function () {
+                    banner.classList.add("dismissed");
+                    try { localStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch (e) { }
+                });
+            })();
+        })();
+    </script>
+</body>
+
+</html>

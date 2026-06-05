@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om projektet — PPM Kollen</title>
+  <meta name="description"
+    content="Bakgrunden och metodiken bakom PPM Kollen — ett hobbyprojekt som använder maskininlärning för att ranka PPM-fonder.">
+  <meta property="og:title" content="Om PPM Kollen — Bakgrund &amp; Metodik" />
+  <meta property="og:description"
+    content="Hobbyproject som kombinerar LSTM, TCN, GRU och XGBoost för att prognostisera PPM-fondavkastning." />
+  <meta property="og:image" content="https://ppmkollen.se/og-preview.png" />
+  <meta property="og:url" content="https://ppmkollen.se/about.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Om PPM Kollen — Bakgrund &amp; Metodik" />
+  <meta name="twitter:description"
+    content="Hobbyproject som kombinerar LSTM, TCN, GRU och XGBoost för att prognostisera PPM-fondavkastning." />
+  <meta name="twitter:image" content="https://ppmkollen.se/og-preview.png" />
+  <meta name="theme-color" content="#1a1f2e" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23334' /%3E%3Cpath d='M3 19 L9 12 L13 16 L21 6' fill='none' stroke='%2399ccee' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='21' cy='6' r='1.6' fill='%2399ccee'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root,
+    [data-theme="dark"] {
+      --bg: oklch(0.18 0.008 240);
+      --bg-elev: oklch(0.22 0.009 240);
+      --bg-card: oklch(0.24 0.009 240);
+      --bg-panel: oklch(0.27 0.010 240);
+      --bg-sunken: oklch(0.15 0.008 240);
+      --border: oklch(0.34 0.010 240);
+      --border-em: oklch(0.45 0.014 240);
+      --text: oklch(0.94 0.005 240);
+      --text-muted: oklch(0.72 0.008 240);
+      --text-faint: oklch(0.55 0.010 240);
+      --accent: oklch(0.78 0.10 220);
+      --accent-2: oklch(0.66 0.12 215);
+      --accent-soft: oklch(0.30 0.04 220);
+      --buy: oklch(0.80 0.16 155);
+      --buy-bg: oklch(0.28 0.07 155);
+      --hold: oklch(0.82 0.13 85);
+      --hold-bg: oklch(0.30 0.06 85);
+      --sell: oklch(0.74 0.16 25);
+      --sell-bg: oklch(0.30 0.08 25);
+      --tag-bg: oklch(0.30 0.010 240);
+      --tag-text: oklch(0.78 0.008 240);
+      --bar-bg: oklch(0.30 0.010 240);
+      --bar-fill: oklch(0.66 0.12 215);
+      --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
+      --shadow-md: 0 4px 16px rgb(0 0 0 / 0.45), 0 1px 2px rgb(0 0 0 / 0.3);
+      --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.55);
+      color-scheme: dark;
+    }
+
+    [data-theme="light"] {
+      --bg: oklch(0.98 0.004 90);
+      --bg-elev: oklch(1 0 0);
+      --bg-card: oklch(1 0 0);
+      --bg-panel: oklch(0.95 0.006 90);
+      --bg-sunken: oklch(0.94 0.006 90);
+      --border: oklch(0.88 0.008 90);
+      --border-em: oklch(0.78 0.012 90);
+      --text: oklch(0.20 0.010 240);
+      --text-muted: oklch(0.45 0.010 240);
+      --text-faint: oklch(0.62 0.010 240);
+      --accent: oklch(0.42 0.10 220);
+      --accent-2: oklch(0.55 0.12 215);
+      --accent-soft: oklch(0.92 0.03 220);
+      --buy: oklch(0.42 0.16 155);
+      --buy-bg: oklch(0.94 0.06 155);
+      --hold: oklch(0.50 0.13 85);
+      --hold-bg: oklch(0.95 0.08 85);
+      --sell: oklch(0.50 0.17 25);
+      --sell-bg: oklch(0.95 0.05 25);
+      --tag-bg: oklch(0.93 0.008 90);
+      --tag-text: oklch(0.35 0.012 240);
+      --bar-bg: oklch(0.90 0.008 90);
+      --bar-fill: oklch(0.55 0.12 215);
+      --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+      --shadow-md: 0 2px 10px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
+      --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.12);
+      color-scheme: light;
+    }
+
+    [data-theme="auto"] {}
+
+    @media (prefers-color-scheme: light) {
+      [data-theme="auto"] {
+        --bg: oklch(0.98 0.004 90);
+        --bg-elev: oklch(1 0 0);
+        --bg-card: oklch(1 0 0);
+        --bg-panel: oklch(0.95 0.006 90);
+        --bg-sunken: oklch(0.94 0.006 90);
+        --border: oklch(0.88 0.008 90);
+        --border-em: oklch(0.78 0.012 90);
+        --text: oklch(0.20 0.010 240);
+        --text-muted: oklch(0.45 0.010 240);
+        --text-faint: oklch(0.62 0.010 240);
+        --accent: oklch(0.42 0.10 220);
+        --accent-2: oklch(0.55 0.12 215);
+        --accent-soft: oklch(0.92 0.03 220);
+        --buy: oklch(0.42 0.16 155);
+        --buy-bg: oklch(0.94 0.06 155);
+        --hold: oklch(0.50 0.13 85);
+        --hold-bg: oklch(0.95 0.08 85);
+        --sell: oklch(0.50 0.17 25);
+        --sell-bg: oklch(0.95 0.05 25);
+        --tag-bg: oklch(0.93 0.008 90);
+        --tag-text: oklch(0.35 0.012 240);
+        --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+        --shadow-md: 0 2px 10px rgb(0 0 0 / 0.08), 0 1px 2px rgb(0 0 0 / 0.04);
+        --shadow-lg: 0 16px 40px rgb(0 0 0 / 0.12);
+        color-scheme: light;
+      }
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    /* ─── Header ────────────────────────────────────────────────── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in oklch, var(--bg) 80%, transparent);
+      backdrop-filter: saturate(140%) blur(10px);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      color: var(--text);
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 9px;
+      border: 1px solid var(--border);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      gap: 3px;
+    }
+
+    .logo-title {
+      font-family: "IBM Plex Serif", serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .logo-sub {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.68rem;
+      color: var(--text-faint);
+      letter-spacing: 0.02em;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .ghost-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      border: 1px solid var(--border-em);
+      background: transparent;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background .15s, color .15s, border-color .15s;
+    }
+
+    .ghost-btn:hover {
+      background: var(--bg-panel);
+      color: var(--text);
+    }
+
+    .theme-switcher {
+      display: flex;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .theme-btn {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 26px;
+      border: none;
+      background: transparent;
+      color: var(--text-faint);
+      border-radius: 6px;
+      transition: background .15s, color .15s;
+    }
+
+    .theme-btn:hover {
+      color: var(--text);
+    }
+
+    .theme-btn.active {
+      background: var(--bg-card);
+      color: var(--text);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ─── Main layout ─────────────────────────────────────────────── */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      grid-template-rows: auto;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .main-col {
+      grid-column: 1;
+    }
+
+    .aside-col {
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    /* ─── Hero ────────────────────────────────────────────────────── */
+    .hero {
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-eyebrow {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-family: "IBM Plex Serif", serif;
+      font-weight: 500;
+      font-size: clamp(1.6rem, 2.6vw + 0.5rem, 2.4rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .hero-lede {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      max-width: 62ch;
+      line-height: 1.7;
+    }
+
+    /* ─── Section ─────────────────────────────────────────────────── */
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-label {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-label::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .section-title {
+      font-family: "IBM Plex Serif", serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.75rem;
+      line-height: 1.25;
+    }
+
+    .prose {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .prose p {
+      max-width: 68ch;
+    }
+
+    .prose strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .prose em {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .prose a {
+      color: var(--accent);
+      border-bottom: 1px solid color-mix(in oklch, var(--accent) 35%, transparent);
+      transition: border-color .15s;
+    }
+
+    .prose a:hover {
+      border-color: var(--accent);
+    }
+
+    /* ─── Pipeline steps ─────────────────────────────────────────── */
+    .pipeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 1.25rem 0;
+    }
+
+    .pipeline-step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 0 1rem;
+      position: relative;
+    }
+
+    .pipeline-step:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      left: 21px;
+      top: 44px;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .step-num {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--accent);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .step-body {
+      padding-top: 0.6rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .step-title {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+
+    .step-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ─── Model cards ─────────────────────────────────────────────── */
+    .model-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+
+    .model-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.2rem;
+      box-shadow: var(--shadow-sm);
+      transition: border-color .15s;
+    }
+
+    .model-card:hover {
+      border-color: var(--border-em);
+    }
+
+    .model-card.featured {
+      border-color: var(--accent);
+      background: color-mix(in oklch, var(--accent-soft) 40%, var(--bg-card));
+    }
+
+    .model-name {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .model-full {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      margin-bottom: 0.6rem;
+    }
+
+    .model-desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ─── Disclaimer card ─────────────────────────────────────────── */
+    .disclaimer-card {
+      background: color-mix(in oklch, var(--hold-bg) 60%, var(--bg-card));
+      border: 1px solid var(--hold);
+      border-radius: 12px;
+      padding: 1.1rem 1.2rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin: 1.5rem 0;
+    }
+
+    .disclaimer-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .disclaimer-text {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .disclaimer-text strong {
+      color: var(--hold);
+    }
+
+    /* ─── Aside cards ─────────────────────────────────────────────── */
+    .aside-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .aside-card-title {
+      font-family: "IBM Plex Serif", serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.82rem;
+    }
+
+    .stat-label {
+      color: var(--text-faint);
+      font-size: 0.75rem;
+    }
+
+    .stat-value {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .stat-value.green {
+      color: var(--buy);
+    }
+
+    .stat-value.blue {
+      color: var(--accent);
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.25rem;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border: 1px solid var(--border);
+    }
+
+    .tag.accent {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* ─── Timeline ────────────────────────────────────────────────── */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 0 1rem;
+      position: relative;
+    }
+
+    .tl-item:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      left: 21px;
+      top: 44px;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .tl-node {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.62rem;
+      font-weight: 500;
+      color: var(--accent);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      line-height: 1.2;
+      text-align: center;
+      padding: 2px;
+      margin-bottom: 1.5rem;
+    }
+
+    .tl-item:last-child .tl-node {
+      border-color: var(--buy);
+      color: var(--buy);
+      background: color-mix(in oklch, var(--buy-bg) 60%, var(--bg-card));
+    }
+
+    .tl-body {
+      padding-top: 0.6rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .tl-title {
+      font-family: "IBM Plex Sans", sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+    }
+
+    .tl-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ─── CTA row ─────────────────────────────────────────────────── */
+    .cta-row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 10px 18px;
+      border-radius: 9px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      transition: background .15s, color .15s, border-color .15s;
+    }
+
+    .cta-btn:hover {
+      background: var(--bg-panel);
+      color: var(--text);
+    }
+
+    .cta-btn.primary {
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
+    }
+
+    .cta-btn.primary:hover {
+      opacity: 0.9;
+    }
+
+    [data-theme="light"] .cta-btn.primary {
+      color: #fff;
+    }
+
+    @media (prefers-color-scheme: light) {
+      [data-theme="auto"] .cta-btn.primary {
+        color: #fff;
+      }
+    }
+
+    /* ─── Horizon table ───────────────────────────────────────────── */
+    .hz-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.84rem;
+      margin: 0.75rem 0;
+    }
+
+    .hz-table th {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.67rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-faint);
+      font-weight: 500;
+      text-align: left;
+      padding: 0.45rem 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hz-table td {
+      padding: 0.55rem 0.6rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .hz-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .hz-table td:first-child {
+      font-family: "IBM Plex Mono", monospace;
+      color: var(--accent);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .hz-table tr:hover td {
+      background: var(--bg-panel);
+    }
+
+    /* ─── Footer ──────────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      font-family: "IBM Plex Mono", monospace;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    footer a {
+      color: inherit;
+      opacity: 0.7;
+      transition: opacity .15s;
+    }
+
+    footer a:hover {
+      opacity: 1;
+    }
+
+    /* ─── Responsive ──────────────────────────────────────────────── */
+    @media (max-width: 860px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      .aside-col {
+        grid-column: 1;
+        grid-row: auto;
+      }
+
+      .model-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        padding: 0 1rem;
+        height: 56px;
+      }
+
+      main {
+        padding: 1.5rem 1rem 4rem;
+      }
+
+      .ghost-btn .btn-label {
+        display: none;
+      }
+    }
+
+    /* ─── Lang toggle utility ─────────────────────────────────────── */
+    [data-lang="en"] {
+      display: none;
+    }
+
+    body.lang-en [data-lang="sv"] {
+      display: none;
+    }
+
+    body.lang-en [data-lang="en"] {
+      display: revert;
+    }
+
+    .disclaimer-banner {
+      background: color-mix(in oklch, var(--hold-bg) 70%, var(--bg));
+      border-bottom: 1px solid var(--hold);
+      padding: 0.6rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--hold);
+      position: relative;
+      z-index: 60;
+      transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
+      overflow: hidden;
+    }
+
+    .disclaimer-banner.dismissed {
+      max-height: 0;
+      opacity: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom-width: 0;
+    }
+
+    .disclaimer-banner-icon {
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      margin-right: 0.5rem;
+    }
+
+    .disclaimer-banner-text {
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .disclaimer-banner-close {
+      background: none;
+      border: none;
+      color: var(--hold);
+      font-size: 1.1rem;
+      line-height: 1;
+      padding: 0 0.25rem;
+      flex-shrink: 0;
+      opacity: 0.6;
+      cursor: pointer;
+      transition: opacity .15s;
+    }
+
+    .disclaimer-banner-close:hover {
+      opacity: 1;
+    }
+
+    .back-btn {
+      min-width: 40px;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      padding: 0 0.6rem;
+    }
+  </style>
+</head>
+
+<body data-theme="auto">
+
+  <!-- ═══ Header ══════════════════════════════════════════════════ -->
+  <div class="disclaimer-banner" id="disclaimer-banner" role="alert">
+    <span class="disclaimer-banner-icon" aria-hidden="true">&#9888;</span>
+    <span class="disclaimer-banner-text" id="disclaimer-banner-text">
+      <strong data-lang="sv">Inte finansiell r&#229;dgivning.</strong>
+      <strong data-lang="en">Not financial advice.</strong>
+      <span data-lang="sv"> Prognoserna &#228;r experimentella och baserade p&#229; historiska m&#246;nster &#8212;
+        ingen garanti f&#246;r framtida avkastning. Konsultera alltid en beh&#246;rig r&#229;dgivare.</span>
+      <span data-lang="en"> Forecasts are experimental and based on historical patterns &#8212; no guarantee of future
+        returns. Always consult a qualified adviser.</span>
+    </span>
+    <button class="disclaimer-banner-close" id="disclaimer-banner-close"
+      aria-label="St&#228;ng / Close">&#x2715;</button>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path d="M3 19 L9 12 L13 16 L21 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <circle cx="21" cy="6" r="1.6" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-title">PPM Kollen</span>
+          <span class="logo-sub">Fund Forecast</span>
+        </span>
+      </a>
+      <div class="header-right">
+        <a href="index.html" class="ghost-btn back-btn" aria-label="Tillbaka / Back">&#8592;</a>
+        <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language">
+          <span id="lang-label">EN</span>
+        </button>
+        <div class="theme-switcher" role="group" aria-label="Theme">
+          <button class="theme-btn" data-theme="light" title="Ljust">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <circle cx="12" cy="12" r="4" fill="currentColor" />
+              <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4" />
+              </g>
+            </svg>
+          </button>
+          <button class="theme-btn active" data-theme="auto" title="Auto">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <path d="M12 4v16a8 8 0 0 0 0-16z" fill="currentColor" />
+              <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4" />
+            </svg>
+          </button>
+          <button class="theme-btn" data-theme="dark" title="Dark">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ Main ═════════════════════════════════════════════════════ -->
+  <main>
+
+    <!-- ── Left column ─────────────────────────────────────────── -->
+    <div class="main-col">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-eyebrow" data-lang="sv">Om projektet · Bakgrund &amp; Metodik</div>
+        <div class="hero-eyebrow" data-lang="en">About · Background &amp; Methodology</div>
+
+        <h1 class="hero-title">
+          <span data-lang="sv">Ett hobbyproject om <em>maskininlärning</em> och PPM-fonder</span>
+          <span data-lang="en">A hobby project on <em>machine learning</em> and pension funds</span>
+        </h1>
+
+        <p class="hero-lede" data-lang="sv">PPM Kollen startade som ett sätt att utforska om moderna ML-modeller kan
+          hitta mönster i historisk fonddata — och om dessa mönster håller över tid. Det är inte ett finansiellt
+          verktyg, utan ett lärande- och experimenteringsprojekt.</p>
+        <p class="hero-lede" data-lang="en">PPM Kollen began as a way to explore whether modern ML models can find
+          patterns in historical fund data — and whether those patterns hold over time. It is not a financial tool, but
+          a learning and experimentation project.</p>
+      </section>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer-card">
+        <span class="disclaimer-icon">⚠</span>
+        <div class="disclaimer-text">
+          <strong data-lang="sv">Inte finansiell rådgivning.</strong>
+          <strong data-lang="en">Not financial advice.</strong>
+          <span data-lang="sv"> Prognoserna är experimentella och baserade på historiska mönster som inte garanterar
+            framtida avkastning. Gör alltid din egen analys och konsultera en behörig rådgivare innan du fattar
+            investeringsbeslut.</span>
+          <span data-lang="en"> Forecasts are experimental and based on historical patterns that do not guarantee future
+            returns. Always do your own analysis and consult a qualified advisor before making investment
+            decisions.</span>
+        </div>
+      </div>
+
+      <!-- Bakgrund -->
+      <section class="section">
+        <div class="section-label" data-lang="sv">Bakgrund</div>
+        <div class="section-label" data-lang="en">Background</div>
+        <h2 class="section-title" data-lang="sv">Varför bygga detta?</h2>
+        <h2 class="section-title" data-lang="en">Why build this?</h2>
+        <div class="prose">
+          <p data-lang="sv">PPM-systemet (Premiepensionsmyndigheten) ger svenska medborgare möjlighet att välja var en
+            del av deras allmänna pension placeras. Med hundratals fonder att välja mellan är det svårt att orientera
+            sig utan djupgående analys.</p>
+          <p data-lang="en">The PPM system (Swedish Premium Pension Authority) allows Swedish citizens to choose where
+            part of their public pension is invested. With hundreds of funds to choose from, it is hard to navigate
+            without in-depth analysis.</p>
+          <p data-lang="sv">Projektet undersöker om <strong>tidsseriemodeller</strong> tränade på veckovis
+            fondavkastning kan generera meningsfulla prognosintervall — inte exakta prispunkter, utan sannolikhetsband
+            som hjälper till att förstå osäkerheten i en prognos.</p>
+          <p data-lang="en">The project investigates whether <strong>time series models</strong> trained on weekly fund
+            returns can generate meaningful forecast intervals — not exact price points, but probability bands that help
+            understand the uncertainty in a forecast.</p>
+          <p data-lang="sv">Allt körs autonomt på en <strong>Jetson-enhet</strong> hemma: modellerna tränas om varje
+            vecka, resultaten publiceras automatiskt, och systemet är designat att överleva omstarter och
+            nätverksavbrott.</p>
+          <p data-lang="en">Everything runs autonomously on a <strong>Jetson device</strong> at home: models are
+            retrained every week, results are published automatically, and the system is designed to survive reboots and
+            network interruptions.</p>
+        </div>
+      </section>
+
+      <!-- Pipeline -->
+      <section class="section">
+        <div class="section-label" data-lang="sv">Hur det fungerar</div>
+        <div class="section-label" data-lang="en">How it works</div>
+        <h2 class="section-title" data-lang="sv">Pipeline — från rådata till ranking</h2>
+        <h2 class="section-title" data-lang="en">Pipeline — from raw data to ranking</h2>
+        <div class="pipeline">
+          <div class="pipeline-step">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <div class="step-title" data-lang="sv">Datainsamling</div>
+              <div class="step-title" data-lang="en">Data collection</div>
+              <div class="step-desc" data-lang="sv">Veckovis fondavkastning hämtas och normaliseras för ~1 100
+                PPM-fonder. Robust skalning (median/IQR) används för att minska känsligheten för extremvärden.</div>
+              <div class="step-desc" data-lang="en">Weekly fund returns are fetched and normalised for ~1,100 PPM funds.
+                Robust scaling (median/IQR) is used to reduce sensitivity to outliers.</div>
+            </div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <div class="step-title" data-lang="sv">Modellträning</div>
+              <div class="step-title" data-lang="en">Model training</div>
+              <div class="step-desc" data-lang="sv">LSTM-, GRU-, TCN- och XGBoost-modeller tränas per fond och
+                investeringshorisont — totalt ~4 400 kombinationer per modelltyp. Träningen körs autonomt varje vecka på
+                lokal hårdvara med checkpoint-baserad kraschåterställning.</div>
+              <div class="step-desc" data-lang="en">LSTM, GRU, TCN and XGBoost models are trained per fund and
+                investment horizon — ~4,400 combinations per model type. Training runs autonomously every week on local
+                hardware with checkpoint-based crash recovery.</div>
+            </div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <div class="step-title" data-lang="sv">Kvantilprognoser</div>
+              <div class="step-title" data-lang="en">Quantile forecasting</div>
+              <div class="step-desc" data-lang="sv">Varje modell genererar tre prognoser: Q10 (pessimistiskt), Q50
+                (median) och Q90 (optimistiskt). Dessa kombineras till ett ensemble-intervall som visar spridningen i
+                osäkerhet.</div>
+              <div class="step-desc" data-lang="en">Each model generates three forecasts: Q10 (pessimistic), Q50
+                (median), and Q90 (optimistic). These are combined into an ensemble interval showing the spread of
+                uncertainty.</div>
+            </div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-num">04</div>
+            <div class="step-body">
+              <div class="step-title" data-lang="sv">Backtest &amp; utvärdering</div>
+              <div class="step-title" data-lang="en">Backtest &amp; evaluation</div>
+              <div class="step-desc" data-lang="sv">Modellerna utvärderas på data de inte sett under träning. Nyckeltal
+                som träffsäkerhet (hit rate), täckning (coverage) och Sharpe-kvot beräknas för att mäta prediktiv
+                förmåga.</div>
+              <div class="step-desc" data-lang="en">Models are evaluated on data they have not seen during training. Key
+                metrics such as hit rate, coverage, and Sharpe ratio are calculated to measure predictive ability.</div>
+            </div>
+          </div>
+          <div class="pipeline-step">
+            <div class="step-num">05</div>
+            <div class="step-body">
+              <div class="step-title" data-lang="sv">Ranking &amp; publicering</div>
+              <div class="step-title" data-lang="en">Ranking &amp; publishing</div>
+              <div class="step-desc" data-lang="sv">Fonder rankas efter ett sammansatt poängsystem som väger prognos,
+                träffsäkerhet och täckning. Resultaten publiceras som JSON och renderas i detta gränssnitt varje vecka.
+              </div>
+              <div class="step-desc" data-lang="en">Funds are ranked by a composite scoring system that weights
+                forecast, hit rate, and coverage. Results are published as JSON and rendered in this interface every
+                week.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modeller -->
+      <section class="section">
+        <div class="section-label" data-lang="sv">Arkitektur</div>
+        <div class="section-label" data-lang="en">Architecture</div>
+        <h2 class="section-title" data-lang="sv">Modellerna bakom prognoserna</h2>
+        <h2 class="section-title" data-lang="en">The models behind the forecasts</h2>
+        <div class="model-grid">
+          <div class="model-card">
+            <div class="model-name">LSTM</div>
+            <div class="model-full">Long Short-Term Memory</div>
+            <div class="model-desc" data-lang="sv">Rekurrenta neuronnät med ett inbyggt minne som gör dem skickliga på
+              att lära sig långsiktiga beroenden i tidsserier. Bildar ryggraden i ensemblen.</div>
+            <div class="model-desc" data-lang="en">Recurrent neural networks with built-in memory, skilled at learning
+              long-term dependencies in time series. Forms the backbone of the ensemble.</div>
+          </div>
+          <div class="model-card">
+            <div class="model-name">GRU</div>
+            <div class="model-full">Gated Recurrent Unit</div>
+            <div class="model-desc" data-lang="sv">En effektivare variant av LSTM med färre parametrar. Tränas snabbare
+              och presterar ofta likvärdigt — särskilt bra när träningsdatan är begränsad.</div>
+            <div class="model-desc" data-lang="en">A more efficient variant of LSTM with fewer parameters. Trains faster
+              and often performs comparably — particularly strong when training data is limited.</div>
+          </div>
+          <div class="model-card">
+            <div class="model-name">TCN</div>
+            <div class="model-full">Temporal Convolutional Network</div>
+            <div class="model-desc" data-lang="sv">Dilaterade kausala konvolutioner som bearbetar sekvenser parallellt
+              och fångar mönster på flera tidsskalor. Komplementerar de rekurrenta modellerna med kortare, lokala
+              mönster.</div>
+            <div class="model-desc" data-lang="en">Dilated causal convolutions that process sequences in parallel and
+              capture patterns at multiple time scales. Complements the recurrent models with shorter, local patterns.
+            </div>
+          </div>
+          <div class="model-card">
+            <div class="model-name">XGBoost</div>
+            <div class="model-full">Extreme Gradient Boosting</div>
+            <div class="model-desc" data-lang="sv">Gradientförstärkt beslutsträdsensemble. Fångar icke-linjära samband i
+              tekniska indikatorer och historiska nyckeltal som neurala nätverk ibland missar.</div>
+            <div class="model-desc" data-lang="en">Gradient-boosted decision tree ensemble. Captures non-linear
+              relationships in technical indicators and historical metrics that neural networks sometimes miss.</div>
+          </div>
+        </div>
+        <div class="prose">
+          <p data-lang="sv">Alla fyra modellerna tränas med <strong>kvantilförlust</strong> (pinball loss) för att
+            producera kalibrerade osäkerhetsintervall (Q10/Q50/Q90) snarare än punktprediktioner. Ensemblen kombinerar
+            deras utdata — när fler modeller pekar åt samma håll höjs konfidensen i signalen.</p>
+          <p data-lang="en">All four models are trained with <strong>quantile loss</strong> (pinball loss) to produce
+            calibrated uncertainty intervals (Q10/Q50/Q90) rather than point predictions. The ensemble combines their
+            outputs — when more models point in the same direction, confidence in the signal increases.</p>
+        </div>
+      </section>
+
+      <!-- Horisonter -->
+      <section class="section">
+        <div class="section-label" data-lang="sv">Investeringshorisonter</div>
+        <div class="section-label" data-lang="en">Investment horizons</div>
+        <h2 class="section-title" data-lang="sv">Fyra tidsskalor, ett beslut</h2>
+        <h2 class="section-title" data-lang="en">Four time scales, one decision</h2>
+        <div class="prose">
+          <p data-lang="sv">Modellen prognostiserar avkastning för fyra investeringshorisonter. Varje horisont tränas
+            med en separat modell som lär sig mönster på just den tidsskalan.</p>
+          <p data-lang="en">The model forecasts returns for four investment horizons. Each horizon is trained with a
+            separate model that learns patterns at that specific time scale.</p>
+        </div>
+        <table class="hz-table">
+          <thead>
+            <tr>
+              <th data-lang="sv">Horisont</th>
+              <th data-lang="sv">Period</th>
+              <th data-lang="sv">Passar för</th>
+              <th data-lang="en">Horizon</th>
+              <th data-lang="en">Period</th>
+              <th data-lang="en">Suitable for</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1w</td>
+              <td data-lang="sv">1 vecka</td>
+              <td data-lang="sv">Kortsiktig rörelse, taktisk omplacering</td>
+              <td data-lang="en">1 week</td>
+              <td data-lang="en">Short-term movement, tactical reallocation</td>
+            </tr>
+            <tr>
+              <td>4w</td>
+              <td data-lang="sv">4 veckor</td>
+              <td data-lang="sv">Månadsvis ombalansering</td>
+              <td data-lang="en">4 weeks</td>
+              <td data-lang="en">Monthly rebalancing</td>
+            </tr>
+            <tr>
+              <td>13w</td>
+              <td data-lang="sv">13 veckor</td>
+              <td data-lang="sv">Kvartalsvy, säsongsmönster</td>
+              <td data-lang="en">13 weeks</td>
+              <td data-lang="en">Quarterly view, seasonal patterns</td>
+            </tr>
+            <tr>
+              <td>26w</td>
+              <td data-lang="sv">26 veckor</td>
+              <td data-lang="sv">Halvårsperspektiv, trendföljning</td>
+              <td data-lang="en">26 weeks</td>
+              <td data-lang="en">Half-year view, trend following</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Tech stack -->
+      <section class="section">
+        <div class="section-label" data-lang="sv">Teknikstack</div>
+        <div class="section-label" data-lang="en">Tech stack</div>
+        <h2 class="section-title" data-lang="sv">Byggt med</h2>
+        <h2 class="section-title" data-lang="en">Built with</h2>
+        <div class="prose">
+          <p data-lang="sv">Projektet kör på en <strong>NVIDIA Jetson</strong>-enhet med 62 GB RAM och NVMe-lagring.
+            ML-stacken är TensorFlow/Keras med LSTM och TCN. Träningspipelinen är skriven i Python med systemd-tjänster
+            för schemaläggning och automatisk återstart. Frontendet är ren vanilla HTML/CSS/JS — inga ramverk.</p>
+          <p data-lang="en">The project runs on an <strong>NVIDIA Jetson</strong> device with 62 GB RAM and NVMe
+            storage. The ML stack is TensorFlow/Keras with LSTM and TCN. The training pipeline is written in Python with
+            systemd services for scheduling and automatic restart. The frontend is pure vanilla HTML/CSS/JS — no
+            frameworks.</p>
+        </div>
+        <div class="tag-cloud" style="margin-top:1rem;">
+          <span class="tag accent">Python</span>
+          <span class="tag accent">TensorFlow / Keras</span>
+          <span class="tag accent">LSTM</span>
+          <span class="tag accent">GRU</span>
+          <span class="tag accent">TCN</span>
+          <span class="tag accent">XGBoost</span>
+          <span class="tag">NVIDIA Jetson</span>
+          <span class="tag">systemd</span>
+          <span class="tag">tmux</span>
+          <span class="tag">JSON / JSONL</span>
+          <span class="tag">Vanilla JS</span>
+          <span class="tag">GitHub Pages</span>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div class="cta-row">
+        <a class="cta-btn primary" href="index.html">
+          <svg viewBox="0 0 24 24" width="15" height="15">
+            <polyline points="3 17 9 11 13 15 21 7" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span data-lang="sv">Se veckans prognos</span>
+          <span data-lang="en">View this week's forecast</span>
+        </a>
+        <a class="cta-btn" href="https://github.com/zolodev/ppm-kollen" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="15" height="15">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          GitHub
+        </a>
+      </div>
+
+    </div><!-- /main-col -->
+
+    <!-- ── Aside column ─────────────────────────────────────────── -->
+    <aside class="aside-col">
+
+      <div class="aside-card">
+        <div class="aside-card-title" data-lang="sv">Projektfakta</div>
+        <div class="aside-card-title" data-lang="en">Project facts</div>
+        <div class="stat-list">
+          <div class="stat-row">
+            <span class="stat-label" data-lang="sv">Antal fonder</span>
+            <span class="stat-label" data-lang="en">Number of funds</span>
+            <span class="stat-value blue">~1 100</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label" data-lang="sv">Modellkombinationer</span>
+            <span class="stat-label" data-lang="en">Model combinations</span>
+            <span class="stat-value blue">~4 400</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label" data-lang="sv">Horisonter</span>
+            <span class="stat-label" data-lang="en">Horizons</span>
+            <span class="stat-value">4</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label" data-lang="sv">Modelltyper</span>
+            <span class="stat-label" data-lang="en">Model types</span>
+            <span class="stat-value" style="font-size:0.72rem;text-align:right;white-space:normal;max-width:55%">LSTM ·
+              GRU<br>TCN · XGBoost</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label" data-lang="sv">Uppdateringsfrekvens</span>
+            <span class="stat-label" data-lang="en">Update frequency</span>
+            <span class="stat-value green" data-lang="sv">Varje vecka</span>
+            <span class="stat-value green" data-lang="en">Every week</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-label" data-lang="sv">Hårdvara</span>
+            <span class="stat-label" data-lang="en">Hardware</span>
+            <span class="stat-value">Jetson · 62 GB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="aside-card">
+        <div class="aside-card-title" data-lang="sv">Ordlista — nyckeltal</div>
+        <div class="aside-card-title" data-lang="en">Glossary — key metrics</div>
+        <div class="stat-list">
+          <div>
+            <div class="stat-label" style="margin-bottom:2px;">Hit rate</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;" data-lang="sv">Andel veckor där
+              modellen förutspådde rätt riktning (upp/ned). ≥70% = bra.</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;" data-lang="en">Share of weeks where
+              the model predicted the correct direction (up/down). ≥70% = good.</div>
+          </div>
+          <div>
+            <div class="stat-label" style="margin-bottom:2px;">Coverage</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;" data-lang="sv">Andel veckor det
+              verkliga utfallet föll inom Q10–Q90-bandet. Lågt = intervallen är för smala.</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;" data-lang="en">Share of weeks the
+              actual outcome fell within the Q10–Q90 band. Low = intervals are too narrow.</div>
+          </div>
+          <div>
+            <div class="stat-label" style="margin-bottom:2px;">MAE Q50</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;" data-lang="sv">Medelabsolutfel för
+              medianprognosen. Lägre = noggrannare.</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;" data-lang="en">Mean absolute error
+              for the median forecast. Lower = more accurate.</div>
+          </div>
+          <div>
+            <div class="stat-label" style="margin-bottom:2px;">Score</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;" data-lang="sv">Sammansatt poäng 0–1.
+              Väger prognos, träffsäkerhet och täckning.</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;" data-lang="en">Composite score 0–1.
+              Weights forecast, hit rate, and coverage.</div>
+          </div>
+          <div>
+            <div class="stat-label" style="margin-bottom:2px;">Sharpe</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;" data-lang="sv">Avkastning per
+              riskenhet i backtestet. ≥1,0 = bra, ≥0,5 = OK.</div>
+            <div style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;" data-lang="en">Return per unit of
+              risk in the backtest. ≥1.0 = good, ≥0.5 = OK.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aside-card">
+        <div class="aside-card-title" data-lang="sv">Projekthistorik</div>
+        <div class="aside-card-title" data-lang="en">Project history</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-node">2024</div>
+            <div class="tl-body">
+              <div class="tl-title"><span data-lang="sv">Första prototyp</span><span data-lang="en">First
+                  prototype</span></div>
+              <div class="tl-desc"><span data-lang="sv">LSTM-modell tränad på ett fåtal fonder. Manuell
+                  körning.</span><span data-lang="en">LSTM model trained on a handful of funds. Manual execution.</span>
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-node">Q1 2025</div>
+            <div class="tl-body">
+              <div class="tl-title"><span data-lang="sv">Skalning till ~1 100 fonder</span><span data-lang="en">Scaling
+                  to ~1,100 funds</span></div>
+              <div class="tl-desc"><span data-lang="sv">OOM-problem lösta med streaming JSONL. TCN
+                  introducerades.</span><span data-lang="en">OOM issues solved with streaming JSONL. TCN
+                  introduced.</span></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-node">Q2 2025</div>
+            <div class="tl-body">
+              <div class="tl-title"><span data-lang="sv">Autonom drift</span><span data-lang="en">Autonomous
+                  operation</span></div>
+              <div class="tl-desc"><span data-lang="sv">Systemd-tjänster, kraschåterställning och veckovis
+                  publicering.</span><span data-lang="en">Systemd services, crash recovery and weekly publishing.</span>
+              </div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-node">Q3 2025</div>
+            <div class="tl-body">
+              <div class="tl-title"><span data-lang="sv">Backtest &amp; ranking</span><span data-lang="en">Backtest
+                  &amp; ranking</span></div>
+              <div class="tl-desc"><span data-lang="sv">Utökat rankningsystem med flera matriser och
+                  backtestblock.</span><span data-lang="en">Extended ranking system with multiple matrices and backtest
+                  blocks.</span></div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-node"><span data-lang="sv">Nu</span><span data-lang="en">Now</span></div>
+            <div class="tl-body">
+              <div class="tl-title"><span data-lang="sv">Pågående</span><span data-lang="en">Ongoing</span></div>
+              <div class="tl-desc"><span data-lang="sv">Kontinuerlig förfining av modeller och gränssnitt.</span><span
+                  data-lang="en">Continuous refinement of models and interface.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- ═══ Footer ═══════════════════════════════════════════════════ -->
+  <footer>
+    PPM Kollen
+    &nbsp;·&nbsp;
+    <span data-lang="sv">Endast för informationsändamål — inte finansiell rådgivning.</span>
+    <span data-lang="en">For informational purposes only — not financial advice.</span>
+    &nbsp;·&nbsp;
+    <a href="index.html">
+      <span data-lang="sv">Prognos</span>
+      <span data-lang="en">Forecast</span>
+    </a>
+    &nbsp;·&nbsp;
+    <a href="about.html">
+      <span data-lang="sv">Om projektet</span>
+      <span data-lang="en">About</span>
+    </a>
+    &nbsp;·&nbsp;
+    <a href="help.html">
+      <span data-lang="sv">Hjälp</span>
+      <span data-lang="en">Help</span>
+    </a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/zolodev/ppm-kollen" target="_blank" rel="noopener"
+      style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" style="vertical-align:middle;">
+        <path
+          d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+      </svg>
+      zolodev
+    </a>
+  </footer>
+
+
+  <script>
+    (() => {
+      "use strict";
+      const STORAGE_THEME = "ppm-kollen-theme";
+      const STORAGE_LANG = "ppm-kollen-lang";
+
+      function applyTheme(mode) {
+        document.body.setAttribute("data-theme", mode);
+        document.querySelectorAll(".theme-btn").forEach(b =>
+          b.classList.toggle("active", b.dataset.theme === mode)
+        );
+        try { localStorage.setItem(STORAGE_THEME, mode); } catch { }
+      }
+      (() => {
+        let saved = "auto";
+        try { saved = localStorage.getItem(STORAGE_THEME) || "auto"; } catch { }
+        if (!["dark", "light", "auto"].includes(saved)) saved = "auto";
+        applyTheme(saved);
+        document.querySelectorAll(".theme-btn").forEach(b =>
+          b.addEventListener("click", () => applyTheme(b.dataset.theme))
+        );
+      })();
+
+      let _lang = "sv";
+      function applyLang(lang) {
+        _lang = lang;
+        document.documentElement.lang = lang;
+        document.body.classList.toggle("lang-en", lang === "en");
+        const lbl = document.getElementById("lang-label");
+        if (lbl) lbl.textContent = lang === "sv" ? "EN" : "SV";
+        try { localStorage.setItem(STORAGE_LANG, lang); } catch { }
+      }
+      (() => {
+        let saved = "sv";
+        try { saved = localStorage.getItem(STORAGE_LANG) || "sv"; } catch { }
+        if (!["sv", "en"].includes(saved)) saved = "sv";
+        applyLang(saved);
+        document.getElementById("lang-toggle")?.addEventListener("click", () => {
+          applyLang(_lang === "sv" ? "en" : "sv");
+        });
+      })();
+
+      /* ── disclaimer banner ── */
+      (function () {
+        var STORAGE_DISCLAIMER = "ppm-kollen-disclaimer-dismissed";
+        var banner = document.getElementById("disclaimer-banner");
+        var closeBtn = document.getElementById("disclaimer-banner-close");
+        if (!banner) return;
+        var dismissed = false;
+        try { dismissed = localStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch (e) { }
+        if (dismissed) { banner.classList.add("dismissed"); return; }
+        closeBtn.addEventListener("click", function () {
+          banner.classList.add("dismissed");
+          try { localStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch (e) { }
+        });
+      })();
+    })();
+  </script>
+</body>
+
+</html>
