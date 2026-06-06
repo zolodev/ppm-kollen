@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-05",
+  "generated": "2026-06-06",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -23,27 +23,27 @@
         "mae_q50": 0.5615,
         "signal": "HOLD",
         "forecast": {
-          "q10": 0.9888,
-          "q50": 1.8381,
-          "q90": 3.3368
+          "q10": 1.1431,
+          "q50": 2.1568,
+          "q90": 3.6537
         },
         "backtest": {
-          "weeks": 112,
-          "cum_return_pct": 95.76,
-          "bah_return_pct": 97.72,
-          "excess_pct": -1.96,
-          "ann_return_pct": 36.6,
-          "sharpe": 1.93,
-          "max_drawdown_pct": -8.95,
-          "win_rate_pct": 50,
-          "hit_rate_pct": 56.2,
-          "cutoff_date": "2024-06-05",
-          "date_from": "2024-06-05",
+          "weeks": 111,
+          "cum_return_pct": 88.06,
+          "bah_return_pct": 94.82,
+          "excess_pct": -6.76,
+          "ann_return_pct": 34.43,
+          "sharpe": 1.67,
+          "max_drawdown_pct": -16.01,
+          "win_rate_pct": 54.1,
+          "hit_rate_pct": 55.9,
+          "cutoff_date": "2024-06-06",
+          "date_from": "2024-06-12",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-05/181108/h1w_ensemble.png",
-          "individual": "top-2026-06-05/181108/h1w_individual.png"
+          "ensemble": "top-2026-06-06/181108/h1w_ensemble.png",
+          "individual": "top-2026-06-06/181108/h1w_individual.png"
         }
       },
       {
@@ -58,27 +58,27 @@
         "mae_q50": 0.6504,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.9065,
-          "q50": 1.8519,
-          "q90": 3.1028
+          "q10": 1.0696,
+          "q50": 2.1268,
+          "q90": 3.2927
         },
         "backtest": {
           "weeks": 112,
-          "cum_return_pct": 87.58,
+          "cum_return_pct": 84.12,
           "bah_return_pct": 77.77,
-          "excess_pct": 9.81,
-          "ann_return_pct": 33.92,
-          "sharpe": 1.67,
-          "max_drawdown_pct": -13.96,
-          "win_rate_pct": 49.1,
-          "hit_rate_pct": 52.7,
-          "cutoff_date": "2024-06-05",
+          "excess_pct": 6.35,
+          "ann_return_pct": 32.77,
+          "sharpe": 1.6,
+          "max_drawdown_pct": -16.5,
+          "win_rate_pct": 50,
+          "hit_rate_pct": 54.5,
+          "cutoff_date": "2024-06-06",
           "date_from": "2024-06-06",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-05/411236/h1w_ensemble.png",
-          "individual": "top-2026-06-05/411236/h1w_individual.png"
+          "ensemble": "top-2026-06-06/411236/h1w_ensemble.png",
+          "individual": "top-2026-06-06/411236/h1w_individual.png"
         }
       },
       {
@@ -93,9 +93,9 @@
         "mae_q50": 0.9787,
         "signal": "BUY",
         "forecast": {
-          "q10": 1.4022,
-          "q50": 2.6402,
-          "q90": 4.152
+          "q10": 1.6725,
+          "q50": 3.168,
+          "q90": 4.4139
         },
         "backtest": {
           "weeks": 111,
@@ -107,13 +107,13 @@
           "max_drawdown_pct": -21.56,
           "win_rate_pct": 56.8,
           "hit_rate_pct": 56.8,
-          "cutoff_date": "2024-06-05",
+          "cutoff_date": "2024-06-06",
           "date_from": "2024-06-08",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-05/363/h1w_ensemble.png",
-          "individual": "top-2026-06-05/363/h1w_individual.png"
+          "ensemble": "top-2026-06-06/363/h1w_ensemble.png",
+          "individual": "top-2026-06-06/363/h1w_individual.png"
         }
       }
     ]
@@ -157,19 +157,19 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "685395",
-        "ppm_code": "182759",
-        "name": "Lannebo Europa Småbolag A",
-        "tags": "Aktiefond, Europa, Småbolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/685395",
-        "hitrate_q50": 68.24,
-        "coverage_pct": 76.47,
-        "mae_q50": 0.5648,
-        "forecast_q50": 0.5762,
-        "forecast_q10": -0.7052,
-        "forecast_q90": 1.1107,
-        "last_actual": 18.4045,
-        "momentum_4w": 9.755,
+        "fund_id": "363",
+        "ppm_code": "283408",
+        "name": "Swedbank Robur Technology A",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
+        "hitrate_q50": 76.59,
+        "coverage_pct": 71.57,
+        "mae_q50": 1.0339,
+        "forecast_q50": 0.57,
+        "forecast_q10": -0.4611,
+        "forecast_q90": 1.4816,
+        "last_actual": 31.7998,
+        "momentum_4w": 25.2174,
         "tritch_score": -1,
         "tritch_phase": -1,
         "signal": "BUY"
@@ -269,19 +269,19 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "685395",
-        "ppm_code": "182759",
-        "name": "Lannebo Europa Småbolag A",
-        "tags": "Aktiefond, Europa, Småbolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/685395",
-        "hitrate_q50": 68.24,
-        "coverage_pct": 76.47,
-        "mae_q50": 0.5648,
-        "forecast_q50": 0.5762,
-        "forecast_q10": -0.7052,
-        "forecast_q90": 1.1107,
-        "last_actual": 18.4045,
-        "momentum_4w": 9.755,
+        "fund_id": "363",
+        "ppm_code": "283408",
+        "name": "Swedbank Robur Technology A",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
+        "hitrate_q50": 76.59,
+        "coverage_pct": 71.57,
+        "mae_q50": 1.0339,
+        "forecast_q50": 0.57,
+        "forecast_q10": -0.4611,
+        "forecast_q90": 1.4816,
+        "last_actual": 31.7998,
+        "momentum_4w": 25.2174,
         "tritch_score": -1,
         "tritch_phase": -1,
         "signal": "BUY"
@@ -437,19 +437,19 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "685395",
-        "ppm_code": "182759",
-        "name": "Lannebo Europa Småbolag A",
-        "tags": "Aktiefond, Europa, Småbolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/685395",
-        "hitrate_q50": 68.24,
-        "coverage_pct": 76.47,
-        "mae_q50": 0.5648,
-        "forecast_q50": 0.5762,
-        "forecast_q10": -0.7052,
-        "forecast_q90": 1.1107,
-        "last_actual": 18.4045,
-        "momentum_4w": 9.755,
+        "fund_id": "363",
+        "ppm_code": "283408",
+        "name": "Swedbank Robur Technology A",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
+        "hitrate_q50": 76.59,
+        "coverage_pct": 71.57,
+        "mae_q50": 1.0339,
+        "forecast_q50": 0.57,
+        "forecast_q10": -0.4611,
+        "forecast_q90": 1.4816,
+        "last_actual": 31.7998,
+        "momentum_4w": 25.2174,
         "tritch_score": -1,
         "tritch_phase": -1,
         "signal": "BUY"
