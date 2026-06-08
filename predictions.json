@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-06",
+  "generated": "2026-06-08",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -23,9 +23,9 @@
         "mae_q50": 0.5615,
         "signal": "HOLD",
         "forecast": {
-          "q10": 1.1431,
-          "q50": 2.1568,
-          "q90": 3.6537
+          "q10": 1.2935,
+          "q50": 2.3464,
+          "q90": 3.8856
         },
         "backtest": {
           "weeks": 111,
@@ -36,14 +36,14 @@
           "sharpe": 1.67,
           "max_drawdown_pct": -16.01,
           "win_rate_pct": 54.1,
-          "hit_rate_pct": 55.9,
-          "cutoff_date": "2024-06-06",
+          "hit_rate_pct": 57.7,
+          "cutoff_date": "2024-06-07",
           "date_from": "2024-06-12",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-06/181108/h1w_ensemble.png",
-          "individual": "top-2026-06-06/181108/h1w_individual.png"
+          "ensemble": "top-2026-06-07/181108/h1w_ensemble.png",
+          "individual": "top-2026-06-07/181108/h1w_individual.png"
         }
       },
       {
@@ -58,27 +58,27 @@
         "mae_q50": 0.6504,
         "signal": "BUY",
         "forecast": {
-          "q10": 1.0696,
-          "q50": 2.1268,
-          "q90": 3.2927
+          "q10": 1.2302,
+          "q50": 2.253,
+          "q90": 3.4965
         },
         "backtest": {
-          "weeks": 112,
+          "weeks": 111,
           "cum_return_pct": 84.12,
-          "bah_return_pct": 77.77,
-          "excess_pct": 6.35,
-          "ann_return_pct": 32.77,
-          "sharpe": 1.6,
+          "bah_return_pct": 74.05,
+          "excess_pct": 10.07,
+          "ann_return_pct": 33.1,
+          "sharpe": 1.61,
           "max_drawdown_pct": -16.5,
-          "win_rate_pct": 50,
-          "hit_rate_pct": 54.5,
-          "cutoff_date": "2024-06-06",
-          "date_from": "2024-06-06",
+          "win_rate_pct": 51.4,
+          "hit_rate_pct": 54.1,
+          "cutoff_date": "2024-06-07",
+          "date_from": "2024-06-13",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-06/411236/h1w_ensemble.png",
-          "individual": "top-2026-06-06/411236/h1w_individual.png"
+          "ensemble": "top-2026-06-07/411236/h1w_ensemble.png",
+          "individual": "top-2026-06-07/411236/h1w_individual.png"
         }
       },
       {
@@ -93,9 +93,9 @@
         "mae_q50": 0.9787,
         "signal": "BUY",
         "forecast": {
-          "q10": 1.6725,
-          "q50": 3.168,
-          "q90": 4.4139
+          "q10": 1.9211,
+          "q50": 3.6488,
+          "q90": 4.6832
         },
         "backtest": {
           "weeks": 111,
@@ -107,13 +107,13 @@
           "max_drawdown_pct": -21.56,
           "win_rate_pct": 56.8,
           "hit_rate_pct": 56.8,
-          "cutoff_date": "2024-06-06",
+          "cutoff_date": "2024-06-07",
           "date_from": "2024-06-08",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-06/363/h1w_ensemble.png",
-          "individual": "top-2026-06-06/363/h1w_individual.png"
+          "ensemble": "top-2026-06-07/363/h1w_ensemble.png",
+          "individual": "top-2026-06-07/363/h1w_individual.png"
         }
       }
     ]
