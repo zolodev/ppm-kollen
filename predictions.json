@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15",
+  "generated": "2026-06-19",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -23,9 +23,9 @@
         "mae_q50": 0.5615,
         "signal": "HOLD",
         "forecast": {
-          "q10": 1.7732,
-          "q50": 1.6002,
-          "q90": 2.0366
+          "q10": 1.7778,
+          "q50": 2.1199,
+          "q90": 2.2451
         },
         "backtest": {
           "weeks": 110,
@@ -37,13 +37,13 @@
           "max_drawdown_pct": -15.08,
           "win_rate_pct": 58.2,
           "hit_rate_pct": 58.2,
-          "cutoff_date": "2024-06-15",
+          "cutoff_date": "2024-06-19",
           "date_from": "2024-06-19",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-15/181108/h1w_ensemble.png",
-          "individual": "top-2026-06-15/181108/h1w_individual.png"
+          "ensemble": "top-2026-06-19/181108/h1w_ensemble.png",
+          "individual": "top-2026-06-19/181108/h1w_individual.png"
         }
       },
       {
@@ -58,9 +58,9 @@
         "mae_q50": 0.6504,
         "signal": "BUY",
         "forecast": {
-          "q10": 1.0991,
-          "q50": 0.7976,
-          "q90": 1.7155
+          "q10": 1.1208,
+          "q50": 1.3137,
+          "q90": 1.8742
         },
         "backtest": {
           "weeks": 110,
@@ -72,13 +72,13 @@
           "max_drawdown_pct": -17.18,
           "win_rate_pct": 53.6,
           "hit_rate_pct": 53.6,
-          "cutoff_date": "2024-06-15",
+          "cutoff_date": "2024-06-19",
           "date_from": "2024-06-20",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-15/411236/h1w_ensemble.png",
-          "individual": "top-2026-06-15/411236/h1w_individual.png"
+          "ensemble": "top-2026-06-19/411236/h1w_ensemble.png",
+          "individual": "top-2026-06-19/411236/h1w_individual.png"
         }
       },
       {
@@ -93,27 +93,27 @@
         "mae_q50": 0.9787,
         "signal": "BUY",
         "forecast": {
-          "q10": 2.0157,
-          "q50": 3.3146,
-          "q90": 4.7505
+          "q10": 2.2733,
+          "q50": 3.8501,
+          "q90": 5.2314
         },
         "backtest": {
-          "weeks": 110,
-          "cum_return_pct": 397.08,
-          "bah_return_pct": 397.08,
+          "weeks": 109,
+          "cum_return_pct": 404.03,
+          "bah_return_pct": 404.03,
           "excess_pct": 0,
-          "ann_return_pct": 113.41,
-          "sharpe": 2.8,
+          "ann_return_pct": 116.33,
+          "sharpe": 2.87,
           "max_drawdown_pct": -21.56,
-          "win_rate_pct": 56.4,
-          "hit_rate_pct": 56.4,
-          "cutoff_date": "2024-06-15",
-          "date_from": "2024-06-15",
+          "win_rate_pct": 56.9,
+          "hit_rate_pct": 56.9,
+          "cutoff_date": "2024-06-19",
+          "date_from": "2024-06-22",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-15/363/h1w_ensemble.png",
-          "individual": "top-2026-06-15/363/h1w_individual.png"
+          "ensemble": "top-2026-06-19/363/h1w_ensemble.png",
+          "individual": "top-2026-06-19/363/h1w_individual.png"
         }
       }
     ]
@@ -475,6 +475,24 @@
         "signal": "BUY"
       },
       {
+        "fund_id": "411236",
+        "ppm_code": "256362",
+        "name": "Skandia Nordamerika Exponering",
+        "tags": "Aktiefond, USA, Mix bolag, Index",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/411236",
+        "hitrate_q50": 62.66,
+        "coverage_pct": 75.07,
+        "mae_q50": 0.7685,
+        "forecast_q50": 0.5823,
+        "forecast_q10": -0.5658,
+        "forecast_q90": 1.4414,
+        "last_actual": 15.965,
+        "momentum_4w": 12.298,
+        "tritch_score": -1,
+        "tritch_phase": -1,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "363",
         "ppm_code": "283408",
         "name": "Swedbank Robur Technology A",
@@ -491,24 +509,6 @@
         "tritch_score": -1,
         "tritch_phase": -1,
         "signal": "BUY"
-      },
-      {
-        "fund_id": "92827",
-        "ppm_code": "442897",
-        "name": "Storebrand Kortränta A SEK H",
-        "tags": "Räntefond, SEK, Obligationer, Korta",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/92827",
-        "hitrate_q50": 95.92,
-        "coverage_pct": 89.03,
-        "mae_q50": 0.0223,
-        "forecast_q50": 0.0183,
-        "forecast_q10": 0.0687,
-        "forecast_q90": 0.021,
-        "last_actual": 0.5714,
-        "momentum_4w": 0.4147,
-        "tritch_score": -1,
-        "tritch_phase": -1,
-        "signal": "HOLD"
       }
     ]
   }

@@ -392,6 +392,80 @@
     .mini-val { font-size: .85rem; }
     .chart-wrap { height: 40px; }
   }
+
+  /* ── Horisontell telefon — progress+stats fyller viewport, logg nedanför ── */
+  @media (max-height: 500px) and (orientation: landscape) {
+    /* Scroll tillåtet — loggen ligger utanför viewport */
+    html, body { height: auto; overflow-y: auto; }
+    body { padding: 5px 10px; }
+
+    /* Slimmad header */
+    header        { padding-bottom: 4px; margin-bottom: 6px; }
+    .logo         { font-size: .85rem; letter-spacing: .08em; }
+    .header-right { font-size: .65rem; }
+
+    /* Korta flik-etiketter */
+    .tab-long  { display: none; }
+    .tab-short { display: inline; }
+
+    /* Grid: enkel flex-kolumn */
+    .grid {
+      display: flex;
+      flex-direction: column;
+      flex: none;
+      gap: 7px;
+    }
+
+    /* left-col fyller exakt viewport minus header (≈48px) */
+    .left-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      height: calc(100dvh - 48px);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    /* 2×2 stat-grid sträcker sig hela höjden */
+    .stat-row {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 7px;
+      min-height: 0;
+    }
+
+    /* ── Stora, tydliga kort ── */
+    .card       { padding: 8px 12px; overflow: hidden; }
+    .card-title { font-size: .82rem; letter-spacing: .1em; margin-bottom: 4px; }
+    .card-value { font-size: 2.4rem; line-height: 1.05; }
+    .card-sub   { font-size: .7rem; margin-top: 2px; }
+    .chart-wrap { display: none; }
+    .gauge-wrap { height: 8px; margin-top: 6px; border-radius: 4px; }
+    .gauge-fill { border-radius: 4px; }
+    .mini-label { font-size: .68rem; }
+    .mini-val   { font-size: 1.1rem; font-family: var(--mono); }
+    .two-col    { gap: 6px; margin-top: 6px; }
+
+    /* ── Progress-card — stor procentsiffra ── */
+    .progress-card     { overflow: hidden; }
+    .progress-header   { margin-bottom: 4px; }
+    .progress-pct      { font-size: 4.5rem; line-height: 1; }
+    .progress-detail   { font-size: .72rem; line-height: 1.55; text-align: left; }
+    .big-gauge         { height: 10px; margin-top: 5px; border-radius: 4px; }
+    .big-gauge-fill    { border-radius: 4px; }
+    #train-proc-banner { font-size: .72rem; margin: .1rem 0 .3rem; }
+
+    /* Inte klickbara/läsbara på avstånd — dölj */
+    .progress-segments { display: none; }
+    .train-controls    { display: none; }
+    .cores-grid        { display: none; }
+
+    /* ── Logg — utanför viewport, kräver scroll ── */
+    .log-card { flex-shrink: 0; min-height: 220px; }
+    .log-body { min-height: 170px; font-size: .78rem; line-height: 1.65; }
+    .log-tabs { gap: 4px; margin-bottom: 5px; }
+    .log-tab  { padding: 5px 11px; font-size: .66rem; }
+  }
 </style>
 </head>
 <body>
@@ -953,7 +1027,13 @@ function render(d) {
   if (active) {
     const name = d.train_proc_name || 'okänt skript';
     banner.style.color = 'var(--green-dim)';
-    banner.textContent = '▶ ' + name;
+    const chevron = document.createElement('span');
+    chevron.style.color = 'var(--green)';
+    chevron.style.fontFamily = 'var(--mono)';
+    chevron.textContent = '▶';
+    banner.textContent = '';
+    banner.appendChild(chevron);
+    banner.appendChild(document.createTextNode(' ' + name));
   } else {
     banner.style.color = 'var(--text-dim)';
     banner.textContent = '⏸ Ingen träningsprocess körs just nu';
