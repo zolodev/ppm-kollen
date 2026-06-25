@@ -23,9 +23,9 @@
         "mae_q50": 0.5615,
         "signal": "HOLD",
         "forecast": {
-          "q10": 1.7813,
-          "q50": 2.2704,
-          "q90": 2.34
+          "q10": 1.7825,
+          "q50": 2.2802,
+          "q90": 2.3777
         },
         "backtest": {
           "weeks": 109,
@@ -37,13 +37,13 @@
           "max_drawdown_pct": -15.08,
           "win_rate_pct": 57.8,
           "hit_rate_pct": 57.8,
-          "cutoff_date": "2024-06-24",
+          "cutoff_date": "2024-06-25",
           "date_from": "2024-06-26",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-24/181108/h1w_ensemble.png",
-          "individual": "top-2026-06-24/181108/h1w_individual.png"
+          "ensemble": "top-2026-06-25/181108/h1w_ensemble.png",
+          "individual": "top-2026-06-25/181108/h1w_individual.png"
         }
       },
       {
@@ -58,9 +58,9 @@
         "mae_q50": 0.6504,
         "signal": "BUY",
         "forecast": {
-          "q10": 1.1191,
-          "q50": 1.5257,
-          "q90": 1.9375
+          "q10": 1.1207,
+          "q50": 1.6196,
+          "q90": 1.9659
         },
         "backtest": {
           "weeks": 109,
@@ -72,13 +72,13 @@
           "max_drawdown_pct": -17.18,
           "win_rate_pct": 53.2,
           "hit_rate_pct": 53.2,
-          "cutoff_date": "2024-06-24",
+          "cutoff_date": "2024-06-25",
           "date_from": "2024-06-27",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-24/411236/h1w_ensemble.png",
-          "individual": "top-2026-06-24/411236/h1w_individual.png"
+          "ensemble": "top-2026-06-25/411236/h1w_ensemble.png",
+          "individual": "top-2026-06-25/411236/h1w_individual.png"
         }
       },
       {
@@ -93,9 +93,9 @@
         "mae_q50": 0.9787,
         "signal": "BUY",
         "forecast": {
-          "q10": 2.3511,
-          "q50": 4.0375,
-          "q90": 5.4211
+          "q10": 2.386,
+          "q50": 4.1195,
+          "q90": 5.525
         },
         "backtest": {
           "weeks": 108,
@@ -107,13 +107,13 @@
           "max_drawdown_pct": -21.56,
           "win_rate_pct": 57.4,
           "hit_rate_pct": 57.4,
-          "cutoff_date": "2024-06-24",
+          "cutoff_date": "2024-06-25",
           "date_from": "2024-06-29",
           "date_to": "2026-05-18"
         },
         "charts": {
-          "ensemble": "top-2026-06-24/363/h1w_ensemble.png",
-          "individual": "top-2026-06-24/363/h1w_individual.png"
+          "ensemble": "top-2026-06-25/363/h1w_ensemble.png",
+          "individual": "top-2026-06-25/363/h1w_individual.png"
         }
       }
     ]
