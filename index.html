@@ -931,274 +931,215 @@
       background: var(--bg-sunken);
     }
 
-    /* ─── Backtest block ─────────────────────────────────────────── */
+    /* ─── Backtest / Validation block ────────────────────────────── */
     .backtest-block {
       padding: 1rem 1.25rem 1.25rem;
       border-top: 1px solid var(--border);
     }
 
-    .backtest-title {
+    .bt-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.25rem 0.75rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .bt-header-title {
       font-size: 0.66rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--text-faint);
-      margin-bottom: 0.65rem;
       font-weight: 500;
     }
 
-    .bt-period {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.6rem 0.85rem;
-      padding: 0.7rem 0.9rem;
-      background: var(--bg-sunken);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 0.9rem;
-    }
-
-    .bt-period-row {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      min-width: 0;
-    }
-
-    .bt-period-label {
-      font-size: 0.62rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-faint);
-      font-weight: 500;
-    }
-
-    .bt-period-value {
+    .bt-header-period {
       font-family: "IBM Plex Mono", monospace;
-      font-size: 0.8rem;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .bt-period-sep {
+      font-size: 0.68rem;
       color: var(--text-faint);
-      font-size: 1rem;
-      line-height: 1;
-      user-select: none;
     }
 
-    .bt-verdict {
+    .bt-hero {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      font-size: 0.92rem;
-      padding: 0.7rem 0.9rem;
-      border-radius: 8px;
-      margin-bottom: 0.9rem;
-      line-height: 1.35;
+      gap: 0.75rem;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      margin-bottom: 0.85rem;
     }
 
-    .bt-verdict-up {
+    .bt-hero.pos {
       background: var(--buy-bg);
+    }
+
+    .bt-hero.neg {
+      background: var(--sell-bg);
+    }
+
+    .bt-hero-amount {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .bt-hero.pos .bt-hero-amount {
       color: var(--buy);
     }
 
-    .bt-verdict-down {
-      background: var(--sell-bg);
+    .bt-hero.neg .bt-hero-amount {
       color: var(--sell);
     }
 
-    .bt-verdict-flat {
-      background: var(--hold-bg);
-      color: var(--hold);
+    .bt-hero-arrow {
+      font-size: 1.1rem;
+      opacity: 0.6;
     }
 
-    .bt-compare {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .bt-compare-card {
-      padding: 0.85rem 0.95rem;
-      background: var(--bg-sunken);
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .bt-compare-card.is-winner {
-      border-color: var(--accent);
-      background: color-mix(in oklch, var(--accent-soft) 60%, var(--bg-sunken));
-    }
-
-    .bt-compare-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-    }
-
-    .bt-compare-label {
+    .bt-hero-sub {
       font-size: 0.72rem;
       color: var(--text-muted);
-      font-weight: 500;
+      margin-top: 2px;
     }
 
-    .bt-winner-tag {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 0.62rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 2px 7px;
-      border-radius: 4px;
-      background: var(--accent);
-      color: var(--bg);
+    .bt-sparkline {
+      display: flex;
+      align-items: flex-end;
+      gap: 2px;
+      height: 32px;
+      margin-bottom: 0.85rem;
+      padding: 0 2px;
     }
 
-    [data-theme="light"] .bt-winner-tag {
-      color: #fff;
+    .bt-spark-bar {
+      flex: 1;
+      min-width: 3px;
+      max-width: 14px;
+      border-radius: 2px 2px 0 0;
+      transition: height .3s ease;
     }
 
-    @media (prefers-color-scheme: light) {
-      [data-theme="auto"] .bt-winner-tag {
-        color: #fff;
-      }
+    .bt-spark-bar.pos {
+      background: var(--buy);
+      opacity: 0.7;
     }
 
-    .bt-compare-value {
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 1.4rem;
-      font-weight: 500;
-      line-height: 1.1;
-      letter-spacing: -0.01em;
-    }
-
-    .bt-compare-value.good {
-      color: var(--buy);
-    }
-
-    .bt-compare-value.warn {
-      color: var(--sell);
-    }
-
-    .bt-compare-value.ok {
-      color: var(--text);
-    }
-
-    .bt-compare-sub {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .bt-compare-sub strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .bt-bar-track {
-      height: 6px;
-      background: var(--bar-bg);
-      border-radius: 3px;
-      overflow: hidden;
-      margin-top: 0.25rem;
-    }
-
-    .bt-bar-fill {
-      height: 100%;
-      border-radius: 3px;
-      transition: width .4s ease;
-    }
-
-    .bt-bar-fill.pos {
-      background: var(--bar-fill);
-    }
-
-    .bt-bar-fill.neg {
+    .bt-spark-bar.neg {
       background: var(--sell);
+      opacity: 0.7;
     }
 
-    .bt-stats {
+    .bt-metrics {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 0.6rem;
-      margin-bottom: 0.75rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.55rem;
+      margin-bottom: 0.65rem;
     }
 
-    .bt-stat {
+    .bt-metric {
       display: flex;
       flex-direction: column;
       gap: 4px;
-      padding: 0.7rem 0.8rem;
+      padding: 0.6rem 0.7rem;
       background: var(--bg-sunken);
       border: 1px solid var(--border);
       border-radius: 8px;
     }
 
-    .bt-stat-label {
+    .bt-metric-label {
       display: flex;
       align-items: center;
       gap: 0.3rem;
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--text-faint);
       font-weight: 500;
     }
 
-    .bt-stat-val {
+    .bt-metric-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .bt-metric-val {
       font-family: "IBM Plex Mono", monospace;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 500;
       color: var(--text);
     }
 
-    .bt-stat-val.good {
+    .bt-metric-val.good {
       color: var(--buy);
     }
 
-    .bt-stat-val.warn {
+    .bt-metric-val.warn {
       color: var(--sell);
     }
 
-    .bt-stat-val.ok {
-      color: var(--text);
+    .bt-metric-val.ok {
+      color: var(--hold);
     }
 
-    .bt-stat-quality {
+    .bt-badge {
       display: inline-block;
       font-family: "IBM Plex Mono", monospace;
-      font-size: 0.62rem;
+      font-size: 0.58rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 2px 7px;
-      border-radius: 4px;
+      letter-spacing: 0.06em;
+      padding: 1px 6px;
+      border-radius: 3px;
       width: fit-content;
     }
 
-    .bt-stat-quality.q-good {
+    .bt-badge.q-good {
       background: var(--buy-bg);
       color: var(--buy);
     }
 
-    .bt-stat-quality.q-warn {
+    .bt-badge.q-warn {
       background: var(--sell-bg);
       color: var(--sell);
     }
 
-    .bt-stat-quality.q-ok {
+    .bt-badge.q-ok {
       background: var(--hold-bg);
       color: var(--hold);
     }
 
+    .bt-last-week {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .bt-dir-ok {
+      color: var(--buy);
+    }
+
+    .bt-dir-fail {
+      color: var(--sell);
+    }
+
+    .bt-trend {
+      font-size: 0.72rem;
+      color: var(--text-faint);
+      margin-top: 0.15rem;
+    }
+
     .bt-disclaimer {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       color: var(--text-faint);
       font-style: italic;
-      line-height: 1.5;
+      line-height: 1.45;
+      margin-top: 0.5rem;
     }
 
     /* ─── Compact ranking card ───────────────────────────────────── */
@@ -1424,20 +1365,12 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .bt-stats {
+      .bt-metrics {
         grid-template-columns: 1fr 1fr;
       }
 
-      .bt-compare {
-        grid-template-columns: 1fr;
-      }
-
-      .bt-period {
-        gap: 0.4rem 0.7rem;
-      }
-
-      .bt-period-sep {
-        display: none;
+      .bt-hero-amount {
+        font-size: 1.25rem;
       }
 
       .fc-q50 {
@@ -1594,6 +1527,9 @@
         </span>
       </a>
       <div class="header-right">
+        <a class="ghost-btn" href="validation.html" title="Modellvalidering">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 4 5-8"/></svg>
+        </a>
         <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language" aria-label="Byt språk">
           <span id="lang-label">EN</span>
         </button>
@@ -1729,6 +1665,16 @@
           bt_winrate: "Vinstfrekvens", bt_winrate_tip: "Andel veckor med positiv avkastning. Bra ≥55%, OK ≥50%.",
           bt_excess: "Överskott vs B&H", bt_excess_tip: "Skillnad mot att bara hålla fonden. Bra ≥+5%, OK ≥0%.",
           bt_disclaimer: "Backtest på ej sedd data — modellen har inte sett denna period under träning. Historisk avkastning är ingen garanti för framtida resultat.",
+          rv_title: "Modellvalidering · senaste {weeks} veckorna",
+          rv_hitrate: "Träffsäkerhet", rv_hitrate_tip: "Andel veckor där modellen förutspådde rätt riktning. Bra ≥70%, OK ≥60%.",
+          rv_mae: "MAE", rv_mae_tip: "Medelabsolutfel — genomsnittligt prognosfel. Bra <2, OK <5.",
+          rv_last_week: "Senaste veckan", rv_last_week_tip: "Prognos vs faktiskt utfall förra veckan.",
+          rv_pred: "Prognos", rv_actual: "Utfall",
+          rv_if_followed: "Om du följt modellen",
+          rv_trend_above: "Träffsäkerheten ligger över förväntad nivå",
+          rv_trend_below: "Träffsäkerheten ligger under förväntad nivå",
+          rv_trend_at: "Träffsäkerheten ligger på förväntad nivå",
+          rv_disclaimer: "Retrospektiv validering på historisk data — ingen garanti för framtida resultat.",
           q_good: "Bra", q_ok: "OK", q_weak: "Svag",
           q_small: "Liten", q_notable: "Märkbar", q_large: "Stor", q_negative: "Negativ",
           q_clearly_better: "Klart bättre", q_marginally_better: "Marginellt bättre",
@@ -1798,6 +1744,16 @@
           bt_winrate: "Win rate", bt_winrate_tip: "Share of weeks with positive return. Good ≥55%, OK ≥50%.",
           bt_excess: "Excess vs B&H", bt_excess_tip: "Difference vs. just holding the fund. Good ≥+5%, OK ≥0%.",
           bt_disclaimer: "Backtest on held-out data — the model has not seen this period during training. Past performance is no guarantee of future results.",
+          rv_title: "Model validation · last {weeks} weeks",
+          rv_hitrate: "Hit rate", rv_hitrate_tip: "Share of weeks where the model predicted the correct direction. Good ≥70%, OK ≥60%.",
+          rv_mae: "MAE", rv_mae_tip: "Mean absolute error — average forecast error. Good <2, OK <5.",
+          rv_last_week: "Last week", rv_last_week_tip: "Forecast vs actual outcome last week.",
+          rv_pred: "Forecast", rv_actual: "Actual",
+          rv_if_followed: "If you followed the model",
+          rv_trend_above: "Hit rate is above expected level",
+          rv_trend_below: "Hit rate is below expected level",
+          rv_trend_at: "Hit rate is at expected level",
+          rv_disclaimer: "Retrospective validation on historical data — no guarantee of future results.",
           q_good: "Good", q_ok: "OK", q_weak: "Weak",
           q_small: "Small", q_notable: "Notable", q_large: "Large", q_negative: "Negative",
           q_clearly_better: "Clearly better", q_marginally_better: "Marginally better",
@@ -1887,34 +1843,113 @@
       function barHtml(val, max = 100, cls = "") { const pct = Math.min(Math.max((val / max) * 100, 0), 100).toFixed(1); return `<div class="bar-track"><div class="bar-fill${cls ? " " + cls : ""}" style="width:${pct}%"></div></div>`; }
       function chartImg(path, alt) { if (!path) return `<div class="chart-missing">${t("chart_missing")}</div>`; const norm = path.replace(/^\.\//, ""); const fallback = norm.startsWith("output/") ? null : `output/${norm}`; const onerr = fallback ? ` onerror="this.onerror=null;this.src='${fallback}'"` : ""; return `<img src="${esc(path)}" alt="${esc(alt)}" loading="lazy"${onerr}>`; }
 
-      function btQualitySharpe(s) { if (s >= 1.0) return { cls: "good", label: t("q_good") }; if (s >= 0.5) return { cls: "ok", label: t("q_ok") }; return { cls: "warn", label: t("q_weak") }; }
-      function btQualityHit(h) { if (h >= 70) return { cls: "good", label: t("q_good") }; if (h >= 60) return { cls: "ok", label: t("q_ok") }; return { cls: "warn", label: t("q_weak") }; }
-      function btQualityWin(w) { if (w >= 55) return { cls: "good", label: t("q_good") }; if (w >= 50) return { cls: "ok", label: t("q_ok") }; return { cls: "warn", label: t("q_weak") }; }
-      function btQualityDD(d) { if (d >= -10) return { cls: "good", label: t("q_small") }; if (d >= -20) return { cls: "ok", label: t("q_notable") }; return { cls: "warn", label: t("q_large") }; }
-      function btQualityAnn(a) { if (a >= 10) return { cls: "good", label: t("q_good") }; if (a >= 5) return { cls: "ok", label: t("q_ok") }; if (a >= 0) return { cls: "warn", label: t("q_weak") }; return { cls: "warn", label: t("q_negative") }; }
-      function btQualityExcess(e) { if (e >= 5) return { cls: "good", label: t("q_clearly_better") }; if (e >= 0) return { cls: "ok", label: t("q_marginally_better") }; if (e >= -5) return { cls: "warn", label: t("q_marginally_worse") }; return { cls: "warn", label: t("q_clearly_worse") }; }
+      function rvQualityHit(h) { if (h >= 70) return { cls: "good", label: t("q_good") }; if (h >= 60) return { cls: "ok", label: t("q_ok") }; return { cls: "warn", label: t("q_weak") }; }
+      function rvQualityMae(m) { if (m < 2) return { cls: "good", label: t("q_good") }; if (m < 5) return { cls: "ok", label: t("q_ok") }; return { cls: "warn", label: t("q_weak") }; }
 
       function btHtml(bt) {
         if (!bt) return "";
-        const strat = bt.cum_return_pct ?? 0, bah = bt.bah_return_pct ?? 0, excess = bt.excess_pct ?? 0;
-        const ann = bt.ann_return_pct ?? 0, sharpe = bt.sharpe ?? 0, maxdd = bt.max_drawdown_pct ?? 0;
-        const win = bt.win_rate_pct ?? 0, hit = bt.hit_rate_pct ?? 0, weeks = bt.weeks ?? 0;
-        const cutoff = bt.cutoff_date || null;
-        const period = (bt.date_from && bt.date_to) ? `${esc(bt.date_from)} → ${esc(bt.date_to)}` : "";
-        const years = weeks > 0 ? (weeks / 52).toFixed(1) : null;
-        let verdictCls, verdictIcon, verdictText;
-        if (excess > 0.5) { verdictCls = "bt-verdict-up"; verdictIcon = "▲"; verdictText = t("bt_strategy_beat").replace("{val}", btFmt(excess)); }
-        else if (excess < -0.5) { verdictCls = "bt-verdict-down"; verdictIcon = "▼"; verdictText = t("bt_strategy_under").replace("{val}", btFmt(Math.abs(excess), 1, false)); }
-        else { verdictCls = "bt-verdict-flat"; verdictIcon = "●"; verdictText = t("bt_strategy_matched").replace("{val}", btFmt(excess)); }
-        const stratEnd = (100 * (1 + strat / 100)), bahEnd = (100 * (1 + bah / 100));
-        const fmtKr = (n) => n.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-        const grewTo = (val) => t("bt_grew_to").replace("{val}", fmtKr(val));
-        const barMax = Math.max(Math.abs(strat), Math.abs(bah), 0.01);
-        const stratW = (Math.abs(strat) / barMax * 100).toFixed(1), bahW = (Math.abs(bah) / barMax * 100).toFixed(1);
-        const stratWinner = strat >= bah;
-        const qSharpe = btQualitySharpe(sharpe), qHit = btQualityHit(hit), qWin = btQualityWin(win);
-        const qDD = btQualityDD(maxdd), qAnn = btQualityAnn(ann), qExcess = btQualityExcess(excess);
-        return `<div class="backtest-block"><div class="backtest-title">${t("bt_title")}</div><div class="bt-period"><div class="bt-period-row"><span class="bt-period-label">${t("bt_trained_up_to")}</span><span class="bt-period-value">${esc(cutoff || "—")}</span></div><div class="bt-period-sep" aria-hidden="true">›</div><div class="bt-period-row"><span class="bt-period-label">${t("bt_evaluated")}</span><span class="bt-period-value">${period || `${weeks} ${t("bt_wks")}`}</span></div><div class="bt-period-sep" aria-hidden="true">·</div><div class="bt-period-row"><span class="bt-period-label">${t("bt_length")}</span><span class="bt-period-value">${weeks} ${t("bt_wks")}${years ? ` (≈ ${years} ${t("bt_yrs")})` : ""}</span></div></div><div class="bt-verdict ${verdictCls}">${verdictIcon} ${verdictText}</div><div class="bt-compare"><div class="bt-compare-card ${stratWinner ? "is-winner" : ""}"><div class="bt-compare-head"><span class="bt-compare-label">${t("bt_signal_strategy")}</span>${stratWinner ? `<span class="bt-winner-tag">${t("bt_better")}</span>` : ""}</div><div class="bt-compare-value ${btClass(strat)}">${btFmt(strat)}</div><div class="bt-compare-sub">${grewTo(stratEnd)}</div><div class="bt-bar-track"><div class="bt-bar-fill ${strat >= 0 ? "pos" : "neg"}" style="width:${stratW}%"></div></div></div><div class="bt-compare-card ${!stratWinner ? "is-winner" : ""}"><div class="bt-compare-head"><span class="bt-compare-label">${t("bt_just_held")}</span>${!stratWinner ? `<span class="bt-winner-tag">${t("bt_better")}</span>` : ""}</div><div class="bt-compare-value ${btClass(bah)}">${btFmt(bah)}</div><div class="bt-compare-sub">${grewTo(bahEnd)}</div><div class="bt-bar-track"><div class="bt-bar-fill ${bah >= 0 ? "pos" : "neg"}" style="width:${bahW}%"></div></div></div></div><div class="bt-stats"><div class="bt-stat"><span class="bt-stat-label">${t("bt_ann_return")} <span class="metric-info" data-tip="${esc(t("bt_ann_return_tip"))}">?</span></span><span class="bt-stat-val ${qAnn.cls}">${btFmt(ann)}</span><span class="bt-stat-quality q-${qAnn.cls}">${qAnn.label}</span></div><div class="bt-stat"><span class="bt-stat-label">${t("bt_sharpe")} <span class="metric-info" data-tip="${esc(t("bt_sharpe_tip"))}">?</span></span><span class="bt-stat-val ${qSharpe.cls}">${Number(sharpe).toFixed(2)}</span><span class="bt-stat-quality q-${qSharpe.cls}">${qSharpe.label}</span></div><div class="bt-stat"><span class="bt-stat-label">${t("bt_maxdd")} <span class="metric-info" data-tip="${esc(t("bt_maxdd_tip"))}">?</span></span><span class="bt-stat-val ${qDD.cls}">${btFmt(maxdd)}</span><span class="bt-stat-quality q-${qDD.cls}">${qDD.label}</span></div><div class="bt-stat"><span class="bt-stat-label">${t("bt_hitrate")} <span class="metric-info" data-tip="${esc(t("bt_hitrate_tip"))}">?</span></span><span class="bt-stat-val ${qHit.cls}">${btFmt(hit, 1, false)}</span><span class="bt-stat-quality q-${qHit.cls}">${qHit.label}</span></div><div class="bt-stat"><span class="bt-stat-label">${t("bt_winrate")} <span class="metric-info" data-tip="${esc(t("bt_winrate_tip"))}">?</span></span><span class="bt-stat-val ${qWin.cls}">${btFmt(win, 1, false)}</span><span class="bt-stat-quality q-${qWin.cls}">${qWin.label}</span></div><div class="bt-stat"><span class="bt-stat-label">${t("bt_excess")} <span class="metric-info" data-tip="${esc(t("bt_excess_tip"))}">?</span></span><span class="bt-stat-val ${qExcess.cls}">${btFmt(excess)}</span><span class="bt-stat-quality q-${qExcess.cls}">${qExcess.label}</span></div></div><div class="bt-disclaimer">${t("bt_disclaimer")}</div></div>`;
+        const weeks = bt.weeks ?? 0;
+        const hit = bt.hit_rate_pct ?? 0;
+        const mae = bt.mae ?? 0;
+        const predQ50 = bt.last_pred_q50 ?? null;
+        const lastActual = bt.last_actual ?? null;
+        const lastErr = bt.last_error ?? null;
+        const dirOk = bt.last_direction_ok ?? null;
+        const dateFrom = bt.date_from || "";
+        const dateTo = bt.date_to || "";
+        const period = (dateFrom && dateTo) ? `${esc(dateFrom)} → ${esc(dateTo)}` : "";
+        const weekly = bt.weekly || [];
+
+        // Quality badges
+        const qHit = rvQualityHit(hit);
+        const qMae = rvQualityMae(mae);
+
+        // Trend indicator
+        let trendIcon, trendText;
+        if (hit >= 70) { trendIcon = "▲"; trendText = t("rv_trend_above"); }
+        else if (hit < 60) { trendIcon = "▼"; trendText = t("rv_trend_below"); }
+        else { trendIcon = "●"; trendText = t("rv_trend_at"); }
+
+        // "If you followed the model" simulation
+        // Invest when pred_q50 > 0.1 (BUY signal), hold cash otherwise
+        // Each week: if invested, portfolio changes by actual%; if cash, no change
+        let portfolio = 100;
+        const cumValues = [];
+        if (weekly.length > 0) {
+          for (const w of weekly) {
+            const p = w.pred_q50 ?? 0;
+            const a = w.actual ?? 0;
+            if (p > 0.1) {
+              portfolio *= (1 + a / 100);
+            }
+            cumValues.push(portfolio);
+          }
+        } else if (weeks > 0 && predQ50 != null && lastActual != null) {
+          // Minimal fallback: just show last week result
+          if (predQ50 > 0.1) {
+            portfolio *= (1 + lastActual / 100);
+          }
+          cumValues.push(portfolio);
+        }
+        const finalVal = cumValues.length > 0 ? cumValues[cumValues.length - 1] : 100;
+        const isPositive = finalVal >= 100;
+        const fmtKr = (n) => n.toLocaleString(_currentLang === "sv" ? "sv-SE" : "en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+        // Sparkline bars from cumulative values
+        let sparkHtml = "";
+        if (cumValues.length > 1) {
+          const weeklyReturns = cumValues.map((v, i) => i === 0 ? (v - 100) : (v - cumValues[i - 1]));
+          const maxAbs = Math.max(...weeklyReturns.map(Math.abs), 0.01);
+          sparkHtml = `<div class="bt-sparkline">${weeklyReturns.map(r => {
+            const h = Math.max(2, Math.abs(r) / maxAbs * 28);
+            return `<div class="bt-spark-bar ${r >= 0 ? "pos" : "neg"}" style="height:${h.toFixed(0)}px" title="${r >= 0 ? "+" : ""}${r.toFixed(2)}"></div>`;
+          }).join("")}</div>`;
+        }
+
+        // Last week prediction vs actual
+        let lastWeekHtml = "";
+        if (predQ50 != null && lastActual != null) {
+          const dirSymbol = dirOk ? '<span class="bt-dir-ok">&#10003;</span>' : '<span class="bt-dir-fail">&#10007;</span>';
+          lastWeekHtml = `<div class="bt-last-week">${dirSymbol} <span>${t("rv_pred")}: ${Number(predQ50).toFixed(2)}%</span> <span style="color:var(--text-faint)">vs</span> <span>${t("rv_actual")}: ${Number(lastActual).toFixed(2)}%</span></div>`;
+        }
+
+        const title = t("rv_title").replace("{weeks}", weeks);
+
+        return `<div class="backtest-block">` +
+          `<div class="bt-header">` +
+            `<span class="bt-header-title">${esc(title)}</span>` +
+            `${period ? `<span class="bt-header-period">${period}</span>` : ""}` +
+          `</div>` +
+          `<div class="bt-hero ${isPositive ? "pos" : "neg"}">` +
+            `<div>` +
+              `<div class="bt-hero-amount">100 kr <span class="bt-hero-arrow">&rarr;</span> ${fmtKr(finalVal)} kr</div>` +
+              `<div class="bt-hero-sub">${t("rv_if_followed")}</div>` +
+            `</div>` +
+          `</div>` +
+          sparkHtml +
+          `<div class="bt-metrics">` +
+            `<div class="bt-metric">` +
+              `<span class="bt-metric-label">${t("rv_hitrate")} <span class="metric-info" data-tip="${esc(t("rv_hitrate_tip"))}">?</span></span>` +
+              `<div class="bt-metric-row">` +
+                `<span class="bt-metric-val ${qHit.cls}">${hit.toFixed(1)}%</span>` +
+                `<span class="bt-badge q-${qHit.cls}">${qHit.label}</span>` +
+              `</div>` +
+            `</div>` +
+            `<div class="bt-metric">` +
+              `<span class="bt-metric-label">${t("rv_mae")} <span class="metric-info" data-tip="${esc(t("rv_mae_tip"))}">?</span></span>` +
+              `<div class="bt-metric-row">` +
+                `<span class="bt-metric-val ${qMae.cls}">${mae.toFixed(2)}</span>` +
+                `<span class="bt-badge q-${qMae.cls}">${qMae.label}</span>` +
+              `</div>` +
+            `</div>` +
+            `<div class="bt-metric">` +
+              `<span class="bt-metric-label">${t("rv_last_week")} <span class="metric-info" data-tip="${esc(t("rv_last_week_tip"))}">?</span></span>` +
+              lastWeekHtml +
+            `</div>` +
+          `</div>` +
+          `<div class="bt-trend">${trendIcon} ${esc(trendText)}</div>` +
+          `<div class="bt-disclaimer">${t("rv_disclaimer")}</div>` +
+        `</div>`;
       }
 
       function forecastBandHtml(fc) {
