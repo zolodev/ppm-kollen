@@ -13,12 +13,44 @@
   "horizons": {
     "1w": [
       {
+        "fund_id": "363",
+        "ppm_code": "283408",
+        "name": "Swedbank Robur Technology A",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
+        "score": 33771.247,
+        "hitrate_q50": 80.2,
+        "coverage_pct": 71.38,
+        "mae_q50": 0.9787,
+        "signal": "BUY",
+        "forecast": {
+          "q10": 1.7408,
+          "q50": 3.3714,
+          "q90": 4.5002
+        },
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 91.7,
+          "mae": 10.9106,
+          "last_pred_q50": 3.3877,
+          "last_actual": 31.7998,
+          "last_error": -28.4121,
+          "last_direction_ok": true,
+          "date_from": "2026-03-30",
+          "date_to": "2026-05-25"
+        },
+        "charts": {
+          "ensemble": "top-2026-06-26/363/h1w_ensemble.png",
+          "individual": "top-2026-06-26/363/h1w_individual.png"
+        }
+      },
+      {
         "fund_id": "181108",
         "ppm_code": "551507",
         "name": "Länsförsäkringar USA Index",
         "tags": "Aktiefond, USA, Mix bolag, Index",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/181108",
-        "score": 8103.871,
+        "score": 16397.559,
         "hitrate_q50": 83.54,
         "coverage_pct": 68.9,
         "mae_q50": 0.5615,
@@ -29,18 +61,15 @@
           "q90": 2.0447
         },
         "backtest": {
-          "weeks": 109,
-          "cum_return_pct": 93.66,
-          "bah_return_pct": 93.66,
-          "excess_pct": 0,
-          "ann_return_pct": 37.07,
-          "sharpe": 1.73,
-          "max_drawdown_pct": -15.08,
-          "win_rate_pct": 57.8,
-          "hit_rate_pct": 57.8,
-          "cutoff_date": "2024-06-26",
-          "date_from": "2024-06-26",
-          "date_to": "2026-05-18"
+          "weeks": 12,
+          "hit_rate_pct": 100,
+          "mae": 4.4794,
+          "last_pred_q50": 1.7675,
+          "last_actual": 15.6791,
+          "last_error": -13.9116,
+          "last_direction_ok": true,
+          "date_from": "2026-03-30",
+          "date_to": "2026-05-25"
         },
         "charts": {
           "ensemble": "top-2026-06-26/181108/h1w_ensemble.png",
@@ -53,7 +82,7 @@
         "name": "Skandia Nordamerika Exponering",
         "tags": "Aktiefond, USA, Mix bolag, Index",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/411236",
-        "score": 7864.62,
+        "score": 13146.206,
         "hitrate_q50": 79.65,
         "coverage_pct": 74.34,
         "mae_q50": 0.6504,
@@ -64,57 +93,19 @@
           "q90": 1.6138
         },
         "backtest": {
-          "weeks": 109,
-          "cum_return_pct": 72.72,
-          "bah_return_pct": 72.72,
-          "excess_pct": 0,
-          "ann_return_pct": 29.79,
-          "sharpe": 1.41,
-          "max_drawdown_pct": -17.18,
-          "win_rate_pct": 53.2,
-          "hit_rate_pct": 53.2,
-          "cutoff_date": "2024-06-26",
-          "date_from": "2024-06-27",
-          "date_to": "2026-05-18"
+          "weeks": 12,
+          "hit_rate_pct": 91.7,
+          "mae": 4.5857,
+          "last_pred_q50": 1.3936,
+          "last_actual": 15.965,
+          "last_error": -14.5714,
+          "last_direction_ok": true,
+          "date_from": "2026-03-30",
+          "date_to": "2026-05-25"
         },
         "charts": {
           "ensemble": "top-2026-06-26/411236/h1w_ensemble.png",
           "individual": "top-2026-06-26/411236/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "363",
-        "ppm_code": "283408",
-        "name": "Swedbank Robur Technology A",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
-        "score": 7852.663,
-        "hitrate_q50": 80.2,
-        "coverage_pct": 71.38,
-        "mae_q50": 0.9787,
-        "signal": "BUY",
-        "forecast": {
-          "q10": 1.7408,
-          "q50": 3.3714,
-          "q90": 4.5002
-        },
-        "backtest": {
-          "weeks": 108,
-          "cum_return_pct": 405.04,
-          "bah_return_pct": 405.04,
-          "excess_pct": 0,
-          "ann_return_pct": 118.09,
-          "sharpe": 2.9,
-          "max_drawdown_pct": -21.56,
-          "win_rate_pct": 57.4,
-          "hit_rate_pct": 57.4,
-          "cutoff_date": "2024-06-26",
-          "date_from": "2024-06-29",
-          "date_to": "2026-05-18"
-        },
-        "charts": {
-          "ensemble": "top-2026-06-26/363/h1w_ensemble.png",
-          "individual": "top-2026-06-26/363/h1w_individual.png"
         }
       }
     ]
