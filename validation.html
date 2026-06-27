@@ -39,7 +39,7 @@
         </span>
       </a>
       <div class="header-right">
-        <a class="ghost-btn" href="index.html" id="back-btn">&larr; Tillbaka</a>
+        <a class="ghost-btn" href="index.html" id="back-btn" aria-label="Tillbaka">&larr;</a>
         <button class="ghost-btn" id="lang-toggle" onclick="ppmI18n.setLang(_lang==='sv'?'en':'sv')">
           <span id="lang-label">EN</span>
         </button>
@@ -343,7 +343,7 @@
     function updateStaticText() {
       document.getElementById("lang-label").textContent = t("lang_toggle");
       document.querySelector(".logo-sub").textContent = t("logo_sub");
-      document.getElementById("back-btn").innerHTML = "&larr; " + t("back");
+      document.getElementById("back-btn").setAttribute("aria-label", t("back"));
       document.getElementById("page-title").textContent = t("page_title");
       document.getElementById("page-subtitle").textContent = t("page_subtitle");
       document.querySelector(".disclaimer").textContent = t("disclaimer");
