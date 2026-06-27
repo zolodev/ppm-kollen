@@ -191,10 +191,12 @@
             /* ── language ── */
             var _lang = "sv";
             function t(k) { return ppmI18n.t(k); }
-            function toggleLang() { applyLang(_lang === "sv" ? "en" : "sv"); }
+            function toggleLang() {
+                var next = _lang === "sv" ? "en" : "sv";
+                ppmI18n.setLang(next);
+            }
             window.toggleLang = toggleLang;
             function applyLang(l) {
-                ppmI18n.setLang(l);
                 _lang = l;
                 document.body.classList.toggle("lang-en", l === "en");
                 var lb = document.getElementById("lang-btn");
