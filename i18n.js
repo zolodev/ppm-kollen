@@ -18,7 +18,7 @@
 (function () {
   "use strict";
 
-  var STORAGE_KEY = "ppmk-lang";
+  var STORAGE_KEY = "ppm-kollen-lang";
   var DEFAULT_LANG = "sv";
   var _translations = null;
   var _lang = DEFAULT_LANG;
@@ -105,13 +105,8 @@
 
   // ── Load translations ──────────────────────────────────────
   function init() {
-    try {
-      _lang = localStorage.getItem(STORAGE_KEY)
-           || localStorage.getItem("ppm-kollen-lang")
-           || DEFAULT_LANG;
-      if (_lang !== "sv" && _lang !== "en") _lang = DEFAULT_LANG;
-      localStorage.setItem(STORAGE_KEY, _lang);
-    } catch (e) { /* noop */ }
+    try { _lang = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG; } catch (e) { /* noop */ }
+    if (_lang !== "sv" && _lang !== "en") _lang = DEFAULT_LANG;
     document.documentElement.lang = _lang;
 
     fetch("i18n.json")
