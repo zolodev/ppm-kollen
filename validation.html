@@ -114,6 +114,31 @@
     }
 
     a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; cursor: pointer; }
+
+    /* ── Disclaimer banner ───────────────────────────────────────── */
+    .disclaimer-banner {
+      background: color-mix(in oklch, var(--hold-bg) 70%, var(--bg));
+      border-bottom: 1px solid var(--hold);
+      padding: 0.6rem 2.5rem;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+      font-size: 0.8rem; color: var(--hold);
+      position: relative; z-index: 60;
+      transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
+      overflow: hidden;
+    }
+    .disclaimer-banner.dismissed {
+      max-height: 0; opacity: 0; padding-top: 0; padding-bottom: 0; border-bottom-width: 0;
+    }
+    .disclaimer-banner-icon { font-size: 0.95rem; flex-shrink: 0; }
+    .disclaimer-banner-text { line-height: 1.5; text-align: center; padding-right: 1rem; }
+    .disclaimer-banner-text strong { font-weight: 600; }
+    .disclaimer-banner-close {
+      background: none; border: none; color: var(--hold);
+      font-size: 1.1rem; line-height: 1; padding: 0 0.25rem;
+      flex-shrink: 0; opacity: 0.6; cursor: pointer; transition: opacity .15s;
+    }
+    .disclaimer-banner-close:hover { opacity: 1; background: color-mix(in oklch, var(--hold) 15%, transparent); }
 
     /* ── Header ──────────────────────────────────────────────────── */
     .site-header {
@@ -365,6 +390,12 @@
 </head>
 
 <body data-theme="auto">
+  <div class="disclaimer-banner" id="disclaimer-banner" role="alert">
+    <span class="disclaimer-banner-icon" aria-hidden="true">&#9888;</span>
+    <span class="disclaimer-banner-text" id="disclaimer-banner-text"></span>
+    <button class="disclaimer-banner-close" id="disclaimer-banner-close" aria-label="Close">&#10005;</button>
+  </div>
+
   <header class="site-header">
     <div class="header-inner">
       <a class="logo" href="index.html">
@@ -679,6 +710,8 @@
     }
 
     // ── Init via i18n ───────────────────────────────────────────
+    const STORAGE_DISCLAIMER = "ppm-kollen-disclaimer-dismissed";
+
     function updateStaticText() {
       document.getElementById("lang-label").textContent = t("lang_toggle");
       document.querySelector(".logo-sub").textContent = t("logo_sub");
@@ -686,6 +719,10 @@
       document.getElementById("page-title").textContent = t("page_title");
       document.getElementById("page-subtitle").textContent = t("page_subtitle");
       document.querySelector(".disclaimer").textContent = t("disclaimer");
+      const bannerText = document.getElementById("disclaimer-banner-text");
+      if (bannerText) bannerText.innerHTML = t("disclaimer_text");
+      const closeBtn = document.getElementById("disclaimer-banner-close");
+      if (closeBtn) closeBtn.setAttribute("aria-label", t("disclaimer_close"));
       const es = document.getElementById("empty-state");
       if (es) {
         es.querySelector("p").textContent = t("empty_title");
@@ -693,9 +730,24 @@
       }
     }
 
+    function initDisclaimer() {
+      const banner = document.getElementById("disclaimer-banner");
+      const closeBtn = document.getElementById("disclaimer-banner-close");
+      if (!banner) return;
+      let dismissed = false;
+      try { dismissed = localStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch (e) {}
+      if (dismissed) { banner.classList.add("dismissed"); return; }
+      closeBtn.addEventListener("click", function () {
+        banner.classList.add("dismissed");
+        try { localStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch (e) {}
+      });
+    }
+
+    let _disclaimerInit = false;
     ppmI18n.ready(function(t_fn, lang) {
       _lang = lang;
       updateStaticText();
+      if (!_disclaimerInit) { _disclaimerInit = true; initDisclaimer(); }
       loadAndRender();
     });
   </script>
