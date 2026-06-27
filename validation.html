@@ -382,6 +382,9 @@
       </a>
       <div class="header-right">
         <a class="back-link" href="index.html">&larr; Tillbaka</a>
+        <button class="ghost-btn" id="lang-toggle" onclick="ppmI18n.setLang(_lang==='sv'?'en':'sv')">
+          <span id="lang-label">EN</span>
+        </button>
         <div class="theme-switcher" role="group" aria-label="Theme">
           <button class="theme-btn" data-theme="light" title="Ljust">
             <svg viewBox="0 0 24 24" width="14" height="14">
@@ -408,8 +411,8 @@
   </header>
 
   <main class="page">
-    <h1 class="page-title">Modellvalidering</h1>
-    <p class="page-subtitle">Hur modellernas prediktioner presterat mot verkligt utfall — vecka f&#246;r vecka.</p>
+    <h1 class="page-title" id="page-title">Modellvalidering</h1>
+    <p class="page-subtitle" id="page-subtitle">Hur modellernas prediktioner presterat mot verkligt utfall — vecka f&#246;r vecka.</p>
 
     <div id="agg-section"></div>
     <div id="fund-section"></div>
@@ -424,6 +427,7 @@
     </div>
   </main>
 
+  <script src="i18n.js"></script>
   <script>
     // ── Theme switcher ───────────────────────────────────────────
     (function () {
@@ -440,12 +444,16 @@
       });
     })();
 
+    // ── i18n bridge ─────────────────────────────────────────────
+    const t = key => ppmI18n.t("val_" + key) !== ("val_" + key) ? ppmI18n.t("val_" + key) : ppmI18n.t(key);
+    let _lang = "sv";
+
     // ── Helpers ──────────────────────────────────────────────────
     const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-    const fmtKr = n => n.toLocaleString("sv-SE", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    const fmtKr = n => n.toLocaleString(_lang === "sv" ? "sv-SE" : "en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
     const fmtPct = (n, d = 1) => (n >= 0 ? "+" : "") + n.toFixed(d) + "%";
-    const qHit = h => h >= 70 ? { cls: "good", label: "Bra" } : h >= 60 ? { cls: "ok", label: "OK" } : { cls: "warn", label: "Svag" };
-    const qMae = m => m < 2 ? { cls: "good", label: "Bra" } : m < 5 ? { cls: "ok", label: "OK" } : { cls: "warn", label: "Hög" };
+    const qHit = h => h >= 70 ? { cls: "good", label: t("q_good") } : h >= 60 ? { cls: "ok", label: t("q_ok") } : { cls: "warn", label: t("q_weak") };
+    const qMae = m => m < 2 ? { cls: "good", label: t("q_good") } : m < 5 ? { cls: "ok", label: t("q_ok") } : { cls: "warn", label: t("q_high") };
 
     function simulatePortfolio(weeks) {
       let p = 100;
@@ -457,88 +465,65 @@
       return { final: p, values: vals };
     }
 
-    // ── Load data ───────────────────────────────────────────────
+    // ── Load and render ────────────────────────────────────────
     const year = new Date().getFullYear();
+    let _cachedEntries = null;
 
-    fetch(`backtest_history_${year}.jsonl`)
-      .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
-      .then(text => {
-        const entries = text.trim().split("\n").filter(Boolean).map(line => {
-          try { return JSON.parse(line); } catch { return null; }
-        }).filter(Boolean);
-
+    function loadAndRender() {
+      const go = (entries) => {
         if (entries.length === 0) { document.getElementById("empty-state").hidden = false; return; }
+        document.getElementById("empty-state").hidden = true;
 
-        // Aggregate data per fund across all entries
         const fundData = {};
         for (const entry of entries) {
           for (const [fid, fd] of Object.entries(entry.funds || {})) {
             if (!fundData[fid]) fundData[fid] = { name: fd.name, history: [], allWeeks: [] };
             fundData[fid].name = fd.name;
             fundData[fid].history.push({
-              date: entry.generated,
-              hit_rate_pct: fd.hit_rate_pct,
-              mae: fd.mae,
-              n_weeks: fd.n_weeks_tested,
-              last_prediction: fd.last_prediction,
+              date: entry.generated, hit_rate_pct: fd.hit_rate_pct,
+              mae: fd.mae, n_weeks: fd.n_weeks_tested, last_prediction: fd.last_prediction,
             });
             if (fd.weeks) {
               for (const w of fd.weeks) {
-                const key = w.target_date;
-                if (!fundData[fid].allWeeks.find(x => x.target_date === key)) {
+                if (!fundData[fid].allWeeks.find(x => x.target_date === w.target_date))
                   fundData[fid].allWeeks.push(w);
-                }
               }
             }
           }
         }
-
-        // Sort each fund's weeks chronologically
-        for (const fd of Object.values(fundData)) {
+        for (const fd of Object.values(fundData))
           fd.allWeeks.sort((a, b) => a.target_date.localeCompare(b.target_date));
-        }
 
-        // Aggregate stats
-        let totalPredictions = 0, totalHits = 0;
-        let allWeeksAll = [];
+        let totalPredictions = 0, totalHits = 0, allWeeksAll = [];
         for (const fd of Object.values(fundData)) {
-          for (const w of fd.allWeeks) {
-            totalPredictions++;
-            if (w.direction_ok) totalHits++;
-          }
+          for (const w of fd.allWeeks) { totalPredictions++; if (w.direction_ok) totalHits++; }
           allWeeksAll = allWeeksAll.concat(fd.allWeeks);
         }
         const overallHitRate = totalPredictions > 0 ? (totalHits / totalPredictions * 100) : 0;
-
-        // Global portfolio simulation (follow all recommendations: if any fund says BUY, invest in best one)
         const globalSim = simulatePortfolio(allWeeksAll);
         const firstDate = allWeeksAll.length > 0 ? allWeeksAll[0].target_date : "—";
-        const latestEntry = entries[entries.length - 1];
-        const latestDate = latestEntry.generated;
-
-        // Render aggregate section
+        const latestDate = entries[entries.length - 1].generated;
         const changePct = globalSim.final - 100;
+
         document.getElementById("agg-section").innerHTML = `
           <div class="agg-row">
             <div class="agg-card">
-              <span class="agg-label">Sammanlagt resultat</span>
+              <span class="agg-label">${esc(t("agg_total"))}</span>
               <span class="agg-value ${changePct >= 0 ? "pos" : "neg"}">100 kr <span style="opacity:.5">&rarr;</span> ${fmtKr(globalSim.final)} kr</span>
-              <span class="agg-hint">Om du följt alla rekommendationer sedan ${esc(firstDate)}</span>
+              <span class="agg-hint">${esc(t("agg_total_hint").replace("{date}", firstDate))}</span>
             </div>
             <div class="agg-card">
-              <span class="agg-label">Träffsäkerhet</span>
+              <span class="agg-label">${esc(t("agg_hitrate"))}</span>
               <span class="agg-value ${overallHitRate >= 70 ? "pos" : ""}">${overallHitRate.toFixed(1)}%</span>
-              <span class="agg-hint">${totalHits} av ${totalPredictions} prediktioner ratt riktning</span>
+              <span class="agg-hint">${esc(t("agg_hitrate_hint").replace("{hits}", totalHits).replace("{total}", totalPredictions))}</span>
             </div>
             <div class="agg-card">
-              <span class="agg-label">Antal prediktioner</span>
+              <span class="agg-label">${esc(t("agg_count"))}</span>
               <span class="agg-value">${totalPredictions}</span>
-              <span class="agg-hint">${Object.keys(fundData).length} fonder &middot; ${entries.length} körningar &middot; Uppdaterad ${esc(latestDate)}</span>
+              <span class="agg-hint">${esc(t("agg_count_hint").replace("{funds}", Object.keys(fundData).length).replace("{runs}", entries.length).replace("{date}", latestDate))}</span>
             </div>
-          </div>
-        `;
+          </div>`;
 
-        // Render fund cards
         const fundSection = document.getElementById("fund-section");
         let cardsHtml = '<div class="fund-grid">';
 
@@ -551,13 +536,9 @@
           const maeQ = qMae(latest.mae);
           const lp = latest.last_prediction || {};
 
-          // Sparkline bars from weekly data
           let sparkHtml = "";
           if (fd.allWeeks.length > 1) {
-            const rets = fd.allWeeks.map(w => {
-              const invested = (w.pred_q50 ?? 0) > 0.1;
-              return invested ? (w.actual ?? 0) : 0;
-            });
+            const rets = fd.allWeeks.map(w => ((w.pred_q50 ?? 0) > 0.1) ? (w.actual ?? 0) : 0);
             const maxAbs = Math.max(...rets.map(Math.abs), 0.01);
             sparkHtml = '<div class="sparkline">' + rets.map(r => {
               const h = Math.max(2, Math.abs(r) / maxAbs * 34);
@@ -565,7 +546,6 @@
             }).join("") + '</div>';
           }
 
-          // Trend chart SVG (hit rate over history entries)
           let trendHtml = "";
           if (fd.history.length > 1) {
             const W = 400, H = 70, pad = 4;
@@ -577,9 +557,8 @@
               const y = H - pad - (v / maxV) * (H - 2 * pad);
               return `${x.toFixed(1)},${y.toFixed(1)}`;
             }).join(" ");
-
             trendHtml = `<div class="trend-section">
-              <div class="trend-label">Trend över körningar</div>
+              <div class="trend-label">${esc(t("trend_title"))}</div>
               <svg class="trend-chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
                 <line x1="${pad}" y1="${H - pad - (70 / 100) * (H - 2 * pad)}" x2="${W - pad}" y2="${H - pad - (70 / 100) * (H - 2 * pad)}"
                   stroke="var(--text-faint)" stroke-width="0.5" stroke-dasharray="4 3" opacity="0.4" />
@@ -592,31 +571,25 @@
                 }).join("")}
               </svg>
               <div class="trend-legend">
-                <span class="trend-legend-item"><span class="trend-dot" style="background:var(--buy)"></span> Träffsäkerhet</span>
-                <span class="trend-legend-item"><span class="trend-dot" style="background:var(--sell)"></span> MAE</span>
-                <span class="trend-legend-item" style="opacity:.6">--- 70% mål</span>
+                <span class="trend-legend-item"><span class="trend-dot" style="background:var(--buy)"></span> ${esc(t("trend_hitrate"))}</span>
+                <span class="trend-legend-item"><span class="trend-dot" style="background:var(--sell)"></span> ${esc(t("trend_mae"))}</span>
+                <span class="trend-legend-item" style="opacity:.6">${esc(t("trend_target"))}</span>
               </div>
             </div>`;
           }
 
-          // Last week result
           let lastWeekHtml = "";
           if (lp.pred_q50 != null && lp.actual != null) {
-            const dirSym = lp.direction_ok
-              ? '<span class="dir-ok">&#10003;</span>'
-              : '<span class="dir-fail">&#10007;</span>';
+            const dirSym = lp.direction_ok ? '<span class="dir-ok">&#10003;</span>' : '<span class="dir-fail">&#10007;</span>';
             lastWeekHtml = `${dirSym} ${fmtPct(lp.pred_q50)} <span style="color:var(--text-faint)">vs</span> ${fmtPct(lp.actual)}`;
           }
 
-          // Week-by-week table
           const latestWeeks = fd.allWeeks.slice(-Math.min(fd.allWeeks.length, 20));
-          const tableId = `tbl-${fid}`;
-          const toggleId = `tog-${fid}`;
+          const tableId = `tbl-${fid}`, toggleId = `tog-${fid}`;
           let tableRows = latestWeeks.map(w => {
             const dirCls = w.direction_ok ? "hit" : "miss";
             const dirSym = w.direction_ok ? '<span class="dir-ok">&#10003;</span>' : '<span class="dir-fail">&#10007;</span>';
             const q10 = w.pred_q10 ?? 0, q50 = w.pred_q50 ?? 0, q90 = w.pred_q90 ?? 0;
-            const rangeSpan = Math.max(q90 - q10, 0.01);
             return `<tr class="${dirCls}">
               <td>${esc(w.target_date)}</td>
               <td>${fmtPct(q50, 2)}</td>
@@ -636,62 +609,66 @@
               <div class="hero ${isPos ? "pos" : "neg"}">
                 <div>
                   <div class="hero-amount">100 kr <span class="hero-arrow">&rarr;</span> ${fmtKr(sim.final)} kr</div>
-                  <div class="hero-sub">Om du följt modellen sedan ${esc(fd.allWeeks[0]?.target_date || "—")}</div>
+                  <div class="hero-sub">${esc(t("hero_sub").replace("{date}", fd.allWeeks[0]?.target_date || "—"))}</div>
                 </div>
                 <div class="hero-detail">
                   <div class="change ${changePctFund >= 0 ? "pos" : "neg"}">${fmtPct(changePctFund)}</div>
-                  <div>${fd.allWeeks.length} veckor</div>
+                  <div>${fd.allWeeks.length} ${esc(t("weeks_unit"))}</div>
                 </div>
               </div>
               ${sparkHtml}
               <div class="stats-row">
                 <div class="stat-box">
-                  <span class="stat-label">Träffsäkerhet</span>
+                  <span class="stat-label">${esc(t("stat_hitrate"))}</span>
                   <span class="stat-val ${hitQ.cls}">${latest.hit_rate_pct.toFixed(1)}%</span>
                   <span class="stat-badge ${hitQ.cls}">${hitQ.label}</span>
                 </div>
                 <div class="stat-box">
-                  <span class="stat-label">MAE (medelfel)</span>
+                  <span class="stat-label">${esc(t("stat_mae"))}</span>
                   <span class="stat-val ${maeQ.cls}">${latest.mae.toFixed(2)}</span>
                   <span class="stat-badge ${maeQ.cls}">${maeQ.label}</span>
                 </div>
                 <div class="stat-box">
-                  <span class="stat-label">Senaste veckan</span>
-                  <div style="font-family:'IBM Plex Mono',monospace;font-size:.82rem;margin-top:2px">
-                    ${lastWeekHtml}
-                  </div>
+                  <span class="stat-label">${esc(t("stat_last_week"))}</span>
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:.82rem;margin-top:2px">${lastWeekHtml}</div>
                 </div>
               </div>
               ${trendHtml}
               <button class="weeks-toggle" id="${toggleId}" onclick="toggleWeeks('${tableId}','${toggleId}')">
                 <span class="weeks-toggle-icon">&#9654;</span>
-                Veckodata (${latestWeeks.length} veckor)
+                ${esc(t("toggle_weeks").replace("{n}", latestWeeks.length))}
               </button>
               <div class="weeks-table-wrap" id="${tableId}">
                 <table class="weeks-table">
-                  <thead>
-                    <tr>
-                      <th>Datum</th>
-                      <th>Prognos</th>
-                      <th>Intervall</th>
-                      <th>Utfall</th>
-                      <th>Fel</th>
-                      <th></th>
-                    </tr>
-                  </thead>
+                  <thead><tr>
+                    <th>${esc(t("th_date"))}</th>
+                    <th>${esc(t("th_forecast"))}</th>
+                    <th>${esc(t("th_range"))}</th>
+                    <th>${esc(t("th_actual"))}</th>
+                    <th>${esc(t("th_error"))}</th>
+                    <th></th>
+                  </tr></thead>
                   <tbody>${tableRows}</tbody>
                 </table>
               </div>
-            </div>
-          `;
+            </div>`;
         }
 
         cardsHtml += '</div>';
         fundSection.innerHTML = cardsHtml;
-      })
-      .catch(() => {
-        document.getElementById("empty-state").hidden = false;
-      });
+      };
+
+      if (_cachedEntries) { go(_cachedEntries); return; }
+      fetch(`backtest_history_${year}.jsonl`)
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(text => {
+          _cachedEntries = text.trim().split("\n").filter(Boolean).map(line => {
+            try { return JSON.parse(line); } catch { return null; }
+          }).filter(Boolean);
+          go(_cachedEntries);
+        })
+        .catch(() => { document.getElementById("empty-state").hidden = false; });
+    }
 
     // ── Toggle week table ───────────────────────────────────────
     function toggleWeeks(tableId, toggleId) {
@@ -700,6 +677,27 @@
       const open = wrap.classList.toggle("open");
       btn.classList.toggle("open", open);
     }
+
+    // ── Init via i18n ───────────────────────────────────────────
+    function updateStaticText() {
+      document.getElementById("lang-label").textContent = t("lang_toggle");
+      document.querySelector(".logo-sub").textContent = t("logo_sub");
+      document.querySelector(".back-link").innerHTML = "&larr; " + t("back");
+      document.getElementById("page-title").textContent = t("page_title");
+      document.getElementById("page-subtitle").textContent = t("page_subtitle");
+      document.querySelector(".disclaimer").textContent = t("disclaimer");
+      const es = document.getElementById("empty-state");
+      if (es) {
+        es.querySelector("p").textContent = t("empty_title");
+        es.querySelectorAll("p")[1].textContent = t("empty_hint");
+      }
+    }
+
+    ppmI18n.ready(function(t_fn, lang) {
+      _lang = lang;
+      updateStaticText();
+      loadAndRender();
+    });
   </script>
 </body>
 
