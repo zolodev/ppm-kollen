@@ -1592,3 +1592,500 @@ footer a:hover {
   .weeks-table-wrap { padding: 0 1rem 1rem; }
   .weeks-table { font-size: 0.7rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   Help page
+═══════════════════════════════════════════════════════════════ */
+/* === HELP-PAGE SPECIFIC === */
+/* Numbered marker on each element */
+.hb {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.65rem;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform .15s, box-shadow .15s;
+    position: relative;
+    box-shadow: 0 1px 4px rgb(0 0 0/.4);
+    user-select: none;
+    vertical-align: middle
+}
+
+.hb:hover {
+    transform: scale(1.15);
+    box-shadow: 0 2px 10px rgb(0 0 0/.5)
+}
+
+.hb.active {
+    background: var(--text);
+    color: var(--bg);
+    transform: scale(1.15)
+}
+
+/* inline wrapper so badge sits next to the element */
+.hb-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap
+}
+
+/* explanation drawer below card */
+/* floating tooltip card */
+.ftip {
+    position: fixed;
+    z-index: 9999;
+    width: 340px;
+    max-width: calc(100vw - 2rem);
+    background: var(--bg-card);
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+    box-shadow: var(--shadow-lg);
+    display: none;
+    animation: ftipIn .14s ease
+}
+
+@keyframes ftipIn {
+    from {
+        opacity: 0;
+        transform: scale(.97) translateY(-4px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.ftip.open {
+    display: block
+}
+
+.ftip-inner {
+    padding: 1.25rem 1.4rem
+}
+
+.ftip-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem
+}
+
+.ftip-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0
+}
+
+.ftip-eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent)
+}
+
+.ftip-title {
+    font-family: "IBM Plex Serif", serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2px;
+    line-height: 1.2
+}
+
+.ftip-body {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.75
+}
+
+.ftip-body strong {
+    color: var(--text);
+    font-weight: 600
+}
+
+.ftip-body em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 500
+}
+
+.ftip-body a {
+    color: var(--accent);
+    border-bottom: 1px solid color-mix(in oklch, var(--accent) 40%, transparent)
+}
+
+.ftip-example {
+    margin-top: 0.85rem;
+    padding: 0.7rem 0.85rem;
+    background: var(--bg-sunken);
+    border-radius: 9px;
+    border-left: 3px solid var(--accent);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6
+}
+
+.ftip-example strong {
+    color: var(--text)
+}
+
+.ftip-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.85rem;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid var(--border-em);
+    background: transparent;
+    color: var(--text-faint);
+    display: grid;
+    place-items: center;
+    font-size: 1rem;
+    line-height: 1;
+    transition: background .15s, color .15s;
+    cursor: pointer
+}
+
+.ftip-close:hover {
+    background: var(--bg-panel);
+    color: var(--text)
+}
+
+.ftip-arrow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--accent);
+    transform: rotate(45deg)
+}
+
+/* hint bar above card */
+.hint-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.82rem;
+    color: var(--text-faint);
+    margin-bottom: 0.75rem;
+    padding: 0.55rem 0.85rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px
+}
+
+.hint-bar-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0
+}
+
+/* accordion */
+.acc-section {
+    margin-top: 3rem
+}
+
+.acc-section-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem
+}
+
+.acc-section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border)
+}
+
+.acc-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 0.6rem;
+    overflow: hidden;
+    transition: border-color .15s
+}
+
+.acc-item:hover,
+.acc-item.open {
+    border-color: var(--border-em)
+}
+
+.acc-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 1rem 1.25rem;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background .15s
+}
+
+.acc-trigger:hover {
+    background: var(--bg-panel)
+}
+
+.acc-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--bg-sunken);
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+    flex-shrink: 0
+}
+
+.acc-label {
+    flex: 1;
+    min-width: 0
+}
+
+.acc-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px
+}
+
+.acc-sub {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    color: var(--text-faint)
+}
+
+.acc-chevron {
+    color: var(--text-faint);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    transition: transform .2s
+}
+
+.acc-item.open .acc-chevron {
+    transform: rotate(180deg)
+}
+
+.acc-body {
+    display: none;
+    padding: 0 1.25rem 1.25rem 4.35rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem
+}
+
+.acc-item.open .acc-body {
+    display: block
+}
+
+.acc-text {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.8
+}
+
+.acc-text strong {
+    color: var(--text);
+    font-weight: 600
+}
+
+.acc-text em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 500
+}
+
+.acc-text a {
+    color: var(--accent);
+    border-bottom: 1px solid color-mix(in oklch, var(--accent) 40%, transparent)
+}
+
+.acc-eg {
+    margin-top: 0.85rem;
+    padding: 0.75rem 0.9rem;
+    background: var(--bg-sunken);
+    border-radius: 8px;
+    border-left: 2px solid var(--border-em);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6
+}
+
+.acc-eg strong {
+    color: var(--text)
+}
+
+/* footer */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-faint);
+    font-family: "IBM Plex Mono", monospace;
+    max-width: 1100px;
+    margin: 0 auto
+}
+
+footer a {
+    color: inherit;
+    opacity: .7;
+    transition: opacity .15s
+}
+
+footer a:hover {
+    opacity: 1
+}
+
+.state-msg {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: var(--text-faint);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.85rem
+}
+
+@media(max-width:720px) {
+    .header-inner {
+        padding: 0 1rem;
+        height: 56px
+    }
+
+    main {
+        padding: 1.5rem 1rem 4rem
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .card-header {
+        padding: 1rem 1rem 0;
+        flex-wrap: wrap
+    }
+
+    .tags-row,
+    .metrics-grid,
+    .forecast-block,
+    .charts-block,
+    .backtest-block {
+        padding-left: 1rem;
+        padding-right: 1rem
+    }
+
+    .bt-compare {
+        grid-template-columns: 1fr
+    }
+
+    .explain-inner {
+        padding: 1.1rem 1.25rem
+    }
+
+    .acc-body {
+        padding-left: 1.25rem
+    }
+}
+
+[data-lang="en"] {
+    display: none
+}
+
+body.lang-en [data-lang="sv"] {
+    display: none
+}
+
+body.lang-en [data-lang="en"] {
+    display: revert
+}
+
+.disclaimer-banner {
+    background: color-mix(in oklch, var(--hold-bg) 70%, var(--bg));
+    border-bottom: 1px solid var(--hold);
+    padding: 0.6rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--hold);
+    position: relative;
+    z-index: 60;
+    transition: max-height 0.25s ease, opacity 0.2s ease, padding 0.25s ease;
+    overflow: hidden;
+}
+
+.disclaimer-banner.dismissed {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom-width: 0;
+}
+
+.disclaimer-banner-icon {
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+}
+
+.disclaimer-banner-text {
+    line-height: 1.5;
+    text-align: center;
+}
+
+.disclaimer-banner-close {
+    background: none;
+    border: none;
+    color: var(--hold);
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 0 0.25rem;
+    flex-shrink: 0;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: opacity .15s;
+}
+
+.disclaimer-banner-close:hover {
+    opacity: 1;
+}
+
+.back-btn {
+    min-width: 40px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 0 0.6rem;
+}
