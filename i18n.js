@@ -105,8 +105,13 @@
 
   // ── Load translations ──────────────────────────────────────
   function init() {
-    try { _lang = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG; } catch (e) { /* noop */ }
-    if (_lang !== "sv" && _lang !== "en") _lang = DEFAULT_LANG;
+    try {
+      _lang = localStorage.getItem(STORAGE_KEY)
+           || localStorage.getItem("ppm-kollen-lang")
+           || DEFAULT_LANG;
+      if (_lang !== "sv" && _lang !== "en") _lang = DEFAULT_LANG;
+      localStorage.setItem(STORAGE_KEY, _lang);
+    } catch (e) { /* noop */ }
     document.documentElement.lang = _lang;
 
     fetch("i18n.json")
