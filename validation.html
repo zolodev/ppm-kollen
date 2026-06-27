@@ -16,6 +16,7 @@
 </head>
 
 <body data-theme="auto">
+  <a href="#page-title" class="skip-link">Hoppa till innehåll</a>
   <div class="disclaimer-banner" id="disclaimer-banner" role="alert">
     <span class="disclaimer-banner-icon" aria-hidden="true">&#9888;</span>
     <span class="disclaimer-banner-text" id="disclaimer-banner-text"></span>
@@ -43,7 +44,7 @@
           <span id="lang-label">EN</span>
         </button>
         <div class="theme-switcher" role="group" aria-label="Theme">
-          <button class="theme-btn" data-theme="light" title="Ljust">
+          <button class="theme-btn" data-theme="light" title="Ljust" aria-label="Ljust tema">
             <svg viewBox="0 0 24 24" width="14" height="14">
               <circle cx="12" cy="12" r="4" fill="currentColor" />
               <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
@@ -51,13 +52,13 @@
               </g>
             </svg>
           </button>
-          <button class="theme-btn active" data-theme="auto" title="Auto">
+          <button class="theme-btn active" data-theme="auto" title="Auto" aria-label="Auto tema">
             <svg viewBox="0 0 24 24" width="14" height="14">
               <path d="M12 4v16a8 8 0 0 0 0-16z" fill="currentColor" />
               <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4" />
             </svg>
           </button>
-          <button class="theme-btn" data-theme="dark" title="Mörk">
+          <button class="theme-btn" data-theme="dark" title="Mörk" aria-label="Mörkt tema">
             <svg viewBox="0 0 24 24" width="14" height="14">
               <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" />
             </svg>
@@ -71,8 +72,8 @@
     <h1 class="page-title" id="page-title">Modellvalidering</h1>
     <p class="page-subtitle" id="page-subtitle">Hur modellernas prediktioner presterat mot verkligt utfall — vecka f&#246;r vecka.</p>
 
-    <div id="agg-section"></div>
-    <div id="fund-section"></div>
+    <div id="agg-section" aria-live="polite"></div>
+    <div id="fund-section" aria-live="polite"></div>
     <div id="empty-state" class="empty-state" hidden>
       <div class="empty-state-icon">—</div>
       <p>Ingen valideringsdata tillg&#228;nglig &#228;nnu.</p>
@@ -216,7 +217,7 @@
             }).join(" ");
             trendHtml = `<div class="trend-section">
               <div class="trend-label">${esc(t("trend_title"))}</div>
-              <svg class="trend-chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+              <svg class="trend-chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="${esc(t('trend_title'))}">
                 <line x1="${pad}" y1="${H - pad - (70 / 100) * (H - 2 * pad)}" x2="${W - pad}" y2="${H - pad - (70 / 100) * (H - 2 * pad)}"
                   stroke="var(--text-faint)" stroke-width="0.5" stroke-dasharray="4 3" opacity="0.4" />
                 <polyline points="${pts(hits, 100)}" fill="none" stroke="var(--buy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -237,7 +238,7 @@
 
           let lastWeekHtml = "";
           if (lp.pred_q50 != null && lp.actual != null) {
-            const dirSym = lp.direction_ok ? '<span class="dir-ok">&#10003;</span>' : '<span class="dir-fail">&#10007;</span>';
+            const dirSym = lp.direction_ok ? '<span class="dir-ok" aria-label="Correct">&#10003;</span>' : '<span class="dir-fail" aria-label="Incorrect">&#10007;</span>';
             lastWeekHtml = `${dirSym} ${fmtPct(lp.pred_q50)} <span style="color:var(--text-faint)">vs</span> ${fmtPct(lp.actual)}`;
           }
 
@@ -245,7 +246,7 @@
           const tableId = `tbl-${fid}`, toggleId = `tog-${fid}`;
           let tableRows = latestWeeks.map(w => {
             const dirCls = w.direction_ok ? "hit" : "miss";
-            const dirSym = w.direction_ok ? '<span class="dir-ok">&#10003;</span>' : '<span class="dir-fail">&#10007;</span>';
+            const dirSym = w.direction_ok ? '<span class="dir-ok" aria-label="Correct">&#10003;</span>' : '<span class="dir-fail" aria-label="Incorrect">&#10007;</span>';
             const q10 = w.pred_q10 ?? 0, q50 = w.pred_q50 ?? 0, q90 = w.pred_q90 ?? 0;
             return `<tr class="${dirCls}">
               <td>${esc(w.target_date)}</td>
@@ -291,7 +292,7 @@
                 </div>
               </div>
               ${trendHtml}
-              <button class="weeks-toggle" id="${toggleId}" onclick="toggleWeeks('${tableId}','${toggleId}')">
+              <button class="weeks-toggle" id="${toggleId}" onclick="toggleWeeks('${tableId}','${toggleId}')" aria-expanded="false">
                 <span class="weeks-toggle-icon">&#9654;</span>
                 ${esc(t("toggle_weeks").replace("{n}", latestWeeks.length))}
               </button>
@@ -303,7 +304,7 @@
                     <th>${esc(t("th_range"))}</th>
                     <th>${esc(t("th_actual"))}</th>
                     <th>${esc(t("th_error"))}</th>
-                    <th></th>
+                    <th><span class="sr-only">Direction</span></th>
                   </tr></thead>
                   <tbody>${tableRows}</tbody>
                 </table>
@@ -333,6 +334,7 @@
       const btn = document.getElementById(toggleId);
       const open = wrap.classList.toggle("open");
       btn.classList.toggle("open", open);
+      btn.setAttribute("aria-expanded", open);
     }
 
     // ── Init via i18n ───────────────────────────────────────────

@@ -27,6 +27,8 @@
   // ── Inject loader overlay ──────────────────────────────────
   var loader = document.createElement("div");
   loader.id = "ppmk-loader";
+  loader.setAttribute("role", "status");
+  loader.setAttribute("aria-label", "Loading");
   loader.innerHTML =
     '<div class="ppmk-loader-inner">' +
       '<svg class="ppmk-loader-logo" viewBox="0 0 24 24" width="48" height="48">' +

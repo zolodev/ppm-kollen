@@ -25,6 +25,11 @@
     --sans:      'Exo 2', sans-serif;
   }
 
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   html, body { height: 100%; }
@@ -475,20 +480,22 @@
     <span class="logo-blink">▶</span> AI TRAINING MONITOR
   </div>
   <div class="header-right">
-    <div><span id="clock">--:--:--</span> &nbsp;|&nbsp; var <input id="poll-input" type="text" value="5s" title="Intervall: t.ex. 500ms · 5s · 2m · 1h"> &nbsp;<span class="refresh-spin" id="spin"></span></div>
+    <div><span id="clock">--:--:--</span> &nbsp;|&nbsp; var <label for="poll-input" class="sr-only">Poll interval (seconds)</label><input id="poll-input" type="text" value="5s" title="Intervall: t.ex. 500ms · 5s · 2m · 1h"> &nbsp;<span class="refresh-spin" id="spin"></span></div>
   </div>
 </header>
 
-<div id="conn-banner">⚠ Kan inte nå API-servern – visar senast kända värden</div>
+<div id="conn-banner" role="status">⚠ Kan inte nå API-servern – visar senast kända värden</div>
 
+<main>
+<h1 class="sr-only">AI Training Monitor</h1>
 <div class="grid">
 
   <div class="left-col">
 
     <!-- ── TRÄNINGSPROGRESS ── -->
     <div class="card progress-card">
-      <div class="card-title"><span class="status-dot" id="status-dot"></span>Träningsprogress</div>
-      <div id="train-proc-banner" style="font-size:.75rem; margin:.2rem 0 .5rem; letter-spacing:.05em;"></div>
+      <div class="card-title"><span class="status-dot" id="status-dot"><span class="sr-only" id="status-dot-text">Active</span></span>Träningsprogress</div>
+      <div id="train-proc-banner" role="status" style="font-size:.75rem; margin:.2rem 0 .5rem; letter-spacing:.05em;"></div>
       <div class="progress-header">
         <div class="progress-pct" id="prog-pct">0%</div>
         <div class="progress-detail">
@@ -503,6 +510,7 @@
       <div class="progress-segments" id="segments"></div>
 
       <div class="train-controls" id="train-controls">
+        <label for="train-script-select" class="sr-only">Training script</label>
         <select id="train-script-select">
           <option value="daily_finetune">Daily Fine-tune (06_finetune)</option>
           <option value="weekly_pipeline">Weekly Pipeline (03_training)</option>
@@ -510,7 +518,7 @@
         </select>
         <button class="btn-train btn-start" id="btn-start" onclick="trainStart()">Starta</button>
         <button class="btn-train btn-stop"  id="btn-stop"  onclick="trainStop()" style="display:none">Stoppa</button>
-        <div id="train-feedback"></div>
+        <div id="train-feedback" aria-live="polite"></div>
       </div>
     </div>
 
@@ -523,7 +531,7 @@
         <div class="card-value" id="cpu-val">—%</div>
         <div class="card-sub" id="cpu-cores">— kärnor</div>
         <div class="gauge-wrap"><div class="gauge-fill" id="cpu-bar" style="width:0%"></div></div>
-        <div class="chart-wrap"><canvas id="cpu-chart"></canvas></div>
+        <div class="chart-wrap"><canvas id="cpu-chart" aria-label="CPU usage chart"></canvas></div>
         <div class="cores-grid" id="cores-grid"></div>
       </div>
 
@@ -533,7 +541,7 @@
         <div class="card-value" id="ram-val">—</div>
         <div class="card-sub" id="ram-sub">— free / — used</div>
         <div class="gauge-wrap"><div class="gauge-fill amber" id="ram-bar" style="width:0%"></div></div>
-        <div class="chart-wrap"><canvas id="ram-chart"></canvas></div>
+        <div class="chart-wrap"><canvas id="ram-chart" aria-label="RAM usage chart"></canvas></div>
       </div>
 
       <!-- GPU -->
@@ -542,7 +550,7 @@
         <div class="card-value" id="gpu-val">—%</div>
         <div class="card-sub" id="gpu-sub">tegrastats</div>
         <div class="gauge-wrap"><div class="gauge-fill" style="background:linear-gradient(90deg,#2244aa,var(--blue)); width:0%" id="gpu-bar"></div></div>
-        <div class="chart-wrap"><canvas id="gpu-chart"></canvas></div>
+        <div class="chart-wrap"><canvas id="gpu-chart" aria-label="GPU usage chart"></canvas></div>
       </div>
 
       <!-- Disk & Nätverk -->
@@ -564,8 +572,8 @@
         </div>
         <!-- Dolda canvaser behålls för JS-kompatibilitet -->
         <div style="display:none">
-          <canvas id="disk-chart"></canvas>
-          <canvas id="net-chart"></canvas>
+          <canvas id="disk-chart" aria-label="Disk I/O chart"></canvas>
+          <canvas id="net-chart" aria-label="Network I/O chart"></canvas>
         </div>
       </div>
 
@@ -577,16 +585,18 @@
     <div class="card-title" style="margin-bottom:6px">Logg-feed (live)</div>
     <div class="log-tabs">
       <button class="log-tab active" data-log="daily_finetune"><span class="tab-long">daily_finetune.log</span><span class="tab-short">finetune</span></button>
+      <button class="log-tab" data-log="weekly"><span class="tab-long">weekly_pipeline.log</span><span class="tab-short">weekly</span></button>
       <button class="log-tab" data-log="training"><span class="tab-long">base_training.log</span><span class="tab-short">base</span></button>
       <button class="log-tab" data-log="tegrastats"><span class="tab-long">tegrastats.log</span><span class="tab-short">tegra</span></button>
       <button class="log-tab" data-log="summary"><span class="tab-long">summary.log</span><span class="tab-short">summary</span></button>
     </div>
-    <div class="log-body" id="log-body">
+    <div class="log-body" id="log-body" aria-live="polite">
       <div class="log-line">Väntar på anslutning...</div>
     </div>
   </div>
 
 </div>
+</main>
 
 <script>
 /* ═══════════════════════════════════════════════
@@ -902,11 +912,13 @@ function dummyData() {
    LOG (multi-file, tabbed)
 ═══════════════════════════════════════════════ */
 const logEl      = document.getElementById('log-body');
-const logBuffers = { training: [], daily_finetune: [], tegrastats: [], summary: [] };
+const logBuffers = { training: [], weekly: [], daily_finetune: [], tegrastats: [], summary: [] };
 let   activeLog  = 'daily_finetune';
+let   _userPickedLog = false;
 
 document.querySelectorAll('.log-tab').forEach(btn => {
   btn.addEventListener('click', () => {
+    _userPickedLog = true;
     document.querySelectorAll('.log-tab').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeLog = btn.dataset.log;
@@ -1024,6 +1036,8 @@ function render(d) {
   const active = d.train_active;
   const done   = d.train_status === 'done' || (pct >= 100 && !active);
   dot.className = 'status-dot ' + (done || !active ? 'idle' : '');
+  const dotText = document.getElementById('status-dot-text');
+  if (dotText) dotText.textContent = (done || !active) ? 'Idle' : 'Active';
   if (active) {
     const name = d.train_proc_name || 'okänt skript';
     banner.style.color = 'var(--green-dim)';
@@ -1037,6 +1051,24 @@ function render(d) {
   } else {
     banner.style.color = 'var(--text-dim)';
     banner.textContent = '⏸ Ingen träningsprocess körs just nu';
+  }
+
+  /* Auto-switch log tab to match running pipeline */
+  if (active) {
+    const proc = (d.train_proc_name || '').toLowerCase();
+    let target = null;
+    if (proc.includes('weekly'))         target = 'weekly';
+    else if (proc.includes('daily'))     target = 'daily_finetune';
+    else if (proc.includes('base'))      target = 'training';
+    else if (proc.includes('03_'))       target = 'training';
+    else if (proc.includes('06_'))       target = 'daily_finetune';
+    if (target && target !== activeLog && !_userPickedLog) {
+      activeLog = target;
+      document.querySelectorAll('.log-tab').forEach(b => {
+        b.classList.toggle('active', b.dataset.log === target);
+      });
+      renderLogDisplay();
+    }
   }
 
   /* Train controls: visa Start när inaktiv, Stoppa när aktiv */
@@ -1090,8 +1122,10 @@ function updateTimers() {
     const s = remaining * avg;
     const h = Math.floor(s / 3600);
     const m = Math.floor((s % 3600) / 60);
+    const doneAt = new Date(Date.now() + s * 1000);
+    const clock = doneAt.toLocaleTimeString('sv-SE', { hour: '2-digit', minute: '2-digit' });
     document.getElementById('eta').textContent =
-      `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
+      `${h}h ${String(m).padStart(2,'0')}m kvar (klar ~${clock})`;
   } else if (_trainData.train_eta_str) {
     document.getElementById('eta').textContent = _trainData.train_eta_str;
   } else {
