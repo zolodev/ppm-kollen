@@ -61,8 +61,7 @@
                 </span>
             </a>
             <div class="header-right">
-                <a href="index.html" class="ghost-btn">&#8592; <span data-lang="sv">Tillbaka</span><span
-                        data-lang="en">Back</span></a>
+                <a href="index.html" class="ghost-btn" id="back-btn">&#8592; Tillbaka</a>
                 <button class="ghost-btn" id="lang-btn" onclick="toggleLang()"
                     title="Switch language / Byt språk">EN</button>
                 <div class="theme-switcher" role="group" aria-label="Theme">
@@ -199,6 +198,8 @@
                 document.body.classList.toggle("lang-en", l === "en");
                 var lb = document.getElementById("lang-btn");
                 if (lb) lb.textContent = t("lang_toggle");
+                var back = document.getElementById("back-btn");
+                if (back) back.innerHTML = "&#8592; " + t("val_back");
                 if (_currentFund) { document.getElementById("card-wrap").innerHTML = renderCard(_currentFund); }
                 if (_active && _pins) {
                     var p = _pins[_active];

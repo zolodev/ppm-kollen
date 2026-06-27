@@ -61,7 +61,7 @@
         </span>
       </a>
       <div class="header-right">
-        <a href="index.html" class="ghost-btn back-btn" aria-label="Tillbaka / Back">&#8592;</a>
+        <a href="index.html" class="ghost-btn" id="back-btn">&#8592; Tillbaka</a>
         <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language">
           <span id="lang-label">EN</span>
         </button>
@@ -594,6 +594,8 @@
         document.body.classList.toggle("lang-en", lang === "en");
         const lbl = document.getElementById("lang-label");
         if (lbl) lbl.textContent = ppmI18n.t("lang_toggle");
+        const back = document.getElementById("back-btn");
+        if (back) back.innerHTML = "&#8592; " + ppmI18n.t("val_back");
       }
 
       ppmI18n.ready(function(t, lang) {

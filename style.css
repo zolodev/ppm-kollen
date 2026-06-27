@@ -1405,8 +1405,6 @@ footer a:hover {
    Validation page
 ═══════════════════════════════════════════════════════════════ */
 
-.back-link { font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.35rem; }
-.back-link:hover { color: var(--accent); }
 
 /* ── Page layout ─────────────────────────────────────────────── */
 .page { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
