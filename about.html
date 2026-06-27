@@ -599,11 +599,15 @@
         if (back) back.setAttribute("aria-label", ppmI18n.t("val_back"));
       }
 
+      let _langInit = false;
       ppmI18n.ready(function(t, lang) {
         applyLang(lang);
-        document.getElementById("lang-toggle")?.addEventListener("click", () => {
-          ppmI18n.setLang(ppmI18n.getLang() === "sv" ? "en" : "sv");
-        });
+        if (!_langInit) {
+          _langInit = true;
+          document.getElementById("lang-toggle")?.addEventListener("click", () => {
+            ppmI18n.setLang(ppmI18n.getLang() === "sv" ? "en" : "sv");
+          });
+        }
       });
 
       /* ── disclaimer banner ── */
