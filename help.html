@@ -63,8 +63,8 @@
             </a>
             <div class="header-right">
                 <a href="index.html" class="ghost-btn" id="back-btn" aria-label="Tillbaka">&#8592;</a>
-                <button class="ghost-btn" id="lang-btn" onclick="toggleLang()"
-                    title="Switch language / Byt språk">EN</button>
+                <button class="ghost-btn" id="lang-toggle"
+                    title="Switch language / Byt språk"><span id="lang-label">EN</span></button>
                 <div class="theme-switcher" role="group" aria-label="Theme">
                     <button class="theme-btn" data-theme="light" title="Ljust" aria-label="Ljust tema"><svg viewBox="0 0 24 24" width="14"
                             height="14">
@@ -179,35 +179,24 @@
 
 
     <script src="i18n.js"></script>
+    <script src="ppmk.js"></script>
     <script>
         (function () {
             "use strict";
 
-            /* ── theme ── */
-            var ST = "ppm-kollen-theme";
-            (function () { var s = "auto"; try { s = localStorage.getItem(ST) || "auto" } catch (e) { } if (!["dark", "light", "auto"].includes(s)) s = "auto"; applyTheme(s) })();
-            function applyTheme(m) { document.body.setAttribute("data-theme", m); document.querySelectorAll(".theme-btn").forEach(function (b) { b.classList.toggle("active", b.dataset.theme === m) }); try { localStorage.setItem(ST, m) } catch (e) { } }
-            document.querySelectorAll(".theme-btn").forEach(function (b) { b.addEventListener("click", function () { applyTheme(b.dataset.theme) }) });
             /* ── language ── */
             var _lang = "sv";
             function t(k) { return ppmI18n.t(k); }
-            function toggleLang() {
-                var next = _lang === "sv" ? "en" : "sv";
-                ppmI18n.setLang(next);
-            }
-            window.toggleLang = toggleLang;
-            function applyLang(l) {
-                _lang = l;
-                document.body.classList.toggle("lang-en", l === "en");
-                var lb = document.getElementById("lang-btn");
-                if (lb) lb.textContent = t("lang_toggle");
+
+            ppmk.onReady(function(t_fn, lang) {
+                _lang = lang;
                 var back = document.getElementById("back-btn");
                 if (back) back.setAttribute("aria-label", t("val_back"));
                 if (_currentFund) { document.getElementById("card-wrap").innerHTML = renderCard(_currentFund); }
                 if (_active && _pins) {
                     var p = _pins[_active];
                     if (p) {
-                        var pd = l === "en" ? p.en : p.sv;
+                        var pd = lang === "en" ? p.en : p.sv;
                         document.getElementById("ep-eyebrow").textContent = pd.ey;
                         document.getElementById("ep-title").textContent = pd.ti;
                         document.getElementById("ep-body").innerHTML = pd.bo;
@@ -216,9 +205,6 @@
                         else { eg.style.display = "none"; }
                     }
                 }
-            }
-            ppmI18n.ready(function(t_fn, lang) {
-                applyLang(lang);
             });
 
 
@@ -882,21 +868,6 @@ You can have up to 5 funds and switch as often as you like — it's free.`,
                 el.querySelector(".acc-trigger").setAttribute("aria-expanded", String(open));
             };
 
-
-            /* ── disclaimer banner ── */
-            (function () {
-                var STORAGE_DISCLAIMER = "ppm-kollen-disclaimer-dismissed";
-                var banner = document.getElementById("disclaimer-banner");
-                var closeBtn = document.getElementById("disclaimer-banner-close");
-                if (!banner) return;
-                var dismissed = false;
-                try { dismissed = localStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch (e) { }
-                if (dismissed) { banner.classList.add("dismissed"); return; }
-                closeBtn.addEventListener("click", function () {
-                    banner.classList.add("dismissed");
-                    try { localStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch (e) { }
-                });
-            })();
         })();
     </script>
 </body>

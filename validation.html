@@ -40,7 +40,7 @@
       </a>
       <div class="header-right">
         <a class="ghost-btn" href="index.html" id="back-btn" aria-label="Tillbaka">&larr;</a>
-        <button class="ghost-btn" id="lang-toggle" onclick="ppmI18n.setLang(_lang==='sv'?'en':'sv')">
+        <button class="ghost-btn" id="lang-toggle">
           <span id="lang-label">EN</span>
         </button>
         <div class="theme-switcher" role="group" aria-label="Theme">
@@ -86,28 +86,14 @@
   </main>
 
   <script src="i18n.js"></script>
+  <script src="ppmk.js"></script>
   <script>
-    // ── Theme switcher ───────────────────────────────────────────
-    (function () {
-      const saved = localStorage.getItem("ppmk-theme") || "auto";
-      document.body.setAttribute("data-theme", saved);
-      document.querySelectorAll(".theme-btn").forEach(btn => {
-        btn.classList.toggle("active", btn.dataset.theme === saved);
-        btn.addEventListener("click", () => {
-          const th = btn.dataset.theme;
-          document.body.setAttribute("data-theme", th);
-          localStorage.setItem("ppmk-theme", th);
-          document.querySelectorAll(".theme-btn").forEach(b => b.classList.toggle("active", b.dataset.theme === th));
-        });
-      });
-    })();
-
     // ── i18n bridge ─────────────────────────────────────────────
     const t = key => ppmI18n.t("val_" + key) !== ("val_" + key) ? ppmI18n.t("val_" + key) : ppmI18n.t(key);
     let _lang = "sv";
+    const esc = ppmk.esc;
 
     // ── Helpers ──────────────────────────────────────────────────
-    const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     const fmtKr = n => n.toLocaleString(_lang === "sv" ? "sv-SE" : "en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
     const fmtPct = (n, d = 1) => (n >= 0 ? "+" : "") + n.toFixed(d) + "%";
     const qHit = h => h >= 70 ? { cls: "good", label: t("q_good") } : h >= 60 ? { cls: "ok", label: t("q_ok") } : { cls: "warn", label: t("q_weak") };
@@ -337,20 +323,13 @@
       btn.setAttribute("aria-expanded", open);
     }
 
-    // ── Init via i18n ───────────────────────────────────────────
-    const STORAGE_DISCLAIMER = "ppm-kollen-disclaimer-dismissed";
-
+    // ── Init via ppmk ──────────────────────────────────────────
     function updateStaticText() {
-      document.getElementById("lang-label").textContent = t("lang_toggle");
       document.querySelector(".logo-sub").textContent = t("logo_sub");
       document.getElementById("back-btn").setAttribute("aria-label", t("back"));
       document.getElementById("page-title").textContent = t("page_title");
       document.getElementById("page-subtitle").textContent = t("page_subtitle");
       document.querySelector(".disclaimer").textContent = t("disclaimer");
-      const bannerText = document.getElementById("disclaimer-banner-text");
-      if (bannerText) bannerText.innerHTML = t("disclaimer_text");
-      const closeBtn = document.getElementById("disclaimer-banner-close");
-      if (closeBtn) closeBtn.setAttribute("aria-label", t("disclaimer_close"));
       const es = document.getElementById("empty-state");
       if (es) {
         es.querySelector("p").textContent = t("empty_title");
@@ -358,24 +337,9 @@
       }
     }
 
-    function initDisclaimer() {
-      const banner = document.getElementById("disclaimer-banner");
-      const closeBtn = document.getElementById("disclaimer-banner-close");
-      if (!banner) return;
-      let dismissed = false;
-      try { dismissed = localStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch (e) {}
-      if (dismissed) { banner.classList.add("dismissed"); return; }
-      closeBtn.addEventListener("click", function () {
-        banner.classList.add("dismissed");
-        try { localStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch (e) {}
-      });
-    }
-
-    let _disclaimerInit = false;
-    ppmI18n.ready(function(t_fn, lang) {
+    ppmk.onReady(function(t_fn, lang) {
       _lang = lang;
       updateStaticText();
-      if (!_disclaimerInit) { _disclaimerInit = true; initDisclaimer(); }
       loadAndRender();
     });
   </script>

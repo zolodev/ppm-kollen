@@ -568,63 +568,12 @@
 
 
   <script src="i18n.js"></script>
+  <script src="ppmk.js"></script>
   <script>
-    (() => {
-      "use strict";
-      const STORAGE_THEME = "ppm-kollen-theme";
-
-      function applyTheme(mode) {
-        document.body.setAttribute("data-theme", mode);
-        document.querySelectorAll(".theme-btn").forEach(b =>
-          b.classList.toggle("active", b.dataset.theme === mode)
-        );
-        try { localStorage.setItem(STORAGE_THEME, mode); } catch { }
-      }
-      (() => {
-        let saved = "auto";
-        try { saved = localStorage.getItem(STORAGE_THEME) || "auto"; } catch { }
-        if (!["dark", "light", "auto"].includes(saved)) saved = "auto";
-        applyTheme(saved);
-        document.querySelectorAll(".theme-btn").forEach(b =>
-          b.addEventListener("click", () => applyTheme(b.dataset.theme))
-        );
-      })();
-
-      function applyLang(lang) {
-        document.documentElement.lang = lang;
-        document.body.classList.toggle("lang-en", lang === "en");
-        const lbl = document.getElementById("lang-label");
-        if (lbl) lbl.textContent = ppmI18n.t("lang_toggle");
-        const back = document.getElementById("back-btn");
-        if (back) back.setAttribute("aria-label", ppmI18n.t("val_back"));
-      }
-
-      let _langInit = false;
-      ppmI18n.ready(function(t, lang) {
-        applyLang(lang);
-        if (!_langInit) {
-          _langInit = true;
-          document.getElementById("lang-toggle")?.addEventListener("click", () => {
-            ppmI18n.setLang(ppmI18n.getLang() === "sv" ? "en" : "sv");
-          });
-        }
-      });
-
-      /* ── disclaimer banner ── */
-      (function () {
-        var STORAGE_DISCLAIMER = "ppm-kollen-disclaimer-dismissed";
-        var banner = document.getElementById("disclaimer-banner");
-        var closeBtn = document.getElementById("disclaimer-banner-close");
-        if (!banner) return;
-        var dismissed = false;
-        try { dismissed = localStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch (e) { }
-        if (dismissed) { banner.classList.add("dismissed"); return; }
-        closeBtn.addEventListener("click", function () {
-          banner.classList.add("dismissed");
-          try { localStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch (e) { }
-        });
-      })();
-    })();
+    ppmk.onReady(function(t, lang) {
+      var back = document.getElementById("back-btn");
+      if (back) back.setAttribute("aria-label", ppmI18n.t("val_back"));
+    });
   </script>
 </body>
 

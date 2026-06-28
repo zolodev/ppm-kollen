@@ -115,6 +115,7 @@
   </div>
 
   <script src="i18n.js"></script>
+  <script src="ppmk.js"></script>
   <script>
     (() => {
       "use strict";
@@ -126,10 +127,8 @@
         "data/predictions.json",
         "https://raw.githubusercontent.com/zolodev/ppm-kollen/refs/heads/main/predictions.json"
       ];
-      const MANIFEST_URLS = ["manifest.json", "output/manifest.json"];
+
       const HITRATE_THRESHOLD = 70;
-      const STORAGE_THEME = "ppm-kollen-theme";
-      const STORAGE_DISCLAIMER = "ppm-kollen-disclaimer-dismissed";
 
       const SIGNAL = {
         BUY: { cls: "sig-buy", icon: "▲" },
@@ -144,7 +143,7 @@
 
       const $ = (sel) => document.querySelector(sel);
       const qa = (sel) => document.querySelectorAll(sel);
-      const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+      const esc = ppmk.esc;
       const t = (key) => ppmI18n.t(key);
 
       function signFmt(n) { const v = Number(n); return (v >= 0 ? "+" : "") + v.toFixed(2) + "%"; }
@@ -156,40 +155,6 @@
           (chain, url) => chain.catch(() => fetch(url).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })),
           Promise.reject()
         );
-      }
-
-      // ── Disclaimer banner ──────────────────────────────────────────
-      function initDisclaimer() {
-        const banner = $("#disclaimer-banner");
-        const closeBtn = $("#disclaimer-banner-close");
-        if (!banner) return;
-        let dismissed = false;
-        try { dismissed = localStorage.getItem(STORAGE_DISCLAIMER) === "1"; } catch { }
-        if (dismissed) { banner.classList.add("dismissed"); return; }
-        closeBtn.addEventListener("click", () => {
-          banner.classList.add("dismissed");
-          try { localStorage.setItem(STORAGE_DISCLAIMER, "1"); } catch { }
-        });
-      }
-      function updateDisclaimerText() {
-        const textEl = $("#disclaimer-banner-text");
-        const closeBtn = $("#disclaimer-banner-close");
-        if (textEl) textEl.innerHTML = t("disclaimer_text");
-        if (closeBtn) closeBtn.setAttribute("aria-label", t("disclaimer_close"));
-      }
-
-      // ── Theme ──────────────────────────────────────────────────────
-      function applyTheme(mode) {
-        document.body.setAttribute("data-theme", mode);
-        qa(".theme-btn").forEach(b => b.classList.toggle("active", b.dataset.theme === mode));
-        try { localStorage.setItem(STORAGE_THEME, mode); } catch { }
-      }
-      function initTheme() {
-        let saved = "auto";
-        try { saved = localStorage.getItem(STORAGE_THEME) || "auto"; } catch { }
-        if (!["dark", "light", "auto"].includes(saved)) saved = "auto";
-        applyTheme(saved);
-        qa(".theme-btn").forEach(b => b.addEventListener("click", () => applyTheme(b.dataset.theme)));
       }
 
       function copyPpm(btn, code) {
@@ -428,16 +393,9 @@
       }
 
       function bootstrap() {
-        fetchFirst(MANIFEST_URLS)
-          .then(manifest => {
-            if (!manifest.latest) throw new Error("manifest missing 'latest'");
-            return fetchFirst(PREDICTIONS_URLS).then(data => render(data, manifest.latest));
-          })
-          .catch(() => {
-            fetchFirst(PREDICTIONS_URLS)
-              .then(data => { render(data, null); })
-              .catch(() => { $("#app").innerHTML = `<p class="state-msg">${t("err_no_predictions")}</p>`; });
-          });
+        fetchFirst(PREDICTIONS_URLS)
+          .then(data => { render(data, null); })
+          .catch(() => { $("#app").innerHTML = `<p class="state-msg">${t("err_no_predictions")}</p>`; });
       }
 
       // ── Lightbox ───────────────────────────────────────────────────
@@ -460,7 +418,6 @@
 
       // ── Language ───────────────────────────────────────────────────
       function applyLangToStaticElements() {
-        document.documentElement.lang = _currentLang;
         const eyebrow = document.querySelector(".hero-eyebrow");
         if (eyebrow) eyebrow.textContent = t("hero_eyebrow");
         const heroTitle = document.querySelector(".hero-title");
@@ -471,40 +428,21 @@
         if (stateMsg) stateMsg.textContent = t("loading_forecast");
         const footerAbout = document.querySelector("#footer-about");
         if (footerAbout) footerAbout.textContent = t("footer_about");
-        updateDisclaimerText();
-        // Keep header subtitle as just the label, no date
         const headerDate = document.querySelector("#header-date");
         if (headerDate) headerDate.textContent = t("fund_forecast");
       }
-      function setLang(lang) {
-        ppmI18n.setLang(lang);
-      }
-      function initLang() {
-        _currentLang = ppmI18n.getLang();
-        const lbl = document.getElementById("lang-label");
-        if (lbl) lbl.textContent = t("lang_toggle");
-        document.getElementById("lang-toggle")?.addEventListener("click", () => setLang(_currentLang === "sv" ? "en" : "sv"));
-      }
-
       let _initialized = false;
 
-      ppmI18n.ready(function(t_fn, lang) {
+      ppmk.onReady(function(t_fn, lang) {
         _currentLang = lang;
         if (!_initialized) {
           _initialized = true;
-          initTheme();
-          initLang();
-          initDisclaimer();
           initDelegates();
           initLightbox();
           bootstrap();
         } else {
-          // Language switch — re-render
-          const lbl = document.getElementById("lang-label");
-          if (lbl) lbl.textContent = t("lang_toggle");
           applyLangToStaticElements();
           if (_currentData) render(_currentData, _currentFolder);
-          updateDisclaimerText();
         }
       });
     })();

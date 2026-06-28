@@ -338,6 +338,7 @@
     50%      { opacity: .5; transform: scale(.8); }
   }
   .status-dot.idle { background: var(--text-dim); box-shadow: none; animation: none; }
+  .status-dot.error { background: #c0392b; box-shadow: 0 0 8px #c0392b; animation: none; }
 
   /* refresh indicator */
   .refresh-spin {
@@ -1035,10 +1036,16 @@ function render(d) {
   const banner = document.getElementById('train-proc-banner');
   const active = d.train_active;
   const done   = d.train_status === 'done' || (pct >= 100 && !active);
-  dot.className = 'status-dot ' + (done || !active ? 'idle' : '');
+  const crashed = !active && !done && cur > 0 && cur < tot
+               && ['crashed', 'stopped', 'running'].includes(d.train_status);
+  dot.className = 'status-dot ' + (crashed ? 'error' : (done || !active ? 'idle' : ''));
   const dotText = document.getElementById('status-dot-text');
-  if (dotText) dotText.textContent = (done || !active) ? 'Idle' : 'Active';
-  if (active) {
+  if (dotText) dotText.textContent = crashed ? 'Error' : (done || !active) ? 'Idle' : 'Active';
+  if (crashed) {
+    banner.style.color = '#c0392b';
+    banner.textContent = '⚠ Processen avslutades vid ' + cur + '/' + tot +
+      ' (' + pct + '%) — ' + (d.current_fund || 'okänd fond');
+  } else if (active) {
     const name = d.train_proc_name || 'okänt skript';
     banner.style.color = 'var(--green-dim)';
     const chevron = document.createElement('span');
@@ -1071,10 +1078,11 @@ function render(d) {
     }
   }
 
-  /* Train controls: visa Start när inaktiv, Stoppa när aktiv */
-  document.getElementById('btn-start').style.display = active ? 'none' : '';
-  document.getElementById('train-script-select').style.display = active ? 'none' : '';
-  document.getElementById('btn-stop').style.display  = active ? '' : 'none';
+  /* Train controls: visa Start när inaktiv/kraschad, Stoppa när aktiv */
+  const showStart = !active || crashed;
+  document.getElementById('btn-start').style.display = showStart ? '' : 'none';
+  document.getElementById('train-script-select').style.display = showStart ? '' : 'none';
+  document.getElementById('btn-stop').style.display  = showStart ? 'none' : '';
 }
 
 /* ═══════════════════════════════════════════════
