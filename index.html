@@ -26,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1782719220" />
+  <link rel="stylesheet" href="style.css?v1782719730" />
 </head>
 
 <body data-theme="auto">
@@ -114,8 +114,8 @@
     <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script src="i18n.js?v1782719220"></script>
-  <script src="ppmk.js?v1782719220"></script>
+  <script src="i18n.js?v1782719730"></script>
+  <script src="ppmk.js?v1782719730"></script>
   <script>
     (() => {
       "use strict";
@@ -438,7 +438,7 @@
       }
       let _initialized = false;
 
-      ppmk.onReady(function(t_fn, lang) {
+      ppmI18n.ready(function(t_fn, lang) {
         _currentLang = lang;
         if (!_initialized) {
           _initialized = true;
