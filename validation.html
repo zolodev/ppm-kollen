@@ -346,15 +346,19 @@
 
     // ── Init via ppmk ──────────────────────────────────────────
     function updateStaticText() {
-      document.querySelector(".logo-sub").textContent = t("logo_sub");
-      document.getElementById("back-btn").setAttribute("aria-label", t("back"));
-      document.getElementById("page-title").textContent = t("page_title");
-      document.getElementById("page-subtitle").textContent = t("page_subtitle");
-      document.querySelector(".disclaimer").textContent = t("disclaimer");
+      const sub = document.querySelector(".logo-sub");
+      if (sub) sub.textContent = t("logo_sub");
+      const back = document.getElementById("back-btn");
+      if (back) back.setAttribute("aria-label", t("back"));
+      const title = document.getElementById("page-title");
+      if (title) title.textContent = t("page_title");
+      const subtitle = document.getElementById("page-subtitle");
+      if (subtitle) subtitle.textContent = t("page_subtitle");
       const es = document.getElementById("empty-state");
       if (es) {
         es.querySelector("p").textContent = t("empty_title");
-        es.querySelectorAll("p")[1].textContent = t("empty_hint");
+        const p2 = es.querySelectorAll("p")[1];
+        if (p2) p2.textContent = t("empty_hint");
       }
     }
 
