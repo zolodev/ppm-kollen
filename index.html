@@ -26,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1782719730" />
+  <link rel="stylesheet" href="style.css?v1782720511" />
 </head>
 
 <body data-theme="auto">
@@ -114,8 +114,8 @@
     <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script src="i18n.js?v1782719730"></script>
-  <script src="ppmk.js?v1782719730"></script>
+  <script src="i18n.js?v1782720511"></script>
+  <script src="ppmk.js?v1782720511"></script>
   <script>
     (() => {
       "use strict";
@@ -143,7 +143,7 @@
 
       const $ = (sel) => document.querySelector(sel);
       const qa = (sel) => document.querySelectorAll(sel);
-      const esc = ppmk.esc;
+      const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
       const t = (key) => ppmI18n.t(key);
 
       function signFmt(n) { const v = Number(n); return (v >= 0 ? "+" : "") + v.toFixed(2) + "%"; }
