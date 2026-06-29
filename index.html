@@ -26,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1782720511" />
+  <link rel="stylesheet" href="style.css?v1782721560" />
 </head>
 
 <body data-theme="auto">
@@ -114,20 +114,13 @@
     <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script src="i18n.js?v1782720511"></script>
-  <script src="ppmk.js?v1782720511"></script>
+  <script src="i18n.js?v1782721560"></script>
+  <script src="ppmk.js?v1782721560"></script>
   <script>
     (() => {
       "use strict";
 
       const OUTPUT = ".";
-      const PREDICTIONS_URLS = [
-        "predictions.json",
-        "output/predictions.json",
-        "data/predictions.json",
-        "https://raw.githubusercontent.com/zolodev/ppm-kollen/refs/heads/main/predictions.json"
-      ];
-
       const HITRATE_THRESHOLD = 70;
 
       const SIGNAL = {
@@ -150,17 +143,6 @@
       function btFmt(val, decimals = 1, sign = true) { if (val == null || isNaN(val)) return "—"; const n = Number(val); return (sign && n >= 0 ? "+" : "") + n.toFixed(decimals) + "%"; }
       function btClass(val, threshold = 0) { if (val == null) return ""; return val > threshold ? "good" : val < threshold ? "warn" : ""; }
       function hitrateClass(val) { if (val >= 80) return "good"; if (val < HITRATE_THRESHOLD) return "warn"; return ""; }
-      function fetchFirst(urls) {
-        return urls.reduce(
-          (chain, url) => chain.catch(() => fetch(url).then(r => {
-            if (!r.ok) throw new Error("HTTP " + r.status);
-            const ct = r.headers.get("content-type") || "";
-            if (!ct.includes("json") && !url.endsWith(".json")) throw new Error("Not JSON");
-            return r.json();
-          })),
-          Promise.reject()
-        );
-      }
 
       function copyPpm(btn, code) {
         const original = btn.textContent;
@@ -398,7 +380,8 @@
       }
 
       function bootstrap() {
-        fetchFirst(PREDICTIONS_URLS)
+        fetch("predictions.json")
+          .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
           .then(data => { render(data, null); })
           .catch(() => { $("#app").innerHTML = `<p class="state-msg">${t("err_no_predictions")}</p>`; });
       }
@@ -436,19 +419,16 @@
         const headerDate = document.querySelector("#header-date");
         if (headerDate) headerDate.textContent = t("fund_forecast");
       }
-      let _initialized = false;
+      // Init immediately — no dependency on i18n for data loading
+      initDelegates();
+      initLightbox();
+      bootstrap();
 
+      // Language updates (fires when i18n loads and on every switch)
       ppmI18n.ready(function(t_fn, lang) {
         _currentLang = lang;
-        if (!_initialized) {
-          _initialized = true;
-          initDelegates();
-          initLightbox();
-          bootstrap();
-        } else {
-          applyLangToStaticElements();
-          if (_currentData) render(_currentData, _currentFolder);
-        }
+        applyLangToStaticElements();
+        if (_currentData) render(_currentData, _currentFolder);
       });
     })();
   </script>
