@@ -26,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1782723237" />
+  <link rel="stylesheet" href="style.css?v1782723501" />
 </head>
 
 <body data-theme="auto">
@@ -98,7 +98,6 @@
           rådgivning</strong> — ett utbildningsverktyg.</p>
     </section>
 
-    <div id="debug" style="background:#1a1a2e;border:2px solid #f0c;padding:10px;margin:10px;font-family:monospace;font-size:12px;color:#0f0;white-space:pre-wrap;max-height:200px;overflow:auto"></div>
     <div id="app" aria-live="polite">
       <p class="state-msg">Laddar prognos…</p>
     </div>
@@ -115,8 +114,8 @@
     <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script src="i18n.js?v1782723237"></script>
-  <script src="ppmk.js?v1782723237"></script>
+  <script src="i18n.js?v1782723501"></script>
+  <script src="ppmk.js?v1782723501"></script>
   <script>
     (() => {
       "use strict";
@@ -139,7 +138,6 @@
       const qa = (sel) => document.querySelectorAll(sel);
       const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
       const t = (key) => ppmI18n.t(key);
-      const _dbg = (msg) => { const d = document.getElementById("debug"); if (d) d.textContent += new Date().toISOString().slice(11,23) + " " + msg + "\n"; };
 
       function signFmt(n) { const v = Number(n); return (v >= 0 ? "+" : "") + v.toFixed(2) + "%"; }
       function btFmt(val, decimals = 1, sign = true) { if (val == null || isNaN(val)) return "—"; const n = Number(val); return (sign && n >= 0 ? "+" : "") + n.toFixed(decimals) + "%"; }
@@ -354,7 +352,7 @@
         const tabsHtml = `<nav class="ranking-nav">${rankingKeys.map(k => { const m = getRankingMeta(k); return `<button class="ranking-tab${k === "winners" ? " active" : ""}" data-key="${esc(k)}">${esc(m.label)}</button>`; }).join("")}</nav>`;
         $("#app").innerHTML = metaHtml + tabsHtml + `<div id="funds-panel"></div>`;
         renderFooter(data.generated);
-        try { switchRanking("winners"); } catch(e) { console.error("switchRanking error:", e); document.getElementById("funds-panel").textContent = "Render error: " + e.message; }
+        switchRanking("winners");
       }
 
       function initDelegates() {
@@ -381,14 +379,10 @@
       }
 
       function bootstrap() {
-        _dbg("bootstrap: fetching predictions.json");
         fetch("predictions.json")
-          .then(r => { _dbg("fetch status: " + r.status); if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-          .then(data => {
-            _dbg("data loaded, horizons: " + JSON.stringify(Object.keys(data.horizons || {})));
-            try { render(data, null); _dbg("render OK"); } catch(e) { _dbg("RENDER ERROR: " + e.message + "\n" + e.stack); }
-          })
-          .catch(e => { _dbg("FETCH ERROR: " + e.message); $("#app").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json</p>'; });
+          .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+          .then(data => { render(data, null); })
+          .catch(() => { $("#app").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json</p>'; });
       }
 
       // ── Lightbox ───────────────────────────────────────────────────
@@ -429,14 +423,11 @@
       initLightbox();
       bootstrap();
 
-      _dbg("script parsed, calling initDelegates+initLightbox+bootstrap");
-
       // Language switch — re-render with new translations
       ppmI18n.ready(function(t_fn, lang) {
-        _dbg("i18n ready lang=" + lang + " _currentData=" + !!_currentData);
         _currentLang = lang;
         applyLangToStaticElements();
-        if (_currentData) { _dbg("re-rendering with i18n"); render(_currentData, _currentFolder); }
+        if (_currentData) render(_currentData, _currentFolder);
       });
     })();
   </script>
