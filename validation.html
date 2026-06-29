@@ -358,7 +358,11 @@
       }
     }
 
-    ppmk.onReady(function(t_fn, lang) {
+    // Load data immediately
+    loadAndRender();
+
+    // Language switch — re-render
+    ppmI18n.ready(function(t_fn, lang) {
       _lang = lang;
       updateStaticText();
       loadAndRender();
