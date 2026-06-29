@@ -80,6 +80,8 @@
     el.classList.add("fade-out");
     setTimeout(function () { el.remove(); }, 350);
   }
+  // Safety: always hide loader after 3 seconds
+  setTimeout(hideLoader, 3000);
 
   // ── Core API ───────────────────────────────────────────────
   function t(key) {
@@ -96,7 +98,7 @@
     document.documentElement.lang = lang;
     // Fire callbacks again so pages re-render
     for (var i = 0; i < _readyCallbacks.length; i++) {
-      _readyCallbacks[i](t, _lang);
+      try { _readyCallbacks[i](t, _lang); } catch (e) { console.error("i18n setLang callback error:", e); }
     }
   }
 
@@ -116,15 +118,14 @@
       .then(function (data) {
         _translations = data;
         for (var i = 0; i < _readyCallbacks.length; i++) {
-          _readyCallbacks[i](t, _lang);
+          try { _readyCallbacks[i](t, _lang); } catch (e) { console.error("i18n ready callback error:", e); }
         }
         hideLoader();
       })
       .catch(function () {
-        // Fallback: continue without translations (keys shown as-is)
         _translations = {};
         for (var i = 0; i < _readyCallbacks.length; i++) {
-          _readyCallbacks[i](t, _lang);
+          try { _readyCallbacks[i](t, _lang); } catch (e) { console.error("i18n ready callback error:", e); }
         }
         hideLoader();
       });
