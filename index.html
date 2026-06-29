@@ -26,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1782722783" />
+  <link rel="stylesheet" href="style.css?v1782723118" />
 </head>
 
 <body data-theme="auto">
@@ -114,8 +114,8 @@
     <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script src="i18n.js?v1782722783"></script>
-  <script src="ppmk.js?v1782722783"></script>
+  <script src="i18n.js?v1782723118"></script>
+  <script src="ppmk.js?v1782723118"></script>
   <script>
     (() => {
       "use strict";
@@ -352,8 +352,7 @@
         const tabsHtml = `<nav class="ranking-nav">${rankingKeys.map(k => { const m = getRankingMeta(k); return `<button class="ranking-tab${k === "winners" ? " active" : ""}" data-key="${esc(k)}">${esc(m.label)}</button>`; }).join("")}</nav>`;
         $("#app").innerHTML = metaHtml + tabsHtml + `<div id="funds-panel"></div>`;
         renderFooter(data.generated);
-        updateDisclaimerText();
-        switchRanking("winners");
+        try { switchRanking("winners"); } catch(e) { console.error("switchRanking error:", e); document.getElementById("funds-panel").textContent = "Render error: " + e.message; }
       }
 
       function initDelegates() {
@@ -380,10 +379,11 @@
       }
 
       function bootstrap() {
+        console.log("[ppmk] bootstrap: fetching predictions.json");
         fetch("predictions.json")
-          .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-          .then(data => { render(data, null); })
-          .catch(() => { $("#app").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json</p>'; });
+          .then(r => { console.log("[ppmk] fetch status:", r.status); if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+          .then(data => { console.log("[ppmk] data loaded, funds:", Object.keys(data.horizons || {}).map(k => (data.horizons[k] || []).length)); render(data, null); console.log("[ppmk] render done, _currentData:", !!_currentData); })
+          .catch(e => { console.error("[ppmk] bootstrap error:", e); $("#app").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json</p>'; });
       }
 
       // ── Lightbox ───────────────────────────────────────────────────
@@ -426,6 +426,7 @@
 
       // Language switch — re-render with new translations
       ppmI18n.ready(function(t_fn, lang) {
+        console.log("[ppmk] i18n ready, lang:", lang, "_currentData:", !!_currentData);
         _currentLang = lang;
         applyLangToStaticElements();
         if (_currentData) render(_currentData, _currentFolder);
