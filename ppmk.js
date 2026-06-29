@@ -91,23 +91,18 @@
   var _disclaimerInit = false;
   var _langToggleInit = false;
   var _readyCbs = [];
-  var _firedLang = null;
 
   function onReady(cb) {
     _readyCbs.push(cb);
-    if (_firedLang !== null) {
-      cb(function (k) { return ppmI18n ? ppmI18n.t(k) : k; }, _firedLang);
+    // ppmI18n.ready handles the "already fired" case internally
+    if (typeof ppmI18n !== "undefined") {
+      ppmI18n.ready(function (t, lang) {
+        cb(t, lang);
+      });
     }
   }
 
-  function _fireReady(t, lang) {
-    _firedLang = lang;
-    for (var i = 0; i < _readyCbs.length; i++) {
-      _readyCbs[i](t, lang);
-    }
-  }
-
-  // Wire everything up via ppmI18n.ready
+  // Init shared components once via ppmI18n.ready
   if (typeof ppmI18n !== "undefined") {
     ppmI18n.ready(function (t, lang) {
       if (!_themeInit) { _themeInit = true; initTheme(); }
@@ -115,14 +110,11 @@
       if (!_langToggleInit) { _langToggleInit = true; initLangToggle(); }
       updateDisclaimerText();
       applyLang(lang);
-      _fireReady(t, lang);
     });
   } else {
-    // Fallback if i18n.js not loaded
     document.addEventListener("DOMContentLoaded", function () {
       initTheme();
       initDisclaimer();
-      _fireReady(function (k) { return k; }, "sv");
     });
   }
 

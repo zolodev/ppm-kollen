@@ -26,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v1782719220" />
 </head>
 
 <body data-theme="auto">
@@ -114,8 +114,8 @@
     <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script src="i18n.js"></script>
-  <script src="ppmk.js"></script>
+  <script src="i18n.js?v1782719220"></script>
+  <script src="ppmk.js?v1782719220"></script>
   <script>
     (() => {
       "use strict";
@@ -152,7 +152,12 @@
       function hitrateClass(val) { if (val >= 80) return "good"; if (val < HITRATE_THRESHOLD) return "warn"; return ""; }
       function fetchFirst(urls) {
         return urls.reduce(
-          (chain, url) => chain.catch(() => fetch(url).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })),
+          (chain, url) => chain.catch(() => fetch(url).then(r => {
+            if (!r.ok) throw new Error("HTTP " + r.status);
+            const ct = r.headers.get("content-type") || "";
+            if (!ct.includes("json") && !url.endsWith(".json")) throw new Error("Not JSON");
+            return r.json();
+          })),
           Promise.reject()
         );
       }
