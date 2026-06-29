@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-28",
+  "generated": "2026-06-29",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
