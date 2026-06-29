@@ -230,6 +230,40 @@
         </div>
       </section>
 
+      <!-- Teknisk specifikation -->
+      <section class="section">
+        <div class="section-label" data-lang="sv">Teknisk specifikation</div>
+        <div class="section-label" data-lang="en">Technical specification</div>
+        <h2 class="section-title" data-lang="sv">Aktuell konfiguration</h2>
+        <h2 class="section-title" data-lang="en">Current configuration</h2>
+        <div class="stat-list">
+          <div class="stat-row">
+            <span data-lang="sv">Prediktionstyp</span><span data-lang="en">Target mode</span>
+            <span class="stat-value">Quantile (Q10/Q50/Q90)</span>
+          </div>
+          <div class="stat-row">
+            <span data-lang="sv">Dataskalning</span><span data-lang="en">Scaling</span>
+            <span class="stat-value">Robust (median/IQR)</span>
+          </div>
+          <div class="stat-row">
+            <span data-lang="sv">Modeller</span><span data-lang="en">Models</span>
+            <span class="stat-value">LSTM, GRU, TCN, XGBoost</span>
+          </div>
+          <div class="stat-row">
+            <span data-lang="sv">Lookback</span><span data-lang="en">Lookback</span>
+            <span class="stat-value">104 veckor (2 year)</span>
+          </div>
+          <div class="stat-row">
+            <span data-lang="sv">Finetune-f&ouml;nster</span><span data-lang="en">Finetune window</span>
+            <span class="stat-value">8 veckor</span>
+          </div>
+          <div class="stat-row">
+            <span data-lang="sv">H&aring;rdvara</span><span data-lang="en">Hardware</span>
+            <span class="stat-value">NVIDIA Jetson Orin (8.7 compute)</span>
+          </div>
+        </div>
+      </section>
+
       <!-- Modeller -->
       <section class="section">
         <div class="section-label" data-lang="sv">Arkitektur</div>
