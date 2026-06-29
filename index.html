@@ -26,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1782723118" />
+  <link rel="stylesheet" href="style.css?v1782723237" />
 </head>
 
 <body data-theme="auto">
@@ -98,6 +98,7 @@
           rådgivning</strong> — ett utbildningsverktyg.</p>
     </section>
 
+    <div id="debug" style="background:#1a1a2e;border:2px solid #f0c;padding:10px;margin:10px;font-family:monospace;font-size:12px;color:#0f0;white-space:pre-wrap;max-height:200px;overflow:auto"></div>
     <div id="app" aria-live="polite">
       <p class="state-msg">Laddar prognos…</p>
     </div>
@@ -114,8 +115,8 @@
     <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script src="i18n.js?v1782723118"></script>
-  <script src="ppmk.js?v1782723118"></script>
+  <script src="i18n.js?v1782723237"></script>
+  <script src="ppmk.js?v1782723237"></script>
   <script>
     (() => {
       "use strict";
@@ -138,6 +139,7 @@
       const qa = (sel) => document.querySelectorAll(sel);
       const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
       const t = (key) => ppmI18n.t(key);
+      const _dbg = (msg) => { const d = document.getElementById("debug"); if (d) d.textContent += new Date().toISOString().slice(11,23) + " " + msg + "\n"; };
 
       function signFmt(n) { const v = Number(n); return (v >= 0 ? "+" : "") + v.toFixed(2) + "%"; }
       function btFmt(val, decimals = 1, sign = true) { if (val == null || isNaN(val)) return "—"; const n = Number(val); return (sign && n >= 0 ? "+" : "") + n.toFixed(decimals) + "%"; }
@@ -379,11 +381,14 @@
       }
 
       function bootstrap() {
-        console.log("[ppmk] bootstrap: fetching predictions.json");
+        _dbg("bootstrap: fetching predictions.json");
         fetch("predictions.json")
-          .then(r => { console.log("[ppmk] fetch status:", r.status); if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-          .then(data => { console.log("[ppmk] data loaded, funds:", Object.keys(data.horizons || {}).map(k => (data.horizons[k] || []).length)); render(data, null); console.log("[ppmk] render done, _currentData:", !!_currentData); })
-          .catch(e => { console.error("[ppmk] bootstrap error:", e); $("#app").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json</p>'; });
+          .then(r => { _dbg("fetch status: " + r.status); if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+          .then(data => {
+            _dbg("data loaded, horizons: " + JSON.stringify(Object.keys(data.horizons || {})));
+            try { render(data, null); _dbg("render OK"); } catch(e) { _dbg("RENDER ERROR: " + e.message + "\n" + e.stack); }
+          })
+          .catch(e => { _dbg("FETCH ERROR: " + e.message); $("#app").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json</p>'; });
       }
 
       // ── Lightbox ───────────────────────────────────────────────────
@@ -424,12 +429,14 @@
       initLightbox();
       bootstrap();
 
+      _dbg("script parsed, calling initDelegates+initLightbox+bootstrap");
+
       // Language switch — re-render with new translations
       ppmI18n.ready(function(t_fn, lang) {
-        console.log("[ppmk] i18n ready, lang:", lang, "_currentData:", !!_currentData);
+        _dbg("i18n ready lang=" + lang + " _currentData=" + !!_currentData);
         _currentLang = lang;
         applyLangToStaticElements();
-        if (_currentData) render(_currentData, _currentFolder);
+        if (_currentData) { _dbg("re-rendering with i18n"); render(_currentData, _currentFolder); }
       });
     })();
   </script>
