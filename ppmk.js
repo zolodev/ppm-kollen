@@ -91,12 +91,17 @@
   var _disclaimerInit = false;
   var _langToggleInit = false;
   var _readyCbs = [];
+  var _firedLang = null;
 
   function onReady(cb) {
     _readyCbs.push(cb);
+    if (_firedLang !== null) {
+      cb(function (k) { return ppmI18n ? ppmI18n.t(k) : k; }, _firedLang);
+    }
   }
 
   function _fireReady(t, lang) {
+    _firedLang = lang;
     for (var i = 0; i < _readyCbs.length; i++) {
       _readyCbs[i](t, lang);
     }
