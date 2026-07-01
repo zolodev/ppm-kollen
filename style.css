@@ -260,9 +260,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .metric-info[data-tip]:hover::after { opacity: 1; }
 
 /* ── Language Toggle ──── */
-[data-lang="en"] { display: none; }
-body.lang-en [data-lang="sv"] { display: none; }
-body.lang-en [data-lang="en"] { display: revert; }
+/* Use !important to override any display set by class-based rules
+   (.section-label, .section-title, .pipeline-step etc.) which have
+   higher specificity than a plain attribute selector. */
+[data-lang="en"] { display: none !important; }
+body.lang-en [data-lang="sv"] { display: none !important; }
+body.lang-en [data-lang="en"] { display: revert !important; }
 
 /* ── Footer ──── */
 footer {
