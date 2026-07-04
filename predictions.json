@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29",
+  "generated": "2026-07-04",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -18,62 +18,30 @@
         "name": "Swedbank Robur Technology A",
         "tags": "Aktiefond, Branschfond, Ny teknik",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
-        "score": 34464.247,
+        "score": 68527.247,
         "hitrate_q50": 80.2,
         "coverage_pct": 71.38,
         "mae_q50": 0.9787,
         "signal": "BUY",
         "forecast": {
-          "q10": 1.7838,
-          "q50": 3.4407,
-          "q90": 4.5985
+          "q10": 3.5674,
+          "q50": 6.847,
+          "q90": 9.4926
         },
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 91.7,
-          "mae": 10.8624,
-          "last_pred_q50": 3.4623,
-          "last_actual": 31.7998,
-          "last_error": -28.3375,
+          "mae": 18.5732,
+          "last_pred_q50": 6.8597,
+          "last_actual": 29.4119,
+          "last_error": -22.5522,
           "last_direction_ok": true,
-          "date_from": "2026-03-30",
-          "date_to": "2026-05-25"
+          "date_from": "2026-04-13",
+          "date_to": "2026-06-22"
         },
         "charts": {
-          "ensemble": "top-2026-06-28/363/h1w_ensemble.png",
-          "individual": "top-2026-06-28/363/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "181108",
-        "ppm_code": "551507",
-        "name": "Länsförsäkringar USA Index",
-        "tags": "Aktiefond, USA, Mix bolag, Index",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/181108",
-        "score": 16628.559,
-        "hitrate_q50": 83.54,
-        "coverage_pct": 68.9,
-        "mae_q50": 0.5615,
-        "signal": "HOLD",
-        "forecast": {
-          "q10": 1.4239,
-          "q50": 1.6571,
-          "q90": 2.1205
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 100,
-          "mae": 4.4716,
-          "last_pred_q50": 1.7983,
-          "last_actual": 15.6791,
-          "last_error": -13.8808,
-          "last_direction_ok": true,
-          "date_from": "2026-03-30",
-          "date_to": "2026-05-25"
-        },
-        "charts": {
-          "ensemble": "top-2026-06-28/181108/h1w_ensemble.png",
-          "individual": "top-2026-06-28/181108/h1w_individual.png"
+          "ensemble": "top-2026-06-30/363/h1w_ensemble.png",
+          "individual": "top-2026-06-30/363/h1w_individual.png"
         }
       },
       {
@@ -82,30 +50,62 @@
         "name": "Skandia Nordamerika Exponering",
         "tags": "Aktiefond, USA, Mix bolag, Index",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/411236",
-        "score": 13752.206,
+        "score": 35010.206,
         "hitrate_q50": 79.65,
         "coverage_pct": 74.34,
         "mae_q50": 0.6504,
         "signal": "BUY",
         "forecast": {
-          "q10": 1.0103,
-          "q50": 1.3693,
-          "q90": 1.6454
+          "q10": 2.176,
+          "q50": 3.4951,
+          "q90": 3.9275
         },
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 91.7,
-          "mae": 4.5546,
-          "last_pred_q50": 1.4568,
-          "last_actual": 15.965,
-          "last_error": -14.5082,
+          "hit_rate_pct": 100,
+          "mae": 7.6477,
+          "last_pred_q50": 3.5163,
+          "last_actual": 12.0429,
+          "last_error": -8.5266,
           "last_direction_ok": true,
-          "date_from": "2026-03-30",
-          "date_to": "2026-05-25"
+          "date_from": "2026-04-13",
+          "date_to": "2026-06-22"
         },
         "charts": {
-          "ensemble": "top-2026-06-28/411236/h1w_ensemble.png",
-          "individual": "top-2026-06-28/411236/h1w_individual.png"
+          "ensemble": "top-2026-06-30/411236/h1w_ensemble.png",
+          "individual": "top-2026-06-30/411236/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "181108",
+        "ppm_code": "551507",
+        "name": "Länsförsäkringar USA Index",
+        "tags": "Aktiefond, USA, Mix bolag, Index",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/181108",
+        "score": 16296.559,
+        "hitrate_q50": 83.54,
+        "coverage_pct": 68.9,
+        "mae_q50": 0.5615,
+        "signal": "BUY",
+        "forecast": {
+          "q10": 1.2992,
+          "q50": 1.6239,
+          "q90": 2.1277
+        },
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 100,
+          "mae": 8.0022,
+          "last_pred_q50": 1.608,
+          "last_actual": 10.0497,
+          "last_error": -8.4417,
+          "last_direction_ok": true,
+          "date_from": "2026-04-13",
+          "date_to": "2026-06-22"
+        },
+        "charts": {
+          "ensemble": "top-2026-06-30/181108/h1w_ensemble.png",
+          "individual": "top-2026-06-30/181108/h1w_individual.png"
         }
       }
     ]
