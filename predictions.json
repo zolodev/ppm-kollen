@@ -13,12 +13,44 @@
   "horizons": {
     "1w": [
       {
+        "fund_id": "596",
+        "ppm_code": "155259",
+        "name": "Barings Europa A USD Inc",
+        "tags": "Aktiefond, Europa, Mix bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/596",
+        "score": 103.983,
+        "hitrate_q50": 73.26,
+        "coverage_pct": 85.56,
+        "mae_q50": 0.5217,
+        "signal": "BUY",
+        "forecast": {
+          "q10": 0.2139,
+          "q50": 1.2073,
+          "q90": 1.5849
+        },
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 83.3,
+          "mae": 4.3483,
+          "last_pred_q50": 1.2765,
+          "last_actual": 5.2716,
+          "last_error": -3.9951,
+          "last_direction_ok": true,
+          "date_from": "2026-04-20",
+          "date_to": "2026-07-06"
+        },
+        "charts": {
+          "ensemble": "top-2026-07-13/596/h1w_ensemble.png",
+          "individual": "top-2026-07-13/596/h1w_individual.png"
+        }
+      },
+      {
         "fund_id": "364",
         "ppm_code": "194092",
         "name": "SEB Teknologifond",
         "tags": "Aktiefond, Branschfond, Ny teknik",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/364",
-        "score": 194.566,
+        "score": 88.825,
         "hitrate_q50": 81.82,
         "coverage_pct": 86.1,
         "mae_q50": 1.4443,
@@ -50,7 +82,7 @@
         "name": "Storebrand Emerging Markets Plus A SEK",
         "tags": "Aktiefond, Tillväxtmarknader, Index",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/663195",
-        "score": 189.167,
+        "score": 74.095,
         "hitrate_q50": 79.27,
         "coverage_pct": 60.98,
         "mae_q50": 2.0925,
@@ -74,38 +106,6 @@
         "charts": {
           "ensemble": "top-2026-07-13/663195/h1w_ensemble.png",
           "individual": "top-2026-07-13/663195/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "596",
-        "ppm_code": "155259",
-        "name": "Barings Europa A USD Inc",
-        "tags": "Aktiefond, Europa, Mix bolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/596",
-        "score": 163.252,
-        "hitrate_q50": 73.26,
-        "coverage_pct": 85.56,
-        "mae_q50": 0.5217,
-        "signal": "BUY",
-        "forecast": {
-          "q10": 0.2139,
-          "q50": 1.2073,
-          "q90": 1.5849
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 83.3,
-          "mae": 4.3483,
-          "last_pred_q50": 1.2765,
-          "last_actual": 5.2716,
-          "last_error": -3.9951,
-          "last_direction_ok": true,
-          "date_from": "2026-04-20",
-          "date_to": "2026-07-06"
-        },
-        "charts": {
-          "ensemble": "top-2026-07-13/596/h1w_ensemble.png",
-          "individual": "top-2026-07-13/596/h1w_individual.png"
         }
       }
     ]
