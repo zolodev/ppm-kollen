@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-14",
+  "generated": "2026-07-15",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -18,30 +18,30 @@
         "name": "Handelsbanken Tillväxtm Tema (A1 SEK)",
         "tags": "Aktiefond, Tillväxtmarknader",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2155",
-        "score": 155.286,
+        "score": 157.285,
         "hitrate_q50": 80.75,
         "coverage_pct": 75.4,
         "mae_q50": 1.0596,
         "signal": "HOLD",
         "forecast": {
-          "q10": 2.5055,
-          "q50": 4.8666,
-          "q90": 5.6097
+          "q10": 2.544,
+          "q50": 4.953,
+          "q90": 5.7999
         },
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 100,
-          "mae": 9.2509,
-          "last_pred_q50": 4.8266,
+          "mae": 9.2164,
+          "last_pred_q50": 4.9181,
           "last_actual": 0.7834,
-          "last_error": 4.0432,
+          "last_error": 4.1347,
           "last_direction_ok": true,
           "date_from": "2026-04-20",
           "date_to": "2026-07-06"
         },
         "charts": {
-          "ensemble": "top-2026-07-14/2155/h1w_ensemble.png",
-          "individual": "top-2026-07-14/2155/h1w_individual.png"
+          "ensemble": "top-2026-07-15/2155/h1w_ensemble.png",
+          "individual": "top-2026-07-15/2155/h1w_individual.png"
         }
       },
       {
@@ -50,30 +50,30 @@
         "name": "Barings Europa A USD Inc",
         "tags": "Aktiefond, Europa, Mix bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/596",
-        "score": 107.126,
+        "score": 109.744,
         "hitrate_q50": 73.26,
         "coverage_pct": 85.56,
         "mae_q50": 0.5217,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.2709,
-          "q50": 1.2871,
-          "q90": 1.6919
+          "q10": 0.2825,
+          "q50": 1.3526,
+          "q90": 1.7921
         },
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 83.3,
-          "mae": 4.3033,
-          "last_pred_q50": 1.3621,
+          "mae": 4.2668,
+          "last_pred_q50": 1.4302,
           "last_actual": 5.2716,
-          "last_error": -3.9095,
+          "last_error": -3.8415,
           "last_direction_ok": true,
           "date_from": "2026-04-20",
           "date_to": "2026-07-06"
         },
         "charts": {
-          "ensemble": "top-2026-07-14/596/h1w_ensemble.png",
-          "individual": "top-2026-07-14/596/h1w_individual.png"
+          "ensemble": "top-2026-07-15/596/h1w_ensemble.png",
+          "individual": "top-2026-07-15/596/h1w_individual.png"
         }
       },
       {
