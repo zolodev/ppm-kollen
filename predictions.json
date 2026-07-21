@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-20",
+  "generated": "2026-07-21",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -28,6 +28,12 @@
           "q50": 5.9119,
           "q90": 6.0121
         },
+        "consensus": {
+          "n_agree": 4,
+          "n_models": 4,
+          "n_up": 4,
+          "n_down": 0
+        },
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 100,
@@ -40,8 +46,8 @@
           "date_to": "2026-07-13"
         },
         "charts": {
-          "ensemble": "top-2026-07-20/1011686/h1w_ensemble.png",
-          "individual": "top-2026-07-20/1011686/h1w_individual.png"
+          "ensemble": "top-2026-07-21/1011686/h1w_ensemble.png",
+          "individual": "top-2026-07-21/1011686/h1w_individual.png"
         }
       },
       {
@@ -60,6 +66,12 @@
           "q50": 0.7581,
           "q90": 0.8503
         },
+        "consensus": {
+          "n_agree": 3,
+          "n_models": 4,
+          "n_up": 3,
+          "n_down": 1
+        },
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75,
@@ -72,40 +84,8 @@
           "date_to": "2026-07-13"
         },
         "charts": {
-          "ensemble": "top-2026-07-20/43947/h1w_ensemble.png",
-          "individual": "top-2026-07-20/43947/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "363",
-        "ppm_code": "283408",
-        "name": "Swedbank Robur Technology A",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
-        "score": 77.948,
-        "hitrate_q50": 84.76,
-        "coverage_pct": 73.26,
-        "mae_q50": 1.9869,
-        "signal": "BUY",
-        "forecast": {
-          "q10": 7.1368,
-          "q50": 10.6634,
-          "q90": 11.5678
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 100,
-          "mae": 15.4575,
-          "last_pred_q50": 10.4676,
-          "last_actual": 4.7398,
-          "last_error": 5.7278,
-          "last_direction_ok": true,
-          "date_from": "2026-04-25",
-          "date_to": "2026-07-13"
-        },
-        "charts": {
-          "ensemble": "top-2026-07-20/363/h1w_ensemble.png",
-          "individual": "top-2026-07-20/363/h1w_individual.png"
+          "ensemble": "top-2026-07-21/43947/h1w_ensemble.png",
+          "individual": "top-2026-07-21/43947/h1w_individual.png"
         }
       }
     ]
@@ -467,37 +447,37 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "43947",
-        "ppm_code": "469692",
-        "name": "Nordea Indienfond",
-        "tags": "Aktiefond, Indien",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/43947",
-        "hitrate_q50": 81.99,
-        "coverage_pct": 79.84,
-        "mae_q50": 0.5984,
-        "forecast_q50": 1.1842,
-        "forecast_q10": -0.1871,
-        "forecast_q90": 2.6935,
-        "last_actual": 6.147,
-        "momentum_4w": 6.9499,
+        "fund_id": "663195",
+        "ppm_code": "429316",
+        "name": "Storebrand Emerging Markets Plus A SEK",
+        "tags": "Aktiefond, Tillväxtmarknader, Index",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/663195",
+        "hitrate_q50": 76.83,
+        "coverage_pct": 62.2,
+        "mae_q50": 2.2241,
+        "forecast_q50": 1.1643,
+        "forecast_q10": 0.2415,
+        "forecast_q90": 2.1503,
+        "last_actual": -2.9858,
+        "momentum_4w": 6.0587,
         "tritch_score": -1,
         "tritch_phase": -1,
         "signal": "BUY"
       },
       {
-        "fund_id": "363",
-        "ppm_code": "283408",
-        "name": "Swedbank Robur Technology A",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
-        "hitrate_q50": 84.76,
-        "coverage_pct": 73.26,
-        "mae_q50": 1.9869,
-        "forecast_q50": 1.2085,
-        "forecast_q10": 0.4794,
-        "forecast_q90": 1.655,
-        "last_actual": 4.7398,
-        "momentum_4w": 11.795,
+        "fund_id": "2084",
+        "ppm_code": "420646",
+        "name": "Länsförsäkringar Kort räntefond",
+        "tags": "Räntefond, SEK, Obligationer, Korta",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2084",
+        "hitrate_q50": 92.51,
+        "coverage_pct": 91.44,
+        "mae_q50": 0.0574,
+        "forecast_q50": 0.3282,
+        "forecast_q10": 0.0003,
+        "forecast_q90": 0.1483,
+        "last_actual": 0.2265,
+        "momentum_4w": 0.3031,
         "tritch_score": -1,
         "tritch_phase": -1,
         "signal": "BUY"
