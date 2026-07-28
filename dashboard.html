@@ -124,6 +124,7 @@
     padding: 12px 14px;
     position: relative;
     overflow: hidden;
+    min-height: 0;
     transition: border-color .3s;
   }
   .card::before {
@@ -513,9 +514,20 @@
       <div class="train-controls" id="train-controls">
         <label for="train-script-select" class="sr-only">Training script</label>
         <select id="train-script-select">
-          <option value="daily_finetune">Daily Fine-tune (06_finetune)</option>
-          <option value="weekly_pipeline">Weekly Pipeline (03_training)</option>
-          <option value="base_training">Base Training (05_base_training)</option>
+          <optgroup label="Pipelines (main.py)">
+            <option value="daily">Daily Pipeline (--daily)</option>
+            <option value="weekly">Weekly Pipeline (--weekly)</option>
+            <option value="bootstrap">Bootstrap (--bootstrap)</option>
+            <option value="bootstrap_force">Bootstrap Force (--bootstrap --force)</option>
+          </optgroup>
+          <optgroup label="Enskilda steg">
+            <option value="features">01 Features</option>
+            <option value="tritch">02 Tritch</option>
+            <option value="training">03 Training (full)</option>
+            <option value="base_training">03b Base Training</option>
+            <option value="finetune">04 Fine-tune</option>
+            <option value="top_funds">05 Top Funds</option>
+          </optgroup>
         </select>
         <button class="btn-train btn-start" id="btn-start" onclick="trainStart()">Starta</button>
         <button class="btn-train btn-stop"  id="btn-stop"  onclick="trainStop()" style="display:none">Stoppa</button>
@@ -585,9 +597,12 @@
   <div class="card log-card">
     <div class="card-title" style="margin-bottom:6px">Logg-feed (live)</div>
     <div class="log-tabs">
-      <button class="log-tab active" data-log="daily_finetune"><span class="tab-long">daily_finetune.log</span><span class="tab-short">finetune</span></button>
-      <button class="log-tab" data-log="weekly"><span class="tab-long">weekly_pipeline.log</span><span class="tab-short">weekly</span></button>
-      <button class="log-tab" data-log="training"><span class="tab-long">base_training.log</span><span class="tab-short">base</span></button>
+      <button class="log-tab active" data-log="daily"><span class="tab-long">daily.log</span><span class="tab-short">daily</span></button>
+      <button class="log-tab" data-log="weekly"><span class="tab-long">weekly.log</span><span class="tab-short">weekly</span></button>
+      <button class="log-tab" data-log="bootstrap"><span class="tab-long">bootstrap.log</span><span class="tab-short">bootstrap</span></button>
+      <button class="log-tab" data-log="training"><span class="tab-long">training.log</span><span class="tab-short">training</span></button>
+      <button class="log-tab" data-log="base_training"><span class="tab-long">base_training.log</span><span class="tab-short">base</span></button>
+      <button class="log-tab" data-log="daily_finetune"><span class="tab-long">daily_finetune.log</span><span class="tab-short">finetune</span></button>
       <button class="log-tab" data-log="tegrastats"><span class="tab-long">tegrastats.log</span><span class="tab-short">tegra</span></button>
       <button class="log-tab" data-log="summary"><span class="tab-long">summary.log</span><span class="tab-short">summary</span></button>
     </div>
@@ -913,8 +928,8 @@ function dummyData() {
    LOG (multi-file, tabbed)
 ═══════════════════════════════════════════════ */
 const logEl      = document.getElementById('log-body');
-const logBuffers = { training: [], weekly: [], daily_finetune: [], tegrastats: [], summary: [] };
-let   activeLog  = 'daily_finetune';
+const logBuffers = { daily: [], weekly: [], bootstrap: [], training: [], base_training: [], daily_finetune: [], tegrastats: [], summary: [] };
+let   activeLog  = 'daily';
 let   _userPickedLog = false;
 
 document.querySelectorAll('.log-tab').forEach(btn => {
@@ -923,7 +938,7 @@ document.querySelectorAll('.log-tab').forEach(btn => {
     document.querySelectorAll('.log-tab').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeLog = btn.dataset.log;
-    renderLogDisplay();
+    renderLogDisplay(true);
   });
 });
 
@@ -935,12 +950,15 @@ function colorizeLine(line) {
   return `<div class="log-line"><span class="${cls}">${line}</span></div>`;
 }
 
-function renderLogDisplay() {
+function renderLogDisplay(forceScroll = false) {
   const lines = logBuffers[activeLog] || [];
+  const wasAtBottom = logEl.scrollHeight - logEl.scrollTop - logEl.clientHeight < 40;
   logEl.innerHTML = lines.length
     ? lines.map(colorizeLine).join('')
     : '<div class="log-line">Inga rader ännu…</div>';
-  logEl.scrollTop = logEl.scrollHeight;
+  if (forceScroll || wasAtBottom) {
+    logEl.scrollTop = logEl.scrollHeight;
+  }
 }
 
 async function fetchLogs() {
@@ -1064,11 +1082,13 @@ function render(d) {
   if (active) {
     const proc = (d.train_proc_name || '').toLowerCase();
     let target = null;
-    if (proc.includes('weekly'))         target = 'weekly';
-    else if (proc.includes('daily'))     target = 'daily_finetune';
-    else if (proc.includes('base'))      target = 'training';
-    else if (proc.includes('03_'))       target = 'training';
-    else if (proc.includes('06_'))       target = 'daily_finetune';
+    if      (proc.includes('weekly'))      target = 'weekly';
+    else if (proc.includes('bootstrap'))   target = 'bootstrap';
+    else if (proc.includes('daily'))       target = 'daily';
+    else if (proc.includes('03b_'))        target = 'base_training';
+    else if (proc.includes('base'))        target = 'base_training';
+    else if (proc.includes('03_'))         target = 'training';
+    else if (proc.includes('04_'))         target = 'daily_finetune';
     if (target && target !== activeLog && !_userPickedLog) {
       activeLog = target;
       document.querySelectorAll('.log-tab').forEach(b => {

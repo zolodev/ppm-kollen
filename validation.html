@@ -159,12 +159,24 @@
         for (const fd of Object.values(fundData))
           fd.allWeeks.sort((a, b) => a.target_date.localeCompare(b.target_date));
 
-        let totalPredictions = 0, totalHits = 0, allWeeksAll = [];
+        let totalPredictions = 0, totalHits = 0;
         for (const fd of Object.values(fundData)) {
           for (const w of fd.allWeeks) { totalPredictions++; if (w.direction_ok) totalHits++; }
-          allWeeksAll = allWeeksAll.concat(fd.allWeeks);
         }
         const overallHitRate = totalPredictions > 0 ? (totalHits / totalPredictions * 100) : 0;
+
+        // Aggregated portfolio: one entry per calendar week, pick the fund with
+        // the highest pred_q50 for that week (= "follow the top recommendation").
+        const bestWeekByDate = {};
+        for (const fd of Object.values(fundData)) {
+          for (const w of fd.allWeeks) {
+            const key = w.target_date;
+            if (!bestWeekByDate[key] || (w.pred_q50 ?? 0) > (bestWeekByDate[key].pred_q50 ?? 0))
+              bestWeekByDate[key] = w;
+          }
+        }
+        const allWeeksAll = Object.values(bestWeekByDate)
+          .sort((a, b) => a.target_date.localeCompare(b.target_date));
         const globalSim = simulatePortfolio(allWeeksAll);
         const firstDate = allWeeksAll.length > 0 ? allWeeksAll[0].target_date : "—";
         const latestDate = entries[entries.length - 1].generated;
