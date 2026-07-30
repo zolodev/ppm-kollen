@@ -88,6 +88,16 @@
   #poll-input.invalid { border-color: var(--red); color: var(--red); }
   .header-right span { color: var(--green); }
 
+  /* <main> wraps .grid for a11y — must stay a flex item that can actually
+     shrink, otherwise it sizes to content and breaks the whole height
+     cascade below it (cards grow unbounded, log-body never scrolls). */
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+  }
+
   /* ── Huvudgrid: vänster + höger ── */
   .grid {
     display: grid;
@@ -523,10 +533,14 @@
           <optgroup label="Enskilda steg">
             <option value="features">01 Features</option>
             <option value="tritch">02 Tritch</option>
-            <option value="training">03 Training (full)</option>
-            <option value="base_training">03b Base Training</option>
-            <option value="finetune">04 Fine-tune</option>
-            <option value="top_funds">05 Top Funds</option>
+            <option value="holdings">03 Holdings</option>
+            <option value="holdings_ohlc">04 Holdings OHLC</option>
+            <option value="base_training">05 Base Training</option>
+            <option value="finetune">06 Fine-tune</option>
+            <option value="top_funds">07 Top Funds</option>
+          </optgroup>
+          <optgroup label="Legacy (manual only)">
+            <option value="training_lib">training_lib.py (full independent retrain)</option>
           </optgroup>
         </select>
         <button class="btn-train btn-start" id="btn-start" onclick="trainStart()">Starta</button>
