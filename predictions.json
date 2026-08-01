@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-31",
+  "generated": "2026-08-01",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -18,15 +18,15 @@
         "name": "Simplicity Företagsobligationer A",
         "tags": "Räntefond, SEK, Obligationer, Flexibel storlek bolag, Högrisk",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/342255",
-        "score": 366.905,
+        "score": 273.639,
         "hitrate_q50": 76.98,
         "coverage_pct": 84.92,
         "mae_q50": 0.1119,
-        "signal": "BUY",
+        "signal": "HOLD",
         "forecast": {
-          "q10": -0.0738,
-          "q50": 0.7456,
-          "q90": 1.0826
+          "q10": 0.3658,
+          "q50": 0.4979,
+          "q90": 0.8806
         },
         "consensus": {
           "n_agree": 4,
@@ -37,17 +37,18 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 100,
-          "mae": 0.3826,
-          "last_pred_q50": 0.682,
+          "mae": 0.3662,
+          "last_pred_q50": 0.5861,
           "last_actual": 0.7621,
-          "last_error": -0.0801,
+          "last_error": -0.176,
           "last_direction_ok": true,
           "date_from": "2026-05-04",
           "date_to": "2026-07-27"
         },
+        "rationale": "77% hit-rate; 0.112pp MAE; 4/4 models agree (bullish); 100% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-07-31/342255/h1w_ensemble.png",
-          "individual": "top-2026-07-31/342255/h1w_individual.png"
+          "ensemble": "top-2026-08-01/342255/h1w_ensemble.png",
+          "individual": "top-2026-08-01/342255/h1w_individual.png"
         }
       }
     ]
