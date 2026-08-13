@@ -310,6 +310,27 @@
   }
   .log-tab:hover { color: var(--text); border-color: var(--green-dim); }
   .log-tab.active { color: var(--green); border-color: var(--green); background: var(--green-faint); }
+
+  /* ── Env switcher (zyron / k3s / k8s) ── */
+  .env-tabs { display: flex; gap: 4px; }
+  .env-tab {
+    font-family: var(--mono); font-size: .68rem;
+    color: var(--text-dim); background: var(--bg3);
+    border: 1px solid var(--border); border-radius: 2px;
+    padding: 3px 12px; cursor: pointer; letter-spacing: .08em;
+    transition: color .2s, border-color .2s, background .2s;
+  }
+  .env-tab:hover { color: var(--text); border-color: var(--green-dim); }
+  .env-tab.active { color: var(--green); border-color: var(--green); background: var(--green-faint); }
+  .env-tab .pod-dot {
+    width: 6px; height: 6px; border-radius: 50%; display: inline-block;
+    margin-right: 5px; background: var(--text-dim);
+  }
+  .env-tab .pod-dot.up { background: var(--green); box-shadow: 0 0 5px var(--green); }
+  #pod-banner {
+    font-family: var(--mono); font-size: .68rem; color: var(--text-dim);
+    margin-top: 4px; display: none;
+  }
   .tab-short { display: none; }
   @media (max-width: 600px) {
     .tab-long  { display: none; }
@@ -488,8 +509,16 @@
 <body>
 
 <header>
-  <div class="logo">
-    <span class="logo-blink">▶</span> AI TRAINING MONITOR
+  <div>
+    <div class="logo">
+      <span class="logo-blink">▶</span> AI TRAINING MONITOR
+    </div>
+    <div class="env-tabs" id="env-tabs" role="tablist" aria-label="Miljö">
+      <button class="env-tab active" data-env="zyron" role="tab" aria-selected="true"><span class="pod-dot" id="dot-zyron"></span>zyron</button>
+      <button class="env-tab" data-env="k3s" role="tab" aria-selected="false"><span class="pod-dot" id="dot-k3s"></span>k3s</button>
+      <button class="env-tab" data-env="k8s" role="tab" aria-selected="false"><span class="pod-dot" id="dot-k8s"></span>k8s</button>
+    </div>
+    <div id="pod-banner"></div>
   </div>
   <div class="header-right">
     <div><span id="clock">--:--:--</span> &nbsp;|&nbsp; var <label for="poll-input" class="sr-only">Poll interval (seconds)</label><input id="poll-input" type="text" value="5s" title="Intervall: t.ex. 500ms · 5s · 2m · 1h"> &nbsp;<span class="refresh-spin" id="spin"></span></div>
@@ -610,7 +639,7 @@
   <!-- ── LOGG-FEED (hela höger kolumn) ── -->
   <div class="card log-card">
     <div class="card-title" style="margin-bottom:6px">Logg-feed (live)</div>
-    <div class="log-tabs">
+    <div class="log-tabs" id="log-tabs-zyron">
       <button class="log-tab active" data-log="daily"><span class="tab-long">daily.log</span><span class="tab-short">daily</span></button>
       <button class="log-tab" data-log="weekly"><span class="tab-long">weekly.log</span><span class="tab-short">weekly</span></button>
       <button class="log-tab" data-log="bootstrap"><span class="tab-long">bootstrap.log</span><span class="tab-short">bootstrap</span></button>
@@ -635,6 +664,12 @@
 const API_BASE    = '';   // din servers IP:port
 let   POLL_MS     = 5000;
 const HISTORY_LEN = 60;  // datapunkter i graferna
+
+/* ═══════════════════════════════════════════════
+   ENV SWITCHER (zyron / k3s / k8s)
+═══════════════════════════════════════════════ */
+let activeEnv = localStorage.getItem('activeEnv') || 'zyron';
+if (!['zyron', 'k3s', 'k8s'].includes(activeEnv)) activeEnv = 'zyron';
 
 /* ═══════════════════════════════════════════════
    SHARED TOOLTIP
@@ -942,7 +977,7 @@ function dummyData() {
    LOG (multi-file, tabbed)
 ═══════════════════════════════════════════════ */
 const logEl      = document.getElementById('log-body');
-const logBuffers = { daily: [], weekly: [], bootstrap: [], training: [], base_training: [], daily_finetune: [], tegrastats: [], summary: [] };
+const logBuffers = { daily: [], weekly: [], bootstrap: [], training: [], base_training: [], daily_finetune: [], tegrastats: [], summary: [], pod: [] };
 let   activeLog  = 'daily';
 let   _userPickedLog = false;
 
@@ -955,6 +990,52 @@ document.querySelectorAll('.log-tab').forEach(btn => {
     renderLogDisplay(true);
   });
 });
+
+/* ═══════════════════════════════════════════════
+   ENV TABS — zyron has per-script log tabs + start/stop
+   controls; k3s/k8s are monitoring-only (one live pod log,
+   no tabs, no start/stop — use `make bootstrap-run` etc.
+   for those). Switching env resets history/log state since
+   the data series are entirely separate per environment.
+═══════════════════════════════════════════════ */
+function applyEnvUI() {
+  const isZyron = activeEnv === 'zyron';
+  document.getElementById('log-tabs-zyron').style.display = isZyron ? '' : 'none';
+  document.getElementById('train-controls').style.display = isZyron ? '' : 'none';
+  document.getElementById('gpu-sub').textContent = isZyron ? 'tegrastats' : '—';
+  if (!isZyron) {
+    activeLog = 'pod';
+    _userPickedLog = false;
+  } else if (activeLog === 'pod') {
+    activeLog = 'daily';
+  }
+}
+
+function switchEnv(env) {
+  if (env === activeEnv) return;
+  activeEnv = env;
+  localStorage.setItem('activeEnv', env);
+  document.querySelectorAll('.env-tab').forEach(b => {
+    const on = b.dataset.env === env;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+  applyEnvUI();
+  // Fresh series for the new env — old env's history doesn't apply here.
+  Object.values(charts).forEach(sp => { sp.data = Array(HISTORY_LEN).fill(0); sp.draw(); });
+  Object.values(charts2).forEach(sp => { sp.data = Array(HISTORY_LEN).fill(0); sp.draw(); });
+  seedHistory();
+  poll();
+  fetchLogs();
+}
+
+document.querySelectorAll('.env-tab').forEach(btn => {
+  btn.addEventListener('click', () => switchEnv(btn.dataset.env));
+  const on = btn.dataset.env === activeEnv;
+  btn.classList.toggle('active', on);
+  btn.setAttribute('aria-selected', on ? 'true' : 'false');
+});
+applyEnvUI();
 
 function colorizeLine(line) {
   const cls = line.includes('[OK]')   ? 'ok'
@@ -977,7 +1058,7 @@ function renderLogDisplay(forceScroll = false) {
 
 async function fetchLogs() {
   try {
-    const res = await fetch(`${API_BASE}/logs`, { signal: AbortSignal.timeout(4000) });
+    const res = await fetch(`${API_BASE}/logs?env=${activeEnv}`, { signal: AbortSignal.timeout(4000) });
     if (!res.ok) return;
     const data = await res.json();
     Object.entries(data).forEach(([name, lines]) => {
@@ -991,12 +1072,35 @@ async function fetchLogs() {
    RENDER
 ═══════════════════════════════════════════════ */
 function render(d) {
-  /* CPU */
+  const isZyron = activeEnv === 'zyron';
+
+  /* Pod banner + env-tab status dots (k3s/k8s only) */
+  const podBanner = document.getElementById('pod-banner');
+  if (!isZyron) {
+    podBanner.style.display = 'block';
+    podBanner.textContent = d.pod_name
+      ? `pod: ${d.pod_name}${d.train_proc_name ? ' (' + d.train_proc_name + ')' : ''}`
+      : `Ingen pod körs (${d.pod_status || 'okänt'})`;
+  } else {
+    podBanner.style.display = 'none';
+  }
+  ['k3s', 'k8s'].forEach(env => {
+    const el = document.getElementById('dot-' + env);
+    if (el) el.classList.toggle('up', env === activeEnv ? !!d.pod_name : el.classList.contains('up'));
+  });
+
+  /* CPU — not collected for k3s/k8s pods (no working metrics-server) */
+  if (!isZyron) {
+    document.getElementById('cpu-val').textContent   = 'N/A';
+    document.getElementById('cpu-cores').textContent = 'ej tillgängligt för pods';
+    document.getElementById('cores-grid').innerHTML  = '';
+  } else {
   const cpuPct = Math.round(d.cpu_pct);
   document.getElementById('cpu-val').textContent   = cpuPct + '%';
   document.getElementById('cpu-cores').textContent = d.cpu_cores + ' kärnor';
   setBar('cpu-bar', cpuPct);
   charts.cpu.push(cpuPct);
+  }
 
   /* Per-core CPU */
   if (Array.isArray(d.cpu_cores_pct) && d.cpu_cores_pct.length) {
@@ -1019,7 +1123,12 @@ function render(d) {
     });
   }
 
-  /* RAM */
+  /* RAM — host RAM, not collected for k3s/k8s pods (no working metrics-server) */
+  if (!isZyron) {
+    document.getElementById('ram-val').textContent = 'N/A';
+    document.getElementById('ram-sub').textContent  = 'ej tillgängligt för pods';
+    setBar('ram-bar', 0);
+  } else {
   const ramPct  = Math.round(d.ram_used_mb / d.ram_total_mb * 100);
   const ramFree = d.ram_total_mb - d.ram_used_mb;
   document.getElementById('ram-val').textContent = fmtMem(d.ram_used_mb);
@@ -1027,24 +1136,40 @@ function render(d) {
     `${fmtMem(ramFree)} free · ${fmtMem(d.ram_total_mb)} total (${ramPct}%)`;
   setBar('ram-bar', ramPct);
   charts.ram.push(ramPct);
+  }
 
-  /* GPU */
+  /* GPU — zyron/k3s share tegrastats (same physical Jetson GPU); k8s uses
+     nvidia-smi over kubectl exec and additionally reports GPU memory. */
   const gpuPct = Math.round(d.gpu_gr3d_pct);
   document.getElementById('gpu-val').textContent = gpuPct + '%';
   document.getElementById('gpu-bar').style.width = gpuPct + '%';
-  charts.gpu.push(gpuPct);
+  if (isZyron) {
+    charts.gpu.push(gpuPct);
+  }
+  if (activeEnv === 'k8s') {
+    document.getElementById('gpu-sub').textContent = d.gpu_mem_total_mb
+      ? `nvidia-smi · ${fmtMem(d.gpu_mem_used_mb)} / ${fmtMem(d.gpu_mem_total_mb)}`
+      : (d.gpu_source || 'nvidia-smi');
+  } else if (activeEnv === 'k3s') {
+    document.getElementById('gpu-sub').textContent = d.gpu_source || 'tegrastats (delas med zyron)';
+  }
 
-  /* Disk */
+  /* Disk & Net — host-level I/O, not collected for k3s/k8s pods */
+  if (!isZyron) {
+    ['disk-read', 'disk-write', 'net-in', 'net-out'].forEach(id => {
+      document.getElementById(id).textContent = 'N/A';
+    });
+  } else {
   document.getElementById('disk-read').textContent  = fmt(d.disk_read_bps);
   document.getElementById('disk-write').textContent = fmt(d.disk_write_bps);
   charts.diskR.push(d.disk_read_bps);
   charts2.diskW.push(d.disk_write_bps);
 
-  /* Net */
   document.getElementById('net-in').textContent  = fmt(d.net_in_bps);
   document.getElementById('net-out').textContent = fmt(d.net_out_bps);
   charts.netI.push(d.net_in_bps);
   charts2.netO.push(d.net_out_bps);
+  }
 
   /* Progress */
   const cur = d.train_cur || 0, tot = d.train_tot || 0;
@@ -1092,8 +1217,9 @@ function render(d) {
     banner.textContent = '⏸ Ingen träningsprocess körs just nu';
   }
 
-  /* Auto-switch log tab to match running pipeline */
-  if (active) {
+  /* Auto-switch log tab to match running pipeline (zyron's per-script tabs
+     only — k3s/k8s always show the single 'pod' log, see applyEnvUI()) */
+  if (active && isZyron) {
     const proc = (d.train_proc_name || '').toLowerCase();
     let target = null;
     if      (proc.includes('weekly'))      target = 'weekly';
@@ -1186,7 +1312,7 @@ const spin   = document.getElementById('spin');
 async function poll() {
   spin.classList.add('active');
   try {
-    const res = await fetch(`${API_BASE}/stats`, { signal: AbortSignal.timeout(4000) });
+    const res = await fetch(`${API_BASE}/stats?env=${activeEnv}`, { signal: AbortSignal.timeout(4000) });
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     useDemo = false;
@@ -1246,7 +1372,7 @@ pollInput.addEventListener('keydown', e => { if (e.key === 'Enter') pollInput.bl
 
 async function seedHistory() {
   try {
-    const res = await fetch(`${API_BASE}/history`, { signal: AbortSignal.timeout(3000) });
+    const res = await fetch(`${API_BASE}/history?env=${activeEnv}`, { signal: AbortSignal.timeout(3000) });
     if (!res.ok) return;
     const h = await res.json();
     const pairs = [
