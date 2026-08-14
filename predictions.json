@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-13",
+  "generated": "2026-08-14",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -13,98 +13,20 @@
   "horizons": {
     "1w": [
       {
-        "fund_id": "1464",
-        "ppm_code": "840033",
-        "name": "Handelsbanken Amerika Tema (A1 SEK)",
-        "tags": "Aktiefond, USA, Tillväxtbolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1464",
-        "score": 72.364,
-        "hitrate_q50": 86.17,
-        "coverage_pct": 72.34,
-        "mae_q50": 0.9942,
-        "signal": "BUY",
-        "forecast": {
-          "q10": 0.0404,
-          "q50": 0.4381,
-          "q90": 0.8223
-        },
-        "consensus": {
-          "n_agree": 4,
-          "n_models": 4,
-          "n_up": 4,
-          "n_down": 0
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 100.0,
-          "mae": 7.7429,
-          "last_pred_q50": 0.5133,
-          "last_actual": 2.4428,
-          "last_error": -1.9296,
-          "last_direction_ok": true,
-          "date_from": "2026-05-18",
-          "date_to": "2026-08-10"
-        },
-        "rationale": "86% hit-rate; 0.994pp MAE; 4/4 models agree (bullish); 100% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-08-13/1464/h1w_ensemble.png",
-          "individual": "top-2026-08-13/1464/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "398157",
-        "ppm_code": "959502",
-        "name": "Cicero Hållbar Mix A",
-        "tags": "Blandfond, SEK, Balanserad",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/398157",
-        "score": 72.219,
-        "hitrate_q50": 80.34,
-        "coverage_pct": 70.09,
-        "mae_q50": 0.9368,
-        "signal": "BUY",
-        "forecast": {
-          "q10": -0.0377,
-          "q50": 0.4636,
-          "q90": 0.7204
-        },
-        "consensus": {
-          "n_agree": 4,
-          "n_models": 4,
-          "n_up": 4,
-          "n_down": 0
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 100.0,
-          "mae": 4.8905,
-          "last_pred_q50": 0.5224,
-          "last_actual": 1.8403,
-          "last_error": -1.3178,
-          "last_direction_ok": true,
-          "date_from": "2026-05-18",
-          "date_to": "2026-08-10"
-        },
-        "rationale": "80% hit-rate; 0.937pp MAE; 4/4 models agree (bullish); 100% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-08-13/398157/h1w_ensemble.png",
-          "individual": "top-2026-08-13/398157/h1w_individual.png"
-        }
-      },
-      {
         "fund_id": "2247",
         "ppm_code": "475301",
         "name": "Skandia Världen",
         "tags": "Aktiefond, Global, Tillväxtbolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2247",
-        "score": 65.101,
+        "score": 168.315,
         "hitrate_q50": 72.87,
         "coverage_pct": 68.62,
         "mae_q50": 0.6523,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.1341,
-          "q50": 0.4817,
-          "q90": 1.1158
+          "q10": null,
+          "q50": 2.3277,
+          "q90": 3.1124
         },
         "consensus": {
           "n_agree": 4,
@@ -114,19 +36,19 @@
         },
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 91.7,
-          "mae": 5.199,
-          "last_pred_q50": 0.6822,
+          "hit_rate_pct": 100.0,
+          "mae": 3.2826,
+          "last_pred_q50": 2.5332,
           "last_actual": 1.7072,
-          "last_error": -1.025,
+          "last_error": 0.826,
           "last_direction_ok": true,
           "date_from": "2026-05-18",
           "date_to": "2026-08-10"
         },
-        "rationale": "73% hit-rate; 0.652pp MAE; 4/4 models agree (bullish); 92% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "73% hit-rate; 0.652pp MAE; 4/4 models agree (bullish); 100% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-08-13/2247/h1w_ensemble.png",
-          "individual": "top-2026-08-13/2247/h1w_individual.png"
+          "ensemble": "top-2026-08-14/2247/h1w_ensemble.png",
+          "individual": "top-2026-08-14/2247/h1w_individual.png"
         }
       }
     ]
