@@ -18,15 +18,15 @@
         "name": "Spiltan Globalfond Investmentbolag",
         "tags": "Aktiefond, Global, Mix bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/693994",
-        "score": 149.803,
+        "score": 167.224,
         "hitrate_q50": 75.95,
         "coverage_pct": 73.42,
         "mae_q50": 0.9826,
         "signal": "BUY",
         "forecast": {
           "q10": null,
-          "q50": 1.8494,
-          "q90": 2.6964
+          "q50": 2.0812,
+          "q90": 3.2249
         },
         "consensus": {
           "n_agree": 4,
@@ -37,10 +37,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 100.0,
-          "mae": 2.9505,
-          "last_pred_q50": 1.8746,
+          "mae": 2.7517,
+          "last_pred_q50": 2.1139,
           "last_actual": 2.6187,
-          "last_error": -0.7441,
+          "last_error": -0.5049,
           "last_direction_ok": true,
           "date_from": "2026-05-18",
           "date_to": "2026-08-10"
@@ -390,6 +390,61 @@
         "signal": "BUY"
       }
     ],
-    "top_streak": []
+    "top_streak": [
+      {
+        "fund_id": "1604",
+        "ppm_code": "625236",
+        "name": "BGF US Mid-Cap Value A2",
+        "tags": "Aktiefond, USA, Medelstora bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1604",
+        "hitrate_q50": 52.66,
+        "coverage_pct": 76.6,
+        "mae_q50": 1.1579,
+        "forecast_q50": 1.903,
+        "forecast_q10": 0.2977,
+        "forecast_q90": 1.8584,
+        "last_actual": 0.6317,
+        "momentum_4w": 2.9494,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "600081",
+        "ppm_code": "780411",
+        "name": "UB Infra A",
+        "tags": "Aktiefond, Branschfond, Infrastruktur",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/600081",
+        "hitrate_q50": 64.49,
+        "coverage_pct": 83.18,
+        "mae_q50": 0.773,
+        "forecast_q50": 1.6822,
+        "forecast_q10": 0.1308,
+        "forecast_q90": 2.5577,
+        "last_actual": -3.5608,
+        "momentum_4w": -0.1764,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "436351",
+        "ppm_code": "912220",
+        "name": "Storebrand Global HighDiv Low Vol A SEK",
+        "tags": "Aktiefond, Global, Värdebolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/436351",
+        "hitrate_q50": 60.91,
+        "coverage_pct": 73.64,
+        "mae_q50": 0.9171,
+        "forecast_q50": 1.6695,
+        "forecast_q10": 0.2461,
+        "forecast_q90": 2.1375,
+        "last_actual": 1.9565,
+        "momentum_4w": 3.4161,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      }
+    ]
   }
 }
