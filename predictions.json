@@ -18,15 +18,15 @@
         "name": "Evli Emerging Markets Credit B",
         "tags": "Räntefond, Euro, Tillväxtmarknader, Obligationer, Företag, Säkrad",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/476475",
-        "score": 120.819,
+        "score": 120.396,
         "hitrate_q50": 70.91,
         "coverage_pct": 95.45,
         "mae_q50": 0.258,
         "signal": "BUY",
         "forecast": {
           "q10": null,
-          "q50": 0.4066,
-          "q90": 0.8029
+          "q50": 0.4112,
+          "q90": 0.7694
         },
         "consensus": {
           "n_agree": 3,
@@ -37,10 +37,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 0.8899,
-          "last_pred_q50": 0.8883,
+          "mae": 0.9122,
+          "last_pred_q50": 0.9567,
           "last_actual": -0.9622,
-          "last_error": 1.8505,
+          "last_error": 1.9189,
           "last_direction_ok": false,
           "date_from": "2026-05-18",
           "date_to": "2026-08-10"
