@@ -151,7 +151,20 @@
     "help_bt_verdict_beat": "Strategin slog buy &amp; hold med",
     "help_bt_verdict_under": "Strategin underpresterade buy &amp; hold med",
     "help_bt_verdict_matched": "Matchade buy &amp; hold",
-    "help_bt_grew": "100 kr → {val} kr"
+    "help_bt_grew": "100 kr → {val} kr",
+    "rm_overview_label": "Alla fonder",
+    "rm_overview_desc": "Varje fond träningen producerade, även de som inte kan rankas. ★ markerar fonderna modellen faktiskt rekommenderar — de ligger överst. Klicka på en kolumnrubrik för att sortera om.",
+    "ov_col_ppm": "PPM",
+    "ov_col_name": "Fond",
+    "ov_col_change": "Utveckling",
+    "ov_col_streak": "Streak",
+    "ov_col_trend": "Trend",
+    "ov_trend_up": "Stigande",
+    "ov_trend_down": "Fallande",
+    "ov_trend_flat": "Sidled",
+    "ov_weeks": "v",
+    "ov_note": "Utveckling avser senaste avslutade veckan ({week}). Streak är antal veckor i rad åt samma håll. Trend är snittet över 4 veckor. {excluded} fonder ligger under kalibreringsgränsen ({min_cov} % coverage) och kan därför inte hamna i någon topplista — de visas här ändå, nedtonade.",
+    "ov_empty": "Ingen översiktsdata publicerad ännu."
   },
   "en": {
     "hero_eyebrow": "PPM Forecast · powered by ensemble of models",
@@ -305,6 +318,19 @@
     "help_bt_verdict_beat": "Strategy beat buy &amp; hold by",
     "help_bt_verdict_under": "Strategy underperformed buy &amp; hold by",
     "help_bt_verdict_matched": "Matched buy &amp; hold",
-    "help_bt_grew": "$100 → ${val}"
+    "help_bt_grew": "$100 → ${val}",
+    "rm_overview_label": "All funds",
+    "rm_overview_desc": "Every fund the training run produced, including those that cannot be ranked. ★ marks the funds the model actually recommends — they sort first. Click a column header to reorder.",
+    "ov_col_ppm": "PPM",
+    "ov_col_name": "Fund",
+    "ov_col_change": "Change",
+    "ov_col_streak": "Streak",
+    "ov_col_trend": "Trend",
+    "ov_trend_up": "Rising",
+    "ov_trend_down": "Falling",
+    "ov_trend_flat": "Sideways",
+    "ov_weeks": "w",
+    "ov_note": "Change is the most recent completed week ({week}). Streak counts consecutive weeks in the same direction. Trend is the 4-week mean. {excluded} funds sit below the calibration gate ({min_cov}% coverage) and so cannot reach any ranking list — they are shown here anyway, dimmed.",
+    "ov_empty": "No overview data published yet."
   }
 }

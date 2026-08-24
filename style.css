@@ -1103,3 +1103,34 @@ main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
   [data-theme="auto"] .ranking-tab.active { color: #fff; }
   [data-theme="auto"] .cta-btn.primary { color: #fff; }
 }
+
+/* ── Overview table — every fund, not just the ranked ones ──────────────
+   A table rather than the cards the ranking tabs use: this list is ~270 rows
+   and exists to be scanned and sorted, so density beats presentation. */
+.ov-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; background: var(--bg-card); }
+.ov-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.ov-table th, .ov-table td { padding: 0.5rem 0.7rem; text-align: left; white-space: nowrap; }
+.ov-table thead th {
+  position: sticky; top: 0; z-index: 1;
+  background: var(--bg-panel); color: var(--text-muted);
+  font-weight: 600; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase;
+  border-bottom: 1px solid var(--border); cursor: pointer; user-select: none;
+}
+.ov-table thead th:hover { color: var(--text); }
+.ov-table thead th::after { content: ""; opacity: 0.35; margin-left: 0.35em; }
+.ov-table thead th.sort-asc::after  { content: "▲"; opacity: 0.9; }
+.ov-table thead th.sort-desc::after { content: "▼"; opacity: 0.9; }
+.ov-table tbody tr { border-top: 1px solid var(--border); }
+.ov-table tbody tr:hover { background: var(--bg-elev); }
+/* Digits in the numeric columns must line up to be comparable at a glance. */
+.ov-num { text-align: right !important; font-variant-numeric: tabular-nums; }
+.ov-up   { color: var(--buy); }
+.ov-down { color: var(--sell); }
+.ov-flat { color: var(--text-faint); }
+.ov-star { width: 1.6rem; text-align: center !important; color: var(--hold); }
+.ov-name { white-space: normal; min-width: 14rem; }
+.ov-ppm  { font-variant-numeric: tabular-nums; color: var(--text-muted); }
+/* Below the coverage gate: shown, but visibly not on equal footing. */
+.ov-table tbody tr.ov-excluded .ov-name,
+.ov-table tbody tr.ov-excluded .ov-ppm { opacity: 0.62; }
+.ov-note { margin: 0.6rem 0 0; font-size: 0.8rem; color: var(--text-faint); }

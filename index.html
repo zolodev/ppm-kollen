@@ -339,6 +339,102 @@
         return `<div class="ranking-card"><div class="ranking-card-head"><div class="ranking-rank">${medal}</div><div class="ranking-info"><div class="ranking-name" title="${esc(fund.name || "")}">${esc(fund.name || "—")}</div><div class="ranking-ids"><span class="id-pill">ID&nbsp;${esc(fund.fund_id || "—")}</span>${ppmBtnHtml(fund.ppm_code)}${avanzaLinkHtml(fund.avanza_url)}${warnBadge}</div></div><div class="ranking-metrics"><div class="ranking-metric"><span class="ranking-metric-label">FC Q50</span><span class="ranking-metric-value">${fc50}</span></div><div class="ranking-metric"><span class="ranking-metric-label">Hit</span><span class="ranking-metric-value ${hitrateClass(hitrate)}">${hitrate.toFixed(1)}%</span></div><div class="ranking-metric"><span class="ranking-metric-label">Coverage</span><span class="ranking-metric-value">${cov}%</span></div></div><div class="signal-col"><div class="signal-badge ${sig.cls}"><span class="signal-icon">${sig.icon}</span><span class="signal-label">${t("signal_" + (fund.signal || "HOLD"))}</span></div></div></div></div>`;
       }
 
+      // ── Overview table ──────────────────────────────────────────────
+      // Held apart from _currentData: overview.json is a separate file and may
+      // be absent (an older deploy, or a run before this existed), in which
+      // case the tab is simply not offered rather than rendering an error.
+      let _overview = null;
+      let _ovSort = { col: "default", dir: "desc" };
+
+      const OV_COLS = [
+        { key: "star",       label: "",              cls: "ov-star", sortable: false },
+        { key: "ppm_code",   label: "ov_col_ppm",    cls: "ov-ppm",  type: "text" },
+        { key: "name",       label: "ov_col_name",   cls: "ov-name", type: "text" },
+        { key: "change_pct", label: "ov_col_change", cls: "ov-num",  type: "num"  },
+        { key: "streak",     label: "ov_col_streak", cls: "ov-num",  type: "num"  },
+        { key: "trend",      label: "ov_col_trend",  cls: "",        type: "text" },
+      ];
+
+      const OV_ARROW = { up: "\u25B2", down: "\u25BC", flat: "\u25AC" };
+
+      function ovDirClass(d) {
+        return d === "up" ? "ov-up" : d === "down" ? "ov-down" : "ov-flat";
+      }
+
+      function ovSorted(funds) {
+        const rows = funds.slice();
+        const { col, dir } = _ovSort;
+
+        // The default is what the user asked for and what the file already
+        // carries: recommended first, then the size of the week's move. It is
+        // re-applied here rather than trusted, so the header state and the
+        // rows can never disagree.
+        if (col === "default") {
+          return rows.sort((a, b) =>
+            (b.recommended === true) - (a.recommended === true) ||
+            (b.change_pct ?? -1e9) - (a.change_pct ?? -1e9));
+        }
+
+        const spec = OV_COLS.find(c => c.key === col) || {};
+        const mul = dir === "asc" ? 1 : -1;
+        return rows.sort((a, b) => {
+          let x = a[col], y = b[col];
+          // A streak is only comparable together with its direction: 6 weeks
+          // down is the opposite end of the scale from 6 weeks up, not a tie.
+          if (col === "streak") {
+            x = (a.streak_dir === "down" ? -1 : 1) * (a.streak || 0);
+            y = (b.streak_dir === "down" ? -1 : 1) * (b.streak || 0);
+          }
+          if (spec.type === "num") {
+            x = x ?? -1e9; y = y ?? -1e9;
+            return (x - y) * mul;
+          }
+          return String(x ?? "").localeCompare(String(y ?? ""), undefined, { numeric: true }) * mul;
+        });
+      }
+
+      function ovRowHtml(f) {
+        const chCls = ovDirClass(f.direction);
+        const ch = f.change_pct === null || f.change_pct === undefined
+          ? "\u2014"
+          : (f.change_pct > 0 ? "+" : "") + f.change_pct.toFixed(2) + " %";
+        const streak = f.streak
+          ? `<span class="${ovDirClass(f.streak_dir)}">${f.streak} ${esc(t("ov_weeks"))} ${OV_ARROW[f.streak_dir]}</span>`
+          : "\u2014";
+        const trend = `<span class="${ovDirClass(f.trend)}">${OV_ARROW[f.trend]} ${esc(t("ov_trend_" + f.trend))}</span>`;
+        const name = f.avanza_url
+          ? `<a href="${esc(f.avanza_url)}" target="_blank" rel="noopener">${esc(f.name)}</a>`
+          : esc(f.name);
+        return `<tr class="${f.excluded ? "ov-excluded" : ""}">`
+          + `<td class="ov-star">${f.recommended ? "\u2605" : ""}</td>`
+          + `<td class="ov-ppm">${esc(f.ppm_code || "\u2014")}</td>`
+          + `<td class="ov-name">${name}</td>`
+          + `<td class="ov-num ${chCls}">${ch}</td>`
+          + `<td class="ov-num">${streak}</td>`
+          + `<td>${trend}</td>`
+          + `</tr>`;
+      }
+
+      function ovTableHtml() {
+        if (!_overview || !(_overview.funds || []).length) {
+          return `<div class="ranking-empty">${esc(t("ov_empty"))}</div>`;
+        }
+        const head = OV_COLS.map(c => {
+          const sorted = _ovSort.col === c.key ? ` sort-${_ovSort.dir}` : "";
+          const attr = c.sortable === false ? "" : ` data-ov-sort="${esc(c.key)}"`;
+          const cls = [c.cls, sorted.trim()].filter(Boolean).join(" ");
+          return `<th class="${cls}"${attr}>${c.label ? esc(t(c.label)) : ""}</th>`;
+        }).join("");
+        const body = ovSorted(_overview.funds).map(ovRowHtml).join("");
+        const c = _overview.counts || {};
+        const note = t("ov_note")
+          .replace("{week}", esc(_overview.week_from || "\u2014"))
+          .replace("{excluded}", String(c.excluded ?? 0))
+          .replace("{min_cov}", String(_overview.min_coverage_pct ?? 60));
+        return `<div class="ov-wrap"><table class="ov-table"><thead><tr>${head}</tr></thead>`
+          + `<tbody>${body}</tbody></table></div><p class="ov-note">${note}</p>`;
+      }
+
       function getRankingMeta(key) {
         const lk = key === "winners" ? "rm_winners_label" : `rm_${key}_label`;
         const dk = key === "winners" ? "rm_winners_desc" : `rm_${key}_desc`;
@@ -349,7 +445,9 @@
         if (!_currentData) return;
         qa(".ranking-tab").forEach(tab => tab.classList.toggle("active", tab.dataset.key === key));
         const meta = getRankingMeta(key), panel = $("#funds-panel");
-        if (key === "winners") {
+        if (key === "overview") {
+          panel.innerHTML = `<div class="ranking-desc">${meta.desc}</div>` + ovTableHtml();
+        } else if (key === "winners") {
           const hKeys = Object.keys(_currentData.horizons || {}), hKey = hKeys[0];
           const funds = hKey ? _currentData.horizons[hKey] || [] : [];
           const metaCount = $("#meta-winner-count");
@@ -367,7 +465,9 @@
         $("#header-date").textContent = t("fund_forecast");
         const models = (data.active_models || []).map(m => m.toUpperCase()).join(", ") || "—";
         const metaHtml = `<div class="meta-bar"><div class="meta-item"><span class="meta-label">${t("meta_generated")}</span><span class="meta-value">${esc(data.generated || "—")}</span></div><div class="meta-item"><span class="meta-label">${t("meta_winners")}</span><span class="meta-value" id="meta-winner-count">— ${t("meta_funds")}</span></div></div>`;
-        const rankings = data.rankings || {}, rankingKeys = ["winners", ...Object.keys(rankings)];
+        const rankings = data.rankings || {};
+        const rankingKeys = ["winners", ...Object.keys(rankings)];
+        if (_overview) rankingKeys.push("overview");
         const tabsHtml = `<nav class="ranking-nav">${rankingKeys.map(k => { const m = getRankingMeta(k); return `<button class="ranking-tab${k === "winners" ? " active" : ""}" data-key="${esc(k)}">${esc(m.label)}</button>`; }).join("")}</nav>`;
         $("#app").innerHTML = metaHtml + tabsHtml + `<div id="funds-panel"></div>`;
         switchRanking("winners");
@@ -379,6 +479,18 @@
           if (t2) { switchChart(t2, t2.dataset.chartTarget); return; }
           const bt = e.target.closest("[data-bt-pane]");
           if (bt) { switchBtPane(bt, bt.dataset.btPane); return; }
+          const ov = e.target.closest("[data-ov-sort]");
+          if (ov) {
+            const col = ov.dataset.ovSort;
+            // Same column toggles direction; a new column starts descending,
+            // which is the useful end for every column here — biggest move,
+            // longest streak, and A-Z reads fine reversed on the two text ones.
+            _ovSort = _ovSort.col === col
+              ? { col, dir: _ovSort.dir === "desc" ? "asc" : "desc" }
+              : { col, dir: "desc" };
+            switchRanking("overview");
+            return;
+          }
           const r = e.target.closest(".ranking-tab");
           if (r) { switchRanking(r.dataset.key); return; }
           const p = e.target.closest(".ppm-copy");
@@ -388,18 +500,33 @@
         });
       }
 
+      // Resolves to null instead of rejecting: overview.json is additive, so a
+      // deploy without it must still render the page it always did.
+      function fetchOverview(base) {
+        return fetch(base + "overview.json")
+          .then(r => (r.ok ? r.json() : null))
+          .catch(() => null);
+      }
+
       function loadFolder(folderName) {
         $("#app").innerHTML = `<p class="state-msg">${t("loading_folder")}</p>`;
-        fetch(`${OUTPUT}/${folderName}/predictions.json`)
-          .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-          .then(data => render(data, folderName))
+        const base = `${OUTPUT}/${folderName}/`;
+        Promise.all([
+          fetch(base + "predictions.json")
+            .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+          fetchOverview(base),
+        ])
+          .then(([data, ov]) => { _overview = ov; render(data, folderName); })
           .catch(err => { $("#app").innerHTML = `<p class="state-msg">${t("err_folder").replace("{folder}", esc(folderName)).replace("{err}", esc(err.message))}</p>`; });
       }
 
       function bootstrap() {
-        fetch("predictions.json")
-          .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-          .then(data => { render(data, null); })
+        Promise.all([
+          fetch("predictions.json")
+            .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+          fetchOverview(""),
+        ])
+          .then(([data, ov]) => { _overview = ov; render(data, null); })
           .catch(() => { $("#app").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json</p>'; });
       }
 
