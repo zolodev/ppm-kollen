@@ -1381,8 +1381,8 @@
       "streak_dir": "up",
       "momentum_4w": 3.092,
       "trend": "up",
-      "hitrate_q50": 73.2,
-      "coverage_pct": 59.79,
+      "hitrate_q50": 76.29,
+      "coverage_pct": 51.55,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -2605,8 +2605,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.643,
       "trend": "up",
-      "hitrate_q50": 86.17,
-      "coverage_pct": 73.94,
+      "hitrate_q50": 75.53,
+      "coverage_pct": 79.26,
       "recommended": false,
       "excluded": null
     },
@@ -3999,8 +3999,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.656,
       "trend": "down",
-      "hitrate_q50": 78.03,
-      "coverage_pct": 69.94,
+      "hitrate_q50": 72.25,
+      "coverage_pct": 68.79,
       "recommended": false,
       "excluded": null
     },
