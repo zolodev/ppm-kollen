@@ -1,130 +1,130 @@
 {
-  "generated": "2026-08-25",
+  "generated": "2026-08-26",
   "week_from": "2026-08-17",
   "min_coverage_pct": 60.0,
   "trend_band": 0.5,
   "counts": {
-    "total": 270,
+    "total": 235,
     "recommended": 7,
-    "excluded": 25
+    "excluded": 217
   },
   "funds": [
     {
-      "fund_id": "2254",
-      "ppm_code": "698952",
-      "name": "SEB Global Aktiefond A",
-      "tags": "Aktiefond, Global, Mix bolag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2254",
-      "change_pct": 2.586,
+      "fund_id": "73",
+      "ppm_code": "233585",
+      "name": "JPM China A (dist) USD",
+      "tags": "Aktiefond, Kina",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/73",
+      "change_pct": 2.667,
+      "direction": "up",
+      "streak": 7,
+      "streak_dir": "up",
+      "momentum_4w": 3.247,
+      "trend": "up",
+      "hitrate_q50": 51.06,
+      "coverage_pct": 75.0,
+      "recommended": true,
+      "excluded": null
+    },
+    {
+      "fund_id": "600075",
+      "ppm_code": "114819",
+      "name": "Swedbank Robur Access Global A",
+      "tags": "Aktiefond, Global, Mix bolag, Index",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/600075",
+      "change_pct": 0.637,
+      "direction": "up",
+      "streak": 16,
+      "streak_dir": "up",
+      "momentum_4w": 1.633,
+      "trend": "up",
+      "hitrate_q50": 67.05,
+      "coverage_pct": 69.32,
+      "recommended": true,
+      "excluded": null
+    },
+    {
+      "fund_id": "70371",
+      "ppm_code": "170894",
+      "name": "Franklin India A(acc)USD",
+      "tags": "Aktiefond, Indien",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/70371",
+      "change_pct": 0.547,
+      "direction": "up",
+      "streak": 13,
+      "streak_dir": "up",
+      "momentum_4w": 2.589,
+      "trend": "up",
+      "hitrate_q50": 59.57,
+      "coverage_pct": 67.55,
+      "recommended": true,
+      "excluded": null
+    },
+    {
+      "fund_id": "94867",
+      "ppm_code": "972497",
+      "name": "Spiltan Räntefond Sverige",
+      "tags": "Räntefond, SEK, Obligationer, Företag",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/94867",
+      "change_pct": 0.303,
+      "direction": "up",
+      "streak": 23,
+      "streak_dir": "up",
+      "momentum_4w": 0.3,
+      "trend": "flat",
+      "hitrate_q50": 90.12,
+      "coverage_pct": 82.56,
+      "recommended": true,
+      "excluded": null
+    },
+    {
+      "fund_id": "92827",
+      "ppm_code": "442897",
+      "name": "Storebrand Kortränta A SEK H",
+      "tags": "Räntefond, SEK, Obligationer, Korta",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/92827",
+      "change_pct": 0.203,
       "direction": "up",
       "streak": 24,
       "streak_dir": "up",
-      "momentum_4w": 3.743,
-      "trend": "up",
-      "hitrate_q50": 85.11,
-      "coverage_pct": 82.45,
-      "recommended": true,
-      "excluded": null
-    },
-    {
-      "fund_id": "2384",
-      "ppm_code": "520759",
-      "name": "SEB Dynamisk Aktiefond",
-      "tags": "Aktiefond, Global, Mix bolag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2384",
-      "change_pct": 1.85,
-      "direction": "up",
-      "streak": 17,
-      "streak_dir": "up",
-      "momentum_4w": 2.962,
-      "trend": "up",
-      "hitrate_q50": 86.17,
-      "coverage_pct": 80.32,
-      "recommended": true,
-      "excluded": null
-    },
-    {
-      "fund_id": "411236",
-      "ppm_code": "256362",
-      "name": "Skandia Nordamerika Exponering",
-      "tags": "Aktiefond, USA, Mix bolag, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/411236",
-      "change_pct": 0.433,
-      "direction": "up",
-      "streak": 22,
-      "streak_dir": "up",
-      "momentum_4w": 1.231,
-      "trend": "up",
-      "hitrate_q50": 78.45,
-      "coverage_pct": 78.45,
-      "recommended": true,
-      "excluded": null
-    },
-    {
-      "fund_id": "342255",
-      "ppm_code": "832717",
-      "name": "Simplicity Företagsobligationer A",
-      "tags": "Räntefond, SEK, Obligationer, Flexibel storlek bolag, Högrisk",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/342255",
-      "change_pct": 0.417,
-      "direction": "up",
-      "streak": 20,
-      "streak_dir": "up",
-      "momentum_4w": 0.363,
+      "momentum_4w": 0.203,
       "trend": "flat",
-      "hitrate_q50": 95.28,
-      "coverage_pct": 92.91,
+      "hitrate_q50": 93.09,
+      "coverage_pct": 87.77,
       "recommended": true,
       "excluded": null
     },
     {
-      "fund_id": "910094",
-      "ppm_code": "785907",
-      "name": "Handelsbanken Global Index (A1 SEK)",
-      "tags": "Aktiefond, Global, Mix bolag, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/910094",
-      "change_pct": 0.29,
+      "fund_id": "901093",
+      "ppm_code": "162099",
+      "name": "Storebrand Global Multifactor A SEK",
+      "tags": "Aktiefond, Global, Flexibel storlek bolag",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/901093",
+      "change_pct": 0.034,
       "direction": "up",
       "streak": 3,
       "streak_dir": "up",
-      "momentum_4w": 0.096,
+      "momentum_4w": 0.045,
       "trend": "flat",
-      "hitrate_q50": 75.44,
-      "coverage_pct": 71.93,
+      "hitrate_q50": 89.66,
+      "coverage_pct": 62.07,
       "recommended": true,
       "excluded": null
     },
     {
-      "fund_id": "2802",
-      "ppm_code": "305185",
-      "name": "AMF Räntefond Kort",
-      "tags": "Räntefond, SEK, Obligationer, Korta",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2802",
-      "change_pct": 0.24,
-      "direction": "up",
-      "streak": 24,
-      "streak_dir": "up",
-      "momentum_4w": 0.226,
-      "trend": "flat",
-      "hitrate_q50": 98.4,
-      "coverage_pct": 91.49,
-      "recommended": true,
-      "excluded": null
-    },
-    {
-      "fund_id": "417084",
-      "ppm_code": "",
-      "name": "Pareto Nordic Corporate Bond C",
-      "tags": "Räntefond, Övriga, Obligationer",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/417084",
-      "change_pct": 0.228,
-      "direction": "up",
-      "streak": 21,
-      "streak_dir": "up",
-      "momentum_4w": 0.391,
-      "trend": "flat",
-      "hitrate_q50": 91.23,
-      "coverage_pct": 99.12,
+      "fund_id": "944976",
+      "ppm_code": "715955",
+      "name": "Avanza Emerging Markets",
+      "tags": "Aktiefond, Tillväxtmarknader, Index",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/944976",
+      "change_pct": -0.911,
+      "direction": "down",
+      "streak": 6,
+      "streak_dir": "down",
+      "momentum_4w": -5.588,
+      "trend": "down",
+      "hitrate_q50": 82.35,
+      "coverage_pct": 72.55,
       "recommended": true,
       "excluded": null
     },
@@ -140,8 +140,8 @@
       "streak_dir": "up",
       "momentum_4w": 20.188,
       "trend": "up",
-      "hitrate_q50": 95.19,
-      "coverage_pct": 57.22,
+      "hitrate_q50": 89.3,
+      "coverage_pct": 10.7,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -157,8 +157,8 @@
       "streak_dir": "up",
       "momentum_4w": 4.348,
       "trend": "up",
-      "hitrate_q50": 65.96,
-      "coverage_pct": 54.79,
+      "hitrate_q50": 64.89,
+      "coverage_pct": 0.53,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -174,8 +174,8 @@
       "streak_dir": "up",
       "momentum_4w": 15.567,
       "trend": "up",
-      "hitrate_q50": 94.12,
-      "coverage_pct": 37.97,
+      "hitrate_q50": 81.82,
+      "coverage_pct": 4.28,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -192,7 +192,7 @@
       "momentum_4w": 4.454,
       "trend": "up",
       "hitrate_q50": 73.19,
-      "coverage_pct": 52.9,
+      "coverage_pct": 3.62,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -208,10 +208,10 @@
       "streak_dir": "up",
       "momentum_4w": 8.759,
       "trend": "up",
-      "hitrate_q50": 74.47,
-      "coverage_pct": 77.13,
+      "hitrate_q50": 59.04,
+      "coverage_pct": 17.55,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2821",
@@ -225,10 +225,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.956,
       "trend": "up",
-      "hitrate_q50": 73.94,
-      "coverage_pct": 63.83,
+      "hitrate_q50": 57.45,
+      "coverage_pct": 2.66,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1340461",
@@ -242,10 +242,10 @@
       "streak_dir": "up",
       "momentum_4w": 7.282,
       "trend": "up",
-      "hitrate_q50": 82.98,
-      "coverage_pct": 76.6,
+      "hitrate_q50": 65.43,
+      "coverage_pct": 14.89,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1340460",
@@ -259,10 +259,10 @@
       "streak_dir": "up",
       "momentum_4w": 7.007,
       "trend": "up",
-      "hitrate_q50": 81.91,
-      "coverage_pct": 77.66,
+      "hitrate_q50": 64.36,
+      "coverage_pct": 12.77,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "316507",
@@ -276,10 +276,10 @@
       "streak_dir": "up",
       "momentum_4w": 5.941,
       "trend": "up",
-      "hitrate_q50": 77.37,
-      "coverage_pct": 89.78,
+      "hitrate_q50": 63.5,
+      "coverage_pct": 18.25,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "202568",
@@ -293,10 +293,10 @@
       "streak_dir": "up",
       "momentum_4w": 6.624,
       "trend": "up",
-      "hitrate_q50": 76.06,
-      "coverage_pct": 81.38,
+      "hitrate_q50": 61.17,
+      "coverage_pct": 14.36,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "316079",
@@ -310,10 +310,10 @@
       "streak_dir": "up",
       "momentum_4w": 5.257,
       "trend": "up",
-      "hitrate_q50": 75.76,
-      "coverage_pct": 71.21,
+      "hitrate_q50": 54.55,
+      "coverage_pct": 25.76,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "198508",
@@ -327,10 +327,10 @@
       "streak_dir": "up",
       "momentum_4w": 8.484,
       "trend": "up",
-      "hitrate_q50": 82.89,
-      "coverage_pct": 65.13,
+      "hitrate_q50": 61.18,
+      "coverage_pct": 14.47,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "112622",
@@ -344,27 +344,10 @@
       "streak_dir": "up",
       "momentum_4w": 4.286,
       "trend": "up",
-      "hitrate_q50": 80.68,
-      "coverage_pct": 84.66,
+      "hitrate_q50": 71.59,
+      "coverage_pct": 35.8,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "2579",
-      "ppm_code": "",
-      "name": "Barings Eastern Europe A USD Inc",
-      "tags": "Aktiefond, Övriga aktiefonder",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2579",
-      "change_pct": 6.662,
-      "direction": "up",
-      "streak": 19,
-      "streak_dir": "up",
-      "momentum_4w": 5.605,
-      "trend": "up",
-      "hitrate_q50": 83.33,
-      "coverage_pct": 62.64,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "74107",
@@ -378,8 +361,8 @@
       "streak_dir": "up",
       "momentum_4w": 5.097,
       "trend": "up",
-      "hitrate_q50": 71.81,
-      "coverage_pct": 85.64,
+      "hitrate_q50": 62.77,
+      "coverage_pct": 81.38,
       "recommended": false,
       "excluded": null
     },
@@ -395,10 +378,10 @@
       "streak_dir": "up",
       "momentum_4w": 7.12,
       "trend": "up",
-      "hitrate_q50": 86.17,
-      "coverage_pct": 68.09,
+      "hitrate_q50": 75.0,
+      "coverage_pct": 21.28,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2294",
@@ -412,10 +395,10 @@
       "streak_dir": "up",
       "momentum_4w": 4.422,
       "trend": "up",
-      "hitrate_q50": 87.23,
-      "coverage_pct": 82.45,
+      "hitrate_q50": 58.51,
+      "coverage_pct": 13.3,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1607583",
@@ -429,8 +412,8 @@
       "streak_dir": "up",
       "momentum_4w": 5.304,
       "trend": "up",
-      "hitrate_q50": 80.77,
-      "coverage_pct": 44.23,
+      "hitrate_q50": 90.38,
+      "coverage_pct": 13.46,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -446,10 +429,10 @@
       "streak_dir": "up",
       "momentum_4w": 6.304,
       "trend": "up",
-      "hitrate_q50": 80.32,
-      "coverage_pct": 76.06,
+      "hitrate_q50": 49.47,
+      "coverage_pct": 6.38,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1682",
@@ -463,10 +446,10 @@
       "streak_dir": "up",
       "momentum_4w": 4.229,
       "trend": "up",
-      "hitrate_q50": 80.85,
-      "coverage_pct": 82.98,
+      "hitrate_q50": 51.6,
+      "coverage_pct": 9.57,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1996",
@@ -480,10 +463,10 @@
       "streak_dir": "up",
       "momentum_4w": 5.471,
       "trend": "up",
-      "hitrate_q50": 77.13,
-      "coverage_pct": 71.81,
+      "hitrate_q50": 52.66,
+      "coverage_pct": 5.32,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "334856",
@@ -497,27 +480,10 @@
       "streak_dir": "up",
       "momentum_4w": 5.232,
       "trend": "up",
-      "hitrate_q50": 70.31,
-      "coverage_pct": 60.94,
+      "hitrate_q50": 61.72,
+      "coverage_pct": 11.72,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "155953",
-      "ppm_code": "",
-      "name": "Lannebo Sverige Plus E",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/155953",
-      "change_pct": 3.914,
-      "direction": "up",
-      "streak": 5,
-      "streak_dir": "up",
-      "momentum_4w": 4.661,
-      "trend": "up",
-      "hitrate_q50": 78.26,
-      "coverage_pct": 65.22,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2006",
@@ -531,10 +497,10 @@
       "streak_dir": "up",
       "momentum_4w": 5.102,
       "trend": "up",
-      "hitrate_q50": 85.11,
-      "coverage_pct": 81.38,
+      "hitrate_q50": 51.06,
+      "coverage_pct": 7.98,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "39648",
@@ -548,10 +514,10 @@
       "streak_dir": "up",
       "momentum_4w": 5.504,
       "trend": "up",
-      "hitrate_q50": 79.26,
-      "coverage_pct": 77.66,
+      "hitrate_q50": 56.91,
+      "coverage_pct": 5.85,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "221608",
@@ -565,10 +531,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.606,
       "trend": "up",
-      "hitrate_q50": 78.52,
-      "coverage_pct": 71.14,
+      "hitrate_q50": 59.06,
+      "coverage_pct": 10.07,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2003",
@@ -582,10 +548,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.552,
       "trend": "up",
-      "hitrate_q50": 77.66,
-      "coverage_pct": 78.72,
+      "hitrate_q50": 52.66,
+      "coverage_pct": 7.98,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1681",
@@ -599,10 +565,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.847,
       "trend": "up",
-      "hitrate_q50": 78.19,
-      "coverage_pct": 84.04,
+      "hitrate_q50": 49.47,
+      "coverage_pct": 7.45,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "375216",
@@ -616,10 +582,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.025,
       "trend": "up",
-      "hitrate_q50": 76.47,
-      "coverage_pct": 88.24,
+      "hitrate_q50": 59.66,
+      "coverage_pct": 35.29,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2010",
@@ -633,10 +599,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.196,
       "trend": "up",
-      "hitrate_q50": 81.91,
-      "coverage_pct": 81.38,
+      "hitrate_q50": 55.32,
+      "coverage_pct": 5.32,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "41567",
@@ -650,44 +616,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.528,
       "trend": "up",
-      "hitrate_q50": 85.48,
-      "coverage_pct": 76.88,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "416835",
-      "ppm_code": "",
-      "name": "Evli Aktieindex B",
-      "tags": "Aktiefond, Sverige, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/416835",
-      "change_pct": 3.26,
-      "direction": "up",
-      "streak": 15,
-      "streak_dir": "up",
-      "momentum_4w": 3.468,
-      "trend": "up",
-      "hitrate_q50": 73.68,
-      "coverage_pct": 58.77,
+      "hitrate_q50": 63.98,
+      "coverage_pct": 26.88,
       "recommended": false,
       "excluded": "coverage"
-    },
-    {
-      "fund_id": "1971",
-      "ppm_code": "",
-      "name": "Lannebo Sverige A SEK",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1971",
-      "change_pct": 3.159,
-      "direction": "up",
-      "streak": 5,
-      "streak_dir": "up",
-      "momentum_4w": 3.766,
-      "trend": "up",
-      "hitrate_q50": 78.19,
-      "coverage_pct": 64.89,
-      "recommended": false,
-      "excluded": null
     },
     {
       "fund_id": "2338",
@@ -701,10 +633,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.561,
       "trend": "up",
-      "hitrate_q50": 84.04,
-      "coverage_pct": 71.28,
+      "hitrate_q50": 65.96,
+      "coverage_pct": 18.09,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1674",
@@ -718,44 +650,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.7,
       "trend": "up",
-      "hitrate_q50": 77.13,
-      "coverage_pct": 76.06,
+      "hitrate_q50": 55.85,
+      "coverage_pct": 13.3,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "132510",
-      "ppm_code": "",
-      "name": "Spiltan Aktiefond Småland",
-      "tags": "Aktiefond, Sverige, Små-/medelstora bolag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/132510",
-      "change_pct": 3.018,
-      "direction": "up",
-      "streak": 7,
-      "streak_dir": "up",
-      "momentum_4w": 4.918,
-      "trend": "up",
-      "hitrate_q50": 74.1,
-      "coverage_pct": 72.29,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "273828",
-      "ppm_code": "",
-      "name": "NORRON Nordic Multi Strategy RC SEK",
-      "tags": "Alternativa, Hedgefond, Multi-strategi, Övriga",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/273828",
-      "change_pct": 2.895,
-      "direction": "up",
-      "streak": 4,
-      "streak_dir": "up",
-      "momentum_4w": 1.818,
-      "trend": "up",
-      "hitrate_q50": 74.82,
-      "coverage_pct": 71.94,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "167",
@@ -769,27 +667,10 @@
       "streak_dir": "up",
       "momentum_4w": 4.973,
       "trend": "up",
-      "hitrate_q50": 75.53,
-      "coverage_pct": 84.57,
+      "hitrate_q50": 53.72,
+      "coverage_pct": 10.11,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "1984",
-      "ppm_code": "",
-      "name": "SEB Sverige Expanderad",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1984",
-      "change_pct": 2.776,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 5.024,
-      "trend": "up",
-      "hitrate_q50": 82.45,
-      "coverage_pct": 77.13,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1949",
@@ -803,61 +684,27 @@
       "streak_dir": "up",
       "momentum_4w": 4.357,
       "trend": "up",
-      "hitrate_q50": 79.26,
-      "coverage_pct": 78.72,
+      "hitrate_q50": 57.45,
+      "coverage_pct": 10.64,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
-      "fund_id": "73",
-      "ppm_code": "233585",
-      "name": "JPM China A (dist) USD",
-      "tags": "Aktiefond, Kina",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/73",
-      "change_pct": 2.667,
+      "fund_id": "2254",
+      "ppm_code": "698952",
+      "name": "SEB Global Aktiefond A",
+      "tags": "Aktiefond, Global, Mix bolag",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2254",
+      "change_pct": 2.586,
       "direction": "up",
-      "streak": 7,
+      "streak": 24,
       "streak_dir": "up",
-      "momentum_4w": 3.247,
+      "momentum_4w": 3.743,
       "trend": "up",
-      "hitrate_q50": 77.66,
-      "coverage_pct": 71.28,
+      "hitrate_q50": 62.77,
+      "coverage_pct": 21.28,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "1959",
-      "ppm_code": "",
-      "name": "Handelsbanken Sverige (A1 SEK)",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1959",
-      "change_pct": 2.563,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 3.868,
-      "trend": "up",
-      "hitrate_q50": 73.94,
-      "coverage_pct": 78.72,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "1907",
-      "ppm_code": "",
-      "name": "SEB Sweden Equity C (SEK)",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1907",
-      "change_pct": 2.52,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 4.649,
-      "trend": "up",
-      "hitrate_q50": 82.45,
-      "coverage_pct": 77.66,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "936",
@@ -871,42 +718,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.905,
       "trend": "up",
-      "hitrate_q50": 75.0,
-      "coverage_pct": 81.38,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "24328",
-      "ppm_code": "",
-      "name": "Lannebo Marknad Sverige Bred A",
-      "tags": "Aktiefond, Sverige, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/24328",
-      "change_pct": 2.504,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 3.199,
-      "trend": "up",
-      "hitrate_q50": 81.38,
-      "coverage_pct": 75.0,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "430255",
-      "ppm_code": "",
-      "name": "Lannebo Sweden All Cap A",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/430255",
-      "change_pct": 2.439,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 3.758,
-      "trend": "up",
-      "hitrate_q50": 70.91,
-      "coverage_pct": 83.64,
+      "hitrate_q50": 55.32,
+      "coverage_pct": 60.64,
       "recommended": false,
       "excluded": null
     },
@@ -922,10 +735,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.458,
       "trend": "up",
-      "hitrate_q50": 64.36,
-      "coverage_pct": 75.0,
+      "hitrate_q50": 42.55,
+      "coverage_pct": 12.77,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1919",
@@ -939,10 +752,10 @@
       "streak_dir": "up",
       "momentum_4w": 4.21,
       "trend": "up",
-      "hitrate_q50": 76.6,
-      "coverage_pct": 74.47,
+      "hitrate_q50": 52.13,
+      "coverage_pct": 7.98,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1506920",
@@ -956,8 +769,8 @@
       "streak_dir": "up",
       "momentum_4w": 3.332,
       "trend": "up",
-      "hitrate_q50": 64.41,
-      "coverage_pct": 50.85,
+      "hitrate_q50": 50.85,
+      "coverage_pct": 22.03,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -973,27 +786,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.382,
       "trend": "up",
-      "hitrate_q50": 81.38,
-      "coverage_pct": 66.49,
+      "hitrate_q50": 69.15,
+      "coverage_pct": 13.83,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "596",
-      "ppm_code": "",
-      "name": "Barings Europa A USD Inc",
-      "tags": "Aktiefond, Europa, Mix bolag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/596",
-      "change_pct": 2.272,
-      "direction": "up",
-      "streak": 15,
-      "streak_dir": "up",
-      "momentum_4w": 1.848,
-      "trend": "up",
-      "hitrate_q50": 74.47,
-      "coverage_pct": 82.98,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "909774",
@@ -1007,8 +803,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.843,
       "trend": "up",
-      "hitrate_q50": 53.45,
-      "coverage_pct": 55.17,
+      "hitrate_q50": 58.62,
+      "coverage_pct": 15.52,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -1024,10 +820,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.657,
       "trend": "up",
-      "hitrate_q50": 81.91,
-      "coverage_pct": 72.34,
+      "hitrate_q50": 57.45,
+      "coverage_pct": 14.89,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "118",
@@ -1041,10 +837,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.444,
       "trend": "up",
-      "hitrate_q50": 73.51,
-      "coverage_pct": 75.14,
+      "hitrate_q50": 55.14,
+      "coverage_pct": 14.05,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "592235",
@@ -1058,10 +854,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.625,
       "trend": "up",
-      "hitrate_q50": 80.22,
-      "coverage_pct": 62.64,
+      "hitrate_q50": 71.43,
+      "coverage_pct": 26.37,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "288001",
@@ -1075,10 +871,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.304,
       "trend": "flat",
-      "hitrate_q50": 74.51,
-      "coverage_pct": 77.12,
+      "hitrate_q50": 58.82,
+      "coverage_pct": 11.11,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "137448",
@@ -1092,10 +888,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.503,
       "trend": "up",
-      "hitrate_q50": 71.86,
-      "coverage_pct": 81.44,
+      "hitrate_q50": 59.88,
+      "coverage_pct": 10.18,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2801",
@@ -1109,10 +905,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.188,
       "trend": "up",
-      "hitrate_q50": 80.32,
-      "coverage_pct": 87.77,
+      "hitrate_q50": 51.6,
+      "coverage_pct": 5.32,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "415690",
@@ -1126,10 +922,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.195,
       "trend": "up",
-      "hitrate_q50": 77.23,
-      "coverage_pct": 74.26,
+      "hitrate_q50": 64.36,
+      "coverage_pct": 27.72,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "736",
@@ -1143,8 +939,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.968,
       "trend": "up",
-      "hitrate_q50": 73.94,
-      "coverage_pct": 79.26,
+      "hitrate_q50": 62.77,
+      "coverage_pct": 74.47,
       "recommended": false,
       "excluded": null
     },
@@ -1160,27 +956,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.674,
       "trend": "up",
-      "hitrate_q50": 78.88,
-      "coverage_pct": 69.57,
+      "hitrate_q50": 57.76,
+      "coverage_pct": 4.97,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "159608",
-      "ppm_code": "",
-      "name": "Länsförsäkringar Sverige Index",
-      "tags": "Aktiefond, Sverige, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/159608",
-      "change_pct": 1.955,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 2.529,
-      "trend": "up",
-      "hitrate_q50": 80.0,
-      "coverage_pct": 82.5,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2253",
@@ -1194,10 +973,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.18,
       "trend": "up",
-      "hitrate_q50": 82.98,
-      "coverage_pct": 79.26,
+      "hitrate_q50": 66.49,
+      "coverage_pct": 18.62,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1268",
@@ -1211,10 +990,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.722,
       "trend": "down",
-      "hitrate_q50": 69.15,
-      "coverage_pct": 66.49,
+      "hitrate_q50": 58.51,
+      "coverage_pct": 5.85,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "475",
@@ -1228,27 +1007,27 @@
       "streak_dir": "up",
       "momentum_4w": 2.751,
       "trend": "up",
-      "hitrate_q50": 75.53,
-      "coverage_pct": 84.57,
+      "hitrate_q50": 48.94,
+      "coverage_pct": 17.55,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
-      "fund_id": "1960",
-      "ppm_code": "",
-      "name": "Nordea Swedish Stars A-A icke-utd",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1960",
-      "change_pct": 1.878,
+      "fund_id": "2384",
+      "ppm_code": "520759",
+      "name": "SEB Dynamisk Aktiefond",
+      "tags": "Aktiefond, Global, Mix bolag",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2384",
+      "change_pct": 1.85,
       "direction": "up",
-      "streak": 4,
+      "streak": 17,
       "streak_dir": "up",
-      "momentum_4w": 2.216,
+      "momentum_4w": 2.962,
       "trend": "up",
-      "hitrate_q50": 73.94,
-      "coverage_pct": 75.0,
+      "hitrate_q50": 65.43,
+      "coverage_pct": 17.55,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "512557",
@@ -1262,8 +1041,8 @@
       "streak_dir": "up",
       "momentum_4w": 2.813,
       "trend": "up",
-      "hitrate_q50": 78.0,
-      "coverage_pct": 51.0,
+      "hitrate_q50": 62.0,
+      "coverage_pct": 36.0,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -1279,10 +1058,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.054,
       "trend": "up",
-      "hitrate_q50": 74.47,
-      "coverage_pct": 68.62,
+      "hitrate_q50": 53.72,
+      "coverage_pct": 12.23,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "291",
@@ -1296,44 +1075,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.553,
       "trend": "up",
-      "hitrate_q50": 75.53,
-      "coverage_pct": 85.11,
+      "hitrate_q50": 51.6,
+      "coverage_pct": 11.17,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "207548",
-      "ppm_code": "",
-      "name": "C WorldWide Sweden 1A",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/207548",
-      "change_pct": 1.8,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 2.712,
-      "trend": "up",
-      "hitrate_q50": 81.46,
-      "coverage_pct": 70.86,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "286894",
-      "ppm_code": "753731",
-      "name": "Allianz China Equity A USD",
-      "tags": "Aktiefond, Kina",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/286894",
-      "change_pct": 1.787,
-      "direction": "up",
-      "streak": 3,
-      "streak_dir": "up",
-      "momentum_4w": 2.204,
-      "trend": "up",
-      "hitrate_q50": 72.39,
-      "coverage_pct": 69.33,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1173921",
@@ -1348,7 +1093,24 @@
       "momentum_4w": -0.937,
       "trend": "down",
       "hitrate_q50": 65.0,
-      "coverage_pct": 27.5,
+      "coverage_pct": 12.5,
+      "recommended": false,
+      "excluded": "coverage"
+    },
+    {
+      "fund_id": "286894",
+      "ppm_code": "753731",
+      "name": "Allianz China Equity A USD",
+      "tags": "Aktiefond, Kina",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/286894",
+      "change_pct": 1.787,
+      "direction": "up",
+      "streak": 3,
+      "streak_dir": "up",
+      "momentum_4w": 2.204,
+      "trend": "up",
+      "hitrate_q50": 47.24,
+      "coverage_pct": 13.5,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -1364,10 +1126,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.927,
       "trend": "up",
-      "hitrate_q50": 78.19,
-      "coverage_pct": 84.57,
+      "hitrate_q50": 54.79,
+      "coverage_pct": 7.98,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "573156",
@@ -1381,27 +1143,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.092,
       "trend": "up",
-      "hitrate_q50": 76.29,
-      "coverage_pct": 51.55,
+      "hitrate_q50": 65.98,
+      "coverage_pct": 37.11,
       "recommended": false,
       "excluded": "coverage"
-    },
-    {
-      "fund_id": "694153",
-      "ppm_code": "",
-      "name": "Storebrand Sverige Plus A SEK",
-      "tags": "Aktiefond, Sverige, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/694153",
-      "change_pct": 1.746,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 2.545,
-      "trend": "up",
-      "hitrate_q50": 62.82,
-      "coverage_pct": 78.21,
-      "recommended": false,
-      "excluded": null
     },
     {
       "fund_id": "2300",
@@ -1415,10 +1160,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.729,
       "trend": "up",
-      "hitrate_q50": 81.91,
-      "coverage_pct": 79.79,
+      "hitrate_q50": 60.64,
+      "coverage_pct": 12.23,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "473",
@@ -1432,10 +1177,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.23,
       "trend": "up",
-      "hitrate_q50": 75.0,
-      "coverage_pct": 75.53,
+      "hitrate_q50": 52.13,
+      "coverage_pct": 16.49,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1482",
@@ -1449,27 +1194,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.318,
       "trend": "up",
-      "hitrate_q50": 85.64,
-      "coverage_pct": 75.53,
+      "hitrate_q50": 69.68,
+      "coverage_pct": 21.81,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "1910",
-      "ppm_code": "",
-      "name": "Länsförsäkringar Sverige Vision A",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1910",
-      "change_pct": 1.637,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 3.174,
-      "trend": "up",
-      "hitrate_q50": 78.19,
-      "coverage_pct": 67.02,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "315116",
@@ -1483,27 +1211,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.672,
       "trend": "up",
-      "hitrate_q50": 76.69,
-      "coverage_pct": 54.89,
+      "hitrate_q50": 61.65,
+      "coverage_pct": 28.57,
       "recommended": false,
       "excluded": "coverage"
-    },
-    {
-      "fund_id": "403595",
-      "ppm_code": "",
-      "name": "Skandia Sverige Exponering",
-      "tags": "Aktiefond, Sverige, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/403595",
-      "change_pct": 1.557,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 2.603,
-      "trend": "up",
-      "hitrate_q50": 72.17,
-      "coverage_pct": 84.35,
-      "recommended": false,
-      "excluded": null
     },
     {
       "fund_id": "1599",
@@ -1517,10 +1228,10 @@
       "streak_dir": "up",
       "momentum_4w": -1.072,
       "trend": "down",
-      "hitrate_q50": 78.19,
-      "coverage_pct": 70.74,
+      "hitrate_q50": 57.45,
+      "coverage_pct": 10.64,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1324",
@@ -1534,10 +1245,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.406,
       "trend": "up",
-      "hitrate_q50": 75.0,
-      "coverage_pct": 69.15,
+      "hitrate_q50": 55.32,
+      "coverage_pct": 5.85,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "20993",
@@ -1551,10 +1262,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.412,
       "trend": "up",
-      "hitrate_q50": 76.6,
-      "coverage_pct": 75.0,
+      "hitrate_q50": 56.91,
+      "coverage_pct": 11.17,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1263",
@@ -1568,27 +1279,10 @@
       "streak_dir": "up",
       "momentum_4w": -1.22,
       "trend": "down",
-      "hitrate_q50": 71.28,
-      "coverage_pct": 69.68,
+      "hitrate_q50": 59.04,
+      "coverage_pct": 5.85,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "79692",
-      "ppm_code": "",
-      "name": "Delphi Nordic A",
-      "tags": "Aktiefond, Norden",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/79692",
-      "change_pct": 1.488,
-      "direction": "up",
-      "streak": 1,
-      "streak_dir": "up",
-      "momentum_4w": 0.141,
-      "trend": "flat",
-      "hitrate_q50": 73.94,
-      "coverage_pct": 91.49,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2008",
@@ -1602,44 +1296,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.601,
       "trend": "up",
-      "hitrate_q50": 81.38,
-      "coverage_pct": 86.17,
+      "hitrate_q50": 54.79,
+      "coverage_pct": 5.85,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "1950",
-      "ppm_code": "",
-      "name": "Storebrand Sverige A SEK",
-      "tags": "Aktiefond, Sverige, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1950",
-      "change_pct": 1.43,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 2.098,
-      "trend": "up",
-      "hitrate_q50": 80.32,
-      "coverage_pct": 75.53,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "2376",
-      "ppm_code": "",
-      "name": "Barings Global Leaders A USD Inc",
-      "tags": "Aktiefond, Global, Mix bolag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2376",
-      "change_pct": 1.413,
-      "direction": "up",
-      "streak": 3,
-      "streak_dir": "up",
-      "momentum_4w": 0.734,
-      "trend": "up",
-      "hitrate_q50": 82.45,
-      "coverage_pct": 64.89,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "524110",
@@ -1653,10 +1313,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.549,
       "trend": "up",
-      "hitrate_q50": 81.63,
-      "coverage_pct": 69.39,
+      "hitrate_q50": 67.35,
+      "coverage_pct": 37.76,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "799913",
@@ -1670,8 +1330,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.423,
       "trend": "flat",
-      "hitrate_q50": 82.35,
-      "coverage_pct": 70.59,
+      "hitrate_q50": 91.18,
+      "coverage_pct": 61.76,
       "recommended": false,
       "excluded": null
     },
@@ -1687,10 +1347,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.959,
       "trend": "up",
-      "hitrate_q50": 69.37,
-      "coverage_pct": 90.09,
+      "hitrate_q50": 54.05,
+      "coverage_pct": 29.73,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "574",
@@ -1704,27 +1364,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.579,
       "trend": "up",
-      "hitrate_q50": 78.72,
-      "coverage_pct": 77.66,
+      "hitrate_q50": 60.64,
+      "coverage_pct": 11.17,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "2011",
-      "ppm_code": "515676",
-      "name": "Länsförsäkringar Småbolag Sverige Vis A",
-      "tags": "Aktiefond, Sverige, Små-/medelstora bolag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2011",
-      "change_pct": 1.273,
-      "direction": "up",
-      "streak": 7,
-      "streak_dir": "up",
-      "momentum_4w": 2.886,
-      "trend": "up",
-      "hitrate_q50": 82.45,
-      "coverage_pct": 80.32,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1288",
@@ -1738,10 +1381,27 @@
       "streak_dir": "up",
       "momentum_4w": -1.342,
       "trend": "down",
-      "hitrate_q50": 68.09,
-      "coverage_pct": 67.55,
+      "hitrate_q50": 59.57,
+      "coverage_pct": 3.72,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
+    },
+    {
+      "fund_id": "2011",
+      "ppm_code": "515676",
+      "name": "Länsförsäkringar Småbolag Sverige Vis A",
+      "tags": "Aktiefond, Sverige, Små-/medelstora bolag",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2011",
+      "change_pct": 1.273,
+      "direction": "up",
+      "streak": 7,
+      "streak_dir": "up",
+      "momentum_4w": 2.886,
+      "trend": "up",
+      "hitrate_q50": 49.47,
+      "coverage_pct": 6.38,
+      "recommended": false,
+      "excluded": "coverage"
     },
     {
       "fund_id": "581",
@@ -1755,10 +1415,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.291,
       "trend": "up",
-      "hitrate_q50": 73.4,
-      "coverage_pct": 77.66,
+      "hitrate_q50": 60.11,
+      "coverage_pct": 11.7,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "592236",
@@ -1772,8 +1432,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.126,
       "trend": "up",
-      "hitrate_q50": 80.22,
-      "coverage_pct": 58.24,
+      "hitrate_q50": 64.84,
+      "coverage_pct": 36.26,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -1789,10 +1449,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.962,
       "trend": "up",
-      "hitrate_q50": 81.91,
-      "coverage_pct": 84.57,
+      "hitrate_q50": 65.43,
+      "coverage_pct": 14.89,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "693994",
@@ -1806,10 +1466,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.771,
       "trend": "up",
-      "hitrate_q50": 74.68,
-      "coverage_pct": 68.35,
+      "hitrate_q50": 65.82,
+      "coverage_pct": 41.77,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2247",
@@ -1823,10 +1483,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.339,
       "trend": "up",
-      "hitrate_q50": 76.6,
-      "coverage_pct": 81.38,
+      "hitrate_q50": 57.98,
+      "coverage_pct": 18.62,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "3101",
@@ -1840,10 +1500,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.089,
       "trend": "up",
-      "hitrate_q50": 75.0,
-      "coverage_pct": 69.15,
+      "hitrate_q50": 51.06,
+      "coverage_pct": 4.79,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "459035",
@@ -1857,10 +1517,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.905,
       "trend": "up",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 85.45,
+      "hitrate_q50": 54.55,
+      "coverage_pct": 23.64,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "247",
@@ -1874,10 +1534,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.735,
       "trend": "up",
-      "hitrate_q50": 81.38,
-      "coverage_pct": 85.11,
+      "hitrate_q50": 65.96,
+      "coverage_pct": 20.74,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1339",
@@ -1891,10 +1551,10 @@
       "streak_dir": "up",
       "momentum_4w": -3.379,
       "trend": "down",
-      "hitrate_q50": 78.61,
-      "coverage_pct": 63.1,
+      "hitrate_q50": 58.29,
+      "coverage_pct": 4.81,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "599",
@@ -1908,44 +1568,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.037,
       "trend": "up",
-      "hitrate_q50": 75.53,
-      "coverage_pct": 77.66,
+      "hitrate_q50": 60.11,
+      "coverage_pct": 11.7,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "483296",
-      "ppm_code": "",
-      "name": "Indecap Sverige C",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/483296",
-      "change_pct": 1.095,
-      "direction": "up",
-      "streak": 15,
-      "streak_dir": "up",
-      "momentum_4w": 2.219,
-      "trend": "up",
-      "hitrate_q50": 73.08,
-      "coverage_pct": 64.42,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "1901",
-      "ppm_code": "",
-      "name": "Aktie-Ansvar Sverige A",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1901",
-      "change_pct": 1.084,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 2.349,
-      "trend": "up",
-      "hitrate_q50": 72.87,
-      "coverage_pct": 67.55,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "648075",
@@ -1959,8 +1585,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.719,
       "trend": "up",
-      "hitrate_q50": 76.14,
-      "coverage_pct": 53.41,
+      "hitrate_q50": 72.73,
+      "coverage_pct": 27.27,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -1976,10 +1602,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.139,
       "trend": "up",
-      "hitrate_q50": 70.21,
-      "coverage_pct": 79.26,
+      "hitrate_q50": 43.62,
+      "coverage_pct": 12.77,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "637",
@@ -1993,10 +1619,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.071,
       "trend": "up",
-      "hitrate_q50": 72.34,
-      "coverage_pct": 76.06,
+      "hitrate_q50": 59.57,
+      "coverage_pct": 7.98,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "73884",
@@ -2010,8 +1636,8 @@
       "streak_dir": "up",
       "momentum_4w": -1.001,
       "trend": "down",
-      "hitrate_q50": 70.11,
-      "coverage_pct": 72.28,
+      "hitrate_q50": 54.89,
+      "coverage_pct": 82.61,
       "recommended": false,
       "excluded": null
     },
@@ -2027,10 +1653,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.355,
       "trend": "up",
-      "hitrate_q50": 76.06,
-      "coverage_pct": 72.34,
+      "hitrate_q50": 57.98,
+      "coverage_pct": 10.11,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "56067",
@@ -2044,10 +1670,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.884,
       "trend": "up",
-      "hitrate_q50": 77.13,
-      "coverage_pct": 77.13,
+      "hitrate_q50": 52.13,
+      "coverage_pct": 3.19,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "121",
@@ -2061,10 +1687,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.972,
       "trend": "up",
-      "hitrate_q50": 74.47,
-      "coverage_pct": 78.19,
+      "hitrate_q50": 53.19,
+      "coverage_pct": 5.32,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "210",
@@ -2078,10 +1704,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.117,
       "trend": "up",
-      "hitrate_q50": 78.72,
-      "coverage_pct": 84.04,
+      "hitrate_q50": 68.62,
+      "coverage_pct": 18.09,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "398157",
@@ -2095,10 +1721,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.277,
       "trend": "up",
-      "hitrate_q50": 74.58,
-      "coverage_pct": 79.66,
+      "hitrate_q50": 66.1,
+      "coverage_pct": 38.14,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "372",
@@ -2112,10 +1738,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.689,
       "trend": "down",
-      "hitrate_q50": 78.72,
-      "coverage_pct": 69.68,
+      "hitrate_q50": 68.62,
+      "coverage_pct": 17.55,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "236",
@@ -2129,10 +1755,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.989,
       "trend": "up",
-      "hitrate_q50": 82.98,
-      "coverage_pct": 83.51,
+      "hitrate_q50": 65.96,
+      "coverage_pct": 18.62,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "43947",
@@ -2146,27 +1772,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.053,
       "trend": "up",
-      "hitrate_q50": 74.33,
-      "coverage_pct": 77.54,
+      "hitrate_q50": 55.61,
+      "coverage_pct": 4.81,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "91107",
-      "ppm_code": "",
-      "name": "Pareto Sverige A",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/91107",
-      "change_pct": 0.816,
-      "direction": "up",
-      "streak": 8,
-      "streak_dir": "up",
-      "momentum_4w": 2.524,
-      "trend": "up",
-      "hitrate_q50": 74.86,
-      "coverage_pct": 81.14,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1546",
@@ -2180,10 +1789,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.483,
       "trend": "up",
-      "hitrate_q50": 79.26,
-      "coverage_pct": 84.57,
+      "hitrate_q50": 65.43,
+      "coverage_pct": 31.91,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1887",
@@ -2197,10 +1806,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.186,
       "trend": "up",
-      "hitrate_q50": 84.04,
-      "coverage_pct": 84.57,
+      "hitrate_q50": 63.3,
+      "coverage_pct": 17.55,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "212549",
@@ -2214,10 +1823,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.957,
       "trend": "up",
-      "hitrate_q50": 72.48,
-      "coverage_pct": 69.13,
+      "hitrate_q50": 56.38,
+      "coverage_pct": 4.03,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "181868",
@@ -2231,10 +1840,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.206,
       "trend": "up",
-      "hitrate_q50": 77.71,
-      "coverage_pct": 61.15,
+      "hitrate_q50": 75.16,
+      "coverage_pct": 29.3,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1478",
@@ -2248,10 +1857,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.446,
       "trend": "up",
-      "hitrate_q50": 83.51,
-      "coverage_pct": 80.32,
+      "hitrate_q50": 65.43,
+      "coverage_pct": 25.53,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "508255",
@@ -2265,10 +1874,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.25,
       "trend": "up",
-      "hitrate_q50": 66.34,
-      "coverage_pct": 75.25,
+      "hitrate_q50": 55.45,
+      "coverage_pct": 14.85,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "429935",
@@ -2282,10 +1891,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.244,
       "trend": "up",
-      "hitrate_q50": 73.21,
-      "coverage_pct": 69.64,
+      "hitrate_q50": 70.54,
+      "coverage_pct": 40.18,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2240",
@@ -2299,10 +1908,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.658,
       "trend": "up",
-      "hitrate_q50": 84.04,
-      "coverage_pct": 84.04,
+      "hitrate_q50": 61.7,
+      "coverage_pct": 19.15,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1983",
@@ -2316,10 +1925,10 @@
       "streak_dir": "up",
       "momentum_4w": 3.126,
       "trend": "up",
-      "hitrate_q50": 78.72,
-      "coverage_pct": 70.74,
+      "hitrate_q50": 56.38,
+      "coverage_pct": 14.89,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "229",
@@ -2333,27 +1942,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.637,
       "trend": "up",
-      "hitrate_q50": 77.13,
-      "coverage_pct": 83.51,
+      "hitrate_q50": 59.57,
+      "coverage_pct": 9.04,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "600075",
-      "ppm_code": "114819",
-      "name": "Swedbank Robur Access Global A",
-      "tags": "Aktiefond, Global, Mix bolag, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/600075",
-      "change_pct": 0.637,
-      "direction": "up",
-      "streak": 16,
-      "streak_dir": "up",
-      "momentum_4w": 1.633,
-      "trend": "up",
-      "hitrate_q50": 79.55,
-      "coverage_pct": 79.55,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "347",
@@ -2367,10 +1959,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.847,
       "trend": "up",
-      "hitrate_q50": 77.13,
-      "coverage_pct": 81.38,
+      "hitrate_q50": 51.06,
+      "coverage_pct": 11.17,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1870",
@@ -2384,27 +1976,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.611,
       "trend": "up",
-      "hitrate_q50": 75.53,
-      "coverage_pct": 72.87,
+      "hitrate_q50": 52.66,
+      "coverage_pct": 9.04,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "70371",
-      "ppm_code": "170894",
-      "name": "Franklin India A(acc)USD",
-      "tags": "Aktiefond, Indien",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/70371",
-      "change_pct": 0.547,
-      "direction": "up",
-      "streak": 13,
-      "streak_dir": "up",
-      "momentum_4w": 2.589,
-      "trend": "up",
-      "hitrate_q50": 77.66,
-      "coverage_pct": 69.68,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "192",
@@ -2418,10 +1993,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.431,
       "trend": "flat",
-      "hitrate_q50": 79.79,
-      "coverage_pct": 71.28,
+      "hitrate_q50": 72.87,
+      "coverage_pct": 15.43,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1029",
@@ -2435,10 +2010,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.005,
       "trend": "up",
-      "hitrate_q50": 85.64,
-      "coverage_pct": 71.28,
+      "hitrate_q50": 68.62,
+      "coverage_pct": 19.15,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2108",
@@ -2452,10 +2027,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.002,
       "trend": "flat",
-      "hitrate_q50": 67.55,
-      "coverage_pct": 93.62,
+      "hitrate_q50": 59.57,
+      "coverage_pct": 12.77,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "315115",
@@ -2469,8 +2044,25 @@
       "streak_dir": "up",
       "momentum_4w": 1.331,
       "trend": "up",
-      "hitrate_q50": 77.44,
-      "coverage_pct": 57.89,
+      "hitrate_q50": 69.17,
+      "coverage_pct": 27.07,
+      "recommended": false,
+      "excluded": "coverage"
+    },
+    {
+      "fund_id": "411236",
+      "ppm_code": "256362",
+      "name": "Skandia Nordamerika Exponering",
+      "tags": "Aktiefond, USA, Mix bolag, Index",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/411236",
+      "change_pct": 0.433,
+      "direction": "up",
+      "streak": 22,
+      "streak_dir": "up",
+      "momentum_4w": 1.231,
+      "trend": "up",
+      "hitrate_q50": 55.17,
+      "coverage_pct": 18.97,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -2486,10 +2078,27 @@
       "streak_dir": "up",
       "momentum_4w": 1.106,
       "trend": "up",
-      "hitrate_q50": 76.7,
-      "coverage_pct": 94.17,
+      "hitrate_q50": 67.96,
+      "coverage_pct": 54.37,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
+    },
+    {
+      "fund_id": "342255",
+      "ppm_code": "832717",
+      "name": "Simplicity Företagsobligationer A",
+      "tags": "Räntefond, SEK, Obligationer, Flexibel storlek bolag, Högrisk",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/342255",
+      "change_pct": 0.417,
+      "direction": "up",
+      "streak": 20,
+      "streak_dir": "up",
+      "momentum_4w": 0.363,
+      "trend": "flat",
+      "hitrate_q50": 78.74,
+      "coverage_pct": 38.58,
+      "recommended": false,
+      "excluded": "coverage"
     },
     {
       "fund_id": "1024",
@@ -2503,10 +2112,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.856,
       "trend": "up",
-      "hitrate_q50": 84.57,
-      "coverage_pct": 75.0,
+      "hitrate_q50": 69.68,
+      "coverage_pct": 19.15,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1464",
@@ -2520,10 +2129,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.681,
       "trend": "up",
-      "hitrate_q50": 86.17,
-      "coverage_pct": 80.32,
+      "hitrate_q50": 69.68,
+      "coverage_pct": 27.13,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "490477",
@@ -2537,10 +2146,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.432,
       "trend": "flat",
-      "hitrate_q50": 86.41,
-      "coverage_pct": 96.12,
+      "hitrate_q50": 82.52,
+      "coverage_pct": 48.54,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "377809",
@@ -2554,10 +2163,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.323,
       "trend": "flat",
-      "hitrate_q50": 85.71,
-      "coverage_pct": 84.03,
+      "hitrate_q50": 48.74,
+      "coverage_pct": 53.78,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "396",
@@ -2571,10 +2180,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.799,
       "trend": "up",
-      "hitrate_q50": 82.45,
-      "coverage_pct": 68.09,
+      "hitrate_q50": 73.94,
+      "coverage_pct": 22.34,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "388595",
@@ -2588,10 +2197,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.311,
       "trend": "flat",
-      "hitrate_q50": 98.32,
-      "coverage_pct": 72.27,
+      "hitrate_q50": 64.71,
+      "coverage_pct": 43.7,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1506",
@@ -2605,10 +2214,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.643,
       "trend": "up",
-      "hitrate_q50": 75.53,
-      "coverage_pct": 79.26,
+      "hitrate_q50": 69.68,
+      "coverage_pct": 21.81,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2066",
@@ -2622,27 +2231,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.32,
       "trend": "flat",
-      "hitrate_q50": 82.45,
-      "coverage_pct": 90.43,
+      "hitrate_q50": 67.02,
+      "coverage_pct": 21.28,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "94867",
-      "ppm_code": "972497",
-      "name": "Spiltan Räntefond Sverige",
-      "tags": "Räntefond, SEK, Obligationer, Företag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/94867",
-      "change_pct": 0.303,
-      "direction": "up",
-      "streak": 23,
-      "streak_dir": "up",
-      "momentum_4w": 0.3,
-      "trend": "flat",
-      "hitrate_q50": 48.84,
-      "coverage_pct": 94.77,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2034",
@@ -2656,44 +2248,27 @@
       "streak_dir": "up",
       "momentum_4w": 0.287,
       "trend": "flat",
-      "hitrate_q50": 92.02,
-      "coverage_pct": 88.3,
+      "hitrate_q50": 69.68,
+      "coverage_pct": 29.79,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
-      "fund_id": "2332",
-      "ppm_code": "",
-      "name": "Storebrand Global All Countries A SEK",
+      "fund_id": "910094",
+      "ppm_code": "785907",
+      "name": "Handelsbanken Global Index (A1 SEK)",
       "tags": "Aktiefond, Global, Mix bolag, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2332",
-      "change_pct": 0.27,
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/910094",
+      "change_pct": 0.29,
       "direction": "up",
       "streak": 3,
       "streak_dir": "up",
-      "momentum_4w": 0.762,
-      "trend": "up",
-      "hitrate_q50": 86.7,
-      "coverage_pct": 77.66,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "2131",
-      "ppm_code": "384750",
-      "name": "Cicero Avkastning A",
-      "tags": "Räntefond, SEK, Obligationer, Företag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2131",
-      "change_pct": 0.269,
-      "direction": "up",
-      "streak": 20,
-      "streak_dir": "up",
-      "momentum_4w": 0.245,
+      "momentum_4w": 0.096,
       "trend": "flat",
-      "hitrate_q50": 94.15,
-      "coverage_pct": 61.17,
+      "hitrate_q50": 80.7,
+      "coverage_pct": 22.81,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "56127",
@@ -2707,10 +2282,27 @@
       "streak_dir": "up",
       "momentum_4w": 0.254,
       "trend": "flat",
-      "hitrate_q50": 72.68,
-      "coverage_pct": 73.77,
+      "hitrate_q50": 73.77,
+      "coverage_pct": 20.77,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
+    },
+    {
+      "fund_id": "2131",
+      "ppm_code": "384750",
+      "name": "Cicero Avkastning A",
+      "tags": "Räntefond, SEK, Obligationer, Företag",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2131",
+      "change_pct": 0.269,
+      "direction": "up",
+      "streak": 20,
+      "streak_dir": "up",
+      "momentum_4w": 0.245,
+      "trend": "flat",
+      "hitrate_q50": 68.09,
+      "coverage_pct": 25.0,
+      "recommended": false,
+      "excluded": "coverage"
     },
     {
       "fund_id": "2084",
@@ -2724,10 +2316,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.246,
       "trend": "flat",
-      "hitrate_q50": 89.36,
-      "coverage_pct": 96.81,
+      "hitrate_q50": 80.85,
+      "coverage_pct": 13.83,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2103",
@@ -2741,10 +2333,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.068,
       "trend": "flat",
-      "hitrate_q50": 65.96,
-      "coverage_pct": 96.81,
+      "hitrate_q50": 55.32,
+      "coverage_pct": 31.38,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "471796",
@@ -2758,10 +2350,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.28,
       "trend": "flat",
-      "hitrate_q50": 80.19,
-      "coverage_pct": 94.34,
+      "hitrate_q50": 74.53,
+      "coverage_pct": 36.79,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "217470",
@@ -2775,27 +2367,27 @@
       "streak_dir": "up",
       "momentum_4w": 1.005,
       "trend": "up",
-      "hitrate_q50": 81.21,
-      "coverage_pct": 89.93,
+      "hitrate_q50": 64.43,
+      "coverage_pct": 38.26,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
-      "fund_id": "377801",
-      "ppm_code": "",
-      "name": "PriorNilsson Sverige Aktiv A",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/377801",
-      "change_pct": 0.239,
+      "fund_id": "2802",
+      "ppm_code": "305185",
+      "name": "AMF Räntefond Kort",
+      "tags": "Räntefond, SEK, Obligationer, Korta",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2802",
+      "change_pct": 0.24,
       "direction": "up",
-      "streak": 1,
+      "streak": 24,
       "streak_dir": "up",
-      "momentum_4w": 1.934,
-      "trend": "up",
-      "hitrate_q50": 81.51,
-      "coverage_pct": 84.87,
+      "momentum_4w": 0.226,
+      "trend": "flat",
+      "hitrate_q50": 80.85,
+      "coverage_pct": 14.89,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2032",
@@ -2809,10 +2401,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.232,
       "trend": "flat",
-      "hitrate_q50": 55.85,
-      "coverage_pct": 89.36,
+      "hitrate_q50": 69.68,
+      "coverage_pct": 32.45,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "237975",
@@ -2826,10 +2418,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.059,
       "trend": "flat",
-      "hitrate_q50": 76.06,
-      "coverage_pct": 97.87,
+      "hitrate_q50": 57.45,
+      "coverage_pct": 34.04,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1604",
@@ -2843,27 +2435,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.711,
       "trend": "up",
-      "hitrate_q50": 81.91,
-      "coverage_pct": 84.04,
+      "hitrate_q50": 62.77,
+      "coverage_pct": 31.38,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "92827",
-      "ppm_code": "442897",
-      "name": "Storebrand Kortränta A SEK H",
-      "tags": "Räntefond, SEK, Obligationer, Korta",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/92827",
-      "change_pct": 0.203,
-      "direction": "up",
-      "streak": 24,
-      "streak_dir": "up",
-      "momentum_4w": 0.203,
-      "trend": "flat",
-      "hitrate_q50": 53.72,
-      "coverage_pct": 92.02,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "26827",
@@ -2877,10 +2452,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.035,
       "trend": "flat",
-      "hitrate_q50": 70.74,
-      "coverage_pct": 94.68,
+      "hitrate_q50": 57.45,
+      "coverage_pct": 11.7,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2058",
@@ -2894,10 +2469,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.198,
       "trend": "flat",
-      "hitrate_q50": 56.38,
-      "coverage_pct": 100.0,
+      "hitrate_q50": 77.13,
+      "coverage_pct": 12.77,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "416235",
@@ -2911,8 +2486,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.178,
       "trend": "flat",
-      "hitrate_q50": 91.3,
-      "coverage_pct": 46.09,
+      "hitrate_q50": 53.91,
+      "coverage_pct": 26.09,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -2928,10 +2503,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.172,
       "trend": "flat",
-      "hitrate_q50": 64.36,
-      "coverage_pct": 97.87,
+      "hitrate_q50": 85.64,
+      "coverage_pct": 12.77,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "389820",
@@ -2945,10 +2520,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.112,
       "trend": "flat",
-      "hitrate_q50": 85.71,
-      "coverage_pct": 96.64,
+      "hitrate_q50": 90.76,
+      "coverage_pct": 30.25,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "869",
@@ -2962,8 +2537,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.067,
       "trend": "flat",
-      "hitrate_q50": 77.13,
-      "coverage_pct": 83.51,
+      "hitrate_q50": 60.11,
+      "coverage_pct": 71.81,
       "recommended": false,
       "excluded": null
     },
@@ -2979,10 +2554,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.129,
       "trend": "flat",
-      "hitrate_q50": 72.34,
-      "coverage_pct": 97.34,
+      "hitrate_q50": 86.7,
+      "coverage_pct": 14.89,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "901673",
@@ -2996,10 +2571,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.121,
       "trend": "flat",
-      "hitrate_q50": 58.62,
-      "coverage_pct": 100.0,
+      "hitrate_q50": 67.24,
+      "coverage_pct": 56.9,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "864973",
@@ -3013,10 +2588,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.261,
       "trend": "flat",
-      "hitrate_q50": 78.82,
-      "coverage_pct": 67.06,
+      "hitrate_q50": 71.76,
+      "coverage_pct": 57.65,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1022",
@@ -3030,44 +2605,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.32,
       "trend": "flat",
-      "hitrate_q50": 85.64,
-      "coverage_pct": 80.32,
+      "hitrate_q50": 73.4,
+      "coverage_pct": 23.4,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "693833",
-      "ppm_code": "",
-      "name": "Aktiespararna Direktavkastning A",
-      "tags": "Aktiefond, Sverige, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/693833",
-      "change_pct": 0.083,
-      "direction": "up",
-      "streak": 4,
-      "streak_dir": "up",
-      "momentum_4w": 1.478,
-      "trend": "up",
-      "hitrate_q50": 57.69,
-      "coverage_pct": 65.38,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "552855",
-      "ppm_code": "",
-      "name": "Pareto ESG Global Corporate Bd A",
-      "tags": "Räntefond, Övriga, Obligationer",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/552855",
-      "change_pct": 0.07,
-      "direction": "up",
-      "streak": 3,
-      "streak_dir": "up",
-      "momentum_4w": 0.027,
-      "trend": "flat",
-      "hitrate_q50": 84.04,
-      "coverage_pct": 97.87,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "26767",
@@ -3081,10 +2622,10 @@
       "streak_dir": "up",
       "momentum_4w": -1.485,
       "trend": "down",
-      "hitrate_q50": 76.6,
-      "coverage_pct": 70.74,
+      "hitrate_q50": 54.79,
+      "coverage_pct": 12.23,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "355598",
@@ -3098,10 +2639,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.072,
       "trend": "flat",
-      "hitrate_q50": 68.0,
-      "coverage_pct": 91.2,
+      "hitrate_q50": 84.0,
+      "coverage_pct": 24.0,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "596635",
@@ -3115,44 +2656,10 @@
       "streak_dir": "up",
       "momentum_4w": -4.121,
       "trend": "down",
-      "hitrate_q50": 86.67,
-      "coverage_pct": 40.0,
+      "hitrate_q50": 71.11,
+      "coverage_pct": 20.0,
       "recommended": false,
       "excluded": "coverage"
-    },
-    {
-      "fund_id": "146",
-      "ppm_code": "",
-      "name": "Länsförsäkringar Asienfond A",
-      "tags": "Aktiefond, Asien ex Japan",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/146",
-      "change_pct": 0.035,
-      "direction": "up",
-      "streak": 1,
-      "streak_dir": "up",
-      "momentum_4w": -6.708,
-      "trend": "down",
-      "hitrate_q50": 81.38,
-      "coverage_pct": 70.21,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "901093",
-      "ppm_code": "162099",
-      "name": "Storebrand Global Multifactor A SEK",
-      "tags": "Aktiefond, Global, Flexibel storlek bolag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/901093",
-      "change_pct": 0.034,
-      "direction": "up",
-      "streak": 3,
-      "streak_dir": "up",
-      "momentum_4w": 0.045,
-      "trend": "flat",
-      "hitrate_q50": 86.21,
-      "coverage_pct": 72.41,
-      "recommended": false,
-      "excluded": null
     },
     {
       "fund_id": "1833",
@@ -3166,10 +2673,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.005,
       "trend": "flat",
-      "hitrate_q50": 78.72,
-      "coverage_pct": 85.64,
+      "hitrate_q50": 74.47,
+      "coverage_pct": 15.96,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "596636",
@@ -3183,10 +2690,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.42,
       "trend": "up",
-      "hitrate_q50": 80.0,
-      "coverage_pct": 68.89,
+      "hitrate_q50": 67.78,
+      "coverage_pct": 40.0,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2439",
@@ -3200,10 +2707,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.588,
       "trend": "down",
-      "hitrate_q50": 86.17,
-      "coverage_pct": 94.15,
+      "hitrate_q50": 68.09,
+      "coverage_pct": 31.38,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "164908",
@@ -3217,10 +2724,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.039,
       "trend": "flat",
-      "hitrate_q50": 82.39,
-      "coverage_pct": 93.08,
+      "hitrate_q50": 77.36,
+      "coverage_pct": 23.9,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "181108",
@@ -3234,27 +2741,10 @@
       "streak_dir": "down",
       "momentum_4w": 1.491,
       "trend": "up",
-      "hitrate_q50": 79.49,
-      "coverage_pct": 78.85,
+      "hitrate_q50": 66.03,
+      "coverage_pct": 20.51,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "459",
-      "ppm_code": "260919",
-      "name": "Pictet-Biotech R USD",
-      "tags": "Aktiefond, Branschfond, Bioteknik",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/459",
-      "change_pct": -0.044,
-      "direction": "down",
-      "streak": 1,
-      "streak_dir": "down",
-      "momentum_4w": 2.41,
-      "trend": "up",
-      "hitrate_q50": 81.38,
-      "coverage_pct": 64.89,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "143369",
@@ -3268,10 +2758,27 @@
       "streak_dir": "down",
       "momentum_4w": -3.605,
       "trend": "down",
-      "hitrate_q50": 80.37,
-      "coverage_pct": 74.85,
+      "hitrate_q50": 64.42,
+      "coverage_pct": 6.13,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
+    },
+    {
+      "fund_id": "459",
+      "ppm_code": "260919",
+      "name": "Pictet-Biotech R USD",
+      "tags": "Aktiefond, Branschfond, Bioteknik",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/459",
+      "change_pct": -0.044,
+      "direction": "down",
+      "streak": 1,
+      "streak_dir": "down",
+      "momentum_4w": 2.41,
+      "trend": "up",
+      "hitrate_q50": 63.83,
+      "coverage_pct": 28.72,
+      "recommended": false,
+      "excluded": "coverage"
     },
     {
       "fund_id": "166",
@@ -3285,27 +2792,10 @@
       "streak_dir": "down",
       "momentum_4w": -3.69,
       "trend": "down",
-      "hitrate_q50": 79.79,
-      "coverage_pct": 72.34,
+      "hitrate_q50": 55.32,
+      "coverage_pct": 5.32,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "2016",
-      "ppm_code": "",
-      "name": "Spiltan Aktiefond Stabil",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2016",
-      "change_pct": -0.064,
-      "direction": "down",
-      "streak": 2,
-      "streak_dir": "down",
-      "momentum_4w": 2.076,
-      "trend": "up",
-      "hitrate_q50": 76.06,
-      "coverage_pct": 79.26,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "70501",
@@ -3319,8 +2809,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.157,
       "trend": "flat",
-      "hitrate_q50": 68.09,
-      "coverage_pct": 80.85,
+      "hitrate_q50": 58.51,
+      "coverage_pct": 73.94,
       "recommended": false,
       "excluded": null
     },
@@ -3336,10 +2826,10 @@
       "streak_dir": "down",
       "momentum_4w": 1.458,
       "trend": "up",
-      "hitrate_q50": 86.7,
-      "coverage_pct": 75.0,
+      "hitrate_q50": 69.68,
+      "coverage_pct": 19.68,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "457577",
@@ -3353,10 +2843,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.097,
       "trend": "flat",
-      "hitrate_q50": 75.7,
-      "coverage_pct": 89.72,
+      "hitrate_q50": 71.96,
+      "coverage_pct": 31.78,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "286898",
@@ -3370,10 +2860,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.343,
       "trend": "flat",
-      "hitrate_q50": 77.18,
-      "coverage_pct": 97.32,
+      "hitrate_q50": 53.69,
+      "coverage_pct": 30.87,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1023",
@@ -3387,10 +2877,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.105,
       "trend": "flat",
-      "hitrate_q50": 81.38,
-      "coverage_pct": 90.96,
+      "hitrate_q50": 75.53,
+      "coverage_pct": 18.62,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "476836",
@@ -3404,10 +2894,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.199,
       "trend": "flat",
-      "hitrate_q50": 81.55,
-      "coverage_pct": 98.06,
+      "hitrate_q50": 57.28,
+      "coverage_pct": 56.31,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1040",
@@ -3421,10 +2911,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.185,
       "trend": "flat",
-      "hitrate_q50": 80.85,
-      "coverage_pct": 86.7,
+      "hitrate_q50": 75.0,
+      "coverage_pct": 17.55,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "346775",
@@ -3438,10 +2928,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.547,
       "trend": "down",
-      "hitrate_q50": 79.37,
-      "coverage_pct": 96.03,
+      "hitrate_q50": 69.05,
+      "coverage_pct": 26.19,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1651",
@@ -3455,10 +2945,10 @@
       "streak_dir": "down",
       "momentum_4w": 2.498,
       "trend": "up",
-      "hitrate_q50": 79.79,
-      "coverage_pct": 75.53,
+      "hitrate_q50": 62.23,
+      "coverage_pct": 19.68,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "476475",
@@ -3472,10 +2962,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.793,
       "trend": "down",
-      "hitrate_q50": 78.38,
-      "coverage_pct": 100.0,
+      "hitrate_q50": 61.26,
+      "coverage_pct": 27.93,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "96927",
@@ -3489,8 +2979,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.887,
       "trend": "up",
-      "hitrate_q50": 87.79,
-      "coverage_pct": 81.98,
+      "hitrate_q50": 68.02,
+      "coverage_pct": 71.51,
       "recommended": false,
       "excluded": null
     },
@@ -3506,10 +2996,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.863,
       "trend": "down",
-      "hitrate_q50": 72.89,
-      "coverage_pct": 74.7,
+      "hitrate_q50": 54.22,
+      "coverage_pct": 12.05,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "544596",
@@ -3523,27 +3013,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.369,
       "trend": "flat",
-      "hitrate_q50": 78.72,
-      "coverage_pct": 85.11,
+      "hitrate_q50": 67.02,
+      "coverage_pct": 56.38,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "1089363",
-      "ppm_code": "",
-      "name": "Captor Dahlia Green Bond A",
-      "tags": "Räntefond, SEK, Obligationer, Företag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1089363",
-      "change_pct": -0.37,
-      "direction": "down",
-      "streak": 5,
-      "streak_dir": "down",
-      "momentum_4w": -0.374,
-      "trend": "flat",
-      "hitrate_q50": 70.59,
-      "coverage_pct": 86.27,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "862036",
@@ -3557,8 +3030,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.532,
       "trend": "down",
-      "hitrate_q50": 78.69,
-      "coverage_pct": 100.0,
+      "hitrate_q50": 73.77,
+      "coverage_pct": 63.93,
       "recommended": false,
       "excluded": null
     },
@@ -3574,10 +3047,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.355,
       "trend": "flat",
-      "hitrate_q50": 70.4,
-      "coverage_pct": 88.0,
+      "hitrate_q50": 73.6,
+      "coverage_pct": 12.0,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1886",
@@ -3591,10 +3064,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.826,
       "trend": "down",
-      "hitrate_q50": 79.79,
-      "coverage_pct": 75.0,
+      "hitrate_q50": 64.36,
+      "coverage_pct": 13.83,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2014",
@@ -3608,10 +3081,10 @@
       "streak_dir": "down",
       "momentum_4w": 0.752,
       "trend": "up",
-      "hitrate_q50": 80.32,
-      "coverage_pct": 76.6,
+      "hitrate_q50": 51.06,
+      "coverage_pct": 8.51,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "685395",
@@ -3626,9 +3099,9 @@
       "momentum_4w": -0.966,
       "trend": "down",
       "hitrate_q50": 71.43,
-      "coverage_pct": 63.64,
+      "coverage_pct": 40.26,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2111",
@@ -3642,10 +3115,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.519,
       "trend": "down",
-      "hitrate_q50": 73.4,
-      "coverage_pct": 84.04,
+      "hitrate_q50": 69.15,
+      "coverage_pct": 9.04,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "686931",
@@ -3659,10 +3132,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.569,
       "trend": "down",
-      "hitrate_q50": 76.25,
-      "coverage_pct": 86.25,
+      "hitrate_q50": 70.0,
+      "coverage_pct": 30.0,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "333557",
@@ -3676,10 +3149,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.591,
       "trend": "down",
-      "hitrate_q50": 73.64,
-      "coverage_pct": 86.05,
+      "hitrate_q50": 68.99,
+      "coverage_pct": 13.18,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "331222",
@@ -3693,10 +3166,10 @@
       "streak_dir": "down",
       "momentum_4w": -1.198,
       "trend": "down",
-      "hitrate_q50": 64.34,
-      "coverage_pct": 80.62,
+      "hitrate_q50": 68.99,
+      "coverage_pct": 21.71,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1731",
@@ -3710,10 +3183,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.622,
       "trend": "down",
-      "hitrate_q50": 71.28,
-      "coverage_pct": 82.45,
+      "hitrate_q50": 67.02,
+      "coverage_pct": 14.89,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2109",
@@ -3727,10 +3200,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.606,
       "trend": "down",
-      "hitrate_q50": 71.81,
-      "coverage_pct": 86.7,
+      "hitrate_q50": 68.62,
+      "coverage_pct": 9.57,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "58",
@@ -3744,10 +3217,10 @@
       "streak_dir": "down",
       "momentum_4w": -5.627,
       "trend": "down",
-      "hitrate_q50": 80.85,
-      "coverage_pct": 64.89,
+      "hitrate_q50": 57.45,
+      "coverage_pct": 6.91,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "180708",
@@ -3761,10 +3234,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.583,
       "trend": "down",
-      "hitrate_q50": 70.74,
-      "coverage_pct": 84.57,
+      "hitrate_q50": 71.28,
+      "coverage_pct": 12.77,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2088",
@@ -3778,10 +3251,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.748,
       "trend": "down",
-      "hitrate_q50": 64.36,
-      "coverage_pct": 86.17,
+      "hitrate_q50": 54.79,
+      "coverage_pct": 13.83,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "343415",
@@ -3795,10 +3268,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.246,
       "trend": "flat",
-      "hitrate_q50": 80.8,
-      "coverage_pct": 96.8,
+      "hitrate_q50": 59.2,
+      "coverage_pct": 57.6,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "510",
@@ -3812,10 +3285,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.079,
       "trend": "flat",
-      "hitrate_q50": 81.91,
-      "coverage_pct": 81.38,
+      "hitrate_q50": 69.15,
+      "coverage_pct": 17.55,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "663195",
@@ -3829,27 +3302,10 @@
       "streak_dir": "down",
       "momentum_4w": -5.119,
       "trend": "down",
-      "hitrate_q50": 83.13,
-      "coverage_pct": 36.14,
+      "hitrate_q50": 73.49,
+      "coverage_pct": 19.28,
       "recommended": false,
       "excluded": "coverage"
-    },
-    {
-      "fund_id": "2156",
-      "ppm_code": "",
-      "name": "Länsförsäkringar Tillväxtmarknad Aktiv A",
-      "tags": "Aktiefond, Tillväxtmarknader",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2156",
-      "change_pct": -0.832,
-      "direction": "down",
-      "streak": 6,
-      "streak_dir": "down",
-      "momentum_4w": -5.196,
-      "trend": "down",
-      "hitrate_q50": 78.72,
-      "coverage_pct": 68.62,
-      "recommended": false,
-      "excluded": null
     },
     {
       "fund_id": "2128",
@@ -3863,27 +3319,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.963,
       "trend": "down",
-      "hitrate_q50": 70.21,
-      "coverage_pct": 82.45,
+      "hitrate_q50": 65.43,
+      "coverage_pct": 13.83,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "944976",
-      "ppm_code": "715955",
-      "name": "Avanza Emerging Markets",
-      "tags": "Aktiefond, Tillväxtmarknader, Index",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/944976",
-      "change_pct": -0.911,
-      "direction": "down",
-      "streak": 6,
-      "streak_dir": "down",
-      "momentum_4w": -5.588,
-      "trend": "down",
-      "hitrate_q50": 78.43,
-      "coverage_pct": 70.59,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2098",
@@ -3897,10 +3336,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.982,
       "trend": "down",
-      "hitrate_q50": 71.28,
-      "coverage_pct": 87.77,
+      "hitrate_q50": 61.17,
+      "coverage_pct": 14.36,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2079",
@@ -3914,10 +3353,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.98,
       "trend": "down",
-      "hitrate_q50": 72.34,
-      "coverage_pct": 84.57,
+      "hitrate_q50": 61.17,
+      "coverage_pct": 11.7,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "209089",
@@ -3931,10 +3370,10 @@
       "streak_dir": "down",
       "momentum_4w": 0.813,
       "trend": "up",
-      "hitrate_q50": 77.27,
-      "coverage_pct": 72.08,
+      "hitrate_q50": 57.14,
+      "coverage_pct": 5.19,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "58850",
@@ -3948,8 +3387,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.207,
       "trend": "flat",
-      "hitrate_q50": 81.42,
-      "coverage_pct": 55.74,
+      "hitrate_q50": 59.02,
+      "coverage_pct": 7.1,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -3965,10 +3404,10 @@
       "streak_dir": "down",
       "momentum_4w": 1.543,
       "trend": "up",
-      "hitrate_q50": 73.94,
-      "coverage_pct": 77.13,
+      "hitrate_q50": 44.15,
+      "coverage_pct": 1.6,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "266309",
@@ -3982,10 +3421,10 @@
       "streak_dir": "down",
       "momentum_4w": -4.838,
       "trend": "down",
-      "hitrate_q50": 75.89,
-      "coverage_pct": 65.25,
+      "hitrate_q50": 66.67,
+      "coverage_pct": 13.48,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "118857",
@@ -3999,10 +3438,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.656,
       "trend": "down",
-      "hitrate_q50": 72.25,
-      "coverage_pct": 68.79,
+      "hitrate_q50": 63.58,
+      "coverage_pct": 8.67,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "331224",
@@ -4016,10 +3455,10 @@
       "streak_dir": "down",
       "momentum_4w": -2.22,
       "trend": "down",
-      "hitrate_q50": 77.52,
-      "coverage_pct": 66.67,
+      "hitrate_q50": 67.44,
+      "coverage_pct": 11.63,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "547",
@@ -4033,10 +3472,10 @@
       "streak_dir": "down",
       "momentum_4w": -4.3,
       "trend": "down",
-      "hitrate_q50": 82.45,
-      "coverage_pct": 85.64,
+      "hitrate_q50": 64.36,
+      "coverage_pct": 14.89,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "364655",
@@ -4050,8 +3489,8 @@
       "streak_dir": "down",
       "momentum_4w": -5.259,
       "trend": "down",
-      "hitrate_q50": 79.84,
-      "coverage_pct": 48.39,
+      "hitrate_q50": 68.55,
+      "coverage_pct": 12.1,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -4067,10 +3506,10 @@
       "streak_dir": "down",
       "momentum_4w": -1.213,
       "trend": "down",
-      "hitrate_q50": 72.87,
-      "coverage_pct": 87.23,
+      "hitrate_q50": 62.23,
+      "coverage_pct": 14.36,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "20949",
@@ -4084,10 +3523,10 @@
       "streak_dir": "down",
       "momentum_4w": 0.236,
       "trend": "flat",
-      "hitrate_q50": 78.19,
-      "coverage_pct": 70.21,
+      "hitrate_q50": 54.26,
+      "coverage_pct": 4.26,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "324195",
@@ -4101,10 +3540,10 @@
       "streak_dir": "down",
       "momentum_4w": 1.716,
       "trend": "up",
-      "hitrate_q50": 71.09,
-      "coverage_pct": 83.59,
+      "hitrate_q50": 43.75,
+      "coverage_pct": 20.31,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "404075",
@@ -4118,10 +3557,10 @@
       "streak_dir": "down",
       "momentum_4w": -1.433,
       "trend": "down",
-      "hitrate_q50": 85.34,
-      "coverage_pct": 75.0,
+      "hitrate_q50": 68.97,
+      "coverage_pct": 50.0,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "487076",
@@ -4135,8 +3574,8 @@
       "streak_dir": "down",
       "momentum_4w": -5.615,
       "trend": "down",
-      "hitrate_q50": 74.04,
-      "coverage_pct": 55.77,
+      "hitrate_q50": 58.65,
+      "coverage_pct": 9.62,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -4152,10 +3591,10 @@
       "streak_dir": "down",
       "momentum_4w": -1.674,
       "trend": "down",
-      "hitrate_q50": 84.04,
-      "coverage_pct": 63.3,
+      "hitrate_q50": 72.34,
+      "coverage_pct": 17.02,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "364",
@@ -4169,10 +3608,10 @@
       "streak_dir": "down",
       "momentum_4w": -3.173,
       "trend": "down",
-      "hitrate_q50": 82.45,
-      "coverage_pct": 66.49,
+      "hitrate_q50": 68.62,
+      "coverage_pct": 13.83,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2138",
@@ -4186,10 +3625,10 @@
       "streak_dir": "down",
       "momentum_4w": -6.149,
       "trend": "down",
-      "hitrate_q50": 77.66,
-      "coverage_pct": 66.49,
+      "hitrate_q50": 61.17,
+      "coverage_pct": 5.32,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "133428",
@@ -4203,10 +3642,10 @@
       "streak_dir": "down",
       "momentum_4w": -2.523,
       "trend": "down",
-      "hitrate_q50": 78.57,
-      "coverage_pct": 76.19,
+      "hitrate_q50": 59.52,
+      "coverage_pct": 22.02,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "910093",
@@ -4220,8 +3659,8 @@
       "streak_dir": "down",
       "momentum_4w": -5.206,
       "trend": "down",
-      "hitrate_q50": 73.68,
-      "coverage_pct": 52.63,
+      "hitrate_q50": 78.95,
+      "coverage_pct": 35.09,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -4237,10 +3676,10 @@
       "streak_dir": "down",
       "momentum_4w": -2.649,
       "trend": "down",
-      "hitrate_q50": 85.11,
-      "coverage_pct": 68.09,
+      "hitrate_q50": 70.21,
+      "coverage_pct": 15.43,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2164",
@@ -4254,10 +3693,10 @@
       "streak_dir": "down",
       "momentum_4w": -5.697,
       "trend": "down",
-      "hitrate_q50": 85.64,
-      "coverage_pct": 70.21,
+      "hitrate_q50": 63.3,
+      "coverage_pct": 7.98,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "1011686",
@@ -4271,27 +3710,10 @@
       "streak_dir": "down",
       "momentum_4w": -7.069,
       "trend": "down",
-      "hitrate_q50": 77.71,
-      "coverage_pct": 66.88,
+      "hitrate_q50": 61.78,
+      "coverage_pct": 16.56,
       "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "1358",
-      "ppm_code": "",
-      "name": "Handelsbanken LatinAm Impact (A1 SEK)",
-      "tags": "Aktiefond, Latinamerika",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1358",
-      "change_pct": -1.64,
-      "direction": "down",
-      "streak": 1,
-      "streak_dir": "down",
-      "momentum_4w": -0.869,
-      "trend": "down",
-      "hitrate_q50": 71.51,
-      "coverage_pct": 79.03,
-      "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "135",
@@ -4305,10 +3727,10 @@
       "streak_dir": "down",
       "momentum_4w": -5.711,
       "trend": "down",
-      "hitrate_q50": 80.85,
-      "coverage_pct": 65.96,
+      "hitrate_q50": 60.11,
+      "coverage_pct": 5.85,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "74108",
@@ -4322,8 +3744,8 @@
       "streak_dir": "down",
       "momentum_4w": 1.288,
       "trend": "up",
-      "hitrate_q50": 78.72,
-      "coverage_pct": 72.87,
+      "hitrate_q50": 69.68,
+      "coverage_pct": 79.79,
       "recommended": false,
       "excluded": null
     },
@@ -4339,10 +3761,10 @@
       "streak_dir": "down",
       "momentum_4w": -1.8,
       "trend": "down",
-      "hitrate_q50": 85.11,
-      "coverage_pct": 80.32,
+      "hitrate_q50": 71.28,
+      "coverage_pct": 20.74,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "523895",
@@ -4356,25 +3778,8 @@
       "streak_dir": "down",
       "momentum_4w": -2.984,
       "trend": "down",
-      "hitrate_q50": 68.69,
-      "coverage_pct": 73.74,
-      "recommended": false,
-      "excluded": null
-    },
-    {
-      "fund_id": "1089362",
-      "ppm_code": "",
-      "name": "Captor Iris Bond A",
-      "tags": "Räntefond, SEK, Obligationer, Mix bolag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1089362",
-      "change_pct": -2.174,
-      "direction": "down",
-      "streak": 6,
-      "streak_dir": "down",
-      "momentum_4w": -2.328,
-      "trend": "down",
-      "hitrate_q50": 64.71,
-      "coverage_pct": 54.9,
+      "hitrate_q50": 51.52,
+      "coverage_pct": 5.05,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -4390,8 +3795,8 @@
       "streak_dir": "down",
       "momentum_4w": -6.863,
       "trend": "down",
-      "hitrate_q50": 80.0,
-      "coverage_pct": 55.71,
+      "hitrate_q50": 71.43,
+      "coverage_pct": 10.0,
       "recommended": false,
       "excluded": "coverage"
     },
@@ -4407,10 +3812,10 @@
       "streak_dir": "down",
       "momentum_4w": -5.927,
       "trend": "down",
-      "hitrate_q50": 83.51,
-      "coverage_pct": 67.02,
+      "hitrate_q50": 58.51,
+      "coverage_pct": 10.64,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2145",
@@ -4424,10 +3829,10 @@
       "streak_dir": "down",
       "momentum_4w": -6.954,
       "trend": "down",
-      "hitrate_q50": 84.57,
-      "coverage_pct": 69.15,
+      "hitrate_q50": 57.45,
+      "coverage_pct": 5.32,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "600081",
@@ -4441,10 +3846,10 @@
       "streak_dir": "down",
       "momentum_4w": -1.363,
       "trend": "down",
-      "hitrate_q50": 65.74,
-      "coverage_pct": 81.48,
+      "hitrate_q50": 60.19,
+      "coverage_pct": 7.41,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "142",
@@ -4458,10 +3863,10 @@
       "streak_dir": "down",
       "momentum_4w": -6.991,
       "trend": "down",
-      "hitrate_q50": 80.32,
-      "coverage_pct": 60.11,
+      "hitrate_q50": 57.98,
+      "coverage_pct": 6.91,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "187",
@@ -4475,10 +3880,10 @@
       "streak_dir": "down",
       "momentum_4w": -7.214,
       "trend": "down",
-      "hitrate_q50": 82.35,
-      "coverage_pct": 65.78,
+      "hitrate_q50": 57.22,
+      "coverage_pct": 6.95,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2155",
@@ -4492,10 +3897,10 @@
       "streak_dir": "down",
       "momentum_4w": -5.7,
       "trend": "down",
-      "hitrate_q50": 80.32,
-      "coverage_pct": 64.89,
+      "hitrate_q50": 59.57,
+      "coverage_pct": 5.85,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "2187",
@@ -4509,10 +3914,10 @@
       "streak_dir": "down",
       "momentum_4w": -4.177,
       "trend": "down",
-      "hitrate_q50": 84.04,
-      "coverage_pct": 72.34,
+      "hitrate_q50": 65.43,
+      "coverage_pct": 11.17,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "431",
@@ -4526,10 +3931,10 @@
       "streak_dir": "down",
       "momentum_4w": -8.368,
       "trend": "down",
-      "hitrate_q50": 80.85,
-      "coverage_pct": 64.36,
+      "hitrate_q50": 70.74,
+      "coverage_pct": 16.49,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "130487",
@@ -4543,10 +3948,10 @@
       "streak_dir": "down",
       "momentum_4w": -6.602,
       "trend": "down",
-      "hitrate_q50": 79.88,
-      "coverage_pct": 86.59,
+      "hitrate_q50": 57.32,
+      "coverage_pct": 29.88,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "86287",
@@ -4560,8 +3965,8 @@
       "streak_dir": "down",
       "momentum_4w": -7.337,
       "trend": "down",
-      "hitrate_q50": 84.66,
-      "coverage_pct": 71.59,
+      "hitrate_q50": 67.61,
+      "coverage_pct": 78.41,
       "recommended": false,
       "excluded": null
     },
@@ -4577,10 +3982,10 @@
       "streak_dir": "down",
       "momentum_4w": -1.116,
       "trend": "down",
-      "hitrate_q50": 70.74,
-      "coverage_pct": 71.81,
+      "hitrate_q50": 58.51,
+      "coverage_pct": 6.91,
       "recommended": false,
-      "excluded": null
+      "excluded": "coverage"
     },
     {
       "fund_id": "512559",
@@ -4594,8 +3999,8 @@
       "streak_dir": "down",
       "momentum_4w": -11.094,
       "trend": "down",
-      "hitrate_q50": 68.0,
-      "coverage_pct": 56.0,
+      "hitrate_q50": 60.0,
+      "coverage_pct": 24.0,
       "recommended": false,
       "excluded": "coverage"
     }
