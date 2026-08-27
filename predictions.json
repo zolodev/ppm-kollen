@@ -18,15 +18,54 @@
         "name": "Storebrand Kortränta A SEK H",
         "tags": "Räntefond, SEK, Obligationer, Korta",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/92827",
-        "score": 89.529,
+        "score": 135.205,
         "hitrate_q50": 89.84,
         "coverage_pct": 94.65,
         "mae_q50": 0.6463,
         "signal": "HOLD",
         "forecast": {
           "q10": null,
-          "q50": 0.0217,
-          "q90": 1.9502
+          "q50": 0.2431,
+          "q90": 0.873
+        },
+        "consensus": {
+          "n_agree": 4,
+          "n_models": 4,
+          "n_up": 4,
+          "n_down": 0
+        },
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 91.7,
+          "mae": 0.2424,
+          "last_pred_q50": 0.2625,
+          "last_actual": 0.0225,
+          "last_error": 0.24,
+          "last_direction_ok": true,
+          "date_from": "2026-06-01",
+          "date_to": "2026-08-24"
+        },
+        "rationale": "90% hit-rate; 0.646pp MAE; 4/4 models agree (bullish); 92% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-08-27/92827/h1w_ensemble.png",
+          "individual": "top-2026-08-27/92827/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "94867",
+        "ppm_code": "972497",
+        "name": "Spiltan Räntefond Sverige",
+        "tags": "Räntefond, SEK, Obligationer, Företag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/94867",
+        "score": 92.568,
+        "hitrate_q50": 90.12,
+        "coverage_pct": 81.98,
+        "mae_q50": 1.3253,
+        "signal": "HOLD",
+        "forecast": {
+          "q10": null,
+          "q50": 0.1364,
+          "q90": 5.3904
         },
         "consensus": {
           "n_agree": 3,
@@ -36,19 +75,19 @@
         },
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 83.3,
-          "mae": 0.1583,
-          "last_pred_q50": 0.0706,
-          "last_actual": 0.0225,
-          "last_error": 0.0481,
+          "hit_rate_pct": 100.0,
+          "mae": 0.134,
+          "last_pred_q50": 0.1449,
+          "last_actual": 0.0263,
+          "last_error": 0.1187,
           "last_direction_ok": true,
           "date_from": "2026-06-01",
           "date_to": "2026-08-24"
         },
-        "rationale": "90% hit-rate; 0.646pp MAE; 3/4 models agree (bullish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "90% hit-rate; 1.325pp MAE; 3/4 models agree (bullish); 100% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-08-27/92827/h1w_ensemble.png",
-          "individual": "top-2026-08-27/92827/h1w_individual.png"
+          "ensemble": "top-2026-08-27/94867/h1w_ensemble.png",
+          "individual": "top-2026-08-27/94867/h1w_individual.png"
         }
       }
     ]
@@ -428,22 +467,22 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "94867",
-        "ppm_code": "972497",
-        "name": "Spiltan Räntefond Sverige",
-        "tags": "Räntefond, SEK, Obligationer, Företag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/94867",
-        "hitrate_q50": 90.12,
-        "coverage_pct": 81.98,
-        "mae_q50": 1.3253,
-        "forecast_q50": 0.1857,
-        "forecast_q10": -0.0576,
-        "forecast_q90": 0.0627,
-        "last_actual": 0.0263,
-        "momentum_4w": 0.0542,
+        "fund_id": "936",
+        "ppm_code": "896761",
+        "name": "Swedbank Robur Small Cap Europe A",
+        "tags": "Aktiefond, Europa, Småbolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/936",
+        "hitrate_q50": 52.94,
+        "coverage_pct": 68.45,
+        "mae_q50": 0.8483,
+        "forecast_q50": 0.6753,
+        "forecast_q10": -0.0348,
+        "forecast_q90": 0.4953,
+        "last_actual": 1.0047,
+        "momentum_4w": 0.8653,
         "tritch_score": -1.0,
         "tritch_phase": 0,
-        "signal": "HOLD"
+        "signal": "BUY"
       }
     ]
   }
