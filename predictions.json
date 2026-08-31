@@ -34,6 +34,45 @@
           "ensemble": "top-2026-08-31/869/h1w_ensemble.png",
           "individual": "top-2026-08-31/869/h1w_individual.png"
         }
+      },
+      {
+        "fund_id": "2294",
+        "ppm_code": "202002",
+        "name": "Fondita Global Megatrends B",
+        "tags": "Aktiefond, Global, Flexibel storlek bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2294",
+        "score": 88.881,
+        "hitrate_q50": 85.03,
+        "coverage_pct": 82.35,
+        "mae_q50": 0.3587,
+        "signal": "BUY",
+        "forecast": {
+          "q10": null,
+          "q50": 0.2964,
+          "q90": 1.6431
+        },
+        "consensus": {
+          "n_agree": 3,
+          "n_models": 4,
+          "n_up": 3,
+          "n_down": 1
+        },
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 66.7,
+          "mae": 1.7379,
+          "last_pred_q50": 0.7436,
+          "last_actual": -0.3269,
+          "last_error": 1.0705,
+          "last_direction_ok": false,
+          "date_from": "2026-06-01",
+          "date_to": "2026-08-24"
+        },
+        "rationale": "85% hit-rate; 0.359pp MAE; 3/4 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-08-31/2294/h1w_ensemble.png",
+          "individual": "top-2026-08-31/2294/h1w_individual.png"
+        }
       }
     ]
   },
