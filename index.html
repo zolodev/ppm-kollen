@@ -453,13 +453,6 @@
           const metaCount = $("#meta-winner-count");
           if (metaCount) metaCount.textContent = funds.length + " " + t("meta_funds");
           panel.innerHTML = `<div class="ranking-desc">${meta.desc}</div><div class="fund-list">${funds.length ? funds.map((f, i) => fundCardHtml(f, i + 1, hKey)).join("") : `<div class="ranking-empty">${t("ranking_no_funds")}</div>`}</div>`;
-        } else if (key === "all_funds") {
-          // Same per-fund shape and card rendering as "winners" — just a
-          // different (much longer, TOP_WINNER_FUNDS=-1) source array, so
-          // this tab only ever appears when that config produced one.
-          const hKeys = Object.keys(_currentData.all_funds || {}), hKey = hKeys[0];
-          const funds = hKey ? _currentData.all_funds[hKey] || [] : [];
-          panel.innerHTML = `<div class="ranking-desc">${meta.desc}</div><div class="fund-list">${funds.length ? funds.map((f, i) => fundCardHtml(f, i + 1, hKey)).join("") : `<div class="ranking-empty">${t("ranking_no_funds")}</div>`}</div>`;
         } else {
           const funds = (_currentData.rankings || {})[key] || [];
           panel.innerHTML = `<div class="ranking-desc">${meta.desc}</div><div class="ranking-list">${funds.length ? funds.map((f, i) => rankingFundHtml(f, i + 1)).join("") : `<div class="ranking-empty">${t("ranking_no_qualify")}</div>`}</div>`;
@@ -474,8 +467,6 @@
         const metaHtml = `<div class="meta-bar"><div class="meta-item"><span class="meta-label">${t("meta_generated")}</span><span class="meta-value">${esc(data.generated || "—")}</span></div><div class="meta-item"><span class="meta-label">${t("meta_winners")}</span><span class="meta-value" id="meta-winner-count">— ${t("meta_funds")}</span></div></div>`;
         const rankings = data.rankings || {};
         const rankingKeys = ["winners", ...Object.keys(rankings)];
-        const hasAllFunds = Object.values(data.all_funds || {}).some(arr => (arr || []).length > 0);
-        if (hasAllFunds) rankingKeys.push("all_funds");
         if (_overview) rankingKeys.push("overview");
         const tabsHtml = `<nav class="ranking-nav">${rankingKeys.map(k => { const m = getRankingMeta(k); return `<button class="ranking-tab${k === "winners" ? " active" : ""}" data-key="${esc(k)}">${esc(m.label)}</button>`; }).join("")}</nav>`;
         $("#app").innerHTML = metaHtml + tabsHtml + `<div id="funds-panel"></div>`;
