@@ -18,15 +18,15 @@
         "name": "Aktie-Ansvar Avkastningsfond",
         "tags": "Räntefond, SEK, Obligationer, Medellånga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2034",
-        "score": 97.041,
+        "score": 87.263,
         "hitrate_q50": 82.89,
         "coverage_pct": 79.68,
         "mae_q50": 0.8772,
         "signal": "HOLD",
         "forecast": {
-          "q10": -0.428,
-          "q50": 0.2174,
-          "q90": 0.0841
+          "q10": -0.1968,
+          "q50": 0.1257,
+          "q90": 0.0863
         },
         "consensus": {
           "n_agree": 3,
@@ -37,10 +37,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 100.0,
-          "mae": 0.5255,
-          "last_pred_q50": 1.1577,
+          "mae": 0.3076,
+          "last_pred_q50": 0.8819,
           "last_actual": 0.0075,
-          "last_error": 1.1501,
+          "last_error": 0.8743,
           "last_direction_ok": true,
           "date_from": "2026-06-08",
           "date_to": "2026-08-31"
@@ -52,20 +52,20 @@
         }
       },
       {
-        "fund_id": "342255",
-        "ppm_code": "832717",
-        "name": "Simplicity Företagsobligationer A",
-        "tags": "Räntefond, SEK, Obligationer, Flexibel storlek bolag, Högrisk",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/342255",
-        "score": 64.64,
-        "hitrate_q50": 80.8,
-        "coverage_pct": 80.0,
-        "mae_q50": 0.815,
+        "fund_id": "2084",
+        "ppm_code": "420646",
+        "name": "Länsförsäkringar Kort räntefond",
+        "tags": "Räntefond, SEK, Obligationer, Korta",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2084",
+        "score": 74.271,
+        "hitrate_q50": 80.75,
+        "coverage_pct": 91.98,
+        "mae_q50": 0.722,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.1762,
-          "q50": -0.2323,
-          "q90": 0.0423
+          "q10": -0.6877,
+          "q50": -0.2163,
+          "q90": 0.0016
         },
         "consensus": {
           "n_agree": 3,
@@ -76,18 +76,18 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 91.7,
-          "mae": 0.794,
-          "last_pred_q50": 1.3275,
-          "last_actual": -0.0064,
-          "last_error": 1.3339,
+          "mae": 0.5899,
+          "last_pred_q50": 1.0291,
+          "last_actual": -0.0004,
+          "last_error": 1.0295,
           "last_direction_ok": false,
-          "date_from": "2026-06-15",
-          "date_to": "2026-09-07"
+          "date_from": "2026-06-08",
+          "date_to": "2026-08-31"
         },
-        "rationale": "81% hit-rate; 0.815pp MAE; 3/4 models agree (bearish); 92% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "81% hit-rate; 0.722pp MAE; 3/4 models agree (bearish); 92% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-09-10/342255/h1w_ensemble.png",
-          "individual": "top-2026-09-10/342255/h1w_individual.png"
+          "ensemble": "top-2026-09-10/2084/h1w_ensemble.png",
+          "individual": "top-2026-09-10/2084/h1w_individual.png"
         }
       },
       {
@@ -102,9 +102,9 @@
         "mae_q50": 0.5916,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.4204,
-          "q50": -0.6083,
-          "q90": 0.0165
+          "q10": -0.2333,
+          "q50": -0.5237,
+          "q90": 0.0146
         },
         "consensus": {
           "n_agree": 3,
@@ -115,10 +115,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 100.0,
-          "mae": 1.0048,
-          "last_pred_q50": 1.1678,
+          "mae": 0.8548,
+          "last_pred_q50": 1.0762,
           "last_actual": 0.0066,
-          "last_error": 1.1613,
+          "last_error": 1.0696,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -524,6 +524,24 @@
         "signal": "BUY"
       },
       {
+        "fund_id": "202568",
+        "ppm_code": "165755",
+        "name": "Pareto Aksje Norge B",
+        "tags": "Aktiefond, Norge",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/202568",
+        "hitrate_q50": 59.89,
+        "coverage_pct": 92.51,
+        "mae_q50": 1.3826,
+        "forecast_q50": 2.3484,
+        "forecast_q10": 0.1101,
+        "forecast_q90": 1.3375,
+        "last_actual": -0.1597,
+        "momentum_4w": 1.2145,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "1340461",
         "ppm_code": "147348",
         "name": "Alfred Berg Aktiv R (NOK)",
@@ -537,24 +555,6 @@
         "forecast_q90": 1.7408,
         "last_actual": 0.777,
         "momentum_4w": 1.3626,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "1340460",
-        "ppm_code": "183178",
-        "name": "Alfred Berg Norge R (NOK)",
-        "tags": "Aktiefond, Norge",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1340460",
-        "hitrate_q50": 62.03,
-        "coverage_pct": 81.82,
-        "mae_q50": 1.5715,
-        "forecast_q50": 2.3404,
-        "forecast_q10": 0.3569,
-        "forecast_q90": 1.651,
-        "last_actual": 0.7466,
-        "momentum_4w": 1.1696,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
