@@ -13,6 +13,45 @@
   "horizons": {
     "1w": [
       {
+        "fund_id": "1340461",
+        "ppm_code": "147348",
+        "name": "Alfred Berg Aktiv R (NOK)",
+        "tags": "Aktiefond, Norge",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1340461",
+        "score": 98.04,
+        "hitrate_q50": 63.64,
+        "coverage_pct": 72.19,
+        "mae_q50": 1.5918,
+        "signal": "BUY",
+        "forecast": {
+          "q10": 0.2146,
+          "q50": 1.18,
+          "q90": 1.4267
+        },
+        "consensus": {
+          "n_agree": 4,
+          "n_models": 4,
+          "n_up": 4,
+          "n_down": 0
+        },
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 66.7,
+          "mae": 1.4296,
+          "last_pred_q50": 1.8346,
+          "last_actual": 0.777,
+          "last_error": 1.0576,
+          "last_direction_ok": true,
+          "date_from": "2026-06-15",
+          "date_to": "2026-09-07"
+        },
+        "rationale": "64% hit-rate; 1.592pp MAE; 4/4 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-09-11/1340461/h1w_ensemble.png",
+          "individual": "top-2026-09-11/1340461/h1w_individual.png"
+        }
+      },
+      {
         "fund_id": "471796",
         "ppm_code": "560599",
         "name": "Spiltan Högräntefond",
@@ -36,20 +75,20 @@
         }
       },
       {
-        "fund_id": "1340461",
-        "ppm_code": "147348",
-        "name": "Alfred Berg Aktiv R (NOK)",
-        "tags": "Aktiefond, Norge",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1340461",
-        "score": 103.271,
-        "hitrate_q50": 63.64,
-        "coverage_pct": 72.19,
-        "mae_q50": 1.5918,
+        "fund_id": "316507",
+        "ppm_code": "536806",
+        "name": "BGF Natural Resources A2",
+        "tags": "Aktiefond, Branschfond, Råvaror",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316507",
+        "score": 96.033,
+        "hitrate_q50": 62.22,
+        "coverage_pct": 82.96,
+        "mae_q50": 1.2817,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.1625,
-          "q50": 1.3212,
-          "q90": 1.4012
+          "q10": -0.2391,
+          "q50": 0.9697,
+          "q90": 1.9883
         },
         "consensus": {
           "n_agree": 4,
@@ -60,57 +99,18 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.4825,
-          "last_pred_q50": 1.992,
-          "last_actual": 0.777,
-          "last_error": 1.215,
+          "mae": 1.631,
+          "last_pred_q50": 2.5095,
+          "last_actual": 1.2728,
+          "last_error": 1.2368,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
         },
-        "rationale": "64% hit-rate; 1.592pp MAE; 4/4 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "62% hit-rate; 1.282pp MAE; 4/4 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-09-11/1340461/h1w_ensemble.png",
-          "individual": "top-2026-09-11/1340461/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "212549",
-        "ppm_code": "460899",
-        "name": "Templeton Global Bond A(acc)SEK-H1",
-        "tags": "Räntefond, Övriga, Obligationer",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/212549",
-        "score": 92.308,
-        "hitrate_q50": 62.84,
-        "coverage_pct": 83.11,
-        "mae_q50": 0.9294,
-        "signal": "BUY",
-        "forecast": {
-          "q10": -0.1154,
-          "q50": 0.404,
-          "q90": 0.2608
-        },
-        "consensus": {
-          "n_agree": 4,
-          "n_models": 4,
-          "n_up": 4,
-          "n_down": 0
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 66.7,
-          "mae": 0.4151,
-          "last_pred_q50": 0.5138,
-          "last_actual": 0.2863,
-          "last_error": 0.2275,
-          "last_direction_ok": true,
-          "date_from": "2026-06-15",
-          "date_to": "2026-09-07"
-        },
-        "rationale": "63% hit-rate; 0.929pp MAE; 4/4 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-09-11/212549/h1w_ensemble.png",
-          "individual": "top-2026-09-11/212549/h1w_individual.png"
+          "ensemble": "top-2026-09-11/316507/h1w_ensemble.png",
+          "individual": "top-2026-09-11/316507/h1w_individual.png"
         }
       },
       {
@@ -119,15 +119,15 @@
         "name": "Evli Finland Select B",
         "tags": "Aktiefond, Finland",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1674",
-        "score": 80.386,
+        "score": 87.551,
         "hitrate_q50": 59.36,
         "coverage_pct": 66.84,
         "mae_q50": 1.3805,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.2911,
-          "q50": 0.6177,
-          "q90": 0.5411
+          "q10": -0.2193,
+          "q50": 0.5791,
+          "q90": 0.6037
         },
         "consensus": {
           "n_agree": 3,
@@ -137,19 +137,58 @@
         },
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 66.7,
-          "mae": 0.6437,
-          "last_pred_q50": 1.103,
+          "hit_rate_pct": 83.3,
+          "mae": 0.6348,
+          "last_pred_q50": 1.0408,
           "last_actual": 0.3942,
-          "last_error": 0.7088,
+          "last_error": 0.6465,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
         },
-        "rationale": "59% hit-rate; 1.381pp MAE; 3/4 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "59% hit-rate; 1.381pp MAE; 3/4 models agree (bullish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-09-11/1674/h1w_ensemble.png",
           "individual": "top-2026-09-11/1674/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "212549",
+        "ppm_code": "460899",
+        "name": "Templeton Global Bond A(acc)SEK-H1",
+        "tags": "Räntefond, Övriga, Obligationer",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/212549",
+        "score": 87.267,
+        "hitrate_q50": 62.84,
+        "coverage_pct": 83.11,
+        "mae_q50": 0.9294,
+        "signal": "BUY",
+        "forecast": {
+          "q10": -0.0128,
+          "q50": 0.3491,
+          "q90": 0.2764
+        },
+        "consensus": {
+          "n_agree": 4,
+          "n_models": 4,
+          "n_up": 4,
+          "n_down": 0
+        },
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 66.7,
+          "mae": 0.3995,
+          "last_pred_q50": 0.4469,
+          "last_actual": 0.2863,
+          "last_error": 0.1606,
+          "last_direction_ok": true,
+          "date_from": "2026-06-15",
+          "date_to": "2026-09-07"
+        },
+        "rationale": "63% hit-rate; 0.929pp MAE; 4/4 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-09-11/212549/h1w_ensemble.png",
+          "individual": "top-2026-09-11/212549/h1w_individual.png"
         }
       },
       {
@@ -164,9 +203,9 @@
         "mae_q50": 0.6382,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.8053,
-          "q50": -0.7583,
-          "q90": 0.0163
+          "q10": -0.5436,
+          "q50": -0.7152,
+          "q90": 0.0306
         },
         "consensus": {
           "n_agree": 3,
@@ -177,10 +216,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 83.3,
-          "mae": 0.8505,
-          "last_pred_q50": -0.3419,
+          "mae": 0.8587,
+          "last_pred_q50": -0.3084,
           "last_actual": -0.023,
-          "last_error": -0.3189,
+          "last_error": -0.2853,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -189,84 +228,6 @@
         "charts": {
           "ensemble": "top-2026-09-11/490477/h1w_ensemble.png",
           "individual": "top-2026-09-11/490477/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "2058",
-        "ppm_code": "331983",
-        "name": "Skandia Korträntefond",
-        "tags": "Räntefond, SEK, Obligationer, Korta",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2058",
-        "score": 74.58,
-        "hitrate_q50": 85.56,
-        "coverage_pct": 87.17,
-        "mae_q50": 0.7481,
-        "signal": "SELL",
-        "forecast": {
-          "q10": -0.0086,
-          "q50": -0.2812,
-          "q90": 0.023
-        },
-        "consensus": {
-          "n_agree": 3,
-          "n_models": 4,
-          "n_up": 1,
-          "n_down": 3
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 75.0,
-          "mae": 0.1241,
-          "last_pred_q50": 0.3346,
-          "last_actual": 0.0068,
-          "last_error": 0.3278,
-          "last_direction_ok": true,
-          "date_from": "2026-06-15",
-          "date_to": "2026-09-07"
-        },
-        "rationale": "86% hit-rate; 0.748pp MAE; 3/4 models agree (bearish); 75% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-09-11/2058/h1w_ensemble.png",
-          "individual": "top-2026-09-11/2058/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "346775",
-        "ppm_code": "447086",
-        "name": "Naventi Defensiv Flex",
-        "tags": "Blandfond, SEK, Försiktig",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/346775",
-        "score": 72.794,
-        "hitrate_q50": 75.2,
-        "coverage_pct": 96.8,
-        "mae_q50": 0.4563,
-        "signal": "SELL",
-        "forecast": {
-          "q10": -0.936,
-          "q50": -0.421,
-          "q90": 0.1451
-        },
-        "consensus": {
-          "n_agree": 4,
-          "n_models": 4,
-          "n_up": 0,
-          "n_down": 4
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 66.7,
-          "mae": 0.7431,
-          "last_pred_q50": -0.0898,
-          "last_actual": -0.0605,
-          "last_error": -0.0294,
-          "last_direction_ok": true,
-          "date_from": "2026-06-15",
-          "date_to": "2026-09-07"
-        },
-        "rationale": "75% hit-rate; 0.456pp MAE; 4/4 models agree (bearish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-09-11/346775/h1w_ensemble.png",
-          "individual": "top-2026-09-11/346775/h1w_individual.png"
         }
       },
       {
@@ -279,30 +240,30 @@
         "hitrate_q50": 79.84,
         "coverage_pct": 89.52,
         "mae_q50": 0.2791,
-        "signal": "SELL",
+        "signal": "HOLD",
         "forecast": {
-          "q10": -0.1803,
-          "q50": -0.1064,
-          "q90": 0.0242
+          "q10": -0.178,
+          "q50": -0.0907,
+          "q90": 0.0553
         },
         "consensus": {
-          "n_agree": 4,
+          "n_agree": 3,
           "n_models": 4,
-          "n_up": 0,
-          "n_down": 4
+          "n_up": 1,
+          "n_down": 3
         },
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 0.3876,
-          "last_pred_q50": -0.174,
+          "mae": 0.3578,
+          "last_pred_q50": -0.1314,
           "last_actual": 0.0003,
-          "last_error": -0.1742,
+          "last_error": -0.1317,
           "last_direction_ok": false,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
         },
-        "rationale": "80% hit-rate; 0.279pp MAE; 4/4 models agree (bearish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "80% hit-rate; 0.279pp MAE; 3/4 models agree (bearish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-09-11/355599/h1w_ensemble.png",
           "individual": "top-2026-09-11/355599/h1w_individual.png"
@@ -320,9 +281,9 @@
         "mae_q50": 0.6566,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.1754,
-          "q50": -0.2419,
-          "q90": 0.01
+          "q10": -0.1308,
+          "q50": -0.2449,
+          "q90": 0.0234
         },
         "consensus": {
           "n_agree": 3,
@@ -332,16 +293,16 @@
         },
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 83.3,
-          "mae": 0.1591,
-          "last_pred_q50": 0.175,
+          "hit_rate_pct": 75.0,
+          "mae": 0.1212,
+          "last_pred_q50": 0.1238,
           "last_actual": 0.0058,
-          "last_error": 0.1693,
+          "last_error": 0.1181,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
         },
-        "rationale": "79% hit-rate; 0.657pp MAE; 3/4 models agree (bullish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "79% hit-rate; 0.657pp MAE; 3/4 models agree (bullish); 75% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-09-11/92827/h1w_ensemble.png",
           "individual": "top-2026-09-11/92827/h1w_individual.png"
@@ -359,9 +320,9 @@
         "mae_q50": 1.2083,
         "signal": "SELL",
         "forecast": {
-          "q10": -1.3895,
-          "q50": -0.8021,
-          "q90": 0.4253
+          "q10": -1.2292,
+          "q50": -0.8441,
+          "q90": 0.4087
         },
         "consensus": {
           "n_agree": 3,
@@ -372,10 +333,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.1983,
-          "last_pred_q50": -0.3685,
+          "mae": 1.0555,
+          "last_pred_q50": -0.4401,
           "last_actual": -0.6592,
-          "last_error": 0.2907,
+          "last_error": 0.219,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -398,9 +359,9 @@
         "mae_q50": 0.6743,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.9803,
-          "q50": -0.842,
-          "q90": 0.0181
+          "q10": -0.7892,
+          "q50": -0.7689,
+          "q90": 0.0026
         },
         "consensus": {
           "n_agree": 3,
@@ -411,10 +372,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 91.7,
-          "mae": 0.4207,
-          "last_pred_q50": 0.4384,
+          "mae": 0.2582,
+          "last_pred_q50": 0.2805,
           "last_actual": 0.0052,
-          "last_error": 0.4331,
+          "last_error": 0.2753,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -423,6 +384,45 @@
         "charts": {
           "ensemble": "top-2026-09-11/2084/h1w_ensemble.png",
           "individual": "top-2026-09-11/2084/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "2802",
+        "ppm_code": "305185",
+        "name": "AMF Räntefond Kort",
+        "tags": "Räntefond, SEK, Obligationer, Korta",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2802",
+        "score": 65.618,
+        "hitrate_q50": 79.68,
+        "coverage_pct": 82.35,
+        "mae_q50": 0.7444,
+        "signal": "SELL",
+        "forecast": {
+          "q10": -0.0991,
+          "q50": -0.3794,
+          "q90": 0.0107
+        },
+        "consensus": {
+          "n_agree": 3,
+          "n_models": 4,
+          "n_up": 1,
+          "n_down": 3
+        },
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 75.0,
+          "mae": 0.091,
+          "last_pred_q50": 0.0841,
+          "last_actual": 0.008,
+          "last_error": 0.0762,
+          "last_direction_ok": true,
+          "date_from": "2026-06-15",
+          "date_to": "2026-09-07"
+        },
+        "rationale": "80% hit-rate; 0.744pp MAE; 3/4 models agree (bearish); 75% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-09-11/2802/h1w_ensemble.png",
+          "individual": "top-2026-09-11/2802/h1w_individual.png"
         }
       },
       {
@@ -437,9 +437,9 @@
         "mae_q50": 0.8873,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.0403,
-          "q50": -0.4068,
-          "q90": 0.0166
+          "q10": -0.015,
+          "q50": -0.3748,
+          "q90": 0.0189
         },
         "consensus": {
           "n_agree": 3,
@@ -450,10 +450,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 100.0,
-          "mae": 0.4297,
-          "last_pred_q50": 0.7027,
+          "mae": 0.0509,
+          "last_pred_q50": 0.109,
           "last_actual": 0.0077,
-          "last_error": 0.695,
+          "last_error": 0.1013,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -462,45 +462,6 @@
         "charts": {
           "ensemble": "top-2026-09-11/56127/h1w_ensemble.png",
           "individual": "top-2026-09-11/56127/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "476838",
-        "ppm_code": "123901",
-        "name": "Ålandsbanken Kapitalförvaltning SEK",
-        "tags": "Blandfond, SEK, Balanserad",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/476838",
-        "score": 62.093,
-        "hitrate_q50": 70.19,
-        "coverage_pct": 88.46,
-        "mae_q50": 0.3263,
-        "signal": "SELL",
-        "forecast": {
-          "q10": -0.8846,
-          "q50": -0.6452,
-          "q90": 0.1686
-        },
-        "consensus": {
-          "n_agree": 3,
-          "n_models": 4,
-          "n_up": 1,
-          "n_down": 3
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 75.0,
-          "mae": 0.7308,
-          "last_pred_q50": -0.4303,
-          "last_actual": -0.1982,
-          "last_error": -0.2321,
-          "last_direction_ok": true,
-          "date_from": "2026-06-15",
-          "date_to": "2026-09-07"
-        },
-        "rationale": "70% hit-rate; 0.326pp MAE; 3/4 models agree (bearish); 75% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-09-11/476838/h1w_ensemble.png",
-          "individual": "top-2026-09-11/476838/h1w_individual.png"
         }
       },
       {
@@ -515,9 +476,9 @@
         "mae_q50": 0.2564,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.2274,
-          "q50": -0.3163,
-          "q90": -0.0311
+          "q10": -0.2121,
+          "q50": -0.2204,
+          "q90": -0.0415
         },
         "consensus": {
           "n_agree": 3,
@@ -528,10 +489,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 0.3871,
-          "last_pred_q50": -0.3446,
+          "mae": 0.3441,
+          "last_pred_q50": -0.2551,
           "last_actual": -0.0202,
-          "last_error": -0.3244,
+          "last_error": -0.235,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -554,9 +515,9 @@
         "mae_q50": 1.0937,
         "signal": "SELL",
         "forecast": {
-          "q10": -1.3778,
-          "q50": -0.6245,
-          "q90": 0.5046
+          "q10": -1.2182,
+          "q50": -0.6274,
+          "q90": 0.522
         },
         "consensus": {
           "n_agree": 3,
@@ -567,10 +528,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 0.8766,
-          "last_pred_q50": -0.2553,
+          "mae": 0.8447,
+          "last_pred_q50": -0.2887,
           "last_actual": -0.6046,
-          "last_error": 0.3493,
+          "last_error": 0.3159,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -593,9 +554,9 @@
         "mae_q50": 0.8232,
         "signal": "SELL",
         "forecast": {
-          "q10": -1.6225,
-          "q50": -1.0196,
-          "q90": 0.2163
+          "q10": -1.4564,
+          "q50": -0.9467,
+          "q90": 0.1755
         },
         "consensus": {
           "n_agree": 3,
@@ -606,10 +567,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 0.6479,
-          "last_pred_q50": -0.3953,
+          "mae": 0.6029,
+          "last_pred_q50": -0.3928,
           "last_actual": -0.7277,
-          "last_error": 0.3323,
+          "last_error": 0.3349,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -632,9 +593,9 @@
         "mae_q50": 1.175,
         "signal": "SELL",
         "forecast": {
-          "q10": -1.5805,
-          "q50": -0.8861,
-          "q90": 0.3836
+          "q10": -1.3622,
+          "q50": -0.8552,
+          "q90": 0.3999
         },
         "consensus": {
           "n_agree": 3,
@@ -645,10 +606,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 0.9481,
-          "last_pred_q50": -0.4559,
+          "mae": 0.8977,
+          "last_pred_q50": -0.473,
           "last_actual": -0.5114,
-          "last_error": 0.0555,
+          "last_error": 0.0384,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -671,9 +632,9 @@
         "mae_q50": 1.1355,
         "signal": "SELL",
         "forecast": {
-          "q10": -1.2536,
-          "q50": -0.9759,
-          "q90": 0.2678
+          "q10": -1.0845,
+          "q50": -0.9099,
+          "q90": 0.289
         },
         "consensus": {
           "n_agree": 3,
@@ -684,10 +645,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.0738,
-          "last_pred_q50": -0.1479,
+          "mae": 0.9841,
+          "last_pred_q50": -0.1961,
           "last_actual": -0.1021,
-          "last_error": -0.0458,
+          "last_error": -0.094,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -710,9 +671,9 @@
         "mae_q50": 1.0612,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.6543,
-          "q50": -0.6048,
-          "q90": 0.3422
+          "q10": -0.5434,
+          "q50": -0.6081,
+          "q90": 0.332
         },
         "consensus": {
           "n_agree": 3,
@@ -723,10 +684,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 0.9909,
-          "last_pred_q50": -0.5998,
+          "mae": 0.985,
+          "last_pred_q50": -0.5996,
           "last_actual": -0.5443,
-          "last_error": -0.0555,
+          "last_error": -0.0553,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -749,9 +710,9 @@
         "mae_q50": 1.2643,
         "signal": "SELL",
         "forecast": {
-          "q10": -1.4969,
-          "q50": -1.0695,
-          "q90": 0.4367
+          "q10": -1.368,
+          "q50": -1.0525,
+          "q90": 0.4569
         },
         "consensus": {
           "n_agree": 3,
@@ -762,10 +723,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.1892,
-          "last_pred_q50": -0.7208,
+          "mae": 1.1848,
+          "last_pred_q50": -0.7079,
           "last_actual": -0.4081,
-          "last_error": -0.3127,
+          "last_error": -0.2998,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -788,9 +749,9 @@
         "mae_q50": 1.068,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.4917,
-          "q50": -0.8577,
-          "q90": 0.2562
+          "q10": -0.4246,
+          "q50": -0.8275,
+          "q90": 0.2746
         },
         "consensus": {
           "n_agree": 4,
@@ -801,10 +762,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 0.7755,
-          "last_pred_q50": -0.128,
+          "mae": 0.6696,
+          "last_pred_q50": -0.1396,
           "last_actual": -0.7897,
-          "last_error": 0.6616,
+          "last_error": 0.6501,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -827,9 +788,9 @@
         "mae_q50": 1.1203,
         "signal": "SELL",
         "forecast": {
-          "q10": -1.6417,
-          "q50": -0.8104,
-          "q90": 0.324
+          "q10": -1.4864,
+          "q50": -0.8256,
+          "q90": 0.3245
         },
         "consensus": {
           "n_agree": 3,
@@ -840,10 +801,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.007,
-          "last_pred_q50": -0.7035,
+          "mae": 1.0025,
+          "last_pred_q50": -0.7179,
           "last_actual": -0.6687,
-          "last_error": -0.0348,
+          "last_error": -0.0492,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -866,9 +827,9 @@
         "mae_q50": 1.1662,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.9718,
-          "q50": -0.9836,
-          "q90": 0.3596
+          "q10": -0.6821,
+          "q50": -1.0141,
+          "q90": 0.3445
         },
         "consensus": {
           "n_agree": 3,
@@ -879,10 +840,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.1308,
-          "last_pred_q50": -0.4904,
+          "mae": 1.1225,
+          "last_pred_q50": -0.5226,
           "last_actual": -0.5739,
-          "last_error": 0.0834,
+          "last_error": 0.0513,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
@@ -891,84 +852,6 @@
         "charts": {
           "ensemble": "top-2026-09-11/1478/h1w_ensemble.png",
           "individual": "top-2026-09-11/1478/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "39648",
-        "ppm_code": "717496",
-        "name": "Franklin Mutual Glbl DiscvA(acc)USD",
-        "tags": "Aktiefond, Global, Värdebolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/39648",
-        "score": 55.678,
-        "hitrate_q50": 63.1,
-        "coverage_pct": 88.24,
-        "mae_q50": 1.2363,
-        "signal": "SELL",
-        "forecast": {
-          "q10": -0.8058,
-          "q50": -0.4395,
-          "q90": 0.6003
-        },
-        "consensus": {
-          "n_agree": 3,
-          "n_models": 4,
-          "n_up": 1,
-          "n_down": 3
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 83.3,
-          "mae": 1.0368,
-          "last_pred_q50": 0.489,
-          "last_actual": -1.2077,
-          "last_error": 1.6967,
-          "last_direction_ok": false,
-          "date_from": "2026-06-15",
-          "date_to": "2026-09-07"
-        },
-        "rationale": "63% hit-rate; 1.236pp MAE; 3/4 models agree (bearish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-09-11/39648/h1w_ensemble.png",
-          "individual": "top-2026-09-11/39648/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "94867",
-        "ppm_code": "972497",
-        "name": "Spiltan Räntefond Sverige",
-        "tags": "Räntefond, SEK, Obligationer, Företag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/94867",
-        "score": 55.003,
-        "hitrate_q50": 83.72,
-        "coverage_pct": 65.7,
-        "mae_q50": 0.5452,
-        "signal": "SELL",
-        "forecast": {
-          "q10": -0.2337,
-          "q50": -0.524,
-          "q90": 0.0147
-        },
-        "consensus": {
-          "n_agree": 3,
-          "n_models": 4,
-          "n_up": 1,
-          "n_down": 3
-        },
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 100.0,
-          "mae": 0.8548,
-          "last_pred_q50": 1.0762,
-          "last_actual": 0.0066,
-          "last_error": 1.0696,
-          "last_direction_ok": true,
-          "date_from": "2026-06-15",
-          "date_to": "2026-09-07"
-        },
-        "rationale": "84% hit-rate; 0.545pp MAE; 3/4 models agree (bearish); 100% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-09-11/94867/h1w_ensemble.png",
-          "individual": "top-2026-09-11/94867/h1w_individual.png"
         }
       },
       {
@@ -983,9 +866,9 @@
         "mae_q50": 0.9598,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.9844,
-          "q50": -0.6284,
-          "q90": 0.4941
+          "q10": -0.9107,
+          "q50": -0.6294,
+          "q90": 0.5116
         },
         "consensus": {
           "n_agree": 4,
@@ -995,19 +878,58 @@
         },
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 66.7,
-          "mae": 1.3887,
-          "last_pred_q50": -0.4515,
+          "hit_rate_pct": 83.3,
+          "mae": 1.3695,
+          "last_pred_q50": -0.489,
           "last_actual": -0.718,
-          "last_error": 0.2666,
+          "last_error": 0.229,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
         },
-        "rationale": "61% hit-rate; 0.960pp MAE; 4/4 models agree (bearish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "61% hit-rate; 0.960pp MAE; 4/4 models agree (bearish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-09-11/143369/h1w_ensemble.png",
           "individual": "top-2026-09-11/143369/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "1682",
+        "ppm_code": "751495",
+        "name": "Handelsbanken Nordiska Småb (A1 SEK)",
+        "tags": "Aktiefond, Norden, Små-/medelstora bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1682",
+        "score": 48.966,
+        "hitrate_q50": 53.48,
+        "coverage_pct": 79.68,
+        "mae_q50": 1.3323,
+        "signal": "HOLD",
+        "forecast": {
+          "q10": -0.3732,
+          "q50": 0.0999,
+          "q90": 0.614
+        },
+        "consensus": {
+          "n_agree": 3,
+          "n_models": 4,
+          "n_up": 3,
+          "n_down": 1
+        },
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 66.7,
+          "mae": 0.7643,
+          "last_pred_q50": 0.3843,
+          "last_actual": -0.0158,
+          "last_error": 0.4001,
+          "last_direction_ok": false,
+          "date_from": "2026-06-15",
+          "date_to": "2026-09-07"
+        },
+        "rationale": "53% hit-rate; 1.332pp MAE; 3/4 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-09-11/1682/h1w_ensemble.png",
+          "individual": "top-2026-09-11/1682/h1w_individual.png"
         }
       },
       {
@@ -1020,11 +942,11 @@
         "hitrate_q50": 68.14,
         "coverage_pct": 71.68,
         "mae_q50": 0.2999,
-        "signal": "SELL",
+        "signal": "HOLD",
         "forecast": {
-          "q10": -0.1586,
-          "q50": -0.1109,
-          "q90": 0.063
+          "q10": -0.0835,
+          "q50": -0.0739,
+          "q90": 0.0762
         },
         "consensus": {
           "n_agree": 3,
@@ -1034,16 +956,16 @@
         },
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 66.7,
-          "mae": 0.2126,
-          "last_pred_q50": 0.186,
+          "hit_rate_pct": 75.0,
+          "mae": 0.1467,
+          "last_pred_q50": 0.1347,
           "last_actual": 0.0074,
-          "last_error": 0.1786,
+          "last_error": 0.1273,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
         },
-        "rationale": "68% hit-rate; 0.300pp MAE; 3/4 models agree (bearish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "68% hit-rate; 0.300pp MAE; 3/4 models agree (bearish); 75% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-09-11/416235/h1w_ensemble.png",
           "individual": "top-2026-09-11/416235/h1w_individual.png"
@@ -1061,9 +983,9 @@
         "mae_q50": 1.0401,
         "signal": "SELL",
         "forecast": {
-          "q10": -0.2824,
-          "q50": -0.5746,
-          "q90": 0.3152
+          "q10": -0.2718,
+          "q50": -0.579,
+          "q90": 0.333
         },
         "consensus": {
           "n_agree": 4,
@@ -1074,10 +996,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 1.2123,
-          "last_pred_q50": -0.3322,
+          "mae": 1.2097,
+          "last_pred_q50": -0.3467,
           "last_actual": -1.9669,
-          "last_error": 1.6347,
+          "last_error": 1.6202,
           "last_direction_ok": true,
           "date_from": "2026-06-15",
           "date_to": "2026-09-07"
