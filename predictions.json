@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12",
+  "generated": "2026-09-13",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -31,8 +31,8 @@
         },
         "backtest": null,
         "charts": {
-          "ensemble": "top-2026-09-12/490477/h1w_ensemble.png",
-          "individual": "top-2026-09-12/490477/h1w_individual.png"
+          "ensemble": "top-2026-09-13/490477/h1w_ensemble.png",
+          "individual": "top-2026-09-13/490477/h1w_individual.png"
         }
       }
     ]
