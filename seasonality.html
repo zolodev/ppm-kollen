@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPM Kollen — Säsongsmönster</title>
+  <meta name="description" content="Vilka fondkategorier har historiskt gått bäst per månad — och hur innevarande år ser ut så far." />
+  <meta name="theme-color" content="#1a1f2e" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23334' /%3E%3Cpath d='M3 19 L9 12 L13 16 L21 6' fill='none' stroke='%2399ccee' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='21' cy='6' r='1.6' fill='%2399ccee'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v1782719220" />
+  <style>
+    /* Page-local only — a heatmap table isn't shared by any other page,
+       so it doesn't earn a place in style.css. */
+    .season-toggle { display: flex; gap: .5rem; margin: 1rem 0 1.25rem; }
+    .season-toggle button {
+      font: inherit; font-size: .82rem; padding: .45rem .9rem; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--bg-panel); color: var(--text);
+      cursor: pointer; transition: background .15s, color .15s;
+    }
+    .season-toggle button.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .season-hint { font-size: .78rem; color: var(--text-faint); margin-bottom: 1rem; max-width: 640px; }
+    .season-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; margin-bottom: 2rem; background: var(--bg-card); }
+    table.season-table { border-collapse: collapse; width: 100%; font-size: .78rem; white-space: nowrap; }
+    table.season-table th, table.season-table td { padding: .5rem .6rem; text-align: center; }
+    table.season-table th.season-cat-col, table.season-table td.season-cat-col {
+      text-align: left; position: sticky; left: 0; background: var(--bg-card); font-weight: 500;
+    }
+    table.season-table thead th { border-bottom: 1px solid var(--border); color: var(--text-faint); font-weight: 500; }
+    table.season-table tbody tr:not(:last-child) td { border-bottom: 1px solid color-mix(in oklch, var(--border) 50%, transparent); }
+    .season-cell-return { font-family: 'IBM Plex Mono', monospace; font-weight: 500; }
+    .season-cell-win { display: block; font-size: .68rem; color: var(--text-faint); margin-top: 1px; }
+    .season-best-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .6rem; margin-bottom: 2rem; }
+    .season-best-card {
+      border: 1px solid var(--border); border-radius: 10px; padding: .65rem .75rem; background: var(--bg-card);
+    }
+    .season-best-rank { font-size: .68rem; color: var(--text-faint); }
+    .season-best-cat { font-weight: 500; font-size: .85rem; margin: 2px 0; }
+    .season-best-return { font-family: 'IBM Plex Mono', monospace; font-size: .82rem; }
+    .season-best-return.pos { color: var(--buy); }
+    .season-best-return.neg { color: var(--sell); }
+  </style>
+</head>
+
+<body data-theme="auto">
+  <a href="#page-title" class="skip-link">Hoppa till innehåll</a>
+  <div class="disclaimer-banner" id="disclaimer-banner" role="alert">
+    <span class="disclaimer-banner-icon" aria-hidden="true">&#9888;</span>
+    <span class="disclaimer-banner-text" id="disclaimer-banner-text"></span>
+    <button class="disclaimer-banner-close" id="disclaimer-banner-close" aria-label="Close">&#10005;</button>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path d="M3 19 L9 12 L13 16 L21 6" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="21" cy="6" r="1.6" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-title">PPM Kollen</span>
+          <span class="logo-sub">Säsongsmönster</span>
+        </span>
+      </a>
+      <div class="header-right">
+        <a class="ghost-btn" href="validation.html" title="Modellvalidering" aria-label="Modellvalidering">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 4 5-8"/></svg>
+        </a>
+        <a class="ghost-btn" href="index.html" id="back-btn" aria-label="Tillbaka">&larr;</a>
+        <button class="ghost-btn" id="lang-toggle">
+          <span id="lang-label">EN</span>
+        </button>
+        <div class="theme-switcher" role="group" aria-label="Theme">
+          <button class="theme-btn" data-theme="light" title="Ljust" aria-label="Ljust tema">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <circle cx="12" cy="12" r="4" fill="currentColor" />
+              <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4" />
+              </g>
+            </svg>
+          </button>
+          <button class="theme-btn active" data-theme="auto" title="Auto" aria-label="Auto tema">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <path d="M12 4v16a8 8 0 0 0 0-16z" fill="currentColor" />
+              <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4" />
+            </svg>
+          </button>
+          <button class="theme-btn" data-theme="dark" title="Mörk" aria-label="Mörkt tema">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1 class="page-title" id="page-title">Säsongsmönster</h1>
+    <p class="page-subtitle" id="page-subtitle"></p>
+
+    <div id="best-section" aria-live="polite"></div>
+
+    <div class="season-toggle" id="season-toggle" role="tablist" hidden>
+      <button data-view="historical" class="active" role="tab" aria-selected="true"></button>
+      <button data-view="this_year" role="tab" aria-selected="false"></button>
+    </div>
+    <p class="season-hint" id="season-hint"></p>
+
+    <div id="table-section" aria-live="polite"></div>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <div class="empty-state-icon">—</div>
+      <p id="empty-title">Ingen säsongsdata tillgänglig ännu.</p>
+      <p id="empty-hint" style="margin-top:.5rem;font-size:.82rem;">Data genereras automatiskt av veckopipelinen.</p>
+    </div>
+  </main>
+
+  <footer>
+    PPM Kollen
+    &nbsp;·&nbsp;
+    <span data-lang="sv">Endast för informationsändamål — inte finansiell rådgivning.</span>
+    <span data-lang="en">For informational purposes only — not financial advice.</span>
+    &nbsp;·&nbsp;
+    <a href="about.html">
+      <span data-lang="sv">Om projektet</span>
+      <span data-lang="en">About</span>
+    </a>
+    &nbsp;·&nbsp;
+    <a href="help.html">
+      <span data-lang="sv">Hjälp</span>
+      <span data-lang="en">Help</span>
+    </a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/zolodev/ppm-kollen" target="_blank" rel="noopener"
+      style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" style="vertical-align:middle;">
+        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+      </svg>
+      zolodev
+    </a>
+  </footer>
+
+  <script src="i18n.js?v1782722275"></script>
+  <script src="ppmk.js?v1782719220"></script>
+  <script>
+    // ── i18n bridge ─────────────────────────────────────────────
+    const t = (key, vars) => {
+      const full = "season_" + key;
+      let s = ppmI18n.t(full) !== full ? ppmI18n.t(full) : ppmI18n.t(key);
+      if (vars) for (const [k, v] of Object.entries(vars)) s = s.replace(`{${k}}`, v);
+      return s;
+    };
+    let _lang = "sv";
+    const esc = ppmk.esc;
+    const MONTH_NAMES = { sv: ["Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dec"],
+                          en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"] };
+
+    let _data = null;
+    let _view = "historical";
+
+    function returnColor(avgReturn, maxAbs) {
+      if (maxAbs <= 0) return "transparent";
+      const frac = Math.min(1, Math.abs(avgReturn) / maxAbs);
+      const pct = Math.round(frac * 65); // cap so text stays legible even at the extreme
+      const varName = avgReturn >= 0 ? "--buy-bg" : "--sell-bg";
+      return `color-mix(in oklch, var(${varName}) ${pct}%, transparent)`;
+    }
+
+    function categoryOrder(monthly) {
+      // Rank categories by their own overall (all-months) average return so
+      // the strongest categories float to the top instead of a plain
+      // alphabetical list — matches how the "best this month" cards read.
+      return Object.entries(monthly)
+        .map(([cat, months]) => {
+          const vals = Object.values(months).map(m => m.avg_return);
+          const overall = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0;
+          return [cat, overall];
+        })
+        .sort((a, b) => b[1] - a[1])
+        .map(([cat]) => cat);
+    }
+
+    function renderTable(monthly, order) {
+      if (!monthly || Object.keys(monthly).length === 0) {
+        return `<p class="season-hint">${esc(t("no_data_year", { year: _data.current_year }))}</p>`;
+      }
+      const monthNames = MONTH_NAMES[_lang] || MONTH_NAMES.sv;
+      const maxAbs = Math.max(
+        ...Object.values(monthly).flatMap(months => Object.values(months).map(m => Math.abs(m.avg_return))),
+        0.01
+      );
+
+      const head = `<tr><th class="season-cat-col">${esc(t("th_category"))}</th>` +
+        monthNames.map(m => `<th>${esc(m)}</th>`).join("") + "</tr>";
+
+      const rows = order.map(cat => {
+        const months = monthly[cat] || {};
+        const cells = [];
+        for (let m = 1; m <= 12; m++) {
+          const stat = months[String(m)];
+          if (!stat) { cells.push("<td>—</td>"); continue; }
+          const bg = returnColor(stat.avg_return, maxAbs);
+          const sign = stat.avg_return >= 0 ? "+" : "";
+          cells.push(
+            `<td style="background:${bg}" title="${stat.n_funds} fonder, ${stat.n_weeks} veckor">` +
+            `<span class="season-cell-return">${sign}${stat.avg_return.toFixed(2)}%</span>` +
+            `<span class="season-cell-win">${stat.win_rate.toFixed(0)}%</span></td>`
+          );
+        }
+        return `<tr><td class="season-cat-col">${esc(cat)}</td>${cells.join("")}</tr>`;
+      }).join("");
+
+      return `<div class="season-table-wrap"><table class="season-table"><thead>${head}</thead><tbody>${rows}</tbody></table></div>`;
+    }
+
+    function renderBest() {
+      if (!_data) return;
+      const monthIdx = new Date().getMonth() + 1; // current calendar month, 1-12
+      const monthNames = MONTH_NAMES[_lang] || MONTH_NAMES.sv;
+      const best = (_data.best_by_month || {}).historical || {};
+      const entries = best[String(monthIdx)] || [];
+      const bestSection = document.getElementById("best-section");
+      if (entries.length === 0) { bestSection.innerHTML = ""; return; }
+
+      const cards = entries.map((e, i) => `
+        <div class="season-best-card">
+          <div class="season-best-rank">#${i + 1}</div>
+          <div class="season-best-cat">${esc(e.category)}</div>
+          <div class="season-best-return ${e.avg_return >= 0 ? "pos" : "neg"}">
+            ${e.avg_return >= 0 ? "+" : ""}${e.avg_return.toFixed(2)}% · ${e.win_rate.toFixed(0)}%
+          </div>
+        </div>`).join("");
+
+      bestSection.innerHTML = `
+        <div class="ranking-desc">
+          <strong>${esc(t("best_title", { month: monthNames[monthIdx - 1] }))}</strong> — ${esc(t("best_hint"))}
+        </div>
+        <div class="season-best-grid">${cards}</div>`;
+    }
+
+    function render() {
+      if (!_data) return;
+      const monthly = _view === "historical" ? _data.historical : _data.this_year;
+      const order = categoryOrder(_data.historical); // stable ordering across the toggle
+      document.getElementById("table-section").innerHTML = renderTable(monthly, order);
+    }
+
+    function loadAndRender() {
+      const go = (data) => {
+        if (!data || !data.categories || data.categories.length === 0) {
+          document.getElementById("empty-state").hidden = false;
+          document.getElementById("season-toggle").hidden = true;
+          return;
+        }
+        document.getElementById("empty-state").hidden = true;
+        document.getElementById("season-toggle").hidden = false;
+        _data = data;
+        renderBest();
+        render();
+      };
+
+      if (_data) { go(_data); return; }
+      fetch("seasonality.json")
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(go)
+        .catch(() => { document.getElementById("empty-state").hidden = false; });
+    }
+
+    // ── View toggle ──────────────────────────────────────────────
+    document.getElementById("season-toggle").addEventListener("click", (ev) => {
+      const btn = ev.target.closest("button[data-view]");
+      if (!btn) return;
+      _view = btn.dataset.view;
+      document.querySelectorAll("#season-toggle button").forEach(b => {
+        const active = b === btn;
+        b.classList.toggle("active", active);
+        b.setAttribute("aria-selected", active);
+      });
+      render();
+    });
+
+    // ── Init via ppmk ──────────────────────────────────────────
+    function updateStaticText() {
+      const year = _data ? _data.current_year : new Date().getFullYear();
+      const sub = document.querySelector(".logo-sub");
+      if (sub) sub.textContent = t("logo_sub");
+      const back = document.getElementById("back-btn");
+      if (back) back.setAttribute("aria-label", t("back"));
+      const title = document.getElementById("page-title");
+      if (title) title.textContent = t("page_title");
+      const subtitle = document.getElementById("page-subtitle");
+      if (subtitle) subtitle.textContent = t("page_subtitle", { year });
+      const hint = document.getElementById("season-hint");
+      if (hint) hint.textContent = t("hint");
+      const histBtn = document.querySelector('#season-toggle button[data-view="historical"]');
+      if (histBtn) histBtn.textContent = t("view_historical");
+      const yearBtn = document.querySelector('#season-toggle button[data-view="this_year"]');
+      if (yearBtn) yearBtn.textContent = t("view_this_year", { year });
+      const es1 = document.getElementById("empty-title");
+      if (es1) es1.textContent = t("empty_title");
+      const es2 = document.getElementById("empty-hint");
+      if (es2) es2.textContent = t("empty_hint");
+    }
+
+    loadAndRender();
+
+    ppmI18n.ready(function (t_fn, lang) {
+      _lang = lang;
+      updateStaticText();
+      renderBest();
+      render();
+    });
+  </script>
+</body>
+
+</html>

@@ -39,6 +39,9 @@
         </span>
       </a>
       <div class="header-right">
+        <a class="ghost-btn" href="seasonality.html" title="Säsongsmönster" aria-label="Säsongsmönster">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+        </a>
         <a class="ghost-btn" href="index.html" id="back-btn" aria-label="Tillbaka">&larr;</a>
         <button class="ghost-btn" id="lang-toggle">
           <span id="lang-label">EN</span>
@@ -73,6 +76,7 @@
     <p class="page-subtitle" id="page-subtitle">Hur modellernas prediktioner presterat mot verkligt utfall — vecka f&#246;r vecka.</p>
 
     <div id="agg-section" aria-live="polite"></div>
+    <div id="rec-section" aria-live="polite"></div>
     <div id="fund-section" aria-live="polite"></div>
     <div id="empty-state" class="empty-state" hidden>
       <div class="empty-state-icon">—</div>
@@ -347,6 +351,72 @@
         .catch(() => { document.getElementById("empty-state").hidden = false; });
     }
 
+    // ── Recommendation history ──────────────────────────────────
+    // Separate file from backtest_history_*.jsonl: that one tracks model
+    // accuracy per fund; this one is a plain dated log of what the winners
+    // tab actually told people to buy, including repeat days (sticky ==
+    // true) so the record shows continuity rather than looking like a new
+    // pick every run. Same year-rollover pattern (filename from the current
+    // year) as backtest history above.
+    let _cachedRecEntries = null;
+
+    function loadAndRenderRecommendations() {
+      const go = (entries) => {
+        const recSection = document.getElementById("rec-section");
+        if (entries.length === 0) { recSection.innerHTML = ""; return; }
+
+        const rows = [];
+        for (const entry of entries) {
+          for (const fund of (entry.funds || [])) {
+            rows.push({ date: entry.generated, ...fund });
+          }
+        }
+        rows.sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name));
+
+        const tableRows = rows.map(r => {
+          const sig = (r.signal || "HOLD").toUpperCase();
+          const sigCls = sig === "BUY" ? "pos" : sig === "SELL" ? "neg" : "";
+          const statusLabel = r.sticky ? t("rec_status_continuing") : t("rec_status_new");
+          const statusCls = r.sticky ? "ok" : "good";
+          return `<tr>
+            <td>${esc(r.date)}</td>
+            <td>${esc(r.name || "—")}</td>
+            <td>${r.ppm_code ? esc(r.ppm_code) : "—"}</td>
+            <td class="${sigCls}">${esc(sig)}</td>
+            <td><span class="stat-badge ${statusCls}">${esc(statusLabel)}</span></td>
+          </tr>`;
+        }).join("");
+
+        recSection.innerHTML = `
+          <div class="ranking-desc" style="margin-top:2rem">
+            <strong>${esc(t("rec_title"))}</strong> — ${esc(t("rec_desc"))}
+          </div>
+          <div class="weeks-table-wrap open">
+            <table class="weeks-table">
+              <thead><tr>
+                <th>${esc(t("rec_col_date"))}</th>
+                <th>${esc(t("rec_col_fund"))}</th>
+                <th>${esc(t("rec_col_ppm"))}</th>
+                <th>${esc(t("rec_col_signal"))}</th>
+                <th>${esc(t("rec_col_status"))}</th>
+              </tr></thead>
+              <tbody>${tableRows}</tbody>
+            </table>
+          </div>`;
+      };
+
+      if (_cachedRecEntries) { go(_cachedRecEntries); return; }
+      fetch(`recommendation_history_${year}.jsonl`)
+        .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+        .then(text => {
+          _cachedRecEntries = text.trim().split("\n").filter(Boolean).map(line => {
+            try { return JSON.parse(line); } catch { return null; }
+          }).filter(Boolean);
+          go(_cachedRecEntries);
+        })
+        .catch(() => { document.getElementById("rec-section").innerHTML = ""; });
+    }
+
     // ── Toggle week table ───────────────────────────────────────
     function toggleWeeks(tableId, toggleId) {
       const wrap = document.getElementById(tableId);
@@ -376,12 +446,14 @@
 
     // Load data immediately
     loadAndRender();
+    loadAndRenderRecommendations();
 
     // Language switch — re-render
     ppmI18n.ready(function(t_fn, lang) {
       _lang = lang;
       updateStaticText();
       loadAndRender();
+      loadAndRenderRecommendations();
     });
   </script>
 </body>
