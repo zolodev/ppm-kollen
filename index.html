@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPM Kollen — Fund Forecast</title>
+  <meta name="description"
+    content="Veckovis ML-baserad rangordning av PPM-fonder baserat på förväntad avkastning, träffsäkerhet och täckning. Inte finansiell rådgivning — ett utbildningsverktyg." />
+  <meta property="og:title" content="PPM Kollen — Fund Forecast" />
+  <meta property="og:description"
+    content="Veckovis ML-baserad rangordning av PPM-fonder baserat på förväntad avkastning, träffsäkerhet och täckning." />
+  <meta property="og:image" content="https://ppmkollen.se/og-preview.png" />
+  <meta property="og:url" content="https://ppmkollen.se/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PPM Kollen — Fund Forecast" />
+  <meta name="twitter:description"
+    content="Veckovis ML-baserad rangordning av PPM-fonder baserat på förväntad avkastning, träffsäkerhet och täckning." />
+  <meta name="twitter:image" content="https://ppmkollen.se/og-preview.png" />
+  <meta name="theme-color" content="#1a1f2e" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23334' /%3E%3Cpath d='M3 19 L9 12 L13 16 L21 6' fill='none' stroke='%2399ccee' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='21' cy='6' r='1.6' fill='%2399ccee'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v1782742771" />
+</head>
+
+<body data-theme="auto">
+  <a href="#top" class="skip-link">Hoppa till innehåll</a>
+
+  <!-- ═══ Disclaimer Banner ════════════════════════════════════════ -->
+  <div class="disclaimer-banner" id="disclaimer-banner" role="alert">
+    <span class="disclaimer-banner-icon" aria-hidden="true">&#9888;</span>
+    <span class="disclaimer-banner-text" id="disclaimer-banner-text">
+      <strong>Inte finansiell rådgivning.</strong> Prognoserna är experimentella och baserade på historiska mönster —
+      ingen garanti för framtida avkastning. Konsultera alltid en behörig rådgivare.
+    </span>
+    <button class="disclaimer-banner-close" id="disclaimer-banner-close" aria-label="Stäng">✕</button>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#top">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22">
+            <path d="M3 19 L9 12 L13 16 L21 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <circle cx="21" cy="6" r="1.6" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-title">PPM Kollen</span>
+          <span class="logo-sub" id="header-date">Fund Forecast</span>
+        </span>
+      </a>
+      <div class="header-right">
+        <a class="ghost-btn" href="validation.html" title="Modellvalidering" aria-label="Modellvalidering">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 4 5-8"/></svg>
+        </a>
+        <a class="ghost-btn" href="seasonality.html" title="Säsongsmönster" aria-label="Säsongsmönster">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+        </a>
+        <button class="ghost-btn" id="lang-toggle" title="Byt språk / Switch language" aria-label="Byt språk">
+          <span id="lang-label">EN</span>
+        </button>
+        <div class="theme-switcher" role="group" aria-label="Theme">
+          <button class="theme-btn" data-theme="light" title="Ljust" aria-label="Ljust tema">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <circle cx="12" cy="12" r="4" fill="currentColor" />
+              <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4" />
+              </g>
+            </svg>
+          </button>
+          <button class="theme-btn active" data-theme="auto" title="Auto" aria-label="Auto tema">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <path d="M12 4v16a8 8 0 0 0 0-16z" fill="currentColor" />
+              <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4" />
+            </svg>
+          </button>
+          <button class="theme-btn" data-theme="dark" title="Dark" aria-label="Mörkt tema">
+            <svg viewBox="0 0 24 24" width="14" height="14">
+              <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-eyebrow">PPM Prognos · driven av modellensemble</div>
+      <h1 class="hero-title">Vilka fonder ger <em>troligtvis</em> högst avkastning nästa vecka?</h1>
+      <p class="hero-lede">Modellen rangordnar fonder baserat på förväntad avkastning, hur ofta den förutspår rätt
+        riktning, och hur väl prognoseintervallen täckte verkligheten tidigare veckor. <strong>Inte finansiell
+          rådgivning</strong> — ett utbildningsverktyg.</p>
+    </section>
+
+    <div id="app" aria-live="polite">
+      <p class="state-msg">Laddar prognos…</p>
+    </div>
+  </main>
+
+  <footer>
+    PPM Kollen
+    &nbsp;·&nbsp;
+    <span data-lang="sv">Endast för informationsändamål — inte finansiell rådgivning.</span>
+    <span data-lang="en">For informational purposes only — not financial advice.</span>
+    &nbsp;·&nbsp;
+    <a href="about.html">
+      <span data-lang="sv">Om projektet</span>
+      <span data-lang="en">About</span>
+    </a>
+    &nbsp;·&nbsp;
+    <a href="help.html">
+      <span data-lang="sv">Hjälp</span>
+      <span data-lang="en">Help</span>
+    </a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/zolodev/ppm-kollen" target="_blank" rel="noopener"
+      style="display:inline-flex;align-items:center;gap:4px;vertical-align:middle;">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" style="vertical-align:middle;">
+        <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+      </svg>
+      zolodev
+    </a>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lb-close" aria-label="Close">✕</button>
+    <div class="lightbox-inner" id="lb-inner">
+      <img id="lb-img" alt="" draggable="false" />
+    </div>
+    <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
+  </div>
+
+  <script src="i18n.js?v1782742771"></script>
+  <script src="ppmk.js?v1782742771"></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const OUTPUT = ".";
+      const HITRATE_THRESHOLD = 70;
+      const COVERAGE_THRESHOLD = 60;
+
+      const SIGNAL = {
+        BUY: { cls: "sig-buy", icon: "▲" },
+        HOLD: { cls: "sig-hold", icon: "●" },
+        SELL: { cls: "sig-sell", icon: "▼" }
+      };
+      const MEDALS = ["🥇", "🥈", "🥉", "4", "5", "6", "7", "8", "9", "10"];
+
+      let _currentData = null;
+      let _currentFolder = null;
+      let _currentLang = "sv";
+
+      const $ = (sel) => document.querySelector(sel);
+      const qa = (sel) => document.querySelectorAll(sel);
+      const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+      const t = (key) => ppmI18n.t(key);
+
+      function signFmt(n) { const v = Number(n); return (v >= 0 ? "+" : "") + v.toFixed(2) + "%"; }
+      function btFmt(val, decimals = 1, sign = true) { if (val == null || isNaN(val)) return "—"; const n = Number(val); return (sign && n >= 0 ? "+" : "") + n.toFixed(decimals) + "%"; }
+      function btClass(val, threshold = 0) { if (val == null) return ""; return val > threshold ? "good" : val < threshold ? "warn" : ""; }
+      function hitrateClass(val) { if (val >= 80) return "good"; if (val < HITRATE_THRESHOLD) return "warn"; return ""; }
+
+      function copyPpm(btn, code) {
+        const original = btn.textContent;
+        const reset = () => { btn.textContent = original; btn.classList.remove("copied"); };
+        const success = () => { btn.textContent = "✓ Copied"; btn.classList.add("copied"); setTimeout(reset, 1800); };
+        const fallback = () => { try { const inp = document.createElement("input"); inp.value = code; inp.style.cssText = "position:fixed;opacity:0"; document.body.appendChild(inp); inp.select(); document.execCommand("copy"); document.body.removeChild(inp); success(); } catch (e) { btn.textContent = code; } };
+        if (navigator.clipboard?.writeText) { navigator.clipboard.writeText(code).then(success).catch(fallback); } else fallback();
+      }
+
+      function switchChart(btn, paneId) {
+        const block = btn.closest(".charts-block");
+        block.querySelectorAll(".chart-tab").forEach(b => b.classList.remove("active"));
+        block.querySelectorAll(".chart-pane").forEach(p => p.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById(paneId)?.classList.add("active");
+      }
+
+      function barHtml(val, max = 100, cls = "") { const pct = Math.min(Math.max((val / max) * 100, 0), 100).toFixed(1); return `<div class="bar-track"><div class="bar-fill${cls ? " " + cls : ""}" style="width:${pct}%"></div></div>`; }
+      function chartImg(path, alt) { if (!path) return `<div class="chart-missing">${t("chart_missing")}</div>`; const norm = path.replace(/^\.\//, ""); const fallback = norm.startsWith("output/") ? null : `output/${norm}`; const onerr = fallback ? ` onerror="this.onerror=null;this.src='${fallback}'"` : ""; return `<img src="${esc(path)}" alt="${esc(alt)}" loading="lazy"${onerr}>`; }
+
+      function rvQualityHit(h) { if (h >= 70) return { cls: "good", label: t("q_good") }; if (h >= 60) return { cls: "ok", label: t("q_ok") }; return { cls: "warn", label: t("q_weak") }; }
+      function rvQualityMae(m) { if (m < 2) return { cls: "good", label: t("q_good") }; if (m < 5) return { cls: "ok", label: t("q_ok") }; return { cls: "warn", label: t("q_weak") }; }
+
+      function btHtml(bt) {
+        if (!bt) return "";
+        const weeks = bt.weeks ?? 0;
+        const hit = bt.hit_rate_pct ?? 0;
+        const mae = bt.mae ?? 0;
+        const predQ50 = bt.last_pred_q50 ?? null;
+        const lastActual = bt.last_actual ?? null;
+        const lastErr = bt.last_error ?? null;
+        const dirOk = bt.last_direction_ok ?? null;
+        const dateFrom = bt.date_from || "";
+        const dateTo = bt.date_to || "";
+        const period = (dateFrom && dateTo) ? `${esc(dateFrom)} → ${esc(dateTo)}` : "";
+        const weekly = bt.weekly || [];
+
+        // Quality badges
+        const qHit = rvQualityHit(hit);
+        const qMae = rvQualityMae(mae);
+
+        // Trend indicator
+        let trendIcon, trendText;
+        if (hit >= 70) { trendIcon = "▲"; trendText = t("rv_trend_above"); }
+        else if (hit < 60) { trendIcon = "▼"; trendText = t("rv_trend_below"); }
+        else { trendIcon = "●"; trendText = t("rv_trend_at"); }
+
+        // "If you followed the model" simulation
+        // Invest when pred_q50 > 0.1 (BUY signal), hold cash otherwise
+        // Each week: if invested, portfolio changes by actual%; if cash, no change
+        let portfolio = 100;
+        const cumValues = [];
+        if (weekly.length > 0) {
+          for (const w of weekly) {
+            const p = w.pred_q50 ?? 0;
+            const a = w.actual ?? 0;
+            if (p > 0.1) {
+              portfolio *= (1 + a / 100);
+            }
+            cumValues.push(portfolio);
+          }
+        } else if (weeks > 0 && predQ50 != null && lastActual != null) {
+          // Minimal fallback: just show last week result
+          if (predQ50 > 0.1) {
+            portfolio *= (1 + lastActual / 100);
+          }
+          cumValues.push(portfolio);
+        }
+        const finalVal = cumValues.length > 0 ? cumValues[cumValues.length - 1] : 100;
+        const isPositive = finalVal >= 100;
+        const fmtKr = (n) => n.toLocaleString(_currentLang === "sv" ? "sv-SE" : "en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+        // Sparkline bars from cumulative values
+        let sparkHtml = "";
+        if (cumValues.length > 1) {
+          const weeklyReturns = cumValues.map((v, i) => i === 0 ? (v - 100) : (v - cumValues[i - 1]));
+          const maxAbs = Math.max(...weeklyReturns.map(Math.abs), 0.01);
+          sparkHtml = `<div class="bt-sparkline">${weeklyReturns.map(r => {
+            const h = Math.max(2, Math.abs(r) / maxAbs * 28);
+            return `<div class="bt-spark-bar ${r >= 0 ? "pos" : "neg"}" style="height:${h.toFixed(0)}px" title="${r >= 0 ? "+" : ""}${r.toFixed(2)}"></div>`;
+          }).join("")}</div>`;
+        }
+
+        // Last week prediction vs actual
+        let lastWeekHtml = "";
+        if (predQ50 != null && lastActual != null) {
+          const dirSymbol = dirOk ? '<span class="bt-dir-ok">&#10003;</span>' : '<span class="bt-dir-fail">&#10007;</span>';
+          lastWeekHtml = `<div class="bt-last-week">${dirSymbol} <span>${t("rv_pred")}: ${Number(predQ50).toFixed(2)}%</span> <span style="color:var(--text-faint)">vs</span> <span>${t("rv_actual")}: ${Number(lastActual).toFixed(2)}%</span></div>`;
+        }
+
+        const title = t("rv_title").replace("{weeks}", weeks);
+
+        return `<div class="backtest-block">` +
+          `<div class="bt-header">` +
+            `<span class="bt-header-title">${esc(title)}</span>` +
+            `${period ? `<span class="bt-header-period">${period}</span>` : ""}` +
+          `</div>` +
+          `<div class="bt-hero ${isPositive ? "pos" : "neg"}">` +
+            `<div>` +
+              `<div class="bt-hero-amount">100 kr <span class="bt-hero-arrow">&rarr;</span> ${fmtKr(finalVal)} kr</div>` +
+              `<div class="bt-hero-sub">${t("rv_if_followed")}</div>` +
+            `</div>` +
+          `</div>` +
+          sparkHtml +
+          `<div class="bt-metrics">` +
+            `<div class="bt-metric">` +
+              `<span class="bt-metric-label">${t("rv_hitrate")} <span class="metric-info" data-tip="${esc(t("rv_hitrate_tip"))}">?</span></span>` +
+              `<div class="bt-metric-row">` +
+                `<span class="bt-metric-val ${qHit.cls}">${hit.toFixed(1)}%</span>` +
+                `<span class="bt-badge q-${qHit.cls}">${qHit.label}</span>` +
+              `</div>` +
+            `</div>` +
+            `<div class="bt-metric">` +
+              `<span class="bt-metric-label">${t("rv_mae")} <span class="metric-info" data-tip="${esc(t("rv_mae_tip"))}">?</span></span>` +
+              `<div class="bt-metric-row">` +
+                `<span class="bt-metric-val ${qMae.cls}">${mae.toFixed(2)}</span>` +
+                `<span class="bt-badge q-${qMae.cls}">${qMae.label}</span>` +
+              `</div>` +
+            `</div>` +
+            `<div class="bt-metric">` +
+              `<span class="bt-metric-label">${t("rv_last_week")} <span class="metric-info" data-tip="${esc(t("rv_last_week_tip"))}">?</span></span>` +
+              lastWeekHtml +
+            `</div>` +
+          `</div>` +
+          `<div class="bt-trend">${trendIcon} ${esc(trendText)}</div>` +
+          `<div class="bt-disclaimer">${t("rv_disclaimer")}</div>` +
+        `</div>`;
+      }
+
+      function forecastBandHtml(fc) {
+        const q10 = fc.q10 ?? 0, q50 = fc.q50 ?? 0, q90 = fc.q90 ?? 0;
+        const span = Math.max(Math.abs(q10), Math.abs(q90), 1) * 1.1;
+        const toPct = v => ((v + span) / (2 * span)) * 100;
+        return `<div class="forecast-band" title="Q10 → Q90 interval, marker = Q50"><div class="forecast-band-fill" style="left:${toPct(q10).toFixed(1)}%;width:${(toPct(q90) - toPct(q10)).toFixed(1)}%"></div><div class="forecast-band-q50" style="left:${toPct(q50).toFixed(1)}%"></div></div><div class="forecast-legend"><span>${signFmt(-span)}</span><span>0%</span><span>${signFmt(span)}</span></div>`;
+      }
+
+      function tagsHtml(tagString) { return String(tagString || "").split(",").map(tag => tag.trim()).filter(Boolean).map(tag => `<span class="tag">${esc(tag)}</span>`).join(""); }
+      function ppmBtnHtml(code) { if (!code) return '<span class="id-pill ppm">PPM —</span>'; return `<button class="action-btn ppm-copy" data-ppm="${esc(code)}">PPM ${esc(code)} ⎘</button>`; }
+      function avanzaLinkHtml(url) { if (!url) return ""; return `<a class="action-btn" href="${esc(url)}" target="_blank" rel="noopener">Avanza ↗</a>`; }
+
+      function consensusHtml(fund) {
+        const con = fund.consensus;
+        if (!con) return "";
+        const n_agree = con.n_agree ?? 0, n_models = con.n_models ?? 0;
+        const n_up = con.n_up ?? 0, n_down = con.n_down ?? 0;
+        const pct = n_models > 0 ? (n_agree / n_models * 100) : 0;
+        const dir = n_up >= n_down ? "↑" : "↓";
+        const cls = pct >= 75 ? "good" : "warn";
+        return `<div class="metric"><span class="metric-label">Konsensus <span class="metric-info" data-tip="Hur många av de ${n_models} modellerna är överens om riktning. ${n_up}↑ upp, ${n_down}↓ ned. Kräver ≥75% enighet.">?</span></span><span class="metric-value ${cls}">${n_agree}/${n_models} ${dir}</span>${barHtml(pct, 100, cls)}</div>`;
+      }
+
+      function fundCardHtml(fund, rank, hKey) {
+        const sig = SIGNAL[fund.signal] || SIGNAL.HOLD;
+        const fc = fund.forecast || {}, charts = fund.charts || {};
+        const cardId = `c-${hKey}-${rank}`, medal = MEDALS[rank - 1] ?? `#${rank}`;
+        const hitrate = (fund.hitrate_q50 || 0), cov = (fund.coverage_pct || 0).toFixed(1);
+        const mae = (fund.mae_q50 || 0).toFixed(4), score = (fund.score || 0).toFixed(3);
+        const hLabel = t("hz_" + hKey + "_label") || hKey, below = hitrate < HITRATE_THRESHOLD, q50 = fc.q50 || 0;
+        const belowCov = parseFloat(cov) < COVERAGE_THRESHOLD;
+        const ensPath = charts.ensemble ? `${OUTPUT}/${charts.ensemble}` : null;
+        const indPath = charts.individual ? `${OUTPUT}/${charts.individual}` : null;
+        const warnBadge = below ? `<span class="hitrate-warn">⚠ ${t("bt_hitrate")} &lt;${HITRATE_THRESHOLD}%</span>` : "";
+        const covWarnBadge = belowCov ? `<span class="hitrate-warn">⚠ ${t("bt_coverage")} &lt;${COVERAGE_THRESHOLD}%</span>` : "";
+        const medalCls = rank <= 3 ? "is-medal" : "", topCls = rank === 1 ? " is-top" : "";
+        return `<article class="fund-card${topCls}"><div class="card-header"><div class="rank-col ${medalCls}">${medal}</div><div class="fund-meta"><div class="fund-name" title="${esc(fund.name || "")}">${esc(fund.name || t("fund_unknown"))}</div><div class="fund-ids"><span class="id-pill">ID&nbsp;${esc(fund.fund_id || "—")}</span>${ppmBtnHtml(fund.ppm_code)}${avanzaLinkHtml(fund.avanza_url)}${warnBadge}${covWarnBadge}</div></div><div class="signal-col"><div class="signal-badge ${sig.cls}"><span class="signal-icon">${sig.icon}</span><span class="signal-label">${t("signal_" + (fund.signal || "HOLD"))}</span></div></div></div><div class="tags-row">${tagsHtml(fund.tags)}</div><div class="metrics-grid"><div class="metric"><span class="metric-label">Score <span class="metric-info" data-tip="${esc(t("tip_score"))}">?</span></span><span class="metric-value">${score}</span><span class="metric-hint">${t("metric_score_hint")}</span></div><div class="metric"><span class="metric-label">${t("bt_hitrate")} <span class="metric-info" data-tip="${esc(t("tip_hitrate"))}">?</span></span><span class="metric-value ${hitrateClass(hitrate)}">${hitrate.toFixed(1)}%</span>${barHtml(hitrate, 100, hitrateClass(hitrate))}</div><div class="metric"><span class="metric-label">Coverage <span class="metric-info" data-tip="${esc(t("tip_coverage"))}">?</span></span><span class="metric-value">${cov}%</span>${barHtml(parseFloat(cov))}</div><div class="metric"><span class="metric-label">MAE Q50 <span class="metric-info" data-tip="${esc(t("tip_mae"))}">?</span></span><span class="metric-value">${mae}</span><span class="metric-hint">${t("metric_mae_hint")}</span></div>${consensusHtml(fund)}</div><div class="forecast-block"><div class="forecast-title">Forecast · ${hLabel} <span class="metric-info" data-tip="${esc(t("tip_forecast"))}">?</span></div><div class="forecast-row"><span class="fc-q10">${signFmt(fc.q10 || 0)}</span><span class="fc-sep">·</span><span class="fc-q50 ${q50 > 0 ? "pos" : q50 < 0 ? "neg" : ""}">${signFmt(q50)}</span><span class="fc-sep">·</span><span class="fc-q90">${signFmt(fc.q90 || 0)}</span></div><div class="forecast-labels"><span>Pessimistisk</span><span>Median</span><span>Optimistisk</span></div>${forecastBandHtml(fc)}</div>${btHtml(fund.backtest)}<div class="charts-block"><div class="chart-tabs"><button class="chart-tab active" data-chart-target="${cardId}-ens">${t("chart_ensemble")}</button><button class="chart-tab" data-chart-target="${cardId}-ind">${t("chart_per_model")}</button></div><div class="chart-pane active" id="${cardId}-ens">${chartImg(ensPath, `${t("chart_ensemble")} ${fund.name}`)}</div><div class="chart-pane" id="${cardId}-ind">${chartImg(indPath, `${t("chart_per_model")} ${fund.name}`)}</div></div></article>`;
+      }
+
+      function rankingFundHtml(fund, rank) {
+        const sig = SIGNAL[fund.signal] || SIGNAL.HOLD, medal = MEDALS[rank - 1] ?? `#${rank}`;
+        const fc50 = fund.forecast ? signFmt(fund.forecast.q50 || 0) : signFmt(fund.forecast_q50 || 0);
+        const hitrate = fund.hitrate_q50 || 0, cov = (fund.coverage_pct || 0).toFixed(1), below = hitrate < HITRATE_THRESHOLD;
+        const belowCov = parseFloat(cov) < COVERAGE_THRESHOLD;
+        const warnBadge = below ? `<span class="hitrate-warn">⚠ H&lt;${HITRATE_THRESHOLD}%</span>` : "";
+        const covWarnBadge = belowCov ? `<span class="hitrate-warn">⚠ C&lt;${COVERAGE_THRESHOLD}%</span>` : "";
+        return `<div class="ranking-card"><div class="ranking-card-head"><div class="ranking-rank">${medal}</div><div class="ranking-info"><div class="ranking-name" title="${esc(fund.name || "")}">${esc(fund.name || "—")}</div><div class="ranking-ids"><span class="id-pill">ID&nbsp;${esc(fund.fund_id || "—")}</span>${ppmBtnHtml(fund.ppm_code)}${avanzaLinkHtml(fund.avanza_url)}${warnBadge}${covWarnBadge}</div></div><div class="ranking-metrics"><div class="ranking-metric"><span class="ranking-metric-label">FC Q50</span><span class="ranking-metric-value">${fc50}</span></div><div class="ranking-metric"><span class="ranking-metric-label">Hit</span><span class="ranking-metric-value ${hitrateClass(hitrate)}">${hitrate.toFixed(1)}%</span></div><div class="ranking-metric"><span class="ranking-metric-label">Coverage</span><span class="ranking-metric-value">${cov}%</span></div></div><div class="signal-col"><div class="signal-badge ${sig.cls}"><span class="signal-icon">${sig.icon}</span><span class="signal-label">${t("signal_" + (fund.signal || "HOLD"))}</span></div></div></div></div>`;
+      }
+
+      // ── Overview table ──────────────────────────────────────────────
+      // Held apart from _currentData: overview.json is a separate file and may
+      // be absent (an older deploy, or a run before this existed), in which
+      // case the tab is simply not offered rather than rendering an error.
+      let _overview = null;
+      let _ovSort = { col: "default", dir: "desc" };
+
+      const OV_COLS = [
+        { key: "star",       label: "",              cls: "ov-star", sortable: false },
+        { key: "ppm_code",   label: "ov_col_ppm",    cls: "ov-ppm",  type: "text" },
+        { key: "name",       label: "ov_col_name",   cls: "ov-name", type: "text" },
+        { key: "change_pct", label: "ov_col_change", cls: "ov-num",  type: "num"  },
+        { key: "streak",     label: "ov_col_streak", cls: "ov-num",  type: "num"  },
+        { key: "trend",      label: "ov_col_trend",  cls: "",        type: "text" },
+      ];
+
+      const OV_ARROW = { up: "\u25B2", down: "\u25BC", flat: "\u25AC" };
+
+      function ovDirClass(d) {
+        return d === "up" ? "ov-up" : d === "down" ? "ov-down" : "ov-flat";
+      }
+
+      function ovSorted(funds) {
+        const rows = funds.slice();
+        const { col, dir } = _ovSort;
+
+        // The default is what the user asked for and what the file already
+        // carries: recommended first, then the size of the week's move. It is
+        // re-applied here rather than trusted, so the header state and the
+        // rows can never disagree.
+        if (col === "default") {
+          return rows.sort((a, b) =>
+            (b.recommended === true) - (a.recommended === true) ||
+            (b.change_pct ?? -1e9) - (a.change_pct ?? -1e9));
+        }
+
+        const spec = OV_COLS.find(c => c.key === col) || {};
+        const mul = dir === "asc" ? 1 : -1;
+        return rows.sort((a, b) => {
+          let x = a[col], y = b[col];
+          // A streak is only comparable together with its direction: 6 weeks
+          // down is the opposite end of the scale from 6 weeks up, not a tie.
+          if (col === "streak") {
+            x = (a.streak_dir === "down" ? -1 : 1) * (a.streak || 0);
+            y = (b.streak_dir === "down" ? -1 : 1) * (b.streak || 0);
+          }
+          if (spec.type === "num") {
+            x = x ?? -1e9; y = y ?? -1e9;
+            return (x - y) * mul;
+          }
+          return String(x ?? "").localeCompare(String(y ?? ""), undefined, { numeric: true }) * mul;
+        });
+      }
+
+      function ovRowHtml(f) {
+        const chCls = ovDirClass(f.direction);
+        const ch = f.change_pct === null || f.change_pct === undefined
+          ? "\u2014"
+          : (f.change_pct > 0 ? "+" : "") + f.change_pct.toFixed(2) + " %";
+        const streak = f.streak
+          ? `<span class="${ovDirClass(f.streak_dir)}">${f.streak} ${esc(t("ov_weeks"))} ${OV_ARROW[f.streak_dir]}</span>`
+          : "\u2014";
+        const trend = `<span class="${ovDirClass(f.trend)}">${OV_ARROW[f.trend]} ${esc(t("ov_trend_" + f.trend))}</span>`;
+        const nameLink = f.avanza_url
+          ? `<a href="${esc(f.avanza_url)}" target="_blank" rel="noopener">${esc(f.name)}</a>`
+          : esc(f.name);
+        const covWarn = f.low_coverage
+          ? `<span class="hitrate-warn" title="${esc(t("ov_low_coverage_tip").replace("{min_cov}", String(_overview.min_coverage_pct ?? 60)))}" style="margin-left:6px">\u26a0</span>`
+          : "";
+        const name = nameLink + covWarn;
+        return `<tr>`
+          + `<td class="ov-star">${f.recommended ? "\u2605" : ""}</td>`
+          + `<td class="ov-ppm">${esc(f.ppm_code || "\u2014")}</td>`
+          + `<td class="ov-name">${name}</td>`
+          + `<td class="ov-num ${chCls}">${ch}</td>`
+          + `<td class="ov-num">${streak}</td>`
+          + `<td>${trend}</td>`
+          + `</tr>`;
+      }
+
+      function ovTableHtml() {
+        if (!_overview || !(_overview.funds || []).length) {
+          return `<div class="ranking-empty">${esc(t("ov_empty"))}</div>`;
+        }
+        const head = OV_COLS.map(c => {
+          const sorted = _ovSort.col === c.key ? ` sort-${_ovSort.dir}` : "";
+          const attr = c.sortable === false ? "" : ` data-ov-sort="${esc(c.key)}"`;
+          const cls = [c.cls, sorted.trim()].filter(Boolean).join(" ");
+          return `<th class="${cls}"${attr}>${c.label ? esc(t(c.label)) : ""}</th>`;
+        }).join("");
+        const body = ovSorted(_overview.funds).map(ovRowHtml).join("");
+        const c = _overview.counts || {};
+        const note = t("ov_note")
+          .replace("{week}", esc(_overview.week_from || "\u2014"))
+          .replace("{low_coverage}", String(c.low_coverage ?? 0))
+          .replace("{min_cov}", String(_overview.min_coverage_pct ?? 60));
+        return `<div class="ov-wrap"><table class="ov-table"><thead><tr>${head}</tr></thead>`
+          + `<tbody>${body}</tbody></table></div><p class="ov-note">${note}</p>`;
+      }
+
+      function getRankingMeta(key) {
+        const lk = key === "winners" ? "rm_winners_label" : `rm_${key}_label`;
+        const dk = key === "winners" ? "rm_winners_desc" : `rm_${key}_desc`;
+        return { label: t(lk) || key, desc: t(dk) || "" };
+      }
+
+      function switchRanking(key) {
+        if (!_currentData) return;
+        qa(".ranking-tab").forEach(tab => tab.classList.toggle("active", tab.dataset.key === key));
+        const meta = getRankingMeta(key), panel = $("#funds-panel");
+        if (key === "overview") {
+          panel.innerHTML = `<div class="ranking-desc">${meta.desc}</div>` + ovTableHtml();
+        } else if (key === "winners") {
+          const hKeys = Object.keys(_currentData.horizons || {}), hKey = hKeys[0];
+          const funds = hKey ? _currentData.horizons[hKey] || [] : [];
+          const metaCount = $("#meta-winner-count");
+          if (metaCount) metaCount.textContent = funds.length + " " + t("meta_funds");
+          panel.innerHTML = `<div class="ranking-desc">${meta.desc}</div><div class="fund-list">${funds.length ? funds.map((f, i) => fundCardHtml(f, i + 1, hKey)).join("") : `<div class="ranking-empty">${t("ranking_no_funds")}</div>`}</div>`;
+        } else {
+          const funds = (_currentData.rankings || {})[key] || [];
+          panel.innerHTML = `<div class="ranking-desc">${meta.desc}</div><div class="ranking-list">${funds.length ? funds.map((f, i) => rankingFundHtml(f, i + 1)).join("") : `<div class="ranking-empty">${t("ranking_no_qualify")}</div>`}</div>`;
+        }
+      }
+
+      function render(data, folder) {
+        _currentData = data; _currentFolder = folder || null;
+        // Only show "Fondprognos" / "Fund Forecast" — no date appended
+        $("#header-date").textContent = t("fund_forecast");
+        const models = (data.active_models || []).map(m => m.toUpperCase()).join(", ") || "—";
+        const metaHtml = `<div class="meta-bar"><div class="meta-item"><span class="meta-label">${t("meta_generated")}</span><span class="meta-value">${esc(data.generated || "—")}</span></div><div class="meta-item"><span class="meta-label">${t("meta_winners")}</span><span class="meta-value" id="meta-winner-count">— ${t("meta_funds")}</span></div></div>`;
+        const rankings = data.rankings || {};
+        const rankingKeys = ["winners", ...Object.keys(rankings)];
+        if (_overview) rankingKeys.push("overview");
+        const tabsHtml = `<nav class="ranking-nav">${rankingKeys.map(k => { const m = getRankingMeta(k); return `<button class="ranking-tab${k === "winners" ? " active" : ""}" data-key="${esc(k)}">${esc(m.label)}</button>`; }).join("")}</nav>`;
+        $("#app").innerHTML = metaHtml + tabsHtml + `<div id="funds-panel"></div>`;
+        switchRanking("winners");
+      }
+
+      function initDelegates() {
+        document.addEventListener("click", (e) => {
+          const t2 = e.target.closest("[data-chart-target]");
+          if (t2) { switchChart(t2, t2.dataset.chartTarget); return; }
+          const bt = e.target.closest("[data-bt-pane]");
+          if (bt) { switchBtPane(bt, bt.dataset.btPane); return; }
+          const ov = e.target.closest("[data-ov-sort]");
+          if (ov) {
+            const col = ov.dataset.ovSort;
+            // Same column toggles direction; a new column starts descending,
+            // which is the useful end for every column here — biggest move,
+            // longest streak, and A-Z reads fine reversed on the two text ones.
+            _ovSort = _ovSort.col === col
+              ? { col, dir: _ovSort.dir === "desc" ? "asc" : "desc" }
+              : { col, dir: "desc" };
+            switchRanking("overview");
+            return;
+          }
+          const r = e.target.closest(".ranking-tab");
+          if (r) { switchRanking(r.dataset.key); return; }
+          const p = e.target.closest(".ppm-copy");
+          if (p) { copyPpm(p, p.dataset.ppm); return; }
+          const img = e.target;
+          if (img.matches?.(".chart-pane img, .bt-fund-chart img") && img.src) lbShow(img.src, img.alt);
+        });
+      }
+
+      // Resolves to null instead of rejecting: overview.json is additive, so a
+      // deploy without it must still render the page it always did.
+      function fetchOverview(base) {
+        return fetch(base + "overview.json")
+          .then(r => (r.ok ? r.json() : null))
+          .catch(() => null);
+      }
+
+      function loadFolder(folderName) {
+        $("#app").innerHTML = `<p class="state-msg">${t("loading_folder")}</p>`;
+        const base = `${OUTPUT}/${folderName}/`;
+        Promise.all([
+          fetch(base + "predictions.json")
+            .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+          fetchOverview(base),
+        ])
+          .then(([data, ov]) => { _overview = ov; render(data, folderName); })
+          .catch(err => { $("#app").innerHTML = `<p class="state-msg">${t("err_folder").replace("{folder}", esc(folderName)).replace("{err}", esc(err.message))}</p>`; });
+      }
+
+      function bootstrap() {
+        Promise.all([
+          fetch("predictions.json")
+            .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+          fetchOverview(""),
+        ])
+          .then(([data, ov]) => { _overview = ov; render(data, null); })
+          .catch(() => { $("#app").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json</p>'; });
+      }
+
+      // ── Lightbox ───────────────────────────────────────────────────
+      const lb = $("#lightbox"), lbImg = $("#lb-img"), lbInner = $("#lb-inner");
+      let lbScale = 1, lbPanX = 0, lbPanY = 0, lbDragging = false;
+      let lbDragStartX = 0, lbDragStartY = 0, lbPanStartX = 0, lbPanStartY = 0;
+      function lbApply() { lbImg.style.transform = `translate(${lbPanX}px, ${lbPanY}px) scale(${lbScale})`; }
+      function lbClampPan() { const r = lbImg.getBoundingClientRect(); const iw = lbInner.clientWidth, ih = lbInner.clientHeight; const maxX = Math.max(0, (r.width - iw) / 2), maxY = Math.max(0, (r.height - ih) / 2); lbPanX = Math.min(maxX, Math.max(-maxX, lbPanX)); lbPanY = Math.min(maxY, Math.max(-maxY, lbPanY)); }
+      function lbShow(src, alt) { lbImg.src = src; lbImg.alt = alt || ""; lbScale = 1; lbPanX = 0; lbPanY = 0; lbApply(); lb.hidden = false; document.body.style.overflow = "hidden"; }
+      function lbHide() { lb.hidden = true; document.body.style.overflow = ""; lbImg.removeAttribute("src"); }
+      function initLightbox() {
+        $("#lb-close").addEventListener("click", lbHide);
+        lb.addEventListener("click", (e) => { if (e.target === lb) lbHide(); });
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !lb.hidden) lbHide(); });
+        lb.addEventListener("wheel", (e) => { if (lb.hidden) return; e.preventDefault(); const delta = e.deltaY < 0 ? 1.12 : 0.88; const newScale = Math.min(8, Math.max(1, lbScale * delta)); const rect = lbInner.getBoundingClientRect(); const cx = e.clientX - rect.left - rect.width / 2, cy = e.clientY - rect.top - rect.height / 2; lbPanX = cx + (lbPanX - cx) * (newScale / lbScale); lbPanY = cy + (lbPanY - cy) * (newScale / lbScale); lbScale = newScale; lbClampPan(); lbApply(); }, { passive: false });
+        lbInner.addEventListener("mousedown", (e) => { if (lbScale <= 1) return; lbDragging = true; lbDragStartX = e.clientX; lbDragStartY = e.clientY; lbPanStartX = lbPanX; lbPanStartY = lbPanY; lbInner.classList.add("grabbing"); e.preventDefault(); });
+        window.addEventListener("mousemove", (e) => { if (!lbDragging) return; lbPanX = lbPanStartX + (e.clientX - lbDragStartX); lbPanY = lbPanStartY + (e.clientY - lbDragStartY); lbClampPan(); lbApply(); });
+        window.addEventListener("mouseup", () => { lbDragging = false; lbInner.classList.remove("grabbing"); });
+      }
+
+      // ── Language ───────────────────────────────────────────────────
+      function applyLangToStaticElements() {
+        const eyebrow = document.querySelector(".hero-eyebrow");
+        if (eyebrow) eyebrow.textContent = t("hero_eyebrow");
+        const heroTitle = document.querySelector(".hero-title");
+        if (heroTitle) heroTitle.innerHTML = t("hero_title_html");
+        const heroLede = document.querySelector(".hero-lede");
+        if (heroLede) heroLede.innerHTML = t("hero_lede_html");
+        const stateMsg = document.querySelector("#app .state-msg");
+        if (stateMsg) stateMsg.textContent = t("loading_forecast");
+        const headerDate = document.querySelector("#header-date");
+        if (headerDate) headerDate.textContent = t("fund_forecast");
+      }
+      // Init immediately — no dependency on i18n for data loading
+      initDelegates();
+      initLightbox();
+      bootstrap();
+
+      // Language switch — re-render with new translations
+      ppmI18n.ready(function(t_fn, lang) {
+        _currentLang = lang;
+        applyLangToStaticElements();
+        if (_currentData) render(_currentData, _currentFolder);
+      });
+    })();
+  </script>
+</body>
+
+</html>
