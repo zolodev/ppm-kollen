@@ -4,3 +4,4 @@
 {"generated": "2026-09-16", "funds": [{"fund_id": "2131", "ppm_code": "384750", "name": "Cicero Avkastning A", "signal": "HOLD", "sticky": true}]}
 {"generated": "2026-09-17", "funds": [{"fund_id": "2066", "ppm_code": "134593", "name": "Pareto Räntefond A", "signal": "HOLD", "sticky": false}]}
 {"generated": "2026-09-17", "funds": [{"fund_id": "2066", "ppm_code": "134593", "name": "Pareto Räntefond A", "signal": "HOLD", "sticky": true}]}
+{"generated": "2026-09-19", "funds": [{"fund_id": "2034", "ppm_code": "308908", "name": "Aktie-Ansvar Avkastningsfond", "signal": "HOLD", "sticky": false}]}
