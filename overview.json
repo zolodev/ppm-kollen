@@ -5,10 +5,27 @@
   "trend_band": 0.5,
   "counts": {
     "total": 237,
-    "recommended": 0,
+    "recommended": 1,
     "low_coverage": 23
   },
   "funds": [
+    {
+      "fund_id": "334858",
+      "ppm_code": "502922",
+      "name": "Allianz Global Metals and Mining A EUR",
+      "tags": "Aktiefond, Branschfond, Råvaror",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/334858",
+      "change_pct": -2.431,
+      "direction": "down",
+      "streak": 1,
+      "streak_dir": "down",
+      "momentum_4w": -0.088,
+      "trend": "flat",
+      "hitrate_q50": 84.67,
+      "coverage_pct": 60.58,
+      "recommended": true,
+      "low_coverage": false
+    },
     {
       "fund_id": "1674",
       "ppm_code": "570044",
@@ -3986,23 +4003,6 @@
       "coverage_pct": 55.08,
       "recommended": false,
       "low_coverage": true
-    },
-    {
-      "fund_id": "334858",
-      "ppm_code": "502922",
-      "name": "Allianz Global Metals and Mining A EUR",
-      "tags": "Aktiefond, Branschfond, Råvaror",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/334858",
-      "change_pct": -2.431,
-      "direction": "down",
-      "streak": 1,
-      "streak_dir": "down",
-      "momentum_4w": -0.088,
-      "trend": "flat",
-      "hitrate_q50": 84.67,
-      "coverage_pct": 60.58,
-      "recommended": false,
-      "low_coverage": false
     },
     {
       "fund_id": "70371",
