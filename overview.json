@@ -1,31 +1,14 @@
 {
-  "generated": "2026-09-19",
+  "generated": "2026-09-21",
   "week_from": "2026-09-14",
   "min_coverage_pct": 60.0,
   "trend_band": 0.5,
   "counts": {
-    "total": 235,
-    "recommended": 1,
-    "low_coverage": 21
+    "total": 237,
+    "recommended": 0,
+    "low_coverage": 23
   },
   "funds": [
-    {
-      "fund_id": "2034",
-      "ppm_code": "308908",
-      "name": "Aktie-Ansvar Avkastningsfond",
-      "tags": "Räntefond, SEK, Obligationer, Medellånga",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2034",
-      "change_pct": -0.023,
-      "direction": "down",
-      "streak": 1,
-      "streak_dir": "down",
-      "momentum_4w": 0.009,
-      "trend": "flat",
-      "hitrate_q50": 95.72,
-      "coverage_pct": 91.98,
-      "recommended": true,
-      "low_coverage": false
-    },
     {
       "fund_id": "1674",
       "ppm_code": "570044",
@@ -280,6 +263,23 @@
       "coverage_pct": 78.07,
       "recommended": false,
       "low_coverage": false
+    },
+    {
+      "fund_id": "1509085",
+      "ppm_code": "290833",
+      "name": "DNB SMB S",
+      "tags": "Aktiefond, Norge",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509085",
+      "change_pct": 0.138,
+      "direction": "up",
+      "streak": 2,
+      "streak_dir": "up",
+      "momentum_4w": 0.33,
+      "trend": "flat",
+      "hitrate_q50": 50.0,
+      "coverage_pct": 42.86,
+      "recommended": false,
+      "low_coverage": true
     },
     {
       "fund_id": "316079",
@@ -822,6 +822,23 @@
       "trend": "flat",
       "hitrate_q50": 84.49,
       "coverage_pct": 89.84,
+      "recommended": false,
+      "low_coverage": false
+    },
+    {
+      "fund_id": "2034",
+      "ppm_code": "308908",
+      "name": "Aktie-Ansvar Avkastningsfond",
+      "tags": "Räntefond, SEK, Obligationer, Medellånga",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2034",
+      "change_pct": -0.023,
+      "direction": "down",
+      "streak": 1,
+      "streak_dir": "down",
+      "momentum_4w": 0.009,
+      "trend": "flat",
+      "hitrate_q50": 95.72,
+      "coverage_pct": 91.98,
       "recommended": false,
       "low_coverage": false
     },
@@ -2915,6 +2932,23 @@
       "coverage_pct": 67.42,
       "recommended": false,
       "low_coverage": false
+    },
+    {
+      "fund_id": "1509086",
+      "ppm_code": "183343",
+      "name": "DNB Teknologi S",
+      "tags": "Aktiefond, Branschfond, Ny teknik",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+      "change_pct": -0.617,
+      "direction": "down",
+      "streak": 3,
+      "streak_dir": "down",
+      "momentum_4w": -0.476,
+      "trend": "flat",
+      "hitrate_q50": 71.43,
+      "coverage_pct": 28.57,
+      "recommended": false,
+      "low_coverage": true
     },
     {
       "fund_id": "1506",
