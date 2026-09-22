@@ -356,8 +356,21 @@
           '<path d="M12 4v16a8 8 0 0 0 0-16z" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4"/>')
       + _themeBtn("dark", "nav_theme_dark", "Mörkt",
           '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor"/>')
-      + "</div></div></div></nav>"
-      + '<div class="nav-scrim" id="nav-scrim" hidden></div>';
+      + "</div></div></div></nav>";
+
+    // The scrim goes on <body>, not in the header. .site-header sets
+    // backdrop-filter, and a backdrop-filter establishes a containing block
+    // for fixed-position descendants — a position:fixed scrim inside it is
+    // laid out against the 62px header strip instead of the viewport, which
+    // is what made the mobile menu unusable. The panel itself is absolute
+    // under the header (see the stylesheet) so it does not need moving.
+    if (!document.getElementById("nav-scrim")) {
+      var scrim = document.createElement("div");
+      scrim.className = "nav-scrim";
+      scrim.id = "nav-scrim";
+      scrim.hidden = true;
+      document.body.appendChild(scrim);
+    }
 
     _navBuilt = true;
     wireNav();

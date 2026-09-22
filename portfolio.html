@@ -15,7 +15,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1790118978" />
+  <link rel="stylesheet" href="style.css?v1790119786" />
 </head>
 
 <body data-theme="auto">
@@ -125,8 +125,8 @@
     </a>
   </footer>
 
-  <script src="i18n.js?v1790118978"></script>
-  <script src="ppmk.js?v1790118978"></script>
+  <script src="i18n.js?v1790119786"></script>
+  <script src="ppmk.js?v1790119786"></script>
   <script>
     (function () {
       "use strict";
@@ -198,6 +198,15 @@
           }
           const next = entries[k + 1];
           const i0 = weekIndexFor(prices, entry.from);
+          // A date past the end of the grid clamps to the last week, which
+          // silently turns a real holding into a zero-length one. Say so.
+          const lastDate = prices.week_dates[prices.week_dates.length - 1];
+          if (String(entry.from) > lastDate) {
+            warnings.push(t("pf_after_data")
+              .replace("{code}", entry.ppm)
+              .replace("{from}", entry.from)
+              .replace("{until}", lastDate));
+          }
           // The holding ends the week the next switch takes effect — the same
           // week index, not one before, so no week is counted in two funds.
           let i1 = prices.weeks.length - 1;
@@ -258,7 +267,17 @@
         const wrap = $("#pf-chart-wrap");
         wrap.innerHTML = "";
         const pts = series.points;
-        if (pts.length < 2) return;
+        // One point is not a line. This happened for real: a holding dated
+        // after the last week in the price grid produced a single sample, the
+        // chart returned here and left an empty box with no explanation, and
+        // the table showed one row of 0.00%. Say which week the data ends
+        // instead — the reader can tell a stale feed from a broken page.
+        if (pts.length < 2) {
+          const last = _prices[Object.keys(_prices)[0]];
+          const until = last && last.week_dates ? last.week_dates[last.week_dates.length - 1] : "";
+          wrap.innerHTML = `<p class="pf-thin">${esc(t("pf_too_short").replace("{until}", until))}</p>`;
+          return;
+        }
 
         const W = Math.max(wrap.clientWidth || 720, 320);
         const H = 300;

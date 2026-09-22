@@ -637,20 +637,25 @@ body.nav-open .nav-bars span:nth-child(3) { transform: translateY(-5.5px) rotate
   }
   .nav-toggle:hover { background: var(--bg-panel); color: var(--text); }
 
+  /* Absolute under the header, not a fixed side drawer. .site-header sets
+     backdrop-filter, which establishes a containing block for fixed-position
+     descendants — a position:fixed panel in here resolves against the 62px
+     header box instead of the viewport and collapses into the header strip.
+     Anchoring to the header's own bottom edge sidesteps that entirely, and a
+     full-width sheet is an easier reach on a phone than a side drawer. */
   .nav-panel {
-    position: fixed; z-index: 50; top: 0; right: 0; bottom: 0;
-    width: min(20rem, 84vw);
+    position: absolute; z-index: 60; top: 100%; left: 0; right: 0;
     flex-direction: column; align-items: stretch; justify-content: flex-start;
-    gap: 0.25rem; padding: 4.5rem 1.1rem 1.5rem;
-    background: var(--bg-elev); border-left: 1px solid var(--border);
+    gap: 0.25rem; padding: 0.75rem 1rem 1rem;
+    background: var(--bg-elev); border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow-lg);
-    overflow-y: auto;
+    max-height: calc(100dvh - 62px); overflow-y: auto;
     /* visibility, not opacity: this also removes the links from the tab
-       order, so a closed drawer cannot be tabbed into from behind the page. */
-    visibility: hidden; transform: translateX(100%);
-    transition: transform .22s ease, visibility .22s;
+       order, so a closed menu cannot be tabbed into from behind the page. */
+    visibility: hidden; opacity: 0; transform: translateY(-6px);
+    transition: opacity .18s ease, transform .18s ease, visibility .18s;
   }
-  body.nav-open .nav-panel { visibility: visible; transform: translateX(0); }
+  body.nav-open .nav-panel { visibility: visible; opacity: 1; transform: none; }
 
   .nav-list { flex-direction: column; align-items: stretch; gap: 0.15rem; }
   .nav-link {
@@ -1417,3 +1422,10 @@ td.ppm-held-current::after { content: " ●"; color: var(--accent); }
 .ov-ppm  { font-variant-numeric: tabular-nums; color: var(--text-muted); }
 /* Below the coverage gate: shown, but visibly not on equal footing. */
 .ov-note { margin: 0.6rem 0 0; font-size: 0.8rem; color: var(--text-faint); }
+
+/* Shown in the chart box when there is not enough data to draw a line — an
+   empty box reads as a broken page, which is exactly how it was reported. */
+.pf-thin {
+  color: var(--text-muted); font-size: 0.83rem; line-height: 1.5;
+  margin: 0; padding: 1.25rem 0; max-width: 60ch;
+}
