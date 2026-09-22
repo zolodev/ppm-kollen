@@ -7,3 +7,4 @@
 {"generated": "2026-09-19", "funds": [{"fund_id": "2034", "ppm_code": "308908", "name": "Aktie-Ansvar Avkastningsfond", "signal": "HOLD", "sticky": false}]}
 {"generated": "2026-09-21", "funds": [{"fund_id": "334858", "ppm_code": "502922", "name": "Allianz Global Metals and Mining A EUR", "signal": "BUY", "sticky": false}]}
 {"generated": "2026-09-22", "funds": [{"fund_id": "334858", "ppm_code": "502922", "name": "Allianz Global Metals and Mining A EUR", "signal": "BUY", "sticky": true}, {"fund_id": "342255", "ppm_code": "832717", "name": "Simplicity Företagsobligationer A", "signal": "HOLD", "sticky": false}]}
+{"generated": "2026-09-22", "funds": [{"fund_id": "316507", "ppm_code": "536806", "name": "BGF Natural Resources A2", "signal": "BUY", "sticky": false}, {"fund_id": "342255", "ppm_code": "832717", "name": "Simplicity Företagsobligationer A", "signal": "HOLD", "sticky": false}]}

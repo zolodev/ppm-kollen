@@ -13,20 +13,20 @@
   "horizons": {
     "1w": [
       {
-        "fund_id": "334858",
-        "ppm_code": "502922",
-        "name": "Allianz Global Metals and Mining A EUR",
+        "fund_id": "316507",
+        "ppm_code": "536806",
+        "name": "BGF Natural Resources A2",
         "tags": "Aktiefond, Branschfond, Råvaror",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/334858",
-        "score": 61.578,
-        "hitrate_q50": 67.88,
-        "coverage_pct": 69.34,
-        "mae_q50": 0.8805,
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316507",
+        "score": 114.865,
+        "hitrate_q50": 71.32,
+        "coverage_pct": 78.68,
+        "mae_q50": 0.5466,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.3723,
-          "q50": 0.4827,
-          "q90": 1.3665
+          "q10": -0.315,
+          "q50": 0.9291,
+          "q90": 1.587
         },
         "consensus": {
           "n_agree": 3,
@@ -37,20 +37,20 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 3.5587,
-          "last_pred_q50": 2.2368,
-          "last_actual": -2.4312,
-          "last_error": 4.668,
+          "mae": 1.563,
+          "last_pred_q50": 1.5761,
+          "last_actual": -0.2832,
+          "last_error": 1.8594,
           "last_direction_ok": false,
           "date_from": "2026-06-22",
           "date_to": "2026-09-14"
         },
-        "rationale": "68% hit-rate; 0.881pp MAE; 3/4 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "71% hit-rate; 0.547pp MAE; 3/4 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-09-22/334858/h1w_ensemble.png",
-          "individual": "top-2026-09-22/334858/h1w_individual.png"
+          "ensemble": "top-2026-09-22/316507/h1w_ensemble.png",
+          "individual": "top-2026-09-22/316507/h1w_individual.png"
         },
-        "sticky": true
+        "sticky": false
       },
       {
         "fund_id": "342255",
@@ -434,6 +434,24 @@
         "signal": "BUY"
       },
       {
+        "fund_id": "2821",
+        "ppm_code": "481911",
+        "name": "BGF World Mining A2",
+        "tags": "Aktiefond, Branschfond, Råvaror",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2821",
+        "hitrate_q50": 55.61,
+        "coverage_pct": 58.29,
+        "mae_q50": 1.272,
+        "forecast_q50": 2.0813,
+        "forecast_q10": 0.0412,
+        "forecast_q90": 2.3021,
+        "last_actual": -0.045,
+        "momentum_4w": 0.1392,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "316507",
         "ppm_code": "536806",
         "name": "BGF Natural Resources A2",
@@ -447,24 +465,6 @@
         "forecast_q90": 2.4919,
         "last_actual": -0.2832,
         "momentum_4w": 0.0269,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "1509086",
-        "ppm_code": "183343",
-        "name": "DNB Teknologi S",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
-        "hitrate_q50": 71.43,
-        "coverage_pct": 28.57,
-        "mae_q50": 1.3133,
-        "forecast_q50": 1.8108,
-        "forecast_q10": 1.1968,
-        "forecast_q90": 2.3936,
-        "last_actual": -0.6173,
-        "momentum_4w": -0.4761,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
