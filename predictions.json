@@ -18,15 +18,15 @@
         "name": "BGF Natural Resources A2",
         "tags": "Aktiefond, Branschfond, Råvaror",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316507",
-        "score": 111.04,
+        "score": 111.042,
         "hitrate_q50": 70.59,
         "coverage_pct": 74.26,
         "mae_q50": 0.5514,
-        "signal": "BUY",
+        "signal": "HOLD",
         "forecast": {
-          "q10": -0.315,
-          "q50": 0.9291,
-          "q90": 1.587
+          "q10": -0.2129,
+          "q50": 0.9337,
+          "q90": 1.5995
         },
         "consensus": {
           "n_agree": 3,
@@ -37,10 +37,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.563,
-          "last_pred_q50": 1.5761,
+          "mae": 1.5734,
+          "last_pred_q50": 1.608,
           "last_actual": -0.2832,
-          "last_error": 1.8594,
+          "last_error": 1.8912,
           "last_direction_ok": false,
           "date_from": "2026-06-22",
           "date_to": "2026-09-14"
