@@ -577,6 +577,291 @@ main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
 }
 
 /* ══════════════════════════════════════════════════════════════
+   Main navigation — one menu, built by ppmk.js on every page
+   ══════════════════════════════════════════════════════════════
+   One set of markup for both layouts rather than a desktop bar plus a
+   separate mobile copy: a second copy would mean two #lang-toggle ids in the
+   document, and the theme buttons would only ever wire up on the first. Wide
+   screens lay the panel out as a header row; narrow ones turn the same
+   element into a drawer. */
+.main-nav { display: flex; align-items: center; }
+.nav-panel { display: flex; align-items: center; gap: 0.75rem; }
+.nav-list {
+  display: flex; align-items: center; gap: 0.15rem;
+  list-style: none; margin: 0; padding: 0;
+}
+.nav-link {
+  display: inline-flex; align-items: center; padding: 6px 10px;
+  border-radius: 7px; font-size: 0.8rem; color: var(--text-muted);
+  text-decoration: none; white-space: nowrap;
+}
+.nav-link:hover { background: var(--bg-panel); color: var(--text); }
+.nav-link.active { color: var(--text); font-weight: 500; background: var(--accent-soft); }
+.nav-tools { display: flex; align-items: center; gap: 0.6rem; }
+
+/* The hamburger only exists below the breakpoint. */
+.nav-toggle { display: none; }
+.nav-bars { display: block; width: 18px; height: 13px; position: relative; }
+.nav-bars span {
+  position: absolute; left: 0; width: 100%; height: 2px; border-radius: 2px;
+  background: currentColor; transition: transform .18s ease, opacity .18s ease;
+}
+.nav-bars span:nth-child(1) { top: 0; }
+.nav-bars span:nth-child(2) { top: 5.5px; }
+.nav-bars span:nth-child(3) { top: 11px; }
+body.nav-open .nav-bars span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+body.nav-open .nav-bars span:nth-child(2) { opacity: 0; }
+body.nav-open .nav-bars span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+
+.nav-scrim {
+  position: fixed; inset: 0; z-index: 40;
+  background: rgb(0 0 0 / 0.45);
+}
+
+/* Every interactive element in the menu shows focus — the menu is the one
+   component a keyboard user has to pass through on every page. */
+.nav-link:focus-visible,
+.nav-toggle:focus-visible,
+.nav-tools .ghost-btn:focus-visible,
+.nav-tools .theme-btn:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    /* 44px: the smallest target that is comfortable on a phone. */
+    width: 44px; height: 44px; padding: 0;
+    border: 1px solid var(--border-em); border-radius: 8px;
+    background: transparent; color: var(--text-muted); cursor: pointer;
+  }
+  .nav-toggle:hover { background: var(--bg-panel); color: var(--text); }
+
+  .nav-panel {
+    position: fixed; z-index: 50; top: 0; right: 0; bottom: 0;
+    width: min(20rem, 84vw);
+    flex-direction: column; align-items: stretch; justify-content: flex-start;
+    gap: 0.25rem; padding: 4.5rem 1.1rem 1.5rem;
+    background: var(--bg-elev); border-left: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+    overflow-y: auto;
+    /* visibility, not opacity: this also removes the links from the tab
+       order, so a closed drawer cannot be tabbed into from behind the page. */
+    visibility: hidden; transform: translateX(100%);
+    transition: transform .22s ease, visibility .22s;
+  }
+  body.nav-open .nav-panel { visibility: visible; transform: translateX(0); }
+
+  .nav-list { flex-direction: column; align-items: stretch; gap: 0.15rem; }
+  .nav-link {
+    /* Full-width rows with a 44px target, rather than small inline pills. */
+    min-height: 44px; padding: 10px 12px; font-size: 0.92rem;
+  }
+  .nav-tools {
+    margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);
+    justify-content: space-between;
+  }
+  .nav-tools .ghost-btn { min-height: 44px; padding: 10px 16px; }
+  .nav-tools .theme-btn { min-width: 44px; min-height: 44px; }
+}
+
+@media (min-width: 721px) {
+  /* The drawer state must not survive a resize past the breakpoint. */
+  .nav-scrim { display: none; }
+}
+
+/* Honour a reduced-motion preference: the drawer still opens, it just does
+   not slide, and the hamburger does not animate into a cross. */
+@media (prefers-reduced-motion: reduce) {
+  .nav-panel, .nav-bars span { transition: none; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Min utveckling (portfolio.html)
+   ══════════════════════════════════════════════════════════════ */
+.pf-hero { margin: 0 0 1.5rem; }
+.pf-hero-label {
+  font-size: 0.72rem; color: var(--text-faint);
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+/* Proportional figures and the body sans, not the serif — a display face on a
+   hero number reads as decoration, and tabular-nums makes it look loose. */
+.pf-hero-value {
+  font-family: "IBM Plex Sans", sans-serif; font-size: 2.6rem; font-weight: 600;
+  letter-spacing: -0.02em; line-height: 1.1; margin-top: 0.15rem;
+  font-variant-numeric: proportional-nums;
+}
+.pf-hero-value.pos { color: var(--buy); }
+.pf-hero-value.neg { color: var(--sell); }
+.pf-hero-sub {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.78rem;
+  color: var(--text-muted); margin-top: 0.3rem;
+}
+.pf-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+  padding: 1.1rem 1.25rem 1.25rem; margin-bottom: 1.5rem; box-shadow: var(--shadow-sm);
+}
+.pf-card-title {
+  font-family: "IBM Plex Serif", serif; font-size: 1rem; font-weight: 500; margin: 0;
+}
+.pf-card-sub {
+  color: var(--text-muted); font-size: 0.8rem; line-height: 1.5;
+  margin: 0.3rem 0 1rem; max-width: 70ch;
+}
+/* The wrapper owns the tooltip's positioning context and is tall enough for
+   the x-axis band, so the card never grows an inner scrollbar. */
+.pf-chart-wrap { position: relative; width: 100%; }
+.pf-svg { display: block; overflow: visible; }
+.pf-grid { stroke: var(--border); stroke-width: 1; }
+.pf-axis { stroke: var(--border-em); stroke-width: 1; }
+.pf-tick {
+  fill: var(--text-faint); font-family: "IBM Plex Mono", monospace; font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.pf-seg-label { fill: var(--text-muted); font-size: 11px; font-weight: 500; }
+.pf-line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.pf-line.up { stroke: var(--buy); }
+.pf-line.down { stroke: var(--sell); }
+/* 2px surface ring so a marker stays readable where the line crosses it. */
+.pf-mark { fill: var(--accent); stroke: var(--bg-card); stroke-width: 2; }
+.pf-cross { stroke: var(--border-em); stroke-width: 1; }
+.pf-dot { fill: var(--text); stroke: var(--bg-card); stroke-width: 2; }
+#pf-hit { cursor: crosshair; }
+#pf-hit:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.pf-tip {
+  position: absolute; pointer-events: none; z-index: 5;
+  background: var(--bg-panel); border: 1px solid var(--border-em);
+  border-radius: 6px; padding: 8px 10px; min-width: 190px;
+  box-shadow: var(--shadow-md); font-size: 0.76rem;
+}
+.pf-tip-fund { font-weight: 600; margin-bottom: 4px; }
+.pf-tip-row { display: flex; justify-content: space-between; gap: 1.5rem; color: var(--text-muted); }
+.pf-tip-row span:last-child {
+  color: var(--text); font-family: "IBM Plex Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+.pf-table-wrap { overflow-x: auto; }
+.pf-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.pf-table th {
+  text-align: left; font-weight: 500; font-size: 0.72rem; color: var(--text-faint);
+  text-transform: uppercase; letter-spacing: 0.04em;
+  padding: 0 10px 8px; border-bottom: 1px solid var(--border); white-space: nowrap;
+}
+.pf-table td { padding: 9px 10px; border-bottom: 1px solid var(--border); }
+.pf-table tr:last-child td { border-bottom: 0; }
+.pf-num { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pf-table .pos { color: var(--buy); }
+.pf-table .neg { color: var(--sell); }
+.pf-ppm { color: var(--text-faint); font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; }
+.pf-word { color: var(--text-muted); font-family: "IBM Plex Sans", sans-serif; font-size: 0.72rem; }
+.pf-basis {
+  color: var(--text-faint); font-size: 0.75rem; line-height: 1.5;
+  margin: 1rem 0 0; max-width: 78ch;
+}
+.pf-warnings { margin-top: 1rem; }
+.pf-warn {
+  color: var(--hold); background: var(--hold-bg); border: 1px solid var(--hold);
+  border-radius: 6px; padding: 8px 12px; font-size: 0.8rem; margin: 0 0 0.5rem;
+}
+@media (max-width: 560px) {
+  .pf-hero-value { font-size: 2rem; }
+  .pf-card { padding: 0.9rem 0.85rem 1rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   "Mina fonder" panel — the front-page entry point
+   ══════════════════════════════════════════════════════════════ */
+.holdings-panel {
+  max-width: 1100px; margin: 0 auto 1.75rem; padding: 1.1rem 1.25rem 1.25rem;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 10px; box-shadow: var(--shadow-sm);
+}
+.holdings-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+}
+.holdings-title {
+  font-family: "IBM Plex Serif", serif; font-size: 1.05rem; font-weight: 500;
+  letter-spacing: -0.01em; margin: 0;
+}
+.holdings-link { font-size: 0.82rem; color: var(--accent); text-decoration: none; }
+.holdings-link:hover { text-decoration: underline; }
+.holdings-lede {
+  color: var(--text-muted); font-size: 0.83rem; line-height: 1.5;
+  margin: 0.4rem 0 0.9rem; max-width: 62ch;
+}
+.holdings-form { display: flex; gap: 0.75rem; align-items: flex-end; flex-wrap: wrap; }
+.holdings-field { display: flex; flex-direction: column; gap: 4px; }
+.holdings-label {
+  font-size: 0.7rem; color: var(--text-faint); text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.holdings-input {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.85rem;
+  padding: 7px 10px; min-width: 9rem;
+  background: var(--bg-sunken); color: var(--text);
+  border: 1px solid var(--border); border-radius: 6px;
+}
+.holdings-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.holdings-add {
+  font-size: 0.82rem; font-weight: 500; padding: 8px 16px;
+  border-radius: 6px; border: 1px solid var(--accent);
+  background: var(--accent); color: var(--bg); cursor: pointer;
+}
+.holdings-add:hover { background: var(--accent-2); border-color: var(--accent-2); }
+.holdings-error { color: var(--sell); font-size: 0.8rem; margin: 0.6rem 0 0; }
+.holdings-chips {
+  list-style: none; margin: 0.9rem 0 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+}
+.holdings-empty { color: var(--text-faint); font-size: 0.8rem; }
+.holdings-chip {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 5px 6px 5px 10px; border-radius: 999px;
+  background: var(--accent-soft); border: 1px solid var(--accent);
+  font-size: 0.78rem;
+}
+.holdings-chip-name { font-weight: 500; }
+.holdings-chip-date { font-family: "IBM Plex Mono", monospace; color: var(--text-muted); font-size: 0.72rem; }
+.holdings-chip-x {
+  border: 0; background: transparent; color: var(--text-muted); cursor: pointer;
+  /* 24px is the minimum comfortable hit target; the glyph is far smaller. */
+  width: 24px; height: 24px; border-radius: 50%; line-height: 1;
+}
+.holdings-chip-x:hover { background: var(--sell-bg); color: var(--sell); }
+@media (max-width: 560px) {
+  .holdings-form { flex-direction: column; align-items: stretch; }
+  .holdings-input { min-width: 0; width: 100%; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   Held funds — the reader's own holdings, marked wherever they appear
+   ══════════════════════════════════════════════════════════════
+   Deliberately drawn in --accent and never in buy/hold/sell: those four
+   are reserved for what the model says about a fund, and "I own this" is a
+   fact about the reader, not a recommendation. Tinting a held fund green
+   would read as the site endorsing it. */
+.ppm-held.fund-card,
+.ppm-held.ranking-card {
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, var(--accent-soft) 0%, transparent 140px);
+}
+tr.ppm-held > td { background: var(--accent-soft); }
+tr.ppm-held > td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+
+/* The pill itself, so the mark survives on a page with no card around it. */
+.action-btn.ppm-held,
+td.ppm-held { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+/* The one held right now, as opposed to one held earlier this year. Weight
+   and a marker rather than a second colour — a held/previously-held pair in
+   two similar accents is exactly the adjacent-pair confusion to avoid. */
+.ppm-held-current.fund-card,
+.ppm-held-current.ranking-card { border-left-width: 5px; }
+.action-btn.ppm-held-current::after,
+td.ppm-held-current::after { content: " ●"; color: var(--accent); }
+
+/* ══════════════════════════════════════════════════════════════
    Validation Page
    ══════════════════════════════════════════════════════════════ */
 
