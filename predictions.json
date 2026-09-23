@@ -18,15 +18,15 @@
         "name": "BGF Natural Resources A2",
         "tags": "Aktiefond, Branschfond, Råvaror",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316507",
-        "score": 93.109,
+        "score": 93.928,
         "hitrate_q50": 71.53,
         "coverage_pct": 68.61,
         "mae_q50": 0.5687,
         "signal": "HOLD",
         "forecast": {
-          "q10": -1.0276,
-          "q50": 0.8632,
-          "q90": 1.0514
+          "q10": -1.0241,
+          "q50": 0.888,
+          "q90": 1.1072
         },
         "consensus": {
           "n_agree": 2,
@@ -43,10 +43,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 2.0467,
-          "last_pred_q50": 1.5917,
+          "mae": 2.0727,
+          "last_pred_q50": 1.6186,
           "last_actual": -0.336,
-          "last_error": 1.9277,
+          "last_error": 1.9546,
           "last_direction_ok": false,
           "date_from": "2026-06-29",
           "date_to": "2026-09-21"
@@ -109,15 +109,15 @@
         "name": "BGF World Gold A2 USD",
         "tags": "Aktiefond, Branschfond, Ädelmetaller",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/492",
-        "score": 47.326,
+        "score": 47.868,
         "hitrate_q50": 56.84,
         "coverage_pct": 44.21,
         "mae_q50": 2.3888,
         "signal": "BUY",
         "forecast": {
-          "q10": -1.1694,
-          "q50": 1.5537,
-          "q90": 1.6784
+          "q10": -1.1289,
+          "q50": 1.5973,
+          "q90": 1.7272
         },
         "consensus": {
           "n_agree": 2,
@@ -138,10 +138,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 5.7732,
-          "last_pred_q50": 1.8373,
+          "mae": 5.8023,
+          "last_pred_q50": 1.8995,
           "last_actual": 1.2449,
-          "last_error": 0.5924,
+          "last_error": 0.6546,
           "last_direction_ok": true,
           "date_from": "2026-06-29",
           "date_to": "2026-09-21"
