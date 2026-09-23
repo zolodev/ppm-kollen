@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1782719220" />
+  <link rel="stylesheet" href="style.css?v1790119786" />
 </head>
 
 <body data-theme="auto">
@@ -39,6 +39,9 @@
         </span>
       </a>
       <div class="header-right">
+        <a class="ghost-btn" href="portfolio.html" title="Min utveckling" aria-label="Min utveckling">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M12 12l6-4"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg>
+        </a>
         <a class="ghost-btn" href="seasonality.html" title="Säsongsmönster" aria-label="Säsongsmönster">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
         </a>
@@ -110,8 +113,8 @@
     </a>
   </footer>
 
-  <script src="i18n.js?v1782722275"></script>
-  <script src="ppmk.js?v1782719220"></script>
+  <script src="i18n.js?v1790119786"></script>
+  <script src="ppmk.js?v1790119786"></script>
   <script>
     // ── i18n bridge ─────────────────────────────────────────────
     const t = key => ppmI18n.t("val_" + key) !== ("val_" + key) ? ppmI18n.t("val_" + key) : ppmI18n.t(key);
@@ -378,7 +381,7 @@
           const sigCls = sig === "BUY" ? "pos" : sig === "SELL" ? "neg" : "";
           const statusLabel = r.sticky ? t("rec_status_continuing") : t("rec_status_new");
           const statusCls = r.sticky ? "ok" : "good";
-          return `<tr>
+          return `<tr data-ppm="${esc(r.ppm_code || "")}">
             <td>${esc(r.date)}</td>
             <td>${esc(r.name || "—")}</td>
             <td>${r.ppm_code ? esc(r.ppm_code) : "—"}</td>

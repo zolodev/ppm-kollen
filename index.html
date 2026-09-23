@@ -26,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1782742771" />
+  <link rel="stylesheet" href="style.css?v1790119786" />
 </head>
 
 <body data-theme="auto">
@@ -58,6 +58,9 @@
         </span>
       </a>
       <div class="header-right">
+        <a class="ghost-btn" href="portfolio.html" title="Min utveckling" aria-label="Min utveckling">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M12 12l6-4"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/></svg>
+        </a>
         <a class="ghost-btn" href="validation.html" title="Modellvalidering" aria-label="Modellvalidering">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-6 4 4 5-8"/></svg>
         </a>
@@ -101,6 +104,31 @@
           rådgivning</strong> — ett utbildningsverktyg.</p>
     </section>
 
+    <section class="holdings-panel" id="holdings-panel">
+      <div class="holdings-head">
+        <h2 class="holdings-title" id="holdings-title">Mina fonder</h2>
+        <a class="holdings-link" href="portfolio.html" id="holdings-link">Min utveckling →</a>
+      </div>
+      <p class="holdings-lede" id="holdings-lede">
+        Fyll i fondnumret du har pengarna i, så markeras fonden överallt på sajten.
+        Byter du fond lägger du till den nya — sparas bara i den här webbläsaren.
+      </p>
+      <form class="holdings-form" id="holdings-form" autocomplete="off">
+        <label class="holdings-field">
+          <span class="holdings-label" id="holdings-ppm-label">Fondnummer</span>
+          <input class="holdings-input" id="holdings-ppm" name="ppm" inputmode="numeric"
+                 pattern="[0-9 ]*" maxlength="12" placeholder="502922" required>
+        </label>
+        <label class="holdings-field">
+          <span class="holdings-label" id="holdings-date-label">Gäller från</span>
+          <input class="holdings-input" id="holdings-date" name="from" type="date">
+        </label>
+        <button class="holdings-add" type="submit" id="holdings-add">Lägg till</button>
+      </form>
+      <p class="holdings-error" id="holdings-error" role="alert" hidden></p>
+      <ul class="holdings-chips" id="holdings-chips"></ul>
+    </section>
+
     <div id="app" aria-live="polite">
       <p class="state-msg">Laddar prognos…</p>
     </div>
@@ -140,8 +168,8 @@
     <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script src="i18n.js?v1782742771"></script>
-  <script src="ppmk.js?v1782742771"></script>
+  <script src="i18n.js?v1790119786"></script>
+  <script src="ppmk.js?v1790119786"></script>
   <script>
     (() => {
       "use strict";
@@ -422,7 +450,10 @@
           ? `<span class="hitrate-warn" title="${esc(t("ov_low_coverage_tip").replace("{min_cov}", String(_overview.min_coverage_pct ?? 60)))}" style="margin-left:6px">\u26a0</span>`
           : "";
         const name = nameLink + covWarn;
-        return `<tr>`
+        // data-ppm is what ppmk's highlighter anchors on \u2014 it marks the
+        // element and the row around it, so the overview needs no highlight
+        // code of its own.
+        return `<tr data-ppm="${esc(f.ppm_code || "")}">`
           + `<td class="ov-star">${f.recommended ? "\u2605" : ""}</td>`
           + `<td class="ov-ppm">${esc(f.ppm_code || "\u2014")}</td>`
           + `<td class="ov-name">${name}</td>`
@@ -533,7 +564,7 @@
             .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
           fetchOverview(base),
         ])
-          .then(([data, ov]) => { _overview = ov; render(data, folderName); })
+          .then(([data, ov]) => { _overview = ov; render(data, folderName); renderHoldings(); })
           .catch(err => { $("#app").innerHTML = `<p class="state-msg">${t("err_folder").replace("{folder}", esc(folderName)).replace("{err}", esc(err.message))}</p>`; });
       }
 
@@ -543,7 +574,7 @@
             .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
           fetchOverview(""),
         ])
-          .then(([data, ov]) => { _overview = ov; render(data, null); })
+          .then(([data, ov]) => { _overview = ov; render(data, null); renderHoldings(); })
           .catch(() => { $("#app").innerHTML = '<p class="state-msg">Kunde inte ladda predictions.json</p>'; });
       }
 
@@ -569,6 +600,14 @@
       function applyLangToStaticElements() {
         const eyebrow = document.querySelector(".hero-eyebrow");
         if (eyebrow) eyebrow.textContent = t("hero_eyebrow");
+        [["holdings-title", "holdings_title"], ["holdings-link", "holdings_link"],
+         ["holdings-lede", "holdings_lede"], ["holdings-ppm-label", "holdings_ppm_label"],
+         ["holdings-date-label", "holdings_date_label"], ["holdings-add", "holdings_add"],
+        ].forEach(([id, key]) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = t(key);
+        });
+        renderHoldings();
         const heroTitle = document.querySelector(".hero-title");
         if (heroTitle) heroTitle.innerHTML = t("hero_title_html");
         const heroLede = document.querySelector(".hero-lede");
@@ -578,9 +617,82 @@
         const headerDate = document.querySelector("#header-date");
         if (headerDate) headerDate.textContent = t("fund_forecast");
       }
+      // ── Mina fonder ───────────────────────────────────────────
+      // The store, the highlighting and the cross-tab sync all live in
+      // ppmk.js; this is only the form around them, so portfolio.html can
+      // reuse the same store without importing anything from here.
+      function holdingsChipHtml(entry, year, name) {
+        const label = name ? `${esc(name)} · ${esc(entry.ppm)}` : esc(entry.ppm);
+        return `<li class="holdings-chip"><span class="holdings-chip-name">${label}</span>`
+          + `<span class="holdings-chip-date">${esc(entry.from)}</span>`
+          + `<button class="holdings-chip-x" type="button" data-hold-remove="${esc(entry.ppm)}"`
+          + ` data-hold-year="${esc(year)}" data-hold-from="${esc(entry.from)}"`
+          + ` aria-label="${esc(t("holdings_remove"))} ${esc(entry.ppm)}">✕</button></li>`;
+      }
+
+      function renderHoldings() {
+        const list = document.getElementById("holdings-chips");
+        if (!list || !window.ppmk || !ppmk.holdings) return;
+        const years = ppmk.holdings.all().filter(y => y.entries.length);
+        if (!years.length) {
+          list.innerHTML = `<li class="holdings-empty">${esc(t("holdings_empty"))}</li>`;
+          return;
+        }
+        // Name comes from overview.json when it has loaded — a bare number is
+        // hard to recognise as your own fund, but the chip must not wait for
+        // the fetch either.
+        const byPpm = {};
+        ((_overview && _overview.funds) || []).forEach(f => { byPpm[f.ppm_code] = f.name; });
+        list.innerHTML = years.map(y =>
+          y.entries.map(e => holdingsChipHtml(e, y.year, byPpm[e.ppm])).join("")
+        ).join("");
+      }
+
+      function initHoldings() {
+        const form = document.getElementById("holdings-form");
+        const dateInput = document.getElementById("holdings-date");
+        const errEl = document.getElementById("holdings-error");
+        if (!form || !window.ppmk || !ppmk.holdings) return;
+        if (dateInput && !dateInput.value) dateInput.value = ppmk.today();
+
+        function showError(msg) {
+          if (!errEl) return;
+          errEl.textContent = msg;
+          errEl.hidden = !msg;
+        }
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const ppmEl = document.getElementById("holdings-ppm");
+          const code = String(ppmEl.value || "").replace(/\D/g, "");
+          if (!code) { showError(t("holdings_err_empty")); return; }
+          // Checked against overview.json, which lists every fund the run
+          // scored — a typo would otherwise sit in storage highlighting
+          // nothing and quietly break the summary page's maths.
+          const known = (_overview && _overview.funds || []).some(f => f.ppm_code === code);
+          if (_overview && !known) { showError(t("holdings_err_unknown").replace("{code}", code)); return; }
+          const added = ppmk.holdings.add(code, dateInput && dateInput.value);
+          if (!added) { showError(t("holdings_err_dup")); return; }
+          showError("");
+          ppmEl.value = "";
+          renderHoldings();
+        });
+
+        document.addEventListener("click", (e) => {
+          const x = e.target.closest("[data-hold-remove]");
+          if (!x) return;
+          ppmk.holdings.remove(x.dataset.holdYear, x.dataset.holdRemove, x.dataset.holdFrom);
+          renderHoldings();
+        });
+
+        ppmk.holdings.onChange(renderHoldings);
+        renderHoldings();
+      }
+
       // Init immediately — no dependency on i18n for data loading
       initDelegates();
       initLightbox();
+      initHoldings();
       bootstrap();
 
       // Language switch — re-render with new translations
