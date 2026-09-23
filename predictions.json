@@ -18,15 +18,15 @@
         "name": "BGF Natural Resources A2",
         "tags": "Aktiefond, Branschfond, Råvaror",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316507",
-        "score": 88.939,
+        "score": 91.17,
         "hitrate_q50": 70.07,
         "coverage_pct": 67.15,
         "mae_q50": 0.5636,
         "signal": "HOLD",
         "forecast": {
-          "q10": -0.8555,
-          "q50": 0.7776,
-          "q90": 1.0792
+          "q10": -1.0275,
+          "q50": 0.8632,
+          "q90": 1.0514
         },
         "consensus": {
           "n_agree": 2,
@@ -43,10 +43,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.9131,
-          "last_pred_q50": 1.5998,
+          "mae": 2.0467,
+          "last_pred_q50": 1.5917,
           "last_actual": -0.336,
-          "last_error": 1.9358,
+          "last_error": 1.9277,
           "last_direction_ok": false,
           "date_from": "2026-06-29",
           "date_to": "2026-09-21"
@@ -64,23 +64,27 @@
         "name": "BGF World Gold A2 USD",
         "tags": "Aktiefond, Branschfond, Ädelmetaller",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/492",
-        "score": 71.599,
+        "score": 61.279,
         "hitrate_q50": 56.84,
         "coverage_pct": 66.84,
         "mae_q50": 2.0073,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.9962,
-          "q50": 2.3025,
-          "q90": 2.0516
+          "q10": -1.1694,
+          "q50": 1.5537,
+          "q90": 1.6785
         },
         "consensus": {
-          "n_agree": 3,
+          "n_agree": 2,
           "n_models": 3,
-          "n_up": 3,
-          "n_down": 0
+          "n_up": 2,
+          "n_down": 1
         },
         "warnings": [
+          {
+            "reason": "consensus",
+            "detail": "2↑ 1↓ of 3 models"
+          },
           {
             "reason": "backtest",
             "detail": "backtest 58.3% < 60%"
@@ -89,15 +93,15 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 5.9818,
-          "last_pred_q50": 2.6863,
+          "mae": 5.7732,
+          "last_pred_q50": 1.8373,
           "last_actual": 1.2449,
-          "last_error": 1.4413,
+          "last_error": 0.5924,
           "last_direction_ok": true,
           "date_from": "2026-06-29",
           "date_to": "2026-09-21"
         },
-        "rationale": "57% hit-rate; 2.007pp MAE; 3/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "57% hit-rate; 2.007pp MAE; 2/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-09-23/492/h1w_ensemble.png",
           "individual": "top-2026-09-23/492/h1w_individual.png"
@@ -109,23 +113,27 @@
         "name": "BGF World Mining A2",
         "tags": "Aktiefond, Branschfond, Råvaror",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2821",
-        "score": 57.052,
+        "score": 50.167,
         "hitrate_q50": 54.74,
         "coverage_pct": 58.95,
         "mae_q50": 1.3569,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.8941,
-          "q50": 1.1161,
-          "q90": 1.1964
+          "q10": -0.9966,
+          "q50": 0.7496,
+          "q90": 0.6935
         },
         "consensus": {
-          "n_agree": 3,
+          "n_agree": 2,
           "n_models": 3,
-          "n_up": 3,
-          "n_down": 0
+          "n_up": 2,
+          "n_down": 1
         },
         "warnings": [
+          {
+            "reason": "consensus",
+            "detail": "2↑ 1↓ of 3 models"
+          },
           {
             "reason": "backtest",
             "detail": "backtest 58.3% < 60%"
@@ -134,15 +142,15 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 3.8935,
-          "last_pred_q50": 2.2136,
+          "mae": 3.5256,
+          "last_pred_q50": 1.1672,
           "last_actual": 1.0638,
-          "last_error": 1.1498,
+          "last_error": 0.1034,
           "last_direction_ok": true,
           "date_from": "2026-06-29",
           "date_to": "2026-09-21"
         },
-        "rationale": "55% hit-rate; 1.357pp MAE; 3/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "55% hit-rate; 1.357pp MAE; 2/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-09-23/2821/h1w_ensemble.png",
           "individual": "top-2026-09-23/2821/h1w_individual.png"
@@ -525,19 +533,19 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "316507",
-        "ppm_code": "536806",
-        "name": "BGF Natural Resources A2",
-        "tags": "Aktiefond, Branschfond, Råvaror",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316507",
-        "hitrate_q50": 70.07,
-        "coverage_pct": 67.15,
-        "mae_q50": 0.5636,
-        "forecast_q50": 1.5998,
-        "forecast_q10": 0.105,
-        "forecast_q90": 2.4121,
-        "last_actual": -0.336,
-        "momentum_4w": -0.1131,
+        "fund_id": "1509086",
+        "ppm_code": "183343",
+        "name": "DNB Teknologi S",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+        "hitrate_q50": 86.67,
+        "coverage_pct": 33.33,
+        "mae_q50": 1.2053,
+        "forecast_q50": 1.9835,
+        "forecast_q10": 1.1968,
+        "forecast_q90": 2.3985,
+        "last_actual": 1.8674,
+        "momentum_4w": 1.4511,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
