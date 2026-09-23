@@ -26,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1790119786" />
+  <link rel="stylesheet" href="style.css?v1790140864" />
 </head>
 
 <body data-theme="auto">
@@ -168,8 +168,8 @@
     <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script src="i18n.js?v1790119786"></script>
-  <script src="ppmk.js?v1790119786"></script>
+  <script src="i18n.js?v1790140864"></script>
+  <script src="ppmk.js?v1790140864"></script>
   <script>
     (() => {
       "use strict";
@@ -343,10 +343,28 @@
         if (!con) return "";
         const n_agree = con.n_agree ?? 0, n_models = con.n_models ?? 0;
         const n_up = con.n_up ?? 0, n_down = con.n_down ?? 0;
+        const names = (con.models || []).join(", ");
+        // One model agreeing with itself is not a consensus, and "1/1 ↑" read
+        // as unanimity — the opposite of what it means. A fund with too
+        // little history to build 104-week sequences has no LSTM/GRU/TCN and
+        // is carried by XGBoost alone; say that instead of scoring it.
+        if (n_models < 2) {
+          const tip = t("tip_single_model").replace("{models}", names || "—");
+          return `<div class="metric"><span class="metric-label">${t("metric_models")} <span class="metric-info" data-tip="${esc(tip)}">?</span></span>`
+            + `<span class="metric-value warn">${n_models}</span>`
+            + `<span class="metric-hint">${esc(names || "—")}</span></div>`;
+        }
         const pct = n_models > 0 ? (n_agree / n_models * 100) : 0;
         const dir = n_up >= n_down ? "↑" : "↓";
         const cls = pct >= 75 ? "good" : "warn";
-        return `<div class="metric"><span class="metric-label">Konsensus <span class="metric-info" data-tip="Hur många av de ${n_models} modellerna är överens om riktning. ${n_up}↑ upp, ${n_down}↓ ned. Under 75% enighet visas en varning — fonden rankas fortfarande.">?</span></span><span class="metric-value ${cls}">${n_agree}/${n_models} ${dir}</span>${barHtml(pct, 100, cls)}</div>`;
+        // n_models is the voting count after the even-set thinning, which is
+        // why four available models show as three here.
+        const tip = t("tip_consensus")
+          .replace("{n}", String(n_models))
+          .replace("{up}", String(n_up))
+          .replace("{down}", String(n_down))
+          .replace("{models}", names || "—");
+        return `<div class="metric"><span class="metric-label">Konsensus <span class="metric-info" data-tip="${esc(tip)}">?</span></span><span class="metric-value ${cls}">${n_agree}/${n_models} ${dir}</span>${barHtml(pct, 100, cls)}</div>`;
       }
 
       function fundCardHtml(fund, rank, hKey) {
