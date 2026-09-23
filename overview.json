@@ -6,9 +6,26 @@
   "counts": {
     "total": 237,
     "recommended": 3,
-    "low_coverage": 54
+    "low_coverage": 128
   },
   "funds": [
+    {
+      "fund_id": "1509086",
+      "ppm_code": "183343",
+      "name": "DNB Teknologi S",
+      "tags": "Aktiefond, Branschfond, Ny teknik",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+      "change_pct": 1.867,
+      "direction": "up",
+      "streak": 2,
+      "streak_dir": "up",
+      "momentum_4w": 1.451,
+      "trend": "up",
+      "hitrate_q50": 86.67,
+      "coverage_pct": 26.67,
+      "recommended": true,
+      "low_coverage": true
+    },
     {
       "fund_id": "492",
       "ppm_code": "338590",
@@ -22,24 +39,7 @@
       "momentum_4w": 0.366,
       "trend": "flat",
       "hitrate_q50": 56.84,
-      "coverage_pct": 66.84,
-      "recommended": true,
-      "low_coverage": false
-    },
-    {
-      "fund_id": "2821",
-      "ppm_code": "481911",
-      "name": "BGF World Mining A2",
-      "tags": "Aktiefond, Branschfond, Råvaror",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2821",
-      "change_pct": 1.064,
-      "direction": "up",
-      "streak": 2,
-      "streak_dir": "up",
-      "momentum_4w": -0.34,
-      "trend": "flat",
-      "hitrate_q50": 54.74,
-      "coverage_pct": 58.95,
+      "coverage_pct": 44.21,
       "recommended": true,
       "low_coverage": true
     },
@@ -55,8 +55,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.113,
       "trend": "flat",
-      "hitrate_q50": 70.07,
-      "coverage_pct": 67.15,
+      "hitrate_q50": 71.53,
+      "coverage_pct": 68.61,
       "recommended": true,
       "low_coverage": false
     },
@@ -72,7 +72,7 @@
       "streak_dir": "up",
       "momentum_4w": 2.836,
       "trend": "up",
-      "hitrate_q50": 82.53,
+      "hitrate_q50": 74.1,
       "coverage_pct": 19.88,
       "recommended": false,
       "low_coverage": true
@@ -89,10 +89,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.577,
       "trend": "up",
-      "hitrate_q50": 78.42,
-      "coverage_pct": 66.84,
+      "hitrate_q50": 76.84,
+      "coverage_pct": 56.84,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "364",
@@ -106,8 +106,8 @@
       "streak_dir": "up",
       "momentum_4w": 2.62,
       "trend": "up",
-      "hitrate_q50": 77.37,
-      "coverage_pct": 75.26,
+      "hitrate_q50": 78.42,
+      "coverage_pct": 66.32,
       "recommended": false,
       "low_coverage": false
     },
@@ -123,10 +123,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.817,
       "trend": "up",
-      "hitrate_q50": 72.63,
-      "coverage_pct": 65.79,
+      "hitrate_q50": 75.26,
+      "coverage_pct": 59.47,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2294",
@@ -140,10 +140,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.242,
       "trend": "up",
-      "hitrate_q50": 65.79,
-      "coverage_pct": 64.74,
+      "hitrate_q50": 66.32,
+      "coverage_pct": 52.11,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2187",
@@ -157,10 +157,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.974,
       "trend": "up",
-      "hitrate_q50": 74.21,
-      "coverage_pct": 67.37,
+      "hitrate_q50": 73.68,
+      "coverage_pct": 59.47,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "130487",
@@ -175,7 +175,7 @@
       "momentum_4w": 0.288,
       "trend": "flat",
       "hitrate_q50": 61.82,
-      "coverage_pct": 90.3,
+      "coverage_pct": 92.12,
       "recommended": false,
       "low_coverage": false
     },
@@ -191,10 +191,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.279,
       "trend": "up",
-      "hitrate_q50": 64.21,
-      "coverage_pct": 65.79,
+      "hitrate_q50": 62.63,
+      "coverage_pct": 55.79,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "364655",
@@ -209,7 +209,7 @@
       "momentum_4w": 1.708,
       "trend": "up",
       "hitrate_q50": 70.73,
-      "coverage_pct": 69.92,
+      "coverage_pct": 83.74,
       "recommended": false,
       "low_coverage": false
     },
@@ -225,8 +225,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.136,
       "trend": "flat",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 68.42,
+      "hitrate_q50": 66.32,
+      "coverage_pct": 60.0,
       "recommended": false,
       "low_coverage": false
     },
@@ -242,8 +242,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.551,
       "trend": "up",
-      "hitrate_q50": 75.73,
-      "coverage_pct": 77.67,
+      "hitrate_q50": 77.67,
+      "coverage_pct": 84.47,
       "recommended": false,
       "low_coverage": false
     },
@@ -276,8 +276,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.677,
       "trend": "up",
-      "hitrate_q50": 63.16,
-      "coverage_pct": 51.05,
+      "hitrate_q50": 60.53,
+      "coverage_pct": 35.26,
       "recommended": false,
       "low_coverage": true
     },
@@ -293,8 +293,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.359,
       "trend": "flat",
-      "hitrate_q50": 64.74,
-      "coverage_pct": 58.42,
+      "hitrate_q50": 65.26,
+      "coverage_pct": 53.68,
       "recommended": false,
       "low_coverage": true
     },
@@ -311,7 +311,7 @@
       "momentum_4w": 1.646,
       "trend": "up",
       "hitrate_q50": 71.58,
-      "coverage_pct": 56.32,
+      "coverage_pct": 45.79,
       "recommended": false,
       "low_coverage": true
     },
@@ -327,8 +327,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.543,
       "trend": "up",
-      "hitrate_q50": 85.54,
-      "coverage_pct": 67.47,
+      "hitrate_q50": 77.11,
+      "coverage_pct": 74.7,
       "recommended": false,
       "low_coverage": false
     },
@@ -344,8 +344,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.3,
       "trend": "flat",
-      "hitrate_q50": 71.43,
-      "coverage_pct": 82.14,
+      "hitrate_q50": 69.64,
+      "coverage_pct": 81.55,
       "recommended": false,
       "low_coverage": false
     },
@@ -361,10 +361,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.275,
       "trend": "up",
-      "hitrate_q50": 78.42,
-      "coverage_pct": 67.89,
+      "hitrate_q50": 79.47,
+      "coverage_pct": 55.26,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "266309",
@@ -378,8 +378,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.584,
       "trend": "up",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 72.14,
+      "hitrate_q50": 71.43,
+      "coverage_pct": 73.57,
       "recommended": false,
       "low_coverage": false
     },
@@ -395,8 +395,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.612,
       "trend": "up",
-      "hitrate_q50": 74.21,
-      "coverage_pct": 47.89,
+      "hitrate_q50": 65.79,
+      "coverage_pct": 45.26,
       "recommended": false,
       "low_coverage": true
     },
@@ -412,10 +412,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.625,
       "trend": "up",
-      "hitrate_q50": 75.26,
-      "coverage_pct": 62.63,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 57.37,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "181108",
@@ -429,8 +429,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.301,
       "trend": "up",
-      "hitrate_q50": 75.0,
-      "coverage_pct": 58.97,
+      "hitrate_q50": 79.49,
+      "coverage_pct": 48.72,
       "recommended": false,
       "low_coverage": true
     },
@@ -446,8 +446,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.042,
       "trend": "flat",
-      "hitrate_q50": 67.38,
-      "coverage_pct": 77.54,
+      "hitrate_q50": 66.31,
+      "coverage_pct": 76.47,
       "recommended": false,
       "low_coverage": false
     },
@@ -463,8 +463,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.599,
       "trend": "up",
-      "hitrate_q50": 67.72,
-      "coverage_pct": 78.31,
+      "hitrate_q50": 65.61,
+      "coverage_pct": 75.66,
       "recommended": false,
       "low_coverage": false
     },
@@ -480,8 +480,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.418,
       "trend": "up",
-      "hitrate_q50": 80.0,
-      "coverage_pct": 70.0,
+      "hitrate_q50": 78.89,
+      "coverage_pct": 80.0,
       "recommended": false,
       "low_coverage": false
     },
@@ -497,8 +497,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.453,
       "trend": "up",
-      "hitrate_q50": 80.77,
-      "coverage_pct": 21.15,
+      "hitrate_q50": 75.0,
+      "coverage_pct": 38.46,
       "recommended": false,
       "low_coverage": true
     },
@@ -514,8 +514,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.067,
       "trend": "flat",
-      "hitrate_q50": 72.11,
-      "coverage_pct": 72.11,
+      "hitrate_q50": 70.0,
+      "coverage_pct": 60.0,
       "recommended": false,
       "low_coverage": false
     },
@@ -531,8 +531,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.056,
       "trend": "flat",
-      "hitrate_q50": 84.44,
-      "coverage_pct": 75.56,
+      "hitrate_q50": 87.78,
+      "coverage_pct": 68.89,
       "recommended": false,
       "low_coverage": false
     },
@@ -548,8 +548,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.414,
       "trend": "flat",
-      "hitrate_q50": 76.92,
-      "coverage_pct": 52.56,
+      "hitrate_q50": 80.77,
+      "coverage_pct": 47.44,
       "recommended": false,
       "low_coverage": true
     },
@@ -566,9 +566,9 @@
       "momentum_4w": 0.924,
       "trend": "up",
       "hitrate_q50": 77.89,
-      "coverage_pct": 65.26,
+      "coverage_pct": 51.58,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "596636",
@@ -582,10 +582,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.211,
       "trend": "up",
-      "hitrate_q50": 77.78,
-      "coverage_pct": 66.67,
+      "hitrate_q50": 83.33,
+      "coverage_pct": 56.67,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "372",
@@ -600,7 +600,7 @@
       "momentum_4w": 0.793,
       "trend": "up",
       "hitrate_q50": 74.74,
-      "coverage_pct": 70.53,
+      "coverage_pct": 62.63,
       "recommended": false,
       "low_coverage": false
     },
@@ -616,8 +616,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.537,
       "trend": "up",
-      "hitrate_q50": 81.53,
-      "coverage_pct": 70.06,
+      "hitrate_q50": 83.44,
+      "coverage_pct": 62.42,
       "recommended": false,
       "low_coverage": false
     },
@@ -633,10 +633,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.198,
       "trend": "up",
-      "hitrate_q50": 76.32,
-      "coverage_pct": 65.26,
+      "hitrate_q50": 79.47,
+      "coverage_pct": 47.89,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2010",
@@ -650,8 +650,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.579,
       "trend": "up",
-      "hitrate_q50": 62.11,
-      "coverage_pct": 55.79,
+      "hitrate_q50": 64.21,
+      "coverage_pct": 48.42,
       "recommended": false,
       "low_coverage": true
     },
@@ -667,8 +667,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.963,
       "trend": "up",
-      "hitrate_q50": 72.67,
-      "coverage_pct": 50.0,
+      "hitrate_q50": 76.16,
+      "coverage_pct": 37.79,
       "recommended": false,
       "low_coverage": true
     },
@@ -684,8 +684,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.52,
       "trend": "up",
-      "hitrate_q50": 60.0,
-      "coverage_pct": 50.53,
+      "hitrate_q50": 61.05,
+      "coverage_pct": 48.42,
       "recommended": false,
       "low_coverage": true
     },
@@ -701,8 +701,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.703,
       "trend": "up",
-      "hitrate_q50": 54.8,
-      "coverage_pct": 72.32,
+      "hitrate_q50": 63.28,
+      "coverage_pct": 63.28,
       "recommended": false,
       "low_coverage": false
     },
@@ -718,10 +718,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.464,
       "trend": "flat",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 62.63,
+      "hitrate_q50": 71.05,
+      "coverage_pct": 54.21,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1029",
@@ -735,10 +735,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.7,
       "trend": "up",
-      "hitrate_q50": 75.26,
-      "coverage_pct": 75.26,
+      "hitrate_q50": 76.84,
+      "coverage_pct": 43.68,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "431",
@@ -752,10 +752,10 @@
       "streak_dir": "up",
       "momentum_4w": 2.12,
       "trend": "up",
-      "hitrate_q50": 38.42,
-      "coverage_pct": 68.95,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 50.53,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "600075",
@@ -769,8 +769,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.967,
       "trend": "up",
-      "hitrate_q50": 82.02,
-      "coverage_pct": 74.16,
+      "hitrate_q50": 76.4,
+      "coverage_pct": 64.04,
       "recommended": false,
       "low_coverage": false
     },
@@ -786,8 +786,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.078,
       "trend": "flat",
-      "hitrate_q50": 73.16,
-      "coverage_pct": 85.26,
+      "hitrate_q50": 71.05,
+      "coverage_pct": 72.11,
       "recommended": false,
       "low_coverage": false
     },
@@ -803,10 +803,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.595,
       "trend": "up",
-      "hitrate_q50": 74.74,
-      "coverage_pct": 65.26,
+      "hitrate_q50": 77.37,
+      "coverage_pct": 44.74,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "209089",
@@ -820,25 +820,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.386,
       "trend": "flat",
-      "hitrate_q50": 70.78,
-      "coverage_pct": 40.26,
-      "recommended": false,
-      "low_coverage": true
-    },
-    {
-      "fund_id": "1509086",
-      "ppm_code": "183343",
-      "name": "DNB Teknologi S",
-      "tags": "Aktiefond, Branschfond, Ny teknik",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
-      "change_pct": 1.867,
-      "direction": "up",
-      "streak": 2,
-      "streak_dir": "up",
-      "momentum_4w": 1.451,
-      "trend": "up",
-      "hitrate_q50": 86.67,
-      "coverage_pct": 33.33,
+      "hitrate_q50": 66.88,
+      "coverage_pct": 37.66,
       "recommended": false,
       "low_coverage": true
     },
@@ -854,10 +837,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.409,
       "trend": "up",
-      "hitrate_q50": 67.89,
-      "coverage_pct": 75.26,
+      "hitrate_q50": 64.21,
+      "coverage_pct": 55.79,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "396",
@@ -871,10 +854,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.774,
       "trend": "up",
-      "hitrate_q50": 79.47,
-      "coverage_pct": 63.68,
+      "hitrate_q50": 80.0,
+      "coverage_pct": 41.58,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "43947",
@@ -888,8 +871,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.597,
       "trend": "up",
-      "hitrate_q50": 67.38,
-      "coverage_pct": 48.13,
+      "hitrate_q50": 72.73,
+      "coverage_pct": 41.71,
       "recommended": false,
       "low_coverage": true
     },
@@ -905,10 +888,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.651,
       "trend": "up",
-      "hitrate_q50": 76.32,
-      "coverage_pct": 75.79,
+      "hitrate_q50": 77.89,
+      "coverage_pct": 45.79,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2138",
@@ -922,10 +905,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.113,
       "trend": "up",
-      "hitrate_q50": 68.95,
-      "coverage_pct": 64.74,
+      "hitrate_q50": 65.26,
+      "coverage_pct": 55.26,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "247",
@@ -939,10 +922,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.609,
       "trend": "up",
-      "hitrate_q50": 74.74,
-      "coverage_pct": 78.95,
+      "hitrate_q50": 75.79,
+      "coverage_pct": 51.05,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "142",
@@ -956,8 +939,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.328,
       "trend": "up",
-      "hitrate_q50": 66.84,
-      "coverage_pct": 57.89,
+      "hitrate_q50": 62.11,
+      "coverage_pct": 56.84,
       "recommended": false,
       "low_coverage": true
     },
@@ -973,10 +956,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.18,
       "trend": "flat",
-      "hitrate_q50": 69.47,
-      "coverage_pct": 61.58,
+      "hitrate_q50": 64.74,
+      "coverage_pct": 50.53,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "187",
@@ -990,10 +973,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.548,
       "trend": "up",
-      "hitrate_q50": 69.84,
-      "coverage_pct": 68.25,
+      "hitrate_q50": 67.72,
+      "coverage_pct": 53.97,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "68",
@@ -1007,8 +990,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.286,
       "trend": "flat",
-      "hitrate_q50": 64.21,
-      "coverage_pct": 46.84,
+      "hitrate_q50": 66.84,
+      "coverage_pct": 51.05,
       "recommended": false,
       "low_coverage": true
     },
@@ -1024,10 +1007,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.37,
       "trend": "flat",
-      "hitrate_q50": 51.58,
-      "coverage_pct": 66.84,
+      "hitrate_q50": 72.11,
+      "coverage_pct": 53.16,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2384",
@@ -1041,10 +1024,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.839,
       "trend": "up",
-      "hitrate_q50": 74.74,
-      "coverage_pct": 68.95,
+      "hitrate_q50": 76.84,
+      "coverage_pct": 52.63,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2186",
@@ -1058,10 +1041,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.288,
       "trend": "up",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 72.63,
+      "hitrate_q50": 67.37,
+      "coverage_pct": 54.74,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "137448",
@@ -1076,7 +1059,7 @@
       "momentum_4w": 0.269,
       "trend": "flat",
       "hitrate_q50": 72.29,
-      "coverage_pct": 57.23,
+      "coverage_pct": 51.2,
       "recommended": false,
       "low_coverage": true
     },
@@ -1092,8 +1075,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.745,
       "trend": "up",
-      "hitrate_q50": 76.5,
-      "coverage_pct": 69.95,
+      "hitrate_q50": 67.21,
+      "coverage_pct": 61.2,
       "recommended": false,
       "low_coverage": false
     },
@@ -1109,10 +1092,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.205,
       "trend": "flat",
-      "hitrate_q50": 78.22,
-      "coverage_pct": 71.29,
+      "hitrate_q50": 82.18,
+      "coverage_pct": 58.42,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1573",
@@ -1126,10 +1109,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.234,
       "trend": "up",
-      "hitrate_q50": 56.32,
-      "coverage_pct": 61.05,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 38.95,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2253",
@@ -1143,10 +1126,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.539,
       "trend": "up",
-      "hitrate_q50": 76.84,
-      "coverage_pct": 66.84,
+      "hitrate_q50": 78.42,
+      "coverage_pct": 52.63,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "512559",
@@ -1160,8 +1143,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.193,
       "trend": "up",
-      "hitrate_q50": 64.0,
-      "coverage_pct": 47.0,
+      "hitrate_q50": 72.0,
+      "coverage_pct": 42.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -1177,10 +1160,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.387,
       "trend": "flat",
-      "hitrate_q50": 65.26,
-      "coverage_pct": 71.58,
+      "hitrate_q50": 64.74,
+      "coverage_pct": 58.42,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1892",
@@ -1194,10 +1177,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.068,
       "trend": "flat",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 75.26,
+      "hitrate_q50": 70.53,
+      "coverage_pct": 58.42,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "523895",
@@ -1211,8 +1194,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.688,
       "trend": "up",
-      "hitrate_q50": 82.83,
-      "coverage_pct": 82.83,
+      "hitrate_q50": 69.7,
+      "coverage_pct": 69.7,
       "recommended": false,
       "low_coverage": false
     },
@@ -1229,7 +1212,7 @@
       "momentum_4w": 0.018,
       "trend": "flat",
       "hitrate_q50": 61.58,
-      "coverage_pct": 47.89,
+      "coverage_pct": 40.53,
       "recommended": false,
       "low_coverage": true
     },
@@ -1245,8 +1228,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.332,
       "trend": "up",
-      "hitrate_q50": 73.57,
-      "coverage_pct": 71.43,
+      "hitrate_q50": 71.43,
+      "coverage_pct": 61.43,
       "recommended": false,
       "low_coverage": false
     },
@@ -1262,8 +1245,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.416,
       "trend": "up",
-      "hitrate_q50": 73.16,
-      "coverage_pct": 43.16,
+      "hitrate_q50": 64.74,
+      "coverage_pct": 54.74,
       "recommended": false,
       "low_coverage": true
     },
@@ -1279,10 +1262,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.091,
       "trend": "flat",
-      "hitrate_q50": 65.26,
-      "coverage_pct": 81.58,
+      "hitrate_q50": 61.58,
+      "coverage_pct": 58.42,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2014",
@@ -1296,8 +1279,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.375,
       "trend": "flat",
-      "hitrate_q50": 64.74,
-      "coverage_pct": 54.21,
+      "hitrate_q50": 62.63,
+      "coverage_pct": 41.58,
       "recommended": false,
       "low_coverage": true
     },
@@ -1313,10 +1296,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.338,
       "trend": "flat",
-      "hitrate_q50": 77.37,
-      "coverage_pct": 82.11,
+      "hitrate_q50": 79.47,
+      "coverage_pct": 57.37,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2006",
@@ -1330,8 +1313,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.101,
       "trend": "flat",
-      "hitrate_q50": 63.68,
-      "coverage_pct": 47.37,
+      "hitrate_q50": 62.63,
+      "coverage_pct": 44.21,
       "recommended": false,
       "low_coverage": true
     },
@@ -1347,10 +1330,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.094,
       "trend": "flat",
-      "hitrate_q50": 65.22,
-      "coverage_pct": 62.11,
+      "hitrate_q50": 63.35,
+      "coverage_pct": 55.28,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "118",
@@ -1364,10 +1347,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.363,
       "trend": "flat",
-      "hitrate_q50": 71.12,
-      "coverage_pct": 58.29,
+      "hitrate_q50": 67.91,
+      "coverage_pct": 61.5,
       "recommended": false,
-      "low_coverage": true
+      "low_coverage": false
     },
     {
       "fund_id": "315116",
@@ -1381,8 +1364,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.047,
       "trend": "flat",
-      "hitrate_q50": 72.18,
-      "coverage_pct": 72.93,
+      "hitrate_q50": 75.94,
+      "coverage_pct": 75.94,
       "recommended": false,
       "low_coverage": false
     },
@@ -1398,8 +1381,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.194,
       "trend": "up",
-      "hitrate_q50": 74.14,
-      "coverage_pct": 70.69,
+      "hitrate_q50": 81.03,
+      "coverage_pct": 62.07,
       "recommended": false,
       "low_coverage": false
     },
@@ -1415,8 +1398,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.075,
       "trend": "flat",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 72.11,
+      "hitrate_q50": 69.47,
+      "coverage_pct": 61.58,
       "recommended": false,
       "low_coverage": false
     },
@@ -1433,7 +1416,7 @@
       "momentum_4w": 1.25,
       "trend": "up",
       "hitrate_q50": 67.37,
-      "coverage_pct": 57.37,
+      "coverage_pct": 53.16,
       "recommended": false,
       "low_coverage": true
     },
@@ -1449,7 +1432,7 @@
       "streak_dir": "up",
       "momentum_4w": 0.055,
       "trend": "flat",
-      "hitrate_q50": 77.27,
+      "hitrate_q50": 78.41,
       "coverage_pct": 73.86,
       "recommended": false,
       "low_coverage": false
@@ -1466,8 +1449,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.001,
       "trend": "flat",
-      "hitrate_q50": 69.47,
-      "coverage_pct": 75.26,
+      "hitrate_q50": 71.58,
+      "coverage_pct": 60.53,
       "recommended": false,
       "low_coverage": false
     },
@@ -1483,8 +1466,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.022,
       "trend": "flat",
-      "hitrate_q50": 60.0,
-      "coverage_pct": 90.53,
+      "hitrate_q50": 58.95,
+      "coverage_pct": 76.32,
       "recommended": false,
       "low_coverage": false
     },
@@ -1500,10 +1483,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.593,
       "trend": "up",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 66.84,
+      "hitrate_q50": 73.68,
+      "coverage_pct": 42.63,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "186308",
@@ -1517,10 +1500,27 @@
       "streak_dir": "up",
       "momentum_4w": 0.389,
       "trend": "flat",
-      "hitrate_q50": 75.9,
-      "coverage_pct": 63.25,
+      "hitrate_q50": 79.52,
+      "coverage_pct": 54.82,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
+    },
+    {
+      "fund_id": "2821",
+      "ppm_code": "481911",
+      "name": "BGF World Mining A2",
+      "tags": "Aktiefond, Branschfond, Råvaror",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2821",
+      "change_pct": 1.064,
+      "direction": "up",
+      "streak": 2,
+      "streak_dir": "up",
+      "momentum_4w": -0.34,
+      "trend": "flat",
+      "hitrate_q50": 54.21,
+      "coverage_pct": 38.95,
+      "recommended": false,
+      "low_coverage": true
     },
     {
       "fund_id": "2801",
@@ -1534,8 +1534,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.156,
       "trend": "flat",
-      "hitrate_q50": 64.21,
-      "coverage_pct": 46.32,
+      "hitrate_q50": 60.53,
+      "coverage_pct": 41.58,
       "recommended": false,
       "low_coverage": true
     },
@@ -1551,10 +1551,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.203,
       "trend": "flat",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 60.0,
+      "hitrate_q50": 68.42,
+      "coverage_pct": 43.16,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "459035",
@@ -1568,10 +1568,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.214,
       "trend": "flat",
-      "hitrate_q50": 60.0,
-      "coverage_pct": 58.18,
+      "hitrate_q50": 58.18,
+      "coverage_pct": 64.55,
       "recommended": false,
-      "low_coverage": true
+      "low_coverage": false
     },
     {
       "fund_id": "476838",
@@ -1585,8 +1585,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.204,
       "trend": "flat",
-      "hitrate_q50": 78.85,
-      "coverage_pct": 97.12,
+      "hitrate_q50": 77.88,
+      "coverage_pct": 90.38,
       "recommended": false,
       "low_coverage": false
     },
@@ -1602,8 +1602,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.285,
       "trend": "flat",
-      "hitrate_q50": 68.33,
-      "coverage_pct": 70.83,
+      "hitrate_q50": 67.5,
+      "coverage_pct": 65.0,
       "recommended": false,
       "low_coverage": false
     },
@@ -1620,7 +1620,24 @@
       "momentum_4w": 1.088,
       "trend": "up",
       "hitrate_q50": 78.2,
-      "coverage_pct": 67.67,
+      "coverage_pct": 59.4,
+      "recommended": false,
+      "low_coverage": true
+    },
+    {
+      "fund_id": "236",
+      "ppm_code": "599795",
+      "name": "Länsförsäkringar Mix Vision A",
+      "tags": "Blandfond, SEK, Balanserad",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/236",
+      "change_pct": 1.001,
+      "direction": "up",
+      "streak": 1,
+      "streak_dir": "up",
+      "momentum_4w": 0.192,
+      "trend": "flat",
+      "hitrate_q50": 72.63,
+      "coverage_pct": 60.0,
       "recommended": false,
       "low_coverage": false
     },
@@ -1636,27 +1653,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.399,
       "trend": "flat",
-      "hitrate_q50": 73.16,
-      "coverage_pct": 71.05,
+      "hitrate_q50": 71.58,
+      "coverage_pct": 58.95,
       "recommended": false,
-      "low_coverage": false
-    },
-    {
-      "fund_id": "236",
-      "ppm_code": "599795",
-      "name": "Länsförsäkringar Mix Vision A",
-      "tags": "Blandfond, SEK, Balanserad",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/236",
-      "change_pct": 1.001,
-      "direction": "up",
-      "streak": 1,
-      "streak_dir": "up",
-      "momentum_4w": 0.192,
-      "trend": "flat",
-      "hitrate_q50": 70.53,
-      "coverage_pct": 75.26,
-      "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "229",
@@ -1670,8 +1670,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.061,
       "trend": "flat",
-      "hitrate_q50": 73.16,
-      "coverage_pct": 81.05,
+      "hitrate_q50": 74.21,
+      "coverage_pct": 63.16,
       "recommended": false,
       "low_coverage": false
     },
@@ -1687,8 +1687,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.461,
       "trend": "flat",
-      "hitrate_q50": 82.05,
-      "coverage_pct": 84.62,
+      "hitrate_q50": 83.76,
+      "coverage_pct": 77.78,
       "recommended": false,
       "low_coverage": false
     },
@@ -1704,8 +1704,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.967,
       "trend": "up",
-      "hitrate_q50": 74.57,
-      "coverage_pct": 73.41,
+      "hitrate_q50": 72.83,
+      "coverage_pct": 60.69,
       "recommended": false,
       "low_coverage": false
     },
@@ -1721,10 +1721,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.036,
       "trend": "up",
-      "hitrate_q50": 75.0,
-      "coverage_pct": 71.55,
+      "hitrate_q50": 72.41,
+      "coverage_pct": 54.31,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1607583",
@@ -1738,8 +1738,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.49,
       "trend": "flat",
-      "hitrate_q50": 74.0,
-      "coverage_pct": 54.0,
+      "hitrate_q50": 76.0,
+      "coverage_pct": 50.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -1755,7 +1755,7 @@
       "streak_dir": "up",
       "momentum_4w": 1.177,
       "trend": "up",
-      "hitrate_q50": 72.28,
+      "hitrate_q50": 64.67,
       "coverage_pct": 81.52,
       "recommended": false,
       "low_coverage": false
@@ -1772,10 +1772,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.943,
       "trend": "up",
-      "hitrate_q50": 64.74,
-      "coverage_pct": 73.68,
+      "hitrate_q50": 62.63,
+      "coverage_pct": 54.74,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "592236",
@@ -1789,8 +1789,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.073,
       "trend": "flat",
-      "hitrate_q50": 81.11,
-      "coverage_pct": 77.78,
+      "hitrate_q50": 84.44,
+      "coverage_pct": 74.44,
       "recommended": false,
       "low_coverage": false
     },
@@ -1806,10 +1806,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.759,
       "trend": "up",
-      "hitrate_q50": 73.68,
-      "coverage_pct": 62.63,
+      "hitrate_q50": 72.11,
+      "coverage_pct": 32.63,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1376",
@@ -1823,10 +1823,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.551,
       "trend": "up",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 60.0,
+      "hitrate_q50": 68.42,
+      "coverage_pct": 58.42,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1886",
@@ -1840,10 +1840,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.405,
       "trend": "flat",
-      "hitrate_q50": 64.21,
-      "coverage_pct": 68.95,
+      "hitrate_q50": 72.11,
+      "coverage_pct": 59.47,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "599",
@@ -1858,9 +1858,9 @@
       "momentum_4w": -0.025,
       "trend": "flat",
       "hitrate_q50": 76.32,
-      "coverage_pct": 81.58,
+      "coverage_pct": 57.37,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "512557",
@@ -1874,8 +1874,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.09,
       "trend": "flat",
-      "hitrate_q50": 76.0,
-      "coverage_pct": 59.0,
+      "hitrate_q50": 75.0,
+      "coverage_pct": 51.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -1891,8 +1891,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.096,
       "trend": "flat",
-      "hitrate_q50": 78.42,
-      "coverage_pct": 27.37,
+      "hitrate_q50": 69.47,
+      "coverage_pct": 36.32,
       "recommended": false,
       "low_coverage": true
     },
@@ -1908,10 +1908,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.859,
       "trend": "up",
-      "hitrate_q50": 76.84,
-      "coverage_pct": 67.89,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 47.37,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2247",
@@ -1925,27 +1925,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.379,
       "trend": "flat",
-      "hitrate_q50": 76.32,
-      "coverage_pct": 64.74,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 49.47,
       "recommended": false,
-      "low_coverage": false
-    },
-    {
-      "fund_id": "1173921",
-      "ppm_code": "273839",
-      "name": "Allianz Global Equity Growth AT USD",
-      "tags": "Aktiefond, Global, Tillväxtbolag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1173921",
-      "change_pct": 0.859,
-      "direction": "up",
-      "streak": 2,
-      "streak_dir": "up",
-      "momentum_4w": 0.479,
-      "trend": "flat",
-      "hitrate_q50": 80.0,
-      "coverage_pct": 82.5,
-      "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "799913",
@@ -1965,6 +1948,23 @@
       "low_coverage": false
     },
     {
+      "fund_id": "1173921",
+      "ppm_code": "273839",
+      "name": "Allianz Global Equity Growth AT USD",
+      "tags": "Aktiefond, Global, Tillväxtbolag",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1173921",
+      "change_pct": 0.859,
+      "direction": "up",
+      "streak": 2,
+      "streak_dir": "up",
+      "momentum_4w": 0.479,
+      "trend": "flat",
+      "hitrate_q50": 77.5,
+      "coverage_pct": 65.0,
+      "recommended": false,
+      "low_coverage": false
+    },
+    {
       "fund_id": "2012",
       "ppm_code": "103606",
       "name": "Skandia Småbolag Sverige",
@@ -1976,8 +1976,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.157,
       "trend": "flat",
-      "hitrate_q50": 66.84,
-      "coverage_pct": 58.95,
+      "hitrate_q50": 64.74,
+      "coverage_pct": 49.47,
       "recommended": false,
       "low_coverage": true
     },
@@ -1993,10 +1993,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.013,
       "trend": "flat",
-      "hitrate_q50": 70.31,
-      "coverage_pct": 67.97,
+      "hitrate_q50": 69.53,
+      "coverage_pct": 53.12,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "288001",
@@ -2010,10 +2010,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.14,
       "trend": "flat",
-      "hitrate_q50": 65.24,
-      "coverage_pct": 63.64,
+      "hitrate_q50": 66.31,
+      "coverage_pct": 59.89,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "373",
@@ -2027,8 +2027,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.898,
       "trend": "up",
-      "hitrate_q50": 81.05,
-      "coverage_pct": 71.58,
+      "hitrate_q50": 80.53,
+      "coverage_pct": 61.05,
       "recommended": false,
       "low_coverage": false
     },
@@ -2044,10 +2044,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.856,
       "trend": "up",
-      "hitrate_q50": 80.7,
-      "coverage_pct": 77.19,
+      "hitrate_q50": 66.67,
+      "coverage_pct": 57.89,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "429935",
@@ -2061,10 +2061,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.803,
       "trend": "up",
-      "hitrate_q50": 80.36,
-      "coverage_pct": 67.86,
+      "hitrate_q50": 81.25,
+      "coverage_pct": 56.25,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1478",
@@ -2078,10 +2078,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.453,
       "trend": "flat",
-      "hitrate_q50": 76.84,
-      "coverage_pct": 63.16,
+      "hitrate_q50": 76.32,
+      "coverage_pct": 40.53,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1682",
@@ -2095,10 +2095,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.07,
       "trend": "flat",
-      "hitrate_q50": 59.47,
-      "coverage_pct": 61.58,
+      "hitrate_q50": 56.84,
+      "coverage_pct": 46.32,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "221608",
@@ -2112,8 +2112,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.071,
       "trend": "flat",
-      "hitrate_q50": 67.79,
-      "coverage_pct": 59.73,
+      "hitrate_q50": 65.77,
+      "coverage_pct": 59.06,
       "recommended": false,
       "low_coverage": true
     },
@@ -2129,10 +2129,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.094,
       "trend": "flat",
-      "hitrate_q50": 80.53,
-      "coverage_pct": 72.63,
+      "hitrate_q50": 78.95,
+      "coverage_pct": 56.84,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1464",
@@ -2147,9 +2147,9 @@
       "momentum_4w": 0.932,
       "trend": "up",
       "hitrate_q50": 77.37,
-      "coverage_pct": 63.16,
+      "coverage_pct": 55.79,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "910093",
@@ -2163,8 +2163,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.174,
       "trend": "up",
-      "hitrate_q50": 73.68,
-      "coverage_pct": 57.89,
+      "hitrate_q50": 68.42,
+      "coverage_pct": 50.88,
       "recommended": false,
       "low_coverage": true
     },
@@ -2180,25 +2180,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.028,
       "trend": "up",
-      "hitrate_q50": 75.46,
-      "coverage_pct": 87.12,
-      "recommended": false,
-      "low_coverage": false
-    },
-    {
-      "fund_id": "1983",
-      "ppm_code": "495482",
-      "name": "SEB Sverigefond",
-      "tags": "Aktiefond, Sverige",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1983",
-      "change_pct": 0.76,
-      "direction": "up",
-      "streak": 2,
-      "streak_dir": "up",
-      "momentum_4w": 0.152,
-      "trend": "flat",
-      "hitrate_q50": 76.84,
-      "coverage_pct": 77.37,
+      "hitrate_q50": 72.39,
+      "coverage_pct": 68.1,
       "recommended": false,
       "low_coverage": false
     },
@@ -2214,10 +2197,27 @@
       "streak_dir": "up",
       "momentum_4w": 0.284,
       "trend": "flat",
-      "hitrate_q50": 74.24,
-      "coverage_pct": 63.64,
+      "hitrate_q50": 77.27,
+      "coverage_pct": 67.42,
       "recommended": false,
       "low_coverage": false
+    },
+    {
+      "fund_id": "1983",
+      "ppm_code": "495482",
+      "name": "SEB Sverigefond",
+      "tags": "Aktiefond, Sverige",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1983",
+      "change_pct": 0.76,
+      "direction": "up",
+      "streak": 2,
+      "streak_dir": "up",
+      "momentum_4w": 0.152,
+      "trend": "flat",
+      "hitrate_q50": 71.58,
+      "coverage_pct": 54.21,
+      "recommended": false,
+      "low_coverage": true
     },
     {
       "fund_id": "2983",
@@ -2231,10 +2231,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.073,
       "trend": "flat",
-      "hitrate_q50": 68.95,
-      "coverage_pct": 66.84,
+      "hitrate_q50": 63.16,
+      "coverage_pct": 49.47,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "281",
@@ -2248,8 +2248,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.147,
       "trend": "flat",
-      "hitrate_q50": 74.21,
-      "coverage_pct": 68.95,
+      "hitrate_q50": 74.74,
+      "coverage_pct": 65.26,
       "recommended": false,
       "low_coverage": false
     },
@@ -2265,10 +2265,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.052,
       "trend": "flat",
-      "hitrate_q50": 80.53,
-      "coverage_pct": 73.16,
+      "hitrate_q50": 80.0,
+      "coverage_pct": 58.42,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "415690",
@@ -2282,8 +2282,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.266,
       "trend": "flat",
-      "hitrate_q50": 87.13,
-      "coverage_pct": 82.18,
+      "hitrate_q50": 90.1,
+      "coverage_pct": 76.24,
       "recommended": false,
       "low_coverage": false
     },
@@ -2299,10 +2299,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.663,
       "trend": "up",
-      "hitrate_q50": 77.37,
-      "coverage_pct": 65.79,
+      "hitrate_q50": 74.74,
+      "coverage_pct": 48.42,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "331224",
@@ -2316,8 +2316,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.933,
       "trend": "up",
-      "hitrate_q50": 77.52,
-      "coverage_pct": 79.84,
+      "hitrate_q50": 69.77,
+      "coverage_pct": 67.44,
       "recommended": false,
       "low_coverage": false
     },
@@ -2333,8 +2333,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.186,
       "trend": "flat",
-      "hitrate_q50": 62.11,
-      "coverage_pct": 52.63,
+      "hitrate_q50": 64.74,
+      "coverage_pct": 37.89,
       "recommended": false,
       "low_coverage": true
     },
@@ -2350,8 +2350,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.215,
       "trend": "flat",
-      "hitrate_q50": 76.84,
-      "coverage_pct": 82.11,
+      "hitrate_q50": 74.21,
+      "coverage_pct": 64.74,
       "recommended": false,
       "low_coverage": false
     },
@@ -2367,10 +2367,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.459,
       "trend": "flat",
-      "hitrate_q50": 77.55,
-      "coverage_pct": 83.67,
+      "hitrate_q50": 75.51,
+      "coverage_pct": 55.1,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "637",
@@ -2384,10 +2384,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.053,
       "trend": "flat",
-      "hitrate_q50": 75.26,
-      "coverage_pct": 76.84,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 53.16,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "573156",
@@ -2401,8 +2401,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.34,
       "trend": "flat",
-      "hitrate_q50": 79.17,
-      "coverage_pct": 63.54,
+      "hitrate_q50": 81.25,
+      "coverage_pct": 65.62,
       "recommended": false,
       "low_coverage": false
     },
@@ -2418,8 +2418,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.353,
       "trend": "flat",
-      "hitrate_q50": 76.32,
-      "coverage_pct": 36.84,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 34.21,
       "recommended": false,
       "low_coverage": true
     },
@@ -2435,10 +2435,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.658,
       "trend": "up",
-      "hitrate_q50": 73.16,
-      "coverage_pct": 64.74,
+      "hitrate_q50": 74.21,
+      "coverage_pct": 43.16,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "26827",
@@ -2452,8 +2452,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.06,
       "trend": "flat",
-      "hitrate_q50": 68.42,
-      "coverage_pct": 83.68,
+      "hitrate_q50": 63.68,
+      "coverage_pct": 90.53,
       "recommended": false,
       "low_coverage": false
     },
@@ -2469,8 +2469,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.978,
       "trend": "up",
-      "hitrate_q50": 62.11,
-      "coverage_pct": 59.47,
+      "hitrate_q50": 63.16,
+      "coverage_pct": 44.21,
       "recommended": false,
       "low_coverage": true
     },
@@ -2486,10 +2486,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.04,
       "trend": "flat",
-      "hitrate_q50": 75.79,
-      "coverage_pct": 78.42,
+      "hitrate_q50": 72.11,
+      "coverage_pct": 57.89,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2075",
@@ -2503,8 +2503,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.208,
       "trend": "flat",
-      "hitrate_q50": 70.53,
-      "coverage_pct": 80.0,
+      "hitrate_q50": 65.79,
+      "coverage_pct": 73.16,
       "recommended": false,
       "low_coverage": false
     },
@@ -2520,8 +2520,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.181,
       "trend": "flat",
-      "hitrate_q50": 75.26,
-      "coverage_pct": 78.42,
+      "hitrate_q50": 71.58,
+      "coverage_pct": 76.84,
       "recommended": false,
       "low_coverage": false
     },
@@ -2537,10 +2537,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.266,
       "trend": "flat",
-      "hitrate_q50": 62.11,
-      "coverage_pct": 71.58,
+      "hitrate_q50": 63.16,
+      "coverage_pct": 45.26,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "581",
@@ -2554,10 +2554,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.07,
       "trend": "flat",
-      "hitrate_q50": 74.21,
-      "coverage_pct": 78.42,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 54.21,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2088",
@@ -2571,8 +2571,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.191,
       "trend": "flat",
-      "hitrate_q50": 68.42,
-      "coverage_pct": 77.89,
+      "hitrate_q50": 71.58,
+      "coverage_pct": 64.74,
       "recommended": false,
       "low_coverage": false
     },
@@ -2588,8 +2588,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.367,
       "trend": "flat",
-      "hitrate_q50": 68.1,
-      "coverage_pct": 39.26,
+      "hitrate_q50": 69.33,
+      "coverage_pct": 52.15,
       "recommended": false,
       "low_coverage": true
     },
@@ -2605,8 +2605,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.842,
       "trend": "down",
-      "hitrate_q50": 66.32,
-      "coverage_pct": 36.84,
+      "hitrate_q50": 70.0,
+      "coverage_pct": 34.74,
       "recommended": false,
       "low_coverage": true
     },
@@ -2622,8 +2622,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.112,
       "trend": "flat",
-      "hitrate_q50": 60.53,
-      "coverage_pct": 54.21,
+      "hitrate_q50": 57.89,
+      "coverage_pct": 54.74,
       "recommended": false,
       "low_coverage": true
     },
@@ -2639,8 +2639,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.506,
       "trend": "down",
-      "hitrate_q50": 64.74,
-      "coverage_pct": 42.63,
+      "hitrate_q50": 72.63,
+      "coverage_pct": 37.89,
       "recommended": false,
       "low_coverage": true
     },
@@ -2657,7 +2657,7 @@
       "momentum_4w": -0.297,
       "trend": "flat",
       "hitrate_q50": 77.89,
-      "coverage_pct": 73.16,
+      "coverage_pct": 83.16,
       "recommended": false,
       "low_coverage": false
     },
@@ -2673,8 +2673,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.178,
       "trend": "flat",
-      "hitrate_q50": 75.79,
-      "coverage_pct": 82.63,
+      "hitrate_q50": 65.79,
+      "coverage_pct": 78.42,
       "recommended": false,
       "low_coverage": false
     },
@@ -2691,9 +2691,9 @@
       "momentum_4w": 0.157,
       "trend": "flat",
       "hitrate_q50": 73.16,
-      "coverage_pct": 62.63,
+      "coverage_pct": 43.16,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "192",
@@ -2707,8 +2707,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.072,
       "trend": "flat",
-      "hitrate_q50": 79.47,
-      "coverage_pct": 88.95,
+      "hitrate_q50": 80.0,
+      "coverage_pct": 68.95,
       "recommended": false,
       "low_coverage": false
     },
@@ -2724,8 +2724,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.253,
       "trend": "flat",
-      "hitrate_q50": 81.9,
-      "coverage_pct": 43.1,
+      "hitrate_q50": 78.45,
+      "coverage_pct": 50.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -2741,8 +2741,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.505,
       "trend": "up",
-      "hitrate_q50": 79.07,
-      "coverage_pct": 93.02,
+      "hitrate_q50": 71.32,
+      "coverage_pct": 72.87,
       "recommended": false,
       "low_coverage": false
     },
@@ -2758,8 +2758,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.438,
       "trend": "flat",
-      "hitrate_q50": 73.64,
-      "coverage_pct": 49.61,
+      "hitrate_q50": 70.54,
+      "coverage_pct": 58.91,
       "recommended": false,
       "low_coverage": true
     },
@@ -2775,10 +2775,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.031,
       "trend": "flat",
-      "hitrate_q50": 75.79,
-      "coverage_pct": 67.89,
+      "hitrate_q50": 74.21,
+      "coverage_pct": 38.95,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "217470",
@@ -2792,8 +2792,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.387,
       "trend": "flat",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 71.33,
+      "hitrate_q50": 71.33,
+      "coverage_pct": 77.33,
       "recommended": false,
       "low_coverage": false
     },
@@ -2809,8 +2809,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.735,
       "trend": "up",
-      "hitrate_q50": 69.84,
-      "coverage_pct": 62.7,
+      "hitrate_q50": 67.46,
+      "coverage_pct": 76.19,
       "recommended": false,
       "low_coverage": false
     },
@@ -2826,8 +2826,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.167,
       "trend": "flat",
-      "hitrate_q50": 78.75,
-      "coverage_pct": 92.5,
+      "hitrate_q50": 77.5,
+      "coverage_pct": 97.5,
       "recommended": false,
       "low_coverage": false
     },
@@ -2843,8 +2843,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.344,
       "trend": "flat",
-      "hitrate_q50": 83.2,
-      "coverage_pct": 83.2,
+      "hitrate_q50": 81.6,
+      "coverage_pct": 92.8,
       "recommended": false,
       "low_coverage": false
     },
@@ -2860,7 +2860,7 @@
       "streak_dir": "up",
       "momentum_4w": -0.176,
       "trend": "flat",
-      "hitrate_q50": 86.32,
+      "hitrate_q50": 75.79,
       "coverage_pct": 97.89,
       "recommended": false,
       "low_coverage": false
@@ -2877,8 +2877,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.251,
       "trend": "flat",
-      "hitrate_q50": 84.8,
-      "coverage_pct": 94.4,
+      "hitrate_q50": 86.4,
+      "coverage_pct": 96.8,
       "recommended": false,
       "low_coverage": false
     },
@@ -2894,8 +2894,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.142,
       "trend": "flat",
-      "hitrate_q50": 84.74,
-      "coverage_pct": 71.05,
+      "hitrate_q50": 83.16,
+      "coverage_pct": 74.74,
       "recommended": false,
       "low_coverage": false
     },
@@ -2911,8 +2911,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.323,
       "trend": "flat",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 54.74,
+      "hitrate_q50": 69.47,
+      "coverage_pct": 41.58,
       "recommended": false,
       "low_coverage": true
     },
@@ -2928,8 +2928,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.192,
       "trend": "flat",
-      "hitrate_q50": 80.77,
-      "coverage_pct": 76.92,
+      "hitrate_q50": 84.62,
+      "coverage_pct": 81.73,
       "recommended": false,
       "low_coverage": false
     },
@@ -2945,27 +2945,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.502,
       "trend": "down",
-      "hitrate_q50": 67.29,
-      "coverage_pct": 57.94,
+      "hitrate_q50": 74.77,
+      "coverage_pct": 54.21,
       "recommended": false,
       "low_coverage": true
-    },
-    {
-      "fund_id": "346775",
-      "ppm_code": "447086",
-      "name": "Naventi Defensiv Flex",
-      "tags": "Blandfond, SEK, Försiktig",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/346775",
-      "change_pct": 0.208,
-      "direction": "up",
-      "streak": 2,
-      "streak_dir": "up",
-      "momentum_4w": 0.242,
-      "trend": "flat",
-      "hitrate_q50": 83.33,
-      "coverage_pct": 92.86,
-      "recommended": false,
-      "low_coverage": false
     },
     {
       "fund_id": "862036",
@@ -2979,25 +2962,25 @@
       "streak_dir": "up",
       "momentum_4w": -0.278,
       "trend": "flat",
-      "hitrate_q50": 77.42,
-      "coverage_pct": 70.97,
+      "hitrate_q50": 82.26,
+      "coverage_pct": 61.29,
       "recommended": false,
       "low_coverage": false
     },
     {
-      "fund_id": "2098",
-      "ppm_code": "554691",
-      "name": "Carnegie Obligationsfond A",
-      "tags": "Räntefond, SEK, Obligationer, Mix bolag",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2098",
-      "change_pct": 0.205,
+      "fund_id": "346775",
+      "ppm_code": "447086",
+      "name": "Naventi Defensiv Flex",
+      "tags": "Blandfond, SEK, Försiktig",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/346775",
+      "change_pct": 0.208,
       "direction": "up",
       "streak": 2,
       "streak_dir": "up",
-      "momentum_4w": -0.035,
+      "momentum_4w": 0.242,
       "trend": "flat",
-      "hitrate_q50": 73.16,
-      "coverage_pct": 83.16,
+      "hitrate_q50": 79.37,
+      "coverage_pct": 75.4,
       "recommended": false,
       "low_coverage": false
     },
@@ -3013,8 +2996,25 @@
       "streak_dir": "up",
       "momentum_4w": -0.08,
       "trend": "flat",
-      "hitrate_q50": 68.42,
-      "coverage_pct": 78.42,
+      "hitrate_q50": 65.79,
+      "coverage_pct": 66.84,
+      "recommended": false,
+      "low_coverage": false
+    },
+    {
+      "fund_id": "2098",
+      "ppm_code": "554691",
+      "name": "Carnegie Obligationsfond A",
+      "tags": "Räntefond, SEK, Obligationer, Mix bolag",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2098",
+      "change_pct": 0.205,
+      "direction": "up",
+      "streak": 2,
+      "streak_dir": "up",
+      "momentum_4w": -0.035,
+      "trend": "flat",
+      "hitrate_q50": 64.74,
+      "coverage_pct": 74.21,
       "recommended": false,
       "low_coverage": false
     },
@@ -3030,8 +3030,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.24,
       "trend": "flat",
-      "hitrate_q50": 81.13,
-      "coverage_pct": 90.57,
+      "hitrate_q50": 80.5,
+      "coverage_pct": 91.82,
       "recommended": false,
       "low_coverage": false
     },
@@ -3047,8 +3047,8 @@
       "streak_dir": "up",
       "momentum_4w": -1.249,
       "trend": "down",
-      "hitrate_q50": 86.84,
-      "coverage_pct": 81.58,
+      "hitrate_q50": 87.5,
+      "coverage_pct": 78.29,
       "recommended": false,
       "low_coverage": false
     },
@@ -3064,8 +3064,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.027,
       "trend": "flat",
-      "hitrate_q50": 71.58,
-      "coverage_pct": 84.21,
+      "hitrate_q50": 60.0,
+      "coverage_pct": 79.47,
       "recommended": false,
       "low_coverage": false
     },
@@ -3081,7 +3081,7 @@
       "streak_dir": "up",
       "momentum_4w": -0.078,
       "trend": "flat",
-      "hitrate_q50": 77.89,
+      "hitrate_q50": 67.37,
       "coverage_pct": 75.79,
       "recommended": false,
       "low_coverage": false
@@ -3098,8 +3098,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.063,
       "trend": "flat",
-      "hitrate_q50": 79.47,
-      "coverage_pct": 76.84,
+      "hitrate_q50": 71.05,
+      "coverage_pct": 74.21,
       "recommended": false,
       "low_coverage": false
     },
@@ -3115,10 +3115,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.357,
       "trend": "flat",
-      "hitrate_q50": 81.03,
-      "coverage_pct": 55.17,
+      "hitrate_q50": 75.86,
+      "coverage_pct": 62.07,
       "recommended": false,
-      "low_coverage": true
+      "low_coverage": false
     },
     {
       "fund_id": "2108",
@@ -3132,8 +3132,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.044,
       "trend": "flat",
-      "hitrate_q50": 69.47,
-      "coverage_pct": 82.63,
+      "hitrate_q50": 65.79,
+      "coverage_pct": 88.42,
       "recommended": false,
       "low_coverage": false
     },
@@ -3149,8 +3149,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.234,
       "trend": "flat",
-      "hitrate_q50": 70.53,
-      "coverage_pct": 67.37,
+      "hitrate_q50": 71.05,
+      "coverage_pct": 66.32,
       "recommended": false,
       "low_coverage": false
     },
@@ -3166,8 +3166,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.169,
       "trend": "flat",
-      "hitrate_q50": 76.74,
-      "coverage_pct": 83.72,
+      "hitrate_q50": 78.29,
+      "coverage_pct": 79.84,
       "recommended": false,
       "low_coverage": false
     },
@@ -3183,8 +3183,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.2,
       "trend": "up",
-      "hitrate_q50": 67.89,
-      "coverage_pct": 72.11,
+      "hitrate_q50": 63.16,
+      "coverage_pct": 62.63,
       "recommended": false,
       "low_coverage": false
     },
@@ -3200,10 +3200,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.152,
       "trend": "flat",
-      "hitrate_q50": 84.21,
-      "coverage_pct": 61.05,
+      "hitrate_q50": 83.16,
+      "coverage_pct": 41.58,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "70501",
@@ -3217,8 +3217,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.115,
       "trend": "flat",
-      "hitrate_q50": 77.37,
-      "coverage_pct": 80.0,
+      "hitrate_q50": 66.32,
+      "coverage_pct": 70.0,
       "recommended": false,
       "low_coverage": false
     },
@@ -3234,8 +3234,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.019,
       "trend": "flat",
-      "hitrate_q50": 85.79,
-      "coverage_pct": 46.84,
+      "hitrate_q50": 75.79,
+      "coverage_pct": 58.95,
       "recommended": false,
       "low_coverage": true
     },
@@ -3251,8 +3251,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.112,
       "trend": "flat",
-      "hitrate_q50": 80.37,
-      "coverage_pct": 95.33,
+      "hitrate_q50": 84.11,
+      "coverage_pct": 96.26,
       "recommended": false,
       "low_coverage": false
     },
@@ -3268,8 +3268,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.016,
       "trend": "flat",
-      "hitrate_q50": 87.89,
-      "coverage_pct": 61.58,
+      "hitrate_q50": 82.11,
+      "coverage_pct": 69.47,
       "recommended": false,
       "low_coverage": false
     },
@@ -3285,8 +3285,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.007,
       "trend": "flat",
-      "hitrate_q50": 90.35,
-      "coverage_pct": 90.35,
+      "hitrate_q50": 73.68,
+      "coverage_pct": 89.47,
       "recommended": false,
       "low_coverage": false
     },
@@ -3302,8 +3302,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.02,
       "trend": "flat",
-      "hitrate_q50": 86.32,
-      "coverage_pct": 76.32,
+      "hitrate_q50": 76.32,
+      "coverage_pct": 78.42,
       "recommended": false,
       "low_coverage": false
     },
@@ -3319,8 +3319,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.147,
       "trend": "flat",
-      "hitrate_q50": 81.36,
-      "coverage_pct": 86.44,
+      "hitrate_q50": 84.75,
+      "coverage_pct": 76.27,
       "recommended": false,
       "low_coverage": false
     },
@@ -3336,8 +3336,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.007,
       "trend": "flat",
-      "hitrate_q50": 87.89,
-      "coverage_pct": 63.16,
+      "hitrate_q50": 90.53,
+      "coverage_pct": 76.84,
       "recommended": false,
       "low_coverage": false
     },
@@ -3353,8 +3353,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.055,
       "trend": "flat",
-      "hitrate_q50": 79.87,
-      "coverage_pct": 91.28,
+      "hitrate_q50": 69.8,
+      "coverage_pct": 86.58,
       "recommended": false,
       "low_coverage": false
     },
@@ -3370,8 +3370,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.005,
       "trend": "flat",
-      "hitrate_q50": 74.14,
-      "coverage_pct": 84.48,
+      "hitrate_q50": 72.41,
+      "coverage_pct": 91.38,
       "recommended": false,
       "low_coverage": false
     },
@@ -3387,8 +3387,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.023,
       "trend": "flat",
-      "hitrate_q50": 82.63,
-      "coverage_pct": 68.95,
+      "hitrate_q50": 78.95,
+      "coverage_pct": 79.47,
       "recommended": false,
       "low_coverage": false
     },
@@ -3404,10 +3404,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.116,
       "trend": "flat",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 75.26,
+      "hitrate_q50": 68.42,
+      "coverage_pct": 55.26,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "475",
@@ -3421,10 +3421,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.618,
       "trend": "up",
-      "hitrate_q50": 61.58,
-      "coverage_pct": 88.95,
+      "hitrate_q50": 60.0,
+      "coverage_pct": 52.63,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "869",
@@ -3438,8 +3438,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.273,
       "trend": "flat",
-      "hitrate_q50": 77.37,
-      "coverage_pct": 74.74,
+      "hitrate_q50": 71.58,
+      "coverage_pct": 68.42,
       "recommended": false,
       "low_coverage": false
     },
@@ -3455,8 +3455,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.072,
       "trend": "flat",
-      "hitrate_q50": 83.02,
-      "coverage_pct": 95.28,
+      "hitrate_q50": 86.79,
+      "coverage_pct": 94.34,
       "recommended": false,
       "low_coverage": false
     },
@@ -3472,8 +3472,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.155,
       "trend": "flat",
-      "hitrate_q50": 87.39,
-      "coverage_pct": 91.6,
+      "hitrate_q50": 88.24,
+      "coverage_pct": 94.96,
       "recommended": false,
       "low_coverage": false
     },
@@ -3489,8 +3489,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.029,
       "trend": "flat",
-      "hitrate_q50": 75.0,
-      "coverage_pct": 90.83,
+      "hitrate_q50": 74.17,
+      "coverage_pct": 93.33,
       "recommended": false,
       "low_coverage": false
     },
@@ -3506,8 +3506,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.019,
       "trend": "flat",
-      "hitrate_q50": 92.63,
-      "coverage_pct": 71.05,
+      "hitrate_q50": 82.63,
+      "coverage_pct": 77.37,
       "recommended": false,
       "low_coverage": false
     },
@@ -3523,8 +3523,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.038,
       "trend": "flat",
-      "hitrate_q50": 90.0,
-      "coverage_pct": 63.16,
+      "hitrate_q50": 85.26,
+      "coverage_pct": 81.05,
       "recommended": false,
       "low_coverage": false
     },
@@ -3540,8 +3540,25 @@
       "streak_dir": "up",
       "momentum_4w": 0.023,
       "trend": "flat",
-      "hitrate_q50": 80.87,
-      "coverage_pct": 67.21,
+      "hitrate_q50": 78.69,
+      "coverage_pct": 59.56,
+      "recommended": false,
+      "low_coverage": true
+    },
+    {
+      "fund_id": "2802",
+      "ppm_code": "305185",
+      "name": "AMF Räntefond Kort",
+      "tags": "Räntefond, SEK, Obligationer, Korta",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2802",
+      "change_pct": 0.008,
+      "direction": "up",
+      "streak": 2,
+      "streak_dir": "up",
+      "momentum_4w": 0.02,
+      "trend": "flat",
+      "hitrate_q50": 73.68,
+      "coverage_pct": 62.63,
       "recommended": false,
       "low_coverage": false
     },
@@ -3557,25 +3574,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.021,
       "trend": "flat",
-      "hitrate_q50": 78.99,
-      "coverage_pct": 88.24,
-      "recommended": false,
-      "low_coverage": false
-    },
-    {
-      "fund_id": "2802",
-      "ppm_code": "305185",
-      "name": "AMF Räntefond Kort",
-      "tags": "Räntefond, SEK, Obligationer, Korta",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2802",
-      "change_pct": 0.008,
-      "direction": "up",
-      "streak": 2,
-      "streak_dir": "up",
-      "momentum_4w": 0.02,
-      "trend": "flat",
-      "hitrate_q50": 76.32,
-      "coverage_pct": 65.79,
+      "hitrate_q50": 71.43,
+      "coverage_pct": 92.44,
       "recommended": false,
       "low_coverage": false
     },
@@ -3591,25 +3591,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.023,
       "trend": "flat",
-      "hitrate_q50": 89.6,
+      "hitrate_q50": 86.71,
       "coverage_pct": 54.91,
-      "recommended": false,
-      "low_coverage": true
-    },
-    {
-      "fund_id": "2058",
-      "ppm_code": "331983",
-      "name": "Skandia Korträntefond",
-      "tags": "Räntefond, SEK, Obligationer, Korta",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2058",
-      "change_pct": 0.007,
-      "direction": "up",
-      "streak": 2,
-      "streak_dir": "up",
-      "momentum_4w": 0.022,
-      "trend": "flat",
-      "hitrate_q50": 85.26,
-      "coverage_pct": 55.79,
       "recommended": false,
       "low_coverage": true
     },
@@ -3625,8 +3608,25 @@
       "streak_dir": "up",
       "momentum_4w": 0.024,
       "trend": "flat",
-      "hitrate_q50": 83.68,
-      "coverage_pct": 75.79,
+      "hitrate_q50": 74.74,
+      "coverage_pct": 84.74,
+      "recommended": false,
+      "low_coverage": false
+    },
+    {
+      "fund_id": "2058",
+      "ppm_code": "331983",
+      "name": "Skandia Korträntefond",
+      "tags": "Räntefond, SEK, Obligationer, Korta",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2058",
+      "change_pct": 0.007,
+      "direction": "up",
+      "streak": 2,
+      "streak_dir": "up",
+      "momentum_4w": 0.022,
+      "trend": "flat",
+      "hitrate_q50": 71.58,
+      "coverage_pct": 67.89,
       "recommended": false,
       "low_coverage": false
     },
@@ -3642,8 +3642,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.01,
       "trend": "flat",
-      "hitrate_q50": 95.28,
-      "coverage_pct": 84.25,
+      "hitrate_q50": 90.55,
+      "coverage_pct": 86.61,
       "recommended": false,
       "low_coverage": false
     },
@@ -3659,8 +3659,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.048,
       "trend": "flat",
-      "hitrate_q50": 86.41,
-      "coverage_pct": 89.32,
+      "hitrate_q50": 87.38,
+      "coverage_pct": 92.23,
       "recommended": false,
       "low_coverage": false
     },
@@ -3676,8 +3676,8 @@
       "streak_dir": "down",
       "momentum_4w": 1.389,
       "trend": "up",
-      "hitrate_q50": 66.32,
-      "coverage_pct": 75.79,
+      "hitrate_q50": 64.21,
+      "coverage_pct": 60.53,
       "recommended": false,
       "low_coverage": false
     },
@@ -3693,8 +3693,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.154,
       "trend": "flat",
-      "hitrate_q50": 80.25,
-      "coverage_pct": 63.06,
+      "hitrate_q50": 75.16,
+      "coverage_pct": 60.51,
       "recommended": false,
       "low_coverage": false
     },
@@ -3710,10 +3710,10 @@
       "streak_dir": "down",
       "momentum_4w": 0.487,
       "trend": "flat",
-      "hitrate_q50": 65.79,
-      "coverage_pct": 84.74,
+      "hitrate_q50": 66.84,
+      "coverage_pct": 49.47,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "121",
@@ -3727,10 +3727,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.371,
       "trend": "flat",
-      "hitrate_q50": 72.11,
-      "coverage_pct": 66.84,
+      "hitrate_q50": 71.05,
+      "coverage_pct": 47.89,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "864973",
@@ -3744,7 +3744,7 @@
       "streak_dir": "down",
       "momentum_4w": 0.631,
       "trend": "up",
-      "hitrate_q50": 64.71,
+      "hitrate_q50": 77.65,
       "coverage_pct": 54.12,
       "recommended": false,
       "low_coverage": true
@@ -3761,8 +3761,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.38,
       "trend": "flat",
-      "hitrate_q50": 75.45,
-      "coverage_pct": 84.55,
+      "hitrate_q50": 80.91,
+      "coverage_pct": 75.45,
       "recommended": false,
       "low_coverage": false
     },
@@ -3778,8 +3778,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.183,
       "trend": "flat",
-      "hitrate_q50": 74.55,
-      "coverage_pct": 96.36,
+      "hitrate_q50": 72.73,
+      "coverage_pct": 99.09,
       "recommended": false,
       "low_coverage": false
     },
@@ -3795,10 +3795,10 @@
       "streak_dir": "down",
       "momentum_4w": 0.886,
       "trend": "up",
-      "hitrate_q50": 64.21,
-      "coverage_pct": 62.63,
+      "hitrate_q50": 63.68,
+      "coverage_pct": 50.0,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "464",
@@ -3812,10 +3812,10 @@
       "streak_dir": "down",
       "momentum_4w": 0.598,
       "trend": "up",
-      "hitrate_q50": 58.42,
-      "coverage_pct": 82.11,
+      "hitrate_q50": 60.0,
+      "coverage_pct": 42.63,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1324",
@@ -3829,10 +3829,10 @@
       "streak_dir": "down",
       "momentum_4w": 0.976,
       "trend": "up",
-      "hitrate_q50": 73.16,
-      "coverage_pct": 61.05,
+      "hitrate_q50": 66.32,
+      "coverage_pct": 50.0,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1340461",
@@ -3846,10 +3846,10 @@
       "streak_dir": "down",
       "momentum_4w": 1.146,
       "trend": "up",
-      "hitrate_q50": 68.42,
-      "coverage_pct": 64.74,
+      "hitrate_q50": 70.0,
+      "coverage_pct": 53.68,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1263",
@@ -3863,10 +3863,10 @@
       "streak_dir": "down",
       "momentum_4w": 1.22,
       "trend": "up",
-      "hitrate_q50": 67.37,
-      "coverage_pct": 66.84,
+      "hitrate_q50": 64.21,
+      "coverage_pct": 58.95,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "74107",
@@ -3880,8 +3880,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.282,
       "trend": "flat",
-      "hitrate_q50": 65.26,
-      "coverage_pct": 58.95,
+      "hitrate_q50": 64.74,
+      "coverage_pct": 47.37,
       "recommended": false,
       "low_coverage": true
     },
@@ -3897,10 +3897,10 @@
       "streak_dir": "down",
       "momentum_4w": 0.387,
       "trend": "flat",
-      "hitrate_q50": 66.32,
-      "coverage_pct": 64.21,
+      "hitrate_q50": 66.84,
+      "coverage_pct": 50.0,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "3101",
@@ -3914,8 +3914,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.417,
       "trend": "flat",
-      "hitrate_q50": 70.53,
-      "coverage_pct": 63.16,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 61.05,
       "recommended": false,
       "low_coverage": false
     },
@@ -3931,8 +3931,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.086,
       "trend": "flat",
-      "hitrate_q50": 75.95,
-      "coverage_pct": 77.22,
+      "hitrate_q50": 79.75,
+      "coverage_pct": 75.95,
       "recommended": false,
       "low_coverage": false
     },
@@ -3948,7 +3948,7 @@
       "streak_dir": "down",
       "momentum_4w": -0.954,
       "trend": "down",
-      "hitrate_q50": 67.39,
+      "hitrate_q50": 69.57,
       "coverage_pct": 63.77,
       "recommended": false,
       "low_coverage": false
@@ -3966,7 +3966,7 @@
       "momentum_4w": -0.189,
       "trend": "flat",
       "hitrate_q50": 71.14,
-      "coverage_pct": 50.34,
+      "coverage_pct": 53.69,
       "recommended": false,
       "low_coverage": true
     },
@@ -3982,8 +3982,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.09,
       "trend": "flat",
-      "hitrate_q50": 74.21,
-      "coverage_pct": 75.26,
+      "hitrate_q50": 73.68,
+      "coverage_pct": 60.0,
       "recommended": false,
       "low_coverage": false
     },
@@ -4000,7 +4000,7 @@
       "momentum_4w": -0.129,
       "trend": "flat",
       "hitrate_q50": 75.57,
-      "coverage_pct": 72.16,
+      "coverage_pct": 65.91,
       "recommended": false,
       "low_coverage": false
     },
@@ -4016,8 +4016,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.339,
       "trend": "flat",
-      "hitrate_q50": 65.79,
-      "coverage_pct": 49.47,
+      "hitrate_q50": 64.21,
+      "coverage_pct": 36.32,
       "recommended": false,
       "low_coverage": true
     },
@@ -4033,8 +4033,8 @@
       "streak_dir": "down",
       "momentum_4w": -1.068,
       "trend": "down",
-      "hitrate_q50": 83.04,
-      "coverage_pct": 26.9,
+      "hitrate_q50": 88.89,
+      "coverage_pct": 21.64,
       "recommended": false,
       "low_coverage": true
     }
