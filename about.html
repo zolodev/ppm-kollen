@@ -149,12 +149,10 @@
           <p data-lang="en">The project investigates whether <strong>time series models</strong> trained on weekly fund
             returns can generate meaningful forecast intervals — not exact price points, but probability bands that help
             understand the uncertainty in a forecast.</p>
-          <p data-lang="sv">Allt körs autonomt på en <strong>Jetson-enhet</strong> hemma: modellerna tränas om varje
-            vecka, resultaten publiceras automatiskt, och systemet är designat att överleva omstarter och
-            nätverksavbrott.</p>
-          <p data-lang="en">Everything runs autonomously on a <strong>Jetson device</strong> at home: models are
-            retrained every week, results are published automatically, and the system is designed to survive reboots and
-            network interruptions.</p>
+          <p data-lang="sv">Allt körs autonomt: modellerna tränas om varje vecka, resultaten publiceras automatiskt,
+            och systemet är designat att överleva omstarter och nätverksavbrott.</p>
+          <p data-lang="en">Everything runs autonomously: models are retrained every week, results are published
+            automatically, and the system is designed to survive reboots and network interruptions.</p>
         </div>
       </section>
 
@@ -182,11 +180,11 @@
               <div class="step-title" data-lang="sv">Modellträning</div>
               <div class="step-title" data-lang="en">Model training</div>
               <div class="step-desc" data-lang="sv">LSTM-, GRU-, TCN- och XGBoost-modeller tränas per fond och
-                investeringshorisont — totalt ~4 400 kombinationer per modelltyp. Träningen körs autonomt varje vecka på
-                lokal hårdvara med checkpoint-baserad kraschåterställning.</div>
+                investeringshorisont — totalt ~4 400 kombinationer per modelltyp. Träningen körs autonomt varje vecka
+                med checkpoint-baserad kraschåterställning.</div>
               <div class="step-desc" data-lang="en">LSTM, GRU, TCN and XGBoost models are trained per fund and
-                investment horizon — ~4,400 combinations per model type. Training runs autonomously every week on local
-                hardware with checkpoint-based crash recovery.</div>
+                investment horizon — ~4,400 combinations per model type. Training runs autonomously every week with
+                checkpoint-based crash recovery.</div>
             </div>
           </div>
           <div class="pipeline-step">
@@ -256,10 +254,6 @@
           <div class="stat-row">
             <span data-lang="sv">Finetune-f&ouml;nster</span><span data-lang="en">Finetune window</span>
             <span class="stat-value">8 veckor</span>
-          </div>
-          <div class="stat-row">
-            <span data-lang="sv">H&aring;rdvara</span><span data-lang="en">Hardware</span>
-            <span class="stat-value">NVIDIA Jetson Orin (8.7 compute)</span>
           </div>
         </div>
       </section>
@@ -379,23 +373,19 @@
         <h2 class="section-title" data-lang="sv">Byggt med</h2>
         <h2 class="section-title" data-lang="en">Built with</h2>
         <div class="prose">
-          <p data-lang="sv">Projektet kör på en <strong>NVIDIA Jetson</strong>-enhet med 62 GB RAM och NVMe-lagring.
-            ML-stacken är TensorFlow/Keras med LSTM och TCN. Träningspipelinen är skriven i Python med systemd-tjänster
-            för schemaläggning och automatisk återstart. Frontendet är ren vanilla HTML/CSS/JS — inga ramverk.</p>
-          <p data-lang="en">The project runs on an <strong>NVIDIA Jetson</strong> device with 62 GB RAM and NVMe
-            storage. The ML stack is TensorFlow/Keras with LSTM and TCN. The training pipeline is written in Python with
-            systemd services for scheduling and automatic restart. The frontend is pure vanilla HTML/CSS/JS — no
+          <p data-lang="sv">ML-stacken är <strong>PyTorch</strong> med LSTM, GRU och TCN. Träningspipelinen är skriven
+            i Python, körs schemalagt och startar om automatiskt efter avbrott. Frontendet är ren vanilla HTML/CSS/JS — inga ramverk.</p>
+          <p data-lang="en">The ML stack is <strong>PyTorch</strong> with LSTM, GRU and TCN. The training pipeline is
+            written in Python, runs on a schedule and restarts itself after an interruption. The frontend is pure vanilla HTML/CSS/JS — no
             frameworks.</p>
         </div>
         <div class="tag-cloud" style="margin-top:1rem;">
           <span class="tag accent">Python</span>
-          <span class="tag accent">TensorFlow / Keras</span>
+          <span class="tag accent">PyTorch</span>
           <span class="tag accent">LSTM</span>
           <span class="tag accent">GRU</span>
           <span class="tag accent">TCN</span>
           <span class="tag accent">XGBoost</span>
-          <span class="tag">NVIDIA Jetson</span>
-          <span class="tag">systemd</span>
           <span class="tag">tmux</span>
           <span class="tag">JSON / JSONL</span>
           <span class="tag">Vanilla JS</span>
@@ -458,11 +448,6 @@
             <span class="stat-label" data-lang="en">Update frequency</span>
             <span class="stat-value green" data-lang="sv">Varje vecka</span>
             <span class="stat-value green" data-lang="en">Every week</span>
-          </div>
-          <div class="stat-row">
-            <span class="stat-label" data-lang="sv">Hårdvara</span>
-            <span class="stat-label" data-lang="en">Hardware</span>
-            <span class="stat-value">Jetson · 62 GB</span>
           </div>
         </div>
       </div>
