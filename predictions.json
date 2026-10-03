@@ -18,21 +18,21 @@
         "name": "AMF Aktiefond Asien Stilla havet",
         "tags": "Aktiefond, Asien & Australien",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/143369",
-        "score": 72.488,
+        "score": 105.83,
         "hitrate_q50": 85.28,
         "coverage_pct": 82.82,
         "mae_q50": 0.3564,
         "signal": "HOLD",
         "forecast": {
-          "q10": -2.0195,
-          "q50": 0.0375,
-          "q90": 1.5224
+          "q10": -0.2151,
+          "q50": 0.5951,
+          "q90": 1.4803
         },
         "consensus": {
-          "n_agree": 2,
+          "n_agree": 3,
           "n_models": 3,
-          "n_up": 2,
-          "n_down": 1,
+          "n_up": 3,
+          "n_down": 0,
           "models": [
             "gru",
             "lstm",
@@ -42,8 +42,8 @@
         },
         "warnings": [
           {
-            "reason": "consensus",
-            "detail": "2↑ 1↓ of 3 models"
+            "reason": "anomaly",
+            "detail": "fc=+0.60% = 4.2× mean_pred (limit 3.0×)"
           },
           {
             "reason": "backtest",
@@ -53,15 +53,15 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 1.9935,
-          "last_pred_q50": 0.0528,
+          "mae": 1.6147,
+          "last_pred_q50": 0.6826,
           "last_actual": 0.614,
-          "last_error": -0.5612,
+          "last_error": 0.0686,
           "last_direction_ok": true,
           "date_from": "2026-07-06",
           "date_to": "2026-09-28"
         },
-        "rationale": "85% hit-rate; 0.356pp MAE; 2/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "85% hit-rate; 0.356pp MAE; 3/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-03/143369/h1w_ensemble.png",
           "individual": "top-2026-10-03/143369/h1w_individual.png"
@@ -74,21 +74,21 @@
         "name": "Templeton Emerging Markets A(acc)USD",
         "tags": "Aktiefond, Tillväxtmarknader",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2187",
-        "score": 95.187,
+        "score": 116.739,
         "hitrate_q50": 87.89,
         "coverage_pct": 84.74,
         "mae_q50": 0.3593,
         "signal": "BUY",
         "forecast": {
-          "q10": -1.509,
-          "q50": 0.4592,
-          "q90": 1.9034
+          "q10": 0.2392,
+          "q50": 0.7577,
+          "q90": 1.6666
         },
         "consensus": {
-          "n_agree": 2,
+          "n_agree": 3,
           "n_models": 3,
-          "n_up": 2,
-          "n_down": 1,
+          "n_up": 3,
+          "n_down": 0,
           "models": [
             "gru",
             "lstm",
@@ -98,26 +98,26 @@
         },
         "warnings": [
           {
-            "reason": "consensus",
-            "detail": "2↑ 1↓ of 3 models"
+            "reason": "anomaly",
+            "detail": "fc=+0.76% = 3.4× mean_pred (limit 3.0×)"
           },
           {
             "reason": "backtest",
-            "detail": "backtest 50.0% < 60%"
+            "detail": "backtest 58.3% < 60%"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 50.0,
-          "mae": 1.8582,
-          "last_pred_q50": 0.5307,
+          "hit_rate_pct": 58.3,
+          "mae": 1.7313,
+          "last_pred_q50": 0.5093,
           "last_actual": 1.1659,
-          "last_error": -0.6351,
+          "last_error": -0.6566,
           "last_direction_ok": true,
           "date_from": "2026-07-06",
           "date_to": "2026-09-28"
         },
-        "rationale": "88% hit-rate; 0.359pp MAE; 2/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "88% hit-rate; 0.359pp MAE; 3/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-03/2187/h1w_ensemble.png",
           "individual": "top-2026-10-03/2187/h1w_individual.png"
@@ -129,15 +129,15 @@
         "name": "SEB Emerging Marketsfond",
         "tags": "Aktiefond, Tillväxtmarknader",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2164",
-        "score": 82.89,
+        "score": 100.279,
         "hitrate_q50": 88.95,
         "coverage_pct": 86.32,
         "mae_q50": 0.3437,
-        "signal": "HOLD",
+        "signal": "BUY",
         "forecast": {
-          "q10": -1.2834,
-          "q50": 0.1232,
-          "q90": 1.5253
+          "q10": 0.0094,
+          "q50": 0.5802,
+          "q90": 1.4246
         },
         "consensus": {
           "n_agree": 2,
@@ -158,21 +158,21 @@
           },
           {
             "reason": "backtest",
-            "detail": "backtest 50.0% < 60%"
+            "detail": "backtest 41.7% < 60%"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 50.0,
-          "mae": 1.6712,
-          "last_pred_q50": 0.5479,
+          "hit_rate_pct": 41.7,
+          "mae": 1.7151,
+          "last_pred_q50": 0.8603,
           "last_actual": 0.1075,
-          "last_error": 0.4404,
+          "last_error": 0.7528,
           "last_direction_ok": true,
           "date_from": "2026-07-06",
           "date_to": "2026-09-28"
         },
-        "rationale": "89% hit-rate; 0.344pp MAE; 2/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "89% hit-rate; 0.344pp MAE; 2/3 models agree (bullish); 42% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-03/2164/h1w_ensemble.png",
           "individual": "top-2026-10-03/2164/h1w_individual.png"
