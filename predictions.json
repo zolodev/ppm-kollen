@@ -63,7 +63,7 @@
           "ensemble": "top-2026-10-05/1509086/h1w_ensemble.png",
           "individual": "top-2026-10-05/1509086/h1w_individual.png"
         },
-        "sticky": false
+        "sticky": true
       },
       {
         "fund_id": "2155",
@@ -71,15 +71,15 @@
         "name": "Handelsbanken Tillväxtm Tema (A1 SEK)",
         "tags": "Aktiefond, Tillväxtmarknader",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2155",
-        "score": 127.819,
+        "score": 127.984,
         "hitrate_q50": 85.26,
         "coverage_pct": 86.84,
         "mae_q50": 0.298,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.1421,
-          "q50": 0.7211,
-          "q90": 1.5975
+          "q10": -0.207,
+          "q50": 0.8225,
+          "q90": 1.4509
         },
         "consensus": {
           "n_agree": 3,
@@ -93,19 +93,28 @@
             "xgboost"
           ]
         },
-        "warnings": [],
+        "warnings": [
+          {
+            "reason": "anomaly",
+            "detail": "fc=+0.82% = 3.3× mean_pred (limit 3.0×)"
+          },
+          {
+            "reason": "backtest",
+            "detail": "backtest 58.3% < 60%"
+          }
+        ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 66.7,
-          "mae": 1.4909,
-          "last_pred_q50": 1.0687,
+          "hit_rate_pct": 58.3,
+          "mae": 1.48,
+          "last_pred_q50": 0.9118,
           "last_actual": 0.4513,
-          "last_error": 0.6174,
+          "last_error": 0.4605,
           "last_direction_ok": true,
           "date_from": "2026-07-06",
           "date_to": "2026-09-28"
         },
-        "rationale": "85% hit-rate; 0.298pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "85% hit-rate; 0.298pp MAE; 3/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-05/2155/h1w_ensemble.png",
           "individual": "top-2026-10-05/2155/h1w_individual.png"
@@ -117,21 +126,21 @@
         "name": "SEB Emerging Marketsfond",
         "tags": "Aktiefond, Tillväxtmarknader",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2164",
-        "score": 107.649,
+        "score": 127.896,
         "hitrate_q50": 91.58,
         "coverage_pct": 88.95,
         "mae_q50": 0.3033,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.5481,
-          "q50": 0.6119,
-          "q90": 1.4629
+          "q10": -0.1482,
+          "q50": 0.7571,
+          "q90": 1.3716
         },
         "consensus": {
-          "n_agree": 2,
+          "n_agree": 3,
           "n_models": 3,
-          "n_up": 2,
-          "n_down": 1,
+          "n_up": 3,
+          "n_down": 0,
           "models": [
             "gru",
             "lstm",
@@ -141,26 +150,22 @@
         },
         "warnings": [
           {
-            "reason": "consensus",
-            "detail": "2↑ 1↓ of 3 models"
-          },
-          {
             "reason": "backtest",
-            "detail": "backtest 41.7% < 60%"
+            "detail": "backtest 58.3% < 60%"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 41.7,
-          "mae": 1.6451,
-          "last_pred_q50": 0.9773,
+          "hit_rate_pct": 58.3,
+          "mae": 1.5976,
+          "last_pred_q50": 0.803,
           "last_actual": 0.1075,
-          "last_error": 0.8698,
+          "last_error": 0.6955,
           "last_direction_ok": true,
           "date_from": "2026-07-06",
           "date_to": "2026-09-28"
         },
-        "rationale": "92% hit-rate; 0.303pp MAE; 2/3 models agree (bullish); 42% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "92% hit-rate; 0.303pp MAE; 3/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-05/2164/h1w_ensemble.png",
           "individual": "top-2026-10-05/2164/h1w_individual.png"
@@ -507,6 +512,24 @@
     ],
     "top_streak": [
       {
+        "fund_id": "1509086",
+        "ppm_code": "183343",
+        "name": "DNB Teknologi S",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+        "hitrate_q50": 86.67,
+        "coverage_pct": 80.0,
+        "mae_q50": 0.8299,
+        "forecast_q10": 0.6125,
+        "forecast_q50": 1.4345,
+        "forecast_q90": 2.2298,
+        "last_actual": 0.3606,
+        "momentum_4w": 0.7299,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "2155",
         "ppm_code": "987842",
         "name": "Handelsbanken Tillväxtm Tema (A1 SEK)",
@@ -538,24 +561,6 @@
         "forecast_q90": 1.6792,
         "last_actual": 0.1075,
         "momentum_4w": 0.4499,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "397",
-        "ppm_code": "496729",
-        "name": "Franklin Technology Fund A",
-        "tags": "",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-        "hitrate_q50": 96.99,
-        "coverage_pct": 89.16,
-        "mae_q50": 7.0172,
-        "forecast_q10": -4.2506,
-        "forecast_q50": 0.9089,
-        "forecast_q90": 3.9396,
-        "last_actual": 2.6407,
-        "momentum_4w": 2.7114,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
