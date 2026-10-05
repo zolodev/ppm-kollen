@@ -1,49 +1,46 @@
 {
-  "generated": "2026-10-03",
+  "generated": "2026-10-05",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
+    "xgboost",
     "gru",
-    "lstm",
     "tcn",
-    "xgboost"
+    "lstm"
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
   "horizons": {
     "1w": [
       {
-        "fund_id": "143369",
-        "ppm_code": "823096",
-        "name": "AMF Aktiefond Asien Stilla havet",
-        "tags": "Aktiefond, Asien & Australien",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/143369",
-        "score": 78.776,
-        "hitrate_q50": 85.28,
-        "coverage_pct": 84.66,
-        "mae_q50": 0.3448,
-        "signal": "HOLD",
+        "fund_id": "1509086",
+        "ppm_code": "183343",
+        "name": "DNB Teknologi S",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+        "score": 137.93,
+        "hitrate_q50": 86.67,
+        "coverage_pct": 80.0,
+        "mae_q50": 0.8299,
+        "signal": "BUY",
         "forecast": {
-          "q10": -1.2056,
-          "q50": 0.1194,
-          "q90": 1.9484
+          "q10": 0.6125,
+          "q50": 1.4345,
+          "q90": 2.2298
         },
         "consensus": {
-          "n_agree": 2,
-          "n_models": 3,
-          "n_up": 2,
-          "n_down": 1,
+          "n_agree": 1,
+          "n_models": 1,
+          "n_up": 1,
+          "n_down": 0,
           "models": [
-            "gru",
-            "lstm",
-            "tcn",
             "xgboost"
           ]
         },
         "warnings": [
           {
-            "reason": "consensus",
-            "detail": "2↑ 1↓ of 3 models"
+            "reason": "single_model",
+            "detail": "only 1 model produced a forecast"
           },
           {
             "reason": "backtest",
@@ -53,20 +50,20 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 1.7714,
-          "last_pred_q50": 0.4623,
-          "last_actual": 0.614,
-          "last_error": -0.1517,
+          "mae": 1.6084,
+          "last_pred_q50": 1.4345,
+          "last_actual": 0.3606,
+          "last_error": 1.0739,
           "last_direction_ok": true,
           "date_from": "2026-07-06",
           "date_to": "2026-09-28"
         },
-        "rationale": "85% hit-rate; 0.345pp MAE; 2/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "87% hit-rate; 0.830pp MAE; 1/1 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-03/143369/h1w_ensemble.png",
-          "individual": "top-2026-10-03/143369/h1w_individual.png"
+          "ensemble": "top-2026-10-05/1509086/h1w_ensemble.png",
+          "individual": "top-2026-10-05/1509086/h1w_individual.png"
         },
-        "sticky": true
+        "sticky": false
       },
       {
         "fund_id": "2155",
@@ -74,15 +71,15 @@
         "name": "Handelsbanken Tillväxtm Tema (A1 SEK)",
         "tags": "Aktiefond, Tillväxtmarknader",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2155",
-        "score": 126.454,
+        "score": 127.819,
         "hitrate_q50": 85.26,
         "coverage_pct": 86.84,
         "mae_q50": 0.298,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.0962,
-          "q50": 0.7028,
-          "q90": 1.5655
+          "q10": -0.1421,
+          "q50": 0.7211,
+          "q90": 1.5975
         },
         "consensus": {
           "n_agree": 3,
@@ -110,8 +107,8 @@
         },
         "rationale": "85% hit-rate; 0.298pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-03/2155/h1w_ensemble.png",
-          "individual": "top-2026-10-03/2155/h1w_individual.png"
+          "ensemble": "top-2026-10-05/2155/h1w_ensemble.png",
+          "individual": "top-2026-10-05/2155/h1w_individual.png"
         }
       },
       {
@@ -120,15 +117,15 @@
         "name": "SEB Emerging Marketsfond",
         "tags": "Aktiefond, Tillväxtmarknader",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2164",
-        "score": 107.499,
+        "score": 107.649,
         "hitrate_q50": 91.58,
         "coverage_pct": 88.95,
         "mae_q50": 0.3033,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.5423,
-          "q50": 0.6084,
-          "q90": 1.4611
+          "q10": -0.5481,
+          "q50": 0.6119,
+          "q90": 1.4629
         },
         "consensus": {
           "n_agree": 2,
@@ -165,14 +162,50 @@
         },
         "rationale": "92% hit-rate; 0.303pp MAE; 2/3 models agree (bullish); 42% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-03/2164/h1w_ensemble.png",
-          "individual": "top-2026-10-03/2164/h1w_individual.png"
+          "ensemble": "top-2026-10-05/2164/h1w_ensemble.png",
+          "individual": "top-2026-10-05/2164/h1w_individual.png"
         }
       }
     ]
   },
   "rankings": {
     "top_yield": [
+      {
+        "fund_id": "1509086",
+        "ppm_code": "183343",
+        "name": "DNB Teknologi S",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+        "hitrate_q50": 86.67,
+        "coverage_pct": 80.0,
+        "mae_q50": 0.8299,
+        "forecast_q10": 0.6125,
+        "forecast_q50": 1.4345,
+        "forecast_q90": 2.2298,
+        "last_actual": 0.3606,
+        "momentum_4w": 0.7299,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "1509085",
+        "ppm_code": "290833",
+        "name": "DNB SMB S",
+        "tags": "Aktiefond, Norge",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509085",
+        "hitrate_q50": 66.67,
+        "coverage_pct": 53.33,
+        "mae_q50": 1.0942,
+        "forecast_q10": 0.8242,
+        "forecast_q50": 1.3881,
+        "forecast_q90": 1.7942,
+        "last_actual": -0.392,
+        "momentum_4w": 0.4764,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
       {
         "fund_id": "2155",
         "ppm_code": "987842",
@@ -187,42 +220,6 @@
         "forecast_q90": 1.6696,
         "last_actual": 0.4513,
         "momentum_4w": 0.5535,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "2187",
-        "ppm_code": "425067",
-        "name": "Templeton Emerging Markets A(acc)USD",
-        "tags": "Aktiefond, Tillväxtmarknader",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2187",
-        "hitrate_q50": 88.95,
-        "coverage_pct": 83.16,
-        "mae_q50": 0.3506,
-        "forecast_q10": -0.0161,
-        "forecast_q50": 1.0055,
-        "forecast_q90": 1.7598,
-        "last_actual": 1.1659,
-        "momentum_4w": 0.8225,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "2164",
-        "ppm_code": "950774",
-        "name": "SEB Emerging Marketsfond",
-        "tags": "Aktiefond, Tillväxtmarknader",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2164",
-        "hitrate_q50": 91.58,
-        "coverage_pct": 88.95,
-        "mae_q50": 0.3033,
-        "forecast_q10": 0.1044,
-        "forecast_q50": 0.9773,
-        "forecast_q90": 1.6792,
-        "last_actual": 0.1075,
-        "momentum_4w": 0.4499,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -286,6 +283,24 @@
     ],
     "top_balanced": [
       {
+        "fund_id": "1509086",
+        "ppm_code": "183343",
+        "name": "DNB Teknologi S",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+        "hitrate_q50": 86.67,
+        "coverage_pct": 80.0,
+        "mae_q50": 0.8299,
+        "forecast_q10": 0.6125,
+        "forecast_q50": 1.4345,
+        "forecast_q90": 2.2298,
+        "last_actual": 0.3606,
+        "momentum_4w": 0.7299,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "2155",
         "ppm_code": "987842",
         "name": "Handelsbanken Tillväxtm Tema (A1 SEK)",
@@ -317,24 +332,6 @@
         "forecast_q90": 1.6792,
         "last_actual": 0.1075,
         "momentum_4w": 0.4499,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "397",
-        "ppm_code": "496729",
-        "name": "Franklin Technology Fund A",
-        "tags": "",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-        "hitrate_q50": 96.99,
-        "coverage_pct": 89.16,
-        "mae_q50": 7.0172,
-        "forecast_q10": -4.2506,
-        "forecast_q50": 0.9089,
-        "forecast_q90": 3.9396,
-        "last_actual": 2.6407,
-        "momentum_4w": 2.7114,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -342,6 +339,24 @@
     ],
     "top_trending": [
       {
+        "fund_id": "1509086",
+        "ppm_code": "183343",
+        "name": "DNB Teknologi S",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+        "hitrate_q50": 86.67,
+        "coverage_pct": 80.0,
+        "mae_q50": 0.8299,
+        "forecast_q10": 0.6125,
+        "forecast_q50": 1.4345,
+        "forecast_q90": 2.2298,
+        "last_actual": 0.3606,
+        "momentum_4w": 0.7299,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "397",
         "ppm_code": "496729",
         "name": "Franklin Technology Fund A",
@@ -373,24 +388,6 @@
         "forecast_q90": 1.6696,
         "last_actual": 0.4513,
         "momentum_4w": 0.5535,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "364",
-        "ppm_code": "194092",
-        "name": "SEB Teknologifond",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/364",
-        "hitrate_q50": 90.53,
-        "coverage_pct": 81.58,
-        "mae_q50": 0.3697,
-        "forecast_q10": 0.3853,
-        "forecast_q50": 0.8802,
-        "forecast_q90": 2.0077,
-        "last_actual": 1.0324,
-        "momentum_4w": 2.187,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -398,6 +395,24 @@
     ],
     "top_winners": [
       {
+        "fund_id": "1509086",
+        "ppm_code": "183343",
+        "name": "DNB Teknologi S",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+        "hitrate_q50": 86.67,
+        "coverage_pct": 80.0,
+        "mae_q50": 0.8299,
+        "forecast_q10": 0.6125,
+        "forecast_q50": 1.4345,
+        "forecast_q90": 2.2298,
+        "last_actual": 0.3606,
+        "momentum_4w": 0.7299,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "2155",
         "ppm_code": "987842",
         "name": "Handelsbanken Tillväxtm Tema (A1 SEK)",
@@ -432,27 +447,65 @@
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
+      }
+    ],
+    "top_overall": [
+      {
+        "fund_id": "1509086",
+        "ppm_code": "183343",
+        "name": "DNB Teknologi S",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+        "hitrate_q50": 86.67,
+        "coverage_pct": 80.0,
+        "mae_q50": 0.8299,
+        "forecast_q10": 0.6125,
+        "forecast_q50": 1.4345,
+        "forecast_q90": 2.2298,
+        "last_actual": 0.3606,
+        "momentum_4w": 0.7299,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
       },
       {
-        "fund_id": "143369",
-        "ppm_code": "823096",
-        "name": "AMF Aktiefond Asien Stilla havet",
-        "tags": "Aktiefond, Asien & Australien",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/143369",
-        "hitrate_q50": 85.28,
-        "coverage_pct": 84.66,
-        "mae_q50": 0.3448,
-        "forecast_q10": -1.3367,
-        "forecast_q50": 0.4623,
-        "forecast_q90": 2.0483,
-        "last_actual": 0.614,
-        "momentum_4w": 0.6081,
+        "fund_id": "2155",
+        "ppm_code": "987842",
+        "name": "Handelsbanken Tillväxtm Tema (A1 SEK)",
+        "tags": "Aktiefond, Tillväxtmarknader",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2155",
+        "hitrate_q50": 85.26,
+        "coverage_pct": 86.84,
+        "mae_q50": 0.298,
+        "forecast_q10": 0.1493,
+        "forecast_q50": 1.0687,
+        "forecast_q90": 1.6696,
+        "last_actual": 0.4513,
+        "momentum_4w": 0.5535,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "2164",
+        "ppm_code": "950774",
+        "name": "SEB Emerging Marketsfond",
+        "tags": "Aktiefond, Tillväxtmarknader",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2164",
+        "hitrate_q50": 91.58,
+        "coverage_pct": 88.95,
+        "mae_q50": 0.3033,
+        "forecast_q10": 0.1044,
+        "forecast_q50": 0.9773,
+        "forecast_q90": 1.6792,
+        "last_actual": 0.1075,
+        "momentum_4w": 0.4499,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       }
     ],
-    "top_overall": [
+    "top_streak": [
       {
         "fund_id": "2155",
         "ppm_code": "987842",
@@ -503,62 +556,6 @@
         "forecast_q90": 3.9396,
         "last_actual": 2.6407,
         "momentum_4w": 2.7114,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      }
-    ],
-    "top_streak": [
-      {
-        "fund_id": "2164",
-        "ppm_code": "950774",
-        "name": "SEB Emerging Marketsfond",
-        "tags": "Aktiefond, Tillväxtmarknader",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2164",
-        "hitrate_q50": 91.58,
-        "coverage_pct": 88.95,
-        "mae_q50": 0.3033,
-        "forecast_q10": 0.1044,
-        "forecast_q50": 0.9773,
-        "forecast_q90": 1.6792,
-        "last_actual": 0.1075,
-        "momentum_4w": 0.4499,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "2187",
-        "ppm_code": "425067",
-        "name": "Templeton Emerging Markets A(acc)USD",
-        "tags": "Aktiefond, Tillväxtmarknader",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2187",
-        "hitrate_q50": 88.95,
-        "coverage_pct": 83.16,
-        "mae_q50": 0.3506,
-        "forecast_q10": -0.0161,
-        "forecast_q50": 1.0055,
-        "forecast_q90": 1.7598,
-        "last_actual": 1.1659,
-        "momentum_4w": 0.8225,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "364",
-        "ppm_code": "194092",
-        "name": "SEB Teknologifond",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/364",
-        "hitrate_q50": 90.53,
-        "coverage_pct": 81.58,
-        "mae_q50": 0.3697,
-        "forecast_q10": 0.3853,
-        "forecast_q50": 0.8802,
-        "forecast_q90": 2.0077,
-        "last_actual": 1.0324,
-        "momentum_4w": 2.187,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
