@@ -119,15 +119,15 @@
         "name": "SEB Teknologifond",
         "tags": "Aktiefond, Branschfond, Ny teknik",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/364",
-        "score": 107.464,
+        "score": 104.646,
         "hitrate_q50": 73.16,
         "coverage_pct": 56.32,
         "mae_q50": 0.7064,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.5755,
-          "q50": 1.2888,
-          "q90": 2.4475
+          "q10": 0.5691,
+          "q50": 1.2386,
+          "q90": 2.7146
         },
         "consensus": {
           "n_agree": 3,
@@ -144,16 +144,16 @@
         "warnings": [
           {
             "reason": "anomaly",
-            "detail": "fc=+1.29% = 3.6× mean_pred (limit 3.0×)"
+            "detail": "fc=+1.24% = 3.4× mean_pred (limit 3.0×)"
           }
         ],
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 2.211,
-          "last_pred_q50": 0.9862,
+          "mae": 2.2219,
+          "last_pred_q50": 0.9429,
           "last_actual": 2.9,
-          "last_error": -1.9138,
+          "last_error": -1.9572,
           "last_direction_ok": true,
           "date_from": "2026-07-06",
           "date_to": "2026-09-28"
@@ -536,6 +536,24 @@
         "forecast_q90": 1.7942,
         "last_actual": 0.2508,
         "momentum_4w": 0.6371,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "364",
+        "ppm_code": "194092",
+        "name": "SEB Teknologifond",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/364",
+        "hitrate_q50": 73.16,
+        "coverage_pct": 56.32,
+        "mae_q50": 0.7064,
+        "forecast_q10": 0.6417,
+        "forecast_q50": 0.9862,
+        "forecast_q90": 1.894,
+        "last_actual": 2.9,
+        "momentum_4w": 2.6539,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
