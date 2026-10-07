@@ -119,15 +119,15 @@
         "name": "East Capital Global EM Sustainable A SEK",
         "tags": "Aktiefond, Tillväxtmarknader",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/367456",
-        "score": 98.061,
+        "score": 88.744,
         "hitrate_q50": 70.21,
         "coverage_pct": 51.77,
         "mae_q50": 0.717,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.0467,
-          "q50": 1.1986,
-          "q90": 1.7175
+          "q10": 0.0666,
+          "q50": 1.1639,
+          "q90": 1.7767
         },
         "consensus": {
           "n_agree": 3,
@@ -141,19 +141,24 @@
             "xgboost"
           ]
         },
-        "warnings": [],
+        "warnings": [
+          {
+            "reason": "backtest",
+            "detail": "backtest 58.3% < 60%"
+          }
+        ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 66.7,
-          "mae": 1.8741,
-          "last_pred_q50": 1.0392,
+          "hit_rate_pct": 58.3,
+          "mae": 1.8733,
+          "last_pred_q50": 1.035,
           "last_actual": 0.9847,
-          "last_error": 0.0545,
+          "last_error": 0.0503,
           "last_direction_ok": true,
           "date_from": "2026-07-06",
           "date_to": "2026-09-28"
         },
-        "rationale": "70% hit-rate; 0.717pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "70% hit-rate; 0.717pp MAE; 3/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-07/367456/h1w_ensemble.png",
           "individual": "top-2026-10-07/367456/h1w_individual.png"
@@ -536,22 +541,22 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "355598",
-        "ppm_code": "700310",
-        "name": "Evli High Yield B SEK",
-        "tags": "Räntefond, SEK, Obligationer, Flexibel storlek bolag, Högrisk",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/355598",
-        "hitrate_q50": 88.8,
-        "coverage_pct": 88.8,
-        "mae_q50": 0.0841,
-        "forecast_q10": -0.45,
-        "forecast_q50": -0.2801,
-        "forecast_q90": -0.0674,
-        "last_actual": -0.3471,
-        "momentum_4w": -0.4628,
+        "fund_id": "367456",
+        "ppm_code": "623637",
+        "name": "East Capital Global EM Sustainable A SEK",
+        "tags": "Aktiefond, Tillväxtmarknader",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/367456",
+        "hitrate_q50": 70.21,
+        "coverage_pct": 51.77,
+        "mae_q50": 0.717,
+        "forecast_q10": -0.0516,
+        "forecast_q50": 1.0392,
+        "forecast_q90": 1.3791,
+        "last_actual": 0.9847,
+        "momentum_4w": 0.8324,
         "tritch_score": -1.0,
         "tritch_phase": 0,
-        "signal": "SELL"
+        "signal": "BUY"
       }
     ]
   }
