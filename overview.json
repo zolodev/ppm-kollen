@@ -1,31 +1,14 @@
 {
-  "generated": "2026-10-06",
+  "generated": "2026-10-07",
   "week_from": "2026-09-28",
   "min_coverage_pct": 60.0,
   "trend_band": 0.5,
   "counts": {
     "total": 237,
     "recommended": 3,
-    "low_coverage": 148
+    "low_coverage": 159
   },
   "funds": [
-    {
-      "fund_id": "364",
-      "ppm_code": "194092",
-      "name": "SEB Teknologifond",
-      "tags": "Aktiefond, Branschfond, Ny teknik",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/364",
-      "change_pct": 2.9,
-      "direction": "up",
-      "streak": 6,
-      "streak_dir": "up",
-      "momentum_4w": 2.654,
-      "trend": "up",
-      "hitrate_q50": 73.16,
-      "coverage_pct": 56.32,
-      "recommended": true,
-      "low_coverage": true
-    },
     {
       "fund_id": "1509086",
       "ppm_code": "183343",
@@ -42,6 +25,23 @@
       "coverage_pct": 80.0,
       "recommended": true,
       "low_coverage": false
+    },
+    {
+      "fund_id": "367456",
+      "ppm_code": "623637",
+      "name": "East Capital Global EM Sustainable A SEK",
+      "tags": "Aktiefond, Tillväxtmarknader",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/367456",
+      "change_pct": 0.985,
+      "direction": "up",
+      "streak": 3,
+      "streak_dir": "up",
+      "momentum_4w": 0.832,
+      "trend": "up",
+      "hitrate_q50": 70.21,
+      "coverage_pct": 51.77,
+      "recommended": true,
+      "low_coverage": true
     },
     {
       "fund_id": "1509085",
@@ -89,8 +89,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.809,
       "trend": "up",
-      "hitrate_q50": 73.68,
-      "coverage_pct": 61.05,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 61.58,
       "recommended": false,
       "low_coverage": false
     },
@@ -107,7 +107,7 @@
       "momentum_4w": 2.857,
       "trend": "up",
       "hitrate_q50": 70.53,
-      "coverage_pct": 60.53,
+      "coverage_pct": 61.05,
       "recommended": false,
       "low_coverage": false
     },
@@ -124,7 +124,7 @@
       "momentum_4w": 1.916,
       "trend": "up",
       "hitrate_q50": 72.32,
-      "coverage_pct": 52.54,
+      "coverage_pct": 51.41,
       "recommended": false,
       "low_coverage": true
     },
@@ -140,8 +140,8 @@
       "streak_dir": "up",
       "momentum_4w": 3.077,
       "trend": "up",
-      "hitrate_q50": 71.08,
-      "coverage_pct": 18.67,
+      "hitrate_q50": 74.7,
+      "coverage_pct": 14.46,
       "recommended": false,
       "low_coverage": true
     },
@@ -158,9 +158,26 @@
       "momentum_4w": 2.836,
       "trend": "up",
       "hitrate_q50": 74.21,
-      "coverage_pct": 61.05,
+      "coverage_pct": 61.58,
       "recommended": false,
       "low_coverage": false
+    },
+    {
+      "fund_id": "364",
+      "ppm_code": "194092",
+      "name": "SEB Teknologifond",
+      "tags": "Aktiefond, Branschfond, Ny teknik",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/364",
+      "change_pct": 2.9,
+      "direction": "up",
+      "streak": 6,
+      "streak_dir": "up",
+      "momentum_4w": 2.654,
+      "trend": "up",
+      "hitrate_q50": 73.16,
+      "coverage_pct": 56.84,
+      "recommended": false,
+      "low_coverage": true
     },
     {
       "fund_id": "1288",
@@ -175,7 +192,7 @@
       "momentum_4w": 0.911,
       "trend": "up",
       "hitrate_q50": 60.0,
-      "coverage_pct": 46.32,
+      "coverage_pct": 45.26,
       "recommended": false,
       "low_coverage": true
     },
@@ -192,7 +209,7 @@
       "momentum_4w": 0.931,
       "trend": "up",
       "hitrate_q50": 62.63,
-      "coverage_pct": 51.05,
+      "coverage_pct": 46.84,
       "recommended": false,
       "low_coverage": true
     },
@@ -209,7 +226,7 @@
       "momentum_4w": 2.115,
       "trend": "up",
       "hitrate_q50": 75.26,
-      "coverage_pct": 64.21,
+      "coverage_pct": 62.63,
       "recommended": false,
       "low_coverage": false
     },
@@ -225,8 +242,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.076,
       "trend": "flat",
-      "hitrate_q50": 71.14,
-      "coverage_pct": 53.69,
+      "hitrate_q50": 69.8,
+      "coverage_pct": 50.34,
       "recommended": false,
       "low_coverage": true
     },
@@ -243,7 +260,7 @@
       "momentum_4w": 0.535,
       "trend": "up",
       "hitrate_q50": 65.79,
-      "coverage_pct": 56.32,
+      "coverage_pct": 55.79,
       "recommended": false,
       "low_coverage": true
     },
@@ -260,7 +277,7 @@
       "momentum_4w": 0.407,
       "trend": "flat",
       "hitrate_q50": 77.0,
-      "coverage_pct": 55.0,
+      "coverage_pct": 42.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -276,7 +293,7 @@
       "streak_dir": "up",
       "momentum_4w": 1.681,
       "trend": "up",
-      "hitrate_q50": 56.06,
+      "hitrate_q50": 53.03,
       "coverage_pct": 59.85,
       "recommended": false,
       "low_coverage": true
@@ -294,7 +311,7 @@
       "momentum_4w": 0.404,
       "trend": "flat",
       "hitrate_q50": 61.58,
-      "coverage_pct": 47.89,
+      "coverage_pct": 46.84,
       "recommended": false,
       "low_coverage": true
     },
@@ -311,7 +328,7 @@
       "momentum_4w": 1.265,
       "trend": "up",
       "hitrate_q50": 60.53,
-      "coverage_pct": 46.84,
+      "coverage_pct": 46.32,
       "recommended": false,
       "low_coverage": true
     },
@@ -327,8 +344,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.702,
       "trend": "up",
-      "hitrate_q50": 65.26,
-      "coverage_pct": 54.21,
+      "hitrate_q50": 64.21,
+      "coverage_pct": 51.58,
       "recommended": false,
       "low_coverage": true
     },
@@ -344,7 +361,7 @@
       "streak_dir": "up",
       "momentum_4w": 1.067,
       "trend": "up",
-      "hitrate_q50": 66.84,
+      "hitrate_q50": 67.89,
       "coverage_pct": 58.95,
       "recommended": false,
       "low_coverage": true
@@ -361,8 +378,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.116,
       "trend": "up",
-      "hitrate_q50": 74.74,
-      "coverage_pct": 64.21,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 60.53,
       "recommended": false,
       "low_coverage": false
     },
@@ -379,7 +396,7 @@
       "momentum_4w": 0.973,
       "trend": "up",
       "hitrate_q50": 72.63,
-      "coverage_pct": 50.0,
+      "coverage_pct": 49.47,
       "recommended": false,
       "low_coverage": true
     },
@@ -396,7 +413,7 @@
       "momentum_4w": 1.113,
       "trend": "up",
       "hitrate_q50": 74.21,
-      "coverage_pct": 53.68,
+      "coverage_pct": 53.16,
       "recommended": false,
       "low_coverage": true
     },
@@ -413,7 +430,7 @@
       "momentum_4w": 0.493,
       "trend": "flat",
       "hitrate_q50": 71.58,
-      "coverage_pct": 65.26,
+      "coverage_pct": 65.79,
       "recommended": false,
       "low_coverage": false
     },
@@ -429,8 +446,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.991,
       "trend": "up",
-      "hitrate_q50": 65.08,
-      "coverage_pct": 54.5,
+      "hitrate_q50": 64.02,
+      "coverage_pct": 53.44,
       "recommended": false,
       "low_coverage": true
     },
@@ -464,7 +481,7 @@
       "momentum_4w": 0.644,
       "trend": "up",
       "hitrate_q50": 63.16,
-      "coverage_pct": 51.58,
+      "coverage_pct": 50.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -480,8 +497,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.261,
       "trend": "up",
-      "hitrate_q50": 67.44,
-      "coverage_pct": 55.04,
+      "hitrate_q50": 66.67,
+      "coverage_pct": 52.71,
       "recommended": false,
       "low_coverage": true
     },
@@ -532,7 +549,7 @@
       "momentum_4w": 1.089,
       "trend": "up",
       "hitrate_q50": 80.0,
-      "coverage_pct": 55.0,
+      "coverage_pct": 52.5,
       "recommended": false,
       "low_coverage": true
     },
@@ -548,8 +565,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.521,
       "trend": "up",
-      "hitrate_q50": 71.58,
-      "coverage_pct": 63.16,
+      "hitrate_q50": 72.63,
+      "coverage_pct": 62.11,
       "recommended": false,
       "low_coverage": false
     },
@@ -566,9 +583,9 @@
       "momentum_4w": 1.312,
       "trend": "up",
       "hitrate_q50": 76.84,
-      "coverage_pct": 63.68,
+      "coverage_pct": 58.95,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "130487",
@@ -583,7 +600,7 @@
       "momentum_4w": 0.301,
       "trend": "flat",
       "hitrate_q50": 72.29,
-      "coverage_pct": 64.46,
+      "coverage_pct": 65.66,
       "recommended": false,
       "low_coverage": false
     },
@@ -599,8 +616,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.707,
       "trend": "up",
-      "hitrate_q50": 61.58,
-      "coverage_pct": 49.47,
+      "hitrate_q50": 60.53,
+      "coverage_pct": 48.95,
       "recommended": false,
       "low_coverage": true
     },
@@ -617,24 +634,7 @@
       "momentum_4w": 0.671,
       "trend": "up",
       "hitrate_q50": 68.95,
-      "coverage_pct": 45.26,
-      "recommended": false,
-      "low_coverage": true
-    },
-    {
-      "fund_id": "367456",
-      "ppm_code": "623637",
-      "name": "East Capital Global EM Sustainable A SEK",
-      "tags": "Aktiefond, Tillväxtmarknader",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/367456",
-      "change_pct": 0.985,
-      "direction": "up",
-      "streak": 3,
-      "streak_dir": "up",
-      "momentum_4w": 0.832,
-      "trend": "up",
-      "hitrate_q50": 73.76,
-      "coverage_pct": 53.9,
+      "coverage_pct": 43.68,
       "recommended": false,
       "low_coverage": true
     },
@@ -650,7 +650,7 @@
       "streak_dir": "up",
       "momentum_4w": -0.183,
       "trend": "flat",
-      "hitrate_q50": 63.35,
+      "hitrate_q50": 62.11,
       "coverage_pct": 49.07,
       "recommended": false,
       "low_coverage": true
@@ -668,7 +668,7 @@
       "momentum_4w": -0.224,
       "trend": "flat",
       "hitrate_q50": 75.0,
-      "coverage_pct": 72.73,
+      "coverage_pct": 70.45,
       "recommended": false,
       "low_coverage": false
     },
@@ -685,7 +685,7 @@
       "momentum_4w": 0.42,
       "trend": "flat",
       "hitrate_q50": 85.29,
-      "coverage_pct": 66.18,
+      "coverage_pct": 64.71,
       "recommended": false,
       "low_coverage": false
     },
@@ -701,8 +701,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.25,
       "trend": "up",
-      "hitrate_q50": 71.43,
-      "coverage_pct": 51.88,
+      "hitrate_q50": 72.18,
+      "coverage_pct": 54.89,
       "recommended": false,
       "low_coverage": true
     },
@@ -719,7 +719,7 @@
       "momentum_4w": 0.57,
       "trend": "up",
       "hitrate_q50": 68.55,
-      "coverage_pct": 54.03,
+      "coverage_pct": 45.97,
       "recommended": false,
       "low_coverage": true
     },
@@ -735,8 +735,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.161,
       "trend": "up",
-      "hitrate_q50": 66.38,
-      "coverage_pct": 47.41,
+      "hitrate_q50": 64.66,
+      "coverage_pct": 50.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -753,7 +753,7 @@
       "momentum_4w": 0.18,
       "trend": "flat",
       "hitrate_q50": 58.95,
-      "coverage_pct": 34.74,
+      "coverage_pct": 32.11,
       "recommended": false,
       "low_coverage": true
     },
@@ -770,7 +770,7 @@
       "momentum_4w": 0.586,
       "trend": "up",
       "hitrate_q50": 73.33,
-      "coverage_pct": 53.33,
+      "coverage_pct": 50.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -786,8 +786,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.621,
       "trend": "up",
-      "hitrate_q50": 75.9,
-      "coverage_pct": 53.01,
+      "hitrate_q50": 73.49,
+      "coverage_pct": 49.4,
       "recommended": false,
       "low_coverage": true
     },
@@ -803,8 +803,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.551,
       "trend": "up",
-      "hitrate_q50": 66.35,
-      "coverage_pct": 50.96,
+      "hitrate_q50": 64.42,
+      "coverage_pct": 42.31,
       "recommended": false,
       "low_coverage": true
     },
@@ -820,8 +820,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.11,
       "trend": "flat",
-      "hitrate_q50": 60.0,
-      "coverage_pct": 67.37,
+      "hitrate_q50": 61.05,
+      "coverage_pct": 62.63,
       "recommended": false,
       "low_coverage": false
     },
@@ -838,7 +838,7 @@
       "momentum_4w": 0.669,
       "trend": "up",
       "hitrate_q50": 71.05,
-      "coverage_pct": 54.74,
+      "coverage_pct": 56.84,
       "recommended": false,
       "low_coverage": true
     },
@@ -854,10 +854,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.038,
       "trend": "up",
-      "hitrate_q50": 68.42,
-      "coverage_pct": 60.0,
+      "hitrate_q50": 68.95,
+      "coverage_pct": 56.84,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2014",
@@ -872,7 +872,7 @@
       "momentum_4w": 0.352,
       "trend": "flat",
       "hitrate_q50": 58.95,
-      "coverage_pct": 46.84,
+      "coverage_pct": 44.74,
       "recommended": false,
       "low_coverage": true
     },
@@ -888,8 +888,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.607,
       "trend": "up",
-      "hitrate_q50": 68.79,
-      "coverage_pct": 51.77,
+      "hitrate_q50": 67.38,
+      "coverage_pct": 48.23,
       "recommended": false,
       "low_coverage": true
     },
@@ -905,7 +905,7 @@
       "streak_dir": "up",
       "momentum_4w": 0.052,
       "trend": "flat",
-      "hitrate_q50": 67.89,
+      "hitrate_q50": 68.42,
       "coverage_pct": 76.32,
       "recommended": false,
       "low_coverage": false
@@ -922,8 +922,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.111,
       "trend": "flat",
-      "hitrate_q50": 58.42,
-      "coverage_pct": 69.47,
+      "hitrate_q50": 57.89,
+      "coverage_pct": 67.37,
       "recommended": false,
       "low_coverage": false
     },
@@ -939,8 +939,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.76,
       "trend": "up",
-      "hitrate_q50": 69.47,
-      "coverage_pct": 58.95,
+      "hitrate_q50": 68.95,
+      "coverage_pct": 55.79,
       "recommended": false,
       "low_coverage": true
     },
@@ -957,7 +957,7 @@
       "momentum_4w": 1.109,
       "trend": "up",
       "hitrate_q50": 71.05,
-      "coverage_pct": 52.63,
+      "coverage_pct": 52.11,
       "recommended": false,
       "low_coverage": true
     },
@@ -973,8 +973,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.573,
       "trend": "up",
-      "hitrate_q50": 72.87,
-      "coverage_pct": 63.57,
+      "hitrate_q50": 73.64,
+      "coverage_pct": 64.34,
       "recommended": false,
       "low_coverage": false
     },
@@ -991,7 +991,7 @@
       "momentum_4w": 0.441,
       "trend": "flat",
       "hitrate_q50": 66.84,
-      "coverage_pct": 51.05,
+      "coverage_pct": 48.95,
       "recommended": false,
       "low_coverage": true
     },
@@ -1007,10 +1007,10 @@
       "streak_dir": "up",
       "momentum_4w": 1.082,
       "trend": "up",
-      "hitrate_q50": 68.79,
-      "coverage_pct": 64.16,
+      "hitrate_q50": 69.94,
+      "coverage_pct": 58.96,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "596636",
@@ -1025,7 +1025,7 @@
       "momentum_4w": 0.968,
       "trend": "up",
       "hitrate_q50": 67.78,
-      "coverage_pct": 45.56,
+      "coverage_pct": 46.67,
       "recommended": false,
       "low_coverage": true
     },
@@ -1041,8 +1041,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.139,
       "trend": "flat",
-      "hitrate_q50": 60.0,
-      "coverage_pct": 67.37,
+      "hitrate_q50": 61.05,
+      "coverage_pct": 62.63,
       "recommended": false,
       "low_coverage": false
     },
@@ -1058,8 +1058,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.876,
       "trend": "up",
-      "hitrate_q50": 69.47,
-      "coverage_pct": 49.47,
+      "hitrate_q50": 68.95,
+      "coverage_pct": 48.95,
       "recommended": false,
       "low_coverage": true
     },
@@ -1076,9 +1076,9 @@
       "momentum_4w": 0.406,
       "trend": "flat",
       "hitrate_q50": 81.03,
-      "coverage_pct": 55.17,
+      "coverage_pct": 60.34,
       "recommended": false,
-      "low_coverage": true
+      "low_coverage": false
     },
     {
       "fund_id": "333557",
@@ -1093,7 +1093,7 @@
       "momentum_4w": -0.233,
       "trend": "flat",
       "hitrate_q50": 74.42,
-      "coverage_pct": 82.17,
+      "coverage_pct": 74.42,
       "recommended": false,
       "low_coverage": false
     },
@@ -1109,8 +1109,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.036,
       "trend": "flat",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 78.42,
+      "hitrate_q50": 67.89,
+      "coverage_pct": 77.89,
       "recommended": false,
       "low_coverage": false
     },
@@ -1126,7 +1126,7 @@
       "streak_dir": "up",
       "momentum_4w": 0.933,
       "trend": "up",
-      "hitrate_q50": 75.44,
+      "hitrate_q50": 77.19,
       "coverage_pct": 50.88,
       "recommended": false,
       "low_coverage": true
@@ -1143,8 +1143,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.079,
       "trend": "up",
-      "hitrate_q50": 70.51,
-      "coverage_pct": 52.56,
+      "hitrate_q50": 69.23,
+      "coverage_pct": 53.21,
       "recommended": false,
       "low_coverage": true
     },
@@ -1160,8 +1160,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.13,
       "trend": "flat",
-      "hitrate_q50": 88.0,
-      "coverage_pct": 58.0,
+      "hitrate_q50": 90.0,
+      "coverage_pct": 54.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -1177,8 +1177,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.877,
       "trend": "up",
-      "hitrate_q50": 74.21,
-      "coverage_pct": 53.16,
+      "hitrate_q50": 73.68,
+      "coverage_pct": 52.63,
       "recommended": false,
       "low_coverage": true
     },
@@ -1194,7 +1194,7 @@
       "streak_dir": "up",
       "momentum_4w": 0.494,
       "trend": "flat",
-      "hitrate_q50": 60.53,
+      "hitrate_q50": 61.58,
       "coverage_pct": 41.58,
       "recommended": false,
       "low_coverage": true
@@ -1211,8 +1211,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.275,
       "trend": "flat",
-      "hitrate_q50": 58.95,
-      "coverage_pct": 50.53,
+      "hitrate_q50": 57.89,
+      "coverage_pct": 49.47,
       "recommended": false,
       "low_coverage": true
     },
@@ -1228,7 +1228,7 @@
       "streak_dir": "up",
       "momentum_4w": 0.887,
       "trend": "up",
-      "hitrate_q50": 71.43,
+      "hitrate_q50": 73.21,
       "coverage_pct": 56.25,
       "recommended": false,
       "low_coverage": true
@@ -1246,7 +1246,7 @@
       "momentum_4w": 0.405,
       "trend": "flat",
       "hitrate_q50": 72.63,
-      "coverage_pct": 46.84,
+      "coverage_pct": 46.32,
       "recommended": false,
       "low_coverage": true
     },
@@ -1262,8 +1262,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.589,
       "trend": "up",
-      "hitrate_q50": 68.95,
-      "coverage_pct": 53.16,
+      "hitrate_q50": 68.42,
+      "coverage_pct": 50.53,
       "recommended": false,
       "low_coverage": true
     },
@@ -1280,7 +1280,7 @@
       "momentum_4w": -0.296,
       "trend": "flat",
       "hitrate_q50": 55.26,
-      "coverage_pct": 73.68,
+      "coverage_pct": 70.53,
       "recommended": false,
       "low_coverage": false
     },
@@ -1297,7 +1297,7 @@
       "momentum_4w": -0.137,
       "trend": "flat",
       "hitrate_q50": 78.1,
-      "coverage_pct": 84.76,
+      "coverage_pct": 82.86,
       "recommended": false,
       "low_coverage": false
     },
@@ -1313,8 +1313,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.871,
       "trend": "up",
-      "hitrate_q50": 74.21,
-      "coverage_pct": 60.53,
+      "hitrate_q50": 75.26,
+      "coverage_pct": 61.05,
       "recommended": false,
       "low_coverage": false
     },
@@ -1330,8 +1330,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.705,
       "trend": "up",
-      "hitrate_q50": 67.89,
-      "coverage_pct": 65.79,
+      "hitrate_q50": 67.37,
+      "coverage_pct": 65.26,
       "recommended": false,
       "low_coverage": false
     },
@@ -1347,7 +1347,7 @@
       "streak_dir": "up",
       "momentum_4w": -0.183,
       "trend": "flat",
-      "hitrate_q50": 74.21,
+      "hitrate_q50": 73.68,
       "coverage_pct": 53.68,
       "recommended": false,
       "low_coverage": true
@@ -1364,8 +1364,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.545,
       "trend": "up",
-      "hitrate_q50": 61.96,
-      "coverage_pct": 52.76,
+      "hitrate_q50": 63.19,
+      "coverage_pct": 46.63,
       "recommended": false,
       "low_coverage": true
     },
@@ -1399,7 +1399,7 @@
       "momentum_4w": -0.171,
       "trend": "flat",
       "hitrate_q50": 62.11,
-      "coverage_pct": 72.11,
+      "coverage_pct": 70.53,
       "recommended": false,
       "low_coverage": false
     },
@@ -1415,8 +1415,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.36,
       "trend": "flat",
-      "hitrate_q50": 72.58,
-      "coverage_pct": 90.32,
+      "hitrate_q50": 79.03,
+      "coverage_pct": 80.65,
       "recommended": false,
       "low_coverage": false
     },
@@ -1432,10 +1432,10 @@
       "streak_dir": "up",
       "momentum_4w": 0.247,
       "trend": "flat",
-      "hitrate_q50": 74.6,
-      "coverage_pct": 64.29,
+      "hitrate_q50": 72.22,
+      "coverage_pct": 59.52,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "2088",
@@ -1450,7 +1450,7 @@
       "momentum_4w": -0.307,
       "trend": "flat",
       "hitrate_q50": 74.21,
-      "coverage_pct": 76.84,
+      "coverage_pct": 74.21,
       "recommended": false,
       "low_coverage": false
     },
@@ -1466,8 +1466,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.011,
       "trend": "flat",
-      "hitrate_q50": 57.37,
-      "coverage_pct": 44.21,
+      "hitrate_q50": 56.84,
+      "coverage_pct": 41.05,
       "recommended": false,
       "low_coverage": true
     },
@@ -1483,7 +1483,7 @@
       "streak_dir": "up",
       "momentum_4w": -0.163,
       "trend": "flat",
-      "hitrate_q50": 65.79,
+      "hitrate_q50": 64.74,
       "coverage_pct": 70.0,
       "recommended": false,
       "low_coverage": false
@@ -1500,8 +1500,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.467,
       "trend": "flat",
-      "hitrate_q50": 63.31,
-      "coverage_pct": 53.85,
+      "hitrate_q50": 62.72,
+      "coverage_pct": 51.48,
       "recommended": false,
       "low_coverage": true
     },
@@ -1534,8 +1534,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.023,
       "trend": "flat",
-      "hitrate_q50": 55.79,
-      "coverage_pct": 45.26,
+      "hitrate_q50": 54.21,
+      "coverage_pct": 43.16,
       "recommended": false,
       "low_coverage": true
     },
@@ -1552,7 +1552,7 @@
       "momentum_4w": 0.292,
       "trend": "flat",
       "hitrate_q50": 57.85,
-      "coverage_pct": 52.07,
+      "coverage_pct": 52.89,
       "recommended": false,
       "low_coverage": true
     },
@@ -1568,8 +1568,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.718,
       "trend": "up",
-      "hitrate_q50": 75.28,
-      "coverage_pct": 52.81,
+      "hitrate_q50": 74.16,
+      "coverage_pct": 49.44,
       "recommended": false,
       "low_coverage": true
     },
@@ -1585,8 +1585,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.414,
       "trend": "flat",
-      "hitrate_q50": 74.52,
-      "coverage_pct": 50.96,
+      "hitrate_q50": 75.8,
+      "coverage_pct": 52.87,
       "recommended": false,
       "low_coverage": true
     },
@@ -1603,7 +1603,7 @@
       "momentum_4w": 0.532,
       "trend": "up",
       "hitrate_q50": 69.47,
-      "coverage_pct": 55.26,
+      "coverage_pct": 52.63,
       "recommended": false,
       "low_coverage": true
     },
@@ -1619,8 +1619,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.425,
       "trend": "flat",
-      "hitrate_q50": 68.47,
-      "coverage_pct": 54.95,
+      "hitrate_q50": 66.67,
+      "coverage_pct": 55.86,
       "recommended": false,
       "low_coverage": true
     },
@@ -1636,8 +1636,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.07,
       "trend": "flat",
-      "hitrate_q50": 68.95,
-      "coverage_pct": 77.89,
+      "hitrate_q50": 70.0,
+      "coverage_pct": 78.42,
       "recommended": false,
       "low_coverage": false
     },
@@ -1654,7 +1654,7 @@
       "momentum_4w": -0.249,
       "trend": "flat",
       "hitrate_q50": 57.37,
-      "coverage_pct": 68.42,
+      "coverage_pct": 63.68,
       "recommended": false,
       "low_coverage": false
     },
@@ -1670,7 +1670,7 @@
       "streak_dir": "up",
       "momentum_4w": -0.214,
       "trend": "flat",
-      "hitrate_q50": 58.42,
+      "hitrate_q50": 58.95,
       "coverage_pct": 70.0,
       "recommended": false,
       "low_coverage": false
@@ -1688,7 +1688,7 @@
       "momentum_4w": 0.547,
       "trend": "up",
       "hitrate_q50": 75.76,
-      "coverage_pct": 59.6,
+      "coverage_pct": 58.59,
       "recommended": false,
       "low_coverage": true
     },
@@ -1704,8 +1704,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.474,
       "trend": "flat",
-      "hitrate_q50": 61.58,
-      "coverage_pct": 48.95,
+      "hitrate_q50": 62.63,
+      "coverage_pct": 48.42,
       "recommended": false,
       "low_coverage": true
     },
@@ -1721,8 +1721,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.192,
       "trend": "flat",
-      "hitrate_q50": 74.07,
-      "coverage_pct": 66.67,
+      "hitrate_q50": 72.84,
+      "coverage_pct": 64.2,
       "recommended": false,
       "low_coverage": false
     },
@@ -1739,7 +1739,7 @@
       "momentum_4w": 0.115,
       "trend": "flat",
       "hitrate_q50": 84.48,
-      "coverage_pct": 59.48,
+      "coverage_pct": 55.17,
       "recommended": false,
       "low_coverage": true
     },
@@ -1755,8 +1755,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.197,
       "trend": "flat",
-      "hitrate_q50": 83.16,
-      "coverage_pct": 80.0,
+      "hitrate_q50": 82.11,
+      "coverage_pct": 73.68,
       "recommended": false,
       "low_coverage": false
     },
@@ -1773,7 +1773,7 @@
       "momentum_4w": -0.031,
       "trend": "flat",
       "hitrate_q50": 63.16,
-      "coverage_pct": 45.26,
+      "coverage_pct": 44.74,
       "recommended": false,
       "low_coverage": true
     },
@@ -1790,7 +1790,7 @@
       "momentum_4w": 0.002,
       "trend": "flat",
       "hitrate_q50": 82.76,
-      "coverage_pct": 65.52,
+      "coverage_pct": 70.69,
       "recommended": false,
       "low_coverage": false
     },
@@ -1806,8 +1806,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.07,
       "trend": "flat",
-      "hitrate_q50": 58.42,
-      "coverage_pct": 41.58,
+      "hitrate_q50": 61.05,
+      "coverage_pct": 40.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -1823,8 +1823,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.118,
       "trend": "flat",
-      "hitrate_q50": 76.84,
-      "coverage_pct": 65.79,
+      "hitrate_q50": 76.32,
+      "coverage_pct": 71.05,
       "recommended": false,
       "low_coverage": false
     },
@@ -1840,7 +1840,7 @@
       "streak_dir": "up",
       "momentum_4w": 0.526,
       "trend": "up",
-      "hitrate_q50": 66.14,
+      "hitrate_q50": 69.29,
       "coverage_pct": 67.72,
       "recommended": false,
       "low_coverage": false
@@ -1857,8 +1857,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.306,
       "trend": "flat",
-      "hitrate_q50": 69.77,
-      "coverage_pct": 43.02,
+      "hitrate_q50": 68.6,
+      "coverage_pct": 44.19,
       "recommended": false,
       "low_coverage": true
     },
@@ -1875,7 +1875,7 @@
       "momentum_4w": 0.188,
       "trend": "flat",
       "hitrate_q50": 67.37,
-      "coverage_pct": 54.74,
+      "coverage_pct": 53.68,
       "recommended": false,
       "low_coverage": true
     },
@@ -1892,7 +1892,7 @@
       "momentum_4w": 0.645,
       "trend": "up",
       "hitrate_q50": 62.11,
-      "coverage_pct": 59.47,
+      "coverage_pct": 57.89,
       "recommended": false,
       "low_coverage": true
     },
@@ -1909,7 +1909,7 @@
       "momentum_4w": -0.108,
       "trend": "flat",
       "hitrate_q50": 60.36,
-      "coverage_pct": 66.67,
+      "coverage_pct": 63.96,
       "recommended": false,
       "low_coverage": false
     },
@@ -1926,7 +1926,7 @@
       "momentum_4w": 0.456,
       "trend": "flat",
       "hitrate_q50": 65.79,
-      "coverage_pct": 55.26,
+      "coverage_pct": 54.74,
       "recommended": false,
       "low_coverage": true
     },
@@ -1942,8 +1942,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.268,
       "trend": "flat",
-      "hitrate_q50": 81.33,
-      "coverage_pct": 56.63,
+      "hitrate_q50": 78.92,
+      "coverage_pct": 54.82,
       "recommended": false,
       "low_coverage": true
     },
@@ -1976,8 +1976,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.018,
       "trend": "flat",
-      "hitrate_q50": 85.79,
-      "coverage_pct": 60.0,
+      "hitrate_q50": 86.84,
+      "coverage_pct": 62.63,
       "recommended": false,
       "low_coverage": false
     },
@@ -1994,7 +1994,7 @@
       "momentum_4w": -0.086,
       "trend": "flat",
       "hitrate_q50": 80.53,
-      "coverage_pct": 71.58,
+      "coverage_pct": 71.05,
       "recommended": false,
       "low_coverage": false
     },
@@ -2011,7 +2011,7 @@
       "momentum_4w": 0.23,
       "trend": "flat",
       "hitrate_q50": 86.21,
-      "coverage_pct": 65.52,
+      "coverage_pct": 63.79,
       "recommended": false,
       "low_coverage": false
     },
@@ -2028,7 +2028,7 @@
       "momentum_4w": 0.014,
       "trend": "flat",
       "hitrate_q50": 84.21,
-      "coverage_pct": 48.42,
+      "coverage_pct": 48.95,
       "recommended": false,
       "low_coverage": true
     },
@@ -2044,8 +2044,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.015,
       "trend": "flat",
-      "hitrate_q50": 84.21,
-      "coverage_pct": 64.21,
+      "hitrate_q50": 83.68,
+      "coverage_pct": 63.68,
       "recommended": false,
       "low_coverage": false
     },
@@ -2061,8 +2061,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.01,
       "trend": "flat",
-      "hitrate_q50": 82.11,
-      "coverage_pct": 58.42,
+      "hitrate_q50": 87.37,
+      "coverage_pct": 58.95,
       "recommended": false,
       "low_coverage": true
     },
@@ -2078,8 +2078,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.011,
       "trend": "flat",
-      "hitrate_q50": 87.37,
-      "coverage_pct": 56.84,
+      "hitrate_q50": 89.47,
+      "coverage_pct": 58.42,
       "recommended": false,
       "low_coverage": true
     },
@@ -2095,8 +2095,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.177,
       "trend": "flat",
-      "hitrate_q50": 82.63,
-      "coverage_pct": 78.42,
+      "hitrate_q50": 83.16,
+      "coverage_pct": 79.47,
       "recommended": false,
       "low_coverage": false
     },
@@ -2112,8 +2112,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.013,
       "trend": "flat",
-      "hitrate_q50": 88.42,
-      "coverage_pct": 75.79,
+      "hitrate_q50": 88.95,
+      "coverage_pct": 74.21,
       "recommended": false,
       "low_coverage": false
     },
@@ -2129,7 +2129,7 @@
       "streak_dir": "up",
       "momentum_4w": 0.011,
       "trend": "flat",
-      "hitrate_q50": 84.74,
+      "hitrate_q50": 85.26,
       "coverage_pct": 58.95,
       "recommended": false,
       "low_coverage": true
@@ -2147,7 +2147,7 @@
       "momentum_4w": 0.023,
       "trend": "flat",
       "hitrate_q50": 83.61,
-      "coverage_pct": 49.73,
+      "coverage_pct": 48.63,
       "recommended": false,
       "low_coverage": true
     },
@@ -2164,7 +2164,7 @@
       "momentum_4w": -0.08,
       "trend": "flat",
       "hitrate_q50": 81.05,
-      "coverage_pct": 76.84,
+      "coverage_pct": 74.74,
       "recommended": false,
       "low_coverage": false
     },
@@ -2180,8 +2180,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.001,
       "trend": "flat",
-      "hitrate_q50": 92.5,
-      "coverage_pct": 75.0,
+      "hitrate_q50": 94.17,
+      "coverage_pct": 74.17,
       "recommended": false,
       "low_coverage": false
     },
@@ -2197,8 +2197,8 @@
       "streak_dir": "flat",
       "momentum_4w": -0.009,
       "trend": "flat",
-      "hitrate_q50": 87.83,
-      "coverage_pct": 83.48,
+      "hitrate_q50": 89.57,
+      "coverage_pct": 86.09,
       "recommended": false,
       "low_coverage": false
     },
@@ -2214,8 +2214,8 @@
       "streak_dir": "flat",
       "momentum_4w": 0.006,
       "trend": "flat",
-      "hitrate_q50": 85.26,
-      "coverage_pct": 64.74,
+      "hitrate_q50": 86.84,
+      "coverage_pct": 65.79,
       "recommended": false,
       "low_coverage": false
     },
@@ -2231,8 +2231,8 @@
       "streak_dir": "flat",
       "momentum_4w": -0.299,
       "trend": "flat",
-      "hitrate_q50": 64.07,
-      "coverage_pct": 48.5,
+      "hitrate_q50": 64.67,
+      "coverage_pct": 47.31,
       "recommended": false,
       "low_coverage": true
     },
@@ -2248,8 +2248,8 @@
       "streak_dir": "flat",
       "momentum_4w": -0.425,
       "trend": "flat",
-      "hitrate_q50": 59.2,
-      "coverage_pct": 80.0,
+      "hitrate_q50": 60.0,
+      "coverage_pct": 82.4,
       "recommended": false,
       "low_coverage": false
     },
@@ -2265,8 +2265,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.053,
       "trend": "flat",
-      "hitrate_q50": 80.53,
-      "coverage_pct": 75.79,
+      "hitrate_q50": 80.0,
+      "coverage_pct": 74.21,
       "recommended": false,
       "low_coverage": false
     },
@@ -2282,7 +2282,7 @@
       "streak_dir": "down",
       "momentum_4w": 0.016,
       "trend": "flat",
-      "hitrate_q50": 89.47,
+      "hitrate_q50": 90.0,
       "coverage_pct": 62.11,
       "recommended": false,
       "low_coverage": false
@@ -2299,8 +2299,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.013,
       "trend": "flat",
-      "hitrate_q50": 89.02,
-      "coverage_pct": 70.52,
+      "hitrate_q50": 89.6,
+      "coverage_pct": 69.94,
       "recommended": false,
       "low_coverage": false
     },
@@ -2316,8 +2316,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.19,
       "trend": "flat",
-      "hitrate_q50": 55.79,
-      "coverage_pct": 51.58,
+      "hitrate_q50": 54.21,
+      "coverage_pct": 48.95,
       "recommended": false,
       "low_coverage": true
     },
@@ -2333,10 +2333,10 @@
       "streak_dir": "down",
       "momentum_4w": 0.666,
       "trend": "up",
-      "hitrate_q50": 70.52,
-      "coverage_pct": 58.38,
+      "hitrate_q50": 69.94,
+      "coverage_pct": 60.69,
       "recommended": false,
-      "low_coverage": true
+      "low_coverage": false
     },
     {
       "fund_id": "2066",
@@ -2351,7 +2351,7 @@
       "momentum_4w": -0.005,
       "trend": "flat",
       "hitrate_q50": 96.84,
-      "coverage_pct": 66.32,
+      "coverage_pct": 64.74,
       "recommended": false,
       "low_coverage": false
     },
@@ -2368,7 +2368,7 @@
       "momentum_4w": -0.069,
       "trend": "flat",
       "hitrate_q50": 70.0,
-      "coverage_pct": 62.63,
+      "coverage_pct": 61.58,
       "recommended": false,
       "low_coverage": false
     },
@@ -2384,8 +2384,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.002,
       "trend": "flat",
-      "hitrate_q50": 77.31,
-      "coverage_pct": 72.27,
+      "hitrate_q50": 80.67,
+      "coverage_pct": 71.43,
       "recommended": false,
       "low_coverage": false
     },
@@ -2418,8 +2418,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.697,
       "trend": "up",
-      "hitrate_q50": 60.0,
-      "coverage_pct": 49.47,
+      "hitrate_q50": 59.47,
+      "coverage_pct": 45.79,
       "recommended": false,
       "low_coverage": true
     },
@@ -2436,7 +2436,7 @@
       "momentum_4w": 0.211,
       "trend": "flat",
       "hitrate_q50": 74.21,
-      "coverage_pct": 53.68,
+      "coverage_pct": 53.16,
       "recommended": false,
       "low_coverage": true
     },
@@ -2452,7 +2452,7 @@
       "streak_dir": "down",
       "momentum_4w": 0.066,
       "trend": "flat",
-      "hitrate_q50": 77.37,
+      "hitrate_q50": 76.32,
       "coverage_pct": 66.84,
       "recommended": false,
       "low_coverage": false
@@ -2469,8 +2469,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.268,
       "trend": "flat",
-      "hitrate_q50": 67.37,
-      "coverage_pct": 54.74,
+      "hitrate_q50": 66.84,
+      "coverage_pct": 53.16,
       "recommended": false,
       "low_coverage": true
     },
@@ -2486,8 +2486,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.374,
       "trend": "flat",
-      "hitrate_q50": 72.63,
-      "coverage_pct": 60.53,
+      "hitrate_q50": 71.58,
+      "coverage_pct": 60.0,
       "recommended": false,
       "low_coverage": false
     },
@@ -2503,8 +2503,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.187,
       "trend": "flat",
-      "hitrate_q50": 71.05,
-      "coverage_pct": 55.79,
+      "hitrate_q50": 71.58,
+      "coverage_pct": 57.89,
       "recommended": false,
       "low_coverage": true
     },
@@ -2521,7 +2521,7 @@
       "momentum_4w": -0.382,
       "trend": "flat",
       "hitrate_q50": 66.23,
-      "coverage_pct": 46.75,
+      "coverage_pct": 46.1,
       "recommended": false,
       "low_coverage": true
     },
@@ -2538,7 +2538,7 @@
       "momentum_4w": -0.504,
       "trend": "down",
       "hitrate_q50": 59.47,
-      "coverage_pct": 41.05,
+      "coverage_pct": 39.47,
       "recommended": false,
       "low_coverage": true
     },
@@ -2555,7 +2555,7 @@
       "momentum_4w": -0.33,
       "trend": "flat",
       "hitrate_q50": 89.08,
-      "coverage_pct": 75.63,
+      "coverage_pct": 74.79,
       "recommended": false,
       "low_coverage": false
     },
@@ -2571,8 +2571,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.038,
       "trend": "flat",
-      "hitrate_q50": 67.89,
-      "coverage_pct": 56.84,
+      "hitrate_q50": 65.26,
+      "coverage_pct": 55.79,
       "recommended": false,
       "low_coverage": true
     },
@@ -2588,8 +2588,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.174,
       "trend": "flat",
-      "hitrate_q50": 83.02,
-      "coverage_pct": 89.62,
+      "hitrate_q50": 82.08,
+      "coverage_pct": 83.02,
       "recommended": false,
       "low_coverage": false
     },
@@ -2605,8 +2605,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.073,
       "trend": "flat",
-      "hitrate_q50": 83.46,
-      "coverage_pct": 71.65,
+      "hitrate_q50": 87.4,
+      "coverage_pct": 67.72,
       "recommended": false,
       "low_coverage": false
     },
@@ -2622,7 +2622,7 @@
       "streak_dir": "down",
       "momentum_4w": -1.325,
       "trend": "down",
-      "hitrate_q50": 64.21,
+      "hitrate_q50": 65.26,
       "coverage_pct": 41.05,
       "recommended": false,
       "low_coverage": true
@@ -2640,7 +2640,7 @@
       "momentum_4w": 0.686,
       "trend": "up",
       "hitrate_q50": 67.89,
-      "coverage_pct": 46.32,
+      "coverage_pct": 45.79,
       "recommended": false,
       "low_coverage": true
     },
@@ -2656,8 +2656,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.008,
       "trend": "flat",
-      "hitrate_q50": 72.63,
-      "coverage_pct": 61.05,
+      "hitrate_q50": 72.11,
+      "coverage_pct": 61.58,
       "recommended": false,
       "low_coverage": false
     },
@@ -2674,7 +2674,7 @@
       "momentum_4w": -0.917,
       "trend": "down",
       "hitrate_q50": 69.8,
-      "coverage_pct": 59.73,
+      "coverage_pct": 57.72,
       "recommended": false,
       "low_coverage": true
     },
@@ -2690,8 +2690,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.09,
       "trend": "flat",
-      "hitrate_q50": 72.88,
-      "coverage_pct": 49.15,
+      "hitrate_q50": 72.03,
+      "coverage_pct": 47.46,
       "recommended": false,
       "low_coverage": true
     },
@@ -2707,8 +2707,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.454,
       "trend": "flat",
-      "hitrate_q50": 71.05,
-      "coverage_pct": 45.26,
+      "hitrate_q50": 72.63,
+      "coverage_pct": 48.95,
       "recommended": false,
       "low_coverage": true
     },
@@ -2725,9 +2725,9 @@
       "momentum_4w": 0.209,
       "trend": "flat",
       "hitrate_q50": 76.32,
-      "coverage_pct": 62.63,
+      "coverage_pct": 58.95,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "164908",
@@ -2742,7 +2742,7 @@
       "momentum_4w": -0.579,
       "trend": "down",
       "hitrate_q50": 84.28,
-      "coverage_pct": 91.82,
+      "coverage_pct": 91.19,
       "recommended": false,
       "low_coverage": false
     },
@@ -2759,9 +2759,9 @@
       "momentum_4w": 0.238,
       "trend": "flat",
       "hitrate_q50": 75.79,
-      "coverage_pct": 60.0,
+      "coverage_pct": 56.84,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "355598",
@@ -2776,7 +2776,7 @@
       "momentum_4w": -0.463,
       "trend": "flat",
       "hitrate_q50": 88.8,
-      "coverage_pct": 89.6,
+      "coverage_pct": 88.8,
       "recommended": false,
       "low_coverage": false
     },
@@ -2792,7 +2792,7 @@
       "streak_dir": "down",
       "momentum_4w": -0.055,
       "trend": "flat",
-      "hitrate_q50": 74.74,
+      "hitrate_q50": 75.26,
       "coverage_pct": 58.42,
       "recommended": false,
       "low_coverage": true
@@ -2809,10 +2809,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.168,
       "trend": "flat",
-      "hitrate_q50": 57.72,
-      "coverage_pct": 63.09,
+      "hitrate_q50": 55.7,
+      "coverage_pct": 57.72,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "490477",
@@ -2826,8 +2826,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.252,
       "trend": "flat",
-      "hitrate_q50": 92.31,
-      "coverage_pct": 72.12,
+      "hitrate_q50": 90.38,
+      "coverage_pct": 71.15,
       "recommended": false,
       "low_coverage": false
     },
@@ -2843,8 +2843,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.088,
       "trend": "flat",
-      "hitrate_q50": 62.38,
-      "coverage_pct": 48.51,
+      "hitrate_q50": 63.37,
+      "coverage_pct": 45.54,
       "recommended": false,
       "low_coverage": true
     },
@@ -2861,7 +2861,7 @@
       "momentum_4w": 0.054,
       "trend": "flat",
       "hitrate_q50": 53.16,
-      "coverage_pct": 42.63,
+      "coverage_pct": 40.53,
       "recommended": false,
       "low_coverage": true
     },
@@ -2877,8 +2877,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.478,
       "trend": "flat",
-      "hitrate_q50": 78.95,
-      "coverage_pct": 36.84,
+      "hitrate_q50": 66.67,
+      "coverage_pct": 35.09,
       "recommended": false,
       "low_coverage": true
     },
@@ -2894,8 +2894,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.508,
       "trend": "up",
-      "hitrate_q50": 60.53,
-      "coverage_pct": 45.79,
+      "hitrate_q50": 60.0,
+      "coverage_pct": 42.63,
       "recommended": false,
       "low_coverage": true
     },
@@ -2911,7 +2911,7 @@
       "streak_dir": "down",
       "momentum_4w": -0.143,
       "trend": "flat",
-      "hitrate_q50": 76.19,
+      "hitrate_q50": 78.1,
       "coverage_pct": 73.33,
       "recommended": false,
       "low_coverage": false
@@ -2929,7 +2929,7 @@
       "momentum_4w": -0.476,
       "trend": "flat",
       "hitrate_q50": 73.72,
-      "coverage_pct": 66.42,
+      "coverage_pct": 65.69,
       "recommended": false,
       "low_coverage": false
     },
@@ -2945,8 +2945,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.591,
       "trend": "down",
-      "hitrate_q50": 61.58,
-      "coverage_pct": 55.26,
+      "hitrate_q50": 62.11,
+      "coverage_pct": 53.16,
       "recommended": false,
       "low_coverage": true
     },
@@ -2962,8 +2962,8 @@
       "streak_dir": "down",
       "momentum_4w": -1.51,
       "trend": "down",
-      "hitrate_q50": 63.16,
-      "coverage_pct": 56.84,
+      "hitrate_q50": 62.11,
+      "coverage_pct": 56.32,
       "recommended": false,
       "low_coverage": true
     },
@@ -2979,8 +2979,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.188,
       "trend": "flat",
-      "hitrate_q50": 54.74,
-      "coverage_pct": 44.21,
+      "hitrate_q50": 53.68,
+      "coverage_pct": 44.74,
       "recommended": false,
       "low_coverage": true
     },
@@ -2996,8 +2996,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.068,
       "trend": "flat",
-      "hitrate_q50": 76.25,
-      "coverage_pct": 53.75,
+      "hitrate_q50": 72.5,
+      "coverage_pct": 55.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -3013,8 +3013,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.188,
       "trend": "flat",
-      "hitrate_q50": 70.0,
-      "coverage_pct": 52.63,
+      "hitrate_q50": 70.53,
+      "coverage_pct": 51.58,
       "recommended": false,
       "low_coverage": true
     },
@@ -3031,7 +3031,7 @@
       "momentum_4w": 0.069,
       "trend": "flat",
       "hitrate_q50": 76.43,
-      "coverage_pct": 62.42,
+      "coverage_pct": 61.78,
       "recommended": false,
       "low_coverage": false
     },
@@ -3047,8 +3047,8 @@
       "streak_dir": "down",
       "momentum_4w": -1.306,
       "trend": "down",
-      "hitrate_q50": 71.05,
-      "coverage_pct": 74.34,
+      "hitrate_q50": 66.45,
+      "coverage_pct": 72.37,
       "recommended": false,
       "low_coverage": false
     },
@@ -3064,7 +3064,7 @@
       "streak_dir": "down",
       "momentum_4w": -0.351,
       "trend": "flat",
-      "hitrate_q50": 77.89,
+      "hitrate_q50": 75.26,
       "coverage_pct": 52.11,
       "recommended": false,
       "low_coverage": true
@@ -3081,8 +3081,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.217,
       "trend": "flat",
-      "hitrate_q50": 69.7,
-      "coverage_pct": 69.7,
+      "hitrate_q50": 68.69,
+      "coverage_pct": 62.63,
       "recommended": false,
       "low_coverage": false
     },
@@ -3099,7 +3099,7 @@
       "momentum_4w": -0.055,
       "trend": "flat",
       "hitrate_q50": 81.6,
-      "coverage_pct": 49.08,
+      "coverage_pct": 48.47,
       "recommended": false,
       "low_coverage": true
     },
@@ -3115,8 +3115,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.457,
       "trend": "flat",
-      "hitrate_q50": 73.16,
-      "coverage_pct": 71.05,
+      "hitrate_q50": 72.63,
+      "coverage_pct": 68.95,
       "recommended": false,
       "low_coverage": false
     },
@@ -3133,7 +3133,7 @@
       "momentum_4w": -0.152,
       "trend": "flat",
       "hitrate_q50": 58.29,
-      "coverage_pct": 54.55,
+      "coverage_pct": 50.8,
       "recommended": false,
       "low_coverage": true
     },
@@ -3149,7 +3149,7 @@
       "streak_dir": "down",
       "momentum_4w": -0.251,
       "trend": "flat",
-      "hitrate_q50": 64.36,
+      "hitrate_q50": 62.77,
       "coverage_pct": 53.72,
       "recommended": false,
       "low_coverage": true
@@ -3166,8 +3166,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.306,
       "trend": "flat",
-      "hitrate_q50": 67.89,
-      "coverage_pct": 56.32,
+      "hitrate_q50": 68.95,
+      "coverage_pct": 55.79,
       "recommended": false,
       "low_coverage": true
     },
@@ -3184,7 +3184,7 @@
       "momentum_4w": -0.401,
       "trend": "flat",
       "hitrate_q50": 68.0,
-      "coverage_pct": 53.0,
+      "coverage_pct": 48.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -3200,8 +3200,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.946,
       "trend": "down",
-      "hitrate_q50": 67.97,
-      "coverage_pct": 62.5,
+      "hitrate_q50": 66.41,
+      "coverage_pct": 60.94,
       "recommended": false,
       "low_coverage": false
     },
@@ -3217,8 +3217,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.28,
       "trend": "flat",
-      "hitrate_q50": 64.74,
-      "coverage_pct": 57.37,
+      "hitrate_q50": 63.16,
+      "coverage_pct": 54.21,
       "recommended": false,
       "low_coverage": true
     },
@@ -3234,8 +3234,8 @@
       "streak_dir": "down",
       "momentum_4w": -1.002,
       "trend": "down",
-      "hitrate_q50": 72.63,
-      "coverage_pct": 42.63,
+      "hitrate_q50": 72.11,
+      "coverage_pct": 41.05,
       "recommended": false,
       "low_coverage": true
     },
@@ -3252,7 +3252,7 @@
       "momentum_4w": 0.001,
       "trend": "flat",
       "hitrate_q50": 74.0,
-      "coverage_pct": 56.0,
+      "coverage_pct": 50.0,
       "recommended": false,
       "low_coverage": true
     },
@@ -3269,7 +3269,7 @@
       "momentum_4w": -0.525,
       "trend": "down",
       "hitrate_q50": 64.21,
-      "coverage_pct": 49.47,
+      "coverage_pct": 47.89,
       "recommended": false,
       "low_coverage": true
     },
@@ -3286,7 +3286,7 @@
       "momentum_4w": -0.278,
       "trend": "flat",
       "hitrate_q50": 68.95,
-      "coverage_pct": 59.47,
+      "coverage_pct": 57.89,
       "recommended": false,
       "low_coverage": true
     },
@@ -3303,9 +3303,9 @@
       "momentum_4w": -0.466,
       "trend": "flat",
       "hitrate_q50": 72.22,
-      "coverage_pct": 70.37,
+      "coverage_pct": 53.7,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1870",
@@ -3319,8 +3319,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.289,
       "trend": "flat",
-      "hitrate_q50": 60.53,
-      "coverage_pct": 59.47,
+      "hitrate_q50": 61.05,
+      "coverage_pct": 58.95,
       "recommended": false,
       "low_coverage": true
     },
@@ -3336,8 +3336,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.879,
       "trend": "down",
-      "hitrate_q50": 72.63,
-      "coverage_pct": 56.84,
+      "hitrate_q50": 72.11,
+      "coverage_pct": 57.37,
       "recommended": false,
       "low_coverage": true
     },
@@ -3354,7 +3354,7 @@
       "momentum_4w": -0.287,
       "trend": "flat",
       "hitrate_q50": 60.53,
-      "coverage_pct": 45.79,
+      "coverage_pct": 46.32,
       "recommended": false,
       "low_coverage": true
     },
@@ -3388,7 +3388,7 @@
       "momentum_4w": -0.284,
       "trend": "flat",
       "hitrate_q50": 63.91,
-      "coverage_pct": 56.39,
+      "coverage_pct": 51.88,
       "recommended": false,
       "low_coverage": true
     },
@@ -3404,7 +3404,7 @@
       "streak_dir": "down",
       "momentum_4w": -0.166,
       "trend": "flat",
-      "hitrate_q50": 75.4,
+      "hitrate_q50": 75.94,
       "coverage_pct": 51.87,
       "recommended": false,
       "low_coverage": true
@@ -3421,8 +3421,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.242,
       "trend": "flat",
-      "hitrate_q50": 64.21,
-      "coverage_pct": 57.37,
+      "hitrate_q50": 64.74,
+      "coverage_pct": 55.79,
       "recommended": false,
       "low_coverage": true
     },
@@ -3438,8 +3438,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.437,
       "trend": "flat",
-      "hitrate_q50": 67.37,
-      "coverage_pct": 52.11,
+      "hitrate_q50": 67.89,
+      "coverage_pct": 51.05,
       "recommended": false,
       "low_coverage": true
     },
@@ -3455,8 +3455,8 @@
       "streak_dir": "down",
       "momentum_4w": 1.124,
       "trend": "up",
-      "hitrate_q50": 57.07,
-      "coverage_pct": 47.28,
+      "hitrate_q50": 55.98,
+      "coverage_pct": 41.3,
       "recommended": false,
       "low_coverage": true
     },
@@ -3472,8 +3472,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.395,
       "trend": "flat",
-      "hitrate_q50": 75.0,
-      "coverage_pct": 67.05,
+      "hitrate_q50": 73.86,
+      "coverage_pct": 70.45,
       "recommended": false,
       "low_coverage": false
     },
@@ -3489,8 +3489,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.437,
       "trend": "flat",
-      "hitrate_q50": 78.21,
-      "coverage_pct": 39.74,
+      "hitrate_q50": 76.92,
+      "coverage_pct": 34.62,
       "recommended": false,
       "low_coverage": true
     },
@@ -3507,7 +3507,7 @@
       "momentum_4w": -0.325,
       "trend": "flat",
       "hitrate_q50": 58.95,
-      "coverage_pct": 45.26,
+      "coverage_pct": 44.74,
       "recommended": false,
       "low_coverage": true
     },
@@ -3523,8 +3523,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.474,
       "trend": "flat",
-      "hitrate_q50": 72.11,
-      "coverage_pct": 66.32,
+      "hitrate_q50": 73.16,
+      "coverage_pct": 65.79,
       "recommended": false,
       "low_coverage": false
     },
@@ -3540,8 +3540,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.501,
       "trend": "down",
-      "hitrate_q50": 73.66,
-      "coverage_pct": 58.06,
+      "hitrate_q50": 68.82,
+      "coverage_pct": 54.84,
       "recommended": false,
       "low_coverage": true
     },
@@ -3557,10 +3557,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.513,
       "trend": "down",
-      "hitrate_q50": 82.42,
-      "coverage_pct": 60.44,
+      "hitrate_q50": 81.32,
+      "coverage_pct": 58.24,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "3101",
@@ -3574,8 +3574,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.818,
       "trend": "down",
-      "hitrate_q50": 70.53,
-      "coverage_pct": 58.42,
+      "hitrate_q50": 69.47,
+      "coverage_pct": 57.37,
       "recommended": false,
       "low_coverage": true
     },
@@ -3591,8 +3591,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.422,
       "trend": "flat",
-      "hitrate_q50": 73.68,
-      "coverage_pct": 56.32,
+      "hitrate_q50": 70.53,
+      "coverage_pct": 53.68,
       "recommended": false,
       "low_coverage": true
     },
@@ -3625,7 +3625,7 @@
       "streak_dir": "down",
       "momentum_4w": -0.137,
       "trend": "flat",
-      "hitrate_q50": 71.05,
+      "hitrate_q50": 72.63,
       "coverage_pct": 56.32,
       "recommended": false,
       "low_coverage": true
@@ -3642,8 +3642,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.098,
       "trend": "flat",
-      "hitrate_q50": 63.68,
-      "coverage_pct": 52.63,
+      "hitrate_q50": 62.63,
+      "coverage_pct": 51.58,
       "recommended": false,
       "low_coverage": true
     },
@@ -3677,7 +3677,7 @@
       "momentum_4w": -0.586,
       "trend": "down",
       "hitrate_q50": 65.26,
-      "coverage_pct": 58.95,
+      "coverage_pct": 59.47,
       "recommended": false,
       "low_coverage": true
     },
@@ -3693,8 +3693,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.199,
       "trend": "flat",
-      "hitrate_q50": 79.66,
-      "coverage_pct": 71.19,
+      "hitrate_q50": 76.27,
+      "coverage_pct": 66.1,
       "recommended": false,
       "low_coverage": false
     },
@@ -3711,9 +3711,9 @@
       "momentum_4w": 0.097,
       "trend": "flat",
       "hitrate_q50": 64.74,
-      "coverage_pct": 61.05,
+      "coverage_pct": 57.37,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "1340461",
@@ -3728,7 +3728,7 @@
       "momentum_4w": 0.279,
       "trend": "flat",
       "hitrate_q50": 67.37,
-      "coverage_pct": 64.74,
+      "coverage_pct": 62.11,
       "recommended": false,
       "low_coverage": false
     },
@@ -3745,7 +3745,7 @@
       "momentum_4w": -0.565,
       "trend": "down",
       "hitrate_q50": 78.02,
-      "coverage_pct": 61.54,
+      "coverage_pct": 64.84,
       "recommended": false,
       "low_coverage": false
     },
@@ -3761,7 +3761,7 @@
       "streak_dir": "down",
       "momentum_4w": -0.374,
       "trend": "flat",
-      "hitrate_q50": 65.79,
+      "hitrate_q50": 65.26,
       "coverage_pct": 50.53,
       "recommended": false,
       "low_coverage": true
@@ -3778,8 +3778,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.525,
       "trend": "down",
-      "hitrate_q50": 75.79,
-      "coverage_pct": 53.68,
+      "hitrate_q50": 74.74,
+      "coverage_pct": 57.89,
       "recommended": false,
       "low_coverage": true
     },
@@ -3795,10 +3795,10 @@
       "streak_dir": "down",
       "momentum_4w": -0.339,
       "trend": "flat",
-      "hitrate_q50": 68.42,
-      "coverage_pct": 65.79,
+      "hitrate_q50": 70.0,
+      "coverage_pct": 58.95,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "599",
@@ -3812,8 +3812,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.575,
       "trend": "down",
-      "hitrate_q50": 74.74,
-      "coverage_pct": 47.37,
+      "hitrate_q50": 73.68,
+      "coverage_pct": 54.74,
       "recommended": false,
       "low_coverage": true
     },
@@ -3829,7 +3829,7 @@
       "streak_dir": "down",
       "momentum_4w": -2.66,
       "trend": "down",
-      "hitrate_q50": 69.47,
+      "hitrate_q50": 70.0,
       "coverage_pct": 42.63,
       "recommended": false,
       "low_coverage": true
@@ -3847,9 +3847,9 @@
       "momentum_4w": -1.213,
       "trend": "down",
       "hitrate_q50": 80.41,
-      "coverage_pct": 60.82,
+      "coverage_pct": 56.7,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "736",
@@ -3863,8 +3863,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.478,
       "trend": "flat",
-      "hitrate_q50": 70.53,
-      "coverage_pct": 57.89,
+      "hitrate_q50": 70.0,
+      "coverage_pct": 57.37,
       "recommended": false,
       "low_coverage": true
     },
@@ -3880,7 +3880,7 @@
       "streak_dir": "down",
       "momentum_4w": -0.776,
       "trend": "down",
-      "hitrate_q50": 67.37,
+      "hitrate_q50": 67.89,
       "coverage_pct": 52.11,
       "recommended": false,
       "low_coverage": true
@@ -3914,8 +3914,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.252,
       "trend": "flat",
-      "hitrate_q50": 55.26,
-      "coverage_pct": 41.05,
+      "hitrate_q50": 56.84,
+      "coverage_pct": 37.89,
       "recommended": false,
       "low_coverage": true
     },
@@ -3931,8 +3931,8 @@
       "streak_dir": "down",
       "momentum_4w": -2.929,
       "trend": "down",
-      "hitrate_q50": 73.85,
-      "coverage_pct": 46.92,
+      "hitrate_q50": 73.08,
+      "coverage_pct": 43.85,
       "recommended": false,
       "low_coverage": true
     },
@@ -3949,7 +3949,7 @@
       "momentum_4w": 0.279,
       "trend": "flat",
       "hitrate_q50": 58.95,
-      "coverage_pct": 45.26,
+      "coverage_pct": 41.05,
       "recommended": false,
       "low_coverage": true
     },
@@ -3965,8 +3965,8 @@
       "streak_dir": "down",
       "momentum_4w": 0.127,
       "trend": "flat",
-      "hitrate_q50": 75.47,
-      "coverage_pct": 50.94,
+      "hitrate_q50": 77.36,
+      "coverage_pct": 49.06,
       "recommended": false,
       "low_coverage": true
     },
@@ -3983,9 +3983,9 @@
       "momentum_4w": -0.181,
       "trend": "flat",
       "hitrate_q50": 61.58,
-      "coverage_pct": 61.58,
+      "coverage_pct": 57.37,
       "recommended": false,
-      "low_coverage": false
+      "low_coverage": true
     },
     {
       "fund_id": "455",
@@ -4016,8 +4016,8 @@
       "streak_dir": "down",
       "momentum_4w": -1.93,
       "trend": "down",
-      "hitrate_q50": 71.17,
-      "coverage_pct": 50.45,
+      "hitrate_q50": 69.37,
+      "coverage_pct": 48.65,
       "recommended": false,
       "low_coverage": true
     },
@@ -4033,8 +4033,8 @@
       "streak_dir": "down",
       "momentum_4w": -1.459,
       "trend": "down",
-      "hitrate_q50": 72.11,
-      "coverage_pct": 66.32,
+      "hitrate_q50": 72.63,
+      "coverage_pct": 65.26,
       "recommended": false,
       "low_coverage": false
     }
