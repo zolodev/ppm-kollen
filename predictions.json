@@ -119,15 +119,15 @@
         "name": "BGF World Technology A2",
         "tags": "Aktiefond, Branschfond, Ny teknik",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/431",
-        "score": 76.923,
+        "score": 77.163,
         "hitrate_q50": 70.53,
         "coverage_pct": 60.53,
         "mae_q50": 0.8561,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.2605,
-          "q50": 0.996,
-          "q90": 2.1638
+          "q10": 0.2666,
+          "q50": 1.0003,
+          "q90": 2.8408
         },
         "consensus": {
           "n_agree": 3,
@@ -145,10 +145,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 3.0247,
-          "last_pred_q50": 1.061,
+          "mae": 3.0144,
+          "last_pred_q50": 1.0366,
           "last_actual": 0.5453,
-          "last_error": 0.5157,
+          "last_error": 0.4913,
           "last_direction_ok": true,
           "date_from": "2026-07-13",
           "date_to": "2026-10-05"
