@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07",
+  "generated": "2026-10-08",
   "week_from": "2026-10-05",
   "min_coverage_pct": 60.0,
   "trend_band": 0.5,
@@ -242,8 +242,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.03,
       "trend": "up",
-      "hitrate_q50": 67.38,
-      "coverage_pct": 46.1,
+      "hitrate_q50": 68.79,
+      "coverage_pct": 43.26,
       "recommended": false,
       "low_coverage": true
     },
@@ -327,8 +327,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.212,
       "trend": "up",
-      "hitrate_q50": 68.95,
-      "coverage_pct": 48.95,
+      "hitrate_q50": 67.37,
+      "coverage_pct": 54.74,
       "recommended": false,
       "low_coverage": true
     },
@@ -1212,7 +1212,7 @@
       "momentum_4w": 0.487,
       "trend": "flat",
       "hitrate_q50": 75.26,
-      "coverage_pct": 56.84,
+      "coverage_pct": 58.42,
       "recommended": false,
       "low_coverage": true
     },
@@ -1262,7 +1262,7 @@
       "streak_dir": "up",
       "momentum_4w": 0.447,
       "trend": "flat",
-      "hitrate_q50": 76.32,
+      "hitrate_q50": 75.79,
       "coverage_pct": 58.95,
       "recommended": false,
       "low_coverage": true
@@ -1398,8 +1398,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.238,
       "trend": "flat",
-      "hitrate_q50": 76.84,
-      "coverage_pct": 67.89,
+      "hitrate_q50": 77.37,
+      "coverage_pct": 67.37,
       "recommended": false,
       "low_coverage": false
     },
@@ -1688,7 +1688,7 @@
       "momentum_4w": 0.066,
       "trend": "flat",
       "hitrate_q50": 80.53,
-      "coverage_pct": 72.11,
+      "coverage_pct": 72.63,
       "recommended": false,
       "low_coverage": false
     },
@@ -1789,8 +1789,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.03,
       "trend": "flat",
-      "hitrate_q50": 81.05,
-      "coverage_pct": 73.68,
+      "hitrate_q50": 81.58,
+      "coverage_pct": 73.16,
       "recommended": false,
       "low_coverage": false
     },
@@ -1857,8 +1857,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.321,
       "trend": "flat",
-      "hitrate_q50": 75.8,
-      "coverage_pct": 61.78,
+      "hitrate_q50": 76.43,
+      "coverage_pct": 61.15,
       "recommended": false,
       "low_coverage": false
     },
@@ -1926,7 +1926,7 @@
       "momentum_4w": 0.345,
       "trend": "flat",
       "hitrate_q50": 72.63,
-      "coverage_pct": 61.58,
+      "coverage_pct": 63.16,
       "recommended": false,
       "low_coverage": false
     },
@@ -2316,8 +2316,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.205,
       "trend": "flat",
-      "hitrate_q50": 81.05,
-      "coverage_pct": 72.11,
+      "hitrate_q50": 81.58,
+      "coverage_pct": 71.05,
       "recommended": false,
       "low_coverage": false
     },
@@ -2334,7 +2334,7 @@
       "momentum_4w": 0.015,
       "trend": "flat",
       "hitrate_q50": 78.1,
-      "coverage_pct": 72.38,
+      "coverage_pct": 74.29,
       "recommended": false,
       "low_coverage": false
     },

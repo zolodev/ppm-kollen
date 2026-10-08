@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07",
+  "generated": "2026-10-08",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -60,8 +60,8 @@
         },
         "rationale": "87% hit-rate; 0.830pp MAE; 1/1 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-07/1509086/h1w_ensemble.png",
-          "individual": "top-2026-10-07/1509086/h1w_individual.png"
+          "ensemble": "top-2026-10-08/1509086/h1w_ensemble.png",
+          "individual": "top-2026-10-08/1509086/h1w_individual.png"
         },
         "sticky": true
       },
@@ -109,8 +109,8 @@
         },
         "rationale": "67% hit-rate; 1.094pp MAE; 1/1 models agree (bullish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-07/1509085/h1w_ensemble.png",
-          "individual": "top-2026-10-07/1509085/h1w_individual.png"
+          "ensemble": "top-2026-10-08/1509085/h1w_ensemble.png",
+          "individual": "top-2026-10-08/1509085/h1w_individual.png"
         }
       },
       {
@@ -119,15 +119,15 @@
         "name": "BGF World Technology A2",
         "tags": "Aktiefond, Branschfond, Ny teknik",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/431",
-        "score": 76.762,
+        "score": 76.923,
         "hitrate_q50": 70.53,
         "coverage_pct": 60.53,
         "mae_q50": 0.8561,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.2637,
-          "q50": 0.9913,
-          "q90": 2.1544
+          "q10": 0.2605,
+          "q50": 0.996,
+          "q90": 2.1638
         },
         "consensus": {
           "n_agree": 3,
@@ -155,8 +155,8 @@
         },
         "rationale": "71% hit-rate; 0.856pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-07/431/h1w_ensemble.png",
-          "individual": "top-2026-10-07/431/h1w_individual.png"
+          "ensemble": "top-2026-10-08/431/h1w_ensemble.png",
+          "individual": "top-2026-10-08/431/h1w_individual.png"
         }
       }
     ]
