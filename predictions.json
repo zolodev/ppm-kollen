@@ -18,15 +18,15 @@
         "name": "DNB SMB S",
         "tags": "Aktiefond, Norge",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509085",
-        "score": 174.613,
+        "score": 166.983,
         "hitrate_q50": 73.33,
         "coverage_pct": 60.0,
         "mae_q50": 0.9186,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.7582,
-          "q50": 1.3881,
-          "q90": 1.7942
+          "q10": 0.8152,
+          "q50": 1.2997,
+          "q90": 1.7366
         },
         "consensus": {
           "n_agree": 1,
@@ -46,10 +46,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 91.7,
-          "mae": 1.0305,
-          "last_pred_q50": 1.3881,
+          "mae": 1.0196,
+          "last_pred_q50": 1.3499,
           "last_actual": 0.2701,
-          "last_error": 1.118,
+          "last_error": 1.0798,
           "last_direction_ok": true,
           "date_from": "2026-07-13",
           "date_to": "2026-10-05"
@@ -59,7 +59,7 @@
           "ensemble": "top-2026-10-12/1509085/h1w_ensemble.png",
           "individual": "top-2026-10-12/1509085/h1w_individual.png"
         },
-        "sticky": false
+        "sticky": true
       },
       {
         "fund_id": "1509086",
@@ -67,14 +67,14 @@
         "name": "DNB Teknologi S",
         "tags": "Aktiefond, Branschfond, Ny teknik",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
-        "score": 151.545,
+        "score": 151.023,
         "hitrate_q50": 93.33,
         "coverage_pct": 86.67,
         "mae_q50": 0.6938,
-        "signal": "HOLD",
+        "signal": "BUY",
         "forecast": {
           "q10": 0.615,
-          "q50": 1.4345,
+          "q50": 1.4283,
           "q90": 2.2298
         },
         "consensus": {
@@ -99,10 +99,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 1.6735,
-          "last_pred_q50": 1.4345,
+          "mae": 1.6808,
+          "last_pred_q50": 1.4241,
           "last_actual": -0.7393,
-          "last_error": 2.1737,
+          "last_error": 2.1634,
           "last_direction_ok": false,
           "date_from": "2026-07-13",
           "date_to": "2026-10-05"
@@ -119,15 +119,15 @@
         "name": "Swedbank Robur Technology A",
         "tags": "Aktiefond, Branschfond, Ny teknik",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
-        "score": 87.339,
+        "score": 93.864,
         "hitrate_q50": 91.05,
         "coverage_pct": 77.37,
         "mae_q50": 0.4267,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.6458,
-          "q50": 0.8432,
-          "q90": 1.7768
+          "q10": -0.2871,
+          "q50": 0.9216,
+          "q90": 2.563
         },
         "consensus": {
           "n_agree": 3,
@@ -144,25 +144,25 @@
         "warnings": [
           {
             "reason": "anomaly",
-            "detail": "fc=+0.84% = 4.3× mean_pred (limit 3.0×)"
+            "detail": "fc=+0.92% = 4.7× mean_pred (limit 3.0×)"
           },
           {
             "reason": "backtest",
-            "detail": "backtest 33.3% < 60%"
+            "detail": "backtest 41.7% < 60%"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 33.3,
-          "mae": 2.8976,
-          "last_pred_q50": 1.3135,
+          "hit_rate_pct": 41.7,
+          "mae": 2.8554,
+          "last_pred_q50": 1.1682,
           "last_actual": -2.5143,
-          "last_error": 3.8278,
+          "last_error": 3.6825,
           "last_direction_ok": false,
           "date_from": "2026-07-13",
           "date_to": "2026-10-05"
         },
-        "rationale": "91% hit-rate; 0.427pp MAE; 3/3 models agree (bullish); 33% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "91% hit-rate; 0.427pp MAE; 3/3 models agree (bullish); 42% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-12/363/h1w_ensemble.png",
           "individual": "top-2026-10-12/363/h1w_individual.png"
@@ -509,6 +509,24 @@
     ],
     "top_streak": [
       {
+        "fund_id": "1509086",
+        "ppm_code": "183343",
+        "name": "DNB Teknologi S",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+        "hitrate_q50": 93.33,
+        "coverage_pct": 86.67,
+        "mae_q50": 0.6938,
+        "forecast_q10": 0.615,
+        "forecast_q50": 1.4345,
+        "forecast_q90": 2.2298,
+        "last_actual": -0.7393,
+        "momentum_4w": 0.8586,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "363",
         "ppm_code": "283408",
         "name": "Swedbank Robur Technology A",
@@ -527,40 +545,22 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "2052",
-        "ppm_code": "294918",
-        "name": "Lannebo Kort Ränta A",
-        "tags": "Räntefond, SEK, Obligationer, Korta",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2052",
-        "hitrate_q50": 98.95,
-        "coverage_pct": 99.47,
-        "mae_q50": 0.0135,
-        "forecast_q10": -0.869,
-        "forecast_q50": -0.0778,
-        "forecast_q90": 0.1755,
-        "last_actual": 0.019,
-        "momentum_4w": 0.0381,
+        "fund_id": "1509085",
+        "ppm_code": "290833",
+        "name": "DNB SMB S",
+        "tags": "Aktiefond, Norge",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509085",
+        "hitrate_q50": 73.33,
+        "coverage_pct": 60.0,
+        "mae_q50": 0.9186,
+        "forecast_q10": 0.7654,
+        "forecast_q50": 1.3881,
+        "forecast_q90": 1.7942,
+        "last_actual": 0.2701,
+        "momentum_4w": 0.8187,
         "tritch_score": -1.0,
         "tritch_phase": 0,
-        "signal": "HOLD"
-      },
-      {
-        "fund_id": "2026",
-        "ppm_code": "717611",
-        "name": "Swedbank Robur Räntefond Kort A",
-        "tags": "Räntefond, SEK, Obligationer, Korta",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2026",
-        "hitrate_q50": 97.89,
-        "coverage_pct": 98.95,
-        "mae_q50": 0.015,
-        "forecast_q10": -0.3532,
-        "forecast_q50": -0.042,
-        "forecast_q90": 0.1997,
-        "last_actual": 0.0177,
-        "momentum_4w": 0.0377,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "HOLD"
+        "signal": "BUY"
       }
     ]
   }
