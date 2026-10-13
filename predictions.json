@@ -119,15 +119,15 @@
         "name": "SEB Teknologifond",
         "tags": "Aktiefond, Branschfond, Ny teknik",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/364",
-        "score": 77.512,
+        "score": 83.958,
         "hitrate_q50": 73.16,
         "coverage_pct": 55.26,
         "mae_q50": 0.7029,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.0027,
-          "q50": 1.0366,
-          "q90": 2.5988
+          "q10": 0.0697,
+          "q50": 1.0307,
+          "q90": 2.9577
         },
         "consensus": {
           "n_agree": 3,
@@ -144,25 +144,21 @@
         "warnings": [
           {
             "reason": "anomaly",
-            "detail": "fc=+1.04% = 3.1× mean_pred (limit 3.0×)"
-          },
-          {
-            "reason": "backtest",
-            "detail": "backtest 58.3% < 60%"
+            "detail": "fc=+1.03% = 3.0× mean_pred (limit 3.0×)"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 58.3,
-          "mae": 2.5565,
-          "last_pred_q50": 1.3889,
+          "hit_rate_pct": 66.7,
+          "mae": 2.4558,
+          "last_pred_q50": 1.3822,
           "last_actual": -2.6733,
-          "last_error": 4.0623,
+          "last_error": 4.0555,
           "last_direction_ok": false,
           "date_from": "2026-07-13",
           "date_to": "2026-10-05"
         },
-        "rationale": "73% hit-rate; 0.703pp MAE; 3/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "73% hit-rate; 0.703pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-13/364/h1w_ensemble.png",
           "individual": "top-2026-10-13/364/h1w_individual.png"
@@ -527,6 +523,24 @@
         "signal": "BUY"
       },
       {
+        "fund_id": "364",
+        "ppm_code": "194092",
+        "name": "SEB Teknologifond",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/364",
+        "hitrate_q50": 73.16,
+        "coverage_pct": 55.26,
+        "mae_q50": 0.7029,
+        "forecast_q10": 0.3446,
+        "forecast_q50": 1.3889,
+        "forecast_q90": 2.5295,
+        "last_actual": -2.6733,
+        "momentum_4w": 2.4217,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "1509085",
         "ppm_code": "290833",
         "name": "DNB SMB S",
@@ -540,24 +554,6 @@
         "forecast_q90": 1.7366,
         "last_actual": 0.2701,
         "momentum_4w": 0.8187,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "396",
-        "ppm_code": "296749",
-        "name": "Pictet-Digital R USD",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/396",
-        "hitrate_q50": 75.79,
-        "coverage_pct": 51.58,
-        "mae_q50": 0.7636,
-        "forecast_q10": -0.3512,
-        "forecast_q50": 0.7998,
-        "forecast_q90": 1.4917,
-        "last_actual": 0.2004,
-        "momentum_4w": 2.2742,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
