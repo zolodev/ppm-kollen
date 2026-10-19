@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16",
+  "generated": "2026-10-19",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -13,67 +13,20 @@
   "horizons": {
     "1w": [
       {
-        "fund_id": "1509085",
-        "ppm_code": "290833",
-        "name": "DNB SMB S",
-        "tags": "Aktiefond, Norge",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509085",
-        "score": 123.491,
-        "hitrate_q50": 87.5,
-        "coverage_pct": 37.5,
-        "mae_q50": 0.4885,
-        "signal": "HOLD",
-        "forecast": {
-          "q10": -0.2735,
-          "q50": 0.8433,
-          "q90": 0.8433
-        },
-        "consensus": {
-          "n_agree": 3,
-          "n_models": 3,
-          "n_up": 3,
-          "n_down": 0,
-          "models": [
-            "gru",
-            "lstm",
-            "tcn",
-            "xgboost"
-          ]
-        },
-        "warnings": [],
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 83.3,
-          "mae": 1.0609,
-          "last_pred_q50": 0.8198,
-          "last_actual": -0.0255,
-          "last_error": 0.8452,
-          "last_direction_ok": false,
-          "date_from": "2026-07-20",
-          "date_to": "2026-10-12"
-        },
-        "rationale": "88% hit-rate; 0.488pp MAE; 3/3 models agree (bullish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-10-16/1509085/h1w_ensemble.png",
-          "individual": "top-2026-10-16/1509085/h1w_individual.png"
-        },
-        "sticky": true
-      },
-      {
         "fund_id": "316079",
         "ppm_code": "541235",
         "name": "D&G Global All Cap",
         "tags": "Aktiefond, Global, Flexibel storlek bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316079",
-        "score": 100.773,
+        "score": 100.165,
         "hitrate_q50": 82.58,
         "coverage_pct": 77.27,
         "mae_q50": 0.3534,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.1307,
-          "q50": 0.9419,
-          "q90": 1.662
+          "q10": -0.188,
+          "q50": 0.9264,
+          "q90": 1.6049
         },
         "consensus": {
           "n_agree": 3,
@@ -106,9 +59,10 @@
         },
         "rationale": "83% hit-rate; 0.353pp MAE; 3/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-16/316079/h1w_ensemble.png",
-          "individual": "top-2026-10-16/316079/h1w_individual.png"
-        }
+          "ensemble": "top-2026-10-19/316079/h1w_ensemble.png",
+          "individual": "top-2026-10-19/316079/h1w_individual.png"
+        },
+        "sticky": false
       },
       {
         "fund_id": "397",
@@ -116,15 +70,15 @@
         "name": "Franklin Technology Fund A",
         "tags": "",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-        "score": 91.568,
+        "score": 88.729,
         "hitrate_q50": 96.99,
         "coverage_pct": 82.53,
         "mae_q50": 3.698,
         "signal": "BUY",
         "forecast": {
-          "q10": -2.9731,
-          "q50": 0.9657,
-          "q90": 1.4368
+          "q10": -3.2584,
+          "q50": 0.7278,
+          "q90": 1.3763
         },
         "consensus": {
           "n_agree": 2,
@@ -161,8 +115,63 @@
         },
         "rationale": "97% hit-rate; 3.698pp MAE; 2/3 models agree (bullish); 42% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-16/397/h1w_ensemble.png",
-          "individual": "top-2026-10-16/397/h1w_individual.png"
+          "ensemble": "top-2026-10-19/397/h1w_ensemble.png",
+          "individual": "top-2026-10-19/397/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "2138",
+        "ppm_code": "191080",
+        "name": "Barings Global Emerging Mkts A Inc",
+        "tags": "Aktiefond, Tillväxtmarknader",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2138",
+        "score": 73.244,
+        "hitrate_q50": 87.43,
+        "coverage_pct": 83.77,
+        "mae_q50": 0.3352,
+        "signal": "SELL",
+        "forecast": {
+          "q10": -1.9624,
+          "q50": -0.2204,
+          "q90": 0.1874
+        },
+        "consensus": {
+          "n_agree": 2,
+          "n_models": 3,
+          "n_up": 1,
+          "n_down": 2,
+          "models": [
+            "gru",
+            "lstm",
+            "tcn",
+            "xgboost"
+          ]
+        },
+        "warnings": [
+          {
+            "reason": "consensus",
+            "detail": "1↑ 2↓ of 3 models"
+          },
+          {
+            "reason": "backtest",
+            "detail": "backtest 50.0% < 60%"
+          }
+        ],
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 50.0,
+          "mae": 2.2408,
+          "last_pred_q50": 1.3797,
+          "last_actual": -2.3957,
+          "last_error": 3.7754,
+          "last_direction_ok": false,
+          "date_from": "2026-07-20",
+          "date_to": "2026-10-12"
+        },
+        "rationale": "87% hit-rate; 0.335pp MAE; 2/3 models agree (bearish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-10-19/2138/h1w_ensemble.png",
+          "individual": "top-2026-10-19/2138/h1w_individual.png"
         }
       }
     ]
@@ -430,19 +439,19 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "1509085",
-        "ppm_code": "290833",
-        "name": "DNB SMB S",
-        "tags": "Aktiefond, Norge",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509085",
-        "hitrate_q50": 87.5,
-        "coverage_pct": 37.5,
-        "mae_q50": 0.4885,
-        "forecast_q10": -0.265,
-        "forecast_q50": 0.8198,
-        "forecast_q90": 0.9799,
-        "last_actual": -0.0255,
-        "momentum_4w": 0.5049,
+        "fund_id": "2138",
+        "ppm_code": "191080",
+        "name": "Barings Global Emerging Mkts A Inc",
+        "tags": "Aktiefond, Tillväxtmarknader",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2138",
+        "hitrate_q50": 87.43,
+        "coverage_pct": 83.77,
+        "mae_q50": 0.3352,
+        "forecast_q10": 0.1332,
+        "forecast_q50": 1.3797,
+        "forecast_q90": 2.2365,
+        "last_actual": -2.3957,
+        "momentum_4w": -0.5688,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -486,25 +495,43 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "367456",
-        "ppm_code": "623637",
-        "name": "East Capital Global EM Sustainable A SEK",
+        "fund_id": "2138",
+        "ppm_code": "191080",
+        "name": "Barings Global Emerging Mkts A Inc",
         "tags": "Aktiefond, Tillväxtmarknader",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/367456",
-        "hitrate_q50": 89.36,
-        "coverage_pct": 71.63,
-        "mae_q50": 0.477,
-        "forecast_q10": -0.0571,
-        "forecast_q50": 1.4617,
-        "forecast_q90": 2.4817,
-        "last_actual": -2.636,
-        "momentum_4w": -0.5864,
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2138",
+        "hitrate_q50": 87.43,
+        "coverage_pct": 83.77,
+        "mae_q50": 0.3352,
+        "forecast_q10": 0.1332,
+        "forecast_q50": 1.3797,
+        "forecast_q90": 2.2365,
+        "last_actual": -2.3957,
+        "momentum_4w": -0.5688,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       }
     ],
     "top_streak": [
+      {
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 96.99,
+        "coverage_pct": 82.53,
+        "mae_q50": 3.698,
+        "forecast_q10": -2.7103,
+        "forecast_q50": 1.7367,
+        "forecast_q90": 4.0886,
+        "last_actual": -3.4474,
+        "momentum_4w": -0.1332,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
       {
         "fund_id": "316079",
         "ppm_code": "541235",
@@ -524,37 +551,19 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "2026",
-        "ppm_code": "717611",
-        "name": "Swedbank Robur Räntefond Kort A",
-        "tags": "Räntefond, SEK, Obligationer, Korta",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2026",
-        "hitrate_q50": 98.95,
-        "coverage_pct": 96.86,
-        "mae_q50": 0.0314,
-        "forecast_q10": 0.133,
-        "forecast_q50": 0.2838,
-        "forecast_q90": 0.7685,
-        "last_actual": 0.0089,
-        "momentum_4w": 0.031,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "2052",
-        "ppm_code": "294918",
-        "name": "Lannebo Kort Ränta A",
-        "tags": "Räntefond, SEK, Obligationer, Korta",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2052",
-        "hitrate_q50": 97.38,
-        "coverage_pct": 97.91,
-        "mae_q50": 0.0284,
-        "forecast_q10": 0.2721,
-        "forecast_q50": 0.2721,
-        "forecast_q90": 1.2548,
-        "last_actual": 0.0,
-        "momentum_4w": 0.0286,
+        "fund_id": "2138",
+        "ppm_code": "191080",
+        "name": "Barings Global Emerging Mkts A Inc",
+        "tags": "Aktiefond, Tillväxtmarknader",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2138",
+        "hitrate_q50": 87.43,
+        "coverage_pct": 83.77,
+        "mae_q50": 0.3352,
+        "forecast_q10": 0.1332,
+        "forecast_q50": 1.3797,
+        "forecast_q90": 2.2365,
+        "last_actual": -2.3957,
+        "momentum_4w": -0.5688,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
