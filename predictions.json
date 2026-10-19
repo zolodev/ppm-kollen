@@ -18,15 +18,15 @@
         "name": "D&G Global All Cap",
         "tags": "Aktiefond, Global, Flexibel storlek bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316079",
-        "score": 100.165,
+        "score": 108.995,
         "hitrate_q50": 82.58,
         "coverage_pct": 77.27,
         "mae_q50": 0.3534,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.188,
-          "q50": 0.9264,
-          "q90": 1.6049
+          "q10": -0.2576,
+          "q50": 0.7755,
+          "q90": 1.5668
         },
         "consensus": {
           "n_agree": 3,
@@ -40,29 +40,24 @@
             "xgboost"
           ]
         },
-        "warnings": [
-          {
-            "reason": "backtest",
-            "detail": "backtest 50.0% < 60%"
-          }
-        ],
+        "warnings": [],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 50.0,
-          "mae": 2.1947,
-          "last_pred_q50": 1.6536,
+          "hit_rate_pct": 66.7,
+          "mae": 1.936,
+          "last_pred_q50": 1.1368,
           "last_actual": -0.3253,
-          "last_error": 1.9789,
+          "last_error": 1.4621,
           "last_direction_ok": false,
           "date_from": "2026-07-20",
           "date_to": "2026-10-12"
         },
-        "rationale": "83% hit-rate; 0.353pp MAE; 3/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "83% hit-rate; 0.353pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-19/316079/h1w_ensemble.png",
           "individual": "top-2026-10-19/316079/h1w_individual.png"
         },
-        "sticky": false
+        "sticky": true
       },
       {
         "fund_id": "397",
@@ -70,15 +65,15 @@
         "name": "Franklin Technology Fund A",
         "tags": "",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-        "score": 88.729,
+        "score": 87.492,
         "hitrate_q50": 96.99,
         "coverage_pct": 82.53,
         "mae_q50": 3.698,
         "signal": "BUY",
         "forecast": {
-          "q10": -3.2584,
-          "q50": 0.7278,
-          "q90": 1.3763
+          "q10": -0.7729,
+          "q50": 0.3727,
+          "q90": 2.0119
         },
         "consensus": {
           "n_agree": 2,
@@ -96,24 +91,20 @@
           {
             "reason": "consensus",
             "detail": "2↑ 1↓ of 3 models"
-          },
-          {
-            "reason": "backtest",
-            "detail": "backtest 41.7% < 60%"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 41.7,
-          "mae": 3.2909,
-          "last_pred_q50": 1.7367,
+          "hit_rate_pct": 66.7,
+          "mae": 2.9777,
+          "last_pred_q50": 1.9376,
           "last_actual": -3.4474,
-          "last_error": 5.1841,
+          "last_error": 5.385,
           "last_direction_ok": false,
           "date_from": "2026-07-20",
           "date_to": "2026-10-12"
         },
-        "rationale": "97% hit-rate; 3.698pp MAE; 2/3 models agree (bullish); 42% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "97% hit-rate; 3.698pp MAE; 2/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-19/397/h1w_ensemble.png",
           "individual": "top-2026-10-19/397/h1w_individual.png"
@@ -125,21 +116,21 @@
         "name": "Barings Global Emerging Mkts A Inc",
         "tags": "Aktiefond, Tillväxtmarknader",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2138",
-        "score": 73.244,
+        "score": 82.865,
         "hitrate_q50": 87.43,
         "coverage_pct": 83.77,
         "mae_q50": 0.3352,
-        "signal": "SELL",
+        "signal": "HOLD",
         "forecast": {
-          "q10": -1.9624,
-          "q50": -0.2204,
-          "q90": 0.1874
+          "q10": -0.6384,
+          "q50": 0.1842,
+          "q90": 0.8884
         },
         "consensus": {
           "n_agree": 2,
           "n_models": 3,
-          "n_up": 1,
-          "n_down": 2,
+          "n_up": 2,
+          "n_down": 1,
           "models": [
             "gru",
             "lstm",
@@ -150,25 +141,21 @@
         "warnings": [
           {
             "reason": "consensus",
-            "detail": "1↑ 2↓ of 3 models"
-          },
-          {
-            "reason": "backtest",
-            "detail": "backtest 50.0% < 60%"
+            "detail": "2↑ 1↓ of 3 models"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 50.0,
-          "mae": 2.2408,
-          "last_pred_q50": 1.3797,
+          "hit_rate_pct": 66.7,
+          "mae": 2.2188,
+          "last_pred_q50": 0.954,
           "last_actual": -2.3957,
-          "last_error": 3.7754,
+          "last_error": 3.3497,
           "last_direction_ok": false,
           "date_from": "2026-07-20",
           "date_to": "2026-10-12"
         },
-        "rationale": "87% hit-rate; 0.335pp MAE; 2/3 models agree (bearish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "87% hit-rate; 0.335pp MAE; 2/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-19/2138/h1w_ensemble.png",
           "individual": "top-2026-10-19/2138/h1w_individual.png"
