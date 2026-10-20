@@ -24,6 +24,20 @@
   var _lang = DEFAULT_LANG;
   var _readyCallbacks = [];
 
+  // Every page loads this file as i18n.js?v<stamp>, and that stamp is bumped
+  // whenever the assets change. i18n.json was fetched with no query at all, so
+  // a returning visitor kept a cached copy and any key added in the same
+  // deploy rendered as its own name ("season_verdict_strong") on the card.
+  // Reusing this script's own stamp ties the two together for good: bumping
+  // the HTML busts both. Read at parse time — currentScript is null later.
+  var _assetVer = (function () {
+    try {
+      var src = (document.currentScript || {}).src || "";
+      var q = src.indexOf("?");
+      return q < 0 ? "" : src.slice(q);
+    } catch (e) { return ""; }
+  })();
+
   function hideLoader() {}
 
   // ── Core API ───────────────────────────────────────────────
@@ -56,7 +70,7 @@
     if (_lang !== "sv" && _lang !== "en") _lang = DEFAULT_LANG;
     document.documentElement.lang = _lang;
 
-    fetch("i18n.json")
+    fetch("i18n.json" + _assetVer)
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (data) {
         _translations = data;

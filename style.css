@@ -560,6 +560,114 @@ main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
   border: 1px solid var(--hold);
 }
 
+/* ── Seasonal context ────
+   The historical record for the current calendar month: the period panel
+   above the tabs, and one line per fund card. Built on the existing theme
+   tokens so light mode follows without a second set of colours. */
+.season-bar {
+  padding: 1.1rem 1.25rem; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: 12px; margin-bottom: 2rem;
+}
+.season-bar-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+}
+.season-bar-title {
+  font-size: 0.95rem; margin: 0; text-transform: capitalize; color: var(--text);
+}
+.season-bar-n {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.66rem;
+  color: var(--text-faint);
+}
+.season-bar-note {
+  font-size: 0.78rem; color: var(--text-muted); margin: 0.5rem 0 0;
+  max-width: 68ch; line-height: 1.5;
+}
+.season-cols {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem; margin-top: 0.9rem;
+}
+.season-col h3 {
+  font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-faint); margin: 0 0 0.45rem;
+}
+.season-col ul { list-style: none; margin: 0; padding: 0; }
+.season-col li {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.72rem;
+  color: var(--text-muted); padding: 2px 0 2px 0.6rem;
+  border-left: 2px solid var(--border);
+}
+.season-col.season-strong li { border-left-color: var(--buy); }
+.season-col.season-weak   li { border-left-color: var(--hold); }
+
+/* The breadth sentence: the headline answer to "do most funds do badly in
+   this month", so it reads as a statement rather than a footnote. */
+.season-breadth {
+  margin: 0.7rem 0 0; padding: 0.55rem 0.75rem; border-radius: 8px;
+  border: 1px solid var(--border); background: var(--bg-sunken);
+  font-size: 0.82rem; line-height: 1.45; max-width: 76ch;
+}
+.season-breadth.season-weak   { border-color: var(--hold); background: var(--hold-bg); }
+.season-breadth.season-strong { border-color: var(--buy);  background: var(--buy-bg); }
+
+/* What the remainder of the month has favoured, and the fund-level record. */
+.season-remaining {
+  margin: 0.6rem 0 0; font-size: 0.8rem; color: var(--text-muted);
+  line-height: 1.5;
+}
+.season-remaining strong { color: var(--text); font-weight: 600; }
+.season-dim {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.72rem;
+  color: var(--text-faint);
+}
+.season-funds { margin-top: 0.8rem; }
+.season-funds h3 {
+  font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-faint); margin: 0 0 0.4rem;
+}
+.season-funds ul { list-style: none; margin: 0; padding: 0; }
+.season-funds li {
+  font-size: 0.78rem; padding: 3px 0 3px 0.6rem;
+  border-left: 2px solid var(--accent);
+}
+.season-fund-name { color: var(--text); font-weight: 500; }
+
+/* The overview table's season column. */
+.ov-season {
+  font-family: "IBM Plex Mono", monospace; font-size: 0.7rem;
+  padding: 2px 7px; border-radius: 5px; white-space: nowrap;
+  border: 1px solid var(--border); color: var(--text-muted);
+}
+.ov-season.season-strong { border-color: var(--buy);  color: var(--buy); }
+.ov-season.season-weak   { border-color: var(--hold); color: var(--hold); }
+.ov-season b { font-weight: 600; }
+
+/* One line on the fund card, between the tags and the metrics. */
+.season-line {
+  display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap;
+  margin: 0.85rem 1.25rem 0; padding: 0.5rem 0.7rem;
+  border-radius: 8px; border: 1px solid var(--border);
+  background: var(--bg-sunken); font-size: 0.74rem;
+}
+.season-verdict {
+  font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em;
+  font-weight: 600; white-space: nowrap;
+}
+.season-body {
+  font-family: "IBM Plex Mono", monospace; color: var(--text-muted);
+}
+.season-rank {
+  color: var(--text-faint); border-bottom: 1px dotted var(--border-em);
+  cursor: help;
+}
+.season-line.season-strong  { border-color: var(--buy);  background: var(--buy-bg); }
+.season-line.season-strong  .season-verdict { color: var(--buy); }
+.season-line.season-weak    { border-color: var(--hold); background: var(--hold-bg); }
+.season-line.season-weak    .season-verdict { color: var(--hold); }
+.season-line.season-mixed   { border-color: var(--border-em); }
+.season-line.season-mixed   .season-verdict { color: var(--text-muted); }
+.season-line.season-neutral .season-verdict { color: var(--text-faint); }
+
 /* ══════════════════════════════════════════════════════════════
    Main navigation — one menu, built by ppmk.js on every page
    ══════════════════════════════════════════════════════════════

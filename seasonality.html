@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1790140864" />
+  <link rel="stylesheet" href="style.css?v1792346239" />
   <style>
     /* Page-local only — a heatmap table isn't shared by any other page,
        so it doesn't earn a place in style.css. */
@@ -32,6 +32,21 @@
     }
     table.season-table thead th { border-bottom: 1px solid var(--border); color: var(--text-faint); font-weight: 500; }
     table.season-table tbody tr:not(:last-child) td { border-bottom: 1px solid color-mix(in oklch, var(--border) 50%, transparent); }
+    /* The month we are in, marked down the whole column. Every data cell
+       already carries an inline background from the heat colouring, so this
+       uses side borders rather than a fill — a fill would either lose to the
+       inline style or hide the number it is pointing at. */
+    table.season-table th.is-this-month,
+    table.season-table td.is-this-month {
+      border-left: 2px solid var(--accent); border-right: 2px solid var(--accent);
+    }
+    table.season-table thead th.is-this-month {
+      color: var(--accent); font-weight: 700;
+      border-top: 2px solid var(--accent); border-radius: 4px 4px 0 0;
+    }
+    table.season-table tbody tr:last-child td.is-this-month {
+      border-bottom: 2px solid var(--accent); border-radius: 0 0 4px 4px;
+    }
     .season-cell-return { font-family: 'IBM Plex Mono', monospace; font-weight: 500; }
     .season-cell-win { display: block; font-size: .68rem; color: var(--text-faint); margin-top: 1px; }
     .season-best-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .6rem; margin-bottom: 2rem; }
@@ -151,8 +166,8 @@
     </a>
   </footer>
 
-  <script src="i18n.js?v1790140864"></script>
-  <script src="ppmk.js?v1790140864"></script>
+  <script src="i18n.js?v1792346239"></script>
+  <script src="ppmk.js?v1792346239"></script>
   <script>
     // ── i18n bridge ─────────────────────────────────────────────
     const t = (key, vars) => {
@@ -201,19 +216,26 @@
         0.01
       );
 
+      // The month we are actually in, marked down the whole column. Reading
+      // this table without it means counting across twelve columns to find
+      // the one that applies today.
+      const nowMonth = new Date().getMonth() + 1;
+
       const head = `<tr><th class="season-cat-col">${esc(t("th_category"))}</th>` +
-        monthNames.map(m => `<th>${esc(m)}</th>`).join("") + "</tr>";
+        monthNames.map((m, i) => `<th${i + 1 === nowMonth ? ' class="is-this-month"' : ""}>`
+          + `${esc(m)}</th>`).join("") + "</tr>";
 
       const rows = order.map(cat => {
         const months = monthly[cat] || {};
         const cells = [];
         for (let m = 1; m <= 12; m++) {
           const stat = months[String(m)];
-          if (!stat) { cells.push("<td>—</td>"); continue; }
+          const nowCls = m === nowMonth ? " is-this-month" : "";
+          if (!stat) { cells.push(`<td class="${nowCls.trim()}">—</td>`); continue; }
           const bg = returnColor(stat.avg_return, maxAbs);
           const sign = stat.avg_return >= 0 ? "+" : "";
           cells.push(
-            `<td style="background:${bg}" title="${stat.n_funds} fonder, ${stat.n_weeks} veckor">` +
+            `<td class="${nowCls.trim()}" style="background:${bg}" title="${stat.n_funds} fonder, ${stat.n_weeks} veckor">` +
             `<span class="season-cell-return">${sign}${stat.avg_return.toFixed(2)}%</span>` +
             `<span class="season-cell-win">${stat.win_rate.toFixed(0)}%</span></td>`
           );

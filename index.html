@@ -26,7 +26,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v1790140864" />
+  <link rel="stylesheet" href="style.css?v1792346239" />
 </head>
 
 <body data-theme="auto">
@@ -168,8 +168,8 @@
     <div class="lightbox-hint">Scroll to zoom · Drag to pan · Esc to close</div>
   </div>
 
-  <script src="i18n.js?v1790140864"></script>
-  <script src="ppmk.js?v1790140864"></script>
+  <script src="i18n.js?v1792346239"></script>
+  <script src="ppmk.js?v1792346239"></script>
   <script>
     (() => {
       "use strict";
@@ -335,6 +335,104 @@
       }
 
       function tagsHtml(tagString) { return String(tagString || "").split(",").map(tag => tag.trim()).filter(Boolean).map(tag => `<span class="tag">${esc(tag)}</span>`).join(""); }
+      // ── Seasonal context ───────────────────────────────────────────
+      // predictions.json carries the historical record for the current month,
+      // measured by 08_seasonality.py over the whole series. Rendered from the
+      // structured fields rather than the server's `summary` string so it
+      // follows the language toggle; the summary stays server-side for logs
+      // and notifications.
+      const SEASON_CLS = { strong: "season-strong", weak: "season-weak",
+                           mixed: "season-mixed", neutral: "season-neutral" };
+
+      function monthName(month) {
+        if (!month) return "";
+        try {
+          const loc = ppmI18n.getLang() === "en" ? "en-GB" : "sv-SE";
+          return new Date(2000, month - 1, 1).toLocaleDateString(loc, { month: "long" });
+        } catch (e) { return String(month); }
+      }
+
+      function pctStr(v) { return (v >= 0 ? "+" : "") + v.toFixed(2) + "%"; }
+
+      // "Ny teknik +0.41%/v · 64% positiva (615v)"
+      function seasonCatStr(c) {
+        return `${esc(c.category)} ${pctStr(c.avg_return || 0)}/${t("season_per_week")}`
+             + ` · ${(c.win_rate || 0).toFixed(0)}% ${t("season_positive")}`
+             + ` (${c.n_weeks}${t("season_weeks_abbr")})`;
+      }
+
+      function seasonalHtml(seasonal) {
+        if (!seasonal) return "";
+        const cls = SEASON_CLS[seasonal.verdict] || SEASON_CLS.neutral;
+        const cats = (seasonal.categories || []);
+        if (!cats.length) return "";
+        // The server names the category the verdict was formed on. Picking one
+        // here instead showed "Aktiefond · 11992v" — an umbrella tag covering
+        // every equity fund — beside a verdict formed on Norge.
+        const lead = cats.find(c => c.category === seasonal.lead) || cats[0];
+        const pct = lead.month_percentile;
+        const rank = pct == null ? "" :
+          ` <span class="season-rank" title="${esc(t("season_pct_tip"))}">${t("season_percentile")} ${pct.toFixed(0)}</span>`;
+        return `<div class="season-line ${cls}">`
+             + `<span class="season-verdict">${t("season_verdict_" + seasonal.verdict)}</span>`
+             + `<span class="season-body">${t("season_in")} ${esc(monthName(seasonal.month))}: `
+             + `${seasonCatStr(lead)}${rank}</span></div>`;
+      }
+
+      // The period itself, independent of which funds happened to win: what
+      // this month has historically looked like across every category.
+      function seasonMonthHtml(sm) {
+        if (!sm || !(sm.strongest || []).length) return "";
+        const li = arr => arr.map(c => `<li>${seasonCatStr(c)}</li>`).join("");
+        // Breadth first: whether MOST of the month loses, which is the
+        // question "går de flesta fonderna dåligt den här månaden?" asks.
+        // March answers yes (32 of 36), October answers no (0 of 36).
+        const br = sm.breadth || "mixed";
+        const breadth = sm.n_negative == null ? "" :
+          `<p class="season-breadth ${SEASON_CLS[br] || SEASON_CLS.neutral}">`
+          + t("season_breadth_" + br)
+              .replace("{neg}", String(sm.n_negative))
+              .replace("{tot}", String(sm.n_categories))
+              .replace("{month}", esc(monthName(sm.month)))
+              .replace("{median}", (sm.median_return >= 0 ? "+" : "")
+                                   + Number(sm.median_return).toFixed(3))
+          + `</p>`;
+        return `<section class="season-bar">`
+             + `<div class="season-bar-head"><h2 class="season-bar-title">`
+             + `${esc(monthName(sm.month))} — ${t("season_bar_title")}</h2>`
+             + `<span class="season-bar-n">${sm.n_categories} ${t("season_categories")}`
+             + ` · ${t("season_years")}</span></div>`
+             + breadth
+             // What the part of the month still ahead has favoured. Ranked on
+             // its own figures: October's back half puts Ny teknik at
+             // +0.604%/week against +0.4145% for the month as a whole.
+             + (sm.remaining ? `<p class="season-remaining">`
+                 + `<strong>${t("season_remaining")}</strong> `
+                 + sm.remaining.favours.map(c =>
+                     `${esc(c.category)} <span class="season-dim">`
+                     + `${pctStr(c.avg_return || 0)}/${t("season_per_week")}</span>`).join(" · ")
+                 + `</p>` : "")
+             // The fund-level record. A category average cannot be bought.
+             + ((sm.top_funds || []).length ? `<div class="season-funds">`
+                 + `<h3>${t("season_top_funds")}</h3><ul>`
+                 + sm.top_funds.map(f => `<li><span class="season-fund-name">`
+                     + `${esc(f.name)}</span> <span class="season-dim">`
+                     + `${pctStr(f.avg_return || 0)}/${t("season_per_week")}`
+                     + ` · ${(f.win_rate || 0).toFixed(0)}% ${t("season_positive")}`
+                     + ` · ${f.n_years} ${t("season_years_abbr")}</span></li>`).join("")
+                 + `</ul></div>` : "")
+             + `<p class="season-bar-note">${t("season_bar_note")}`
+             // The currency problem in ppm-data is still in these figures.
+             // Saying so beats letting the panel imply they are clean.
+             + (sm.n_excluded ? " " + t("season_data_caveat")
+                                        .replace("{n}", String(sm.n_excluded)) : "")
+             + `</p>`
+             + `<div class="season-cols">`
+             + `<div class="season-col season-strong"><h3>${t("season_strongest")}</h3><ul>${li(sm.strongest)}</ul></div>`
+             + `<div class="season-col season-weak"><h3>${t("season_weakest")}</h3><ul>${li(sm.weakest || [])}</ul></div>`
+             + `</div></section>`;
+      }
+
       function ppmBtnHtml(code) { if (!code) return '<span class="id-pill ppm">PPM —</span>'; return `<button class="action-btn ppm-copy" data-ppm="${esc(code)}">PPM ${esc(code)} ⎘</button>`; }
       function avanzaLinkHtml(url) { if (!url) return ""; return `<a class="action-btn" href="${esc(url)}" target="_blank" rel="noopener">Avanza ↗</a>`; }
 
@@ -385,7 +483,7 @@
         const flagBadges = (fund.warnings || []).map(w =>
           `<span class="hitrate-warn" title="${esc(w.detail || "")}">⚠ ${t("warn_" + w.reason)}</span>`).join("");
         const medalCls = rank <= 3 ? "is-medal" : "", topCls = rank === 1 ? " is-top" : "";
-        return `<article class="fund-card${topCls}"><div class="card-header"><div class="rank-col ${medalCls}">${medal}</div><div class="fund-meta"><div class="fund-name" title="${esc(fund.name || "")}">${esc(fund.name || t("fund_unknown"))}</div><div class="fund-ids"><span class="id-pill">ID&nbsp;${esc(fund.fund_id || "—")}</span>${ppmBtnHtml(fund.ppm_code)}${avanzaLinkHtml(fund.avanza_url)}${warnBadge}${covWarnBadge}${flagBadges}</div></div><div class="signal-col"><div class="signal-badge ${sig.cls}"><span class="signal-icon">${sig.icon}</span><span class="signal-label">${t("signal_" + (fund.signal || "HOLD"))}</span></div></div></div><div class="tags-row">${tagsHtml(fund.tags)}</div><div class="metrics-grid"><div class="metric"><span class="metric-label">Score <span class="metric-info" data-tip="${esc(t("tip_score"))}">?</span></span><span class="metric-value">${score}</span><span class="metric-hint">${t("metric_score_hint")}</span></div><div class="metric"><span class="metric-label">${t("bt_hitrate")} <span class="metric-info" data-tip="${esc(t("tip_hitrate"))}">?</span></span><span class="metric-value ${hitrateClass(hitrate)}">${hitrate.toFixed(1)}%</span>${barHtml(hitrate, 100, hitrateClass(hitrate))}</div><div class="metric"><span class="metric-label">Coverage <span class="metric-info" data-tip="${esc(t("tip_coverage"))}">?</span></span><span class="metric-value">${cov}%</span>${barHtml(parseFloat(cov))}</div><div class="metric"><span class="metric-label">MAE Q50 <span class="metric-info" data-tip="${esc(t("tip_mae"))}">?</span></span><span class="metric-value">${mae}</span><span class="metric-hint">${t("metric_mae_hint")}</span></div>${consensusHtml(fund)}</div><div class="forecast-block"><div class="forecast-title">Forecast · ${hLabel} <span class="metric-info" data-tip="${esc(t("tip_forecast"))}">?</span></div><div class="forecast-row"><span class="fc-q10">${signFmt(fc.q10 || 0)}</span><span class="fc-sep">·</span><span class="fc-q50 ${q50 > 0 ? "pos" : q50 < 0 ? "neg" : ""}">${signFmt(q50)}</span><span class="fc-sep">·</span><span class="fc-q90">${signFmt(fc.q90 || 0)}</span></div><div class="forecast-labels"><span>Pessimistisk</span><span>Median</span><span>Optimistisk</span></div>${forecastBandHtml(fc)}</div>${btHtml(fund.backtest)}<div class="charts-block"><div class="chart-tabs"><button class="chart-tab active" data-chart-target="${cardId}-ens">${t("chart_ensemble")}</button><button class="chart-tab" data-chart-target="${cardId}-ind">${t("chart_per_model")}</button></div><div class="chart-pane active" id="${cardId}-ens">${chartImg(ensPath, `${t("chart_ensemble")} ${fund.name}`)}</div><div class="chart-pane" id="${cardId}-ind">${chartImg(indPath, `${t("chart_per_model")} ${fund.name}`)}</div></div></article>`;
+        return `<article class="fund-card${topCls}"><div class="card-header"><div class="rank-col ${medalCls}">${medal}</div><div class="fund-meta"><div class="fund-name" title="${esc(fund.name || "")}">${esc(fund.name || t("fund_unknown"))}</div><div class="fund-ids"><span class="id-pill">ID&nbsp;${esc(fund.fund_id || "—")}</span>${ppmBtnHtml(fund.ppm_code)}${avanzaLinkHtml(fund.avanza_url)}${warnBadge}${covWarnBadge}${flagBadges}</div></div><div class="signal-col"><div class="signal-badge ${sig.cls}"><span class="signal-icon">${sig.icon}</span><span class="signal-label">${t("signal_" + (fund.signal || "HOLD"))}</span></div></div></div><div class="tags-row">${tagsHtml(fund.tags)}</div>${seasonalHtml(fund.seasonal)}<div class="metrics-grid"><div class="metric"><span class="metric-label">Score <span class="metric-info" data-tip="${esc(t("tip_score"))}">?</span></span><span class="metric-value">${score}</span><span class="metric-hint">${t("metric_score_hint")}</span></div><div class="metric"><span class="metric-label">${t("bt_hitrate")} <span class="metric-info" data-tip="${esc(t("tip_hitrate"))}">?</span></span><span class="metric-value ${hitrateClass(hitrate)}">${hitrate.toFixed(1)}%</span>${barHtml(hitrate, 100, hitrateClass(hitrate))}</div><div class="metric"><span class="metric-label">Coverage <span class="metric-info" data-tip="${esc(t("tip_coverage"))}">?</span></span><span class="metric-value">${cov}%</span>${barHtml(parseFloat(cov))}</div><div class="metric"><span class="metric-label">MAE Q50 <span class="metric-info" data-tip="${esc(t("tip_mae"))}">?</span></span><span class="metric-value">${mae}</span><span class="metric-hint">${t("metric_mae_hint")}</span></div>${consensusHtml(fund)}</div><div class="forecast-block"><div class="forecast-title">Forecast · ${hLabel} <span class="metric-info" data-tip="${esc(t("tip_forecast"))}">?</span></div><div class="forecast-row"><span class="fc-q10">${signFmt(fc.q10 || 0)}</span><span class="fc-sep">·</span><span class="fc-q50 ${q50 > 0 ? "pos" : q50 < 0 ? "neg" : ""}">${signFmt(q50)}</span><span class="fc-sep">·</span><span class="fc-q90">${signFmt(fc.q90 || 0)}</span></div><div class="forecast-labels"><span>Pessimistisk</span><span>Median</span><span>Optimistisk</span></div>${forecastBandHtml(fc)}</div>${btHtml(fund.backtest)}<div class="charts-block"><div class="chart-tabs"><button class="chart-tab active" data-chart-target="${cardId}-ens">${t("chart_ensemble")}</button><button class="chart-tab" data-chart-target="${cardId}-ind">${t("chart_per_model")}</button></div><div class="chart-pane active" id="${cardId}-ens">${chartImg(ensPath, `${t("chart_ensemble")} ${fund.name}`)}</div><div class="chart-pane" id="${cardId}-ind">${chartImg(indPath, `${t("chart_per_model")} ${fund.name}`)}</div></div></article>`;
       }
 
       function rankingFundHtml(fund, rank) {
@@ -412,6 +510,10 @@
         { key: "change_pct", label: "ov_col_change", cls: "ov-num",  type: "num"  },
         { key: "streak",     label: "ov_col_streak", cls: "ov-num",  type: "num"  },
         { key: "trend",      label: "ov_col_trend",  cls: "",        type: "text" },
+        // The month's historical record for this fund's own category. Sorted
+        // on the percentile, so "show me the funds whose category usually
+        // does worst this month" is one click on the header.
+        { key: "seasonal",   label: "ov_col_season", cls: "",        type: "num"  },
       ];
 
       const OV_ARROW = { up: "\u25B2", down: "\u25BC", flat: "\u25AC" };
@@ -438,6 +540,12 @@
         const mul = dir === "asc" ? 1 : -1;
         return rows.sort((a, b) => {
           let x = a[col], y = b[col];
+          // seasonal is an object; rank it by the percentile it carries and
+          // sink the funds with no history to the bottom either way.
+          if (col === "seasonal") {
+            x = x && x.pct != null ? x.pct : -1;
+            y = y && y.pct != null ? y.pct : -1;
+          }
           // A streak is only comparable together with its direction: 6 weeks
           // down is the opposite end of the scale from 6 weeks up, not a tie.
           if (col === "streak") {
@@ -468,6 +576,15 @@
           ? `<span class="hitrate-warn" title="${esc(t("ov_low_coverage_tip").replace("{min_cov}", String(_overview.min_coverage_pct ?? 60)))}" style="margin-left:6px">\u26a0</span>`
           : "";
         const name = nameLink + covWarn;
+        // Compact form from overview.json: verdict, the category the verdict
+        // was formed on, and its percentile for the month.
+        const s = f.seasonal;
+        const season = s
+          ? `<span class="ov-season ${SEASON_CLS[s.verdict] || SEASON_CLS.neutral}"`
+            + ` title="${esc(t("season_verdict_" + s.verdict))} \u2014 ${esc(s.lead)}`
+            + `${s.pct != null ? ", " + t("season_percentile") + " " + s.pct.toFixed(0) : ""}">`
+            + `${esc(s.lead)}${s.pct != null ? ` <b>${s.pct.toFixed(0)}</b>` : ""}</span>`
+          : "\u2014";
         // data-ppm is what ppmk's highlighter anchors on \u2014 it marks the
         // element and the row around it, so the overview needs no highlight
         // code of its own.
@@ -478,6 +595,7 @@
           + `<td class="ov-num ${chCls}">${ch}</td>`
           + `<td class="ov-num">${streak}</td>`
           + `<td>${trend}</td>`
+          + `<td>${season}</td>`
           + `</tr>`;
       }
 
@@ -535,7 +653,8 @@
         const rankingKeys = ["winners", ...Object.keys(rankings)];
         if (_overview) rankingKeys.push("overview");
         const tabsHtml = `<nav class="ranking-nav">${rankingKeys.map(k => { const m = getRankingMeta(k); return `<button class="ranking-tab${k === "winners" ? " active" : ""}" data-key="${esc(k)}">${esc(m.label)}</button>`; }).join("")}</nav>`;
-        $("#app").innerHTML = metaHtml + tabsHtml + `<div id="funds-panel"></div>`;
+        $("#app").innerHTML = metaHtml + seasonMonthHtml(data.seasonal_month)
+                            + tabsHtml + `<div id="funds-panel"></div>`;
         switchRanking("winners");
       }
 
