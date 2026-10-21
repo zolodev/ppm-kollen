@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20",
+  "generated": "2026-10-21",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -10,104 +10,7 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": {
-    "month": 10,
-    "month_name": "oktober",
-    "strongest": [
-      {
-        "category": "USA",
-        "avg_return": 0.3521,
-        "win_rate": 61.9,
-        "n_weeks": 1206
-      },
-      {
-        "category": "Indien",
-        "avg_return": 0.3476,
-        "win_rate": 56.7,
-        "n_weeks": 439
-      },
-      {
-        "category": "Råvaror",
-        "avg_return": 0.3417,
-        "win_rate": 57.1,
-        "n_weeks": 312
-      }
-    ],
-    "weakest": [
-      {
-        "category": "Reala",
-        "avg_return": 0.0206,
-        "win_rate": 50.0,
-        "n_weeks": 264
-      },
-      {
-        "category": "Korta",
-        "avg_return": 0.0295,
-        "win_rate": 70.7,
-        "n_weeks": 823
-      },
-      {
-        "category": "Företag",
-        "avg_return": 0.0366,
-        "win_rate": 67.9,
-        "n_weeks": 754
-      }
-    ],
-    "n_categories": 36,
-    "n_negative": 0,
-    "median_return": 0.2223,
-    "breadth": "strong",
-    "remaining": {
-      "favours": [
-        {
-          "category": "Ny teknik",
-          "avg_return": 0.6042,
-          "win_rate": 66.2,
-          "n_weeks": 343
-        },
-        {
-          "category": "Asien ex Japan",
-          "avg_return": 0.5609,
-          "win_rate": 62.5,
-          "n_weeks": 264
-        },
-        {
-          "category": "Tillväxtbolag",
-          "avg_return": 0.5198,
-          "win_rate": 64.2,
-          "n_weeks": 374
-        }
-      ],
-      "n_categories": 36
-    },
-    "top_funds": [
-      {
-        "fund_id": "1376",
-        "name": "BGF Latin American A2",
-        "avg_return": 0.6382,
-        "win_rate": 56.8,
-        "n_weeks": 88,
-        "n_years": 21
-      },
-      {
-        "fund_id": "70371",
-        "name": "Franklin India A(acc)USD",
-        "avg_return": 0.5148,
-        "win_rate": 59.1,
-        "n_weeks": 88,
-        "n_years": 21
-      },
-      {
-        "fund_id": "198508",
-        "name": "Carnegie Listed Private Equity A",
-        "avg_return": 0.4964,
-        "win_rate": 69.9,
-        "n_weeks": 73,
-        "n_years": 17
-      }
-    ],
-    "n_excluded": 4
-  },
+  "seasonal_month": null,
   "horizons": {
     "1w": [
       {
@@ -116,46 +19,17 @@
         "name": "D&G Global All Cap",
         "tags": "Aktiefond, Global, Flexibel storlek bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316079",
-        "score": 66.477,
+        "score": 59.025,
         "hitrate_q50": 58.33,
-        "coverage_pct": 56.06,
-        "mae_q50": 0.5706,
+        "coverage_pct": 56.82,
+        "mae_q50": 0.5659,
         "signal": "HOLD",
         "forecast": {
-          "q10": -0.2661,
-          "q50": 0.6632,
-          "q90": 1.5182
+          "q10": -0.3237,
+          "q50": 0.5186,
+          "q90": 1.4513
         },
-        "seasonal": {
-          "month": 10,
-          "month_name": "oktober",
-          "verdict": "weak",
-          "lead": "Flexibel storlek bolag",
-          "categories": [
-            {
-              "category": "Global",
-              "avg_return": 0.2442,
-              "win_rate": 61.5,
-              "n_weeks": 1562,
-              "month_percentile": 62.5
-            },
-            {
-              "category": "Flexibel storlek bolag",
-              "avg_return": 0.0757,
-              "win_rate": 58.7,
-              "n_weeks": 772,
-              "month_percentile": 23.6
-            },
-            {
-              "category": "Aktiefond",
-              "avg_return": 0.2676,
-              "win_rate": 59.5,
-              "n_weeks": 12316,
-              "month_percentile": 76.4
-            }
-          ],
-          "summary": "Flexibel storlek bolag hör historiskt till de svagaste i oktober: +0.08%/vecka, 59% positiva veckor (772 veckor)"
-        },
+        "seasonal": null,
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -170,235 +44,27 @@
         },
         "warnings": [
           {
-            "reason": "seasonal_weak",
-            "detail": "Flexibel storlek bolag hör historiskt till de svagaste i oktober: +0.08%/vecka, 59% positiva veckor (772 veckor)"
-          },
-          {
             "reason": "overheat_reversal",
-            "detail": "4w return +5.0% is 4.4pp off its +9.4% peak in the last 8 weeks"
+            "detail": "4w return +4.2% is 5.1pp off its +9.4% peak in the last 8 weeks"
           }
         ],
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 2.0488,
+          "mae": 2.1071,
           "last_pred_q50": 1.2147,
-          "last_actual": -1.5912,
-          "last_error": 2.8059,
+          "last_actual": -2.2913,
+          "last_error": 3.506,
           "last_direction_ok": false,
           "date_from": "2026-07-20",
           "date_to": "2026-10-12"
         },
-        "rationale": "58% hit-rate; 0.571pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "58% hit-rate; 0.566pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-20/316079/h1w_ensemble.png",
-          "individual": "top-2026-10-20/316079/h1w_individual.png"
+          "ensemble": "top-2026-10-21/316079/h1w_ensemble.png",
+          "individual": "top-2026-10-21/316079/h1w_individual.png"
         },
         "sticky": true
-      },
-      {
-        "fund_id": "1512",
-        "ppm_code": "384107",
-        "name": "Franklin US Opportunities A(acc)USD",
-        "tags": "Aktiefond, USA, Tillväxtbolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1512",
-        "score": 58.227,
-        "hitrate_q50": 72.77,
-        "coverage_pct": 73.3,
-        "mae_q50": 0.5893,
-        "signal": "HOLD",
-        "forecast": {
-          "q10": -0.7529,
-          "q50": 0.1277,
-          "q90": 1.0826
-        },
-        "seasonal": {
-          "month": 10,
-          "month_name": "oktober",
-          "verdict": "strong",
-          "lead": "USA",
-          "categories": [
-            {
-              "category": "USA",
-              "avg_return": 0.3521,
-              "win_rate": 61.9,
-              "n_weeks": 1206,
-              "month_percentile": 98.6
-            },
-            {
-              "category": "Tillväxtbolag",
-              "avg_return": 0.3143,
-              "win_rate": 62.0,
-              "n_weeks": 690,
-              "month_percentile": 87.5
-            },
-            {
-              "category": "Aktiefond",
-              "avg_return": 0.2676,
-              "win_rate": 59.5,
-              "n_weeks": 12316,
-              "month_percentile": 76.4
-            }
-          ],
-          "summary": "USA historiskt i oktober: +0.35%/vecka, 62% positiva veckor, percentil 99 (1206 veckor)"
-        },
-        "consensus": {
-          "n_agree": 2,
-          "n_models": 3,
-          "n_up": 2,
-          "n_down": 1,
-          "models": [
-            "gru",
-            "lstm",
-            "tcn",
-            "xgboost"
-          ]
-        },
-        "warnings": [
-          {
-            "reason": "consensus",
-            "detail": "2↑ 1↓ of 3 models"
-          },
-          {
-            "reason": "overheat_reversal",
-            "detail": "4w return -3.5% is 13.5pp off its +10.0% peak in the last 8 weeks"
-          },
-          {
-            "reason": "backtest",
-            "detail": "backtest 58.3% < 60%"
-          }
-        ],
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 58.3,
-          "mae": 2.4593,
-          "last_pred_q50": 1.5068,
-          "last_actual": -6.1714,
-          "last_error": 7.6783,
-          "last_direction_ok": false,
-          "date_from": "2026-07-20",
-          "date_to": "2026-10-12"
-        },
-        "rationale": "73% hit-rate; 0.589pp MAE; 2/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-10-20/1512/h1w_ensemble.png",
-          "individual": "top-2026-10-20/1512/h1w_individual.png"
-        }
-      },
-      {
-        "fund_id": "58850",
-        "ppm_code": "968891",
-        "name": "Pictet-Security R USD",
-        "tags": "Aktiefond, Global, Flexibel storlek bolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
-        "score": 54.555,
-        "hitrate_q50": 57.07,
-        "coverage_pct": 71.74,
-        "mae_q50": 0.8054,
-        "signal": "BUY",
-        "forecast": {
-          "q10": -0.9159,
-          "q50": 0.5535,
-          "q90": 1.6983
-        },
-        "seasonal": {
-          "month": 10,
-          "month_name": "oktober",
-          "verdict": "weak",
-          "lead": "Flexibel storlek bolag",
-          "categories": [
-            {
-              "category": "Global",
-              "avg_return": 0.2442,
-              "win_rate": 61.5,
-              "n_weeks": 1562,
-              "month_percentile": 62.5
-            },
-            {
-              "category": "Flexibel storlek bolag",
-              "avg_return": 0.0757,
-              "win_rate": 58.7,
-              "n_weeks": 772,
-              "month_percentile": 23.6
-            },
-            {
-              "category": "Aktiefond",
-              "avg_return": 0.2676,
-              "win_rate": 59.5,
-              "n_weeks": 12316,
-              "month_percentile": 76.4
-            }
-          ],
-          "summary": "Flexibel storlek bolag hör historiskt till de svagaste i oktober: +0.08%/vecka, 59% positiva veckor (772 veckor)"
-        },
-        "consensus": {
-          "n_agree": 2,
-          "n_models": 3,
-          "n_up": 2,
-          "n_down": 1,
-          "models": [
-            "gru",
-            "lstm",
-            "tcn",
-            "xgboost"
-          ]
-        },
-        "warnings": [
-          {
-            "reason": "consensus",
-            "detail": "2↑ 1↓ of 3 models"
-          },
-          {
-            "reason": "seasonal_weak",
-            "detail": "Flexibel storlek bolag hör historiskt till de svagaste i oktober: +0.08%/vecka, 59% positiva veckor (772 veckor)"
-          },
-          {
-            "reason": "overheat_reversal",
-            "detail": "4w return -2.2% is 17.6pp off its +15.4% peak in the last 8 weeks"
-          },
-          {
-            "reason": "backtest",
-            "detail": "backtest 58.3% < 60%"
-          }
-        ],
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 58.3,
-          "mae": 3.9342,
-          "last_pred_q50": 1.918,
-          "last_actual": -9.258,
-          "last_error": 11.1759,
-          "last_direction_ok": false,
-          "date_from": "2026-07-20",
-          "date_to": "2026-10-12"
-        },
-        "rationale": "57% hit-rate; 0.805pp MAE; 2/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-10-20/58850/h1w_ensemble.png",
-          "individual": "top-2026-10-20/58850/h1w_individual.png"
-        }
-      }
-    ]
-  },
-  "rankings": {
-    "top_yield": [
-      {
-        "fund_id": "397",
-        "ppm_code": "496729",
-        "name": "Franklin Technology Fund A",
-        "tags": "",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-        "hitrate_q50": 70.48,
-        "coverage_pct": 22.89,
-        "mae_q50": 9.1157,
-        "forecast_q10": -0.0892,
-        "forecast_q50": 1.786,
-        "forecast_q90": 3.6301,
-        "last_actual": -8.8931,
-        "momentum_4w": -1.4946,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
       },
       {
         "fund_id": "1376",
@@ -406,14 +72,134 @@
         "name": "BGF Latin American A2",
         "tags": "Aktiefond, Latinamerika",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "hitrate_q50": 61.78,
-        "coverage_pct": 52.88,
-        "mae_q50": 0.9423,
-        "forecast_q10": 0.5192,
-        "forecast_q50": 1.7561,
-        "forecast_q90": 2.6455,
-        "last_actual": -4.448,
-        "momentum_4w": 3.2681,
+        "score": 77.06,
+        "hitrate_q50": 59.16,
+        "coverage_pct": 51.83,
+        "mae_q50": 0.9686,
+        "signal": "BUY",
+        "forecast": {
+          "q10": 0.5214,
+          "q50": 1.8066,
+          "q90": 2.7731
+        },
+        "seasonal": null,
+        "consensus": {
+          "n_agree": 3,
+          "n_models": 3,
+          "n_up": 3,
+          "n_down": 0,
+          "models": [
+            "gru",
+            "lstm",
+            "tcn",
+            "xgboost"
+          ]
+        },
+        "warnings": [
+          {
+            "reason": "overheat_reversal",
+            "detail": "4w return +13.4% is 6.4pp off its +19.8% peak in the last 8 weeks"
+          },
+          {
+            "reason": "backtest",
+            "detail": "backtest 58.3% < 60%"
+          }
+        ],
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 58.3,
+          "mae": 3.5718,
+          "last_pred_q50": 2.0271,
+          "last_actual": -3.7487,
+          "last_error": 5.7758,
+          "last_direction_ok": false,
+          "date_from": "2026-07-20",
+          "date_to": "2026-10-12"
+        },
+        "rationale": "59% hit-rate; 0.969pp MAE; 3/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-10-21/1376/h1w_ensemble.png",
+          "individual": "top-2026-10-21/1376/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "58850",
+        "ppm_code": "968891",
+        "name": "Pictet-Security R USD",
+        "tags": "Aktiefond, Global, Flexibel storlek bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
+        "score": 53.058,
+        "hitrate_q50": 56.52,
+        "coverage_pct": 71.2,
+        "mae_q50": 0.8001,
+        "signal": "BUY",
+        "forecast": {
+          "q10": -0.9441,
+          "q50": 0.5254,
+          "q90": 1.6713
+        },
+        "seasonal": null,
+        "consensus": {
+          "n_agree": 2,
+          "n_models": 3,
+          "n_up": 2,
+          "n_down": 1,
+          "models": [
+            "gru",
+            "lstm",
+            "tcn",
+            "xgboost"
+          ]
+        },
+        "warnings": [
+          {
+            "reason": "consensus",
+            "detail": "2↑ 1↓ of 3 models"
+          },
+          {
+            "reason": "overheat_reversal",
+            "detail": "4w return -2.8% is 18.2pp off its +15.4% peak in the last 8 weeks"
+          },
+          {
+            "reason": "backtest",
+            "detail": "backtest 58.3% < 60%"
+          }
+        ],
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 58.3,
+          "mae": 3.9797,
+          "last_pred_q50": 1.918,
+          "last_actual": -9.8032,
+          "last_error": 11.7211,
+          "last_direction_ok": false,
+          "date_from": "2026-07-20",
+          "date_to": "2026-10-12"
+        },
+        "rationale": "57% hit-rate; 0.800pp MAE; 2/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-10-21/58850/h1w_ensemble.png",
+          "individual": "top-2026-10-21/58850/h1w_individual.png"
+        }
+      }
+    ]
+  },
+  "rankings": {
+    "top_yield": [
+      {
+        "fund_id": "1376",
+        "ppm_code": "661066",
+        "name": "BGF Latin American A2",
+        "tags": "Aktiefond, Latinamerika",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
+        "hitrate_q50": 59.16,
+        "coverage_pct": 51.83,
+        "mae_q50": 0.9686,
+        "forecast_q10": 0.5392,
+        "forecast_q50": 2.0271,
+        "forecast_q90": 2.6864,
+        "last_actual": -3.7487,
+        "momentum_4w": 3.4429,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -424,14 +210,32 @@
         "name": "Pictet-Security R USD",
         "tags": "Aktiefond, Global, Flexibel storlek bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
-        "hitrate_q50": 57.07,
-        "coverage_pct": 71.74,
-        "mae_q50": 0.8054,
-        "forecast_q10": 0.0229,
-        "forecast_q50": 1.7548,
-        "forecast_q90": 3.8803,
-        "last_actual": -9.258,
-        "momentum_4w": -0.3979,
+        "hitrate_q50": 56.52,
+        "coverage_pct": 71.2,
+        "mae_q50": 0.8001,
+        "forecast_q10": 0.0362,
+        "forecast_q50": 1.918,
+        "forecast_q90": 3.8843,
+        "last_actual": -9.8032,
+        "momentum_4w": -0.5342,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 70.48,
+        "coverage_pct": 20.48,
+        "mae_q50": 9.116,
+        "forecast_q10": -0.047,
+        "forecast_q50": 1.7175,
+        "forecast_q90": 3.2577,
+        "last_actual": -8.8931,
+        "momentum_4w": -1.4946,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -444,14 +248,14 @@
         "name": "Lannebo FRN A",
         "tags": "Räntefond, SEK, Obligationer, Företag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/388595",
-        "hitrate_q50": 94.17,
+        "hitrate_q50": 95.83,
         "coverage_pct": 95.83,
-        "mae_q50": 0.2578,
-        "forecast_q10": -0.1347,
-        "forecast_q50": -0.0482,
-        "forecast_q90": -0.019,
-        "last_actual": 0.0,
-        "momentum_4w": -0.0114,
+        "mae_q50": 0.2149,
+        "forecast_q10": -0.0451,
+        "forecast_q50": -0.0265,
+        "forecast_q90": -0.0093,
+        "last_actual": 0.0228,
+        "momentum_4w": -0.0057,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "HOLD"
@@ -462,88 +266,88 @@
         "name": "Storebrand FRN Företagsobl A SEK H",
         "tags": "Räntefond, SEK, Obligationer, Företag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/377809",
-        "hitrate_q50": 91.74,
-        "coverage_pct": 96.69,
-        "mae_q50": 0.1064,
-        "forecast_q10": -0.1813,
-        "forecast_q50": -0.1533,
-        "forecast_q90": -0.1533,
-        "last_actual": 0.0316,
-        "momentum_4w": 0.0033,
+        "hitrate_q50": 95.04,
+        "coverage_pct": 95.04,
+        "mae_q50": 0.0898,
+        "forecast_q10": -0.0808,
+        "forecast_q50": -0.0598,
+        "forecast_q90": -0.0598,
+        "last_actual": 0.0365,
+        "momentum_4w": 0.0046,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "HOLD"
       },
       {
-        "fund_id": "1509086",
-        "ppm_code": "183343",
-        "name": "DNB Teknologi S",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
-        "hitrate_q50": 100.0,
-        "coverage_pct": 87.5,
-        "mae_q50": 0.4029,
-        "forecast_q10": 0.4479,
-        "forecast_q50": 1.1367,
-        "forecast_q90": 1.6103,
-        "last_actual": -0.5827,
-        "momentum_4w": 0.472,
+        "fund_id": "342255",
+        "ppm_code": "832717",
+        "name": "Simplicity Företagsobligationer A",
+        "tags": "Räntefond, SEK, Obligationer, Flexibel storlek bolag, Högrisk",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/342255",
+        "hitrate_q50": 93.7,
+        "coverage_pct": 95.28,
+        "mae_q50": 0.4211,
+        "forecast_q10": -0.1289,
+        "forecast_q50": -0.0817,
+        "forecast_q90": -0.0559,
+        "last_actual": -0.032,
+        "momentum_4w": -0.0798,
         "tritch_score": -1.0,
         "tritch_phase": 0,
-        "signal": "BUY"
+        "signal": "HOLD"
       }
     ],
     "top_balanced": [
-      {
-        "fund_id": "58850",
-        "ppm_code": "968891",
-        "name": "Pictet-Security R USD",
-        "tags": "Aktiefond, Global, Flexibel storlek bolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
-        "hitrate_q50": 57.07,
-        "coverage_pct": 71.74,
-        "mae_q50": 0.8054,
-        "forecast_q10": 0.0229,
-        "forecast_q50": 1.7548,
-        "forecast_q90": 3.8803,
-        "last_actual": -9.258,
-        "momentum_4w": -0.3979,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "1512",
-        "ppm_code": "384107",
-        "name": "Franklin US Opportunities A(acc)USD",
-        "tags": "Aktiefond, USA, Tillväxtbolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1512",
-        "hitrate_q50": 72.77,
-        "coverage_pct": 73.3,
-        "mae_q50": 0.5893,
-        "forecast_q10": 0.4145,
-        "forecast_q50": 1.5589,
-        "forecast_q90": 2.6154,
-        "last_actual": -6.1714,
-        "momentum_4w": -0.8123,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
       {
         "fund_id": "1376",
         "ppm_code": "661066",
         "name": "BGF Latin American A2",
         "tags": "Aktiefond, Latinamerika",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "hitrate_q50": 61.78,
-        "coverage_pct": 52.88,
-        "mae_q50": 0.9423,
-        "forecast_q10": 0.5192,
-        "forecast_q50": 1.7561,
-        "forecast_q90": 2.6455,
-        "last_actual": -4.448,
-        "momentum_4w": 3.2681,
+        "hitrate_q50": 59.16,
+        "coverage_pct": 51.83,
+        "mae_q50": 0.9686,
+        "forecast_q10": 0.5392,
+        "forecast_q50": 2.0271,
+        "forecast_q90": 2.6864,
+        "last_actual": -3.7487,
+        "momentum_4w": 3.4429,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "58850",
+        "ppm_code": "968891",
+        "name": "Pictet-Security R USD",
+        "tags": "Aktiefond, Global, Flexibel storlek bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
+        "hitrate_q50": 56.52,
+        "coverage_pct": 71.2,
+        "mae_q50": 0.8001,
+        "forecast_q10": 0.0362,
+        "forecast_q50": 1.918,
+        "forecast_q90": 3.8843,
+        "last_actual": -9.8032,
+        "momentum_4w": -0.5342,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "431",
+        "ppm_code": "446088",
+        "name": "BGF World Technology A2",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/431",
+        "hitrate_q50": 67.54,
+        "coverage_pct": 65.97,
+        "mae_q50": 0.989,
+        "forecast_q10": 0.4299,
+        "forecast_q50": 1.6964,
+        "forecast_q90": 3.039,
+        "last_actual": -9.2691,
+        "momentum_4w": -1.3616,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -557,13 +361,13 @@
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
         "hitrate_q50": 60.21,
-        "coverage_pct": 51.83,
-        "mae_q50": 0.6328,
-        "forecast_q10": 0.1846,
-        "forecast_q50": 0.876,
-        "forecast_q90": 1.5667,
-        "last_actual": 0.9787,
-        "momentum_4w": 1.4112,
+        "coverage_pct": 50.79,
+        "mae_q50": 0.6318,
+        "forecast_q10": 0.1825,
+        "forecast_q50": 0.8692,
+        "forecast_q90": 1.5518,
+        "last_actual": 0.2064,
+        "momentum_4w": 1.2181,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -575,31 +379,31 @@
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/475",
         "hitrate_q50": 54.97,
-        "coverage_pct": 48.69,
-        "mae_q50": 0.6237,
-        "forecast_q10": -0.0516,
-        "forecast_q50": 0.8798,
-        "forecast_q90": 1.4218,
-        "last_actual": 1.586,
-        "momentum_4w": 0.8184,
+        "coverage_pct": 46.6,
+        "mae_q50": 0.6226,
+        "forecast_q10": 0.0511,
+        "forecast_q50": 0.8723,
+        "forecast_q90": 1.3273,
+        "last_actual": 1.1781,
+        "momentum_4w": 0.7164,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "1996",
-        "ppm_code": "152181",
-        "name": "Spiltan Småbolagsfond",
-        "tags": "Aktiefond, Sverige, Små-/medelstora bolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1996",
-        "hitrate_q50": 55.5,
-        "coverage_pct": 41.88,
-        "mae_q50": 0.7605,
-        "forecast_q10": 0.0924,
-        "forecast_q50": 0.7704,
-        "forecast_q90": 1.0777,
-        "last_actual": 2.6405,
-        "momentum_4w": 0.8087,
+        "fund_id": "1681",
+        "ppm_code": "237834",
+        "name": "Fondita Nordic Small Cap B",
+        "tags": "Aktiefond, Norden, Små-/medelstora bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1681",
+        "hitrate_q50": 51.83,
+        "coverage_pct": 47.12,
+        "mae_q50": 0.7506,
+        "forecast_q10": 0.1083,
+        "forecast_q50": 0.8413,
+        "forecast_q90": 1.0653,
+        "last_actual": 0.3204,
+        "momentum_4w": 0.3244,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -607,37 +411,37 @@
     ],
     "top_winners": [
       {
-        "fund_id": "58850",
-        "ppm_code": "968891",
-        "name": "Pictet-Security R USD",
-        "tags": "Aktiefond, Global, Flexibel storlek bolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
-        "hitrate_q50": 57.07,
-        "coverage_pct": 71.74,
-        "mae_q50": 0.8054,
-        "forecast_q10": 0.0229,
-        "forecast_q50": 1.7548,
-        "forecast_q90": 3.8803,
-        "last_actual": -9.258,
-        "momentum_4w": -0.3979,
+        "fund_id": "1376",
+        "ppm_code": "661066",
+        "name": "BGF Latin American A2",
+        "tags": "Aktiefond, Latinamerika",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
+        "hitrate_q50": 59.16,
+        "coverage_pct": 51.83,
+        "mae_q50": 0.9686,
+        "forecast_q10": 0.5392,
+        "forecast_q50": 2.0271,
+        "forecast_q90": 2.6864,
+        "last_actual": -3.7487,
+        "momentum_4w": 3.4429,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "1512",
-        "ppm_code": "384107",
-        "name": "Franklin US Opportunities A(acc)USD",
-        "tags": "Aktiefond, USA, Tillväxtbolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1512",
-        "hitrate_q50": 72.77,
-        "coverage_pct": 73.3,
-        "mae_q50": 0.5893,
-        "forecast_q10": 0.4145,
-        "forecast_q50": 1.5589,
-        "forecast_q90": 2.6154,
-        "last_actual": -6.1714,
-        "momentum_4w": -0.8123,
+        "fund_id": "58850",
+        "ppm_code": "968891",
+        "name": "Pictet-Security R USD",
+        "tags": "Aktiefond, Global, Flexibel storlek bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
+        "hitrate_q50": 56.52,
+        "coverage_pct": 71.2,
+        "mae_q50": 0.8001,
+        "forecast_q10": 0.0362,
+        "forecast_q50": 1.918,
+        "forecast_q90": 3.8843,
+        "last_actual": -9.8032,
+        "momentum_4w": -0.5342,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -649,13 +453,13 @@
         "tags": "Aktiefond, Global, Flexibel storlek bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316079",
         "hitrate_q50": 58.33,
-        "coverage_pct": 56.06,
-        "mae_q50": 0.5706,
-        "forecast_q10": 0.1265,
-        "forecast_q50": 1.1368,
-        "forecast_q90": 2.0394,
-        "last_actual": -1.5912,
-        "momentum_4w": 1.244,
+        "coverage_pct": 56.82,
+        "mae_q50": 0.5659,
+        "forecast_q10": 0.1308,
+        "forecast_q50": 1.2147,
+        "forecast_q90": 2.1724,
+        "last_actual": -2.2913,
+        "momentum_4w": 1.0689,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -668,14 +472,14 @@
         "name": "BGF Latin American A2",
         "tags": "Aktiefond, Latinamerika",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "hitrate_q50": 61.78,
-        "coverage_pct": 52.88,
-        "mae_q50": 0.9423,
-        "forecast_q10": 0.5192,
-        "forecast_q50": 1.7561,
-        "forecast_q90": 2.6455,
-        "last_actual": -4.448,
-        "momentum_4w": 3.2681,
+        "hitrate_q50": 59.16,
+        "coverage_pct": 51.83,
+        "mae_q50": 0.9686,
+        "forecast_q10": 0.5392,
+        "forecast_q50": 2.0271,
+        "forecast_q90": 2.6864,
+        "last_actual": -3.7487,
+        "momentum_4w": 3.4429,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -686,32 +490,32 @@
         "name": "Pictet-Security R USD",
         "tags": "Aktiefond, Global, Flexibel storlek bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
-        "hitrate_q50": 57.07,
-        "coverage_pct": 71.74,
-        "mae_q50": 0.8054,
-        "forecast_q10": 0.0229,
-        "forecast_q50": 1.7548,
-        "forecast_q90": 3.8803,
-        "last_actual": -9.258,
-        "momentum_4w": -0.3979,
+        "hitrate_q50": 56.52,
+        "coverage_pct": 71.2,
+        "mae_q50": 0.8001,
+        "forecast_q10": 0.0362,
+        "forecast_q50": 1.918,
+        "forecast_q90": 3.8843,
+        "last_actual": -9.8032,
+        "momentum_4w": -0.5342,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "1512",
-        "ppm_code": "384107",
-        "name": "Franklin US Opportunities A(acc)USD",
-        "tags": "Aktiefond, USA, Tillväxtbolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1512",
-        "hitrate_q50": 72.77,
-        "coverage_pct": 73.3,
-        "mae_q50": 0.5893,
-        "forecast_q10": 0.4145,
-        "forecast_q50": 1.5589,
-        "forecast_q90": 2.6154,
-        "last_actual": -6.1714,
-        "momentum_4w": -0.8123,
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 70.48,
+        "coverage_pct": 20.48,
+        "mae_q50": 9.116,
+        "forecast_q10": -0.047,
+        "forecast_q50": 1.7175,
+        "forecast_q90": 3.2577,
+        "last_actual": -8.8931,
+        "momentum_4w": -1.4946,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -719,55 +523,55 @@
     ],
     "top_streak": [
       {
-        "fund_id": "58850",
-        "ppm_code": "968891",
-        "name": "Pictet-Security R USD",
-        "tags": "Aktiefond, Global, Flexibel storlek bolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
-        "hitrate_q50": 57.07,
-        "coverage_pct": 71.74,
-        "mae_q50": 0.8054,
-        "forecast_q10": 0.0229,
-        "forecast_q50": 1.7548,
-        "forecast_q90": 3.8803,
-        "last_actual": -9.258,
-        "momentum_4w": -0.3979,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "1512",
-        "ppm_code": "384107",
-        "name": "Franklin US Opportunities A(acc)USD",
-        "tags": "Aktiefond, USA, Tillväxtbolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1512",
-        "hitrate_q50": 72.77,
-        "coverage_pct": 73.3,
-        "mae_q50": 0.5893,
-        "forecast_q10": 0.4145,
-        "forecast_q50": 1.5589,
-        "forecast_q90": 2.6154,
-        "last_actual": -6.1714,
-        "momentum_4w": -0.8123,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
         "fund_id": "1376",
         "ppm_code": "661066",
         "name": "BGF Latin American A2",
         "tags": "Aktiefond, Latinamerika",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "hitrate_q50": 61.78,
-        "coverage_pct": 52.88,
-        "mae_q50": 0.9423,
-        "forecast_q10": 0.5192,
-        "forecast_q50": 1.7561,
-        "forecast_q90": 2.6455,
-        "last_actual": -4.448,
-        "momentum_4w": 3.2681,
+        "hitrate_q50": 59.16,
+        "coverage_pct": 51.83,
+        "mae_q50": 0.9686,
+        "forecast_q10": 0.5392,
+        "forecast_q50": 2.0271,
+        "forecast_q90": 2.6864,
+        "last_actual": -3.7487,
+        "momentum_4w": 3.4429,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "58850",
+        "ppm_code": "968891",
+        "name": "Pictet-Security R USD",
+        "tags": "Aktiefond, Global, Flexibel storlek bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
+        "hitrate_q50": 56.52,
+        "coverage_pct": 71.2,
+        "mae_q50": 0.8001,
+        "forecast_q10": 0.0362,
+        "forecast_q50": 1.918,
+        "forecast_q90": 3.8843,
+        "last_actual": -9.8032,
+        "momentum_4w": -0.5342,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 70.48,
+        "coverage_pct": 20.48,
+        "mae_q50": 9.116,
+        "forecast_q10": -0.047,
+        "forecast_q50": 1.7175,
+        "forecast_q90": 3.2577,
+        "last_actual": -8.8931,
+        "momentum_4w": -1.4946,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
