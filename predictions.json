@@ -10,7 +10,104 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": null,
+  "seasonal_month": {
+    "month": 10,
+    "month_name": "oktober",
+    "strongest": [
+      {
+        "category": "USA",
+        "avg_return": 0.3392,
+        "win_rate": 61.8,
+        "n_weeks": 1206
+      },
+      {
+        "category": "Indien",
+        "avg_return": 0.3353,
+        "win_rate": 56.0,
+        "n_weeks": 441
+      },
+      {
+        "category": "Råvaror",
+        "avg_return": 0.3329,
+        "win_rate": 57.1,
+        "n_weeks": 312
+      }
+    ],
+    "weakest": [
+      {
+        "category": "Reala",
+        "avg_return": 0.0188,
+        "win_rate": 49.2,
+        "n_weeks": 264
+      },
+      {
+        "category": "Korta",
+        "avg_return": 0.0294,
+        "win_rate": 70.7,
+        "n_weeks": 823
+      },
+      {
+        "category": "Företag",
+        "avg_return": 0.036,
+        "win_rate": 68.2,
+        "n_weeks": 754
+      }
+    ],
+    "n_categories": 36,
+    "n_negative": 0,
+    "median_return": 0.2182,
+    "breadth": "strong",
+    "remaining": {
+      "favours": [
+        {
+          "category": "Ny teknik",
+          "avg_return": 0.6042,
+          "win_rate": 66.2,
+          "n_weeks": 343
+        },
+        {
+          "category": "Asien ex Japan",
+          "avg_return": 0.5609,
+          "win_rate": 62.5,
+          "n_weeks": 264
+        },
+        {
+          "category": "Tillväxtbolag",
+          "avg_return": 0.5198,
+          "win_rate": 64.2,
+          "n_weeks": 374
+        }
+      ],
+      "n_categories": 36
+    },
+    "top_funds": [
+      {
+        "fund_id": "1376",
+        "name": "BGF Latin American A2",
+        "avg_return": 0.6462,
+        "win_rate": 56.8,
+        "n_weeks": 88,
+        "n_years": 21
+      },
+      {
+        "fund_id": "540",
+        "name": "BGF World Energy A2",
+        "avg_return": 0.512,
+        "win_rate": 60.2,
+        "n_weeks": 88,
+        "n_years": 21
+      },
+      {
+        "fund_id": "70371",
+        "name": "Franklin India A(acc)USD",
+        "avg_return": 0.5037,
+        "win_rate": 59.1,
+        "n_weeks": 88,
+        "n_years": 21
+      }
+    ],
+    "n_excluded": 4
+  },
   "horizons": {
     "1w": [
       {
@@ -19,17 +116,46 @@
         "name": "D&G Global All Cap",
         "tags": "Aktiefond, Global, Flexibel storlek bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316079",
-        "score": 59.025,
+        "score": 60.071,
         "hitrate_q50": 58.33,
         "coverage_pct": 56.82,
         "mae_q50": 0.5659,
         "signal": "HOLD",
         "forecast": {
-          "q10": -0.3237,
-          "q50": 0.5186,
-          "q90": 1.4513
+          "q10": -0.321,
+          "q50": 0.5425,
+          "q90": 1.4497
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 10,
+          "month_name": "oktober",
+          "verdict": "weak",
+          "lead": "Flexibel storlek bolag",
+          "categories": [
+            {
+              "category": "Global",
+              "avg_return": 0.2296,
+              "win_rate": 61.5,
+              "n_weeks": 1562,
+              "month_percentile": 54.2
+            },
+            {
+              "category": "Flexibel storlek bolag",
+              "avg_return": 0.0691,
+              "win_rate": 58.5,
+              "n_weeks": 772,
+              "month_percentile": 23.6
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2606,
+              "win_rate": 59.4,
+              "n_weeks": 12318,
+              "month_percentile": 73.6
+            }
+          ],
+          "summary": "Flexibel storlek bolag hör historiskt till de svagaste i oktober: +0.07%/vecka, 58% positiva veckor (772 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -44,6 +170,10 @@
         },
         "warnings": [
           {
+            "reason": "seasonal_weak",
+            "detail": "Flexibel storlek bolag hör historiskt till de svagaste i oktober: +0.07%/vecka, 58% positiva veckor (772 veckor)"
+          },
+          {
             "reason": "overheat_reversal",
             "detail": "4w return +4.2% is 5.1pp off its +9.4% peak in the last 8 weeks"
           }
@@ -51,10 +181,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 2.1071,
-          "last_pred_q50": 1.2147,
+          "mae": 2.1217,
+          "last_pred_q50": 1.238,
           "last_actual": -2.2913,
-          "last_error": 3.506,
+          "last_error": 3.5293,
           "last_direction_ok": false,
           "date_from": "2026-07-20",
           "date_to": "2026-10-12"
@@ -72,17 +202,32 @@
         "name": "BGF Latin American A2",
         "tags": "Aktiefond, Latinamerika",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "score": 77.06,
+        "score": 77.674,
         "hitrate_q50": 59.16,
         "coverage_pct": 51.83,
         "mae_q50": 0.9686,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.5214,
-          "q50": 1.8066,
-          "q90": 2.7731
+          "q10": 0.503,
+          "q50": 1.8377,
+          "q90": 2.7751
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 10,
+          "month_name": "oktober",
+          "verdict": "strong",
+          "lead": "Aktiefond",
+          "categories": [
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2606,
+              "win_rate": 59.4,
+              "n_weeks": 12318,
+              "month_percentile": 73.6
+            }
+          ],
+          "summary": "Aktiefond historiskt i oktober: +0.26%/vecka, 59% positiva veckor, percentil 74 (12318 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -108,10 +253,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 3.5718,
-          "last_pred_q50": 2.0271,
+          "mae": 3.5896,
+          "last_pred_q50": 2.0885,
           "last_actual": -3.7487,
-          "last_error": 5.7758,
+          "last_error": 5.8372,
           "last_direction_ok": false,
           "date_from": "2026-07-20",
           "date_to": "2026-10-12"
@@ -128,17 +273,46 @@
         "name": "Pictet-Security R USD",
         "tags": "Aktiefond, Global, Flexibel storlek bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/58850",
-        "score": 53.058,
+        "score": 52.971,
         "hitrate_q50": 56.52,
         "coverage_pct": 71.2,
         "mae_q50": 0.8001,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.9441,
-          "q50": 0.5254,
-          "q90": 1.6713
+          "q10": -0.9377,
+          "q50": 0.5258,
+          "q90": 1.6754
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 10,
+          "month_name": "oktober",
+          "verdict": "weak",
+          "lead": "Flexibel storlek bolag",
+          "categories": [
+            {
+              "category": "Global",
+              "avg_return": 0.2296,
+              "win_rate": 61.5,
+              "n_weeks": 1562,
+              "month_percentile": 54.2
+            },
+            {
+              "category": "Flexibel storlek bolag",
+              "avg_return": 0.0691,
+              "win_rate": 58.5,
+              "n_weeks": 772,
+              "month_percentile": 23.6
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2606,
+              "win_rate": 59.4,
+              "n_weeks": 12318,
+              "month_percentile": 73.6
+            }
+          ],
+          "summary": "Flexibel storlek bolag hör historiskt till de svagaste i oktober: +0.07%/vecka, 58% positiva veckor (772 veckor)"
+        },
         "consensus": {
           "n_agree": 2,
           "n_models": 3,
@@ -157,6 +331,10 @@
             "detail": "2↑ 1↓ of 3 models"
           },
           {
+            "reason": "seasonal_weak",
+            "detail": "Flexibel storlek bolag hör historiskt till de svagaste i oktober: +0.07%/vecka, 58% positiva veckor (772 veckor)"
+          },
+          {
             "reason": "overheat_reversal",
             "detail": "4w return -2.8% is 18.2pp off its +15.4% peak in the last 8 weeks"
           },
@@ -168,10 +346,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 3.9797,
-          "last_pred_q50": 1.918,
+          "mae": 4.0159,
+          "last_pred_q50": 2.3435,
           "last_actual": -9.8032,
-          "last_error": 11.7211,
+          "last_error": 12.1467,
           "last_direction_ok": false,
           "date_from": "2026-07-20",
           "date_to": "2026-10-12"
@@ -559,19 +737,19 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "397",
-        "ppm_code": "496729",
-        "name": "Franklin Technology Fund A",
-        "tags": "",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-        "hitrate_q50": 70.48,
-        "coverage_pct": 20.48,
-        "mae_q50": 9.116,
-        "forecast_q10": -0.047,
-        "forecast_q50": 1.7175,
-        "forecast_q90": 3.2577,
-        "last_actual": -8.8931,
-        "momentum_4w": -1.4946,
+        "fund_id": "431",
+        "ppm_code": "446088",
+        "name": "BGF World Technology A2",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/431",
+        "hitrate_q50": 67.54,
+        "coverage_pct": 65.97,
+        "mae_q50": 0.989,
+        "forecast_q10": 0.4299,
+        "forecast_q50": 1.6964,
+        "forecast_q90": 3.039,
+        "last_actual": -9.2691,
+        "momentum_4w": -1.3616,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
