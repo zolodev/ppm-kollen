@@ -10,7 +10,104 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": null,
+  "seasonal_month": {
+    "month": 10,
+    "month_name": "oktober",
+    "strongest": [
+      {
+        "category": "USA",
+        "avg_return": 0.3397,
+        "win_rate": 61.8,
+        "n_weeks": 1216
+      },
+      {
+        "category": "Indien",
+        "avg_return": 0.3323,
+        "win_rate": 56.0,
+        "n_weeks": 443
+      },
+      {
+        "category": "Råvaror",
+        "avg_return": 0.3133,
+        "win_rate": 56.3,
+        "n_weeks": 316
+      }
+    ],
+    "weakest": [
+      {
+        "category": "Reala",
+        "avg_return": 0.0185,
+        "win_rate": 49.2,
+        "n_weeks": 266
+      },
+      {
+        "category": "Korta",
+        "avg_return": 0.0289,
+        "win_rate": 70.4,
+        "n_weeks": 828
+      },
+      {
+        "category": "Företag",
+        "avg_return": 0.0343,
+        "win_rate": 67.8,
+        "n_weeks": 757
+      }
+    ],
+    "n_categories": 36,
+    "n_negative": 0,
+    "median_return": 0.2099,
+    "breadth": "strong",
+    "remaining": {
+      "favours": [
+        {
+          "category": "Ny teknik",
+          "avg_return": 0.5998,
+          "win_rate": 66.2,
+          "n_weeks": 346
+        },
+        {
+          "category": "Asien ex Japan",
+          "avg_return": 0.5192,
+          "win_rate": 61.3,
+          "n_weeks": 269
+        },
+        {
+          "category": "Tillväxtbolag",
+          "avg_return": 0.5075,
+          "win_rate": 63.4,
+          "n_weeks": 380
+        }
+      ],
+      "n_categories": 36
+    },
+    "top_funds": [
+      {
+        "fund_id": "1376",
+        "name": "BGF Latin American A2",
+        "avg_return": 0.654,
+        "win_rate": 57.3,
+        "n_weeks": 89,
+        "n_years": 21
+      },
+      {
+        "fund_id": "70371",
+        "name": "Franklin India A(acc)USD",
+        "avg_return": 0.504,
+        "win_rate": 59.6,
+        "n_weeks": 89,
+        "n_years": 21
+      },
+      {
+        "fund_id": "540",
+        "name": "BGF World Energy A2",
+        "avg_return": 0.4954,
+        "win_rate": 59.6,
+        "n_weeks": 89,
+        "n_years": 21
+      }
+    ],
+    "n_excluded": 4
+  },
   "horizons": {
     "1w": [
       {
@@ -19,17 +116,46 @@
         "name": "D&G Global All Cap",
         "tags": "Aktiefond, Global, Flexibel storlek bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316079",
-        "score": 41.9,
+        "score": 48.186,
         "hitrate_q50": 58.65,
         "coverage_pct": 57.14,
         "mae_q50": 0.5598,
         "signal": "HOLD",
         "forecast": {
-          "q10": -0.4633,
-          "q50": 0.1787,
-          "q90": 0.9517
+          "q10": -0.4444,
+          "q50": 0.3199,
+          "q90": 1.1423
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 10,
+          "month_name": "oktober",
+          "verdict": "weak",
+          "lead": "Flexibel storlek bolag",
+          "categories": [
+            {
+              "category": "Global",
+              "avg_return": 0.2276,
+              "win_rate": 61.2,
+              "n_weeks": 1576,
+              "month_percentile": 56.9
+            },
+            {
+              "category": "Flexibel storlek bolag",
+              "avg_return": 0.0644,
+              "win_rate": 57.9,
+              "n_weeks": 781,
+              "month_percentile": 23.6
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2542,
+              "win_rate": 59.1,
+              "n_weeks": 12420,
+              "month_percentile": 73.6
+            }
+          ],
+          "summary": "Flexibel storlek bolag hör historiskt till de svagaste i oktober: +0.06%/vecka, 58% positiva veckor (781 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -44,6 +170,10 @@
         },
         "warnings": [
           {
+            "reason": "seasonal_weak",
+            "detail": "Flexibel storlek bolag hör historiskt till de svagaste i oktober: +0.06%/vecka, 58% positiva veckor (781 veckor)"
+          },
+          {
             "reason": "overheat_reversal",
             "detail": "4w return +1.1% is 8.3pp off its +9.4% peak in the last 8 weeks"
           },
@@ -55,10 +185,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 1.9243,
-          "last_pred_q50": 0.9117,
+          "mae": 1.9823,
+          "last_pred_q50": 1.0489,
           "last_actual": -0.3083,
-          "last_error": 1.22,
+          "last_error": 1.3572,
           "last_direction_ok": false,
           "date_from": "2026-07-27",
           "date_to": "2026-10-19"
@@ -76,17 +206,46 @@
         "name": "Swedbank Robur Technology A",
         "tags": "Aktiefond, Branschfond, Ny teknik",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
-        "score": 57.873,
+        "score": 56.693,
         "hitrate_q50": 68.06,
         "coverage_pct": 69.63,
         "mae_q50": 0.8314,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.7645,
-          "q50": 0.3873,
-          "q90": 1.316
+          "q10": -0.7515,
+          "q50": 0.344,
+          "q90": 1.2755
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 10,
+          "month_name": "oktober",
+          "verdict": "strong",
+          "lead": "Ny teknik",
+          "categories": [
+            {
+              "category": "Ny teknik",
+              "avg_return": 0.3119,
+              "win_rate": 62.9,
+              "n_weeks": 634,
+              "month_percentile": 90.3
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2727,
+              "win_rate": 59.4,
+              "n_weeks": 2572,
+              "month_percentile": 79.2
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2542,
+              "win_rate": 59.1,
+              "n_weeks": 12420,
+              "month_percentile": 73.6
+            }
+          ],
+          "summary": "Ny teknik historiskt i oktober: +0.31%/vecka, 63% positiva veckor, percentil 90 (634 veckor)"
+        },
         "consensus": {
           "n_agree": 2,
           "n_models": 3,
@@ -116,10 +275,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 3.4785,
-          "last_pred_q50": 1.7688,
+          "mae": 3.4821,
+          "last_pred_q50": 1.8309,
           "last_actual": -8.0006,
-          "last_error": 9.7693,
+          "last_error": 9.8315,
           "last_direction_ok": false,
           "date_from": "2026-07-20",
           "date_to": "2026-10-12"
@@ -136,17 +295,32 @@
         "name": "BGF Latin American A2",
         "tags": "Aktiefond, Latinamerika",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "score": 52.81,
+        "score": 54.869,
         "hitrate_q50": 59.69,
         "coverage_pct": 51.31,
         "mae_q50": 0.9677,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.2172,
-          "q50": 0.8806,
-          "q90": 2.1677
+          "q10": -0.1126,
+          "q50": 0.9763,
+          "q90": 3.1039
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 10,
+          "month_name": "oktober",
+          "verdict": "strong",
+          "lead": "Aktiefond",
+          "categories": [
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2542,
+              "win_rate": 59.1,
+              "n_weeks": 12420,
+              "month_percentile": 73.6
+            }
+          ],
+          "summary": "Aktiefond historiskt i oktober: +0.25%/vecka, 59% positiva veckor, percentil 74 (12420 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -168,10 +342,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 3.6603,
-          "last_pred_q50": 2.199,
+          "mae": 3.7275,
+          "last_pred_q50": 2.3938,
           "last_actual": 1.3426,
-          "last_error": 0.8564,
+          "last_error": 1.0512,
           "last_direction_ok": true,
           "date_from": "2026-07-27",
           "date_to": "2026-10-19"
@@ -541,37 +715,37 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "316079",
-        "ppm_code": "541235",
-        "name": "D&G Global All Cap",
-        "tags": "Aktiefond, Global, Flexibel storlek bolag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/316079",
-        "hitrate_q50": 58.65,
-        "coverage_pct": 57.14,
-        "mae_q50": 0.5598,
-        "forecast_q10": -0.0286,
-        "forecast_q50": 0.9117,
-        "forecast_q90": 2.0843,
-        "last_actual": -0.3083,
-        "momentum_4w": 0.2976,
+        "fund_id": "363",
+        "ppm_code": "283408",
+        "name": "Swedbank Robur Technology A",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/363",
+        "hitrate_q50": 68.06,
+        "coverage_pct": 69.63,
+        "mae_q50": 0.8314,
+        "forecast_q10": 0.37,
+        "forecast_q50": 1.7688,
+        "forecast_q90": 3.0032,
+        "last_actual": -8.0006,
+        "momentum_4w": -1.1889,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "2983",
-        "ppm_code": "688986",
-        "name": "Pictet-Longevity R USD",
-        "tags": "Aktiefond, Branschfond, Läkemedel",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
-        "hitrate_q50": 60.21,
-        "coverage_pct": 50.26,
-        "mae_q50": 0.6368,
-        "forecast_q10": 0.246,
-        "forecast_q50": 0.7567,
-        "forecast_q90": 1.5659,
-        "last_actual": 1.0799,
-        "momentum_4w": 1.1017,
+        "fund_id": "364",
+        "ppm_code": "194092",
+        "name": "SEB Teknologifond",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/364",
+        "hitrate_q50": 67.54,
+        "coverage_pct": 62.83,
+        "mae_q50": 0.8342,
+        "forecast_q10": 0.7178,
+        "forecast_q50": 1.7157,
+        "forecast_q90": 2.8857,
+        "last_actual": -8.0451,
+        "momentum_4w": -1.4254,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"

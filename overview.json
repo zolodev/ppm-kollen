@@ -26,7 +26,11 @@
       "coverage_pct": 51.31,
       "recommended": true,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Aktiefond",
+        "pct": 73.6
+      }
     },
     {
       "fund_id": "316079",
@@ -44,7 +48,11 @@
       "coverage_pct": 57.14,
       "recommended": true,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Flexibel storlek bolag",
+        "pct": 23.6
+      }
     },
     {
       "fund_id": "363",
@@ -62,7 +70,11 @@
       "coverage_pct": 69.63,
       "recommended": true,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Ny teknik",
+        "pct": 90.3
+      }
     },
     {
       "fund_id": "455",
@@ -98,7 +110,11 @@
       "coverage_pct": 70.16,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Branschfond",
+        "pct": 79.2
+      }
     },
     {
       "fund_id": "350",
@@ -116,7 +132,11 @@
       "coverage_pct": 57.07,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Övriga",
+        "pct": 15.3
+      }
     },
     {
       "fund_id": "74107",
@@ -134,7 +154,11 @@
       "coverage_pct": 66.49,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Norge",
+        "pct": 65.3
+      }
     },
     {
       "fund_id": "473",
@@ -152,7 +176,11 @@
       "coverage_pct": 52.88,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Läkemedel",
+        "pct": 76.4
+      }
     },
     {
       "fund_id": "459035",
@@ -170,7 +198,11 @@
       "coverage_pct": 54.05,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Aktiefond",
+        "pct": 73.6
+      }
     },
     {
       "fund_id": "464",
@@ -188,7 +220,11 @@
       "coverage_pct": 42.41,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Läkemedel",
+        "pct": 76.4
+      }
     },
     {
       "fund_id": "202568",
@@ -206,7 +242,11 @@
       "coverage_pct": 59.16,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Norge",
+        "pct": 65.3
+      }
     },
     {
       "fund_id": "2011",
@@ -224,7 +264,11 @@
       "coverage_pct": 48.17,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "396",
@@ -242,7 +286,11 @@
       "coverage_pct": 63.87,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Ny teknik",
+        "pct": 90.3
+      }
     },
     {
       "fund_id": "209089",
@@ -260,7 +308,11 @@
       "coverage_pct": 52.9,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "137448",
@@ -278,7 +330,11 @@
       "coverage_pct": 55.09,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "475",
@@ -296,7 +352,11 @@
       "coverage_pct": 44.5,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Läkemedel",
+        "pct": 76.4
+      }
     },
     {
       "fund_id": "198508",
@@ -314,7 +374,11 @@
       "coverage_pct": 81.05,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Branschfond",
+        "pct": 79.2
+      }
     },
     {
       "fund_id": "2010",
@@ -332,7 +396,11 @@
       "coverage_pct": 45.55,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "2983",
@@ -350,7 +418,11 @@
       "coverage_pct": 50.26,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Läkemedel",
+        "pct": 76.4
+      }
     },
     {
       "fund_id": "324195",
@@ -368,7 +440,11 @@
       "coverage_pct": 76.15,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Övriga",
+        "pct": 15.3
+      }
     },
     {
       "fund_id": "291",
@@ -386,7 +462,11 @@
       "coverage_pct": 38.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "20949",
@@ -404,7 +484,11 @@
       "coverage_pct": 69.63,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Branschfond",
+        "pct": 79.2
+      }
     },
     {
       "fund_id": "1599",
@@ -422,7 +506,11 @@
       "coverage_pct": 49.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "693994",
@@ -440,7 +528,11 @@
       "coverage_pct": 48.75,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "453",
@@ -458,7 +550,11 @@
       "coverage_pct": 46.6,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Läkemedel",
+        "pct": 76.4
+      }
     },
     {
       "fund_id": "1506920",
@@ -476,7 +572,11 @@
       "coverage_pct": 64.41,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Läkemedel",
+        "pct": 76.4
+      }
     },
     {
       "fund_id": "2003",
@@ -494,7 +594,11 @@
       "coverage_pct": 45.55,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "1604",
@@ -512,7 +616,11 @@
       "coverage_pct": 54.45,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "39648",
@@ -530,7 +638,11 @@
       "coverage_pct": 54.97,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Värdebolag",
+        "pct": 84.7
+      }
     },
     {
       "fund_id": "70371",
@@ -548,7 +660,11 @@
       "coverage_pct": 59.16,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Indien",
+        "pct": 95.8
+      }
     },
     {
       "fund_id": "799913",
@@ -566,7 +682,11 @@
       "coverage_pct": 60.87,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "436351",
@@ -584,7 +704,11 @@
       "coverage_pct": 65.77,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Värdebolag",
+        "pct": 84.7
+      }
     },
     {
       "fund_id": "1478",
@@ -602,7 +726,11 @@
       "coverage_pct": 62.83,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "373",
@@ -620,7 +748,11 @@
       "coverage_pct": 61.78,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Ny teknik",
+        "pct": 90.3
+      }
     },
     {
       "fund_id": "600081",
@@ -638,7 +770,11 @@
       "coverage_pct": 66.67,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Branschfond",
+        "pct": 79.2
+      }
     },
     {
       "fund_id": "2254",
@@ -656,7 +792,11 @@
       "coverage_pct": 53.4,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "411236",
@@ -674,7 +814,11 @@
       "coverage_pct": 49.57,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "592235",
@@ -692,7 +836,11 @@
       "coverage_pct": 28.57,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "212549",
@@ -710,7 +858,11 @@
       "coverage_pct": 64.0,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "637",
@@ -728,7 +880,11 @@
       "coverage_pct": 49.21,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Europa",
+        "pct": 81.9
+      }
     },
     {
       "fund_id": "315115",
@@ -746,7 +902,11 @@
       "coverage_pct": 61.65,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "180708",
@@ -764,7 +924,11 @@
       "coverage_pct": 72.25,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Företag",
+        "pct": 6.9
+      }
     },
     {
       "fund_id": "1546",
@@ -782,7 +946,11 @@
       "coverage_pct": 48.17,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "2008",
@@ -800,7 +968,11 @@
       "coverage_pct": 52.36,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "2187",
@@ -818,7 +990,11 @@
       "coverage_pct": 51.31,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "2075",
@@ -836,7 +1012,11 @@
       "coverage_pct": 72.77,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "862036",
@@ -854,7 +1034,11 @@
       "coverage_pct": 77.42,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "429935",
@@ -872,7 +1056,11 @@
       "coverage_pct": 55.75,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "334856",
@@ -890,7 +1078,11 @@
       "coverage_pct": 78.29,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "2098",
@@ -908,7 +1100,11 @@
       "coverage_pct": 73.82,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "581",
@@ -926,7 +1122,11 @@
       "coverage_pct": 45.55,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Europa",
+        "pct": 81.9
+      }
     },
     {
       "fund_id": "2103",
@@ -944,7 +1144,11 @@
       "coverage_pct": 78.53,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Reala",
+        "pct": 1.4
+      }
     },
     {
       "fund_id": "2108",
@@ -962,7 +1166,11 @@
       "coverage_pct": 79.06,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Reala",
+        "pct": 1.4
+      }
     },
     {
       "fund_id": "121",
@@ -980,7 +1188,11 @@
       "coverage_pct": 62.3,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Indien",
+        "pct": 95.8
+      }
     },
     {
       "fund_id": "2079",
@@ -998,7 +1210,11 @@
       "coverage_pct": 74.87,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "377809",
@@ -1016,7 +1232,11 @@
       "coverage_pct": 95.04,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Företag",
+        "pct": 6.9
+      }
     },
     {
       "fund_id": "2084",
@@ -1034,7 +1254,11 @@
       "coverage_pct": 67.02,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Korta",
+        "pct": 4.2
+      }
     },
     {
       "fund_id": "355599",
@@ -1052,7 +1276,11 @@
       "coverage_pct": 84.0,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Företag",
+        "pct": 6.9
+      }
     },
     {
       "fund_id": "416235",
@@ -1070,7 +1298,11 @@
       "coverage_pct": 93.04,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "2026",
@@ -1088,7 +1320,11 @@
       "coverage_pct": 64.92,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Korta",
+        "pct": 4.2
+      }
     },
     {
       "fund_id": "476836",
@@ -1106,7 +1342,11 @@
       "coverage_pct": 95.24,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "92827",
@@ -1124,7 +1364,11 @@
       "coverage_pct": 63.35,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Korta",
+        "pct": 4.2
+      }
     },
     {
       "fund_id": "2034",
@@ -1142,7 +1386,11 @@
       "coverage_pct": 78.53,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "544596",
@@ -1160,7 +1408,11 @@
       "coverage_pct": 95.83,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "2052",
@@ -1178,7 +1430,11 @@
       "coverage_pct": 60.21,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Korta",
+        "pct": 4.2
+      }
     },
     {
       "fund_id": "1464",
@@ -1196,7 +1452,11 @@
       "coverage_pct": 71.2,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "2111",
@@ -1214,7 +1474,11 @@
       "coverage_pct": 71.73,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "2131",
@@ -1232,7 +1496,11 @@
       "coverage_pct": 90.05,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Företag",
+        "pct": 6.9
+      }
     },
     {
       "fund_id": "541",
@@ -1250,7 +1518,11 @@
       "coverage_pct": 53.4,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Branschfond",
+        "pct": 79.2
+      }
     },
     {
       "fund_id": "2032",
@@ -1268,7 +1540,11 @@
       "coverage_pct": 66.49,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Korta",
+        "pct": 4.2
+      }
     },
     {
       "fund_id": "2802",
@@ -1286,7 +1562,11 @@
       "coverage_pct": 62.83,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Korta",
+        "pct": 4.2
+      }
     },
     {
       "fund_id": "2058",
@@ -1304,7 +1584,11 @@
       "coverage_pct": 60.73,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Korta",
+        "pct": 4.2
+      }
     },
     {
       "fund_id": "901673",
@@ -1322,7 +1606,11 @@
       "coverage_pct": 96.55,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Korta",
+        "pct": 4.2
+      }
     },
     {
       "fund_id": "3101",
@@ -1340,7 +1628,11 @@
       "coverage_pct": 50.26,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Indien",
+        "pct": 95.8
+      }
     },
     {
       "fund_id": "43947",
@@ -1358,7 +1650,11 @@
       "coverage_pct": 61.17,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Indien",
+        "pct": 95.8
+      }
     },
     {
       "fund_id": "2109",
@@ -1376,7 +1672,11 @@
       "coverage_pct": 77.49,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "1731",
@@ -1394,7 +1694,11 @@
       "coverage_pct": 74.87,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "94867",
@@ -1412,7 +1716,11 @@
       "coverage_pct": 79.31,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Företag",
+        "pct": 6.9
+      }
     },
     {
       "fund_id": "56127",
@@ -1430,7 +1738,11 @@
       "coverage_pct": 66.3,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Korta",
+        "pct": 4.2
+      }
     },
     {
       "fund_id": "457577",
@@ -1448,7 +1760,11 @@
       "coverage_pct": 100.0,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "736",
@@ -1466,7 +1782,11 @@
       "coverage_pct": 45.03,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Europa",
+        "pct": 81.9
+      }
     },
     {
       "fund_id": "167",
@@ -1484,7 +1804,11 @@
       "coverage_pct": 49.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Aktiefond",
+        "pct": 73.6
+      }
     },
     {
       "fund_id": "2294",
@@ -1502,7 +1826,11 @@
       "coverage_pct": 61.78,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Flexibel storlek bolag",
+        "pct": 23.6
+      }
     },
     {
       "fund_id": "1681",
@@ -1520,7 +1848,11 @@
       "coverage_pct": 46.6,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "388595",
@@ -1538,7 +1870,11 @@
       "coverage_pct": 96.67,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Företag",
+        "pct": 6.9
+      }
     },
     {
       "fund_id": "96927",
@@ -1556,7 +1892,11 @@
       "coverage_pct": 63.79,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "2066",
@@ -1574,7 +1914,11 @@
       "coverage_pct": 83.77,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Företag",
+        "pct": 6.9
+      }
     },
     {
       "fund_id": "686931",
@@ -1592,7 +1936,11 @@
       "coverage_pct": 88.89,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "2128",
@@ -1610,7 +1958,11 @@
       "coverage_pct": 75.39,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "1682",
@@ -1628,7 +1980,11 @@
       "coverage_pct": 56.02,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "333557",
@@ -1646,7 +2002,11 @@
       "coverage_pct": 89.92,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "346775",
@@ -1664,7 +2024,11 @@
       "coverage_pct": 71.65,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "331222",
@@ -1682,7 +2046,11 @@
       "coverage_pct": 57.69,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "910094",
@@ -1700,7 +2068,11 @@
       "coverage_pct": 52.63,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "331224",
@@ -1718,7 +2090,11 @@
       "coverage_pct": 53.85,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "192",
@@ -1736,7 +2112,11 @@
       "coverage_pct": 69.63,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "2088",
@@ -1754,7 +2134,11 @@
       "coverage_pct": 82.2,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "164908",
@@ -1772,7 +2156,11 @@
       "coverage_pct": 95.62,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "1833",
@@ -1790,7 +2178,11 @@
       "coverage_pct": 71.73,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Företag",
+        "pct": 6.9
+      }
     },
     {
       "fund_id": "490477",
@@ -1808,7 +2200,11 @@
       "coverage_pct": 95.19,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "26827",
@@ -1826,7 +2222,11 @@
       "coverage_pct": 79.06,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Reala",
+        "pct": 1.4
+      }
     },
     {
       "fund_id": "210",
@@ -1844,7 +2244,11 @@
       "coverage_pct": 58.12,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "2012",
@@ -1862,7 +2266,11 @@
       "coverage_pct": 52.36,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "41567",
@@ -1898,7 +2306,11 @@
       "coverage_pct": 96.85,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "471796",
@@ -1916,7 +2328,11 @@
       "coverage_pct": 100.0,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "2247",
@@ -1934,7 +2350,11 @@
       "coverage_pct": 60.21,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Tillväxtbolag",
+        "pct": 87.5
+      }
     },
     {
       "fund_id": "389820",
@@ -1952,7 +2372,11 @@
       "coverage_pct": 94.17,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "286898",
@@ -1970,7 +2394,11 @@
       "coverage_pct": 68.0,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "2006",
@@ -1988,7 +2416,11 @@
       "coverage_pct": 49.21,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "157699",
@@ -2006,7 +2438,11 @@
       "coverage_pct": 57.14,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "573156",
@@ -2024,7 +2460,11 @@
       "coverage_pct": 56.7,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Norden",
+        "pct": 48.6
+      }
     },
     {
       "fund_id": "592236",
@@ -2042,7 +2482,11 @@
       "coverage_pct": 58.24,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Europa",
+        "pct": 81.9
+      }
     },
     {
       "fund_id": "2240",
@@ -2060,7 +2504,11 @@
       "coverage_pct": 59.69,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Tillväxtbolag",
+        "pct": 87.5
+      }
     },
     {
       "fund_id": "404075",
@@ -2078,7 +2526,11 @@
       "coverage_pct": 59.83,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "112622",
@@ -2096,7 +2548,11 @@
       "coverage_pct": 80.79,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Branschfond",
+        "pct": 79.2
+      }
     },
     {
       "fund_id": "1887",
@@ -2114,7 +2570,11 @@
       "coverage_pct": 54.97,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "221608",
@@ -2132,7 +2592,11 @@
       "coverage_pct": 64.0,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "1173921",
@@ -2150,7 +2614,11 @@
       "coverage_pct": 46.34,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Tillväxtbolag",
+        "pct": 87.5
+      }
     },
     {
       "fund_id": "415690",
@@ -2168,7 +2636,11 @@
       "coverage_pct": 64.71,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "2439",
@@ -2186,7 +2658,11 @@
       "coverage_pct": 55.5,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Balanserad",
+        "pct": 34.7
+      }
     },
     {
       "fund_id": "599",
@@ -2204,7 +2680,11 @@
       "coverage_pct": 44.5,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Europa",
+        "pct": 81.9
+      }
     },
     {
       "fund_id": "355598",
@@ -2222,7 +2702,11 @@
       "coverage_pct": 92.8,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "864973",
@@ -2240,7 +2724,11 @@
       "coverage_pct": 29.07,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "1961",
@@ -2258,7 +2746,11 @@
       "coverage_pct": 36.13,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "523895",
@@ -2276,7 +2768,11 @@
       "coverage_pct": 57.0,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Tillväxtbolag",
+        "pct": 87.5
+      }
     },
     {
       "fund_id": "1040",
@@ -2294,7 +2790,11 @@
       "coverage_pct": 73.82,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Blandfond",
+        "pct": 31.9
+      }
     },
     {
       "fund_id": "1651",
@@ -2312,7 +2812,11 @@
       "coverage_pct": 49.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Norden",
+        "pct": 48.6
+      }
     },
     {
       "fund_id": "217470",
@@ -2330,7 +2834,11 @@
       "coverage_pct": 48.34,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "512559",
@@ -2348,7 +2856,11 @@
       "coverage_pct": 46.53,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Ny energi",
+        "pct": 29.2
+      }
     },
     {
       "fund_id": "524110",
@@ -2366,7 +2878,11 @@
       "coverage_pct": 63.64,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "1573",
@@ -2384,7 +2900,11 @@
       "coverage_pct": 64.4,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "936",
@@ -2402,7 +2922,11 @@
       "coverage_pct": 78.53,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Europa",
+        "pct": 81.9
+      }
     },
     {
       "fund_id": "70501",
@@ -2420,7 +2944,11 @@
       "coverage_pct": 63.87,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "1512",
@@ -2438,7 +2966,11 @@
       "coverage_pct": 73.3,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "343415",
@@ -2456,7 +2988,11 @@
       "coverage_pct": 48.82,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "229",
@@ -2474,7 +3010,11 @@
       "coverage_pct": 49.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "281",
@@ -2492,7 +3032,11 @@
       "coverage_pct": 47.64,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "1023",
@@ -2510,7 +3054,11 @@
       "coverage_pct": 69.63,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Blandfond",
+        "pct": 31.9
+      }
     },
     {
       "fund_id": "2801",
@@ -2528,7 +3076,11 @@
       "coverage_pct": 42.41,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "1011686",
@@ -2546,7 +3098,11 @@
       "coverage_pct": 61.39,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Kina",
+        "pct": 70.8
+      }
     },
     {
       "fund_id": "1340461",
@@ -2564,7 +3120,11 @@
       "coverage_pct": 58.12,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Norge",
+        "pct": 65.3
+      }
     },
     {
       "fund_id": "1340460",
@@ -2582,7 +3142,11 @@
       "coverage_pct": 56.54,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Norge",
+        "pct": 65.3
+      }
     },
     {
       "fund_id": "1996",
@@ -2600,7 +3164,11 @@
       "coverage_pct": 37.7,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "1886",
@@ -2618,7 +3186,11 @@
       "coverage_pct": 69.63,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Global & Sverige",
+        "pct": 54.2
+      }
     },
     {
       "fund_id": "2300",
@@ -2636,7 +3208,11 @@
       "coverage_pct": 43.98,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Global & Sverige",
+        "pct": 54.2
+      }
     },
     {
       "fund_id": "869",
@@ -2654,7 +3230,11 @@
       "coverage_pct": 51.31,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Korta",
+        "pct": 4.2
+      }
     },
     {
       "fund_id": "237975",
@@ -2672,7 +3252,11 @@
       "coverage_pct": 55.5,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Obligationer",
+        "pct": 11.1
+      }
     },
     {
       "fund_id": "367456",
@@ -2690,7 +3274,11 @@
       "coverage_pct": 50.35,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "512557",
@@ -2708,7 +3296,11 @@
       "coverage_pct": 68.32,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Norden",
+        "pct": 48.6
+      }
     },
     {
       "fund_id": "86287",
@@ -2726,7 +3318,11 @@
       "coverage_pct": 66.67,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Ny energi",
+        "pct": 29.2
+      }
     },
     {
       "fund_id": "2014",
@@ -2744,7 +3340,11 @@
       "coverage_pct": 43.98,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "1983",
@@ -2762,7 +3362,11 @@
       "coverage_pct": 38.22,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "1919",
@@ -2780,7 +3384,11 @@
       "coverage_pct": 49.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "909774",
@@ -2798,7 +3406,11 @@
       "coverage_pct": 66.1,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Branschfond",
+        "pct": 79.2
+      }
     },
     {
       "fund_id": "476475",
@@ -2816,7 +3428,11 @@
       "coverage_pct": 80.18,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Företag",
+        "pct": 6.9
+      }
     },
     {
       "fund_id": "133428",
@@ -2834,7 +3450,11 @@
       "coverage_pct": 57.4,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Aktiefond",
+        "pct": 73.6
+      }
     },
     {
       "fund_id": "1870",
@@ -2852,7 +3472,11 @@
       "coverage_pct": 57.59,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "398157",
@@ -2870,7 +3494,11 @@
       "coverage_pct": 53.39,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "186308",
@@ -2888,7 +3516,11 @@
       "coverage_pct": 59.28,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Kina",
+        "pct": 70.8
+      }
     },
     {
       "fund_id": "2186",
@@ -2906,7 +3538,11 @@
       "coverage_pct": 46.6,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "476838",
@@ -2924,7 +3560,11 @@
       "coverage_pct": 77.14,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "26767",
@@ -2942,7 +3582,11 @@
       "coverage_pct": 48.69,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Kina",
+        "pct": 70.8
+      }
     },
     {
       "fund_id": "316507",
@@ -2960,7 +3604,11 @@
       "coverage_pct": 68.61,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Råvaror",
+        "pct": 93.1
+      }
     },
     {
       "fund_id": "540",
@@ -2978,7 +3626,11 @@
       "coverage_pct": 47.12,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Branschfond",
+        "pct": 79.2
+      }
     },
     {
       "fund_id": "58850",
@@ -2996,7 +3648,11 @@
       "coverage_pct": 71.2,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Flexibel storlek bolag",
+        "pct": 23.6
+      }
     },
     {
       "fund_id": "315116",
@@ -3014,7 +3670,11 @@
       "coverage_pct": 31.58,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "20993",
@@ -3032,7 +3692,11 @@
       "coverage_pct": 47.12,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "1949",
@@ -3050,7 +3714,11 @@
       "coverage_pct": 43.46,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "1892",
@@ -3068,7 +3736,11 @@
       "coverage_pct": 49.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "547",
@@ -3086,7 +3758,11 @@
       "coverage_pct": 56.02,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Ny energi",
+        "pct": 29.2
+      }
     },
     {
       "fund_id": "1022",
@@ -3104,7 +3780,11 @@
       "coverage_pct": 60.73,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Blandfond",
+        "pct": 31.9
+      }
     },
     {
       "fund_id": "347",
@@ -3122,7 +3802,11 @@
       "coverage_pct": 57.59,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Fastighetsbolag",
+        "pct": 37.5
+      }
     },
     {
       "fund_id": "236",
@@ -3140,7 +3824,11 @@
       "coverage_pct": 54.45,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "2155",
@@ -3158,7 +3846,11 @@
       "coverage_pct": 46.6,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "288001",
@@ -3194,7 +3886,11 @@
       "coverage_pct": 62.83,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Tillväxtbolag",
+        "pct": 87.5
+      }
     },
     {
       "fund_id": "910093",
@@ -3212,7 +3908,11 @@
       "coverage_pct": 29.82,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "1263",
@@ -3230,7 +3930,11 @@
       "coverage_pct": 47.64,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "508255",
@@ -3248,7 +3952,11 @@
       "coverage_pct": 43.56,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "73",
@@ -3266,7 +3974,11 @@
       "coverage_pct": 53.93,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Kina",
+        "pct": 70.8
+      }
     },
     {
       "fund_id": "1324",
@@ -3284,7 +3996,11 @@
       "coverage_pct": 44.5,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "58",
@@ -3302,7 +4018,11 @@
       "coverage_pct": 40.31,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Asien ex Japan",
+        "pct": 40.3
+      }
     },
     {
       "fund_id": "2821",
@@ -3320,7 +4040,11 @@
       "coverage_pct": 57.07,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Råvaror",
+        "pct": 93.1
+      }
     },
     {
       "fund_id": "143369",
@@ -3338,7 +4062,11 @@
       "coverage_pct": 48.78,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Aktiefond",
+        "pct": 73.6
+      }
     },
     {
       "fund_id": "56067",
@@ -3356,7 +4084,11 @@
       "coverage_pct": 47.64,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Indien",
+        "pct": 95.8
+      }
     },
     {
       "fund_id": "492",
@@ -3374,7 +4106,11 @@
       "coverage_pct": 47.64,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Branschfond",
+        "pct": 79.2
+      }
     },
     {
       "fund_id": "2145",
@@ -3392,7 +4128,11 @@
       "coverage_pct": 45.03,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "431",
@@ -3410,7 +4150,11 @@
       "coverage_pct": 64.4,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Ny teknik",
+        "pct": 90.3
+      }
     },
     {
       "fund_id": "648075",
@@ -3428,7 +4172,11 @@
       "coverage_pct": 50.56,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Sverige",
+        "pct": 59.7
+      }
     },
     {
       "fund_id": "135",
@@ -3446,7 +4194,11 @@
       "coverage_pct": 41.36,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Asien ex Japan",
+        "pct": 40.3
+      }
     },
     {
       "fund_id": "334858",
@@ -3464,7 +4216,11 @@
       "coverage_pct": 73.38,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Råvaror",
+        "pct": 93.1
+      }
     },
     {
       "fund_id": "1674",
@@ -3482,7 +4238,11 @@
       "coverage_pct": 50.79,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Aktiefond",
+        "pct": 73.6
+      }
     },
     {
       "fund_id": "1509086",
@@ -3500,7 +4260,11 @@
       "coverage_pct": 87.5,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Ny teknik",
+        "pct": 90.3
+      }
     },
     {
       "fund_id": "187",
@@ -3518,7 +4282,11 @@
       "coverage_pct": 44.21,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Asien ex Japan",
+        "pct": 40.3
+      }
     },
     {
       "fund_id": "181868",
@@ -3536,7 +4304,11 @@
       "coverage_pct": 50.0,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Global & Sverige",
+        "pct": 54.2
+      }
     },
     {
       "fund_id": "166",
@@ -3554,7 +4326,11 @@
       "coverage_pct": 37.89,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Asien ex Japan",
+        "pct": 40.3
+      }
     },
     {
       "fund_id": "118",
@@ -3572,7 +4348,11 @@
       "coverage_pct": 51.06,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Kina",
+        "pct": 70.8
+      }
     },
     {
       "fund_id": "1607583",
@@ -3608,7 +4388,11 @@
       "coverage_pct": 51.83,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "SEK",
+        "pct": 20.8
+      }
     },
     {
       "fund_id": "1024",
@@ -3626,7 +4410,11 @@
       "coverage_pct": 50.79,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Blandfond",
+        "pct": 31.9
+      }
     },
     {
       "fund_id": "68",
@@ -3644,7 +4432,11 @@
       "coverage_pct": 52.88,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Kina",
+        "pct": 70.8
+      }
     },
     {
       "fund_id": "2138",
@@ -3662,7 +4454,11 @@
       "coverage_pct": 44.5,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "1029",
@@ -3680,7 +4476,11 @@
       "coverage_pct": 49.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Blandfond",
+        "pct": 31.9
+      }
     },
     {
       "fund_id": "74108",
@@ -3698,7 +4498,11 @@
       "coverage_pct": 65.97,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Tillväxtbolag",
+        "pct": 87.5
+      }
     },
     {
       "fund_id": "286894",
@@ -3716,7 +4520,11 @@
       "coverage_pct": 50.61,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Kina",
+        "pct": 70.8
+      }
     },
     {
       "fund_id": "685395",
@@ -3752,7 +4560,11 @@
       "coverage_pct": 58.12,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "600075",
@@ -3770,7 +4582,11 @@
       "coverage_pct": 49.44,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "510",
@@ -3788,7 +4604,11 @@
       "coverage_pct": 57.07,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "1339",
@@ -3806,7 +4626,11 @@
       "coverage_pct": 49.47,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Små-/medelstora bolag",
+        "pct": 68.1
+      }
     },
     {
       "fund_id": "1509085",
@@ -3824,7 +4648,11 @@
       "coverage_pct": 62.5,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Norge",
+        "pct": 65.3
+      }
     },
     {
       "fund_id": "2253",
@@ -3842,7 +4670,11 @@
       "coverage_pct": 53.4,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "1482",
@@ -3860,7 +4692,11 @@
       "coverage_pct": 63.35,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "1268",
@@ -3878,7 +4714,11 @@
       "coverage_pct": 50.26,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "142",
@@ -3896,7 +4736,11 @@
       "coverage_pct": 40.31,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Asien ex Japan",
+        "pct": 40.3
+      }
     },
     {
       "fund_id": "596636",
@@ -3914,7 +4758,11 @@
       "coverage_pct": 56.04,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "1505",
@@ -3932,7 +4780,11 @@
       "coverage_pct": 60.73,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "73884",
@@ -3950,7 +4802,11 @@
       "coverage_pct": 52.17,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Övriga",
+        "pct": 15.3
+      }
     },
     {
       "fund_id": "1288",
@@ -3968,7 +4824,11 @@
       "coverage_pct": 47.64,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "181108",
@@ -3986,7 +4846,11 @@
       "coverage_pct": 61.54,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "118857",
@@ -4004,7 +4868,11 @@
       "coverage_pct": 62.43,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "901093",
@@ -4022,7 +4890,11 @@
       "coverage_pct": 49.15,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "weak",
+        "lead": "Flexibel storlek bolag",
+        "pct": 23.6
+      }
     },
     {
       "fund_id": "1506",
@@ -4040,7 +4912,11 @@
       "coverage_pct": 63.87,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "USA",
+        "pct": 98.6
+      }
     },
     {
       "fund_id": "375216",
@@ -4058,7 +4934,11 @@
       "coverage_pct": 52.07,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Mix bolag",
+        "pct": 62.5
+      }
     },
     {
       "fund_id": "2338",
@@ -4076,7 +4956,11 @@
       "coverage_pct": 56.54,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Ny teknik",
+        "pct": 90.3
+      }
     },
     {
       "fund_id": "372",
@@ -4094,7 +4978,11 @@
       "coverage_pct": 58.64,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Ny teknik",
+        "pct": 90.3
+      }
     },
     {
       "fund_id": "130487",
@@ -4112,7 +5000,11 @@
       "coverage_pct": 74.1,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Branschfond",
+        "pct": 79.2
+      }
     },
     {
       "fund_id": "944976",
@@ -4130,7 +5022,11 @@
       "coverage_pct": 43.4,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "663195",
@@ -4148,7 +5044,11 @@
       "coverage_pct": 46.43,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "266309",
@@ -4166,7 +5066,11 @@
       "coverage_pct": 46.1,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "2164",
@@ -4184,7 +5088,11 @@
       "coverage_pct": 46.07,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "596635",
@@ -4202,7 +5110,11 @@
       "coverage_pct": 47.25,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Asien ex Japan",
+        "pct": 40.3
+      }
     },
     {
       "fund_id": "487076",
@@ -4220,7 +5132,11 @@
       "coverage_pct": 49.04,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "364655",
@@ -4238,7 +5154,11 @@
       "coverage_pct": 46.77,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "neutral",
+        "lead": "Tillväxtmarknader",
+        "pct": 43.1
+      }
     },
     {
       "fund_id": "397",
@@ -4274,7 +5194,11 @@
       "coverage_pct": 62.83,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": null
+      "seasonal": {
+        "verdict": "strong",
+        "lead": "Ny teknik",
+        "pct": 90.3
+      }
     }
   ]
 }
