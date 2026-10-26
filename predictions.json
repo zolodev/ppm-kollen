@@ -10,7 +10,104 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": null,
+  "seasonal_month": {
+    "month": 10,
+    "month_name": "oktober",
+    "strongest": [
+      {
+        "category": "USA",
+        "avg_return": 0.3438,
+        "win_rate": 62.2,
+        "n_weeks": 1221
+      },
+      {
+        "category": "Indien",
+        "avg_return": 0.3222,
+        "win_rate": 55.6,
+        "n_weeks": 444
+      },
+      {
+        "category": "Råvaror",
+        "avg_return": 0.3156,
+        "win_rate": 56.3,
+        "n_weeks": 316
+      }
+    ],
+    "weakest": [
+      {
+        "category": "Reala",
+        "avg_return": 0.0192,
+        "win_rate": 49.4,
+        "n_weeks": 267
+      },
+      {
+        "category": "Korta",
+        "avg_return": 0.0287,
+        "win_rate": 70.3,
+        "n_weeks": 833
+      },
+      {
+        "category": "Företag",
+        "avg_return": 0.0337,
+        "win_rate": 67.3,
+        "n_weeks": 764
+      }
+    ],
+    "n_categories": 36,
+    "n_negative": 0,
+    "median_return": 0.2105,
+    "breadth": "strong",
+    "remaining": {
+      "favours": [
+        {
+          "category": "Ny teknik",
+          "avg_return": 0.5958,
+          "win_rate": 65.5,
+          "n_weeks": 351
+        },
+        {
+          "category": "Asien ex Japan",
+          "avg_return": 0.5304,
+          "win_rate": 61.1,
+          "n_weeks": 270
+        },
+        {
+          "category": "Tillväxtbolag",
+          "avg_return": 0.5128,
+          "win_rate": 64.2,
+          "n_weeks": 383
+        }
+      ],
+      "n_categories": 36
+    },
+    "top_funds": [
+      {
+        "fund_id": "1376",
+        "name": "BGF Latin American A2",
+        "avg_return": 0.6536,
+        "win_rate": 57.3,
+        "n_weeks": 89,
+        "n_years": 21
+      },
+      {
+        "fund_id": "540",
+        "name": "BGF World Energy A2",
+        "avg_return": 0.4983,
+        "win_rate": 59.6,
+        "n_weeks": 89,
+        "n_years": 21
+      },
+      {
+        "fund_id": "70371",
+        "name": "Franklin India A(acc)USD",
+        "avg_return": 0.4961,
+        "win_rate": 58.4,
+        "n_weeks": 89,
+        "n_years": 21
+      }
+    ],
+    "n_excluded": 4
+  },
   "horizons": {
     "1w": [
       {
@@ -19,17 +116,46 @@
         "name": "Pictet-Longevity R USD",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
-        "score": 234.186,
+        "score": 183.706,
         "hitrate_q50": 84.82,
         "coverage_pct": 82.72,
         "mae_q50": 0.2714,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.3664,
-          "q50": 1.9664,
-          "q90": 2.6725
+          "q10": 0.5573,
+          "q50": 1.4128,
+          "q90": 1.4631
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 10,
+          "month_name": "oktober",
+          "verdict": "strong",
+          "lead": "Läkemedel",
+          "categories": [
+            {
+              "category": "Läkemedel",
+              "avg_return": 0.2681,
+              "win_rate": 60.2,
+              "n_weeks": 480,
+              "month_percentile": 76.4
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2793,
+              "win_rate": 59.6,
+              "n_weeks": 2583,
+              "month_percentile": 79.2
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2568,
+              "win_rate": 59.2,
+              "n_weeks": 12478,
+              "month_percentile": 73.6
+            }
+          ],
+          "summary": "Läkemedel historiskt i oktober: +0.27%/vecka, 60% positiva veckor, percentil 76 (480 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -46,10 +172,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.3279,
-          "last_pred_q50": 1.9185,
+          "mae": 1.3885,
+          "last_pred_q50": 1.2696,
           "last_actual": 1.8433,
-          "last_error": 0.0751,
+          "last_error": -0.5737,
           "last_direction_ok": true,
           "date_from": "2026-07-27",
           "date_to": "2026-10-19"
@@ -59,7 +185,7 @@
           "ensemble": "top-2026-10-26/2983/h1w_ensemble.png",
           "individual": "top-2026-10-26/2983/h1w_individual.png"
         },
-        "sticky": false
+        "sticky": true
       },
       {
         "fund_id": "397",
@@ -67,22 +193,22 @@
         "name": "Franklin Technology Fund A",
         "tags": "",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-        "score": 104.656,
+        "score": 105.081,
         "hitrate_q50": 95.81,
         "coverage_pct": 90.42,
         "mae_q50": 3.7744,
         "signal": "BUY",
         "forecast": {
-          "q10": -1.345,
-          "q50": 1.6355,
-          "q90": 1.6355
+          "q10": -1.3032,
+          "q50": 1.3389,
+          "q90": 1.8057
         },
         "seasonal": null,
         "consensus": {
-          "n_agree": 3,
+          "n_agree": 2,
           "n_models": 3,
-          "n_up": 3,
-          "n_down": 0,
+          "n_up": 2,
+          "n_down": 1,
           "models": [
             "gru",
             "lstm",
@@ -92,26 +218,30 @@
         },
         "warnings": [
           {
+            "reason": "consensus",
+            "detail": "2↑ 1↓ of 3 models"
+          },
+          {
             "reason": "overheat_reversal",
             "detail": "4w return -6.3% is 20.5pp off its +14.3% peak in the last 8 weeks"
           },
           {
             "reason": "backtest",
-            "detail": "backtest 41.7% < 60%"
+            "detail": "backtest 50.0% < 60%"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 41.7,
-          "mae": 3.7922,
-          "last_pred_q50": 1.5077,
+          "hit_rate_pct": 50.0,
+          "mae": 3.4817,
+          "last_pred_q50": 1.0031,
           "last_actual": -0.5566,
-          "last_error": 2.0643,
+          "last_error": 1.5598,
           "last_direction_ok": false,
           "date_from": "2026-07-27",
           "date_to": "2026-10-19"
         },
-        "rationale": "96% hit-rate; 3.774pp MAE; 3/3 models agree (bullish); 42% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "96% hit-rate; 3.774pp MAE; 2/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-26/397/h1w_ensemble.png",
           "individual": "top-2026-10-26/397/h1w_individual.png"
@@ -123,22 +253,58 @@
         "name": "Skandia Japan Exponering",
         "tags": "Aktiefond, Japan, Mix bolag, Index",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1263",
-        "score": 67.8,
+        "score": 78.137,
         "hitrate_q50": 86.91,
         "coverage_pct": 78.01,
         "mae_q50": 0.3454,
-        "signal": "SELL",
+        "signal": "BUY",
         "forecast": {
-          "q10": -3.7992,
-          "q50": -0.5707,
-          "q90": 0.0857
+          "q10": -0.5304,
+          "q50": 0.2579,
+          "q90": 0.6658
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 10,
+          "month_name": "oktober",
+          "verdict": "neutral",
+          "lead": "Mix bolag",
+          "categories": [
+            {
+              "category": "Mix bolag",
+              "avg_return": 0.2327,
+              "win_rate": 61.3,
+              "n_weeks": 3037,
+              "month_percentile": 58.3
+            },
+            {
+              "category": "Japan",
+              "avg_return": 0.1951,
+              "win_rate": 57.3,
+              "n_weeks": 445,
+              "month_percentile": 45.8
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2568,
+              "win_rate": 59.2,
+              "n_weeks": 12478,
+              "month_percentile": 73.6
+            },
+            {
+              "category": "Index",
+              "avg_return": 0.2194,
+              "win_rate": 60.4,
+              "n_weeks": 1917,
+              "month_percentile": 51.4
+            }
+          ],
+          "summary": "Mix bolag historiskt i oktober: +0.23%/vecka, 61% positiva veckor, percentil 58 (3037 veckor)"
+        },
         "consensus": {
           "n_agree": 2,
           "n_models": 3,
-          "n_up": 1,
-          "n_down": 2,
+          "n_up": 2,
+          "n_down": 1,
           "models": [
             "gru",
             "lstm",
@@ -149,7 +315,7 @@
         "warnings": [
           {
             "reason": "consensus",
-            "detail": "1↑ 2↓ of 3 models"
+            "detail": "2↑ 1↓ of 3 models"
           },
           {
             "reason": "backtest",
@@ -159,15 +325,15 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 50.0,
-          "mae": 2.21,
-          "last_pred_q50": 1.4459,
+          "mae": 2.1495,
+          "last_pred_q50": 0.8865,
           "last_actual": -0.3046,
-          "last_error": 1.7505,
+          "last_error": 1.1911,
           "last_direction_ok": false,
           "date_from": "2026-07-27",
           "date_to": "2026-10-19"
         },
-        "rationale": "87% hit-rate; 0.345pp MAE; 2/3 models agree (bearish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "87% hit-rate; 0.345pp MAE; 2/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-10-26/1263/h1w_ensemble.png",
           "individual": "top-2026-10-26/1263/h1w_individual.png"
