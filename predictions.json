@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-30",
+  "generated": "2026-11-02",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -14,20 +14,20 @@
   "horizons": {
     "1w": [
       {
-        "fund_id": "2983",
-        "ppm_code": "688986",
-        "name": "Pictet-Longevity R USD",
-        "tags": "Aktiefond, Branschfond, Läkemedel",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
-        "score": 127.929,
-        "hitrate_q50": 86.39,
-        "coverage_pct": 83.77,
-        "mae_q50": 0.2766,
-        "signal": "HOLD",
+        "fund_id": "1509086",
+        "ppm_code": "183343",
+        "name": "DNB Teknologi S",
+        "tags": "Aktiefond, Branschfond, Ny teknik",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+        "score": 130.751,
+        "hitrate_q50": 100.0,
+        "coverage_pct": 81.25,
+        "mae_q50": 0.4524,
+        "signal": "BUY",
         "forecast": {
-          "q10": 0.3101,
-          "q50": 0.7196,
-          "q90": 2.3597
+          "q10": -0.8914,
+          "q50": 0.6825,
+          "q90": 0.9883
         },
         "seasonal": null,
         "consensus": {
@@ -42,59 +42,7 @@
             "xgboost"
           ]
         },
-        "warnings": [],
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 66.7,
-          "mae": 1.4511,
-          "last_pred_q50": 0.476,
-          "last_actual": -0.9993,
-          "last_error": 1.4753,
-          "last_direction_ok": false,
-          "date_from": "2026-08-03",
-          "date_to": "2026-10-26"
-        },
-        "rationale": "86% hit-rate; 0.277pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-10-30/2983/h1w_ensemble.png",
-          "individual": "top-2026-10-30/2983/h1w_individual.png"
-        },
-        "sticky": true
-      },
-      {
-        "fund_id": "1509086",
-        "ppm_code": "183343",
-        "name": "DNB Teknologi S",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
-        "score": 122.613,
-        "hitrate_q50": 100.0,
-        "coverage_pct": 81.25,
-        "mae_q50": 0.4524,
-        "signal": "BUY",
-        "forecast": {
-          "q10": -0.9167,
-          "q50": 0.5703,
-          "q90": 1.065
-        },
-        "seasonal": null,
-        "consensus": {
-          "n_agree": 2,
-          "n_models": 3,
-          "n_up": 2,
-          "n_down": 1,
-          "models": [
-            "gru",
-            "lstm",
-            "tcn",
-            "xgboost"
-          ]
-        },
         "warnings": [
-          {
-            "reason": "consensus",
-            "detail": "2↑ 1↓ of 3 models"
-          },
           {
             "reason": "overheat_reversal",
             "detail": "4w return -0.7% is 6.6pp off its +5.9% peak in the last 8 weeks"
@@ -111,11 +59,12 @@
           "date_from": "2026-08-03",
           "date_to": "2026-10-26"
         },
-        "rationale": "100% hit-rate; 0.452pp MAE; 2/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "100% hit-rate; 0.452pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-30/1509086/h1w_ensemble.png",
-          "individual": "top-2026-10-30/1509086/h1w_individual.png"
-        }
+          "ensemble": "top-2026-11-02/1509086/h1w_ensemble.png",
+          "individual": "top-2026-11-02/1509086/h1w_individual.png"
+        },
+        "sticky": false
       },
       {
         "fund_id": "397",
@@ -123,15 +72,15 @@
         "name": "Franklin Technology Fund A",
         "tags": "",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-        "score": 117.02,
+        "score": 126.378,
         "hitrate_q50": 94.01,
         "coverage_pct": 90.42,
         "mae_q50": 3.7864,
         "signal": "BUY",
         "forecast": {
-          "q10": -1.9479,
-          "q50": 2.1365,
-          "q90": 2.875
+          "q10": -1.785,
+          "q50": 2.761,
+          "q90": 2.761
         },
         "seasonal": null,
         "consensus": {
@@ -169,8 +118,60 @@
         },
         "rationale": "94% hit-rate; 3.786pp MAE; 3/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-10-30/397/h1w_ensemble.png",
-          "individual": "top-2026-10-30/397/h1w_individual.png"
+          "ensemble": "top-2026-11-02/397/h1w_ensemble.png",
+          "individual": "top-2026-11-02/397/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "1996",
+        "ppm_code": "152181",
+        "name": "Spiltan Småbolagsfond",
+        "tags": "Aktiefond, Sverige, Små-/medelstora bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1996",
+        "score": 106.601,
+        "hitrate_q50": 88.48,
+        "coverage_pct": 83.77,
+        "mae_q50": 0.3049,
+        "signal": "BUY",
+        "forecast": {
+          "q10": -0.5725,
+          "q50": 0.5535,
+          "q90": 3.0328
+        },
+        "seasonal": null,
+        "consensus": {
+          "n_agree": 3,
+          "n_models": 3,
+          "n_up": 3,
+          "n_down": 0,
+          "models": [
+            "gru",
+            "lstm",
+            "tcn",
+            "xgboost"
+          ]
+        },
+        "warnings": [
+          {
+            "reason": "backtest",
+            "detail": "backtest 50.0% < 60%"
+          }
+        ],
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 50.0,
+          "mae": 1.3992,
+          "last_pred_q50": 1.1876,
+          "last_actual": 0.835,
+          "last_error": 0.3525,
+          "last_direction_ok": true,
+          "date_from": "2026-08-03",
+          "date_to": "2026-10-26"
+        },
+        "rationale": "88% hit-rate; 0.305pp MAE; 3/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-11-02/1996/h1w_ensemble.png",
+          "individual": "top-2026-11-02/1996/h1w_individual.png"
         }
       }
     ]
@@ -438,19 +439,19 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "2983",
-        "ppm_code": "688986",
-        "name": "Pictet-Longevity R USD",
-        "tags": "Aktiefond, Branschfond, Läkemedel",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
-        "hitrate_q50": 86.39,
+        "fund_id": "1996",
+        "ppm_code": "152181",
+        "name": "Spiltan Småbolagsfond",
+        "tags": "Aktiefond, Sverige, Små-/medelstora bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1996",
+        "hitrate_q50": 88.48,
         "coverage_pct": 83.77,
-        "mae_q50": 0.2766,
-        "forecast_q10": 0.485,
-        "forecast_q50": 0.485,
-        "forecast_q90": 2.1669,
-        "last_actual": -0.9993,
-        "momentum_4w": 1.4979,
+        "mae_q50": 0.3049,
+        "forecast_q10": 0.3929,
+        "forecast_q50": 1.1876,
+        "forecast_q90": 3.5731,
+        "last_actual": 0.835,
+        "momentum_4w": 0.3734,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -514,6 +515,24 @@
     ],
     "top_streak": [
       {
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 94.01,
+        "coverage_pct": 90.42,
+        "mae_q50": 3.7864,
+        "forecast_q10": -1.3999,
+        "forecast_q50": 1.8072,
+        "forecast_q90": 1.8072,
+        "last_actual": 2.7777,
+        "momentum_4w": -2.3753,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "1509086",
         "ppm_code": "183343",
         "name": "DNB Teknologi S",
@@ -532,37 +551,19 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "1509085",
-        "ppm_code": "290833",
-        "name": "DNB SMB S",
-        "tags": "Aktiefond, Norge",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509085",
-        "hitrate_q50": 81.25,
-        "coverage_pct": 93.75,
-        "mae_q50": 0.6017,
-        "forecast_q10": -1.217,
-        "forecast_q50": 0.9413,
-        "forecast_q90": 1.2391,
-        "last_actual": 0.375,
-        "momentum_4w": 0.4675,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "2983",
-        "ppm_code": "688986",
-        "name": "Pictet-Longevity R USD",
-        "tags": "Aktiefond, Branschfond, Läkemedel",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
-        "hitrate_q50": 86.39,
+        "fund_id": "1996",
+        "ppm_code": "152181",
+        "name": "Spiltan Småbolagsfond",
+        "tags": "Aktiefond, Sverige, Små-/medelstora bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1996",
+        "hitrate_q50": 88.48,
         "coverage_pct": 83.77,
-        "mae_q50": 0.2766,
-        "forecast_q10": 0.485,
-        "forecast_q50": 0.485,
-        "forecast_q90": 2.1669,
-        "last_actual": -0.9993,
-        "momentum_4w": 1.4979,
+        "mae_q50": 0.3049,
+        "forecast_q10": 0.3929,
+        "forecast_q50": 1.1876,
+        "forecast_q90": 3.5731,
+        "last_actual": 0.835,
+        "momentum_4w": 0.3734,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
