@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-03",
+  "generated": "2026-11-04",
   "week_from": "2026-10-26",
   "min_coverage_pct": 60.0,
   "seasonal_month": 11,
@@ -7,7 +7,7 @@
   "counts": {
     "total": 237,
     "recommended": 3,
-    "low_coverage": 142
+    "low_coverage": 145
   },
   "funds": [
     {
@@ -22,15 +22,11 @@
       "streak_dir": "down",
       "momentum_4w": 1.898,
       "trend": "up",
-      "hitrate_q50": 78.01,
-      "coverage_pct": 43.98,
+      "hitrate_q50": 76.44,
+      "coverage_pct": 42.93,
       "recommended": true,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Branschfond",
-        "pct": 76.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1509086",
@@ -48,11 +44,7 @@
       "coverage_pct": 68.75,
       "recommended": true,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny teknik",
-        "pct": 73.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1376",
@@ -67,14 +59,10 @@
       "momentum_4w": -5.788,
       "trend": "down",
       "hitrate_q50": 76.96,
-      "coverage_pct": 60.21,
+      "coverage_pct": 60.73,
       "recommended": true,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Aktiefond",
-        "pct": 70.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "459",
@@ -88,15 +76,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.537,
       "trend": "up",
-      "hitrate_q50": 48.69,
-      "coverage_pct": 54.45,
+      "hitrate_q50": 49.21,
+      "coverage_pct": 49.21,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Branschfond",
-        "pct": 76.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "455",
@@ -110,8 +94,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.206,
       "trend": "flat",
-      "hitrate_q50": 51.16,
-      "coverage_pct": 16.86,
+      "hitrate_q50": 51.74,
+      "coverage_pct": 14.53,
       "recommended": false,
       "low_coverage": true,
       "seasonal": null
@@ -129,14 +113,10 @@
       "momentum_4w": 1.628,
       "trend": "up",
       "hitrate_q50": 74.35,
-      "coverage_pct": 39.79,
+      "coverage_pct": 37.7,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Läkemedel",
-        "pct": 65.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "464",
@@ -151,14 +131,10 @@
       "momentum_4w": 1.79,
       "trend": "up",
       "hitrate_q50": 69.63,
-      "coverage_pct": 35.08,
+      "coverage_pct": 34.55,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Läkemedel",
-        "pct": 65.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "475",
@@ -173,14 +149,10 @@
       "momentum_4w": 1.987,
       "trend": "up",
       "hitrate_q50": 71.2,
-      "coverage_pct": 37.7,
+      "coverage_pct": 36.65,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Läkemedel",
-        "pct": 65.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "453",
@@ -198,11 +170,7 @@
       "coverage_pct": 38.22,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Läkemedel",
-        "pct": 65.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1509085",
@@ -220,11 +188,7 @@
       "coverage_pct": 56.25,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Norge",
-        "pct": 18.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "41567",
@@ -238,8 +202,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.253,
       "trend": "flat",
-      "hitrate_q50": 56.68,
-      "coverage_pct": 42.25,
+      "hitrate_q50": 52.41,
+      "coverage_pct": 49.2,
       "recommended": false,
       "low_coverage": true,
       "seasonal": null
@@ -256,15 +220,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.156,
       "trend": "flat",
-      "hitrate_q50": 54.45,
-      "coverage_pct": 42.93,
+      "hitrate_q50": 56.02,
+      "coverage_pct": 52.88,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1949",
@@ -278,15 +238,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.457,
       "trend": "flat",
-      "hitrate_q50": 60.21,
-      "coverage_pct": 59.69,
+      "hitrate_q50": 61.26,
+      "coverage_pct": 57.07,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "592235",
@@ -300,15 +256,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.277,
       "trend": "flat",
-      "hitrate_q50": 54.35,
-      "coverage_pct": 39.13,
+      "hitrate_q50": 55.43,
+      "coverage_pct": 38.04,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "3101",
@@ -323,14 +275,10 @@
       "momentum_4w": -0.446,
       "trend": "flat",
       "hitrate_q50": 57.07,
-      "coverage_pct": 40.84,
+      "coverage_pct": 38.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Indien",
-        "pct": 26.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "315116",
@@ -344,15 +292,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.277,
       "trend": "flat",
-      "hitrate_q50": 67.91,
+      "hitrate_q50": 68.66,
       "coverage_pct": 40.3,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2164",
@@ -366,15 +310,11 @@
       "streak_dir": "up",
       "momentum_4w": -2.498,
       "trend": "down",
-      "hitrate_q50": 76.96,
+      "hitrate_q50": 76.44,
       "coverage_pct": 47.12,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "130487",
@@ -389,14 +329,10 @@
       "momentum_4w": -2.121,
       "trend": "down",
       "hitrate_q50": 74.7,
-      "coverage_pct": 81.33,
+      "coverage_pct": 83.13,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Branschfond",
-        "pct": 76.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "20993",
@@ -411,14 +347,10 @@
       "momentum_4w": 0.206,
       "trend": "flat",
       "hitrate_q50": 67.54,
-      "coverage_pct": 50.79,
+      "coverage_pct": 50.26,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1870",
@@ -433,14 +365,10 @@
       "momentum_4w": -0.482,
       "trend": "flat",
       "hitrate_q50": 64.4,
-      "coverage_pct": 65.45,
+      "coverage_pct": 62.83,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "648075",
@@ -454,15 +382,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.142,
       "trend": "flat",
-      "hitrate_q50": 64.04,
-      "coverage_pct": 47.19,
+      "hitrate_q50": 62.92,
+      "coverage_pct": 40.45,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2801",
@@ -476,15 +400,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.685,
       "trend": "up",
-      "hitrate_q50": 68.06,
+      "hitrate_q50": 69.63,
       "coverage_pct": 40.31,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1892",
@@ -498,15 +418,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.374,
       "trend": "flat",
-      "hitrate_q50": 68.06,
-      "coverage_pct": 59.16,
+      "hitrate_q50": 68.59,
+      "coverage_pct": 57.59,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1506920",
@@ -521,14 +437,10 @@
       "momentum_4w": 1.647,
       "trend": "up",
       "hitrate_q50": 81.67,
-      "coverage_pct": 56.67,
+      "coverage_pct": 58.33,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Läkemedel",
-        "pct": 65.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "685395",
@@ -543,7 +455,7 @@
       "momentum_4w": -0.506,
       "trend": "down",
       "hitrate_q50": 77.22,
-      "coverage_pct": 53.16,
+      "coverage_pct": 50.63,
       "recommended": false,
       "low_coverage": true,
       "seasonal": null
@@ -561,14 +473,10 @@
       "momentum_4w": -2.467,
       "trend": "down",
       "hitrate_q50": 85.71,
-      "coverage_pct": 38.46,
+      "coverage_pct": 40.66,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Asien ex Japan",
-        "pct": 40.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2003",
@@ -583,14 +491,10 @@
       "momentum_4w": 0.489,
       "trend": "flat",
       "hitrate_q50": 72.25,
-      "coverage_pct": 41.36,
+      "coverage_pct": 38.22,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "43947",
@@ -605,14 +509,10 @@
       "momentum_4w": -0.177,
       "trend": "flat",
       "hitrate_q50": 73.94,
-      "coverage_pct": 57.45,
+      "coverage_pct": 55.32,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Indien",
-        "pct": 26.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1919",
@@ -626,15 +526,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.075,
       "trend": "flat",
-      "hitrate_q50": 53.4,
-      "coverage_pct": 55.5,
+      "hitrate_q50": 53.93,
+      "coverage_pct": 53.4,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "508255",
@@ -649,14 +545,10 @@
       "momentum_4w": 0.004,
       "trend": "flat",
       "hitrate_q50": 76.47,
-      "coverage_pct": 50.98,
+      "coverage_pct": 50.0,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "70371",
@@ -674,11 +566,7 @@
       "coverage_pct": 56.54,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Indien",
-        "pct": 26.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "936",
@@ -693,14 +581,10 @@
       "momentum_4w": 0.105,
       "trend": "flat",
       "hitrate_q50": 66.49,
-      "coverage_pct": 63.87,
+      "coverage_pct": 58.64,
       "recommended": false,
-      "low_coverage": false,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Europa",
-        "pct": 37.5
-      }
+      "low_coverage": true,
+      "seasonal": null
     },
     {
       "fund_id": "2294",
@@ -718,11 +602,7 @@
       "coverage_pct": 62.3,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2014",
@@ -736,15 +616,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.267,
       "trend": "flat",
-      "hitrate_q50": 65.45,
-      "coverage_pct": 45.55,
+      "hitrate_q50": 64.92,
+      "coverage_pct": 43.98,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1996",
@@ -759,14 +635,10 @@
       "momentum_4w": 0.423,
       "trend": "flat",
       "hitrate_q50": 65.97,
-      "coverage_pct": 40.31,
+      "coverage_pct": 38.22,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1983",
@@ -781,14 +653,10 @@
       "momentum_4w": 0.036,
       "trend": "flat",
       "hitrate_q50": 75.92,
-      "coverage_pct": 47.12,
+      "coverage_pct": 50.26,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1340460",
@@ -802,15 +670,11 @@
       "streak_dir": "up",
       "momentum_4w": 1.328,
       "trend": "up",
-      "hitrate_q50": 76.96,
-      "coverage_pct": 58.64,
+      "hitrate_q50": 75.92,
+      "coverage_pct": 58.12,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Norge",
-        "pct": 18.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "266309",
@@ -825,14 +689,10 @@
       "momentum_4w": -2.509,
       "trend": "down",
       "hitrate_q50": 88.03,
-      "coverage_pct": 42.96,
+      "coverage_pct": 45.07,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "198508",
@@ -846,15 +706,11 @@
       "streak_dir": "up",
       "momentum_4w": 1.013,
       "trend": "up",
-      "hitrate_q50": 46.41,
-      "coverage_pct": 57.52,
+      "hitrate_q50": 45.75,
+      "coverage_pct": 51.63,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Branschfond",
-        "pct": 76.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "663195",
@@ -869,14 +725,10 @@
       "momentum_4w": -2.551,
       "trend": "down",
       "hitrate_q50": 83.33,
-      "coverage_pct": 44.05,
+      "coverage_pct": 45.24,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2011",
@@ -891,14 +743,10 @@
       "momentum_4w": 0.389,
       "trend": "flat",
       "hitrate_q50": 59.16,
-      "coverage_pct": 45.55,
+      "coverage_pct": 43.46,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2008",
@@ -912,15 +760,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.066,
       "trend": "flat",
-      "hitrate_q50": 64.92,
-      "coverage_pct": 54.45,
+      "hitrate_q50": 65.45,
+      "coverage_pct": 54.97,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "355598",
@@ -935,14 +779,10 @@
       "momentum_4w": -0.104,
       "trend": "flat",
       "hitrate_q50": 42.06,
-      "coverage_pct": 87.3,
+      "coverage_pct": 69.84,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Högrisk",
-        "pct": 9.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2012",
@@ -957,14 +797,10 @@
       "momentum_4w": 0.535,
       "trend": "up",
       "hitrate_q50": 58.64,
-      "coverage_pct": 50.26,
+      "coverage_pct": 51.31,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "217470",
@@ -978,15 +814,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.264,
       "trend": "flat",
-      "hitrate_q50": 79.47,
-      "coverage_pct": 58.28,
+      "hitrate_q50": 74.17,
+      "coverage_pct": 84.11,
       "recommended": false,
-      "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "low_coverage": false,
+      "seasonal": null
     },
     {
       "fund_id": "1651",
@@ -1001,14 +833,10 @@
       "momentum_4w": 0.202,
       "trend": "flat",
       "hitrate_q50": 66.49,
-      "coverage_pct": 52.88,
+      "coverage_pct": 52.36,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Norden",
-        "pct": 68.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2006",
@@ -1023,14 +851,10 @@
       "momentum_4w": 0.405,
       "trend": "flat",
       "hitrate_q50": 67.02,
-      "coverage_pct": 43.98,
+      "coverage_pct": 42.41,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "181868",
@@ -1045,14 +869,10 @@
       "momentum_4w": -0.362,
       "trend": "flat",
       "hitrate_q50": 82.28,
-      "coverage_pct": 55.06,
+      "coverage_pct": 56.96,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global & Sverige",
-        "pct": 93.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "574",
@@ -1066,15 +886,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.215,
       "trend": "flat",
-      "hitrate_q50": 74.35,
-      "coverage_pct": 53.4,
+      "hitrate_q50": 75.39,
+      "coverage_pct": 46.6,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtbolag",
-        "pct": 59.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "573156",
@@ -1088,15 +904,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.257,
       "trend": "flat",
-      "hitrate_q50": 59.18,
-      "coverage_pct": 41.84,
+      "hitrate_q50": 58.16,
+      "coverage_pct": 28.57,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Norden",
-        "pct": 68.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1340461",
@@ -1110,15 +922,11 @@
       "streak_dir": "up",
       "momentum_4w": 1.366,
       "trend": "up",
-      "hitrate_q50": 76.44,
-      "coverage_pct": 60.73,
+      "hitrate_q50": 76.96,
+      "coverage_pct": 60.21,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Norge",
-        "pct": 18.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "487076",
@@ -1133,14 +941,10 @@
       "momentum_4w": -2.66,
       "trend": "down",
       "hitrate_q50": 89.52,
-      "coverage_pct": 52.38,
+      "coverage_pct": 51.43,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "137448",
@@ -1154,15 +958,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.085,
       "trend": "flat",
-      "hitrate_q50": 74.4,
-      "coverage_pct": 48.21,
+      "hitrate_q50": 73.81,
+      "coverage_pct": 44.64,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "202568",
@@ -1176,15 +976,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.807,
       "trend": "up",
-      "hitrate_q50": 68.59,
-      "coverage_pct": 64.92,
+      "hitrate_q50": 68.06,
+      "coverage_pct": 65.45,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Norge",
-        "pct": 18.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1599",
@@ -1198,15 +994,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.234,
       "trend": "flat",
-      "hitrate_q50": 74.35,
-      "coverage_pct": 53.4,
+      "hitrate_q50": 74.87,
+      "coverage_pct": 53.93,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "355599",
@@ -1220,15 +1012,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.083,
       "trend": "flat",
-      "hitrate_q50": 55.56,
-      "coverage_pct": 91.27,
+      "hitrate_q50": 50.0,
+      "coverage_pct": 83.33,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Företag",
-        "pct": 6.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "547",
@@ -1242,15 +1030,11 @@
       "streak_dir": "up",
       "momentum_4w": -1.665,
       "trend": "down",
-      "hitrate_q50": 72.25,
-      "coverage_pct": 62.3,
+      "hitrate_q50": 72.77,
+      "coverage_pct": 62.83,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny energi",
-        "pct": 87.5
-      }
+      "seasonal": null
     },
     {
       "fund_id": "364",
@@ -1264,15 +1048,11 @@
       "streak_dir": "up",
       "momentum_4w": -2.931,
       "trend": "down",
-      "hitrate_q50": 79.58,
-      "coverage_pct": 61.26,
+      "hitrate_q50": 80.1,
+      "coverage_pct": 62.3,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny teknik",
-        "pct": 73.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2010",
@@ -1287,14 +1067,10 @@
       "momentum_4w": 0.554,
       "trend": "up",
       "hitrate_q50": 73.82,
-      "coverage_pct": 42.41,
+      "coverage_pct": 39.27,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "164908",
@@ -1308,15 +1084,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.162,
       "trend": "flat",
-      "hitrate_q50": 53.12,
-      "coverage_pct": 88.75,
+      "hitrate_q50": 51.88,
+      "coverage_pct": 84.38,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "229",
@@ -1331,14 +1103,10 @@
       "momentum_4w": 0.0,
       "trend": "flat",
       "hitrate_q50": 59.16,
-      "coverage_pct": 60.73,
+      "coverage_pct": 52.88,
       "recommended": false,
-      "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "low_coverage": true,
+      "seasonal": null
     },
     {
       "fund_id": "512557",
@@ -1352,15 +1120,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.128,
       "trend": "flat",
-      "hitrate_q50": 79.21,
-      "coverage_pct": 51.49,
+      "hitrate_q50": 81.19,
+      "coverage_pct": 44.55,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Norden",
-        "pct": 68.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "415690",
@@ -1374,15 +1138,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.678,
       "trend": "up",
-      "hitrate_q50": 80.39,
-      "coverage_pct": 64.71,
+      "hitrate_q50": 82.35,
+      "coverage_pct": 63.73,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "180708",
@@ -1396,15 +1156,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.116,
       "trend": "flat",
-      "hitrate_q50": 45.03,
-      "coverage_pct": 89.53,
+      "hitrate_q50": 44.5,
+      "coverage_pct": 88.48,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Företag",
-        "pct": 6.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "73884",
@@ -1422,11 +1178,7 @@
       "coverage_pct": 57.3,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Övriga",
-        "pct": 29.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "281",
@@ -1440,15 +1192,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.132,
       "trend": "flat",
-      "hitrate_q50": 78.53,
-      "coverage_pct": 65.45,
+      "hitrate_q50": 77.49,
+      "coverage_pct": 63.87,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "166",
@@ -1462,15 +1210,11 @@
       "streak_dir": "up",
       "momentum_4w": -2.665,
       "trend": "down",
-      "hitrate_q50": 72.25,
-      "coverage_pct": 37.7,
+      "hitrate_q50": 72.77,
+      "coverage_pct": 40.31,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Asien ex Japan",
-        "pct": 40.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "209089",
@@ -1485,14 +1229,10 @@
       "momentum_4w": -0.173,
       "trend": "flat",
       "hitrate_q50": 72.9,
-      "coverage_pct": 50.97,
+      "coverage_pct": 49.03,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1029",
@@ -1506,15 +1246,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.506,
       "trend": "down",
-      "hitrate_q50": 83.25,
-      "coverage_pct": 64.4,
+      "hitrate_q50": 83.77,
+      "coverage_pct": 63.35,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Blandfond",
-        "pct": 48.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1024",
@@ -1529,14 +1265,10 @@
       "momentum_4w": -0.475,
       "trend": "flat",
       "hitrate_q50": 83.77,
-      "coverage_pct": 63.35,
+      "coverage_pct": 63.87,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Blandfond",
-        "pct": 48.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "389820",
@@ -1550,15 +1282,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.045,
       "trend": "flat",
-      "hitrate_q50": 49.17,
-      "coverage_pct": 88.33,
+      "hitrate_q50": 47.5,
+      "coverage_pct": 67.5,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Högrisk",
-        "pct": 9.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1681",
@@ -1573,14 +1301,10 @@
       "momentum_4w": -0.076,
       "trend": "flat",
       "hitrate_q50": 64.92,
-      "coverage_pct": 43.98,
+      "coverage_pct": 42.93,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Norden",
-        "pct": 68.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "364655",
@@ -1594,15 +1318,11 @@
       "streak_dir": "up",
       "momentum_4w": -2.774,
       "trend": "down",
-      "hitrate_q50": 82.4,
-      "coverage_pct": 47.2,
+      "hitrate_q50": 81.6,
+      "coverage_pct": 48.0,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "862036",
@@ -1616,15 +1336,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.18,
       "trend": "flat",
-      "hitrate_q50": 49.21,
-      "coverage_pct": 84.13,
+      "hitrate_q50": 46.03,
+      "coverage_pct": 82.54,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "236",
@@ -1639,14 +1355,10 @@
       "momentum_4w": -0.258,
       "trend": "flat",
       "hitrate_q50": 79.58,
-      "coverage_pct": 62.3,
+      "coverage_pct": 62.83,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "247",
@@ -1660,15 +1372,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.44,
       "trend": "flat",
-      "hitrate_q50": 83.77,
-      "coverage_pct": 57.59,
+      "hitrate_q50": 83.25,
+      "coverage_pct": 61.26,
       "recommended": false,
-      "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "low_coverage": false,
+      "seasonal": null
     },
     {
       "fund_id": "333557",
@@ -1682,15 +1390,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.179,
       "trend": "flat",
-      "hitrate_q50": 47.69,
-      "coverage_pct": 90.77,
+      "hitrate_q50": 46.15,
+      "coverage_pct": 87.69,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "944976",
@@ -1708,11 +1412,7 @@
       "coverage_pct": 28.3,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "363",
@@ -1726,15 +1426,11 @@
       "streak_dir": "up",
       "momentum_4w": -2.769,
       "trend": "down",
-      "hitrate_q50": 79.06,
-      "coverage_pct": 63.87,
+      "hitrate_q50": 79.58,
+      "coverage_pct": 64.92,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny teknik",
-        "pct": 73.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "901093",
@@ -1748,15 +1444,11 @@
       "streak_dir": "up",
       "momentum_4w": -1.062,
       "trend": "down",
-      "hitrate_q50": 77.97,
-      "coverage_pct": 57.63,
+      "hitrate_q50": 79.66,
+      "coverage_pct": 55.93,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "291",
@@ -1771,14 +1463,10 @@
       "momentum_4w": 0.536,
       "trend": "up",
       "hitrate_q50": 71.2,
-      "coverage_pct": 56.54,
+      "coverage_pct": 54.97,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "476836",
@@ -1792,15 +1480,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.051,
       "trend": "flat",
-      "hitrate_q50": 42.86,
+      "hitrate_q50": 38.1,
       "coverage_pct": 96.19,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1022",
@@ -1815,14 +1499,10 @@
       "momentum_4w": -0.292,
       "trend": "flat",
       "hitrate_q50": 84.82,
-      "coverage_pct": 68.06,
+      "coverage_pct": 68.59,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Blandfond",
-        "pct": 48.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1607583",
@@ -1837,7 +1517,7 @@
       "momentum_4w": -0.36,
       "trend": "flat",
       "hitrate_q50": 60.78,
-      "coverage_pct": 27.45,
+      "coverage_pct": 29.41,
       "recommended": false,
       "low_coverage": true,
       "seasonal": null
@@ -1855,14 +1535,10 @@
       "momentum_4w": -0.058,
       "trend": "flat",
       "hitrate_q50": 71.33,
-      "coverage_pct": 56.67,
+      "coverage_pct": 54.67,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "476838",
@@ -1876,15 +1552,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.248,
       "trend": "flat",
-      "hitrate_q50": 78.1,
+      "hitrate_q50": 79.05,
       "coverage_pct": 65.71,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "74107",
@@ -1898,15 +1570,11 @@
       "streak_dir": "up",
       "momentum_4w": 1.302,
       "trend": "up",
-      "hitrate_q50": 64.92,
-      "coverage_pct": 58.12,
+      "hitrate_q50": 65.97,
+      "coverage_pct": 56.54,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Norge",
-        "pct": 18.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "375216",
@@ -1921,14 +1589,10 @@
       "momentum_4w": -0.707,
       "trend": "down",
       "hitrate_q50": 84.3,
-      "coverage_pct": 57.85,
+      "coverage_pct": 59.5,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "592236",
@@ -1942,15 +1606,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.054,
       "trend": "flat",
-      "hitrate_q50": 64.13,
-      "coverage_pct": 34.78,
+      "hitrate_q50": 65.22,
+      "coverage_pct": 28.26,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1268",
@@ -1968,11 +1628,7 @@
       "coverage_pct": 43.46,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "342255",
@@ -1987,14 +1643,10 @@
       "momentum_4w": -0.042,
       "trend": "flat",
       "hitrate_q50": 74.22,
-      "coverage_pct": 83.59,
+      "coverage_pct": 80.47,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Högrisk",
-        "pct": 9.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "212549",
@@ -2008,15 +1660,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.001,
       "trend": "flat",
-      "hitrate_q50": 64.67,
-      "coverage_pct": 60.0,
+      "hitrate_q50": 64.0,
+      "coverage_pct": 59.33,
       "recommended": false,
-      "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "low_coverage": true,
+      "seasonal": null
     },
     {
       "fund_id": "1288",
@@ -2031,14 +1679,10 @@
       "momentum_4w": -1.524,
       "trend": "down",
       "hitrate_q50": 71.2,
-      "coverage_pct": 43.46,
+      "coverage_pct": 42.93,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1023",
@@ -2053,14 +1697,10 @@
       "momentum_4w": -0.133,
       "trend": "flat",
       "hitrate_q50": 81.68,
-      "coverage_pct": 73.82,
+      "coverage_pct": 71.73,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Blandfond",
-        "pct": 48.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "599",
@@ -2074,15 +1714,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.024,
       "trend": "flat",
-      "hitrate_q50": 56.54,
-      "coverage_pct": 30.37,
+      "hitrate_q50": 56.02,
+      "coverage_pct": 26.18,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1040",
@@ -2096,15 +1732,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.105,
       "trend": "flat",
-      "hitrate_q50": 80.63,
-      "coverage_pct": 72.77,
+      "hitrate_q50": 80.1,
+      "coverage_pct": 70.68,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Blandfond",
-        "pct": 48.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2108",
@@ -2118,15 +1750,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.044,
       "trend": "flat",
-      "hitrate_q50": 71.2,
-      "coverage_pct": 86.39,
+      "hitrate_q50": 70.68,
+      "coverage_pct": 85.86,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "471796",
@@ -2140,15 +1768,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.139,
       "trend": "flat",
-      "hitrate_q50": 75.7,
-      "coverage_pct": 87.85,
+      "hitrate_q50": 74.77,
+      "coverage_pct": 70.09,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Högrisk",
-        "pct": 9.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2079",
@@ -2162,15 +1786,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.049,
       "trend": "flat",
-      "hitrate_q50": 56.02,
-      "coverage_pct": 82.72,
+      "hitrate_q50": 56.54,
+      "coverage_pct": 81.68,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "mixed",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "334856",
@@ -2184,15 +1804,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.028,
       "trend": "flat",
-      "hitrate_q50": 61.24,
+      "hitrate_q50": 62.02,
       "coverage_pct": 62.79,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "490477",
@@ -2206,15 +1822,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.235,
       "trend": "flat",
-      "hitrate_q50": 44.23,
-      "coverage_pct": 88.46,
+      "hitrate_q50": 41.35,
+      "coverage_pct": 70.19,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Högrisk",
-        "pct": 9.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2098",
@@ -2228,15 +1840,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.086,
       "trend": "flat",
-      "hitrate_q50": 59.69,
-      "coverage_pct": 81.15,
+      "hitrate_q50": 58.64,
+      "coverage_pct": 79.58,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "mixed",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1833",
@@ -2251,14 +1859,10 @@
       "momentum_4w": -0.073,
       "trend": "flat",
       "hitrate_q50": 51.31,
-      "coverage_pct": 67.02,
+      "coverage_pct": 57.07,
       "recommended": false,
-      "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Företag",
-        "pct": 6.9
-      }
+      "low_coverage": true,
+      "seasonal": null
     },
     {
       "fund_id": "2111",
@@ -2273,14 +1877,10 @@
       "momentum_4w": 0.055,
       "trend": "flat",
       "hitrate_q50": 51.83,
-      "coverage_pct": 76.44,
+      "coverage_pct": 74.87,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "mixed",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "901673",
@@ -2295,14 +1895,10 @@
       "momentum_4w": 0.033,
       "trend": "flat",
       "hitrate_q50": 67.8,
-      "coverage_pct": 83.05,
+      "coverage_pct": 86.44,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Korta",
-        "pct": 4.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2131",
@@ -2316,15 +1912,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.001,
       "trend": "flat",
-      "hitrate_q50": 86.91,
-      "coverage_pct": 66.49,
+      "hitrate_q50": 86.39,
+      "coverage_pct": 64.92,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Företag",
-        "pct": 6.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "416235",
@@ -2338,15 +1930,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.033,
       "trend": "flat",
-      "hitrate_q50": 63.79,
-      "coverage_pct": 91.38,
+      "hitrate_q50": 64.66,
+      "coverage_pct": 92.24,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "56127",
@@ -2360,15 +1948,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.034,
       "trend": "flat",
-      "hitrate_q50": 77.72,
-      "coverage_pct": 58.7,
+      "hitrate_q50": 78.8,
+      "coverage_pct": 59.78,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Korta",
-        "pct": 4.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "94867",
@@ -2382,15 +1966,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.028,
       "trend": "flat",
-      "hitrate_q50": 83.91,
-      "coverage_pct": 74.71,
+      "hitrate_q50": 86.21,
+      "coverage_pct": 75.86,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Företag",
-        "pct": 6.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2802",
@@ -2404,15 +1984,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.022,
       "trend": "flat",
-      "hitrate_q50": 73.82,
-      "coverage_pct": 58.64,
+      "hitrate_q50": 75.92,
+      "coverage_pct": 57.59,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Korta",
-        "pct": 4.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "388595",
@@ -2426,15 +2002,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.006,
       "trend": "flat",
-      "hitrate_q50": 71.67,
+      "hitrate_q50": 74.17,
       "coverage_pct": 90.83,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Företag",
-        "pct": 6.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2109",
@@ -2449,14 +2021,10 @@
       "momentum_4w": 0.058,
       "trend": "flat",
       "hitrate_q50": 50.79,
-      "coverage_pct": 84.29,
+      "coverage_pct": 83.77,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "mixed",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2052",
@@ -2471,14 +2039,10 @@
       "momentum_4w": 0.031,
       "trend": "flat",
       "hitrate_q50": 76.44,
-      "coverage_pct": 51.31,
+      "coverage_pct": 50.79,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Korta",
-        "pct": 4.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "334858",
@@ -2492,15 +2056,11 @@
       "streak_dir": "up",
       "momentum_4w": -2.591,
       "trend": "down",
-      "hitrate_q50": 51.08,
-      "coverage_pct": 53.96,
+      "hitrate_q50": 53.24,
+      "coverage_pct": 54.68,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Råvaror",
-        "pct": 31.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2032",
@@ -2514,15 +2074,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.026,
       "trend": "flat",
-      "hitrate_q50": 81.15,
+      "hitrate_q50": 83.77,
       "coverage_pct": 54.45,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Korta",
-        "pct": 4.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2026",
@@ -2536,15 +2092,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.029,
       "trend": "flat",
-      "hitrate_q50": 76.44,
-      "coverage_pct": 54.97,
+      "hitrate_q50": 77.49,
+      "coverage_pct": 54.45,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Korta",
-        "pct": 4.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2300",
@@ -2558,15 +2110,11 @@
       "streak_dir": "up",
       "momentum_4w": -0.449,
       "trend": "flat",
-      "hitrate_q50": 74.87,
-      "coverage_pct": 55.5,
+      "hitrate_q50": 74.35,
+      "coverage_pct": 54.97,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global & Sverige",
-        "pct": 93.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2066",
@@ -2580,15 +2128,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.014,
       "trend": "flat",
-      "hitrate_q50": 89.53,
-      "coverage_pct": 53.4,
+      "hitrate_q50": 90.05,
+      "coverage_pct": 51.83,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Företag",
-        "pct": 6.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2034",
@@ -2602,15 +2146,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.0,
       "trend": "flat",
-      "hitrate_q50": 87.43,
-      "coverage_pct": 63.87,
+      "hitrate_q50": 89.01,
+      "coverage_pct": 62.3,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2084",
@@ -2624,15 +2164,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.025,
       "trend": "flat",
-      "hitrate_q50": 75.39,
-      "coverage_pct": 57.07,
+      "hitrate_q50": 77.49,
+      "coverage_pct": 57.59,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Korta",
-        "pct": 4.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2253",
@@ -2647,14 +2183,10 @@
       "momentum_4w": -0.633,
       "trend": "down",
       "hitrate_q50": 80.1,
-      "coverage_pct": 56.02,
+      "coverage_pct": 53.93,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "686931",
@@ -2669,14 +2201,10 @@
       "momentum_4w": 0.042,
       "trend": "flat",
       "hitrate_q50": 51.85,
-      "coverage_pct": 77.78,
+      "coverage_pct": 74.07,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "mixed",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "544596",
@@ -2690,15 +2218,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.032,
       "trend": "flat",
-      "hitrate_q50": 46.88,
-      "coverage_pct": 82.29,
+      "hitrate_q50": 45.83,
+      "coverage_pct": 80.21,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "mixed",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2058",
@@ -2712,15 +2236,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.024,
       "trend": "flat",
-      "hitrate_q50": 75.39,
-      "coverage_pct": 51.31,
+      "hitrate_q50": 75.92,
+      "coverage_pct": 49.21,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Korta",
-        "pct": 4.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "92827",
@@ -2734,15 +2254,11 @@
       "streak_dir": "up",
       "momentum_4w": 0.026,
       "trend": "flat",
-      "hitrate_q50": 73.3,
-      "coverage_pct": 49.74,
+      "hitrate_q50": 73.82,
+      "coverage_pct": 50.26,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Korta",
-        "pct": 4.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1731",
@@ -2756,15 +2272,11 @@
       "streak_dir": "flat",
       "momentum_4w": 0.036,
       "trend": "flat",
-      "hitrate_q50": 49.74,
-      "coverage_pct": 83.25,
+      "hitrate_q50": 50.79,
+      "coverage_pct": 82.2,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "mixed",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2384",
@@ -2779,14 +2291,10 @@
       "momentum_4w": -0.548,
       "trend": "down",
       "hitrate_q50": 82.2,
-      "coverage_pct": 58.12,
+      "coverage_pct": 57.59,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2075",
@@ -2800,15 +2308,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.085,
       "trend": "flat",
-      "hitrate_q50": 59.16,
-      "coverage_pct": 81.68,
+      "hitrate_q50": 58.64,
+      "coverage_pct": 80.63,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "mixed",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "457577",
@@ -2822,15 +2326,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.019,
       "trend": "flat",
-      "hitrate_q50": 50.93,
+      "hitrate_q50": 46.3,
       "coverage_pct": 88.89,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "377809",
@@ -2844,15 +2344,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.003,
       "trend": "flat",
-      "hitrate_q50": 80.99,
-      "coverage_pct": 75.21,
+      "hitrate_q50": 83.47,
+      "coverage_pct": 66.12,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Företag",
-        "pct": 6.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "20949",
@@ -2866,15 +2362,11 @@
       "streak_dir": "down",
       "momentum_4w": 1.475,
       "trend": "up",
-      "hitrate_q50": 68.06,
-      "coverage_pct": 70.16,
+      "hitrate_q50": 69.11,
+      "coverage_pct": 69.63,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Branschfond",
-        "pct": 76.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "26827",
@@ -2892,11 +2384,7 @@
       "coverage_pct": 89.01,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2103",
@@ -2914,11 +2402,7 @@
       "coverage_pct": 90.05,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Obligationer",
-        "pct": 13.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "70501",
@@ -2932,15 +2416,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.915,
       "trend": "down",
-      "hitrate_q50": 70.68,
-      "coverage_pct": 83.77,
+      "hitrate_q50": 71.73,
+      "coverage_pct": 86.91,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Euro",
-        "pct": 1.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "600081",
@@ -2954,15 +2434,11 @@
       "streak_dir": "down",
       "momentum_4w": 1.128,
       "trend": "up",
-      "hitrate_q50": 73.39,
-      "coverage_pct": 65.14,
+      "hitrate_q50": 72.48,
+      "coverage_pct": 62.39,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Branschfond",
-        "pct": 76.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "372",
@@ -2976,15 +2452,11 @@
       "streak_dir": "down",
       "momentum_4w": -2.242,
       "trend": "down",
-      "hitrate_q50": 76.96,
-      "coverage_pct": 58.12,
+      "hitrate_q50": 77.49,
+      "coverage_pct": 59.16,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny teknik",
-        "pct": 73.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2128",
@@ -2998,15 +2470,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.055,
       "trend": "flat",
-      "hitrate_q50": 58.12,
+      "hitrate_q50": 59.16,
       "coverage_pct": 80.1,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "mixed",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "56067",
@@ -3020,15 +2488,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.596,
       "trend": "down",
-      "hitrate_q50": 70.16,
+      "hitrate_q50": 71.2,
       "coverage_pct": 50.26,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Indien",
-        "pct": 26.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1682",
@@ -3042,15 +2506,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.454,
       "trend": "flat",
-      "hitrate_q50": 69.11,
-      "coverage_pct": 52.36,
+      "hitrate_q50": 69.63,
+      "coverage_pct": 50.79,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Norden",
-        "pct": 68.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2088",
@@ -3064,15 +2524,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.026,
       "trend": "flat",
-      "hitrate_q50": 56.54,
-      "coverage_pct": 83.77,
+      "hitrate_q50": 57.59,
+      "coverage_pct": 82.72,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "mixed",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "192",
@@ -3086,15 +2542,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.126,
       "trend": "flat",
-      "hitrate_q50": 75.92,
+      "hitrate_q50": 74.87,
       "coverage_pct": 65.97,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "398157",
@@ -3108,15 +2560,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.166,
       "trend": "flat",
-      "hitrate_q50": 89.08,
-      "coverage_pct": 62.18,
+      "hitrate_q50": 86.55,
+      "coverage_pct": 68.07,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1482",
@@ -3130,15 +2578,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.737,
       "trend": "down",
-      "hitrate_q50": 79.06,
-      "coverage_pct": 67.54,
+      "hitrate_q50": 79.58,
+      "coverage_pct": 67.02,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "637",
@@ -3152,15 +2596,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.136,
       "trend": "flat",
-      "hitrate_q50": 48.17,
-      "coverage_pct": 33.51,
+      "hitrate_q50": 50.26,
+      "coverage_pct": 29.84,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "210",
@@ -3178,11 +2618,7 @@
       "coverage_pct": 61.26,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "288001",
@@ -3196,8 +2632,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.448,
       "trend": "flat",
-      "hitrate_q50": 67.55,
-      "coverage_pct": 42.02,
+      "hitrate_q50": 68.09,
+      "coverage_pct": 42.55,
       "recommended": false,
       "low_coverage": true,
       "seasonal": null
@@ -3215,14 +2651,10 @@
       "momentum_4w": -1.104,
       "trend": "down",
       "hitrate_q50": 75.86,
-      "coverage_pct": 58.62,
+      "coverage_pct": 59.77,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "367456",
@@ -3237,14 +2669,10 @@
       "momentum_4w": -3.437,
       "trend": "down",
       "hitrate_q50": 82.27,
-      "coverage_pct": 58.16,
+      "coverage_pct": 68.79,
       "recommended": false,
-      "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "low_coverage": false,
+      "seasonal": null
     },
     {
       "fund_id": "2247",
@@ -3259,14 +2687,10 @@
       "momentum_4w": -0.215,
       "trend": "flat",
       "hitrate_q50": 80.63,
-      "coverage_pct": 56.02,
+      "coverage_pct": 52.36,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "600075",
@@ -3281,14 +2705,10 @@
       "momentum_4w": -0.597,
       "trend": "down",
       "hitrate_q50": 82.22,
-      "coverage_pct": 57.78,
+      "coverage_pct": 60.0,
       "recommended": false,
-      "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "low_coverage": false,
+      "seasonal": null
     },
     {
       "fund_id": "157699",
@@ -3302,15 +2722,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.205,
       "trend": "flat",
-      "hitrate_q50": 77.16,
-      "coverage_pct": 48.77,
+      "hitrate_q50": 76.54,
+      "coverage_pct": 46.91,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Sverige",
-        "pct": 81.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "581",
@@ -3324,15 +2740,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.144,
       "trend": "flat",
-      "hitrate_q50": 47.64,
-      "coverage_pct": 35.6,
+      "hitrate_q50": 47.12,
+      "coverage_pct": 31.94,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "181108",
@@ -3347,14 +2759,10 @@
       "momentum_4w": -0.751,
       "trend": "down",
       "hitrate_q50": 80.89,
-      "coverage_pct": 63.06,
+      "coverage_pct": 63.69,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "347",
@@ -3368,15 +2776,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.624,
       "trend": "up",
-      "hitrate_q50": 57.59,
-      "coverage_pct": 64.4,
+      "hitrate_q50": 58.12,
+      "coverage_pct": 64.92,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Fastighetsbolag",
-        "pct": 45.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "596636",
@@ -3390,15 +2794,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.727,
       "trend": "down",
-      "hitrate_q50": 79.12,
+      "hitrate_q50": 80.22,
       "coverage_pct": 61.54,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1506",
@@ -3413,14 +2813,10 @@
       "momentum_4w": -0.896,
       "trend": "down",
       "hitrate_q50": 82.2,
-      "coverage_pct": 61.78,
+      "coverage_pct": 60.73,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1505",
@@ -3435,14 +2831,10 @@
       "momentum_4w": -0.806,
       "trend": "down",
       "hitrate_q50": 79.58,
-      "coverage_pct": 59.16,
+      "coverage_pct": 58.64,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "346775",
@@ -3456,15 +2848,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.496,
       "trend": "flat",
-      "hitrate_q50": 85.04,
-      "coverage_pct": 74.8,
+      "hitrate_q50": 85.83,
+      "coverage_pct": 71.65,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "143369",
@@ -3478,15 +2866,11 @@
       "streak_dir": "down",
       "momentum_4w": -2.572,
       "trend": "down",
-      "hitrate_q50": 74.39,
-      "coverage_pct": 56.71,
+      "hitrate_q50": 73.78,
+      "coverage_pct": 58.54,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Aktiefond",
-        "pct": 70.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "135",
@@ -3501,14 +2885,10 @@
       "momentum_4w": -3.206,
       "trend": "down",
       "hitrate_q50": 75.39,
-      "coverage_pct": 40.31,
+      "coverage_pct": 40.84,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Asien ex Japan",
-        "pct": 40.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "736",
@@ -3522,15 +2902,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.007,
       "trend": "flat",
-      "hitrate_q50": 47.12,
-      "coverage_pct": 35.08,
+      "hitrate_q50": 48.17,
+      "coverage_pct": 33.51,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "350",
@@ -3544,15 +2920,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.905,
       "trend": "up",
-      "hitrate_q50": 63.87,
-      "coverage_pct": 71.2,
+      "hitrate_q50": 62.83,
+      "coverage_pct": 70.68,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Övriga",
-        "pct": 29.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "167",
@@ -3566,15 +2938,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.142,
       "trend": "flat",
-      "hitrate_q50": 67.54,
-      "coverage_pct": 41.36,
+      "hitrate_q50": 66.49,
+      "coverage_pct": 39.27,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Index",
-        "pct": 84.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "693994",
@@ -3589,14 +2957,10 @@
       "momentum_4w": 0.701,
       "trend": "up",
       "hitrate_q50": 85.0,
-      "coverage_pct": 61.25,
+      "coverage_pct": 53.75,
       "recommended": false,
-      "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "low_coverage": true,
+      "seasonal": null
     },
     {
       "fund_id": "2155",
@@ -3610,15 +2974,11 @@
       "streak_dir": "down",
       "momentum_4w": -3.163,
       "trend": "down",
-      "hitrate_q50": 74.35,
-      "coverage_pct": 49.74,
+      "hitrate_q50": 73.82,
+      "coverage_pct": 48.69,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1263",
@@ -3632,15 +2992,11 @@
       "streak_dir": "down",
       "momentum_4w": -1.891,
       "trend": "down",
-      "hitrate_q50": 71.2,
+      "hitrate_q50": 71.73,
       "coverage_pct": 40.84,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "324195",
@@ -3654,15 +3010,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.846,
       "trend": "up",
-      "hitrate_q50": 69.23,
-      "coverage_pct": 67.69,
+      "hitrate_q50": 70.0,
+      "coverage_pct": 66.92,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Övriga",
-        "pct": 29.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "133428",
@@ -3677,14 +3029,10 @@
       "momentum_4w": -2.206,
       "trend": "down",
       "hitrate_q50": 66.47,
-      "coverage_pct": 42.94,
+      "coverage_pct": 41.76,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Aktiefond",
-        "pct": 70.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "121",
@@ -3698,15 +3046,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.526,
       "trend": "down",
-      "hitrate_q50": 59.16,
-      "coverage_pct": 58.12,
+      "hitrate_q50": 58.64,
+      "coverage_pct": 56.54,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Indien",
-        "pct": 26.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "39648",
@@ -3720,15 +3064,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.391,
       "trend": "flat",
-      "hitrate_q50": 67.02,
-      "coverage_pct": 52.88,
+      "hitrate_q50": 65.45,
+      "coverage_pct": 53.4,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Värdebolag",
-        "pct": 95.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "286898",
@@ -3742,15 +3082,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.706,
       "trend": "down",
-      "hitrate_q50": 77.33,
-      "coverage_pct": 82.67,
+      "hitrate_q50": 76.67,
+      "coverage_pct": 79.33,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Euro",
-        "pct": 1.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "74108",
@@ -3765,14 +3101,10 @@
       "momentum_4w": -1.078,
       "trend": "down",
       "hitrate_q50": 76.44,
-      "coverage_pct": 52.36,
+      "coverage_pct": 52.88,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "541",
@@ -3786,15 +3118,11 @@
       "streak_dir": "down",
       "momentum_4w": -1.838,
       "trend": "down",
-      "hitrate_q50": 54.97,
-      "coverage_pct": 49.21,
+      "hitrate_q50": 56.02,
+      "coverage_pct": 42.41,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Branschfond",
-        "pct": 76.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "510",
@@ -3812,11 +3140,7 @@
       "coverage_pct": 53.4,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "459035",
@@ -3830,15 +3154,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.485,
       "trend": "flat",
-      "hitrate_q50": 64.29,
-      "coverage_pct": 55.36,
+      "hitrate_q50": 65.18,
+      "coverage_pct": 48.21,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Aktiefond",
-        "pct": 70.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "316079",
@@ -3852,15 +3172,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.529,
       "trend": "down",
-      "hitrate_q50": 77.44,
-      "coverage_pct": 57.14,
+      "hitrate_q50": 76.69,
+      "coverage_pct": 57.89,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "112622",
@@ -3874,15 +3190,11 @@
       "streak_dir": "down",
       "momentum_4w": 0.048,
       "trend": "flat",
-      "hitrate_q50": 76.84,
-      "coverage_pct": 61.58,
+      "hitrate_q50": 77.4,
+      "coverage_pct": 58.76,
       "recommended": false,
-      "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Branschfond",
-        "pct": 76.4
-      }
+      "low_coverage": true,
+      "seasonal": null
     },
     {
       "fund_id": "1604",
@@ -3896,15 +3208,11 @@
       "streak_dir": "down",
       "momentum_4w": 1.007,
       "trend": "up",
-      "hitrate_q50": 81.68,
-      "coverage_pct": 44.5,
+      "hitrate_q50": 82.2,
+      "coverage_pct": 43.98,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "799913",
@@ -3918,15 +3226,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.694,
       "trend": "down",
-      "hitrate_q50": 76.81,
-      "coverage_pct": 62.32,
+      "hitrate_q50": 78.26,
+      "coverage_pct": 63.77,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "331222",
@@ -3941,14 +3245,10 @@
       "momentum_4w": -0.994,
       "trend": "down",
       "hitrate_q50": 85.38,
-      "coverage_pct": 66.92,
+      "coverage_pct": 66.15,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "237975",
@@ -3962,15 +3262,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.594,
       "trend": "down",
-      "hitrate_q50": 74.87,
-      "coverage_pct": 81.15,
+      "hitrate_q50": 75.39,
+      "coverage_pct": 81.68,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Euro",
-        "pct": 1.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "343415",
@@ -3984,15 +3280,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.469,
       "trend": "flat",
-      "hitrate_q50": 74.8,
+      "hitrate_q50": 73.23,
       "coverage_pct": 59.84,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Högrisk",
-        "pct": 9.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "404075",
@@ -4006,15 +3298,11 @@
       "streak_dir": "down",
       "momentum_4w": -2.119,
       "trend": "down",
-      "hitrate_q50": 80.34,
-      "coverage_pct": 68.38,
+      "hitrate_q50": 81.2,
+      "coverage_pct": 63.25,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "869",
@@ -4028,15 +3316,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.579,
       "trend": "down",
-      "hitrate_q50": 74.35,
-      "coverage_pct": 78.53,
+      "hitrate_q50": 74.87,
+      "coverage_pct": 77.49,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Euro",
-        "pct": 1.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "909774",
@@ -4051,14 +3335,10 @@
       "momentum_4w": 0.057,
       "trend": "flat",
       "hitrate_q50": 79.66,
-      "coverage_pct": 42.37,
+      "coverage_pct": 37.29,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Branschfond",
-        "pct": 76.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "187",
@@ -4076,11 +3356,7 @@
       "coverage_pct": 47.89,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Asien ex Japan",
-        "pct": 40.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1173921",
@@ -4098,11 +3374,7 @@
       "coverage_pct": 56.1,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "186308",
@@ -4116,15 +3388,11 @@
       "streak_dir": "down",
       "momentum_4w": -2.084,
       "trend": "down",
-      "hitrate_q50": 74.25,
-      "coverage_pct": 57.49,
+      "hitrate_q50": 74.85,
+      "coverage_pct": 56.89,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Kina",
-        "pct": 62.5
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1886",
@@ -4138,15 +3406,11 @@
       "streak_dir": "down",
       "momentum_4w": -1.278,
       "trend": "down",
-      "hitrate_q50": 76.44,
-      "coverage_pct": 74.35,
+      "hitrate_q50": 77.49,
+      "coverage_pct": 74.87,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global & Sverige",
-        "pct": 93.1
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1324",
@@ -4160,15 +3424,11 @@
       "streak_dir": "down",
       "momentum_4w": -1.277,
       "trend": "down",
-      "hitrate_q50": 70.16,
-      "coverage_pct": 43.46,
+      "hitrate_q50": 69.63,
+      "coverage_pct": 42.93,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Mix bolag",
-        "pct": 79.2
-      }
+      "seasonal": null
     },
     {
       "fund_id": "436351",
@@ -4182,15 +3442,29 @@
       "streak_dir": "down",
       "momentum_4w": 0.546,
       "trend": "up",
-      "hitrate_q50": 80.36,
-      "coverage_pct": 66.07,
+      "hitrate_q50": 75.89,
+      "coverage_pct": 60.71,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Värdebolag",
-        "pct": 95.8
-      }
+      "seasonal": null
+    },
+    {
+      "fund_id": "524110",
+      "ppm_code": "870907",
+      "name": "East Capital Global Frontier Mkts A SEK",
+      "tags": "Aktiefond, Tillväxtmarknader, Nya",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/524110",
+      "change_pct": -1.398,
+      "direction": "down",
+      "streak": 5,
+      "streak_dir": "down",
+      "momentum_4w": -1.891,
+      "trend": "down",
+      "hitrate_q50": 89.9,
+      "coverage_pct": 57.58,
+      "recommended": false,
+      "low_coverage": true,
+      "seasonal": null
     },
     {
       "fund_id": "910093",
@@ -4205,36 +3479,10 @@
       "momentum_4w": -3.136,
       "trend": "down",
       "hitrate_q50": 89.66,
-      "coverage_pct": 39.66,
+      "coverage_pct": 37.93,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
-    },
-    {
-      "fund_id": "524110",
-      "ppm_code": "870907",
-      "name": "East Capital Global Frontier Mkts A SEK",
-      "tags": "Aktiefond, Tillväxtmarknader, Nya",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/524110",
-      "change_pct": -1.398,
-      "direction": "down",
-      "streak": 5,
-      "streak_dir": "down",
-      "momentum_4w": -1.891,
-      "trend": "down",
-      "hitrate_q50": 88.89,
-      "coverage_pct": 58.59,
-      "recommended": false,
-      "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1887",
@@ -4249,14 +3497,10 @@
       "momentum_4w": -1.18,
       "trend": "down",
       "hitrate_q50": 78.01,
-      "coverage_pct": 50.26,
+      "coverage_pct": 49.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2254",
@@ -4271,14 +3515,10 @@
       "momentum_4w": -0.606,
       "trend": "down",
       "hitrate_q50": 78.53,
-      "coverage_pct": 55.5,
+      "coverage_pct": 54.97,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2186",
@@ -4293,14 +3533,10 @@
       "momentum_4w": -3.567,
       "trend": "down",
       "hitrate_q50": 72.25,
-      "coverage_pct": 52.88,
+      "coverage_pct": 53.4,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "523895",
@@ -4315,14 +3551,10 @@
       "momentum_4w": -1.992,
       "trend": "down",
       "hitrate_q50": 83.0,
-      "coverage_pct": 58.0,
+      "coverage_pct": 59.0,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "864973",
@@ -4336,15 +3568,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.843,
       "trend": "down",
-      "hitrate_q50": 82.76,
-      "coverage_pct": 40.23,
+      "hitrate_q50": 83.91,
+      "coverage_pct": 37.93,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "142",
@@ -4359,14 +3587,10 @@
       "momentum_4w": -4.22,
       "trend": "down",
       "hitrate_q50": 72.77,
-      "coverage_pct": 38.22,
+      "coverage_pct": 39.27,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Asien ex Japan",
-        "pct": 40.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2439",
@@ -4380,15 +3604,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.984,
       "trend": "down",
-      "hitrate_q50": 76.44,
-      "coverage_pct": 62.83,
+      "hitrate_q50": 74.87,
+      "coverage_pct": 62.3,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Balanserad",
-        "pct": 51.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "512559",
@@ -4406,11 +3626,7 @@
       "coverage_pct": 48.51,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny energi",
-        "pct": 87.5
-      }
+      "seasonal": null
     },
     {
       "fund_id": "316507",
@@ -4424,15 +3640,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.08,
       "trend": "flat",
-      "hitrate_q50": 90.58,
-      "coverage_pct": 68.84,
+      "hitrate_q50": 89.86,
+      "coverage_pct": 65.94,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Råvaror",
-        "pct": 31.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1478",
@@ -4446,15 +3658,11 @@
       "streak_dir": "down",
       "momentum_4w": -0.338,
       "trend": "flat",
-      "hitrate_q50": 86.91,
-      "coverage_pct": 56.02,
+      "hitrate_q50": 86.39,
+      "coverage_pct": 50.79,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "476475",
@@ -4469,14 +3677,10 @@
       "momentum_4w": -0.71,
       "trend": "down",
       "hitrate_q50": 68.75,
-      "coverage_pct": 91.96,
+      "coverage_pct": 92.86,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Euro",
-        "pct": 1.4
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1546",
@@ -4491,14 +3695,10 @@
       "momentum_4w": 0.434,
       "trend": "flat",
       "hitrate_q50": 73.82,
-      "coverage_pct": 43.98,
+      "coverage_pct": 41.36,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2145",
@@ -4512,15 +3712,11 @@
       "streak_dir": "down",
       "momentum_4w": -4.3,
       "trend": "down",
-      "hitrate_q50": 70.16,
-      "coverage_pct": 53.4,
+      "hitrate_q50": 71.2,
+      "coverage_pct": 51.31,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2240",
@@ -4534,15 +3730,11 @@
       "streak_dir": "down",
       "momentum_4w": -1.644,
       "trend": "down",
-      "hitrate_q50": 77.49,
-      "coverage_pct": 63.87,
+      "hitrate_q50": 78.53,
+      "coverage_pct": 64.4,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "58",
@@ -4556,15 +3748,11 @@
       "streak_dir": "down",
       "momentum_4w": -4.307,
       "trend": "down",
-      "hitrate_q50": 71.73,
+      "hitrate_q50": 72.77,
       "coverage_pct": 49.74,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Asien ex Japan",
-        "pct": 40.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "331224",
@@ -4578,15 +3766,11 @@
       "streak_dir": "down",
       "momentum_4w": -1.795,
       "trend": "down",
-      "hitrate_q50": 80.77,
-      "coverage_pct": 63.08,
+      "hitrate_q50": 80.0,
+      "coverage_pct": 57.69,
       "recommended": false,
-      "low_coverage": false,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "SEK",
-        "pct": 20.8
-      }
+      "low_coverage": true,
+      "seasonal": null
     },
     {
       "fund_id": "286894",
@@ -4600,15 +3784,11 @@
       "streak_dir": "down",
       "momentum_4w": -2.712,
       "trend": "down",
-      "hitrate_q50": 78.05,
-      "coverage_pct": 43.9,
+      "hitrate_q50": 77.44,
+      "coverage_pct": 43.29,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Kina",
-        "pct": 62.5
-      }
+      "seasonal": null
     },
     {
       "fund_id": "910094",
@@ -4623,14 +3803,10 @@
       "momentum_4w": -1.359,
       "trend": "down",
       "hitrate_q50": 82.76,
-      "coverage_pct": 56.9,
+      "coverage_pct": 53.45,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "96927",
@@ -4645,14 +3821,10 @@
       "momentum_4w": -1.088,
       "trend": "down",
       "hitrate_q50": 77.01,
-      "coverage_pct": 66.67,
+      "coverage_pct": 66.09,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "429935",
@@ -4667,14 +3839,10 @@
       "momentum_4w": -0.979,
       "trend": "down",
       "hitrate_q50": 82.3,
-      "coverage_pct": 62.83,
+      "coverage_pct": 63.72,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "86287",
@@ -4689,14 +3857,10 @@
       "momentum_4w": -3.136,
       "trend": "down",
       "hitrate_q50": 78.65,
-      "coverage_pct": 78.65,
+      "coverage_pct": 79.78,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny energi",
-        "pct": 87.5
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2338",
@@ -4711,14 +3875,10 @@
       "momentum_4w": -1.736,
       "trend": "down",
       "hitrate_q50": 76.96,
-      "coverage_pct": 49.21,
+      "coverage_pct": 50.26,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny teknik",
-        "pct": 73.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "68",
@@ -4732,15 +3892,11 @@
       "streak_dir": "down",
       "momentum_4w": -2.807,
       "trend": "down",
-      "hitrate_q50": 76.44,
-      "coverage_pct": 47.12,
+      "hitrate_q50": 75.92,
+      "coverage_pct": 45.55,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Kina",
-        "pct": 62.5
-      }
+      "seasonal": null
     },
     {
       "fund_id": "118",
@@ -4755,14 +3911,10 @@
       "momentum_4w": -2.503,
       "trend": "down",
       "hitrate_q50": 73.4,
-      "coverage_pct": 42.55,
+      "coverage_pct": 41.49,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Kina",
-        "pct": 62.5
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2138",
@@ -4776,15 +3928,11 @@
       "streak_dir": "down",
       "momentum_4w": -3.772,
       "trend": "down",
-      "hitrate_q50": 74.87,
-      "coverage_pct": 46.6,
+      "hitrate_q50": 75.39,
+      "coverage_pct": 45.03,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "411236",
@@ -4799,14 +3947,10 @@
       "momentum_4w": -1.085,
       "trend": "down",
       "hitrate_q50": 87.18,
-      "coverage_pct": 52.99,
+      "coverage_pct": 56.41,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1573",
@@ -4820,15 +3964,11 @@
       "streak_dir": "down",
       "momentum_4w": -1.387,
       "trend": "down",
-      "hitrate_q50": 75.39,
-      "coverage_pct": 67.02,
+      "hitrate_q50": 76.44,
+      "coverage_pct": 66.49,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1339",
@@ -4843,14 +3983,10 @@
       "momentum_4w": -1.991,
       "trend": "down",
       "hitrate_q50": 74.21,
-      "coverage_pct": 54.74,
+      "coverage_pct": 54.21,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Japan",
-        "pct": 56.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "315115",
@@ -4865,14 +4001,10 @@
       "momentum_4w": -1.204,
       "trend": "down",
       "hitrate_q50": 79.85,
-      "coverage_pct": 64.18,
+      "coverage_pct": 63.43,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1464",
@@ -4887,14 +4019,10 @@
       "momentum_4w": -1.54,
       "trend": "down",
       "hitrate_q50": 80.63,
-      "coverage_pct": 64.92,
+      "coverage_pct": 65.45,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2821",
@@ -4908,15 +4036,11 @@
       "streak_dir": "down",
       "momentum_4w": -2.734,
       "trend": "down",
-      "hitrate_q50": 55.5,
-      "coverage_pct": 48.17,
+      "hitrate_q50": 56.02,
+      "coverage_pct": 50.26,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "weak",
-        "lead": "Råvaror",
-        "pct": 31.9
-      }
+      "seasonal": null
     },
     {
       "fund_id": "73",
@@ -4930,15 +4054,11 @@
       "streak_dir": "down",
       "momentum_4w": -2.753,
       "trend": "down",
-      "hitrate_q50": 74.35,
-      "coverage_pct": 48.69,
+      "hitrate_q50": 73.82,
+      "coverage_pct": 47.12,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Kina",
-        "pct": 62.5
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1674",
@@ -4952,15 +4072,11 @@
       "streak_dir": "down",
       "momentum_4w": -1.222,
       "trend": "down",
-      "hitrate_q50": 74.87,
+      "hitrate_q50": 75.39,
       "coverage_pct": 65.97,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Aktiefond",
-        "pct": 70.8
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2187",
@@ -4975,14 +4091,10 @@
       "momentum_4w": -3.586,
       "trend": "down",
       "hitrate_q50": 77.49,
-      "coverage_pct": 55.5,
+      "coverage_pct": 56.02,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Tillväxtmarknader",
-        "pct": 34.7
-      }
+      "seasonal": null
     },
     {
       "fund_id": "2983",
@@ -4997,14 +4109,10 @@
       "momentum_4w": 0.914,
       "trend": "up",
       "hitrate_q50": 66.49,
-      "coverage_pct": 47.12,
+      "coverage_pct": 43.98,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Läkemedel",
-        "pct": 65.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1512",
@@ -5018,15 +4126,11 @@
       "streak_dir": "down",
       "momentum_4w": -3.029,
       "trend": "down",
-      "hitrate_q50": 78.53,
-      "coverage_pct": 74.87,
+      "hitrate_q50": 79.06,
+      "coverage_pct": 75.39,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "USA",
-        "pct": 98.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "373",
@@ -5040,15 +4144,11 @@
       "streak_dir": "down",
       "momentum_4w": -1.144,
       "trend": "down",
-      "hitrate_q50": 84.82,
-      "coverage_pct": 53.93,
+      "hitrate_q50": 85.34,
+      "coverage_pct": 52.88,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny teknik",
-        "pct": 73.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "26767",
@@ -5062,15 +4162,11 @@
       "streak_dir": "down",
       "momentum_4w": -3.749,
       "trend": "down",
-      "hitrate_q50": 74.87,
-      "coverage_pct": 44.5,
+      "hitrate_q50": 73.82,
+      "coverage_pct": 46.6,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Kina",
-        "pct": 62.5
-      }
+      "seasonal": null
     },
     {
       "fund_id": "1011686",
@@ -5084,15 +4180,11 @@
       "streak_dir": "down",
       "momentum_4w": -3.554,
       "trend": "down",
-      "hitrate_q50": 64.56,
-      "coverage_pct": 44.94,
+      "hitrate_q50": 65.82,
+      "coverage_pct": 45.57,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "neutral",
-        "lead": "Kina",
-        "pct": 62.5
-      }
+      "seasonal": null
     },
     {
       "fund_id": "58850",
@@ -5110,11 +4202,7 @@
       "coverage_pct": 64.67,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Global",
-        "pct": 90.3
-      }
+      "seasonal": null
     },
     {
       "fund_id": "431",
@@ -5128,15 +4216,11 @@
       "streak_dir": "down",
       "momentum_4w": -4.275,
       "trend": "down",
-      "hitrate_q50": 78.53,
+      "hitrate_q50": 78.01,
       "coverage_pct": 59.69,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny teknik",
-        "pct": 73.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "396",
@@ -5150,15 +4234,11 @@
       "streak_dir": "down",
       "momentum_4w": -2.365,
       "trend": "down",
-      "hitrate_q50": 79.06,
-      "coverage_pct": 64.92,
+      "hitrate_q50": 79.58,
+      "coverage_pct": 65.45,
       "recommended": false,
       "low_coverage": false,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Ny teknik",
-        "pct": 73.6
-      }
+      "seasonal": null
     },
     {
       "fund_id": "397",
@@ -5172,8 +4252,8 @@
       "streak_dir": "down",
       "momentum_4w": -4.355,
       "trend": "down",
-      "hitrate_q50": 82.04,
-      "coverage_pct": 20.36,
+      "hitrate_q50": 80.84,
+      "coverage_pct": 19.16,
       "recommended": false,
       "low_coverage": true,
       "seasonal": null
@@ -5194,11 +4274,7 @@
       "coverage_pct": 48.69,
       "recommended": false,
       "low_coverage": true,
-      "seasonal": {
-        "verdict": "strong",
-        "lead": "Branschfond",
-        "pct": 76.4
-      }
+      "seasonal": null
     }
   ]
 }
