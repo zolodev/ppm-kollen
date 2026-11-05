@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-04",
+  "generated": "2026-11-05",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -10,104 +10,7 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": {
-    "month": 11,
-    "month_name": "november",
-    "strongest": [
-      {
-        "category": "USA",
-        "avg_return": 0.3477,
-        "win_rate": 60.1,
-        "n_weeks": 1164
-      },
-      {
-        "category": "Värdebolag",
-        "avg_return": 0.2938,
-        "win_rate": 58.3,
-        "n_weeks": 223
-      },
-      {
-        "category": "Global & Sverige",
-        "avg_return": 0.2886,
-        "win_rate": 59.2,
-        "n_weeks": 245
-      }
-    ],
-    "weakest": [
-      {
-        "category": "Euro",
-        "avg_return": 0.0033,
-        "win_rate": 49.7,
-        "n_weeks": 378
-      },
-      {
-        "category": "Korta",
-        "avg_return": 0.0206,
-        "win_rate": 73.6,
-        "n_weeks": 799
-      },
-      {
-        "category": "Företag",
-        "avg_return": 0.0281,
-        "win_rate": 65.6,
-        "n_weeks": 727
-      }
-    ],
-    "n_categories": 36,
-    "n_negative": 0,
-    "median_return": 0.1784,
-    "breadth": "strong",
-    "remaining": {
-      "favours": [
-        {
-          "category": "Ny energi",
-          "avg_return": 0.3012,
-          "win_rate": 47.8,
-          "n_weeks": 115
-        },
-        {
-          "category": "Råvaror",
-          "avg_return": 0.2502,
-          "win_rate": 53.4,
-          "n_weeks": 161
-        },
-        {
-          "category": "USA",
-          "avg_return": 0.2269,
-          "win_rate": 55.8,
-          "n_weeks": 622
-        }
-      ],
-      "n_categories": 36
-    },
-    "top_funds": [
-      {
-        "fund_id": "799913",
-        "name": "Handelsbanken Global Småb Index (A1 SEK)",
-        "avg_return": 0.5869,
-        "win_rate": 52.9,
-        "n_weeks": 34,
-        "n_years": 8
-      },
-      {
-        "fund_id": "600075",
-        "name": "Swedbank Robur Access Global A",
-        "avg_return": 0.5759,
-        "win_rate": 78.6,
-        "n_weeks": 42,
-        "n_years": 10
-      },
-      {
-        "fund_id": "137448",
-        "name": "Evli Sverige Småbolag B",
-        "avg_return": 0.5591,
-        "win_rate": 68.9,
-        "n_weeks": 74,
-        "n_years": 18
-      }
-    ],
-    "n_excluded": 4
-  },
+  "seasonal_month": null,
   "horizons": {
     "1w": [
       {
@@ -119,43 +22,14 @@
         "score": 68.75,
         "hitrate_q50": 100.0,
         "coverage_pct": 68.75,
-        "mae_q50": 0.48,
+        "mae_q50": 0.4776,
         "signal": "HOLD",
         "forecast": {
-          "q10": -0.1365,
-          "q50": -0.0956,
-          "q90": 0.92
+          "q10": -0.2873,
+          "q50": -0.2704,
+          "q90": 0.7969
         },
-        "seasonal": {
-          "month": 11,
-          "month_name": "november",
-          "verdict": "strong",
-          "lead": "Ny teknik",
-          "categories": [
-            {
-              "category": "Ny teknik",
-              "avg_return": 0.2231,
-              "win_rate": 60.0,
-              "n_weeks": 615,
-              "month_percentile": 73.6
-            },
-            {
-              "category": "Branschfond",
-              "avg_return": 0.2244,
-              "win_rate": 56.6,
-              "n_weeks": 2463,
-              "month_percentile": 76.4
-            },
-            {
-              "category": "Aktiefond",
-              "avg_return": 0.2149,
-              "win_rate": 56.6,
-              "n_weeks": 11883,
-              "month_percentile": 70.8
-            }
-          ],
-          "summary": "Ny teknik historiskt i november: +0.22%/vecka, 60% positiva veckor, percentil 74 (615 veckor)"
-        },
+        "seasonal": null,
         "consensus": {
           "n_agree": 2,
           "n_models": 3,
@@ -175,7 +49,7 @@
           },
           {
             "reason": "overheat_reversal",
-            "detail": "4w return -2.9% is 8.8pp off its +5.9% peak in the last 8 weeks"
+            "detail": "4w return -5.5% is 11.4pp off its +5.9% peak in the last 8 weeks"
           },
           {
             "reason": "backtest",
@@ -185,60 +59,38 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 1.3688,
+          "mae": 1.5875,
           "last_pred_q50": 0.5519,
-          "last_actual": -1.6893,
-          "last_error": 2.2412,
+          "last_actual": -4.3143,
+          "last_error": 4.8662,
           "last_direction_ok": false,
           "date_from": "2026-08-03",
           "date_to": "2026-10-26"
         },
-        "rationale": "100% hit-rate; 0.480pp MAE; 2/3 models agree (bearish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "100% hit-rate; 0.478pp MAE; 2/3 models agree (bearish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-04/1509086/h1w_ensemble.png",
-          "individual": "top-2026-11-04/1509086/h1w_individual.png"
+          "ensemble": "top-2026-11-05/1509086/h1w_ensemble.png",
+          "individual": "top-2026-11-05/1509086/h1w_individual.png"
         },
         "sticky": true
       },
       {
-        "fund_id": "540",
-        "ppm_code": "517748",
-        "name": "BGF World Energy A2",
-        "tags": "Aktiefond, Branschfond, Energi",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
-        "score": 100.811,
-        "hitrate_q50": 76.44,
-        "coverage_pct": 42.93,
-        "mae_q50": 0.729,
+        "fund_id": "2983",
+        "ppm_code": "688986",
+        "name": "Pictet-Longevity R USD",
+        "tags": "Aktiefond, Branschfond, Läkemedel",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
+        "score": 56.388,
+        "hitrate_q50": 67.02,
+        "coverage_pct": 41.88,
+        "mae_q50": 0.5921,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.6679,
-          "q50": 0.9358,
-          "q90": 2.0039
+          "q10": 0.0575,
+          "q50": 0.5126,
+          "q90": 1.3399
         },
-        "seasonal": {
-          "month": 11,
-          "month_name": "november",
-          "verdict": "strong",
-          "lead": "Branschfond",
-          "categories": [
-            {
-              "category": "Branschfond",
-              "avg_return": 0.2244,
-              "win_rate": 56.6,
-              "n_weeks": 2463,
-              "month_percentile": 76.4
-            },
-            {
-              "category": "Aktiefond",
-              "avg_return": 0.2149,
-              "win_rate": 56.6,
-              "n_weeks": 11883,
-              "month_percentile": 70.8
-            }
-          ],
-          "summary": "Branschfond historiskt i november: +0.22%/vecka, 57% positiva veckor, percentil 76 (2463 veckor)"
-        },
+        "seasonal": null,
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -251,61 +103,51 @@
             "xgboost"
           ]
         },
-        "warnings": [],
+        "warnings": [
+          {
+            "reason": "overheat_reversal",
+            "detail": "4w return -1.0% is 8.7pp off its +7.7% peak in the last 8 weeks"
+          }
+        ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 83.3,
-          "mae": 1.5639,
-          "last_pred_q50": 1.5032,
-          "last_actual": -0.0034,
-          "last_error": 1.5067,
+          "hit_rate_pct": 66.7,
+          "mae": 1.8226,
+          "last_pred_q50": 1.2818,
+          "last_actual": -0.4033,
+          "last_error": 1.6851,
           "last_direction_ok": false,
-          "date_from": "2026-08-03",
-          "date_to": "2026-10-26"
+          "date_from": "2026-08-10",
+          "date_to": "2026-11-02"
         },
-        "rationale": "76% hit-rate; 0.729pp MAE; 3/3 models agree (bullish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "67% hit-rate; 0.592pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-04/540/h1w_ensemble.png",
-          "individual": "top-2026-11-04/540/h1w_individual.png"
+          "ensemble": "top-2026-11-05/2983/h1w_ensemble.png",
+          "individual": "top-2026-11-05/2983/h1w_individual.png"
         }
       },
       {
-        "fund_id": "1376",
-        "ppm_code": "661066",
-        "name": "BGF Latin American A2",
-        "tags": "Aktiefond, Latinamerika",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "score": 46.742,
-        "hitrate_q50": 76.96,
-        "coverage_pct": 60.73,
-        "mae_q50": 0.9245,
-        "signal": "SELL",
+        "fund_id": "540",
+        "ppm_code": "517748",
+        "name": "BGF World Energy A2",
+        "tags": "Aktiefond, Branschfond, Energi",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
+        "score": 54.996,
+        "hitrate_q50": 79.06,
+        "coverage_pct": 42.41,
+        "mae_q50": 0.723,
+        "signal": "BUY",
         "forecast": {
-          "q10": -1.8841,
-          "q50": -1.1848,
-          "q90": 1.5449
+          "q10": -0.1147,
+          "q50": 0.3464,
+          "q90": 1.168
         },
-        "seasonal": {
-          "month": 11,
-          "month_name": "november",
-          "verdict": "strong",
-          "lead": "Aktiefond",
-          "categories": [
-            {
-              "category": "Aktiefond",
-              "avg_return": 0.2149,
-              "win_rate": 56.6,
-              "n_weeks": 11883,
-              "month_percentile": 70.8
-            }
-          ],
-          "summary": "Aktiefond historiskt i november: +0.21%/vecka, 57% positiva veckor, percentil 71 (11883 veckor)"
-        },
+        "seasonal": null,
         "consensus": {
           "n_agree": 2,
           "n_models": 3,
-          "n_up": 1,
-          "n_down": 2,
+          "n_up": 2,
+          "n_down": 1,
           "models": [
             "gru",
             "lstm",
@@ -316,32 +158,28 @@
         "warnings": [
           {
             "reason": "consensus",
-            "detail": "1↑ 2↓ of 3 models"
+            "detail": "2↑ 1↓ of 3 models"
           },
           {
             "reason": "overheat_reversal",
-            "detail": "4w return -22.2% is 42.0pp off its +19.8% peak in the last 8 weeks"
-          },
-          {
-            "reason": "backtest",
-            "detail": "backtest 25.0% < 60%"
+            "detail": "4w return -1.2% is 9.0pp off its +7.8% peak in the last 8 weeks"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 25.0,
-          "mae": 5.7965,
-          "last_pred_q50": 2.0317,
-          "last_actual": -4.6789,
-          "last_error": 6.7106,
+          "hit_rate_pct": 75.0,
+          "mae": 1.6972,
+          "last_pred_q50": 1.4747,
+          "last_actual": -2.1352,
+          "last_error": 3.6098,
           "last_direction_ok": false,
-          "date_from": "2026-08-03",
-          "date_to": "2026-10-26"
+          "date_from": "2026-08-10",
+          "date_to": "2026-11-02"
         },
-        "rationale": "77% hit-rate; 0.925pp MAE; 2/3 models agree (bearish); 25% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "79% hit-rate; 0.723pp MAE; 2/3 models agree (bullish); 75% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-04/1376/h1w_ensemble.png",
-          "individual": "top-2026-11-04/1376/h1w_individual.png"
+          "ensemble": "top-2026-11-05/540/h1w_ensemble.png",
+          "individual": "top-2026-11-05/540/h1w_individual.png"
         }
       }
     ]
@@ -349,37 +187,19 @@
   "rankings": {
     "top_yield": [
       {
-        "fund_id": "1376",
-        "ppm_code": "661066",
-        "name": "BGF Latin American A2",
-        "tags": "Aktiefond, Latinamerika",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "hitrate_q50": 76.96,
-        "coverage_pct": 60.73,
-        "mae_q50": 0.9245,
-        "forecast_q10": 0.62,
-        "forecast_q50": 2.0087,
-        "forecast_q90": 3.8861,
-        "last_actual": -4.6789,
-        "momentum_4w": -5.7875,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
         "fund_id": "540",
         "ppm_code": "517748",
         "name": "BGF World Energy A2",
         "tags": "Aktiefond, Branschfond, Energi",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
-        "hitrate_q50": 76.44,
-        "coverage_pct": 42.93,
-        "mae_q50": 0.729,
-        "forecast_q10": 0.4155,
-        "forecast_q50": 1.5004,
-        "forecast_q90": 1.9794,
-        "last_actual": -0.0034,
-        "momentum_4w": 1.8978,
+        "hitrate_q50": 79.06,
+        "coverage_pct": 42.41,
+        "mae_q50": 0.723,
+        "forecast_q10": 0.7783,
+        "forecast_q50": 1.4747,
+        "forecast_q90": 2.1098,
+        "last_actual": -2.1352,
+        "momentum_4w": -0.2921,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -390,14 +210,32 @@
         "name": "Pictet-Longevity R USD",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
-        "hitrate_q50": 66.49,
-        "coverage_pct": 43.98,
-        "mae_q50": 0.5893,
-        "forecast_q10": 0.2963,
-        "forecast_q50": 0.9085,
-        "forecast_q90": 1.7805,
-        "last_actual": -3.3349,
-        "momentum_4w": 0.914,
+        "hitrate_q50": 67.02,
+        "coverage_pct": 41.88,
+        "mae_q50": 0.5921,
+        "forecast_q10": 0.6556,
+        "forecast_q50": 1.2818,
+        "forecast_q90": 2.0144,
+        "last_actual": -0.4033,
+        "momentum_4w": -0.201,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "20949",
+        "ppm_code": "923383",
+        "name": "Pictet-Premium Brands R EUR",
+        "tags": "Aktiefond, Branschfond, Konsument",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
+        "hitrate_q50": 69.63,
+        "coverage_pct": 68.59,
+        "mae_q50": 0.5871,
+        "forecast_q10": 0.1192,
+        "forecast_q50": 1.0103,
+        "forecast_q90": 1.1417,
+        "last_actual": -0.3448,
+        "momentum_4w": 1.1511,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -412,33 +250,15 @@
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
         "hitrate_q50": 100.0,
         "coverage_pct": 68.75,
-        "mae_q50": 0.48,
-        "forecast_q10": -0.2638,
-        "forecast_q50": 0.5499,
-        "forecast_q90": 1.3423,
-        "last_actual": -1.6893,
-        "momentum_4w": -0.7315,
+        "mae_q50": 0.4776,
+        "forecast_q10": -0.1203,
+        "forecast_q50": 0.5519,
+        "forecast_q90": 1.3507,
+        "last_actual": -4.3143,
+        "momentum_4w": -1.3877,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
-      },
-      {
-        "fund_id": "388595",
-        "ppm_code": "660829",
-        "name": "Lannebo FRN A",
-        "tags": "Räntefond, SEK, Obligationer, Företag",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/388595",
-        "hitrate_q50": 74.17,
-        "coverage_pct": 90.83,
-        "mae_q50": 0.1798,
-        "forecast_q10": -0.0318,
-        "forecast_q50": -0.0065,
-        "forecast_q90": 0.0244,
-        "last_actual": 0.0228,
-        "momentum_4w": -0.0057,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "HOLD"
       },
       {
         "fund_id": "94867",
@@ -446,52 +266,70 @@
         "name": "Spiltan Räntefond Sverige",
         "tags": "Räntefond, SEK, Obligationer, Företag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/94867",
-        "hitrate_q50": 86.21,
-        "coverage_pct": 75.86,
-        "mae_q50": 0.223,
-        "forecast_q10": 0.0142,
-        "forecast_q50": 0.0152,
-        "forecast_q90": 0.0861,
-        "last_actual": 0.0262,
-        "momentum_4w": 0.0278,
+        "hitrate_q50": 86.78,
+        "coverage_pct": 78.16,
+        "mae_q50": 0.2194,
+        "forecast_q10": 0.0077,
+        "forecast_q50": 0.0156,
+        "forecast_q90": 0.0727,
+        "last_actual": 0.0131,
+        "momentum_4w": 0.0262,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "HOLD"
+      },
+      {
+        "fund_id": "346775",
+        "ppm_code": "447086",
+        "name": "Naventi Defensiv Flex",
+        "tags": "Blandfond, SEK, Försiktig",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/346775",
+        "hitrate_q50": 87.4,
+        "coverage_pct": 77.17,
+        "mae_q50": 0.115,
+        "forecast_q10": -0.5782,
+        "forecast_q50": -0.3294,
+        "forecast_q90": 0.1593,
+        "last_actual": -0.0535,
+        "momentum_4w": -0.4613,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "SELL"
       }
     ],
     "top_balanced": [
-      {
-        "fund_id": "1376",
-        "ppm_code": "661066",
-        "name": "BGF Latin American A2",
-        "tags": "Aktiefond, Latinamerika",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "hitrate_q50": 76.96,
-        "coverage_pct": 60.73,
-        "mae_q50": 0.9245,
-        "forecast_q10": 0.62,
-        "forecast_q50": 2.0087,
-        "forecast_q90": 3.8861,
-        "last_actual": -4.6789,
-        "momentum_4w": -5.7875,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
       {
         "fund_id": "540",
         "ppm_code": "517748",
         "name": "BGF World Energy A2",
         "tags": "Aktiefond, Branschfond, Energi",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
-        "hitrate_q50": 76.44,
-        "coverage_pct": 42.93,
-        "mae_q50": 0.729,
-        "forecast_q10": 0.4155,
-        "forecast_q50": 1.5004,
-        "forecast_q90": 1.9794,
-        "last_actual": -0.0034,
-        "momentum_4w": 1.8978,
+        "hitrate_q50": 79.06,
+        "coverage_pct": 42.41,
+        "mae_q50": 0.723,
+        "forecast_q10": 0.7783,
+        "forecast_q50": 1.4747,
+        "forecast_q90": 2.1098,
+        "last_actual": -2.1352,
+        "momentum_4w": -0.2921,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "2983",
+        "ppm_code": "688986",
+        "name": "Pictet-Longevity R USD",
+        "tags": "Aktiefond, Branschfond, Läkemedel",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
+        "hitrate_q50": 67.02,
+        "coverage_pct": 41.88,
+        "mae_q50": 0.5921,
+        "forecast_q10": 0.6556,
+        "forecast_q50": 1.2818,
+        "forecast_q90": 2.0144,
+        "last_actual": -0.4033,
+        "momentum_4w": -0.201,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -502,14 +340,14 @@
         "name": "Pictet-Premium Brands R EUR",
         "tags": "Aktiefond, Branschfond, Konsument",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
-        "hitrate_q50": 69.11,
-        "coverage_pct": 69.63,
-        "mae_q50": 0.5836,
-        "forecast_q10": -0.0412,
-        "forecast_q50": 0.7665,
-        "forecast_q90": 1.1135,
-        "last_actual": -0.0123,
-        "momentum_4w": 1.4747,
+        "hitrate_q50": 69.63,
+        "coverage_pct": 68.59,
+        "mae_q50": 0.5871,
+        "forecast_q10": 0.1192,
+        "forecast_q50": 1.0103,
+        "forecast_q90": 1.1417,
+        "last_actual": -0.3448,
+        "momentum_4w": 1.1511,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -524,12 +362,12 @@
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/475",
         "hitrate_q50": 71.2,
         "coverage_pct": 36.65,
-        "mae_q50": 0.5195,
-        "forecast_q10": 0.1857,
-        "forecast_q50": 0.7746,
-        "forecast_q90": 1.1451,
-        "last_actual": 2.4911,
-        "momentum_4w": 1.9868,
+        "mae_q50": 0.5199,
+        "forecast_q10": 0.3698,
+        "forecast_q50": 1.0085,
+        "forecast_q90": 1.3747,
+        "last_actual": 0.3136,
+        "momentum_4w": 1.2484,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -540,32 +378,32 @@
         "name": "Swedbank Robur Healthcare A",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/453",
-        "hitrate_q50": 71.73,
-        "coverage_pct": 38.22,
-        "mae_q50": 0.4851,
-        "forecast_q10": 0.0736,
-        "forecast_q50": 0.7239,
-        "forecast_q90": 1.0293,
-        "last_actual": 1.9511,
-        "momentum_4w": 1.7988,
+        "hitrate_q50": 70.68,
+        "coverage_pct": 37.7,
+        "mae_q50": 0.4858,
+        "forecast_q10": 0.0748,
+        "forecast_q50": 0.7257,
+        "forecast_q90": 1.0152,
+        "last_actual": 1.3399,
+        "momentum_4w": 1.646,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "1340461",
-        "ppm_code": "147348",
-        "name": "Alfred Berg Aktiv R (NOK)",
-        "tags": "Aktiefond, Norge",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1340461",
-        "hitrate_q50": 76.96,
-        "coverage_pct": 60.21,
-        "mae_q50": 0.4708,
-        "forecast_q10": -0.0847,
-        "forecast_q50": 0.5827,
-        "forecast_q90": 1.019,
-        "last_actual": 0.6612,
-        "momentum_4w": 1.3658,
+        "fund_id": "464",
+        "ppm_code": "644005",
+        "name": "Handelsbanken Hälsovård Tema (A1 SEK)",
+        "tags": "Aktiefond, Branschfond, Läkemedel",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/464",
+        "hitrate_q50": 69.11,
+        "coverage_pct": 27.23,
+        "mae_q50": 0.5504,
+        "forecast_q10": 0.3859,
+        "forecast_q50": 0.7111,
+        "forecast_q90": 1.1596,
+        "last_actual": 0.6803,
+        "momentum_4w": 1.3005,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -573,37 +411,37 @@
     ],
     "top_winners": [
       {
-        "fund_id": "1376",
-        "ppm_code": "661066",
-        "name": "BGF Latin American A2",
-        "tags": "Aktiefond, Latinamerika",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "hitrate_q50": 76.96,
-        "coverage_pct": 60.73,
-        "mae_q50": 0.9245,
-        "forecast_q10": 0.62,
-        "forecast_q50": 2.0087,
-        "forecast_q90": 3.8861,
-        "last_actual": -4.6789,
-        "momentum_4w": -5.7875,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
         "fund_id": "540",
         "ppm_code": "517748",
         "name": "BGF World Energy A2",
         "tags": "Aktiefond, Branschfond, Energi",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
-        "hitrate_q50": 76.44,
-        "coverage_pct": 42.93,
-        "mae_q50": 0.729,
-        "forecast_q10": 0.4155,
-        "forecast_q50": 1.5004,
-        "forecast_q90": 1.9794,
-        "last_actual": -0.0034,
-        "momentum_4w": 1.8978,
+        "hitrate_q50": 79.06,
+        "coverage_pct": 42.41,
+        "mae_q50": 0.723,
+        "forecast_q10": 0.7783,
+        "forecast_q50": 1.4747,
+        "forecast_q90": 2.1098,
+        "last_actual": -2.1352,
+        "momentum_4w": -0.2921,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "2983",
+        "ppm_code": "688986",
+        "name": "Pictet-Longevity R USD",
+        "tags": "Aktiefond, Branschfond, Läkemedel",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
+        "hitrate_q50": 67.02,
+        "coverage_pct": 41.88,
+        "mae_q50": 0.5921,
+        "forecast_q10": 0.6556,
+        "forecast_q50": 1.2818,
+        "forecast_q90": 2.0144,
+        "last_actual": -0.4033,
+        "momentum_4w": -0.201,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -616,12 +454,12 @@
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
         "hitrate_q50": 100.0,
         "coverage_pct": 68.75,
-        "mae_q50": 0.48,
-        "forecast_q10": -0.2638,
-        "forecast_q50": 0.5499,
-        "forecast_q90": 1.3423,
-        "last_actual": -1.6893,
-        "momentum_4w": -0.7315,
+        "mae_q50": 0.4776,
+        "forecast_q10": -0.1203,
+        "forecast_q50": 0.5519,
+        "forecast_q90": 1.3507,
+        "last_actual": -4.3143,
+        "momentum_4w": -1.3877,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -629,93 +467,37 @@
     ],
     "top_overall": [
       {
-        "fund_id": "1376",
-        "ppm_code": "661066",
-        "name": "BGF Latin American A2",
-        "tags": "Aktiefond, Latinamerika",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "hitrate_q50": 76.96,
-        "coverage_pct": 60.73,
-        "mae_q50": 0.9245,
-        "forecast_q10": 0.62,
-        "forecast_q50": 2.0087,
-        "forecast_q90": 3.8861,
-        "last_actual": -4.6789,
-        "momentum_4w": -5.7875,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
         "fund_id": "540",
         "ppm_code": "517748",
         "name": "BGF World Energy A2",
         "tags": "Aktiefond, Branschfond, Energi",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
-        "hitrate_q50": 76.44,
-        "coverage_pct": 42.93,
-        "mae_q50": 0.729,
-        "forecast_q10": 0.4155,
-        "forecast_q50": 1.5004,
-        "forecast_q90": 1.9794,
-        "last_actual": -0.0034,
-        "momentum_4w": 1.8978,
+        "hitrate_q50": 79.06,
+        "coverage_pct": 42.41,
+        "mae_q50": 0.723,
+        "forecast_q10": 0.7783,
+        "forecast_q50": 1.4747,
+        "forecast_q90": 2.1098,
+        "last_actual": -2.1352,
+        "momentum_4w": -0.2921,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "1509086",
-        "ppm_code": "183343",
-        "name": "DNB Teknologi S",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
-        "hitrate_q50": 100.0,
-        "coverage_pct": 68.75,
-        "mae_q50": 0.48,
-        "forecast_q10": -0.2638,
-        "forecast_q50": 0.5499,
-        "forecast_q90": 1.3423,
-        "last_actual": -1.6893,
-        "momentum_4w": -0.7315,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      }
-    ],
-    "top_streak": [
-      {
-        "fund_id": "1376",
-        "ppm_code": "661066",
-        "name": "BGF Latin American A2",
-        "tags": "Aktiefond, Latinamerika",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1376",
-        "hitrate_q50": 76.96,
-        "coverage_pct": 60.73,
-        "mae_q50": 0.9245,
-        "forecast_q10": 0.62,
-        "forecast_q50": 2.0087,
-        "forecast_q90": 3.8861,
-        "last_actual": -4.6789,
-        "momentum_4w": -5.7875,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
-        "fund_id": "540",
-        "ppm_code": "517748",
-        "name": "BGF World Energy A2",
-        "tags": "Aktiefond, Branschfond, Energi",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
-        "hitrate_q50": 76.44,
-        "coverage_pct": 42.93,
-        "mae_q50": 0.729,
-        "forecast_q10": 0.4155,
-        "forecast_q50": 1.5004,
-        "forecast_q90": 1.9794,
-        "last_actual": -0.0034,
-        "momentum_4w": 1.8978,
+        "fund_id": "2983",
+        "ppm_code": "688986",
+        "name": "Pictet-Longevity R USD",
+        "tags": "Aktiefond, Branschfond, Läkemedel",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
+        "hitrate_q50": 67.02,
+        "coverage_pct": 41.88,
+        "mae_q50": 0.5921,
+        "forecast_q10": 0.6556,
+        "forecast_q50": 1.2818,
+        "forecast_q90": 2.0144,
+        "last_actual": -0.4033,
+        "momentum_4w": -0.201,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -726,14 +508,70 @@
         "name": "Pictet-Premium Brands R EUR",
         "tags": "Aktiefond, Branschfond, Konsument",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
-        "hitrate_q50": 69.11,
-        "coverage_pct": 69.63,
-        "mae_q50": 0.5836,
-        "forecast_q10": -0.0412,
-        "forecast_q50": 0.7665,
-        "forecast_q90": 1.1135,
-        "last_actual": -0.0123,
-        "momentum_4w": 1.4747,
+        "hitrate_q50": 69.63,
+        "coverage_pct": 68.59,
+        "mae_q50": 0.5871,
+        "forecast_q10": 0.1192,
+        "forecast_q50": 1.0103,
+        "forecast_q90": 1.1417,
+        "last_actual": -0.3448,
+        "momentum_4w": 1.1511,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      }
+    ],
+    "top_streak": [
+      {
+        "fund_id": "540",
+        "ppm_code": "517748",
+        "name": "BGF World Energy A2",
+        "tags": "Aktiefond, Branschfond, Energi",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
+        "hitrate_q50": 79.06,
+        "coverage_pct": 42.41,
+        "mae_q50": 0.723,
+        "forecast_q10": 0.7783,
+        "forecast_q50": 1.4747,
+        "forecast_q90": 2.1098,
+        "last_actual": -2.1352,
+        "momentum_4w": -0.2921,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "2983",
+        "ppm_code": "688986",
+        "name": "Pictet-Longevity R USD",
+        "tags": "Aktiefond, Branschfond, Läkemedel",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
+        "hitrate_q50": 67.02,
+        "coverage_pct": 41.88,
+        "mae_q50": 0.5921,
+        "forecast_q10": 0.6556,
+        "forecast_q50": 1.2818,
+        "forecast_q90": 2.0144,
+        "last_actual": -0.4033,
+        "momentum_4w": -0.201,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "20949",
+        "ppm_code": "923383",
+        "name": "Pictet-Premium Brands R EUR",
+        "tags": "Aktiefond, Branschfond, Konsument",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
+        "hitrate_q50": 69.63,
+        "coverage_pct": 68.59,
+        "mae_q50": 0.5871,
+        "forecast_q10": 0.1192,
+        "forecast_q50": 1.0103,
+        "forecast_q90": 1.1417,
+        "last_actual": -0.3448,
+        "momentum_4w": 1.1511,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
