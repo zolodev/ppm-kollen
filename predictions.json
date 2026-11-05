@@ -10,7 +10,104 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": null,
+  "seasonal_month": {
+    "month": 11,
+    "month_name": "november",
+    "strongest": [
+      {
+        "category": "USA",
+        "avg_return": 0.343,
+        "win_rate": 59.8,
+        "n_weeks": 1174
+      },
+      {
+        "category": "Global & Sverige",
+        "avg_return": 0.2856,
+        "win_rate": 59.1,
+        "n_weeks": 247
+      },
+      {
+        "category": "Värdebolag",
+        "avg_return": 0.2849,
+        "win_rate": 57.8,
+        "n_weeks": 225
+      }
+    ],
+    "weakest": [
+      {
+        "category": "Euro",
+        "avg_return": 0.0038,
+        "win_rate": 50.0,
+        "n_weeks": 380
+      },
+      {
+        "category": "Korta",
+        "avg_return": 0.0206,
+        "win_rate": 73.8,
+        "n_weeks": 804
+      },
+      {
+        "category": "Företag",
+        "avg_return": 0.0281,
+        "win_rate": 65.8,
+        "n_weeks": 730
+      }
+    ],
+    "n_categories": 36,
+    "n_negative": 0,
+    "median_return": 0.1771,
+    "breadth": "strong",
+    "remaining": {
+      "favours": [
+        {
+          "category": "Ny energi",
+          "avg_return": 0.3012,
+          "win_rate": 47.8,
+          "n_weeks": 115
+        },
+        {
+          "category": "Råvaror",
+          "avg_return": 0.2502,
+          "win_rate": 53.4,
+          "n_weeks": 161
+        },
+        {
+          "category": "USA",
+          "avg_return": 0.2269,
+          "win_rate": 55.8,
+          "n_weeks": 622
+        }
+      ],
+      "n_categories": 36
+    },
+    "top_funds": [
+      {
+        "fund_id": "600075",
+        "name": "Swedbank Robur Access Global A",
+        "avg_return": 0.5759,
+        "win_rate": 78.6,
+        "n_weeks": 42,
+        "n_years": 10
+      },
+      {
+        "fund_id": "799913",
+        "name": "Handelsbanken Global Småb Index (A1 SEK)",
+        "avg_return": 0.5707,
+        "win_rate": 54.3,
+        "n_weeks": 35,
+        "n_years": 9
+      },
+      {
+        "fund_id": "137448",
+        "name": "Evli Sverige Småbolag B",
+        "avg_return": 0.5591,
+        "win_rate": 68.9,
+        "n_weeks": 74,
+        "n_years": 18
+      }
+    ],
+    "n_excluded": 4
+  },
   "horizons": {
     "1w": [
       {
@@ -25,11 +122,40 @@
         "mae_q50": 0.4776,
         "signal": "HOLD",
         "forecast": {
-          "q10": -0.2873,
-          "q50": -0.2704,
-          "q90": 0.7969
+          "q10": -0.2719,
+          "q50": -0.2681,
+          "q90": 0.7972
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Ny teknik",
+          "categories": [
+            {
+              "category": "Ny teknik",
+              "avg_return": 0.2153,
+              "win_rate": 59.7,
+              "n_weeks": 618,
+              "month_percentile": 73.6
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2202,
+              "win_rate": 56.5,
+              "n_weeks": 2485,
+              "month_percentile": 76.4
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2113,
+              "win_rate": 56.4,
+              "n_weeks": 11983,
+              "month_percentile": 68.1
+            }
+          ],
+          "summary": "Ny teknik historiskt i november: +0.22%/vecka, 60% positiva veckor, percentil 74 (618 veckor)"
+        },
         "consensus": {
           "n_agree": 2,
           "n_models": 3,
@@ -59,10 +185,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 1.5875,
-          "last_pred_q50": 0.5519,
+          "mae": 1.5911,
+          "last_pred_q50": 0.5625,
           "last_actual": -4.3143,
-          "last_error": 4.8662,
+          "last_error": 4.8769,
           "last_direction_ok": false,
           "date_from": "2026-08-03",
           "date_to": "2026-10-26"
@@ -80,17 +206,46 @@
         "name": "Pictet-Longevity R USD",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2983",
-        "score": 56.388,
+        "score": 66.589,
         "hitrate_q50": 67.02,
         "coverage_pct": 41.88,
         "mae_q50": 0.5921,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.0575,
-          "q50": 0.5126,
-          "q90": 1.3399
+          "q10": 0.0883,
+          "q50": 0.6882,
+          "q90": 1.3539
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "neutral",
+          "lead": "Läkemedel",
+          "categories": [
+            {
+              "category": "Läkemedel",
+              "avg_return": 0.2098,
+              "win_rate": 58.5,
+              "n_weeks": 463,
+              "month_percentile": 65.3
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2202,
+              "win_rate": 56.5,
+              "n_weeks": 2485,
+              "month_percentile": 76.4
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2113,
+              "win_rate": 56.4,
+              "n_weeks": 11983,
+              "month_percentile": 68.1
+            }
+          ],
+          "summary": "Läkemedel historiskt i november: +0.21%/vecka, 58% positiva veckor, percentil 65 (463 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -112,10 +267,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.8226,
-          "last_pred_q50": 1.2818,
+          "mae": 1.7912,
+          "last_pred_q50": 1.3738,
           "last_actual": -0.4033,
-          "last_error": 1.6851,
+          "last_error": 1.7771,
           "last_direction_ok": false,
           "date_from": "2026-08-10",
           "date_to": "2026-11-02"
@@ -132,17 +287,39 @@
         "name": "BGF World Energy A2",
         "tags": "Aktiefond, Branschfond, Energi",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/540",
-        "score": 54.996,
+        "score": 61.036,
         "hitrate_q50": 79.06,
         "coverage_pct": 42.41,
         "mae_q50": 0.723,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.1147,
-          "q50": 0.3464,
-          "q90": 1.168
+          "q10": 0.0792,
+          "q50": 0.4437,
+          "q90": 1.154
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Branschfond",
+          "categories": [
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2202,
+              "win_rate": 56.5,
+              "n_weeks": 2485,
+              "month_percentile": 76.4
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2113,
+              "win_rate": 56.4,
+              "n_weeks": 11983,
+              "month_percentile": 68.1
+            }
+          ],
+          "summary": "Branschfond historiskt i november: +0.22%/vecka, 56% positiva veckor, percentil 76 (2485 veckor)"
+        },
         "consensus": {
           "n_agree": 2,
           "n_models": 3,
@@ -168,10 +345,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 1.6972,
-          "last_pred_q50": 1.4747,
+          "mae": 1.6964,
+          "last_pred_q50": 1.5023,
           "last_actual": -2.1352,
-          "last_error": 3.6098,
+          "last_error": 3.6374,
           "last_direction_ok": false,
           "date_from": "2026-08-10",
           "date_to": "2026-11-02"
