@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06",
+  "generated": "2026-11-09",
   "week_from": "2026-11-02",
   "min_coverage_pct": 60.0,
   "seasonal_month": 11,
@@ -7,7 +7,7 @@
   "counts": {
     "total": 237,
     "recommended": 3,
-    "low_coverage": 0
+    "low_coverage": 1
   },
   "funds": [
     {
@@ -47,19 +47,19 @@
       "seasonal": null
     },
     {
-      "fund_id": "1509086",
-      "ppm_code": "183343",
-      "name": "DNB Teknologi S",
-      "tags": "Aktiefond, Branschfond, Ny teknik",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
-      "change_pct": 1.822,
-      "direction": "up",
-      "streak": 1,
-      "streak_dir": "up",
-      "momentum_4w": -0.973,
+      "fund_id": "397",
+      "ppm_code": "496729",
+      "name": "Franklin Technology Fund A",
+      "tags": "",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+      "change_pct": -6.315,
+      "direction": "down",
+      "streak": 5,
+      "streak_dir": "down",
+      "momentum_4w": -5.612,
       "trend": "down",
-      "hitrate_q50": 93.75,
-      "coverage_pct": 87.5,
+      "hitrate_q50": 90.42,
+      "coverage_pct": 90.42,
       "recommended": true,
       "low_coverage": false,
       "seasonal": null
@@ -256,10 +256,10 @@
       "streak_dir": "up",
       "momentum_4w": -0.943,
       "trend": "down",
-      "hitrate_q50": 82.91,
-      "coverage_pct": 84.62,
+      "hitrate_q50": 84.62,
+      "coverage_pct": 56.41,
       "recommended": false,
-      "low_coverage": false,
+      "low_coverage": true,
       "seasonal": null
     },
     {
@@ -545,7 +545,7 @@
       "momentum_4w": 1.306,
       "trend": "up",
       "hitrate_q50": 89.01,
-      "coverage_pct": 91.1,
+      "coverage_pct": 82.2,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -598,8 +598,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.502,
       "trend": "up",
-      "hitrate_q50": 85.34,
-      "coverage_pct": 85.86,
+      "hitrate_q50": 85.86,
+      "coverage_pct": 87.96,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -947,6 +947,24 @@
       "seasonal": null
     },
     {
+      "fund_id": "1509086",
+      "ppm_code": "183343",
+      "name": "DNB Teknologi S",
+      "tags": "Aktiefond, Branschfond, Ny teknik",
+      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
+      "change_pct": 1.822,
+      "direction": "up",
+      "streak": 1,
+      "streak_dir": "up",
+      "momentum_4w": -0.973,
+      "trend": "down",
+      "hitrate_q50": 93.75,
+      "coverage_pct": 87.5,
+      "recommended": false,
+      "low_coverage": false,
+      "seasonal": null
+    },
+    {
       "fund_id": "1505",
       "ppm_code": "248161",
       "name": "Storebrand USA A SEK",
@@ -976,8 +994,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.175,
       "trend": "flat",
-      "hitrate_q50": 91.62,
-      "coverage_pct": 92.15,
+      "hitrate_q50": 91.1,
+      "coverage_pct": 92.67,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -3065,7 +3083,7 @@
       "momentum_4w": -1.138,
       "trend": "down",
       "hitrate_q50": 84.96,
-      "coverage_pct": 82.3,
+      "coverage_pct": 83.19,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -3533,7 +3551,7 @@
       "momentum_4w": -1.384,
       "trend": "down",
       "hitrate_q50": 87.96,
-      "coverage_pct": 90.58,
+      "coverage_pct": 92.67,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -3569,7 +3587,7 @@
       "momentum_4w": -1.41,
       "trend": "down",
       "hitrate_q50": 87.18,
-      "coverage_pct": 85.47,
+      "coverage_pct": 83.76,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -3892,8 +3910,8 @@
       "streak_dir": "down",
       "momentum_4w": -2.758,
       "trend": "down",
-      "hitrate_q50": 83.33,
-      "coverage_pct": 68.52,
+      "hitrate_q50": 81.48,
+      "coverage_pct": 74.07,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -4254,24 +4272,6 @@
       "trend": "down",
       "hitrate_q50": 87.43,
       "coverage_pct": 79.58,
-      "recommended": false,
-      "low_coverage": false,
-      "seasonal": null
-    },
-    {
-      "fund_id": "397",
-      "ppm_code": "496729",
-      "name": "Franklin Technology Fund A",
-      "tags": "",
-      "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-      "change_pct": -6.315,
-      "direction": "down",
-      "streak": 5,
-      "streak_dir": "down",
-      "momentum_4w": -5.612,
-      "trend": "down",
-      "hitrate_q50": 90.42,
-      "coverage_pct": 90.42,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null

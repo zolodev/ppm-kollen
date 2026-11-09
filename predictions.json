@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06",
+  "generated": "2026-11-09",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -14,73 +14,20 @@
   "horizons": {
     "1w": [
       {
-        "fund_id": "1509086",
-        "ppm_code": "183343",
-        "name": "DNB Teknologi S",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
-        "score": 111.678,
-        "hitrate_q50": 93.75,
-        "coverage_pct": 87.5,
-        "mae_q50": 0.559,
-        "signal": "HOLD",
-        "forecast": {
-          "q10": -0.5609,
-          "q50": 0.5091,
-          "q90": 0.5808
-        },
-        "seasonal": null,
-        "consensus": {
-          "n_agree": 3,
-          "n_models": 3,
-          "n_up": 3,
-          "n_down": 0,
-          "models": [
-            "gru",
-            "lstm",
-            "tcn",
-            "xgboost"
-          ]
-        },
-        "warnings": [
-          {
-            "reason": "overheat_reversal",
-            "detail": "4w return -3.9% is 9.9pp off its +5.9% peak in the last 8 weeks"
-          }
-        ],
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 66.7,
-          "mae": 1.7318,
-          "last_pred_q50": 0.6878,
-          "last_actual": 1.8218,
-          "last_error": -1.1339,
-          "last_direction_ok": true,
-          "date_from": "2026-08-10",
-          "date_to": "2026-11-02"
-        },
-        "rationale": "94% hit-rate; 0.559pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-11-06/1509086/h1w_ensemble.png",
-          "individual": "top-2026-11-06/1509086/h1w_individual.png"
-        },
-        "sticky": true
-      },
-      {
         "fund_id": "1506920",
         "ppm_code": "255001",
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "score": 328.335,
+        "score": 328.687,
         "hitrate_q50": 86.67,
         "coverage_pct": 93.33,
         "mae_q50": 0.4829,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.7702,
-          "q50": 2.7353,
-          "q90": 3.4832
+          "q10": 0.7717,
+          "q50": 2.7392,
+          "q90": 3.4831
         },
         "seasonal": null,
         "consensus": {
@@ -114,9 +61,10 @@
         },
         "rationale": "87% hit-rate; 0.483pp MAE; 3/3 models agree (bullish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-06/1506920/h1w_ensemble.png",
-          "individual": "top-2026-11-06/1506920/h1w_individual.png"
-        }
+          "ensemble": "top-2026-11-09/1506920/h1w_ensemble.png",
+          "individual": "top-2026-11-09/1506920/h1w_individual.png"
+        },
+        "sticky": false
       },
       {
         "fund_id": "324195",
@@ -124,15 +72,15 @@
         "name": "Carnegie Fastighetsfond Norden A",
         "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "score": 163.207,
+        "score": 171.475,
         "hitrate_q50": 85.5,
         "coverage_pct": 77.1,
         "mae_q50": 0.4827,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.5749,
-          "q50": 2.9536,
-          "q90": 3.2657
+          "q10": 0.6097,
+          "q50": 3.2046,
+          "q90": 3.555
         },
         "seasonal": null,
         "consensus": {
@@ -166,8 +114,68 @@
         },
         "rationale": "85% hit-rate; 0.483pp MAE; 3/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-06/324195/h1w_ensemble.png",
-          "individual": "top-2026-11-06/324195/h1w_individual.png"
+          "ensemble": "top-2026-11-09/324195/h1w_ensemble.png",
+          "individual": "top-2026-11-09/324195/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "score": 86.803,
+        "hitrate_q50": 90.42,
+        "coverage_pct": 90.42,
+        "mae_q50": 5.2754,
+        "signal": "BUY",
+        "forecast": {
+          "q10": -1.2431,
+          "q50": 0.6403,
+          "q90": 1.4897
+        },
+        "seasonal": null,
+        "consensus": {
+          "n_agree": 2,
+          "n_models": 3,
+          "n_up": 2,
+          "n_down": 1,
+          "models": [
+            "gru",
+            "lstm",
+            "tcn",
+            "xgboost"
+          ]
+        },
+        "warnings": [
+          {
+            "reason": "consensus",
+            "detail": "2↑ 1↓ of 3 models"
+          },
+          {
+            "reason": "overheat_reversal",
+            "detail": "4w return -20.7% is 35.0pp off its +14.3% peak in the last 8 weeks"
+          },
+          {
+            "reason": "backtest",
+            "detail": "backtest 41.7% < 60%"
+          }
+        ],
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 41.7,
+          "mae": 5.3056,
+          "last_pred_q50": 1.8285,
+          "last_actual": -6.3154,
+          "last_error": 8.1439,
+          "last_direction_ok": false,
+          "date_from": "2026-08-10",
+          "date_to": "2026-11-02"
+        },
+        "rationale": "90% hit-rate; 5.275pp MAE; 2/3 models agree (bullish); 42% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-11-09/397/h1w_ensemble.png",
+          "individual": "top-2026-11-09/397/h1w_individual.png"
         }
       }
     ]
@@ -435,19 +443,19 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "1509086",
-        "ppm_code": "183343",
-        "name": "DNB Teknologi S",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
-        "hitrate_q50": 93.75,
-        "coverage_pct": 87.5,
-        "mae_q50": 0.559,
-        "forecast_q10": -0.3771,
-        "forecast_q50": 0.6878,
-        "forecast_q90": 1.0164,
-        "last_actual": 1.8218,
-        "momentum_4w": -0.9734,
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 90.42,
+        "coverage_pct": 90.42,
+        "mae_q50": 5.2754,
+        "forecast_q10": -1.0862,
+        "forecast_q50": 1.8285,
+        "forecast_q90": 2.7219,
+        "last_actual": -6.3154,
+        "momentum_4w": -5.6123,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -511,58 +519,58 @@
     ],
     "top_streak": [
       {
-        "fund_id": "1509086",
-        "ppm_code": "183343",
-        "name": "DNB Teknologi S",
-        "tags": "Aktiefond, Branschfond, Ny teknik",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509086",
-        "hitrate_q50": 93.75,
-        "coverage_pct": 87.5,
-        "mae_q50": 0.559,
-        "forecast_q10": -0.3771,
-        "forecast_q50": 0.6878,
-        "forecast_q90": 1.0164,
-        "last_actual": 1.8218,
-        "momentum_4w": -0.9734,
+        "fund_id": "1506920",
+        "ppm_code": "255001",
+        "name": "DNB Health Care S",
+        "tags": "Aktiefond, Branschfond, Läkemedel",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
+        "hitrate_q50": 86.67,
+        "coverage_pct": 93.33,
+        "mae_q50": 0.4829,
+        "forecast_q10": 0.6545,
+        "forecast_q50": 2.5381,
+        "forecast_q90": 3.3588,
+        "last_actual": 2.508,
+        "momentum_4w": 2.0269,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "92827",
-        "ppm_code": "442897",
-        "name": "Storebrand Kortränta A SEK H",
-        "tags": "Räntefond, SEK, Obligationer, Korta",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/92827",
-        "hitrate_q50": 98.95,
-        "coverage_pct": 98.95,
-        "mae_q50": 0.0148,
-        "forecast_q10": -0.0343,
-        "forecast_q50": 0.0938,
-        "forecast_q90": 0.3316,
-        "last_actual": 0.0268,
-        "momentum_4w": 0.0296,
+        "fund_id": "324195",
+        "ppm_code": "320176",
+        "name": "Carnegie Fastighetsfond Norden A",
+        "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
+        "hitrate_q50": 85.5,
+        "coverage_pct": 77.1,
+        "mae_q50": 0.4827,
+        "forecast_q10": 0.3485,
+        "forecast_q50": 2.0258,
+        "forecast_q90": 2.2323,
+        "last_actual": 5.1907,
+        "momentum_4w": 2.8636,
         "tritch_score": -1.0,
         "tritch_phase": 0,
-        "signal": "HOLD"
+        "signal": "BUY"
       },
       {
-        "fund_id": "2802",
-        "ppm_code": "305185",
-        "name": "AMF Räntefond Kort",
-        "tags": "Räntefond, SEK, Obligationer, Korta",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2802",
-        "hitrate_q50": 98.95,
-        "coverage_pct": 99.48,
-        "mae_q50": 0.0173,
-        "forecast_q10": -0.1174,
-        "forecast_q50": 0.0726,
-        "forecast_q90": 0.0726,
-        "last_actual": 0.0479,
-        "momentum_4w": 0.0279,
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 90.42,
+        "coverage_pct": 90.42,
+        "mae_q50": 5.2754,
+        "forecast_q10": -1.0862,
+        "forecast_q50": 1.8285,
+        "forecast_q90": 2.7219,
+        "last_actual": -6.3154,
+        "momentum_4w": -5.6123,
         "tritch_score": -1.0,
         "tritch_phase": 0,
-        "signal": "HOLD"
+        "signal": "BUY"
       }
     ]
   }
