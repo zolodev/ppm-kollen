@@ -10,7 +10,104 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": null,
+  "seasonal_month": {
+    "month": 11,
+    "month_name": "november",
+    "strongest": [
+      {
+        "category": "USA",
+        "avg_return": 0.3499,
+        "win_rate": 60.5,
+        "n_weeks": 1189
+      },
+      {
+        "category": "Värdebolag",
+        "avg_return": 0.3111,
+        "win_rate": 59.2,
+        "n_weeks": 228
+      },
+      {
+        "category": "Ny energi",
+        "avg_return": 0.295,
+        "win_rate": 52.5,
+        "n_weeks": 221
+      }
+    ],
+    "weakest": [
+      {
+        "category": "Euro",
+        "avg_return": 0.0185,
+        "win_rate": 50.6,
+        "n_weeks": 385
+      },
+      {
+        "category": "Korta",
+        "avg_return": 0.0219,
+        "win_rate": 73.7,
+        "n_weeks": 814
+      },
+      {
+        "category": "Norge",
+        "avg_return": 0.0284,
+        "win_rate": 48.9,
+        "n_weeks": 364
+      }
+    ],
+    "n_categories": 36,
+    "n_negative": 0,
+    "median_return": 0.1883,
+    "breadth": "strong",
+    "remaining": {
+      "favours": [
+        {
+          "category": "Ny energi",
+          "avg_return": 0.3012,
+          "win_rate": 47.8,
+          "n_weeks": 115
+        },
+        {
+          "category": "Råvaror",
+          "avg_return": 0.2502,
+          "win_rate": 53.4,
+          "n_weeks": 161
+        },
+        {
+          "category": "USA",
+          "avg_return": 0.2269,
+          "win_rate": 55.8,
+          "n_weeks": 622
+        }
+      ],
+      "n_categories": 36
+    },
+    "top_funds": [
+      {
+        "fund_id": "137448",
+        "name": "ISIN FI0008813142",
+        "avg_return": 0.7163,
+        "win_rate": 66.7,
+        "n_weeks": 75,
+        "n_years": 19
+      },
+      {
+        "fund_id": "799913",
+        "name": "Handelsbanken Global Småb Index (A1 SEK)",
+        "avg_return": 0.588,
+        "win_rate": 55.6,
+        "n_weeks": 36,
+        "n_years": 9
+      },
+      {
+        "fund_id": "909774",
+        "name": "Allianz Global Water AT EUR",
+        "avg_return": 0.5799,
+        "win_rate": 65.6,
+        "n_weeks": 32,
+        "n_years": 8
+      }
+    ],
+    "n_excluded": 4
+  },
   "horizons": {
     "1w": [
       {
@@ -19,17 +116,46 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "score": 96.275,
+        "score": 95.987,
         "hitrate_q50": 88.33,
         "coverage_pct": 51.67,
         "mae_q50": 0.4898,
         "signal": "HOLD",
         "forecast": {
-          "q10": 0.5572,
-          "q50": 0.959,
-          "q90": 1.3265
+          "q10": 0.5527,
+          "q50": 0.9262,
+          "q90": 1.2906
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Läkemedel",
+          "categories": [
+            {
+              "category": "Läkemedel",
+              "avg_return": 0.2337,
+              "win_rate": 59.3,
+              "n_weeks": 469,
+              "month_percentile": 73.6
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2422,
+              "win_rate": 56.9,
+              "n_weeks": 2518,
+              "month_percentile": 79.2
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2248,
+              "win_rate": 56.8,
+              "n_weeks": 11897,
+              "month_percentile": 62.5
+            }
+          ],
+          "summary": "Läkemedel historiskt i november: +0.23%/vecka, 59% positiva veckor, percentil 74 (469 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -45,16 +171,16 @@
         "warnings": [
           {
             "reason": "anomaly",
-            "detail": "fc=+0.96% = 8.2× mean_pred (limit 3.0×)"
+            "detail": "fc=+0.93% = 7.9× mean_pred (limit 3.0×)"
           }
         ],
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.3578,
-          "last_pred_q50": 0.5871,
+          "mae": 1.3684,
+          "last_pred_q50": 0.5532,
           "last_actual": 2.7771,
-          "last_error": -2.1901,
+          "last_error": -2.2239,
           "last_direction_ok": true,
           "date_from": "2026-08-10",
           "date_to": "2026-11-02"
@@ -72,17 +198,39 @@
         "name": "UB Infra A",
         "tags": "Aktiefond, Branschfond, Infrastruktur",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/600081",
-        "score": 229.537,
+        "score": 225.741,
         "hitrate_q50": 59.63,
         "coverage_pct": 58.72,
         "mae_q50": 0.3761,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.3599,
-          "q50": 1.55,
-          "q90": 1.55
+          "q10": 0.3422,
+          "q50": 1.5059,
+          "q90": 1.5059
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Branschfond",
+          "categories": [
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2422,
+              "win_rate": 56.9,
+              "n_weeks": 2518,
+              "month_percentile": 79.2
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2248,
+              "win_rate": 56.8,
+              "n_weeks": 11897,
+              "month_percentile": 62.5
+            }
+          ],
+          "summary": "Branschfond historiskt i november: +0.24%/vecka, 57% positiva veckor, percentil 79 (2518 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -99,10 +247,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 0.8191,
-          "last_pred_q50": 1.1148,
+          "mae": 0.8082,
+          "last_pred_q50": 1.1533,
           "last_actual": 1.4154,
-          "last_error": -0.3006,
+          "last_error": -0.262,
           "last_direction_ok": true,
           "date_from": "2026-08-10",
           "date_to": "2026-11-02"
@@ -119,17 +267,39 @@
         "name": "DNB SMB S",
         "tags": "Aktiefond, Norge",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1509085",
-        "score": 86.247,
+        "score": 90.203,
         "hitrate_q50": 87.5,
         "coverage_pct": 62.5,
         "mae_q50": 0.4711,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.1559,
-          "q50": 0.4245,
-          "q90": 0.7704
+          "q10": -0.1745,
+          "q50": 0.48,
+          "q90": 0.7719
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "weak",
+          "lead": "Norge",
+          "categories": [
+            {
+              "category": "Norge",
+              "avg_return": 0.0284,
+              "win_rate": 48.9,
+              "n_weeks": 364,
+              "month_percentile": 6.9
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2248,
+              "win_rate": 56.8,
+              "n_weeks": 11897,
+              "month_percentile": 62.5
+            }
+          ],
+          "summary": "Norge hör historiskt till de svagaste i november: +0.03%/vecka, 49% positiva veckor (364 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -144,6 +314,10 @@
         },
         "warnings": [
           {
+            "reason": "seasonal_weak",
+            "detail": "Norge hör historiskt till de svagaste i november: +0.03%/vecka, 49% positiva veckor (364 veckor)"
+          },
+          {
             "reason": "overheat_reversal",
             "detail": "4w return -2.9% is 8.8pp off its +5.9% peak in the last 8 weeks"
           }
@@ -151,10 +325,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.3232,
-          "last_pred_q50": 0.8938,
+          "mae": 1.3318,
+          "last_pred_q50": 0.9296,
           "last_actual": -2.3293,
-          "last_error": 3.2231,
+          "last_error": 3.2589,
           "last_direction_ok": false,
           "date_from": "2026-08-10",
           "date_to": "2026-11-02"
