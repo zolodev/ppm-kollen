@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13",
+  "generated": "2026-11-16",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -19,15 +19,15 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "score": 279.702,
+        "score": 294.704,
         "hitrate_q50": 85.0,
         "coverage_pct": 95.0,
         "mae_q50": 0.3512,
-        "signal": "HOLD",
+        "signal": "BUY",
         "forecast": {
-          "q10": 0.6638,
-          "q50": 1.6856,
-          "q90": 3.4189
+          "q10": 0.6563,
+          "q50": 1.8127,
+          "q90": 3.4019
         },
         "seasonal": null,
         "consensus": {
@@ -45,7 +45,7 @@
         "warnings": [
           {
             "reason": "anomaly",
-            "detail": "fc=+1.69% = 4.2× mean_pred (limit 3.0×)"
+            "detail": "fc=+1.81% = 4.6× mean_pred (limit 3.0×)"
           }
         ],
         "backtest": {
@@ -61,10 +61,10 @@
         },
         "rationale": "85% hit-rate; 0.351pp MAE; 3/3 models agree (bullish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-13/1506920/h1w_ensemble.png",
-          "individual": "top-2026-11-13/1506920/h1w_individual.png"
+          "ensemble": "top-2026-11-16/1506920/h1w_ensemble.png",
+          "individual": "top-2026-11-16/1506920/h1w_individual.png"
         },
-        "sticky": true
+        "sticky": false
       },
       {
         "fund_id": "324195",
@@ -72,15 +72,15 @@
         "name": "Carnegie Fastighetsfond Norden A",
         "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "score": 112.537,
+        "score": 113.248,
         "hitrate_q50": 87.02,
         "coverage_pct": 74.05,
         "mae_q50": 0.4766,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.4532,
-          "q50": 1.852,
-          "q90": 3.0671
+          "q10": 0.4596,
+          "q50": 1.8794,
+          "q90": 3.0479
         },
         "seasonal": null,
         "consensus": {
@@ -114,8 +114,8 @@
         },
         "rationale": "87% hit-rate; 0.477pp MAE; 3/3 models agree (bullish); 42% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-13/324195/h1w_ensemble.png",
-          "individual": "top-2026-11-13/324195/h1w_individual.png"
+          "ensemble": "top-2026-11-16/324195/h1w_ensemble.png",
+          "individual": "top-2026-11-16/324195/h1w_individual.png"
         }
       },
       {
@@ -124,15 +124,15 @@
         "name": "PriorNilsson Realinvest A",
         "tags": "Aktiefond, Övriga aktiefonder",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/459035",
-        "score": 103.695,
+        "score": 103.409,
         "hitrate_q50": 82.14,
         "coverage_pct": 77.68,
         "mae_q50": 0.4067,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.4102,
-          "q50": 1.13,
-          "q90": 2.2065
+          "q10": 0.4163,
+          "q50": 1.1219,
+          "q90": 2.1899
         },
         "seasonal": null,
         "consensus": {
@@ -166,8 +166,8 @@
         },
         "rationale": "82% hit-rate; 0.407pp MAE; 3/3 models agree (bullish); 42% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-13/459035/h1w_ensemble.png",
-          "individual": "top-2026-11-13/459035/h1w_individual.png"
+          "ensemble": "top-2026-11-16/459035/h1w_ensemble.png",
+          "individual": "top-2026-11-16/459035/h1w_individual.png"
         }
       }
     ]
@@ -511,6 +511,24 @@
     ],
     "top_streak": [
       {
+        "fund_id": "324195",
+        "ppm_code": "320176",
+        "name": "Carnegie Fastighetsfond Norden A",
+        "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
+        "hitrate_q50": 87.02,
+        "coverage_pct": 74.05,
+        "mae_q50": 0.4766,
+        "forecast_q10": 0.4805,
+        "forecast_q50": 1.932,
+        "forecast_q90": 1.932,
+        "last_actual": -0.4675,
+        "momentum_4w": 2.6114,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
         "fund_id": "1506920",
         "ppm_code": "255001",
         "name": "DNB Health Care S",
@@ -529,40 +547,22 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "2032",
-        "ppm_code": "214163",
-        "name": "Carnegie Likviditetsfond A",
-        "tags": "Räntefond, SEK, Obligationer, Korta",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2032",
-        "hitrate_q50": 98.95,
-        "coverage_pct": 98.43,
-        "mae_q50": 0.0118,
-        "forecast_q10": -0.037,
-        "forecast_q50": 0.0366,
-        "forecast_q90": 0.138,
-        "last_actual": 0.0145,
-        "momentum_4w": 0.0242,
+        "fund_id": "459035",
+        "ppm_code": "487108",
+        "name": "PriorNilsson Realinvest A",
+        "tags": "Aktiefond, Övriga aktiefonder",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/459035",
+        "hitrate_q50": 82.14,
+        "coverage_pct": 77.68,
+        "mae_q50": 0.4067,
+        "forecast_q10": 0.2636,
+        "forecast_q50": 1.5908,
+        "forecast_q90": 1.5908,
+        "last_actual": -0.5068,
+        "momentum_4w": 1.193,
         "tritch_score": -1.0,
         "tritch_phase": 0,
-        "signal": "HOLD"
-      },
-      {
-        "fund_id": "2084",
-        "ppm_code": "420646",
-        "name": "Länsförsäkringar Kort räntefond",
-        "tags": "Räntefond, SEK, Obligationer, Korta",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2084",
-        "hitrate_q50": 96.86,
-        "coverage_pct": 98.95,
-        "mae_q50": 0.0159,
-        "forecast_q10": -0.1076,
-        "forecast_q50": 0.0385,
-        "forecast_q90": 0.5102,
-        "last_actual": 0.0036,
-        "momentum_4w": 0.0274,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "HOLD"
+        "signal": "BUY"
       }
     ]
   }

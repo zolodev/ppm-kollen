@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13",
+  "generated": "2026-11-16",
   "week_from": "2026-11-09",
   "min_coverage_pct": 60.0,
   "seasonal_month": 11,
@@ -7,7 +7,7 @@
   "counts": {
     "total": 237,
     "recommended": 3,
-    "low_coverage": 0
+    "low_coverage": 4
   },
   "funds": [
     {
@@ -274,10 +274,10 @@
       "streak_dir": "up",
       "momentum_4w": -1.939,
       "trend": "down",
-      "hitrate_q50": 89.01,
-      "coverage_pct": 75.92,
+      "hitrate_q50": 88.48,
+      "coverage_pct": 30.37,
       "recommended": false,
-      "low_coverage": false,
+      "low_coverage": true,
       "seasonal": null
     },
     {
@@ -310,10 +310,10 @@
       "streak_dir": "up",
       "momentum_4w": -1.224,
       "trend": "down",
-      "hitrate_q50": 85.86,
-      "coverage_pct": 77.49,
+      "hitrate_q50": 84.82,
+      "coverage_pct": 45.55,
       "recommended": false,
-      "low_coverage": false,
+      "low_coverage": true,
       "seasonal": null
     },
     {
@@ -472,8 +472,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.198,
       "trend": "up",
-      "hitrate_q50": 84.75,
-      "coverage_pct": 84.75,
+      "hitrate_q50": 86.44,
+      "coverage_pct": 74.58,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -526,8 +526,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.802,
       "trend": "down",
-      "hitrate_q50": 87.96,
-      "coverage_pct": 87.43,
+      "hitrate_q50": 88.48,
+      "coverage_pct": 63.87,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -670,8 +670,8 @@
       "streak_dir": "up",
       "momentum_4w": 2.003,
       "trend": "up",
-      "hitrate_q50": 79.58,
-      "coverage_pct": 84.29,
+      "hitrate_q50": 78.01,
+      "coverage_pct": 68.59,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -707,7 +707,7 @@
       "momentum_4w": -0.054,
       "trend": "flat",
       "hitrate_q50": 82.2,
-      "coverage_pct": 87.96,
+      "coverage_pct": 91.1,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -742,8 +742,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.924,
       "trend": "up",
-      "hitrate_q50": 86.91,
-      "coverage_pct": 88.48,
+      "hitrate_q50": 85.34,
+      "coverage_pct": 92.15,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -977,7 +977,7 @@
       "momentum_4w": -0.608,
       "trend": "down",
       "hitrate_q50": 84.82,
-      "coverage_pct": 82.72,
+      "coverage_pct": 79.58,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -1031,7 +1031,7 @@
       "momentum_4w": 1.809,
       "trend": "up",
       "hitrate_q50": 86.91,
-      "coverage_pct": 86.39,
+      "coverage_pct": 89.01,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -1247,9 +1247,9 @@
       "momentum_4w": 0.247,
       "trend": "flat",
       "hitrate_q50": 90.05,
-      "coverage_pct": 74.87,
+      "coverage_pct": 47.64,
       "recommended": false,
-      "low_coverage": false,
+      "low_coverage": true,
       "seasonal": null
     },
     {
@@ -1318,8 +1318,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.821,
       "trend": "down",
-      "hitrate_q50": 88.48,
-      "coverage_pct": 89.01,
+      "hitrate_q50": 89.01,
+      "coverage_pct": 91.1,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -1390,8 +1390,8 @@
       "streak_dir": "up",
       "momentum_4w": 1.342,
       "trend": "up",
-      "hitrate_q50": 90.05,
-      "coverage_pct": 92.15,
+      "hitrate_q50": 90.58,
+      "coverage_pct": 71.2,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -1409,7 +1409,7 @@
       "momentum_4w": 0.169,
       "trend": "flat",
       "hitrate_q50": 87.96,
-      "coverage_pct": 92.15,
+      "coverage_pct": 89.01,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -1607,7 +1607,7 @@
       "momentum_4w": 0.698,
       "trend": "up",
       "hitrate_q50": 82.2,
-      "coverage_pct": 84.82,
+      "coverage_pct": 90.58,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -1823,7 +1823,7 @@
       "momentum_4w": 0.851,
       "trend": "up",
       "hitrate_q50": 86.08,
-      "coverage_pct": 72.15,
+      "coverage_pct": 77.22,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -2003,7 +2003,7 @@
       "momentum_4w": -0.15,
       "trend": "flat",
       "hitrate_q50": 91.62,
-      "coverage_pct": 93.19,
+      "coverage_pct": 93.72,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -2038,8 +2038,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.576,
       "trend": "up",
-      "hitrate_q50": 87.96,
-      "coverage_pct": 88.48,
+      "hitrate_q50": 89.01,
+      "coverage_pct": 79.06,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -2182,8 +2182,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.499,
       "trend": "flat",
-      "hitrate_q50": 91.1,
-      "coverage_pct": 88.48,
+      "hitrate_q50": 91.62,
+      "coverage_pct": 91.1,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -2345,7 +2345,7 @@
       "momentum_4w": 0.138,
       "trend": "flat",
       "hitrate_q50": 87.96,
-      "coverage_pct": 83.77,
+      "coverage_pct": 66.49,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -2362,8 +2362,8 @@
       "streak_dir": "up",
       "momentum_4w": -4.848,
       "trend": "down",
-      "hitrate_q50": 82.72,
-      "coverage_pct": 76.44,
+      "hitrate_q50": 82.2,
+      "coverage_pct": 81.68,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -2453,7 +2453,7 @@
       "momentum_4w": -0.802,
       "trend": "down",
       "hitrate_q50": 87.77,
-      "coverage_pct": 72.66,
+      "coverage_pct": 71.94,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -2722,8 +2722,8 @@
       "streak_dir": "up",
       "momentum_4w": 0.791,
       "trend": "up",
-      "hitrate_q50": 90.05,
-      "coverage_pct": 87.43,
+      "hitrate_q50": 89.53,
+      "coverage_pct": 85.34,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -2867,7 +2867,7 @@
       "momentum_4w": 1.03,
       "trend": "up",
       "hitrate_q50": 90.29,
-      "coverage_pct": 81.55,
+      "coverage_pct": 78.64,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -3101,7 +3101,7 @@
       "momentum_4w": 1.151,
       "trend": "up",
       "hitrate_q50": 89.53,
-      "coverage_pct": 85.34,
+      "coverage_pct": 66.49,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -3262,8 +3262,8 @@
       "streak_dir": "up",
       "momentum_4w": -0.581,
       "trend": "down",
-      "hitrate_q50": 86.96,
-      "coverage_pct": 86.96,
+      "hitrate_q50": 89.13,
+      "coverage_pct": 92.03,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -3820,8 +3820,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.489,
       "trend": "flat",
-      "hitrate_q50": 86.39,
-      "coverage_pct": 80.63,
+      "hitrate_q50": 85.86,
+      "coverage_pct": 72.25,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -4252,8 +4252,8 @@
       "streak_dir": "down",
       "momentum_4w": -1.162,
       "trend": "down",
-      "hitrate_q50": 84.82,
-      "coverage_pct": 76.96,
+      "hitrate_q50": 85.34,
+      "coverage_pct": 79.06,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
@@ -4271,9 +4271,9 @@
       "momentum_4w": -0.596,
       "trend": "down",
       "hitrate_q50": 82.72,
-      "coverage_pct": 71.2,
+      "coverage_pct": 40.31,
       "recommended": false,
-      "low_coverage": false,
+      "low_coverage": true,
       "seasonal": null
     }
   ]
