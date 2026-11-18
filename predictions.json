@@ -10,7 +10,104 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": null,
+  "seasonal_month": {
+    "month": 11,
+    "month_name": "november",
+    "strongest": [
+      {
+        "category": "USA",
+        "avg_return": 0.3763,
+        "win_rate": 60.6,
+        "n_weeks": 1194
+      },
+      {
+        "category": "Värdebolag",
+        "avg_return": 0.3371,
+        "win_rate": 59.4,
+        "n_weeks": 229
+      },
+      {
+        "category": "Global & Sverige",
+        "avg_return": 0.3089,
+        "win_rate": 59.8,
+        "n_weeks": 251
+      }
+    ],
+    "weakest": [
+      {
+        "category": "Korta",
+        "avg_return": 0.0225,
+        "win_rate": 73.6,
+        "n_weeks": 819
+      },
+      {
+        "category": "Euro",
+        "avg_return": 0.0257,
+        "win_rate": 51.0,
+        "n_weeks": 388
+      },
+      {
+        "category": "Företag",
+        "avg_return": 0.0325,
+        "win_rate": 66.0,
+        "n_weeks": 747
+      }
+    ],
+    "n_categories": 36,
+    "n_negative": 0,
+    "median_return": 0.2001,
+    "breadth": "strong",
+    "remaining": {
+      "favours": [
+        {
+          "category": "Ny energi",
+          "avg_return": 0.3012,
+          "win_rate": 47.8,
+          "n_weeks": 115
+        },
+        {
+          "category": "Råvaror",
+          "avg_return": 0.2502,
+          "win_rate": 53.4,
+          "n_weeks": 161
+        },
+        {
+          "category": "USA",
+          "avg_return": 0.2269,
+          "win_rate": 55.8,
+          "n_weeks": 622
+        }
+      ],
+      "n_categories": 36
+    },
+    "top_funds": [
+      {
+        "fund_id": "137448",
+        "name": "ISIN FI0008813142",
+        "avg_return": 0.7272,
+        "win_rate": 67.1,
+        "n_weeks": 76,
+        "n_years": 19
+      },
+      {
+        "fund_id": "909774",
+        "name": "Allianz Global Water AT EUR",
+        "avg_return": 0.6162,
+        "win_rate": 65.6,
+        "n_weeks": 32,
+        "n_years": 8
+      },
+      {
+        "fund_id": "600075",
+        "name": "Swedbank Robur Access Global A",
+        "avg_return": 0.6158,
+        "win_rate": 79.5,
+        "n_weeks": 44,
+        "n_years": 11
+      }
+    ],
+    "n_excluded": 4
+  },
   "horizons": {
     "1w": [
       {
@@ -19,17 +116,46 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "score": 147.898,
+        "score": 144.352,
         "hitrate_q50": 86.67,
         "coverage_pct": 60.0,
         "mae_q50": 0.4409,
         "signal": "HOLD",
         "forecast": {
-          "q10": 0.5918,
-          "q50": 1.0244,
-          "q90": 1.6244
+          "q10": 0.6055,
+          "q50": 0.9976,
+          "q90": 1.5796
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Läkemedel",
+          "categories": [
+            {
+              "category": "Läkemedel",
+              "avg_return": 0.2512,
+              "win_rate": 59.4,
+              "n_weeks": 471,
+              "month_percentile": 73.6
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2562,
+              "win_rate": 57.1,
+              "n_weeks": 2529,
+              "month_percentile": 81.9
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2442,
+              "win_rate": 57.0,
+              "n_weeks": 11885,
+              "month_percentile": 68.1
+            }
+          ],
+          "summary": "Läkemedel historiskt i november: +0.25%/vecka, 59% positiva veckor, percentil 74 (471 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -45,16 +171,16 @@
         "warnings": [
           {
             "reason": "anomaly",
-            "detail": "fc=+1.02% = 4.5× mean_pred (limit 3.0×)"
+            "detail": "fc=+1.00% = 4.4× mean_pred (limit 3.0×)"
           }
         ],
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 1.1614,
-          "last_pred_q50": 0.8895,
+          "mae": 1.1794,
+          "last_pred_q50": 0.8592,
           "last_actual": 1.6935,
-          "last_error": -0.8041,
+          "last_error": -0.8343,
           "last_direction_ok": true,
           "date_from": "2026-08-17",
           "date_to": "2026-11-09"
@@ -72,17 +198,39 @@
         "name": "Pictet-Premium Brands R EUR",
         "tags": "Aktiefond, Branschfond, Konsument",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
-        "score": 104.499,
+        "score": 104.494,
         "hitrate_q50": 63.87,
         "coverage_pct": 44.5,
         "mae_q50": 0.6024,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.4297,
-          "q50": 1.0962,
-          "q90": 1.9266
+          "q10": 0.4202,
+          "q50": 1.0975,
+          "q90": 1.9804
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Branschfond",
+          "categories": [
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2562,
+              "win_rate": 57.1,
+              "n_weeks": 2529,
+              "month_percentile": 81.9
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2442,
+              "win_rate": 57.0,
+              "n_weeks": 11885,
+              "month_percentile": 68.1
+            }
+          ],
+          "summary": "Branschfond historiskt i november: +0.26%/vecka, 57% positiva veckor, percentil 82 (2529 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -104,10 +252,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.3199,
-          "last_pred_q50": 1.1853,
+          "mae": 1.3223,
+          "last_pred_q50": 1.2063,
           "last_actual": 0.6964,
-          "last_error": 0.4889,
+          "last_error": 0.5099,
           "last_direction_ok": true,
           "date_from": "2026-08-17",
           "date_to": "2026-11-09"
@@ -124,17 +272,53 @@
         "name": "Carnegie Fastighetsfond Norden A",
         "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "score": 65.49,
+        "score": 70.564,
         "hitrate_q50": 78.63,
         "coverage_pct": 42.75,
         "mae_q50": 0.5912,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.3417,
-          "q50": 0.9414,
-          "q90": 2.6806
+          "q10": 0.3492,
+          "q50": 1.0919,
+          "q90": 2.6325
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "weak",
+          "lead": "Övriga",
+          "categories": [
+            {
+              "category": "Fastighetsbolag",
+              "avg_return": 0.2205,
+              "win_rate": 54.0,
+              "n_weeks": 237,
+              "month_percentile": 56.9
+            },
+            {
+              "category": "Övriga",
+              "avg_return": 0.1229,
+              "win_rate": 58.4,
+              "n_weeks": 637,
+              "month_percentile": 26.4
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2562,
+              "win_rate": 57.1,
+              "n_weeks": 2529,
+              "month_percentile": 81.9
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2442,
+              "win_rate": 57.0,
+              "n_weeks": 11885,
+              "month_percentile": 68.1
+            }
+          ],
+          "summary": "Övriga hör historiskt till de svagaste i november: +0.12%/vecka, 58% positiva veckor (637 veckor)"
+        },
         "consensus": {
           "n_agree": 2,
           "n_models": 3,
@@ -153,6 +337,10 @@
             "detail": "2↑ 1↓ of 3 models"
           },
           {
+            "reason": "seasonal_weak",
+            "detail": "Övriga hör historiskt till de svagaste i november: +0.12%/vecka, 58% positiva veckor (637 veckor)"
+          },
+          {
             "reason": "backtest",
             "detail": "backtest 58.3% < 60%"
           }
@@ -160,10 +348,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 58.3,
-          "mae": 2.852,
-          "last_pred_q50": 1.0904,
+          "mae": 2.8541,
+          "last_pred_q50": 1.1885,
           "last_actual": -0.8371,
-          "last_error": 1.9274,
+          "last_error": 2.0256,
           "last_direction_ok": false,
           "date_from": "2026-08-17",
           "date_to": "2026-11-09"
