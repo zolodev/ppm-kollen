@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18",
+  "generated": "2026-11-19",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -10,104 +10,7 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": {
-    "month": 11,
-    "month_name": "november",
-    "strongest": [
-      {
-        "category": "USA",
-        "avg_return": 0.3763,
-        "win_rate": 60.6,
-        "n_weeks": 1194
-      },
-      {
-        "category": "Värdebolag",
-        "avg_return": 0.3371,
-        "win_rate": 59.4,
-        "n_weeks": 229
-      },
-      {
-        "category": "Global & Sverige",
-        "avg_return": 0.3089,
-        "win_rate": 59.8,
-        "n_weeks": 251
-      }
-    ],
-    "weakest": [
-      {
-        "category": "Korta",
-        "avg_return": 0.0225,
-        "win_rate": 73.6,
-        "n_weeks": 819
-      },
-      {
-        "category": "Euro",
-        "avg_return": 0.0257,
-        "win_rate": 51.0,
-        "n_weeks": 388
-      },
-      {
-        "category": "Företag",
-        "avg_return": 0.0325,
-        "win_rate": 66.0,
-        "n_weeks": 747
-      }
-    ],
-    "n_categories": 36,
-    "n_negative": 0,
-    "median_return": 0.2001,
-    "breadth": "strong",
-    "remaining": {
-      "favours": [
-        {
-          "category": "Ny energi",
-          "avg_return": 0.3012,
-          "win_rate": 47.8,
-          "n_weeks": 115
-        },
-        {
-          "category": "Råvaror",
-          "avg_return": 0.2502,
-          "win_rate": 53.4,
-          "n_weeks": 161
-        },
-        {
-          "category": "USA",
-          "avg_return": 0.2269,
-          "win_rate": 55.8,
-          "n_weeks": 622
-        }
-      ],
-      "n_categories": 36
-    },
-    "top_funds": [
-      {
-        "fund_id": "137448",
-        "name": "ISIN FI0008813142",
-        "avg_return": 0.7272,
-        "win_rate": 67.1,
-        "n_weeks": 76,
-        "n_years": 19
-      },
-      {
-        "fund_id": "909774",
-        "name": "Allianz Global Water AT EUR",
-        "avg_return": 0.6162,
-        "win_rate": 65.6,
-        "n_weeks": 32,
-        "n_years": 8
-      },
-      {
-        "fund_id": "600075",
-        "name": "Swedbank Robur Access Global A",
-        "avg_return": 0.6158,
-        "win_rate": 79.5,
-        "n_weeks": 44,
-        "n_years": 11
-      }
-    ],
-    "n_excluded": 4
-  },
+  "seasonal_month": null,
   "horizons": {
     "1w": [
       {
@@ -116,46 +19,17 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "score": 144.352,
-        "hitrate_q50": 86.67,
-        "coverage_pct": 60.0,
-        "mae_q50": 0.4409,
+        "score": 147.844,
+        "hitrate_q50": 88.33,
+        "coverage_pct": 58.33,
+        "mae_q50": 0.4422,
         "signal": "HOLD",
         "forecast": {
-          "q10": 0.6055,
-          "q50": 0.9976,
-          "q90": 1.5796
+          "q10": 0.6907,
+          "q50": 1.0904,
+          "q90": 1.6582
         },
-        "seasonal": {
-          "month": 11,
-          "month_name": "november",
-          "verdict": "strong",
-          "lead": "Läkemedel",
-          "categories": [
-            {
-              "category": "Läkemedel",
-              "avg_return": 0.2512,
-              "win_rate": 59.4,
-              "n_weeks": 471,
-              "month_percentile": 73.6
-            },
-            {
-              "category": "Branschfond",
-              "avg_return": 0.2562,
-              "win_rate": 57.1,
-              "n_weeks": 2529,
-              "month_percentile": 81.9
-            },
-            {
-              "category": "Aktiefond",
-              "avg_return": 0.2442,
-              "win_rate": 57.0,
-              "n_weeks": 11885,
-              "month_percentile": 68.1
-            }
-          ],
-          "summary": "Läkemedel historiskt i november: +0.25%/vecka, 59% positiva veckor, percentil 74 (471 veckor)"
-        },
+        "seasonal": null,
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -171,100 +45,26 @@
         "warnings": [
           {
             "reason": "anomaly",
-            "detail": "fc=+1.00% = 4.4× mean_pred (limit 3.0×)"
+            "detail": "fc=+1.09% = 5.1× mean_pred (limit 3.0×)"
           }
         ],
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 1.1794,
+          "mae": 1.256,
           "last_pred_q50": 0.8592,
-          "last_actual": 1.6935,
-          "last_error": -0.8343,
+          "last_actual": 2.6128,
+          "last_error": -1.7536,
           "last_direction_ok": true,
           "date_from": "2026-08-17",
           "date_to": "2026-11-09"
         },
-        "rationale": "87% hit-rate; 0.441pp MAE; 3/3 models agree (bullish); 75% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "88% hit-rate; 0.442pp MAE; 3/3 models agree (bullish); 75% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-18/1506920/h1w_ensemble.png",
-          "individual": "top-2026-11-18/1506920/h1w_individual.png"
+          "ensemble": "top-2026-11-19/1506920/h1w_ensemble.png",
+          "individual": "top-2026-11-19/1506920/h1w_individual.png"
         },
         "sticky": true
-      },
-      {
-        "fund_id": "20949",
-        "ppm_code": "923383",
-        "name": "Pictet-Premium Brands R EUR",
-        "tags": "Aktiefond, Branschfond, Konsument",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
-        "score": 104.494,
-        "hitrate_q50": 63.87,
-        "coverage_pct": 44.5,
-        "mae_q50": 0.6024,
-        "signal": "BUY",
-        "forecast": {
-          "q10": 0.4202,
-          "q50": 1.0975,
-          "q90": 1.9804
-        },
-        "seasonal": {
-          "month": 11,
-          "month_name": "november",
-          "verdict": "strong",
-          "lead": "Branschfond",
-          "categories": [
-            {
-              "category": "Branschfond",
-              "avg_return": 0.2562,
-              "win_rate": 57.1,
-              "n_weeks": 2529,
-              "month_percentile": 81.9
-            },
-            {
-              "category": "Aktiefond",
-              "avg_return": 0.2442,
-              "win_rate": 57.0,
-              "n_weeks": 11885,
-              "month_percentile": 68.1
-            }
-          ],
-          "summary": "Branschfond historiskt i november: +0.26%/vecka, 57% positiva veckor, percentil 82 (2529 veckor)"
-        },
-        "consensus": {
-          "n_agree": 3,
-          "n_models": 3,
-          "n_up": 3,
-          "n_down": 0,
-          "models": [
-            "gru",
-            "lstm",
-            "tcn",
-            "xgboost"
-          ]
-        },
-        "warnings": [
-          {
-            "reason": "anomaly",
-            "detail": "fc=+1.10% = 3.9× mean_pred (limit 3.0×)"
-          }
-        ],
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 66.7,
-          "mae": 1.3223,
-          "last_pred_q50": 1.2063,
-          "last_actual": 0.6964,
-          "last_error": 0.5099,
-          "last_direction_ok": true,
-          "date_from": "2026-08-17",
-          "date_to": "2026-11-09"
-        },
-        "rationale": "64% hit-rate; 0.602pp MAE; 3/3 models agree (bullish); 67% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-11-18/20949/h1w_ensemble.png",
-          "individual": "top-2026-11-18/20949/h1w_individual.png"
-        }
       },
       {
         "fund_id": "324195",
@@ -272,53 +72,17 @@
         "name": "Carnegie Fastighetsfond Norden A",
         "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "score": 70.564,
-        "hitrate_q50": 78.63,
-        "coverage_pct": 42.75,
-        "mae_q50": 0.5912,
+        "score": 64.749,
+        "hitrate_q50": 80.15,
+        "coverage_pct": 44.27,
+        "mae_q50": 0.5792,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.3492,
-          "q50": 1.0919,
-          "q90": 2.6325
+          "q10": 0.1049,
+          "q50": 1.0192,
+          "q90": 2.0017
         },
-        "seasonal": {
-          "month": 11,
-          "month_name": "november",
-          "verdict": "weak",
-          "lead": "Övriga",
-          "categories": [
-            {
-              "category": "Fastighetsbolag",
-              "avg_return": 0.2205,
-              "win_rate": 54.0,
-              "n_weeks": 237,
-              "month_percentile": 56.9
-            },
-            {
-              "category": "Övriga",
-              "avg_return": 0.1229,
-              "win_rate": 58.4,
-              "n_weeks": 637,
-              "month_percentile": 26.4
-            },
-            {
-              "category": "Branschfond",
-              "avg_return": 0.2562,
-              "win_rate": 57.1,
-              "n_weeks": 2529,
-              "month_percentile": 81.9
-            },
-            {
-              "category": "Aktiefond",
-              "avg_return": 0.2442,
-              "win_rate": 57.0,
-              "n_weeks": 11885,
-              "month_percentile": 68.1
-            }
-          ],
-          "summary": "Övriga hör historiskt till de svagaste i november: +0.12%/vecka, 58% positiva veckor (637 veckor)"
-        },
+        "seasonal": null,
         "consensus": {
           "n_agree": 2,
           "n_models": 3,
@@ -337,29 +101,85 @@
             "detail": "2↑ 1↓ of 3 models"
           },
           {
-            "reason": "seasonal_weak",
-            "detail": "Övriga hör historiskt till de svagaste i november: +0.12%/vecka, 58% positiva veckor (637 veckor)"
+            "reason": "overheat_reversal",
+            "detail": "4w return +5.1% is 8.2pp off its +13.3% peak in the last 8 weeks"
           },
           {
             "reason": "backtest",
-            "detail": "backtest 58.3% < 60%"
+            "detail": "backtest 50.0% < 60%"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 58.3,
-          "mae": 2.8541,
-          "last_pred_q50": 1.1885,
-          "last_actual": -0.8371,
-          "last_error": 2.0256,
+          "hit_rate_pct": 50.0,
+          "mae": 2.9038,
+          "last_pred_q50": 1.7513,
+          "last_actual": -1.1434,
+          "last_error": 2.8947,
           "last_direction_ok": false,
-          "date_from": "2026-08-17",
-          "date_to": "2026-11-09"
+          "date_from": "2026-08-24",
+          "date_to": "2026-11-16"
         },
-        "rationale": "79% hit-rate; 0.591pp MAE; 2/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "80% hit-rate; 0.579pp MAE; 2/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-18/324195/h1w_ensemble.png",
-          "individual": "top-2026-11-18/324195/h1w_individual.png"
+          "ensemble": "top-2026-11-19/324195/h1w_ensemble.png",
+          "individual": "top-2026-11-19/324195/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "score": 23.908,
+        "hitrate_q50": 76.05,
+        "coverage_pct": 22.16,
+        "mae_q50": 9.4076,
+        "signal": "BUY",
+        "forecast": {
+          "q10": -0.4509,
+          "q50": 1.366,
+          "q90": 2.0644
+        },
+        "seasonal": null,
+        "consensus": {
+          "n_agree": 3,
+          "n_models": 3,
+          "n_up": 3,
+          "n_down": 0,
+          "models": [
+            "gru",
+            "lstm",
+            "tcn",
+            "xgboost"
+          ]
+        },
+        "warnings": [
+          {
+            "reason": "overheat_reversal",
+            "detail": "4w return -9.0% is 23.3pp off its +14.3% peak in the last 8 weeks"
+          },
+          {
+            "reason": "backtest",
+            "detail": "backtest 33.3% < 60%"
+          }
+        ],
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 33.3,
+          "mae": 3.4809,
+          "last_pred_q50": 1.394,
+          "last_actual": -0.8896,
+          "last_error": 2.2836,
+          "last_direction_ok": false,
+          "date_from": "2026-08-24",
+          "date_to": "2026-11-16"
+        },
+        "rationale": "76% hit-rate; 9.408pp MAE; 3/3 models agree (bullish); 33% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-11-19/397/h1w_ensemble.png",
+          "individual": "top-2026-11-19/397/h1w_individual.png"
         }
       }
     ]
@@ -367,55 +187,55 @@
   "rankings": {
     "top_yield": [
       {
-        "fund_id": "20949",
-        "ppm_code": "923383",
-        "name": "Pictet-Premium Brands R EUR",
-        "tags": "Aktiefond, Branschfond, Konsument",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
-        "hitrate_q50": 63.87,
-        "coverage_pct": 44.5,
-        "mae_q50": 0.6024,
-        "forecast_q10": 0.3463,
-        "forecast_q50": 1.1853,
-        "forecast_q90": 1.9319,
-        "last_actual": 0.6964,
-        "momentum_4w": 1.3813,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
         "fund_id": "324195",
         "ppm_code": "320176",
         "name": "Carnegie Fastighetsfond Norden A",
         "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "hitrate_q50": 78.63,
-        "coverage_pct": 42.75,
-        "mae_q50": 0.5912,
-        "forecast_q10": -0.0094,
-        "forecast_q50": 1.0904,
-        "forecast_q90": 1.8507,
-        "last_actual": -0.8371,
-        "momentum_4w": 2.519,
+        "hitrate_q50": 80.15,
+        "coverage_pct": 44.27,
+        "mae_q50": 0.5792,
+        "forecast_q10": 0.4886,
+        "forecast_q50": 1.7513,
+        "forecast_q90": 2.7445,
+        "last_actual": -1.1434,
+        "momentum_4w": 1.298,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "453",
-        "ppm_code": "928341",
-        "name": "Swedbank Robur Healthcare A",
-        "tags": "Aktiefond, Branschfond, Läkemedel",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/453",
-        "hitrate_q50": 58.64,
-        "coverage_pct": 24.61,
-        "mae_q50": 0.5059,
-        "forecast_q10": 0.6508,
-        "forecast_q50": 1.0226,
-        "forecast_q90": 1.5339,
-        "last_actual": 0.9917,
-        "momentum_4w": 2.058,
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 76.05,
+        "coverage_pct": 22.16,
+        "mae_q50": 9.4076,
+        "forecast_q10": -2.025,
+        "forecast_q50": 1.394,
+        "forecast_q90": 1.9003,
+        "last_actual": -0.8896,
+        "momentum_4w": -2.2881,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "20949",
+        "ppm_code": "923383",
+        "name": "Pictet-Premium Brands R EUR",
+        "tags": "Aktiefond, Branschfond, Konsument",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
+        "hitrate_q50": 64.06,
+        "coverage_pct": 44.79,
+        "mae_q50": 0.5997,
+        "forecast_q10": 0.4657,
+        "forecast_q50": 1.2078,
+        "forecast_q90": 2.1253,
+        "last_actual": -0.6987,
+        "momentum_4w": 1.0178,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -428,14 +248,14 @@
         "name": "Carnegie Likviditetsfond A",
         "tags": "Räntefond, SEK, Obligationer, Korta",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2032",
-        "hitrate_q50": 87.96,
-        "coverage_pct": 94.76,
-        "mae_q50": 0.0806,
-        "forecast_q10": 0.0128,
-        "forecast_q50": 0.0219,
-        "forecast_q90": 0.0572,
-        "last_actual": 0.0167,
-        "momentum_4w": 0.0248,
+        "hitrate_q50": 90.1,
+        "coverage_pct": 95.83,
+        "mae_q50": 0.0727,
+        "forecast_q10": 0.0177,
+        "forecast_q50": 0.0269,
+        "forecast_q90": 0.068,
+        "last_actual": 0.0071,
+        "momentum_4w": 0.0318,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "HOLD"
@@ -446,88 +266,88 @@
         "name": "Aktie-Ansvar Avkastningsfond",
         "tags": "Räntefond, SEK, Obligationer, Medellånga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2034",
-        "hitrate_q50": 88.48,
-        "coverage_pct": 90.05,
-        "mae_q50": 0.0605,
+        "hitrate_q50": 90.05,
+        "coverage_pct": 92.15,
+        "mae_q50": 0.0578,
         "forecast_q10": -0.0073,
-        "forecast_q50": -0.0054,
-        "forecast_q90": 0.0291,
-        "last_actual": 0.0075,
-        "momentum_4w": 0.0338,
+        "forecast_q50": -0.0028,
+        "forecast_q90": 0.0339,
+        "last_actual": 0.015,
+        "momentum_4w": 0.0357,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "HOLD"
       },
       {
-        "fund_id": "457577",
-        "ppm_code": "651679",
-        "name": "SEB Dynamisk Räntefond C SEK - Lux",
-        "tags": "Räntefond, Övriga, Obligationer",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/457577",
-        "hitrate_q50": 83.49,
-        "coverage_pct": 94.5,
-        "mae_q50": 0.0698,
-        "forecast_q10": 0.0268,
-        "forecast_q50": 0.2628,
-        "forecast_q90": 0.2628,
-        "last_actual": -0.4152,
-        "momentum_4w": 0.0468,
+        "fund_id": "2084",
+        "ppm_code": "420646",
+        "name": "Länsförsäkringar Kort räntefond",
+        "tags": "Räntefond, SEK, Obligationer, Korta",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/2084",
+        "hitrate_q50": 92.15,
+        "coverage_pct": 87.96,
+        "mae_q50": 0.089,
+        "forecast_q10": 0.0126,
+        "forecast_q50": 0.0457,
+        "forecast_q90": 0.056,
+        "last_actual": 0.0259,
+        "momentum_4w": 0.033,
         "tritch_score": -1.0,
         "tritch_phase": 0,
-        "signal": "BUY"
+        "signal": "HOLD"
       }
     ],
     "top_balanced": [
-      {
-        "fund_id": "20949",
-        "ppm_code": "923383",
-        "name": "Pictet-Premium Brands R EUR",
-        "tags": "Aktiefond, Branschfond, Konsument",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
-        "hitrate_q50": 63.87,
-        "coverage_pct": 44.5,
-        "mae_q50": 0.6024,
-        "forecast_q10": 0.3463,
-        "forecast_q50": 1.1853,
-        "forecast_q90": 1.9319,
-        "last_actual": 0.6964,
-        "momentum_4w": 1.3813,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
       {
         "fund_id": "324195",
         "ppm_code": "320176",
         "name": "Carnegie Fastighetsfond Norden A",
         "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "hitrate_q50": 78.63,
-        "coverage_pct": 42.75,
-        "mae_q50": 0.5912,
-        "forecast_q10": -0.0094,
-        "forecast_q50": 1.0904,
-        "forecast_q90": 1.8507,
-        "last_actual": -0.8371,
-        "momentum_4w": 2.519,
+        "hitrate_q50": 80.15,
+        "coverage_pct": 44.27,
+        "mae_q50": 0.5792,
+        "forecast_q10": 0.4886,
+        "forecast_q50": 1.7513,
+        "forecast_q90": 2.7445,
+        "last_actual": -1.1434,
+        "momentum_4w": 1.298,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "1506920",
-        "ppm_code": "255001",
-        "name": "DNB Health Care S",
-        "tags": "Aktiefond, Branschfond, Läkemedel",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "hitrate_q50": 86.67,
-        "coverage_pct": 60.0,
-        "mae_q50": 0.4409,
-        "forecast_q10": 0.4915,
-        "forecast_q50": 0.8895,
-        "forecast_q90": 1.6762,
-        "last_actual": 1.6935,
-        "momentum_4w": 2.3347,
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 76.05,
+        "coverage_pct": 22.16,
+        "mae_q50": 9.4076,
+        "forecast_q10": -2.025,
+        "forecast_q50": 1.394,
+        "forecast_q90": 1.9003,
+        "last_actual": -0.8896,
+        "momentum_4w": -2.2881,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "20949",
+        "ppm_code": "923383",
+        "name": "Pictet-Premium Brands R EUR",
+        "tags": "Aktiefond, Branschfond, Konsument",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
+        "hitrate_q50": 64.06,
+        "coverage_pct": 44.79,
+        "mae_q50": 0.5997,
+        "forecast_q10": 0.4657,
+        "forecast_q50": 1.2078,
+        "forecast_q90": 2.1253,
+        "last_actual": -0.6987,
+        "momentum_4w": 1.0178,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -535,37 +355,37 @@
     ],
     "top_trending": [
       {
-        "fund_id": "20949",
-        "ppm_code": "923383",
-        "name": "Pictet-Premium Brands R EUR",
-        "tags": "Aktiefond, Branschfond, Konsument",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
-        "hitrate_q50": 63.87,
-        "coverage_pct": 44.5,
-        "mae_q50": 0.6024,
-        "forecast_q10": 0.3463,
-        "forecast_q50": 1.1853,
-        "forecast_q90": 1.9319,
-        "last_actual": 0.6964,
-        "momentum_4w": 1.3813,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
         "fund_id": "453",
         "ppm_code": "928341",
         "name": "Swedbank Robur Healthcare A",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/453",
-        "hitrate_q50": 58.64,
-        "coverage_pct": 24.61,
-        "mae_q50": 0.5059,
-        "forecast_q10": 0.6508,
-        "forecast_q50": 1.0226,
-        "forecast_q90": 1.5339,
-        "last_actual": 0.9917,
-        "momentum_4w": 2.058,
+        "hitrate_q50": 58.12,
+        "coverage_pct": 21.47,
+        "mae_q50": 0.5083,
+        "forecast_q10": 0.655,
+        "forecast_q50": 1.041,
+        "forecast_q90": 1.4917,
+        "last_actual": 1.7354,
+        "momentum_4w": 2.2439,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "70371",
+        "ppm_code": "170894",
+        "name": "Franklin India A(acc)USD",
+        "tags": "Aktiefond, Indien",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/70371",
+        "hitrate_q50": 75.52,
+        "coverage_pct": 35.42,
+        "mae_q50": 0.5138,
+        "forecast_q10": 0.4462,
+        "forecast_q50": 0.8319,
+        "forecast_q90": 2.0865,
+        "last_actual": 1.0186,
+        "momentum_4w": 3.5361,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -576,14 +396,14 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "hitrate_q50": 86.67,
-        "coverage_pct": 60.0,
-        "mae_q50": 0.4409,
-        "forecast_q10": 0.4915,
-        "forecast_q50": 0.8895,
-        "forecast_q90": 1.6762,
-        "last_actual": 1.6935,
-        "momentum_4w": 2.3347,
+        "hitrate_q50": 88.33,
+        "coverage_pct": 58.33,
+        "mae_q50": 0.4422,
+        "forecast_q10": 0.508,
+        "forecast_q50": 0.8592,
+        "forecast_q90": 1.6293,
+        "last_actual": 2.6128,
+        "momentum_4w": 2.5646,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -591,37 +411,37 @@
     ],
     "top_winners": [
       {
-        "fund_id": "20949",
-        "ppm_code": "923383",
-        "name": "Pictet-Premium Brands R EUR",
-        "tags": "Aktiefond, Branschfond, Konsument",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
-        "hitrate_q50": 63.87,
-        "coverage_pct": 44.5,
-        "mae_q50": 0.6024,
-        "forecast_q10": 0.3463,
-        "forecast_q50": 1.1853,
-        "forecast_q90": 1.9319,
-        "last_actual": 0.6964,
-        "momentum_4w": 1.3813,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
         "fund_id": "324195",
         "ppm_code": "320176",
         "name": "Carnegie Fastighetsfond Norden A",
         "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "hitrate_q50": 78.63,
-        "coverage_pct": 42.75,
-        "mae_q50": 0.5912,
-        "forecast_q10": -0.0094,
-        "forecast_q50": 1.0904,
-        "forecast_q90": 1.8507,
-        "last_actual": -0.8371,
-        "momentum_4w": 2.519,
+        "hitrate_q50": 80.15,
+        "coverage_pct": 44.27,
+        "mae_q50": 0.5792,
+        "forecast_q10": 0.4886,
+        "forecast_q50": 1.7513,
+        "forecast_q90": 2.7445,
+        "last_actual": -1.1434,
+        "momentum_4w": 1.298,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 76.05,
+        "coverage_pct": 22.16,
+        "mae_q50": 9.4076,
+        "forecast_q10": -2.025,
+        "forecast_q50": 1.394,
+        "forecast_q90": 1.9003,
+        "last_actual": -0.8896,
+        "momentum_4w": -2.2881,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -632,14 +452,14 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "hitrate_q50": 86.67,
-        "coverage_pct": 60.0,
-        "mae_q50": 0.4409,
-        "forecast_q10": 0.4915,
-        "forecast_q50": 0.8895,
-        "forecast_q90": 1.6762,
-        "last_actual": 1.6935,
-        "momentum_4w": 2.3347,
+        "hitrate_q50": 88.33,
+        "coverage_pct": 58.33,
+        "mae_q50": 0.4422,
+        "forecast_q10": 0.508,
+        "forecast_q50": 0.8592,
+        "forecast_q90": 1.6293,
+        "last_actual": 2.6128,
+        "momentum_4w": 2.5646,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -647,55 +467,55 @@
     ],
     "top_overall": [
       {
-        "fund_id": "20949",
-        "ppm_code": "923383",
-        "name": "Pictet-Premium Brands R EUR",
-        "tags": "Aktiefond, Branschfond, Konsument",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
-        "hitrate_q50": 63.87,
-        "coverage_pct": 44.5,
-        "mae_q50": 0.6024,
-        "forecast_q10": 0.3463,
-        "forecast_q50": 1.1853,
-        "forecast_q90": 1.9319,
-        "last_actual": 0.6964,
-        "momentum_4w": 1.3813,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
         "fund_id": "324195",
         "ppm_code": "320176",
         "name": "Carnegie Fastighetsfond Norden A",
         "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "hitrate_q50": 78.63,
-        "coverage_pct": 42.75,
-        "mae_q50": 0.5912,
-        "forecast_q10": -0.0094,
-        "forecast_q50": 1.0904,
-        "forecast_q90": 1.8507,
-        "last_actual": -0.8371,
-        "momentum_4w": 2.519,
+        "hitrate_q50": 80.15,
+        "coverage_pct": 44.27,
+        "mae_q50": 0.5792,
+        "forecast_q10": 0.4886,
+        "forecast_q50": 1.7513,
+        "forecast_q90": 2.7445,
+        "last_actual": -1.1434,
+        "momentum_4w": 1.298,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "1506920",
-        "ppm_code": "255001",
-        "name": "DNB Health Care S",
-        "tags": "Aktiefond, Branschfond, Läkemedel",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "hitrate_q50": 86.67,
-        "coverage_pct": 60.0,
-        "mae_q50": 0.4409,
-        "forecast_q10": 0.4915,
-        "forecast_q50": 0.8895,
-        "forecast_q90": 1.6762,
-        "last_actual": 1.6935,
-        "momentum_4w": 2.3347,
+        "fund_id": "397",
+        "ppm_code": "496729",
+        "name": "Franklin Technology Fund A",
+        "tags": "",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
+        "hitrate_q50": 76.05,
+        "coverage_pct": 22.16,
+        "mae_q50": 9.4076,
+        "forecast_q10": -2.025,
+        "forecast_q50": 1.394,
+        "forecast_q90": 1.9003,
+        "last_actual": -0.8896,
+        "momentum_4w": -2.2881,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "20949",
+        "ppm_code": "923383",
+        "name": "Pictet-Premium Brands R EUR",
+        "tags": "Aktiefond, Branschfond, Konsument",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
+        "hitrate_q50": 64.06,
+        "coverage_pct": 44.79,
+        "mae_q50": 0.5997,
+        "forecast_q10": 0.4657,
+        "forecast_q50": 1.2078,
+        "forecast_q90": 2.1253,
+        "last_actual": -0.6987,
+        "momentum_4w": 1.0178,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -703,37 +523,37 @@
     ],
     "top_streak": [
       {
-        "fund_id": "20949",
-        "ppm_code": "923383",
-        "name": "Pictet-Premium Brands R EUR",
-        "tags": "Aktiefond, Branschfond, Konsument",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
-        "hitrate_q50": 63.87,
-        "coverage_pct": 44.5,
-        "mae_q50": 0.6024,
-        "forecast_q10": 0.3463,
-        "forecast_q50": 1.1853,
-        "forecast_q90": 1.9319,
-        "last_actual": 0.6964,
-        "momentum_4w": 1.3813,
-        "tritch_score": -1.0,
-        "tritch_phase": 0,
-        "signal": "BUY"
-      },
-      {
         "fund_id": "324195",
         "ppm_code": "320176",
         "name": "Carnegie Fastighetsfond Norden A",
         "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "hitrate_q50": 78.63,
-        "coverage_pct": 42.75,
-        "mae_q50": 0.5912,
-        "forecast_q10": -0.0094,
-        "forecast_q50": 1.0904,
-        "forecast_q90": 1.8507,
-        "last_actual": -0.8371,
-        "momentum_4w": 2.519,
+        "hitrate_q50": 80.15,
+        "coverage_pct": 44.27,
+        "mae_q50": 0.5792,
+        "forecast_q10": 0.4886,
+        "forecast_q50": 1.7513,
+        "forecast_q90": 2.7445,
+        "last_actual": -1.1434,
+        "momentum_4w": 1.298,
+        "tritch_score": -1.0,
+        "tritch_phase": 0,
+        "signal": "BUY"
+      },
+      {
+        "fund_id": "20949",
+        "ppm_code": "923383",
+        "name": "Pictet-Premium Brands R EUR",
+        "tags": "Aktiefond, Branschfond, Konsument",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/20949",
+        "hitrate_q50": 64.06,
+        "coverage_pct": 44.79,
+        "mae_q50": 0.5997,
+        "forecast_q10": 0.4657,
+        "forecast_q50": 1.2078,
+        "forecast_q90": 2.1253,
+        "last_actual": -0.6987,
+        "momentum_4w": 1.0178,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
@@ -744,14 +564,14 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "hitrate_q50": 86.67,
-        "coverage_pct": 60.0,
-        "mae_q50": 0.4409,
-        "forecast_q10": 0.4915,
-        "forecast_q50": 0.8895,
-        "forecast_q90": 1.6762,
-        "last_actual": 1.6935,
-        "momentum_4w": 2.3347,
+        "hitrate_q50": 88.33,
+        "coverage_pct": 58.33,
+        "mae_q50": 0.4422,
+        "forecast_q10": 0.508,
+        "forecast_q50": 0.8592,
+        "forecast_q90": 1.6293,
+        "last_actual": 2.6128,
+        "momentum_4w": 2.5646,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
