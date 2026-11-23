@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20",
+  "generated": "2026-11-23",
   "target_mode": "quantile",
   "scaler_mode": "robust",
   "active_models": [
@@ -19,15 +19,15 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "score": 219.942,
+        "score": 219.865,
         "hitrate_q50": 83.33,
         "coverage_pct": 86.67,
         "mae_q50": 0.2932,
-        "signal": "HOLD",
+        "signal": "BUY",
         "forecast": {
-          "q10": -0.1569,
-          "q50": 1.5352,
-          "q90": 2.8322
+          "q10": -0.3678,
+          "q50": 1.5344,
+          "q90": 2.8145
         },
         "seasonal": null,
         "consensus": {
@@ -49,7 +49,7 @@
           },
           {
             "reason": "anomaly",
-            "detail": "fc=+1.54% = 3.7× mean_pred (limit 3.0×)"
+            "detail": "fc=+1.53% = 3.7× mean_pred (limit 3.0×)"
           }
         ],
         "backtest": {
@@ -65,10 +65,10 @@
         },
         "rationale": "83% hit-rate; 0.293pp MAE; 3/3 models agree (bullish); 75% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-20/1506920/h1w_ensemble.png",
-          "individual": "top-2026-11-20/1506920/h1w_individual.png"
+          "ensemble": "top-2026-11-23/1506920/h1w_ensemble.png",
+          "individual": "top-2026-11-23/1506920/h1w_individual.png"
         },
-        "sticky": true
+        "sticky": false
       },
       {
         "fund_id": "324195",
@@ -76,15 +76,15 @@
         "name": "Carnegie Fastighetsfond Norden A",
         "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "score": 106.457,
+        "score": 107.394,
         "hitrate_q50": 86.26,
         "coverage_pct": 77.1,
         "mae_q50": 0.4709,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.3695,
-          "q50": 1.292,
-          "q90": 2.398
+          "q10": 0.3548,
+          "q50": 1.3223,
+          "q90": 2.3994
         },
         "seasonal": null,
         "consensus": {
@@ -122,8 +122,8 @@
         },
         "rationale": "86% hit-rate; 0.471pp MAE; 3/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-20/324195/h1w_ensemble.png",
-          "individual": "top-2026-11-20/324195/h1w_individual.png"
+          "ensemble": "top-2026-11-23/324195/h1w_ensemble.png",
+          "individual": "top-2026-11-23/324195/h1w_individual.png"
         }
       },
       {
@@ -132,15 +132,15 @@
         "name": "Franklin Technology Fund A",
         "tags": "",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-        "score": 101.938,
+        "score": 86.527,
         "hitrate_q50": 94.01,
         "coverage_pct": 89.82,
         "mae_q50": 4.3468,
-        "signal": "BUY",
+        "signal": "HOLD",
         "forecast": {
-          "q10": -0.0807,
-          "q50": 1.4574,
-          "q90": 1.4574
+          "q10": -0.1052,
+          "q50": 0.1737,
+          "q90": 0.1737
         },
         "seasonal": null,
         "consensus": {
@@ -178,8 +178,8 @@
         },
         "rationale": "94% hit-rate; 4.347pp MAE; 3/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
-          "ensemble": "top-2026-11-20/397/h1w_ensemble.png",
-          "individual": "top-2026-11-20/397/h1w_individual.png"
+          "ensemble": "top-2026-11-23/397/h1w_ensemble.png",
+          "individual": "top-2026-11-23/397/h1w_individual.png"
         }
       }
     ]

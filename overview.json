@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20",
+  "generated": "2026-11-23",
   "week_from": "2026-11-16",
   "min_coverage_pct": 60.0,
   "seasonal_month": 11,
@@ -2110,8 +2110,8 @@
       "streak_dir": "down",
       "momentum_4w": -0.256,
       "trend": "flat",
-      "hitrate_q50": 88.54,
-      "coverage_pct": 89.58,
+      "hitrate_q50": 88.02,
+      "coverage_pct": 72.92,
       "recommended": false,
       "low_coverage": false,
       "seasonal": null
