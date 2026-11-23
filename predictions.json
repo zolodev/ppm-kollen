@@ -10,7 +10,104 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": null,
+  "seasonal_month": {
+    "month": 11,
+    "month_name": "november",
+    "strongest": [
+      {
+        "category": "USA",
+        "avg_return": 0.3475,
+        "win_rate": 59.9,
+        "n_weeks": 1209
+      },
+      {
+        "category": "Värdebolag",
+        "avg_return": 0.3132,
+        "win_rate": 58.6,
+        "n_weeks": 232
+      },
+      {
+        "category": "Global & Sverige",
+        "avg_return": 0.2786,
+        "win_rate": 59.1,
+        "n_weeks": 254
+      }
+    ],
+    "weakest": [
+      {
+        "category": "Korta",
+        "avg_return": 0.023,
+        "win_rate": 73.9,
+        "n_weeks": 829
+      },
+      {
+        "category": "Euro",
+        "avg_return": 0.0274,
+        "win_rate": 51.1,
+        "n_weeks": 393
+      },
+      {
+        "category": "Företag",
+        "avg_return": 0.0322,
+        "win_rate": 66.2,
+        "n_weeks": 757
+      }
+    ],
+    "n_categories": 36,
+    "n_negative": 0,
+    "median_return": 0.184,
+    "breadth": "strong",
+    "remaining": {
+      "favours": [
+        {
+          "category": "Ny energi",
+          "avg_return": 0.2466,
+          "win_rate": 46.6,
+          "n_weeks": 118
+        },
+        {
+          "category": "Indien",
+          "avg_return": 0.2328,
+          "win_rate": 60.7,
+          "n_weeks": 234
+        },
+        {
+          "category": "USA",
+          "avg_return": 0.1995,
+          "win_rate": 54.6,
+          "n_weeks": 637
+        }
+      ],
+      "n_categories": 36
+    },
+    "top_funds": [
+      {
+        "fund_id": "137448",
+        "name": "ISIN FI0008813142",
+        "avg_return": 0.7014,
+        "win_rate": 66.2,
+        "n_weeks": 77,
+        "n_years": 19
+      },
+      {
+        "fund_id": "909774",
+        "name": "Allianz Global Water AT EUR",
+        "avg_return": 0.5919,
+        "win_rate": 63.6,
+        "n_weeks": 33,
+        "n_years": 8
+      },
+      {
+        "fund_id": "600075",
+        "name": "Swedbank Robur Access Global A",
+        "avg_return": 0.5539,
+        "win_rate": 77.8,
+        "n_weeks": 45,
+        "n_years": 11
+      }
+    ],
+    "n_excluded": 4
+  },
   "horizons": {
     "1w": [
       {
@@ -19,17 +116,46 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "score": 219.865,
+        "score": 139.392,
         "hitrate_q50": 83.33,
         "coverage_pct": 86.67,
         "mae_q50": 0.2932,
-        "signal": "BUY",
+        "signal": "HOLD",
         "forecast": {
-          "q10": -0.3678,
-          "q50": 1.5344,
-          "q90": 2.8145
+          "q10": -0.0619,
+          "q50": 0.6159,
+          "q90": 1.7325
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Läkemedel",
+          "categories": [
+            {
+              "category": "Läkemedel",
+              "avg_return": 0.2372,
+              "win_rate": 58.7,
+              "n_weeks": 477,
+              "month_percentile": 84.7
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2171,
+              "win_rate": 56.2,
+              "n_weeks": 2562,
+              "month_percentile": 70.8
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2144,
+              "win_rate": 56.2,
+              "n_weeks": 12043,
+              "month_percentile": 68.1
+            }
+          ],
+          "summary": "Läkemedel historiskt i november: +0.24%/vecka, 59% positiva veckor, percentil 85 (477 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -46,85 +172,25 @@
           {
             "reason": "overheat_reversal",
             "detail": "4w return +6.0% is 4.7pp off its +10.7% peak in the last 8 weeks"
-          },
-          {
-            "reason": "anomaly",
-            "detail": "fc=+1.53% = 3.7× mean_pred (limit 3.0×)"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 75.0,
-          "mae": 1.2657,
-          "last_pred_q50": 2.1948,
+          "hit_rate_pct": 83.3,
+          "mae": 1.2344,
+          "last_pred_q50": 1.1055,
           "last_actual": -1.1266,
-          "last_error": 3.3214,
+          "last_error": 2.2321,
           "last_direction_ok": false,
           "date_from": "2026-08-24",
           "date_to": "2026-11-16"
         },
-        "rationale": "83% hit-rate; 0.293pp MAE; 3/3 models agree (bullish); 75% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "83% hit-rate; 0.293pp MAE; 3/3 models agree (bullish); 83% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-11-23/1506920/h1w_ensemble.png",
           "individual": "top-2026-11-23/1506920/h1w_individual.png"
         },
-        "sticky": false
-      },
-      {
-        "fund_id": "324195",
-        "ppm_code": "320176",
-        "name": "Carnegie Fastighetsfond Norden A",
-        "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
-        "score": 107.394,
-        "hitrate_q50": 86.26,
-        "coverage_pct": 77.1,
-        "mae_q50": 0.4709,
-        "signal": "BUY",
-        "forecast": {
-          "q10": 0.3548,
-          "q50": 1.3223,
-          "q90": 2.3994
-        },
-        "seasonal": null,
-        "consensus": {
-          "n_agree": 3,
-          "n_models": 3,
-          "n_up": 3,
-          "n_down": 0,
-          "models": [
-            "gru",
-            "lstm",
-            "tcn",
-            "xgboost"
-          ]
-        },
-        "warnings": [
-          {
-            "reason": "overheat_reversal",
-            "detail": "4w return +5.2% is 8.1pp off its +13.3% peak in the last 8 weeks"
-          },
-          {
-            "reason": "backtest",
-            "detail": "backtest 50.0% < 60%"
-          }
-        ],
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 50.0,
-          "mae": 2.763,
-          "last_pred_q50": 1.8528,
-          "last_actual": -1.0182,
-          "last_error": 2.871,
-          "last_direction_ok": false,
-          "date_from": "2026-08-24",
-          "date_to": "2026-11-16"
-        },
-        "rationale": "86% hit-rate; 0.471pp MAE; 3/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-11-23/324195/h1w_ensemble.png",
-          "individual": "top-2026-11-23/324195/h1w_individual.png"
-        }
+        "sticky": true
       },
       {
         "fund_id": "397",
@@ -132,22 +198,22 @@
         "name": "Franklin Technology Fund A",
         "tags": "",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/397",
-        "score": 86.527,
+        "score": 85.051,
         "hitrate_q50": 94.01,
         "coverage_pct": 89.82,
         "mae_q50": 4.3468,
         "signal": "HOLD",
         "forecast": {
-          "q10": -0.1052,
-          "q50": 0.1737,
-          "q90": 0.1737
+          "q10": -2.1948,
+          "q50": 0.0392,
+          "q90": 3.3287
         },
         "seasonal": null,
         "consensus": {
-          "n_agree": 3,
+          "n_agree": 2,
           "n_models": 3,
-          "n_up": 3,
-          "n_down": 0,
+          "n_up": 2,
+          "n_down": 1,
           "models": [
             "gru",
             "lstm",
@@ -157,29 +223,129 @@
         },
         "warnings": [
           {
+            "reason": "consensus",
+            "detail": "2↑ 1↓ of 3 models"
+          },
+          {
             "reason": "overheat_reversal",
             "detail": "4w return -7.5% is 21.7pp off its +14.3% peak in the last 8 weeks"
           },
           {
             "reason": "backtest",
-            "detail": "backtest 50.0% < 60%"
+            "detail": "backtest 58.3% < 60%"
           }
         ],
         "backtest": {
           "weeks": 12,
-          "hit_rate_pct": 50.0,
-          "mae": 3.983,
-          "last_pred_q50": 3.059,
+          "hit_rate_pct": 58.3,
+          "mae": 3.1531,
+          "last_pred_q50": 0.0646,
           "last_actual": 0.807,
-          "last_error": 2.252,
+          "last_error": -0.7424,
           "last_direction_ok": true,
           "date_from": "2026-08-24",
           "date_to": "2026-11-16"
         },
-        "rationale": "94% hit-rate; 4.347pp MAE; 3/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "rationale": "94% hit-rate; 4.347pp MAE; 2/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
         "charts": {
           "ensemble": "top-2026-11-23/397/h1w_ensemble.png",
           "individual": "top-2026-11-23/397/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "324195",
+        "ppm_code": "320176",
+        "name": "Carnegie Fastighetsfond Norden A",
+        "tags": "Aktiefond, Branschfond, Fastighetsbolag, Övriga",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/324195",
+        "score": 80.096,
+        "hitrate_q50": 86.26,
+        "coverage_pct": 77.1,
+        "mae_q50": 0.4709,
+        "signal": "BUY",
+        "forecast": {
+          "q10": -0.2202,
+          "q50": 0.3572,
+          "q90": 2.0654
+        },
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "neutral",
+          "lead": "Fastighetsbolag",
+          "categories": [
+            {
+              "category": "Fastighetsbolag",
+              "avg_return": 0.2086,
+              "win_rate": 53.3,
+              "n_weeks": 240,
+              "month_percentile": 62.5
+            },
+            {
+              "category": "Övriga",
+              "avg_return": 0.1149,
+              "win_rate": 58.3,
+              "n_weeks": 647,
+              "month_percentile": 34.7
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.2171,
+              "win_rate": 56.2,
+              "n_weeks": 2562,
+              "month_percentile": 70.8
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.2144,
+              "win_rate": 56.2,
+              "n_weeks": 12043,
+              "month_percentile": 68.1
+            }
+          ],
+          "summary": "Fastighetsbolag historiskt i november: +0.21%/vecka, 53% positiva veckor, percentil 62 (240 veckor)"
+        },
+        "consensus": {
+          "n_agree": 2,
+          "n_models": 3,
+          "n_up": 2,
+          "n_down": 1,
+          "models": [
+            "gru",
+            "lstm",
+            "tcn",
+            "xgboost"
+          ]
+        },
+        "warnings": [
+          {
+            "reason": "consensus",
+            "detail": "2↑ 1↓ of 3 models"
+          },
+          {
+            "reason": "overheat_reversal",
+            "detail": "4w return +5.2% is 8.1pp off its +13.3% peak in the last 8 weeks"
+          },
+          {
+            "reason": "backtest",
+            "detail": "backtest 58.3% < 60%"
+          }
+        ],
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 58.3,
+          "mae": 2.5937,
+          "last_pred_q50": 0.8593,
+          "last_actual": -1.0182,
+          "last_error": 1.8776,
+          "last_direction_ok": false,
+          "date_from": "2026-08-24",
+          "date_to": "2026-11-16"
+        },
+        "rationale": "86% hit-rate; 0.471pp MAE; 2/3 models agree (bullish); 58% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-11-23/324195/h1w_ensemble.png",
+          "individual": "top-2026-11-23/324195/h1w_individual.png"
         }
       }
     ]
