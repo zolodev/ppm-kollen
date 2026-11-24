@@ -10,7 +10,104 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": null,
+  "seasonal_month": {
+    "month": 11,
+    "month_name": "november",
+    "strongest": [
+      {
+        "category": "USA",
+        "avg_return": 0.3248,
+        "win_rate": 59.8,
+        "n_weeks": 1209
+      },
+      {
+        "category": "Värdebolag",
+        "avg_return": 0.2906,
+        "win_rate": 58.6,
+        "n_weeks": 232
+      },
+      {
+        "category": "Global & Sverige",
+        "avg_return": 0.2575,
+        "win_rate": 59.1,
+        "n_weeks": 254
+      }
+    ],
+    "weakest": [
+      {
+        "category": "Korta",
+        "avg_return": 0.0237,
+        "win_rate": 73.9,
+        "n_weeks": 829
+      },
+      {
+        "category": "Råvaror",
+        "avg_return": 0.0258,
+        "win_rate": 51.4,
+        "n_weeks": 313
+      },
+      {
+        "category": "Norge",
+        "avg_return": 0.0307,
+        "win_rate": 49.2,
+        "n_weeks": 372
+      }
+    ],
+    "n_categories": 36,
+    "n_negative": 0,
+    "median_return": 0.1658,
+    "breadth": "strong",
+    "remaining": {
+      "favours": [
+        {
+          "category": "Indien",
+          "avg_return": 0.3033,
+          "win_rate": 61.1,
+          "n_weeks": 234
+        },
+        {
+          "category": "Ny energi",
+          "avg_return": 0.1609,
+          "win_rate": 46.6,
+          "n_weeks": 118
+        },
+        {
+          "category": "USA",
+          "avg_return": 0.1564,
+          "win_rate": 54.5,
+          "n_weeks": 637
+        }
+      ],
+      "n_categories": 36
+    },
+    "top_funds": [
+      {
+        "fund_id": "137448",
+        "name": "ISIN FI0008813142",
+        "avg_return": 0.6975,
+        "win_rate": 66.2,
+        "n_weeks": 77,
+        "n_years": 19
+      },
+      {
+        "fund_id": "909774",
+        "name": "Allianz Global Water AT EUR",
+        "avg_return": 0.5435,
+        "win_rate": 63.6,
+        "n_weeks": 33,
+        "n_years": 8
+      },
+      {
+        "fund_id": "693994",
+        "name": "Spiltan Globalfond Investmentbolag",
+        "avg_return": 0.5255,
+        "win_rate": 61.0,
+        "n_weeks": 41,
+        "n_years": 10
+      }
+    ],
+    "n_excluded": 4
+  },
   "horizons": {
     "1w": [
       {
@@ -19,17 +116,46 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "score": 95.278,
+        "score": 97.1,
         "hitrate_q50": 80.0,
         "coverage_pct": 71.67,
         "mae_q50": 0.4578,
         "signal": "HOLD",
         "forecast": {
-          "q10": -0.2348,
-          "q50": 0.4315,
-          "q90": 1.5697
+          "q10": -0.1492,
+          "q50": 0.4509,
+          "q90": 1.6104
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Läkemedel",
+          "categories": [
+            {
+              "category": "Läkemedel",
+              "avg_return": 0.2113,
+              "win_rate": 58.7,
+              "n_weeks": 477,
+              "month_percentile": 81.9
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.1903,
+              "win_rate": 56.2,
+              "n_weeks": 12043,
+              "month_percentile": 68.1
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.1901,
+              "win_rate": 56.2,
+              "n_weeks": 2562,
+              "month_percentile": 65.3
+            }
+          ],
+          "summary": "Läkemedel historiskt i november: +0.21%/vecka, 59% positiva veckor, percentil 82 (477 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -51,10 +177,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 83.3,
-          "mae": 1.4367,
-          "last_pred_q50": 1.1055,
+          "mae": 1.4312,
+          "last_pred_q50": 1.1537,
           "last_actual": -3.5547,
-          "last_error": 4.6602,
+          "last_error": 4.7084,
           "last_direction_ok": false,
           "date_from": "2026-08-24",
           "date_to": "2026-11-16"
@@ -72,17 +198,46 @@
         "name": "Spiltan Globalfond Investmentbolag",
         "tags": "Aktiefond, Global, Mix bolag",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/693994",
-        "score": 129.933,
+        "score": 131.197,
         "hitrate_q50": 62.96,
         "coverage_pct": 67.9,
         "mae_q50": 0.3814,
         "signal": "BUY",
         "forecast": {
-          "q10": 0.0083,
-          "q50": 0.9702,
-          "q90": 1.6754
+          "q10": 0.1582,
+          "q50": 0.9826,
+          "q90": 1.4513
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Global",
+          "categories": [
+            {
+              "category": "Global",
+              "avg_return": 0.2404,
+              "win_rate": 59.0,
+              "n_weeks": 1558,
+              "month_percentile": 87.5
+            },
+            {
+              "category": "Mix bolag",
+              "avg_return": 0.2153,
+              "win_rate": 58.8,
+              "n_weeks": 3004,
+              "month_percentile": 84.7
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.1903,
+              "win_rate": 56.2,
+              "n_weeks": 12043,
+              "month_percentile": 68.1
+            }
+          ],
+          "summary": "Global historiskt i november: +0.24%/vecka, 59% positiva veckor, percentil 88 (1558 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -99,10 +254,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 66.7,
-          "mae": 1.1032,
-          "last_pred_q50": 1.2113,
+          "mae": 1.1007,
+          "last_pred_q50": 1.2016,
           "last_actual": -2.1882,
-          "last_error": 3.3995,
+          "last_error": 3.3898,
           "last_direction_ok": false,
           "date_from": "2026-08-24",
           "date_to": "2026-11-16"
@@ -119,17 +274,46 @@
         "name": "Swedbank Robur Healthcare A",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/453",
-        "score": 84.901,
+        "score": 89.341,
         "hitrate_q50": 53.65,
         "coverage_pct": 46.88,
         "mae_q50": 0.5864,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.3939,
-          "q50": 0.7786,
-          "q90": 1.3055
+          "q10": -0.231,
+          "q50": 0.8338,
+          "q90": 1.369
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Läkemedel",
+          "categories": [
+            {
+              "category": "Läkemedel",
+              "avg_return": 0.2113,
+              "win_rate": 58.7,
+              "n_weeks": 477,
+              "month_percentile": 81.9
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.1903,
+              "win_rate": 56.2,
+              "n_weeks": 12043,
+              "month_percentile": 68.1
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.1901,
+              "win_rate": 56.2,
+              "n_weeks": 2562,
+              "month_percentile": 65.3
+            }
+          ],
+          "summary": "Läkemedel historiskt i november: +0.21%/vecka, 59% positiva veckor, percentil 82 (477 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -151,10 +335,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 1.3681,
-          "last_pred_q50": 1.3937,
+          "mae": 1.3619,
+          "last_pred_q50": 1.4517,
           "last_actual": -3.899,
-          "last_error": 5.2927,
+          "last_error": 5.3506,
           "last_direction_ok": false,
           "date_from": "2026-08-24",
           "date_to": "2026-11-16"
@@ -524,37 +708,37 @@
         "signal": "BUY"
       },
       {
-        "fund_id": "43947",
-        "ppm_code": "469692",
-        "name": "Nordea Indienfond",
-        "tags": "Aktiefond, Indien",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/43947",
-        "hitrate_q50": 69.84,
-        "coverage_pct": 66.67,
-        "mae_q50": 0.5594,
-        "forecast_q10": 0.6188,
-        "forecast_q50": 0.9434,
-        "forecast_q90": 1.3867,
-        "last_actual": 4.0783,
-        "momentum_4w": 4.4665,
+        "fund_id": "453",
+        "ppm_code": "928341",
+        "name": "Swedbank Robur Healthcare A",
+        "tags": "Aktiefond, Branschfond, Läkemedel",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/453",
+        "hitrate_q50": 53.65,
+        "coverage_pct": 46.88,
+        "mae_q50": 0.5864,
+        "forecast_q10": 0.4685,
+        "forecast_q50": 1.3937,
+        "forecast_q90": 1.6618,
+        "last_actual": -3.899,
+        "momentum_4w": 0.5248,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
       },
       {
-        "fund_id": "457577",
-        "ppm_code": "651679",
-        "name": "SEB Dynamisk Räntefond C SEK - Lux",
-        "tags": "Räntefond, Övriga, Obligationer",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/457577",
-        "hitrate_q50": 87.16,
-        "coverage_pct": 98.17,
-        "mae_q50": 0.0779,
-        "forecast_q10": 0.1813,
-        "forecast_q50": 0.3092,
-        "forecast_q90": 0.3092,
-        "last_actual": 0.392,
-        "momentum_4w": 0.1237,
+        "fund_id": "693994",
+        "ppm_code": "465147",
+        "name": "Spiltan Globalfond Investmentbolag",
+        "tags": "Aktiefond, Global, Mix bolag",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/693994",
+        "hitrate_q50": 62.96,
+        "coverage_pct": 67.9,
+        "mae_q50": 0.3814,
+        "forecast_q10": 0.2829,
+        "forecast_q50": 1.2113,
+        "forecast_q90": 1.7055,
+        "last_actual": -2.1882,
+        "momentum_4w": 0.9255,
         "tritch_score": -1.0,
         "tritch_phase": 0,
         "signal": "BUY"
