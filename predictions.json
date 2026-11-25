@@ -10,7 +10,104 @@
   ],
   "top_n_funds": 3,
   "winner_funds": 3,
-  "seasonal_month": null,
+  "seasonal_month": {
+    "month": 11,
+    "month_name": "november",
+    "strongest": [
+      {
+        "category": "USA",
+        "avg_return": 0.3224,
+        "win_rate": 59.9,
+        "n_weeks": 1209
+      },
+      {
+        "category": "Värdebolag",
+        "avg_return": 0.3077,
+        "win_rate": 58.6,
+        "n_weeks": 232
+      },
+      {
+        "category": "Global & Sverige",
+        "avg_return": 0.2582,
+        "win_rate": 59.1,
+        "n_weeks": 254
+      }
+    ],
+    "weakest": [
+      {
+        "category": "Norge",
+        "avg_return": 0.0236,
+        "win_rate": 49.2,
+        "n_weeks": 372
+      },
+      {
+        "category": "Korta",
+        "avg_return": 0.0244,
+        "win_rate": 73.9,
+        "n_weeks": 829
+      },
+      {
+        "category": "Euro",
+        "avg_return": 0.0333,
+        "win_rate": 51.7,
+        "n_weeks": 393
+      }
+    ],
+    "n_categories": 36,
+    "n_negative": 0,
+    "median_return": 0.1563,
+    "breadth": "strong",
+    "remaining": {
+      "favours": [
+        {
+          "category": "Indien",
+          "avg_return": 0.2806,
+          "win_rate": 60.6,
+          "n_weeks": 236
+        },
+        {
+          "category": "Ny energi",
+          "avg_return": 0.1871,
+          "win_rate": 46.6,
+          "n_weeks": 118
+        },
+        {
+          "category": "USA",
+          "avg_return": 0.1519,
+          "win_rate": 54.6,
+          "n_weeks": 637
+        }
+      ],
+      "n_categories": 36
+    },
+    "top_funds": [
+      {
+        "fund_id": "137448",
+        "name": "ISIN FI0008813142",
+        "avg_return": 0.673,
+        "win_rate": 66.2,
+        "n_weeks": 77,
+        "n_years": 19
+      },
+      {
+        "fund_id": "909774",
+        "name": "Allianz Global Water AT EUR",
+        "avg_return": 0.584,
+        "win_rate": 63.6,
+        "n_weeks": 33,
+        "n_years": 8
+      },
+      {
+        "fund_id": "600075",
+        "name": "Swedbank Robur Access Global A",
+        "avg_return": 0.5537,
+        "win_rate": 77.8,
+        "n_weeks": 45,
+        "n_years": 11
+      }
+    ],
+    "n_excluded": 4
+  },
   "horizons": {
     "1w": [
       {
@@ -19,17 +116,46 @@
         "name": "DNB Health Care S",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/1506920",
-        "score": 95.247,
+        "score": 92.573,
         "hitrate_q50": 80.0,
         "coverage_pct": 71.67,
         "mae_q50": 0.4509,
         "signal": "HOLD",
         "forecast": {
-          "q10": -0.1913,
-          "q50": 0.4324,
-          "q90": 1.5752
+          "q10": -0.1856,
+          "q50": 0.4032,
+          "q90": 1.5562
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Läkemedel",
+          "categories": [
+            {
+              "category": "Läkemedel",
+              "avg_return": 0.2174,
+              "win_rate": 58.7,
+              "n_weeks": 477,
+              "month_percentile": 81.9
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.1909,
+              "win_rate": 56.2,
+              "n_weeks": 12045,
+              "month_percentile": 68.1
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.1904,
+              "win_rate": 56.2,
+              "n_weeks": 2562,
+              "month_percentile": 65.3
+            }
+          ],
+          "summary": "Läkemedel historiskt i november: +0.22%/vecka, 59% positiva veckor, percentil 82 (477 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -51,10 +177,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 83.3,
-          "mae": 1.4492,
-          "last_pred_q50": 1.1537,
+          "mae": 1.4553,
+          "last_pred_q50": 1.1957,
           "last_actual": -3.7708,
-          "last_error": 4.9245,
+          "last_error": 4.9665,
           "last_direction_ok": false,
           "date_from": "2026-08-24",
           "date_to": "2026-11-16"
@@ -67,74 +193,51 @@
         "sticky": true
       },
       {
-        "fund_id": "43947",
-        "ppm_code": "469692",
-        "name": "Nordea Indienfond",
-        "tags": "Aktiefond, Indien",
-        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/43947",
-        "score": 84.625,
-        "hitrate_q50": 71.96,
-        "coverage_pct": 66.14,
-        "mae_q50": 0.5716,
-        "signal": "BUY",
-        "forecast": {
-          "q10": 0.7728,
-          "q50": 0.881,
-          "q90": 1.5303
-        },
-        "seasonal": null,
-        "consensus": {
-          "n_agree": 3,
-          "n_models": 3,
-          "n_up": 3,
-          "n_down": 0,
-          "models": [
-            "gru",
-            "lstm",
-            "tcn",
-            "xgboost"
-          ]
-        },
-        "warnings": [
-          {
-            "reason": "backtest",
-            "detail": "backtest 50.0% < 60%"
-          }
-        ],
-        "backtest": {
-          "weeks": 12,
-          "hit_rate_pct": 50.0,
-          "mae": 1.8073,
-          "last_pred_q50": 1.2703,
-          "last_actual": 0.0,
-          "last_error": 1.2703,
-          "last_direction_ok": false,
-          "date_from": "2026-08-31",
-          "date_to": "2026-11-23"
-        },
-        "rationale": "72% hit-rate; 0.572pp MAE; 3/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
-        "charts": {
-          "ensemble": "top-2026-11-25/43947/h1w_ensemble.png",
-          "individual": "top-2026-11-25/43947/h1w_individual.png"
-        }
-      },
-      {
         "fund_id": "453",
         "ppm_code": "928341",
         "name": "Swedbank Robur Healthcare A",
         "tags": "Aktiefond, Branschfond, Läkemedel",
         "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/453",
-        "score": 84.298,
+        "score": 86.981,
         "hitrate_q50": 54.17,
         "coverage_pct": 40.1,
         "mae_q50": 0.5786,
         "signal": "BUY",
         "forecast": {
-          "q10": -0.2549,
-          "q50": 0.8149,
-          "q90": 1.3534
+          "q10": -0.2479,
+          "q50": 0.8488,
+          "q90": 1.3162
         },
-        "seasonal": null,
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Läkemedel",
+          "categories": [
+            {
+              "category": "Läkemedel",
+              "avg_return": 0.2174,
+              "win_rate": 58.7,
+              "n_weeks": 477,
+              "month_percentile": 81.9
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.1909,
+              "win_rate": 56.2,
+              "n_weeks": 12045,
+              "month_percentile": 68.1
+            },
+            {
+              "category": "Branschfond",
+              "avg_return": 0.1904,
+              "win_rate": 56.2,
+              "n_weeks": 2562,
+              "month_percentile": 65.3
+            }
+          ],
+          "summary": "Läkemedel historiskt i november: +0.22%/vecka, 59% positiva veckor, percentil 82 (477 veckor)"
+        },
         "consensus": {
           "n_agree": 3,
           "n_models": 3,
@@ -156,10 +259,10 @@
         "backtest": {
           "weeks": 12,
           "hit_rate_pct": 75.0,
-          "mae": 1.3748,
-          "last_pred_q50": 1.4517,
+          "mae": 1.3724,
+          "last_pred_q50": 1.4738,
           "last_actual": -4.0541,
-          "last_error": 5.5057,
+          "last_error": 5.5278,
           "last_direction_ok": false,
           "date_from": "2026-08-24",
           "date_to": "2026-11-16"
@@ -168,6 +271,80 @@
         "charts": {
           "ensemble": "top-2026-11-25/453/h1w_ensemble.png",
           "individual": "top-2026-11-25/453/h1w_individual.png"
+        }
+      },
+      {
+        "fund_id": "43947",
+        "ppm_code": "469692",
+        "name": "Nordea Indienfond",
+        "tags": "Aktiefond, Indien",
+        "avanza_url": "https://www.avanza.se/fonder/om-fonden.html/43947",
+        "score": 81.853,
+        "hitrate_q50": 71.96,
+        "coverage_pct": 66.14,
+        "mae_q50": 0.5716,
+        "signal": "BUY",
+        "forecast": {
+          "q10": 0.748,
+          "q50": 0.8213,
+          "q90": 2.4025
+        },
+        "seasonal": {
+          "month": 11,
+          "month_name": "november",
+          "verdict": "strong",
+          "lead": "Indien",
+          "categories": [
+            {
+              "category": "Indien",
+              "avg_return": 0.2374,
+              "win_rate": 57.0,
+              "n_weeks": 444,
+              "month_percentile": 87.5
+            },
+            {
+              "category": "Aktiefond",
+              "avg_return": 0.1909,
+              "win_rate": 56.2,
+              "n_weeks": 12045,
+              "month_percentile": 68.1
+            }
+          ],
+          "summary": "Indien historiskt i november: +0.24%/vecka, 57% positiva veckor, percentil 88 (444 veckor)"
+        },
+        "consensus": {
+          "n_agree": 3,
+          "n_models": 3,
+          "n_up": 3,
+          "n_down": 0,
+          "models": [
+            "gru",
+            "lstm",
+            "tcn",
+            "xgboost"
+          ]
+        },
+        "warnings": [
+          {
+            "reason": "backtest",
+            "detail": "backtest 50.0% < 60%"
+          }
+        ],
+        "backtest": {
+          "weeks": 12,
+          "hit_rate_pct": 50.0,
+          "mae": 1.8255,
+          "last_pred_q50": 1.2534,
+          "last_actual": 0.0,
+          "last_error": 1.2534,
+          "last_direction_ok": false,
+          "date_from": "2026-08-31",
+          "date_to": "2026-11-23"
+        },
+        "rationale": "72% hit-rate; 0.572pp MAE; 3/3 models agree (bullish); 50% hit-rate over last 12 weeks; cycle phase PANIC/CRISIS (bias -1.0, favors bonds, money-market, gold).",
+        "charts": {
+          "ensemble": "top-2026-11-25/43947/h1w_ensemble.png",
+          "individual": "top-2026-11-25/43947/h1w_individual.png"
         }
       }
     ]
